@@ -1,0 +1,292 @@
+/* =========================================================
+   SucceedLEARN FERPA Employee Awareness
+   Hero
+   ========================================================= */
+
+   .sl-ferpa-hero {
+	padding: 115px 0 90px;
+	background: var(--sl-page-white, #ffffff);
+}
+
+
+/* =========================================================
+   Main Layout
+   ========================================================= */
+
+.sl-ferpa-hero__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.05fr) minmax(480px, 0.95fr);
+	gap: 70px;
+	align-items: center;
+}
+
+.sl-ferpa-hero__content {
+	min-width: 0;
+}
+
+.sl-ferpa-hero__lead {
+	max-width: 720px;
+	margin: 22px 0 30px;
+	color: var(--sl-page-text, #4A4A4A);
+}
+
+
+/* =========================================================
+   Feature List
+   ========================================================= */
+
+.sl-ferpa-hero__features {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+
+.sl-ferpa-hero__features li {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+
+	color: var(--sl-page-text, #4A4A4A);
+}
+
+.sl-ferpa-hero__feature-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 22px;
+	height: 22px;
+	flex: 0 0 22px;
+
+	margin-top: 2px;
+
+	color: var(--sl-page-primary, #1472ba);
+}
+
+
+/* =========================================================
+   Hero Actions
+   ========================================================= */
+
+.sl-ferpa-hero__actions {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 12px;
+
+	margin-top: 32px;
+}
+
+.sl-ferpa-hero__secondary-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	width: fit-content;
+	max-width: 100%;
+
+	padding: 13px 20px;
+
+	border: 1px solid rgba(20, 114, 186, 0.35);
+	border-radius: 8px;
+
+	background: transparent;
+	color: var(--sl-page-primary-dark, #283384);
+
+	font-weight: 700;
+	line-height: 1.45;
+	text-decoration: none;
+
+	transition:
+		background-color 0.2s ease,
+		color 0.2s ease,
+		transform 0.2s ease;
+}
+
+.sl-ferpa-hero__secondary-btn:hover {
+	background: var(--sl-page-primary, #1472ba);
+	color: var(--sl-page-white, #ffffff);
+	transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   Audience Note
+   ========================================================= */
+
+.sl-ferpa-hero__audience {
+	margin: 22px 0 0;
+	color: var(--sl-page-muted, #6B7C93);
+}
+
+
+/* =========================================================
+   Course Card
+   ========================================================= */
+
+.sl-ferpa-hero__card {
+	width: 100%;
+	overflow: hidden;
+
+	border: 1px solid rgba(22, 35, 78, 0.12);
+	border-radius: 14px;
+
+	background: var(--sl-page-white, #ffffff);
+
+	box-shadow: 0 16px 38px rgba(22, 35, 78, 0.07);
+}
+
+.sl-ferpa-hero__card-header {
+	padding: 28px 28px 22px;
+	border-bottom: 1px solid rgba(22, 35, 78, 0.10);
+}
+
+.sl-ferpa-hero__card-header > span {
+	display: block;
+	margin-bottom: 8px;
+
+	color: var(--sl-page-muted, #6B7C93);
+}
+
+.sl-ferpa-hero__card-header h2 {
+	margin: 0;
+	color: var(--sl-page-navy, #16234e);
+}
+
+
+/* =========================================================
+   Course Details
+   ========================================================= */
+
+.sl-ferpa-hero__details {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.sl-ferpa-hero__detail {
+	padding: 20px 24px;
+
+	border-bottom: 1px solid rgba(22, 35, 78, 0.10);
+}
+
+.sl-ferpa-hero__detail:nth-child(odd) {
+	border-right: 1px solid rgba(22, 35, 78, 0.10);
+}
+
+.sl-ferpa-hero__detail span {
+	display: block;
+	margin-bottom: 7px;
+
+	color: var(--sl-page-muted, #6B7C93);
+}
+
+.sl-ferpa-hero__detail strong {
+	color: var(--sl-page-navy, #16234e);
+}
+
+
+/* =========================================================
+   Pricing
+   ========================================================= */
+
+.sl-ferpa-hero__pricing {
+	padding: 24px 28px;
+
+	background: rgba(20, 114, 186, 0.06);
+}
+
+.sl-ferpa-hero__price {
+	display: flex;
+	align-items: baseline;
+	gap: 8px;
+}
+
+.sl-ferpa-hero__price strong {
+	color: var(--sl-page-primary-dark, #283384);
+	font-size: 28px;
+	line-height: 1.2;
+}
+
+.sl-ferpa-hero__price span {
+	color: var(--sl-page-muted, #6B7C93);
+}
+
+.sl-ferpa-hero__pricing p {
+	margin: 8px 0 0;
+	color: var(--sl-page-text, #4A4A4A);
+}
+
+
+/* =========================================================
+   Tablet
+   ========================================================= */
+
+@media (max-width: 1099px) {
+
+	.sl-ferpa-hero {
+		padding-top: 95px;
+	}
+
+	.sl-ferpa-hero__grid {
+		grid-template-columns: minmax(0, 1fr) minmax(400px, 0.9fr);
+		gap: 45px;
+	}
+}
+
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 999px) {
+
+	.sl-ferpa-hero {
+		padding: 75px 0 60px;
+	}
+
+	.sl-ferpa-hero__grid {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.sl-ferpa-hero__card {
+		max-width: 760px;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.sl-ferpa-hero {
+		padding: 60px 0;
+	}
+
+	.sl-ferpa-hero__grid {
+		gap: 32px;
+	}
+
+	.sl-ferpa-hero__lead {
+		margin-top: 18px;
+		margin-bottom: 25px;
+	}
+
+	.sl-ferpa-hero__actions {
+		margin-top: 26px;
+	}
+
+	.sl-ferpa-hero__card-header {
+		padding: 22px 20px 18px;
+	}
+
+	.sl-ferpa-hero__detail {
+		padding: 17px 18px;
+	}
+
+	.sl-ferpa-hero__pricing {
+		padding: 20px;
+	}
+}

@@ -1,0 +1,405 @@
+/**
+ * Homepage — Hero section styles.
+ * Add your hero CSS below.
+ */
+/* ==========================================================
+   HERO SECTION
+========================================================== */
+
+:root{
+    --sl-primary:#ff5a2f;
+    --sl-primary-hover:#e94d24;
+    --sl-white:#ffffff;
+    --sl-text:#f5f7fa;
+    --sl-border:rgba(255,255,255,.18);
+    --sl-overlay:rgba(29,38,58,.78);
+    --sl-icon:#29a9ff;
+    --sl-transition:.35s ease;
+}
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.sl-hero{
+    position:relative;
+    overflow:hidden;
+    min-height:900px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    /* Clear of fixed white header */
+    margin-top:0;
+    padding:calc(var(--slf-header-clearance, var(--epsh-desktop-header-offset, 76px)) + var(--slf-hero-gap, 80px)) 0 70px;
+    font-family: var(--slf-font-body, "Space Grotesk", system-ui, sans-serif);
+}
+
+/* ==========================================================
+   BACKGROUND IMAGE
+========================================================== */
+
+.sl-hero__background{
+    position:absolute;
+    inset:0;
+
+    /* Set inline from hero.php via akaza_upload_url(). */
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    z-index:1;
+}
+
+/* ==========================================================
+   OVERLAY
+========================================================== */
+
+.sl-hero__overlay{
+    position:absolute;
+    inset:0;
+    background:var(--sl-overlay);
+    z-index:2;
+}
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.sl-hero .container{
+    position:relative;
+    z-index:3;
+}
+
+.sl-hero__content{
+    max-width:var(--sl-home-content-max, 1400px);
+    margin:auto;
+}
+
+.sl-hero__title{
+    font-size: var(--sl-fs-h1);
+    line-height:1.15;
+    color:#fff;
+    margin-bottom:28px;
+    text-align: center;
+}
+
+.sl-hero__description{
+
+    max-width:760px;
+    margin:0 auto 45px;
+    color:rgba(255,255,255,.88);
+    font-size:20px;
+    line-height:1.8;
+    font-weight:400;
+    text-align: center;
+}
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+.sl-hero__buttons{
+
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+    margin-top:0;
+    margin-bottom:95px;
+}
+
+.sl-hero .sl-hero-btn{
+    min-width:300px;
+}
+
+/* Dark-hero secondary: outline on photo background */
+.sl-hero a.sl-hero-btn-secondary,
+.sl-hero a.sl-hero-btn-secondary:visited,
+.sl-hero a.sl-hero-btn-secondary:focus,
+.sl-hero a.sl-hero-btn-secondary:active{
+    box-sizing:border-box;
+    border:2px solid rgba(255,255,255,.75);
+    color:#ffffff !important;
+    background:rgba(255,255,255,.06);
+    box-shadow:0 0 0 1px rgba(255,255,255,.08);
+}
+
+.sl-hero a.sl-hero-btn-secondary:hover,
+.sl-hero a.sl-hero-btn-secondary:focus-visible{
+    background:#ffffff;
+    border-color:#ffffff;
+    color:#16234e !important;
+    text-decoration:none;
+    transform:translateY(-3px);
+    box-shadow:0 8px 24px rgba(0,0,0,.18);
+}
+
+/* ==========================================================
+   FEATURES
+========================================================== */
+
+.sl-hero-features{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+}
+
+.sl-feature{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    text-align:center;
+
+    padding:0 18px;
+
+    position:relative;
+}
+
+.sl-feature:not(:last-child)::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-12px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:1px;
+
+    height:90px;
+
+    background:rgba(255,255,255,.18);
+}
+
+.sl-feature__icon{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:40px;
+
+    height:40px;
+
+    flex-shrink:0;
+
+    color:var(--sl-icon);
+
+    margin:0 0 16px;
+}
+
+.sl-feature__icon svg,
+.sl-feature__icon img{
+
+    display:block;
+
+    width:40px;
+
+    height:40px;
+
+    margin:0;
+
+    object-fit:contain;
+}
+
+.sl-feature__title{
+
+    color:#fff;
+
+    font-size:18px;
+
+    line-height:1.45;
+
+    font-weight:600;
+
+    max-width:180px;
+
+    margin:0;
+
+    text-align:center;
+}
+
+@media (max-width:1199px){
+
+.sl-hero{
+
+min-height:820px;
+
+padding:calc(var(--epsh-desktop-header-offset, 76px) + 36px) 0 70px;
+
+}
+
+.sl-hero__description{
+
+font-size:18px;
+
+}
+
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width:991px){
+
+.sl-hero{
+
+padding:calc(var(--epsh-mobile-header-offset, 64px) + 36px) 0 70px;
+
+min-height:auto;
+
+}
+
+.sl-hero__description{
+
+font-size:17px;
+
+margin-bottom:40px;
+
+}
+
+.sl-hero__buttons{
+
+margin-bottom:70px;
+
+}
+
+.sl-hero-features{
+
+grid-template-columns:repeat(2,1fr);
+
+row-gap:45px;
+
+}
+
+.sl-feature:nth-child(2)::after{
+
+display:none;
+
+}
+
+.sl-feature::after{
+
+height:70px;
+
+}
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width:767px){
+
+.sl-hero{
+
+padding:calc(var(--epsh-mobile-header-offset, 64px) + 24px) 0 60px;
+
+}
+
+.sl-hero__title{
+
+font-size: var(--sl-fs-h1);
+
+line-height:1.25;
+
+}
+
+.sl-hero__description{
+
+font-size:16px;
+
+line-height:1.7;
+
+}
+
+.sl-hero__buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+.sl-hero .sl-hero-btn{
+
+width:100%;
+
+max-width:320px;
+
+}
+
+.sl-hero-features{
+
+grid-template-columns:1fr;
+
+gap:40px;
+
+}
+
+.sl-feature::after{
+
+display:none;
+
+}
+
+.sl-feature{
+
+padding:0;
+
+}
+
+}
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width:480px){
+
+.sl-hero{
+
+padding:calc(var(--epsh-mobile-header-offset, 64px) + 16px) 0 50px;
+
+}
+
+.sl-hero__description{
+
+font-size:15px;
+
+}
+
+.sl-hero .sl-hero-btn{
+
+height:54px;
+
+font-size:15px;
+
+}
+
+.sl-feature__title{
+
+font-size:16px;
+
+}
+
+}

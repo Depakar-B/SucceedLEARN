@@ -1,0 +1,149 @@
+/* =========================================================
+   SucceedLEARN
+   Gifts & Entertainment Training for PE/VC Professionals
+   Higher-Risk Situations
+
+   Container and section spacing come from course-global.css.
+   ========================================================= */
+
+   .sl-course-page .sl-gifts-entertainment-high-risk {
+	background: var(--course-light-bg, #f5f5f5);
+}
+
+
+/* =========================================================
+   Introduction
+   ========================================================= */
+
+.sl-gifts-entertainment-high-risk__intro {
+	margin-bottom: 36px;
+}
+
+.sl-gifts-entertainment-high-risk__intro h2 {
+	margin-bottom: 18px;
+}
+
+.sl-gifts-entertainment-high-risk__intro p {
+	max-width: 760px;
+	margin: 0;
+}
+
+
+/* =========================================================
+   Card Grid
+   ========================================================= */
+
+.sl-gifts-entertainment-high-risk__grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 20px;
+}
+
+
+/* =========================================================
+   Card
+   ========================================================= */
+
+.sl-gifts-entertainment-high-risk__card {
+	overflow: hidden;
+	background: var(--course-white, #ffffff);
+	border: 1px solid rgba(20, 114, 186, 0.16);
+	border-radius: 14px;
+}
+
+
+/* =========================================================
+   Image Area
+   ========================================================= */
+
+.sl-gifts-entertainment-high-risk__media {
+	width: 100%;
+}
+
+.sl-gifts-entertainment-high-risk__image-placeholder {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	width: 100%;
+	aspect-ratio: 16 / 7;
+
+	background: rgba(20, 114, 186, 0.045);
+	border-bottom: 1px dashed rgba(20, 114, 186, 0.30);
+
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.sl-gifts-entertainment-high-risk__image-placeholder span {
+	color: var(--course-primary, #1472ba);
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+}
+
+.sl-gifts-entertainment-high-risk__image-placeholder small {
+	margin-top: 6px;
+	color: var(--course-navy, #16234e);
+	font-size: 11px;
+}
+
+
+/* =========================================================
+   Card Content
+   ========================================================= */
+
+.sl-gifts-entertainment-high-risk__content {
+	padding: 18px;
+}
+
+.sl-gifts-entertainment-high-risk__content h3 {
+	margin: 0 0 6px;
+	color: var(--course-navy, #16234e);
+}
+
+.sl-gifts-entertainment-high-risk__content p {
+	margin: 0;
+	line-height: 1.65;
+}
+
+
+/* =========================================================
+   Tablet
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+	.sl-gifts-entertainment-high-risk__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.sl-gifts-entertainment-high-risk__intro {
+		margin-bottom: 32px;
+	}
+}
+
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+	.sl-gifts-entertainment-high-risk__grid {
+		gap: 16px;
+	}
+
+	.sl-gifts-entertainment-high-risk__intro h2 {
+		margin-bottom: 16px;
+	}
+
+	.sl-gifts-entertainment-high-risk__image-placeholder {
+		aspect-ratio: 16 / 8;
+	}
+
+	.sl-gifts-entertainment-high-risk__content {
+		padding: 16px;
+	}
+}

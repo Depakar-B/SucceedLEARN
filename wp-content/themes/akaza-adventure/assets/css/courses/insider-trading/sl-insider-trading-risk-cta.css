@@ -1,0 +1,46 @@
+/**
+ * Insider Trading Risk CTA
+ */
+
+ .sl-insider-trading-risk-cta {
+	padding: 56px 0;
+	background: #f5f5f5;
+}
+
+.sl-insider-trading-risk-cta__content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.sl-insider-trading-risk-cta__content h2 {
+	margin: 0 0 16px;
+}
+
+.sl-insider-trading-risk-cta__content h2 span {
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-insider-trading-risk-cta__content p {
+	margin: 0;
+	max-width: 900px;
+}
+
+.sl-insider-trading-risk-cta .sl-content-actions {
+	margin-top: 24px;
+}
+
+@media (max-width: 767px) {
+	.sl-insider-trading-risk-cta {
+		padding: 44px 0;
+	}
+
+	.sl-insider-trading-risk-cta__content h2 {
+		margin-bottom: 14px;
+	}
+
+	.sl-insider-trading-risk-cta .sl-content-actions {
+		margin-top: 20px;
+	}
+}

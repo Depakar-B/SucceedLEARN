@@ -1,0 +1,193 @@
+/**
+ * UK Sexual Harassment Prevention Training — Legal Responsibility
+ */
+
+ .sl-uk-sexual-harassment-prevention {
+	padding: 80px 0;
+	background: #f5f5f5;
+}
+
+/* Full-width introduction */
+
+.sl-uk-sexual-harassment-prevention__intro {
+	width: 100%;
+	margin-bottom: 52px;
+}
+
+.sl-uk-sexual-harassment-prevention__intro-span {
+	display: block;
+	margin-bottom: 14px;
+	color: var(--sl-page-primary, #1472ba);
+	font-weight: 600;
+}
+
+.sl-uk-sexual-harassment-prevention__intro h2 {
+	margin-top: 0;
+	margin-bottom: 24px;
+}
+
+.sl-uk-sexual-harassment-prevention__intro p {
+	margin-top: 0;
+	margin-bottom: 18px;
+}
+
+.sl-uk-sexual-harassment-prevention__intro p:last-child {
+	margin-bottom: 0;
+}
+
+/* Two-column area */
+
+.sl-uk-sexual-harassment-prevention__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+	gap: 70px;
+	align-items: start;
+}
+
+/* Left content */
+
+.sl-uk-sexual-harassment-prevention__content {
+	min-width: 0;
+}
+
+.sl-uk-sexual-harassment-prevention__content > p {
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+.sl-uk-sexual-harassment-prevention__list {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin: 28px 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-uk-sexual-harassment-prevention__item {
+	display: grid;
+	grid-template-columns: 42px minmax(0, 1fr);
+	gap: 14px;
+	align-items: start;
+	padding: 16px 18px;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 10px;
+	background: #ffffff;
+	box-sizing: border-box;
+}
+
+.sl-uk-sexual-harassment-prevention__number {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 34px;
+	height: 34px;
+	border: 1px solid rgba(20, 114, 186, 0.18);
+	border-radius: 8px;
+	background: rgba(20, 114, 186, 0.08);
+	color: var(--sl-page-primary, #1472ba);
+	font-weight: 700;
+	line-height: 1;
+}
+
+.sl-uk-sexual-harassment-prevention__text {
+	align-self: center;
+}
+
+.sl-uk-sexual-harassment-prevention__content .sl-hero-actions {
+	margin-top: 30px;
+}
+
+/* Right image */
+
+.sl-uk-sexual-harassment-prevention__media {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 110px) + 24px);
+	align-self: start;
+}
+
+.sl-uk-sexual-harassment-prevention__image {
+	width: 100%;
+	overflow: hidden;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 16px;
+	background: #ffffff;
+	box-sizing: border-box;
+}
+
+.sl-uk-sexual-harassment-prevention__image-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 520px;
+	padding: 30px;
+	box-sizing: border-box;
+	color: #6b7c93;
+	text-align: center;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+	.sl-uk-sexual-harassment-prevention {
+		padding: 64px 0;
+	}
+
+	.sl-uk-sexual-harassment-prevention__intro {
+		margin-bottom: 42px;
+	}
+
+	.sl-uk-sexual-harassment-prevention__grid {
+		grid-template-columns: 1fr;
+		gap: 44px;
+	}
+
+	.sl-uk-sexual-harassment-prevention__media {
+		position: static;
+		order: 2;
+	}
+
+	.sl-uk-sexual-harassment-prevention__content {
+		order: 1;
+	}
+
+	.sl-uk-sexual-harassment-prevention__image-placeholder {
+		min-height: 420px;
+	}
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+	.sl-uk-sexual-harassment-prevention {
+		padding: 52px 0;
+	}
+
+	.sl-uk-sexual-harassment-prevention__intro {
+		margin-bottom: 34px;
+	}
+
+	.sl-uk-sexual-harassment-prevention__grid {
+		gap: 32px;
+	}
+
+	.sl-uk-sexual-harassment-prevention__item {
+		grid-template-columns: 36px minmax(0, 1fr);
+		gap: 12px;
+		padding: 15px 16px;
+	}
+
+	.sl-uk-sexual-harassment-prevention__number {
+		width: 32px;
+		height: 32px;
+	}
+
+	.sl-uk-sexual-harassment-prevention__image {
+		border-radius: 12px;
+	}
+
+	.sl-uk-sexual-harassment-prevention__image-placeholder {
+		min-height: 320px;
+		padding: 24px;
+	}
+}

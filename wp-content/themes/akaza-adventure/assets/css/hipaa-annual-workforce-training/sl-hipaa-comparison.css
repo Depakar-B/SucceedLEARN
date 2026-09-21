@@ -1,0 +1,359 @@
+/* =========================================================
+   HIPAA COURSE COMPARISON
+   ========================================================= */
+
+   .sl-hipaa-comparison {
+	width: 100%;
+	padding: 90px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+
+/* =========================================================
+   INTRO
+   Full container width with no max-width restrictions.
+   ========================================================= */
+
+.sl-hipaa-comparison__intro {
+	width: 100%;
+	margin-bottom: 42px;
+}
+
+.sl-hipaa-comparison__intro .sl-home-sub-heading {
+	display: flex;
+	align-items: center;
+	margin-bottom: 16px;
+}
+
+.sl-hipaa-comparison__intro h2 {
+	width: 100%;
+	margin-bottom: 18px;
+	text-wrap: balance;
+}
+
+.sl-hipaa-comparison__intro p {
+	width: 100%;
+	margin: 0;
+	text-wrap: pretty;
+}
+
+
+/* =========================================================
+   RESPONSIVE TABLE WRAPPER
+   ========================================================= */
+
+.sl-hipaa-comparison__table-wrap {
+	width: 100%;
+	overflow-x: auto;
+	background: var(--sl-page-white, #ffffff);
+	border: 1px solid rgba(107, 124, 147, 0.24);
+	border-radius: 14px;
+	scrollbar-width: thin;
+	overscroll-behavior-inline: contain;
+	-webkit-overflow-scrolling: touch;
+}
+
+.sl-hipaa-comparison__table-wrap:focus-visible {
+	outline: 3px solid var(--sl-page-primary, #1472ba);
+	outline-offset: 4px;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.sl-hipaa-comparison__table {
+	width: 100%;
+	min-width: 820px;
+	border-spacing: 0;
+	border-collapse: separate;
+	table-layout: fixed;
+	color: var(--sl-page-text, #4a4a4a);
+}
+
+
+/* =========================================================
+   COLUMN WIDTHS
+   ========================================================= */
+
+.sl-hipaa-comparison__table th:nth-child(1),
+.sl-hipaa-comparison__table td:nth-child(1) {
+	width: 34%;
+}
+
+.sl-hipaa-comparison__table th:nth-child(2),
+.sl-hipaa-comparison__table td:nth-child(2) {
+	width: 33%;
+}
+
+.sl-hipaa-comparison__table th:nth-child(3),
+.sl-hipaa-comparison__table td:nth-child(3) {
+	width: 33%;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+   ========================================================= */
+
+.sl-hipaa-comparison__table thead th {
+	padding: 18px 20px;
+	color: var(--sl-page-white, #ffffff);
+	background: var(--sl-page-navy, #16234e);
+	border-right: 1px solid rgba(255, 255, 255, 0.16);
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 1.35;
+	text-align: left;
+	text-transform: uppercase;
+	vertical-align: middle;
+}
+
+.sl-hipaa-comparison__table thead th:first-child {
+	border-radius: 13px 0 0;
+}
+
+.sl-hipaa-comparison__table thead th:last-child {
+	border-right: 0;
+	border-radius: 0 13px 0 0;
+}
+
+
+/* =========================================================
+   FEATURED HEADER
+   ========================================================= */
+
+.sl-hipaa-comparison__table
+	thead
+	.sl-hipaa-comparison__featured-heading {
+	display: table-cell;
+	color: var(--sl-page-white, #ffffff);
+	background: var(--sl-page-primary, #1472ba);
+}
+
+.sl-hipaa-comparison__heading-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 21px;
+	height: 21px;
+	margin-right: 7px;
+	color: var(--sl-page-white, #ffffff);
+	vertical-align: middle;
+}
+
+.sl-hipaa-comparison__heading-icon svg {
+	display: block;
+	width: 21px;
+	height: 21px;
+}
+
+
+/* =========================================================
+   TABLE BODY
+   ========================================================= */
+
+.sl-hipaa-comparison__table tbody th,
+.sl-hipaa-comparison__table tbody td {
+	padding: 17px 20px;
+	border-right: 1px solid rgba(107, 124, 147, 0.16);
+	border-bottom: 1px solid rgba(107, 124, 147, 0.16);
+	font-size: 14px;
+	line-height: 1.55;
+	text-align: left;
+	vertical-align: middle;
+	text-wrap: pretty;
+}
+
+.sl-hipaa-comparison__table tbody th {
+	color: var(--sl-page-navy, #16234e);
+	background: var(--sl-page-white, #ffffff);
+	font-weight: 600;
+}
+
+.sl-hipaa-comparison__table tbody td {
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-hipaa-comparison__table tbody tr:nth-child(even) th,
+.sl-hipaa-comparison__table tbody tr:nth-child(even) td:not(
+	.sl-hipaa-comparison__featured-cell
+) {
+	background: #f8fafc;
+}
+
+.sl-hipaa-comparison__table tbody td:last-child {
+	border-right: 0;
+}
+
+.sl-hipaa-comparison__table tbody tr:last-child th,
+.sl-hipaa-comparison__table tbody tr:last-child td {
+	border-bottom: 0;
+}
+
+
+/* =========================================================
+   FEATURED SUCCEEDLEARN COLUMN
+   ========================================================= */
+
+.sl-hipaa-comparison__table
+	tbody
+	td.sl-hipaa-comparison__featured-cell {
+	position: relative;
+	background: rgba(109, 195, 235, 0.14);
+	border-right-color: rgba(20, 114, 186, 0.2);
+	border-bottom-color: rgba(20, 114, 186, 0.18);
+}
+
+.sl-hipaa-comparison__featured-cell {
+	display: table-cell;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-hipaa-comparison__featured-cell strong {
+	font-weight: 700;
+}
+
+.sl-hipaa-comparison__check {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	margin-right: 7px;
+	color: var(--sl-page-primary, #1472ba);
+	vertical-align: middle;
+}
+
+.sl-hipaa-comparison__check svg {
+	display: block;
+	width: 18px;
+	height: 18px;
+}
+
+
+/* =========================================================
+   ROW INTERACTION
+   ========================================================= */
+
+.sl-hipaa-comparison__table tbody tr:hover th,
+.sl-hipaa-comparison__table tbody tr:hover td:not(
+	.sl-hipaa-comparison__featured-cell
+) {
+	background: #f2f8fc;
+}
+
+.sl-hipaa-comparison__table
+	tbody
+	tr:hover
+	td.sl-hipaa-comparison__featured-cell {
+	background: rgba(109, 195, 235, 0.22);
+}
+
+
+/* =========================================================
+   COMPARISON NOTE
+   ========================================================= */
+
+.sl-hipaa-comparison__note {
+	display: grid;
+	grid-template-columns: 22px minmax(0, 1fr);
+	align-items: start;
+	gap: 10px;
+	width: 100%;
+	margin: 18px 0 0;
+	color: var(--sl-page-muted, #6b7c93);
+	font-size: 13px;
+	line-height: 1.65;
+	text-wrap: pretty;
+}
+
+.sl-hipaa-comparison__note-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 21px;
+	height: 21px;
+	margin-top: 1px;
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-hipaa-comparison__note-icon svg {
+	display: block;
+	width: 20px;
+	height: 20px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+	.sl-hipaa-comparison {
+		padding: 72px 0;
+	}
+
+	.sl-hipaa-comparison__table {
+		min-width: 760px;
+	}
+
+	.sl-hipaa-comparison__table thead th,
+	.sl-hipaa-comparison__table tbody th,
+	.sl-hipaa-comparison__table tbody td {
+		padding-right: 17px;
+		padding-left: 17px;
+	}
+}
+
+
+/* =========================================================
+   MOBILE
+   The first column stays visible during horizontal scrolling.
+   ========================================================= */
+
+@media (max-width: 767px) {
+	.sl-hipaa-comparison {
+		padding: 60px 0;
+	}
+
+	.sl-hipaa-comparison__intro {
+		margin-bottom: 32px;
+	}
+
+	.sl-hipaa-comparison__intro h2 {
+		margin-bottom: 16px;
+		text-wrap: pretty;
+	}
+
+	.sl-hipaa-comparison__table {
+		min-width: 720px;
+	}
+
+	.sl-hipaa-comparison__table th:nth-child(1) {
+		position: sticky;
+		left: 0;
+		z-index: 2;
+	}
+
+	.sl-hipaa-comparison__table thead th:nth-child(1) {
+		z-index: 3;
+	}
+
+	.sl-hipaa-comparison__table tbody th:nth-child(1) {
+		box-shadow: 1px 0 0 rgba(107, 124, 147, 0.18);
+	}
+
+	.sl-hipaa-comparison__table thead th,
+	.sl-hipaa-comparison__table tbody th,
+	.sl-hipaa-comparison__table tbody td {
+		padding: 15px;
+		font-size: 13px;
+	}
+
+	.sl-hipaa-comparison__note {
+		margin-top: 16px;
+		font-size: 12px;
+	}
+}

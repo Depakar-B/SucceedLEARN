@@ -1,0 +1,1448 @@
+<?php
+/**
+ * Genesis Sample.
+ *
+ * This file adds functions to the Genesis Sample Theme.
+ *
+ * @package Genesis Sample
+ * @author  StudioPress
+ * @license GPL-2.0-or-later
+ * @link    https://www.studiopress.com/
+ */
+
+// Starts the engine.
+require_once get_template_directory() . '/lib/init.php';
+
+// Sets up the Theme.
+require_once get_stylesheet_directory() . '/lib/theme-defaults.php';
+
+add_action( 'after_setup_theme', 'genesis_sample_localization_setup' );
+/**
+ * Sets localization (do not remove).
+ *
+ * @since 1.0.0
+ */
+function genesis_sample_localization_setup() {
+
+	load_child_theme_textdomain( genesis_get_theme_handle(), get_stylesheet_directory() . '/languages' );
+
+}
+
+// Adds helper functions.
+require_once get_stylesheet_directory() . '/lib/helper-functions.php';
+
+// Adds image upload and color select to Customizer.
+require_once get_stylesheet_directory() . '/lib/customize.php';
+
+// Includes Customizer CSS.
+require_once get_stylesheet_directory() . '/lib/output.php';
+
+// Adds WooCommerce support.
+require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-setup.php';
+
+// Adds the required WooCommerce styles and Customizer CSS.
+require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-output.php';
+
+// Adds the Genesis Connect WooCommerce notice.
+require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-notice.php';
+
+add_action( 'after_setup_theme', 'genesis_child_gutenberg_support' );
+/**
+ * Adds Gutenberg opt-in features and styling.
+ *
+ * @since 2.7.0
+ */
+function genesis_child_gutenberg_support() { // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound -- using same in all child themes to allow action to be unhooked.
+	require_once get_stylesheet_directory() . '/lib/gutenberg/init.php';
+}
+
+// Registers the responsive menus.
+if ( function_exists( 'genesis_register_responsive_menus' ) ) {
+	genesis_register_responsive_menus( genesis_get_config( 'responsive-menus' ) );
+}
+
+add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
+/**
+ * Enqueues scripts and styles.
+ *
+ * @since 1.0.0
+ */
+function genesis_sample_enqueue_scripts_styles() {
+
+	$appearance = genesis_get_config( 'appearance' );
+
+	wp_enqueue_style(
+		genesis_get_theme_handle() . '-fonts',
+		$appearance['fonts-url'],
+		[],
+		genesis_get_theme_version()
+	);
+
+	wp_enqueue_style( 'dashicons' );
+
+	if ( genesis_is_amp() ) {
+		wp_enqueue_style(
+    genesis_get_theme_handle() . '-amp',
+    get_stylesheet_directory_uri() . '/lib/amp/amp.css',
+    [ genesis_get_theme_handle() ],
+    filemtime(
+        get_stylesheet_directory() . '/lib/amp/amp.css'
+    )
+);
+	}
+
+}
+
+add_action( 'after_setup_theme', 'genesis_sample_theme_support', 9 );
+/**
+ * Add desired theme supports.
+ *
+ * See config file at `config/theme-supports.php`.
+ *
+ * @since 3.0.0
+ */
+function genesis_sample_theme_support() {
+
+	$theme_supports = genesis_get_config( 'theme-supports' );
+
+	foreach ( $theme_supports as $feature => $args ) {
+		add_theme_support( $feature, $args );
+	}
+
+}
+
+add_action( 'after_setup_theme', 'genesis_sample_post_type_support', 9 );
+/**
+ * Add desired post type supports.
+ *
+ * See config file at `config/post-type-supports.php`.
+ *
+ * @since 3.0.0
+ */
+function genesis_sample_post_type_support() {
+
+	$post_type_supports = genesis_get_config( 'post-type-supports' );
+
+	foreach ( $post_type_supports as $post_type => $args ) {
+		add_post_type_support( $post_type, $args );
+	}
+
+}
+
+// Adds image sizes.
+add_image_size( 'sidebar-featured', 75, 75, true );
+add_image_size( 'genesis-singular-images', 702, 526, true );
+
+// Removes header right widget area.
+unregister_sidebar( 'header-right' );
+
+// Removes secondary sidebar.
+unregister_sidebar( 'sidebar-alt' );
+
+// Removes site layouts.
+genesis_unregister_layout( 'content-sidebar-sidebar' );
+genesis_unregister_layout( 'sidebar-content-sidebar' );
+genesis_unregister_layout( 'sidebar-sidebar-content' );
+
+// Repositions primary navigation menu.
+remove_action( 'genesis_after_header', 'genesis_do_nav' );
+add_action( 'genesis_header', 'genesis_do_nav', 12 );
+
+// Repositions the secondary navigation menu.
+remove_action( 'genesis_after_header', 'genesis_do_subnav' );
+add_action( 'genesis_footer', 'genesis_do_subnav', 10 );
+
+add_filter( 'wp_nav_menu_args', 'genesis_sample_secondary_menu_args' );
+/**
+ * Reduces secondary navigation menu to one level depth.
+ *
+ * @since 2.2.3
+ *
+ * @param array $args Original menu options.
+ * @return array Menu options with depth set to 1.
+ */
+function genesis_sample_secondary_menu_args( $args ) {
+
+	if ( 'secondary' === $args['theme_location'] ) {
+		$args['depth'] = 1;
+	}
+
+	return $args;
+
+}
+
+add_filter( 'genesis_author_box_gravatar_size', 'genesis_sample_author_box_gravatar' );
+/**
+ * Modifies size of the Gravatar in the author box.
+ *
+ * @since 2.2.3
+ *
+ * @param int $size Original icon size.
+ * @return int Modified icon size.
+ */
+function genesis_sample_author_box_gravatar( $size ) {
+
+	return 90;
+
+}
+
+add_filter( 'genesis_comment_list_args', 'genesis_sample_comments_gravatar' );
+/**
+ * Modifies size of the Gravatar in the entry comments.
+ *
+ * @since 2.2.3
+ *
+ * @param array $args Gravatar settings.
+ * @return array Gravatar settings with modified size.
+ */
+function genesis_sample_comments_gravatar( $args ) {
+
+	$args['avatar_size'] = 60;
+	return $args;
+
+}
+
+
+
+
+
+
+
+add_filter( 'wp_nav_menu_items', 'theme_menu_extras', 10, 2 );
+function theme_menu_extras( $menu, $args ) {
+
+	if ( 'primary' !== $args->theme_location ) {
+		return $menu;
+	}
+
+	// Direct URLs for icons
+	$email_icon_url = 'https://elearnposh.com/wp-content/uploads/2025/08/icons8-envelope-16.png';
+	$phone_icon_url = 'https://elearnposh.com/wp-content/uploads/2025/08/icons8-call-24.png';
+
+	// Contact Block — UPDATED: uses shortcode
+	$contact_block = '
+		<div class="header-contact-block" 
+			 style="display:inline-block; text-align:left; margin-right:5px; line-height:1.3; font-family:\'Nunito Sans\', sans-serif;">
+
+			<div class="header-email" 
+				 style="color:black; font-size:13px; display:flex; align-items:center; gap:6px;">
+				<img src="' . esc_url($email_icon_url) . '" alt="Email Icon" 
+					 style="width:16px; height:16px;">
+				<a href="mailto:sales@succeedtech.com" 
+				   style="color:black; text-decoration:none;">sales@succeedtech.com</a>
+			</div>
+
+			<div class="header-phone" 
+				 style="color:black; font-size:15px; font-weight:bold; margin-top:3px; display:flex; align-items:center; gap:6px;">
+				<img src="' . esc_url($phone_icon_url) . '" alt="Phone Icon" 
+					 style="width:16px; height:16px;">
+
+				<span class="header-shuffle-number">'
+					. do_shortcode('[shuffle_one_number]') .
+				'</span>
+			</div>
+
+		</div>
+	';
+
+	// Button
+	$button = '<a class="btn-posh-a" href="https://elearnposh.com/contact-us/#demo">
+					<button class="btn-posh">Schedule a Demo</button>
+				</a>';
+
+	// Append and return
+	$menu .= $contact_block . $button;
+
+	return $menu;
+}
+
+/**
+ * Desktop header sticky behavior + scoped button override.
+ * Uses anonymous callback to avoid function redeclare fatals.
+ */
+add_action( 'wp_head', function() {
+	?>
+	<style>
+		@media (min-width: 1201px) {
+			.site-header {
+				position: sticky !important;
+				top: 0 !important;
+				z-index: 9999;
+				background: #fff;
+			}
+
+			#mega-menu-wrap-primary .btn-posh-a .btn-posh {
+				display: inline-block !important;
+				visibility: visible !important;
+				opacity: 1 !important;
+			}
+		}
+	</style>
+	<?php
+}, 99 );
+
+
+
+
+
+
+
+
+
+
+
+
+//Enable Compression on WP - Emojis
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+remove_action( 'admin_print_styles', 'print_emoji_styles' );
+
+//De -register dashicons
+
+// function wpdocs_dequeue_dashicon() {
+//         if (current_user_can( 'update_core' )) {
+//             return;
+//         }
+//         wp_deregister_style('dashicons');
+// }
+// add_action( 'wp_enqueue_scripts', 'wpdocs_dequeue_dashicon' );
+
+
+
+
+function my_login_logo_one() { 
+?> 
+<style type="text/css"> 
+body.login div#login h1 a {
+ background-image: url(https://dev.elearnposh.com/wp-content/uploads/2020/01/eLearnPOSH-1.png);   
+padding-bottom: 30px; 
+} 
+</style>
+ <?php 
+} add_action( 'login_enqueue_scripts', 'my_login_logo_one' );
+
+
+
+
+/**
+ * Can validate field by comparing value with other field.
+ */
+class WPDesk_FCF_Validation_Confirm_Field {
+	/**
+	 * Field to compare with validated field.
+	 *
+	 * @var string
+	 */
+	private $field_to_compare;
+	/**
+	 * WPDesk_FCF_Validation_Confirm_Field constructor.
+	 *
+	 * @param string $field_to_compare .
+	 */
+	public function __construct( $field_to_compare ) {
+		$this->field_to_compare = $field_to_compare;
+	}
+	public function hooks() {
+		add_filter( 'flexible_checkout_fields_custom_validation', array( $this, 'register_custom_validation' ) );
+	}
+	/**
+	 * Register custom validation.
+	 *
+	 * @param array $custom_validation .
+	 *
+	 * @return array
+	 */
+	public function register_custom_validation( $custom_validation ) {
+		$custom_validation[ 'field_confirmation_' . $this->field_to_compare ] = array(
+			'label'    => sprintf( __( 'Compare with %1$s', 'wpdesk' ), $this->field_to_compare ),
+			'callback' => array( $this, 'validate' )
+		);
+		return $custom_validation;
+	}
+	/**
+	 * Validate.
+	 *
+	 * @param string $field_label Field label.
+	 * @param string $value Field value.
+	 */
+	public function validate( $field_label, $value ) {
+		$field_to_compare_value = sanitize_text_field( $_POST[ $this->field_to_compare ] );
+		$valid = $field_to_compare_value === $value;
+		if ( ! $valid ) {
+			wc_add_notice( sprintf( __( 'Invalid %1$s value.', 'wpdesk' ), '<strong>' . $field_label . '</strong>' ), 'error' );
+		}
+	}
+}
+$fcf_validation_confirm_field = new WPDesk_FCF_Validation_Confirm_Field( 'billing_email' );
+$fcf_validation_confirm_field->hooks();
+
+//Change place order button in checkout page
+
+add_filter( 'woocommerce_order_button_text', 'misha_custom_button_text' );
+ 
+function misha_custom_button_text( $button_text ) {
+   return 'Submit'; // new text is here 
+}
+
+
+
+////////////////Featured Image //////////////////
+
+
+
+//  add_action( 'genesis_before_entry', 'reposition_entry_header' );
+// function reposition_entry_header() {
+
+
+//       if($post->ID === '8145'){
+// 		remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
+// 		remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
+// 		remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+// 		remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
+
+// 		add_action( 'genesis_entry_content', 'genesis_do_post_title', 9 );
+// 		add_action( 'genesis_entry_content', 'genesis_post_info', 9 );
+
+// 	  }
+
+// }
+
+add_filter( 'woocommerce_get_order_item_totals', 'custom_woocommerce_get_order_item_totals' );
+
+function custom_woocommerce_get_order_item_totals( $totals ) {
+  unset( $totals['payment_method'] );
+  return $totals;
+}
+
+
+/** Custom color for background **/
+
+/* Hook to init */
+add_action( 'init', 'my_editor_background_color' );
+ 
+/**
+ * Add TinyMCE Button
+ * @link https://shellcreeper.com/?p=1339
+ */
+function my_editor_background_color(){
+ 
+    /* Add the button/option in second row */
+    add_filter( 'mce_buttons_2', 'my_editor_background_color_button', 1, 2 ); // 2nd row
+}
+ 
+/**
+ * Modify 2nd Row in TinyMCE and Add Background Color After Text Color Option
+ * @link https://shellcreeper.com/?p=1339
+ */
+function my_editor_background_color_button( $buttons, $id ){
+ 
+    /* Only add this for content editor, you can remove this line to activate in all editor instance */
+    if ( 'content' != $id ) return $buttons;
+ 
+    /* Add the button/option after 4th item */
+    array_splice( $buttons, 4, 0, 'backcolor' );
+ 
+    return $buttons;
+}
+
+// remove_action( 'wp_head', 'feed_links_extra', 3 );
+// remove_action( 'wp_head', 'feed_links', 2 );
+// 
+
+/**
+ * Goto http://yoursite.com/?update-wp-ca-bundle
+ */
+
+
+add_action( 'template_redirect', 'wpse_124609_remove_titles' );
+/**
+ * Move or remove some post titles.
+ */
+function wpse_124609_remove_titles() {
+    global $post;
+
+    if ( $post->ID == 8301 ) {
+        remove_action( 'genesis_post_title', 'genesis_do_post_title' );
+        add_action( 'genesis_after_header', 'title_slider' );
+    } 
+}
+
+/**
+ * Add Title Slider to some post titles.
+ */
+function title_slider() {
+    //echo '<section class="blog-bg-image"><div class="hero-image"><div class="hero-text">';
+									
+									
+// 					                   if($post_slug){
+// 										   echo "<h1 class='blogs-title'>".$post_name."</h1>";
+// 									   }else{
+										   //echo "<h1 class='blogs-title'>All you need to know about POSH Act</h1>";
+										   
+									       //echo "</div>";
+									       //echo "</div>";
+									       //echo "</section>";
+	  
+}
+
+
+
+/**
+ * Display field value on the order edit page
+ */
+add_action( 'woocommerce_admin_order_data_after_billing_address', 'my_custom_checkout_field_display_admin_order_meta', 10, 1 );
+function my_custom_checkout_field_display_admin_order_meta( $order ){
+    $order_id = method_exists( $order, 'get_id' ) ? $order->get_id() : $order->id;
+    echo '<p><strong>'.__('utm_source').':</strong> ' . get_post_meta( $order_id, 'utm_source', true ) . '</p>';
+}
+
+
+
+/***function footer_shuffle_mobile_numbers() {
+    ?>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var mobileList = document.querySelectorAll("#footer-random-mobilenum-div .elementor-widget-container .elementor-icon-list-items .elementor-icon-list-item");
+        var shuffledArray = [
+            {
+                'url': 'tel:+917019012446',
+                'text': '+91-70190 12446',
+            },
+            {
+                'url': 'tel:+916362021778',
+                'text': '+91-63620 21778',
+            },
+            {
+                'url': 'tel:+917259159807',
+                'text': '+91-72591 59807',
+            },
+            {
+                'url': 'tel:+917676544212',
+                'text': '+91-76765 44212',
+            },
+            {
+                'url': 'tel:+916361473161',
+                'text': '+91-63614 73161',
+            }
+        ];
+        shuffledArray.sort(function() {
+            return 0.5 - Math.random();
+        });
+        mobileList.forEach(function(element, index) {
+            if (index < 3) { // Only replace first 3 items
+                var anchor = element.querySelector("a");
+                var text = element.querySelector(".elementor-icon-list-text");
+                anchor.href = shuffledArray[index].url;
+                text.textContent = shuffledArray[index].text;
+            }
+        });
+    });
+    </script>
+    <?php
+}
+add_action( 'wp_footer', 'footer_shuffle_mobile_numbers' );
+*****************/
+
+
+/******************
+ * function footer_shuffle_mobile_numbers() {
+    ?>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+        // Target your 3 icon list items
+        var mobileList = document.querySelectorAll(
+            "#footer-random-mobilenum-div .elementor-icon-list-item"
+        );
+
+        // 5 phone numbers
+        var numbers = [
+            { url: "tel:+917019012446", text: "+91-70190 12446" },
+            { url: "tel:+916362021778", text: "+91-63620 21778" },
+            { url: "tel:+917259159807", text: "+91-72591 59807" },
+            { url: "tel:+917676544212", text: "+91-76765 44212" },
+            { url: "tel:+916361473161", text: "+91-63614 73161" }
+        ];
+
+        // Shuffle the 5 numbers
+        numbers.sort(() => Math.random() - 0.5);
+
+        // Replace only the first 3 list items
+        mobileList.forEach(function(item, index) {
+
+            if (index < 3) {
+
+                let aTag = item.querySelector("a");
+                let textTag = item.querySelector(".elementor-icon-list-text");
+
+                if (aTag && textTag) {
+                    aTag.href = numbers[index].url;
+                    textTag.textContent = numbers[index].text;
+                }
+            }
+
+        });
+
+    });
+    </script>
+    <?php
+}
+add_action( 'wp_footer', 'footer_shuffle_mobile_numbers' );
+
+*************/
+
+function add_google_font_cdn() {
+	wp_enqueue_style( 'stylesheet', 'https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap' );
+	// wp_enqueue_style( 'stylesheet', 'https://fonts.googleapis.com/css2?family=Poppins&display=swap' );
+}
+
+add_action( 'wp_enqueue_scripts', 'add_google_font_cdn' );
+
+function render_countdown_shortcode() {
+    return do_shortcode('[ec id="1"]');
+}
+add_shortcode('render_countdown', 'render_countdown_shortcode');
+
+// Remove WordPress version from the HTML source
+/***remove_action('wp_head', 'wp_generator');
+
+add_action('wp_footer', function() {
+  ?>
+  <script>
+    jQuery(document).ready(function($) {
+      $('.clients-carousel-ltr').owlCarousel({
+        loop: true,
+        margin: 20,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        smartSpeed: 600,
+        autoplayHoverPause: true,
+        responsive: {
+          0: { items: 2 },
+          600: { items: 4 },
+          1000: { items: 6 }
+        }
+      });
+
+      $('.clients-carousel-rtl').owlCarousel({
+        loop: true,
+        margin: 20,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        smartSpeed: 600,
+        autoplayHoverPause: true,
+        rtl: true,
+        responsive: {
+          0: { items: 2 },
+          600: { items: 4 },
+          1000: { items: 6 }
+        }
+      });
+    });
+  </script>
+  <?php
+});
+
+*********/
+/*Client logo Carsole*/
+function custom_enqueue_swiper_assets() {
+    if (is_front_page()) {
+        wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
+    }
+}
+add_action('wp_enqueue_scripts', 'custom_enqueue_swiper_assets');
+
+
+function custom_enqueue_swiper_script() {
+    if (is_front_page()) {
+        wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), null, true);
+        wp_add_inline_script('swiper-js', "
+          var swiperLTR = new Swiper('.ltr-swiper', {
+            slidesPerView: 5,
+            spaceBetween: 24,
+            loop: true,
+            autoplay: {
+              delay: 0,
+              disableOnInteraction: false,
+              reverseDirection: false
+            },
+            speed: 3000,
+            allowTouchMove: false
+          });
+
+          var swiperRTL = new Swiper('.rtl-swiper', {
+            slidesPerView: 5,
+            spaceBetween: 24,
+            loop: true,
+            autoplay: {
+              delay: 0,
+              disableOnInteraction: false,
+              reverseDirection: true
+            },
+            speed: 3000,
+            allowTouchMove: false
+          });
+        ");
+    }
+}
+add_action('wp_enqueue_scripts', 'custom_enqueue_swiper_script');
+
+
+// Load amp-web-push script only if <amp-web-push-widget> is used
+add_action('amp_post_template_head', function () {
+    global $post;
+
+    // Safely get the post content
+    $content = isset($post->post_content) ? $post->post_content : '';
+
+    // Check if <amp-web-push-widget> exists in content
+    if (strpos($content, '<amp-web-push-widget') !== false) {
+        echo '<script async custom-element="amp-web-push" src="https://cdn.ampproject.org/v0/amp-web-push-0.1.js"></script>';
+    }
+});
+
+
+// Completely remove amp-web-push script, style, and widget if not used
+add_filter('amp_post_template_data', function ($data) {
+    ob_start(function ($html) {
+        // Remove <script> for amp-web-push
+        $html = preg_replace(
+            '/<script[^>]+src="https:\/\/cdn\.ampproject\.org\/v0\/amp-web-push-0\.1\.js"[^>]*><\/script>/i',
+            '',
+            $html
+        );
+
+        // Remove <style amp-extension="amp-web-push">
+        $html = preg_replace(
+            '/<style amp-extension="amp-web-push">.*?<\/style>/is',
+            '',
+            $html
+        );
+
+        // Remove any <amp-web-push-widget> tag if present
+        $html = preg_replace(
+            '/<amp-web-push-widget[^>]*>.*?<\/amp-web-push-widget>/is',
+            '',
+            $html
+        );
+
+        return $html;
+    });
+    return $data;
+});
+
+
+
+
+function allow_year_query_var($vars) {
+    $vars[] = 'year';
+    return $vars;
+}
+add_filter('query_vars', 'allow_year_query_var');
+
+
+add_action('template_redirect', function() {
+    if (is_page('newsletter')) {
+        $year = get_query_var('year');
+        error_log('Year Param: ' . $year);
+    }
+});
+
+function newsletter_custom_rewrite() {
+    add_rewrite_rule('^newsletter/([0-9]{4})/?$', 'index.php?pagename=newsletter&year=$matches[1]', 'top');
+}
+add_action('init', 'newsletter_custom_rewrite');
+
+
+
+function custom_non_amp_mobile_sidebar_header() {
+    if (function_exists('is_amp_endpoint') && is_amp_endpoint()) return;
+    ?>
+    <style>
+    /* Desktop: hide mobile hamburger bar */
+    @media (min-width: 1201px) {
+        .mobile-only { display: none !important; }
+    }
+    /* Tab/hamburger view: hide full desktop header before it breaks, show hamburger */
+    @media (max-width: 1200px) {
+        body.menu-open { overflow: hidden; }
+        header,
+        .site-header,
+        .main-header,
+        nav,
+        .main-navigation,
+        #mega-menu-wrap-primary,
+        .genesis-header .wrap {
+            display: none !important;
+        }
+        /* Keep only the site title/logo area visible if you want logo on mobile - else hide the whole header */
+        .site-header .wrap,
+        .title-area {
+            display: none !important;
+        }
+        #sidebar-menu-btn, .menu.content-width { display: none !important; }
+    }
+/* Reduce on larger screens (example: 1400px and up) - only when desktop menu is visible */
+@media (min-width: 1201px) and (max-width: 1399px) {
+  #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link {
+    font-size: 13px !important;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+  }
+}
+@media (min-width: 1400px) {
+  #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link {
+    font-size: 14px !important; 
+    line-height: 1.1;
+    padding-top: .35rem; 
+    padding-bottom: .35rem;
+  }
+}
+
+    #sidebar-menu-btn,
+    .menu.content-width {
+        display: none !important;
+    }
+
+    amp-sidebar#sidebar {
+        display: none !important;
+    }
+        /* Mobile Header */
+        #custom-mobile-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px;
+            background-color: #ffffff;
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 99999;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+        #custom-mobile-header img { height: 50px; width: 120px; }
+        #hamburger {
+            font-size: 28px;
+            font-weight:600;
+            cursor: pointer;
+            color: #0089cf;
+        }
+
+        /* Overlay */
+        #mobile-menu-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.3);
+            opacity: 0; pointer-events: none;
+            transition: opacity 0.3s ease;
+            z-index: 99998;
+        }
+        body.menu-open #mobile-menu-overlay { opacity: 1; pointer-events: all; }
+
+        /* Sidebar Menu */
+        #mobile-menu {
+            position: fixed; top: 0; right: -300px;
+            width: 300px; height: 100%;
+            background: #ffffff;
+            box-shadow: -2px 0 12px rgba(0,0,0,0.2);
+            padding-top: 3rem; padding-bottom: 0px;
+            transition: right 0.3s ease;
+            z-index: 99999; overflow-y: auto;
+        }
+        body.menu-open #mobile-menu { right: 0; }
+
+        /* Close button */
+        #mobile-menu .close-btn {
+            position: absolute; top: 10px; right: 10px;
+            font-size: 28px; color: #000; cursor: pointer;
+        }
+
+        /* Remove bullets & spacing */
+        #mobile-menu ul {
+            list-style: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        #mobile-menu ul li { margin: 6px 0; }
+
+        /* Menu items */
+        #mobile-menu ul li > a {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: 500; font-size: 15px;
+            color: #002a38;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            background: #ffffff !important;
+        }
+        #mobile-menu ul li > a:hover { background-color: #ffffff !important; }
+
+        /* Submenu arrow */
+        #mobile-menu ul li.has-submenu > a::after {
+            content: '';
+            display: inline-block;
+            margin-left: 8px;
+            width: 0; height: 0;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            border-left: 12px solid #002a38;
+            transition: transform 0.3s ease;
+        }
+        #mobile-menu ul li.active > a::after { transform: rotate(90deg); }
+
+        /* Submenus */
+        #mobile-menu ul li ul { display: none; background-color: #ffffff !important; }
+        #mobile-menu ul li.active > ul { display: block; }
+
+        #mobile-menu ul li ul li a {
+            padding-left: 40px; font-weight: 400; font-size: 14px;
+            border-bottom: none; color: #002a38;
+            background: #ffffff !important;
+        }
+        #mobile-menu ul li ul li ul li a { padding-left: 60px; }
+
+        /* Sidebar contact section */
+        #mobile-menu .sidebar-contact {
+            margin-top: 20px; padding: 20px;
+            border-top: none!important;
+            text-align: center;
+        }
+#mobile-menu .sidebar-contact a {
+    display: block;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    text-align: center;
+    transition: background 0.2s ease;
+}
+
+#mobile-menu .sidebar-email {
+    background: transparent;
+    color: #002a38;
+	font-size:16px !important;
+	font-weight:500 !important;
+}
+
+#mobile-menu .sidebar-cta {
+    background: #002a38;
+    color: #fff;
+    font-weight: bold;
+}
+
+    </style>
+ <div class="mobile-only">
+    <!-- Header -->
+    <div id="custom-mobile-header">
+        <a href="/"><img src="https://elearnposh.com/wp-content/uploads/2020/11/eLearn-posh-Logo.png" alt="Logo"></a>
+        <div id="hamburger">&#9776;</div>
+    </div>
+
+    <!-- Overlay -->
+    <div id="mobile-menu-overlay"></div>
+
+    <!-- Sidebar Menu -->
+    <div id="mobile-menu">
+        <div class="close-btn">&times;</div>
+        <ul>
+            <li class="has-submenu">
+                <a href="javascript:void(0);">Courses</a>
+                <ul>
+                    <li><a href="/solutions/posh-training-for-employees/">POSH Foundation</a></li>
+                    <li><a href="/posh-courses/posh-for-managers/">POSH for Managers</a></li>
+                    <li><a href="/posh-courses/posh-for-ic-members/">POSH for IC members</a></li>
+                    <li><a href="/solutions/posh-for-higher-educational-institutions/">POSH for HEI</a></li>
+                    <li><a href="/solutions/pocso-prevention-of-child-sexual-abuse/">POCSO</a></li>
+                    <li><a href="/solutions/unconscious-bias/">Unconscious</a></li>
+                    <li class="has-submenu">
+                        <a href="javascript:void(0);">Global Courses</a>
+                        <ul>
+                            <li><a href="/equality-and-diversity/">Equality, Diversity & Inclusion</a></li>
+                            <li><a href="/solutions/sexual-harassment-prevention-for-us/">Sexual Harassment Prevention for US</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="/posh-act/">POSH Act</a></li>            
+            <li><a href="/em-directory/members/">External Member Directory</a></li>
+			<li><a href="/our-webinars/">Our Webinars</a></li>
+            <li class="has-submenu">
+                <a href="javascript:void(0);">Resources</a>
+                <ul>
+                    <li><a href="/blog/">Blogs</a></li>
+                    <li><a href="/newsletter/">Newsletter</a></li>
+                    <li><a href="/press/">Media</a></li>
+					<li><a href="/enterprise-features/">Enterprise Features</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+<div class="sidebar-contact">
+    <a href="mailto:sales@succeedtech.com" class="sidebar-email">sales@succeedtech.com</a>
+    <a href="/contact-us/" class="sidebar-cta">Schedule an Demo</a>
+</div>
+
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.getElementById('hamburger');
+        const overlay = document.getElementById('mobile-menu-overlay');
+        const closeBtn = document.querySelector('#mobile-menu .close-btn');
+        const submenuLinks = document.querySelectorAll('#mobile-menu .has-submenu > a');
+
+        hamburger.addEventListener('click', function() {
+            document.body.classList.toggle('menu-open');
+            hamburger.innerHTML = document.body.classList.contains('menu-open') ? '&times;' : '&#9776;';
+        });
+        overlay.addEventListener('click', function() {
+            document.body.classList.remove('menu-open');
+            hamburger.innerHTML = '&#9776;';
+        });
+        closeBtn.addEventListener('click', function() {
+            document.body.classList.remove('menu-open');
+            hamburger.innerHTML = '&#9776;';
+        });
+
+        // Submenu toggle
+        submenuLinks.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                this.parentElement.classList.toggle('active');
+            });
+        });
+    });
+    </script>
+<style>
+	/* Hide mobile-only block on desktop (match main breakpoint: 1201px) */
+        @media (min-width: 1201px) {
+            .mobile-only { display: none !important; }
+        }
+</style>
+</div>
+    <?php
+}
+add_action('wp_footer', 'custom_non_amp_mobile_sidebar_header');
+
+
+
+
+
+
+
+
+
+
+// Add "Share:" text above AddToAny share icons
+add_action('a2a_before_share', 'custom_addtoany_share_text');
+
+function custom_addtoany_share_text() {
+    if ( is_singular('post') ) { // Only show on single blog posts
+        echo '<div class="custom-share-text" style="font-weight:bold; margin-bottom:5px;">Share on:</div>';
+    }
+}
+add_action('genesis_entry_footer', 'custom_addtoany_share_above_text', 5);
+function custom_addtoany_share_above_text() {
+    if (is_singular('post')) {
+        ?>
+        <div class="custom-share-section" style="margin-bottom:15px;">
+            <div class="custom-share-text" style="font-weight:bold; margin-bottom:5px;">Share on:</div>
+            
+            <!-- AddToAny standard buttons -->
+            <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                <a class="a2a_button_facebook"></a>
+                <a class="a2a_button_twitter"></a>
+                <a class="a2a_button_linkedin"></a>
+                <a class="a2a_button_whatsapp"></a>
+                <a class="a2a_button_copy_link"></a>
+                <a class="a2a_button_telegram"></a>
+				<a class="a2a_dd addtoany_share_save addtoany_share"></a>
+
+            </div>
+
+            <script async src="https://static.addtoany.com/menu/page.js"></script>
+        </div>
+        <?php
+    }
+}
+
+
+// Force AMP template for Newsletter page
+add_filter('amp_post_template_file', function ($file, $type, $post) {
+    if ($post && $post->post_type === 'page' && $post->post_name === 'newsletter') {
+        // Look for newsletter-amp.php inside your theme root
+        $new_template = get_stylesheet_directory() . '/newsletter-amp.php';
+        if (file_exists($new_template)) {
+            return $new_template;
+        }
+    }
+    return $file;
+}, 10, 3);
+
+
+
+// AJAX Live Search for Newsletters
+function newsletter_live_search() {
+    $term = sanitize_text_field($_GET['term'] ?? '');
+    $results = [];
+
+    if ($term) {
+        $query = new WP_Query([
+            'post_type' => 'post',
+            'posts_per_page' => 8,
+            's' => $term,
+            'category_name' => 'newsletter',
+        ]);
+
+        while ($query->have_posts()) {
+            $query->the_post();
+            $results[] = [
+                'title' => get_the_title(),
+                'link' => get_permalink(),
+            ];
+        }
+        wp_reset_postdata();
+    }
+
+    wp_send_json($results);
+}
+add_action('wp_ajax_newsletter_search', 'newsletter_live_search');
+add_action('wp_ajax_nopriv_newsletter_search', 'newsletter_live_search');
+
+
+
+
+// Remove AMP User Notification site-wide
+add_action('template_redirect', function() {
+    remove_action('wp_footer', 'amp_user_notification');
+});
+
+// Remove unwanted AMP scripts that may auto-inject
+add_filter('amp_post_template_data', function($data) {
+    // Remove any unwanted notifications
+    $data['amp_component_scripts'] = array_diff_key($data['amp_component_scripts'], [
+        'amp-user-notification' => '',
+    ]);
+    return $data;
+});
+
+
+// Kill all footer injections on AMP newsletter template
+add_action('template_redirect', function() {
+  if (is_page_template('newsletter-amp.php, blog.php')) {
+    remove_all_actions('wp_footer');
+    remove_all_actions('wp_head');
+  }
+});
+add_action('init', function() {
+    remove_all_actions('ampforwp_post_before_design_elements');
+    remove_all_actions('ampforwp_inside_post_content');
+    remove_all_actions('ampforwp_post_after_design_elements');
+    remove_all_actions('ampforwp_global_after_footer');
+    remove_all_actions('ampforwp_global_before_header');
+});
+add_action('template_redirect', function() {
+    if ( is_page('newsletter') && function_exists('is_amp_endpoint') && is_amp_endpoint() ) {
+        remove_all_actions('ampforwp_after_header');
+        remove_all_actions('ampforwp_before_footer');
+        remove_all_actions('ampforwp_after_footer');
+        remove_all_actions('ampforwp_content');
+        remove_all_actions('ampforwp_post_template');
+    }
+});
+// Disable AMPforWP auto featured image everywhere
+add_filter('ampforwp_show_featured_image', '__return_false');
+
+
+// Disable AMP user notifications only for Newsletter pages
+add_action('wp', function() {
+    if ( is_page('newsletter') || has_category('newsletter') ) {
+        // Remove notification injections
+        remove_action('amp_post_template_body_open', 'ampforwp_user_notification');
+        remove_action('amp_post_template_footer', 'ampforwp_user_notification');
+
+        // Remove AMP component script for notifications
+        add_filter('ampforwp_amp_component_scripts', function($components){
+            if (isset($components['amp-user-notification'])) {
+                unset($components['amp-user-notification']);
+            }
+            return $components;
+        }, 20);
+    }
+}, 20);
+
+// Search query for the blog smp page //
+add_action('rest_api_init', function() {
+    register_rest_route('custom-amp/v1', '/search', [
+        'methods' => 'GET',
+        'callback' => 'custom_amp_search_results',
+        'permission_callback' => '__return_true',
+    ]);
+});
+
+function custom_amp_search_results($request) {
+    $query = sanitize_text_field($request->get_param('s'));
+    $args = [
+        'post_type' => 'post',
+        's' => $query,
+        'posts_per_page' => 10,
+        'category__not_in' => [ get_cat_ID('newsletter') ]
+    ];
+
+    $posts = get_posts($args);
+    $results = [];
+
+    foreach ($posts as $post) {
+        $results[] = [
+            'title' => get_the_title($post->ID),
+            'link' => get_permalink($post->ID),
+            'excerpt' => wp_trim_words($post->post_excerpt ?: $post->post_content, 20),
+            'date' => get_the_date('', $post->ID),
+        ];
+    }
+
+    return $results;
+}
+
+
+add_filter( 'widget_text', 'do_shortcode' );
+add_filter( 'elementor/frontend/the_content', 'do_shortcode' );
+
+
+add_action('wp_ajax_render_erp_contact_form', 'render_erp_contact_form');
+add_action('wp_ajax_nopriv_render_erp_contact_form', 'render_erp_contact_form');
+
+function render_erp_contact_form() {
+    echo do_shortcode('[erp_contact_page_form]');
+    wp_die();
+}
+
+
+// Disable AMP for specific pages entirely
+add_filter('amp_is_enabled', function($enabled) {
+    $exclude_amp_pages = array(91); // Add more page IDs here
+
+    if (is_singular() && in_array(get_the_ID(), $exclude_amp_pages)) {
+        return false; // Disable AMP
+    }
+
+    return $enabled;
+});
+
+// Prevent AMP for WP mobile redirect
+add_filter('ampforwp_disable_mobile_amp_redirect', function($disable) {
+    return true; // Stops AMP from forcing mobile redirect
+});
+
+
+
+add_action('wp_enqueue_scripts', function () {
+    if (is_front_page()) {
+        wp_dequeue_script('add-to-cart');
+        wp_dequeue_script('addtoany');
+    }
+}, 99);
+
+
+add_action('send_headers', function () {
+    header('Cache-Control: public, max-age=31536000, immutable');
+});
+
+add_action('wp_head', function () {
+    if (is_front_page()) {
+        echo '<link rel="preload" as="image" href="https://elearnposh.com/wp-content/uploads/2025/12/Cwebp.webp" fetchpriority="high">';
+    }
+});
+
+
+add_action('wp_enqueue_scripts', function () {
+    if (!is_admin()) {
+        wp_dequeue_style('dashicons');
+    }
+}, 100);
+
+
+add_action( 'wp_head', function () {
+    if ( is_front_page() ) {
+        ?>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap">
+        <?php
+    }
+}, 5 );
+
+
+/**
+ * ======================================================
+ * 1️⃣ GA4 – Load gtag.js ONLY on Page ID 10898
+ * ======================================================
+ */
+add_action('wp_head', function () {
+
+    if ( is_page(10898) && !defined('GA4_ALREADY_ADDED') ) {
+
+        define('GA4_ALREADY_ADDED', true);
+        ?>
+        <!-- Google tag (gtag.js) – GA4 -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-28GVK7WTMH"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-28GVK7WTMH');
+        </script>
+        <!-- End GA4 -->
+        <?php
+    }
+
+});
+
+
+/**
+ * ======================================================
+ * 2️⃣ Google Ads CONFIG – Uses existing gtag.js
+ *     (NO script reload, safe with GA4)
+ * ======================================================
+ */
+add_action('wp_head', function () {
+    ?>
+    <!-- Google Ads Config -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('config', 'AW-711452692');
+    </script>
+    <!-- End Google Ads Config -->
+    <?php
+});
+
+
+/**
+ * ======================================================
+ * 3️⃣ Google Ads CONVERSION – ONLY on Page ID 21954
+ * ======================================================
+ */
+add_action('wp_footer', function () {
+
+    if ( is_page(21954) ) {
+        ?>
+        <!-- Google Ads Conversion -->
+        <script>
+          gtag('event', 'conversion', {
+            'send_to': 'AW-711452692/MseICO2br4oDEJTQn9MC'
+          });
+        </script>
+        <!-- End Conversion -->
+        <?php
+    }
+
+});
+
+
+/**
+ * Fix mega menu dropdown indicator: show down arrow instead of box (missing icon).
+ */
+add_action( 'wp_head', 'custom_mega_menu_dropdown_arrow', 20 );
+function custom_mega_menu_dropdown_arrow() {
+	if ( function_exists( 'is_amp_endpoint' ) && is_amp_endpoint() ) {
+		return;
+	}
+	?>
+	<style id="mega-menu-dropdown-arrow">
+		/* Override plugin inline styles on mega-indicator (so arrow displays correctly) */
+		#mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item-has-children > a.mega-menu-link > span.mega-indicator {
+			display: inline-block !important;
+			height: 0 !important;
+			width: 0 !important;
+			background: none !important;
+			position: relative !important;
+			pointer-events: auto !important;
+			left: auto !important;
+			min-width: auto !important;
+			line-height: 0 !important;
+			color: inherit !important;
+			font-size: 0 !important;
+			padding: 0 !important;
+		}
+		/* Mega menu: replace box with down arrow */
+		#mega-menu-wrap-primary .mega-indicator::before,
+		#mega-menu-wrap-primary .mega-indicator::after {
+			content: none !important;
+			display: none !important;
+		}
+		#mega-menu-wrap-primary .mega-indicator {
+			display: inline-block !important;
+			width: 0 !important;
+			height: 0 !important;
+			margin-left: 6px;
+			vertical-align: middle;
+			font-size: 0;
+			line-height: 0;
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			border-top: 6px solid currentColor;
+			background: none !important;
+			padding: 0 !important;
+			min-width: auto !important;
+			left: auto !important;
+			position: relative !important;
+			pointer-events: auto !important;
+		}
+		#mega-menu-wrap-primary .mega-menu-item-has-children > a .mega-indicator {
+			transition: transform 0.2s ease;
+		}
+		#mega-menu-wrap-primary .mega-menu-item-has-children.mega-toggle-on > a .mega-indicator {
+			transform: rotate(180deg);
+		}
+	</style>
+	<?php
+}
+
+
+// Force custom single templates for specific categories
+function force_category_single_templates($single_template) {
+    global $post;
+
+    if (!$post) {
+        return $single_template;
+    }
+
+    // Newsletter category
+    if (is_single() && has_category('newsletter', $post)) {
+        $custom_template = get_stylesheet_directory() . '/view_newsletter.php';
+        if (file_exists($custom_template)) {
+            return $custom_template;
+        }
+    }
+
+    // Course category
+    if (is_single() && has_category('course', $post)) {
+        $custom_template = get_stylesheet_directory() . '/course-template.php';
+        if (file_exists($custom_template)) {
+            return $custom_template;
+        }
+    }
+
+    return $single_template;
+}
+
+add_filter('single_template', 'force_category_single_templates');
+
+
+
+
+
+
+function load_stats_counter_script() {
+    wp_enqueue_script(
+        'stats-counter',
+        get_stylesheet_directory_uri() . '/js/stats-counter.js', // ✅ correct path
+        array(),
+        '1.0',
+        true
+    );
+}
+add_action('wp_enqueue_scripts', 'load_stats_counter_script');

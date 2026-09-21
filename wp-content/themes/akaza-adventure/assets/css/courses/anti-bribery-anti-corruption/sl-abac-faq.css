@@ -1,0 +1,126 @@
+/**
+ * Anti-Bribery ABAC — FAQ page layout.
+ *
+ * Accordion look/behaviour: global-faq.css + global-faq.js.
+ *
+ * @package Akaza_Adventure
+ */
+
+.sl-course-page > section.sl-faq-section.sl-abac-faq {
+	--sl-faq-bg: var(--course-white, #ffffff);
+	--sl-faq-surface: var(--course-light-bg, #f5f5f5);
+	--sl-faq-border: rgba(107, 124, 147, 0.18);
+	--sl-faq-accent: var(--course-primary, #1472ba);
+	--sl-faq-navy: var(--course-navy, #16234e);
+	--sl-faq-text: var(--course-text, #4a4a4a);
+	--sl-abac-faq-num-w: 2.5rem;
+	padding: var(--course-section-space, 90px) 0;
+	background: var(--sl-faq-bg);
+}
+
+.sl-abac-faq.sl-faq-section .container {
+	width: min(calc(100% - 64px), var(--course-container, 1240px));
+	max-width: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sl-abac-faq.sl-faq-section .shead,
+.sl-abac-faq.sl-faq-section .sl-home-section-heading {
+	max-width: none;
+	width: 100%;
+	margin-bottom: 40px;
+	text-align: left;
+}
+
+.sl-abac-faq.sl-faq-section .sl-faq-list {
+	display: block;
+	width: 100%;
+	border-top: 1px solid var(--sl-faq-border);
+}
+
+.sl-abac-faq.sl-faq-section details.faq {
+	margin: 0;
+	border: none;
+	border-bottom: 1px solid var(--sl-faq-border);
+	border-radius: 0;
+	background: transparent;
+	box-shadow: none;
+	overflow: visible;
+}
+
+.sl-abac-faq.sl-faq-section details.faq:hover,
+.sl-abac-faq.sl-faq-section details.faq[open] {
+	background: transparent;
+	box-shadow: none;
+}
+
+.sl-abac-faq.sl-faq-section details.faq summary {
+	display: flex;
+	align-items: flex-start;
+	gap: 16px;
+	padding: 22px 0;
+	text-align: left;
+}
+
+.sl-abac-faq.sl-faq-section .sl-faq-summary-text {
+	display: flex;
+	align-items: flex-start;
+	gap: 14px;
+	min-width: 0;
+	flex: 1 1 auto;
+	text-align: left;
+}
+
+.sl-abac-faq.sl-faq-section .sl-faq-number {
+	flex: 0 0 var(--sl-abac-faq-num-w);
+	width: var(--sl-abac-faq-num-w);
+	color: var(--sl-faq-accent);
+	font-size: 0.95rem;
+	font-weight: 700;
+	line-height: 1.45;
+	letter-spacing: 0.02em;
+}
+
+.sl-abac-faq.sl-faq-section .sl-faq-question {
+	min-width: 0;
+	color: var(--sl-faq-navy);
+	text-align: left;
+}
+
+.sl-abac-faq.sl-faq-section .sl-faq-panel {
+	padding: 0 0 22px;
+	text-align: left;
+}
+
+.sl-abac-faq.sl-faq-section .sl-faq-panel-inner,
+.sl-abac-faq.sl-faq-section .sl-faq-panel-inner p {
+	margin: 0;
+	color: var(--sl-faq-text);
+	text-align: left;
+}
+
+@media (max-width: 1000px) {
+	.sl-abac-faq.sl-faq-section .container {
+		width: min(calc(100% - 48px), var(--course-container, 1240px));
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-course-page > section.sl-faq-section.sl-abac-faq {
+		padding: var(--course-section-space-mobile, 60px) 0;
+	}
+
+	.sl-abac-faq.sl-faq-section .container {
+		width: calc(100% - 36px);
+	}
+
+	.sl-abac-faq.sl-faq-section .shead,
+	.sl-abac-faq.sl-faq-section .sl-home-section-heading {
+		margin-bottom: 28px;
+	}
+
+	.sl-abac-faq.sl-faq-section details.faq summary {
+		padding: 18px 0;
+	}
+}

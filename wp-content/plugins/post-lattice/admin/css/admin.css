@@ -1,0 +1,124 @@
+.plt-settings__intro {
+	max-width: 46rem;
+	font-size: 14px;
+	color: #50575e;
+}
+
+.plt-settings .plt-tabs {
+	margin: 16px 0 0;
+}
+
+.plt-tab-panel {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-top: 0;
+	padding: 8px 20px 24px;
+	max-width: 920px;
+}
+
+.plt-section + .plt-section {
+	margin-top: 8px;
+	padding-top: 8px;
+	border-top: 1px solid #dcdcde;
+}
+
+.plt-section h2 {
+	font-size: 1.15rem;
+	margin: 1.25rem 0 0.35rem;
+}
+
+.plt-section__lead {
+	margin: 0 0 0.5rem;
+	color: #646970;
+	max-width: 40rem;
+}
+
+.plt-term-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	gap: 6px 16px;
+	max-height: 220px;
+	overflow: auto;
+	padding: 10px 12px;
+	border: 1px solid #dcdcde;
+	background: #f6f7f7;
+	border-radius: 4px;
+}
+
+.plt-term-list label {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.plt-term-count {
+	color: #646970;
+	font-size: 12px;
+}
+
+.plt-help h2,
+.plt-help h3 {
+	margin-top: 1.5rem;
+}
+
+.plt-help code {
+	background: #f0f0f1;
+	padding: 2px 6px;
+	border-radius: 3px;
+}
+
+.plt-help__table th {
+	width: 240px;
+	font-weight: 600;
+}
+
+.plt-help__list {
+	list-style: disc;
+	margin-left: 1.4rem;
+}
+
+.plt-help__list li {
+	margin: 0.35rem 0;
+}
+
+/* Pro badge inline notice */
+.plt-pro-badge {
+	display: inline-block;
+	background: #8b5cf6;
+	color: #fff;
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	padding: 1px 6px;
+	border-radius: 3px;
+	vertical-align: middle;
+	margin-right: 3px;
+}
+
+.plt-pro-note {
+	color: #6d28d9;
+	margin-top: 5px !important;
+}
+
+/* Pro-locked field row tint */
+tr.plt-field-pro-locked > th,
+tr.plt-field-pro-locked > td {
+	opacity: 0.65;
+}
+
+/* Pro banner on "Add shortcode" when limit reached */
+.plt-pro-banner {
+	background: #faf5ff;
+	border-left: 4px solid #8b5cf6;
+	padding: 10px 14px;
+	margin: 12px 0;
+	border-radius: 0 4px 4px 0;
+	font-size: 13px;
+	color: #4c1d95;
+}
+
+.plt-pro-banner strong {
+	display: block;
+	margin-bottom: 3px;
+}

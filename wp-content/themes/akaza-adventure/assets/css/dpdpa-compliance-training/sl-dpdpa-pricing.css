@@ -1,0 +1,281 @@
+/*
+ * DPDPA Compliance Training — Pricing calculator.
+ */
+
+.sl-dpdpa-pricing {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-dpdpa-pricing__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+	gap: 40px;
+	align-items: start;
+}
+
+.sl-dpdpa-pricing__why {
+	padding: 28px 32px;
+	border: 1px solid rgba(107, 124, 147, 0.18);
+	border-radius: 16px;
+	background: rgba(109, 195, 235, 0.1);
+	text-align: left;
+}
+
+.sl-dpdpa-pricing__why h3 {
+	margin: 12px 0 16px;
+	font-size: 28px;
+	text-align: left;
+}
+
+.sl-dpdpa-pricing__why p {
+	margin: 0;
+	color: var(--sl-page-muted, #6b7c93);
+	font-size: 16px;
+	text-align: left;
+}
+
+.sl-dpdpa-pricing__tiers {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 10px;
+	margin: 20px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-dpdpa-pricing__tier {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	min-width: 0;
+	padding: 12px 14px;
+	border: 1px solid rgba(107, 124, 147, 0.18);
+	border-radius: 12px;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-dpdpa-pricing__tier-label {
+	color: var(--sl-page-muted, #6b7c93);
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1.35;
+}
+
+.sl-dpdpa-pricing__tier-rate {
+	color: var(--sl-page-navy, #16234e);
+	font-size: 22px;
+	font-weight: 800;
+	line-height: 1.2;
+}
+
+.sl-dpdpa-pricing__note {
+	margin: 20px 0 0;
+	padding: 14px 16px;
+	border-left: 5px solid var(--sl-page-primary, #1472ba);
+	border-radius: 0 14px 14px 0;
+	background: rgba(109, 195, 235, 0.16);
+	color: var(--sl-page-navy, #16234e);
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.6;
+}
+
+.sl-dpdpa-pricing__calc {
+	--thumb: 20px;
+	padding: 32px;
+	border-radius: 18px;
+	background: var(--sl-page-white, #ffffff);
+	border: 1px solid rgba(107, 124, 147, 0.18);
+}
+
+.sl-dpdpa-pricing__label {
+	display: block;
+	margin: 0 0 16px;
+	color: var(--sl-page-muted, #6b7c93);
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+.sl-dpdpa-pricing__slider {
+	--thumb: 20px;
+	--pct: 19.192;
+	--arrow: 50%;
+	position: relative;
+	height: var(--thumb);
+	margin-bottom: 48px;
+	display: flex;
+	align-items: center;
+}
+
+.sl-dpdpa-pricing__tip {
+	position: absolute;
+	top: calc(100% + 12px);
+	left: 0;
+	z-index: 2;
+	padding: 7px 12px;
+	border: 1px solid rgba(107, 124, 147, 0.22);
+	border-radius: 8px;
+	background: var(--sl-page-white, #ffffff);
+	color: var(--sl-page-navy, #16234e);
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 1.2;
+	white-space: nowrap;
+	pointer-events: none;
+	box-shadow: 0 8px 20px rgba(22, 35, 78, 0.08);
+}
+
+.sl-dpdpa-pricing__tip::after,
+.sl-dpdpa-pricing__tip::before {
+	content: "";
+	position: absolute;
+	bottom: 100%;
+	left: var(--arrow, 50%);
+	transform: translateX(-50%);
+	border: 7px solid transparent;
+}
+
+.sl-dpdpa-pricing__tip::before {
+	border-bottom-color: rgba(107, 124, 147, 0.22);
+	margin-bottom: 1px;
+}
+
+.sl-dpdpa-pricing__tip::after {
+	border-bottom-color: var(--sl-page-white, #ffffff);
+}
+
+.sl-dpdpa-pricing__track {
+	position: absolute;
+	left: calc(var(--thumb) / 2);
+	right: calc(var(--thumb) / 2);
+	height: 6px;
+	border-radius: 999px;
+	background: rgba(107, 124, 147, 0.22);
+	overflow: hidden;
+	pointer-events: none;
+}
+
+.sl-dpdpa-pricing__fill {
+	display: block;
+	width: calc(var(--pct) * 1%);
+	height: 100%;
+	border-radius: 999px;
+	background: var(--sl-page-primary, #1472ba);
+}
+
+.sl-dpdpa-pricing__range {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	height: var(--thumb);
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	appearance: none;
+	cursor: pointer;
+}
+
+.sl-dpdpa-pricing__range::-webkit-slider-runnable-track {
+	height: 6px;
+	background: transparent;
+	border: 0;
+}
+
+.sl-dpdpa-pricing__range::-webkit-slider-thumb {
+	appearance: none;
+	width: var(--thumb);
+	height: var(--thumb);
+	margin-top: -7px;
+	border: 2px solid var(--sl-page-primary, #1472ba);
+	border-radius: 50%;
+	background: var(--sl-page-white, #ffffff);
+	box-shadow: 0 2px 8px rgba(22, 35, 78, 0.14);
+	cursor: grab;
+}
+
+.sl-dpdpa-pricing__range::-moz-range-track {
+	height: 6px;
+	background: transparent;
+	border: 0;
+}
+
+.sl-dpdpa-pricing__range::-moz-range-thumb {
+	width: var(--thumb);
+	height: var(--thumb);
+	border: 2px solid var(--sl-page-primary, #1472ba);
+	border-radius: 50%;
+	background: var(--sl-page-white, #ffffff);
+	box-shadow: 0 2px 8px rgba(22, 35, 78, 0.14);
+	cursor: grab;
+}
+
+.sl-dpdpa-pricing__total {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-top: 24px;
+	padding: 20px 22px;
+	border: 1px solid rgba(20, 114, 186, 0.22);
+	border-radius: 14px;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-dpdpa-pricing__amount {
+	color: var(--sl-page-navy, #16234e);
+	font-size: clamp(2rem, 1.5rem + 1.4vw, 2.6rem);
+	font-weight: 700;
+	letter-spacing: -0.03em;
+	line-height: 1.1;
+}
+
+.sl-dpdpa-pricing__period {
+	margin: 8px 0 0;
+	color: var(--sl-page-muted, #6b7c93);
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+.sl-dpdpa-pricing__unit {
+	margin: 10px 0 0;
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.sl-dpdpa-pricing__volume {
+	margin: 16px 0 20px;
+	color: var(--sl-page-muted, #6b7c93);
+	font-size: 14px;
+	line-height: 1.65;
+}
+
+.sl-dpdpa-pricing__calc .sl-content-btn {
+	width: 100%;
+}
+
+@media (max-width: 991px) {
+	.sl-dpdpa-pricing__grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-dpdpa-pricing {
+		padding: 60px 0;
+	}
+
+	.sl-dpdpa-pricing__calc,
+	.sl-dpdpa-pricing__why {
+		padding: 22px;
+	}
+
+	.sl-dpdpa-pricing__tiers {
+		grid-template-columns: 1fr;
+	}
+}

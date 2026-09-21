@@ -1,0 +1,32 @@
+/**
+ * DPDPA page-only utilities.
+ * Shared foundation: assets/css/sl-page-foundation.css (.sl-training-page)
+ */
+
+.sl-dpdpa-section-heading {
+	margin: 0 auto 40px;
+	text-align: left;
+}
+
+.sl-dpdpa-section-heading h2 {
+	margin: 12px 0 16px;
+}
+
+.sl-dpdpa-section-heading p {
+	max-width: 720px;
+	color: var(--sl-page-muted);
+}
+
+.sl-dpdpa-actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 14px;
+	margin-top: 28px;
+}
+
+@media (max-width: 767px) {
+	.sl-dpdpa-section-heading {
+		margin-bottom: 28px;
+	}
+}

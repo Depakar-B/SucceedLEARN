@@ -1,0 +1,48 @@
+/*
+ * US Sexual Harassment Prevention — Contact
+ * Layout/chrome come from sl-global-contact.css.
+ * Page-level reinforcement so global CTA attribute selectors cannot win.
+ */
+
+.sl-us-harassment-contact .sl-contact-btn--email {
+	border: 1px solid rgba(107, 124, 147, 0.28);
+	background: transparent;
+	color: inherit;
+}
+
+.sl-us-harassment-contact .sl-contact-btn--email .sl-contact-btn__label {
+	color: var(--sl-page-muted, #6B7C93);
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.sl-us-harassment-contact .sl-contact-btn--email .sl-contact-btn__value {
+	color: var(--sl-page-navy, #16234e);
+	font-size: 15px;
+	font-weight: 700;
+}
+
+.sl-us-harassment-contact .sl-contact-btn--whatsapp {
+	border: 1px solid #25d366;
+	background: #25d366;
+	color: #ffffff;
+	box-shadow: 0 12px 28px rgba(37, 211, 102, 0.28);
+}
+
+.sl-us-harassment-contact .sl-contact-btn--whatsapp .sl-contact-btn__label,
+.sl-us-harassment-contact .sl-contact-btn--whatsapp .sl-contact-btn__icon {
+	color: #ffffff;
+}
+
+.sl-us-harassment-contact .sl-contact-btn--whatsapp .sl-contact-btn__label {
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1.25;
+}
+
+.sl-us-harassment-contact .sl-contact-btn--whatsapp:hover,
+.sl-us-harassment-contact .sl-contact-btn--whatsapp:focus {
+	border-color: #1ebe57;
+	background: #1ebe57;
+	color: #ffffff;
+}

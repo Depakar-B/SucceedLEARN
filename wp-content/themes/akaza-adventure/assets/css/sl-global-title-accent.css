@@ -1,0 +1,227 @@
+body.slf-body h1 > span,
+body.slf-body h2 > span,
+body.slf-body h3 > span,
+body.slf-body h1 [class$="__highlight"],
+body.slf-body h2 [class$="__highlight"],
+body.slf-body h3 [class$="__highlight"],
+body.slf-body [class$="__title-highlight"],
+body.slf-body .sl-home-sub-heading,
+body.slf-body .sl-home-card-tag,
+body.slf-body .sl-home-step-label,
+body.slf-body .sl-code-conduct-definition__accent {
+	color: var(--sl-heading-accent, #1472ba);
+}
+
+body.slf-body [class$="__title-highlight"] {
+	background: none;
+	-webkit-background-clip: unset;
+	background-clip: unset;
+	-webkit-text-fill-color: currentColor;
+}
+
+body.slf-body .sl-home-sub-heading::before {
+	background: var(--sl-heading-accent, #1472ba);
+}
+
+body.slf-body a[class*="btn-primary"]:not([class*="secondary"]),
+body.slf-body a[class*="btn--primary"]:not(.sl-contact-btn),
+body.slf-body a[class*="button--primary"],
+body.slf-body .sl-home-btn-primary,
+body.slf-body .sl-home-btn,
+body.slf-body .sl-coc-problem__cta,
+body.slf-body .sl-coc-customer-story__cta,
+body.slf-body .slf-clients__cta,
+body.slf-body a.sl-btn--primary,
+body.slf-body a[class*="btn-primary"]:not([class*="secondary"]):visited,
+body.slf-body a[class*="btn--primary"]:not(.sl-contact-btn):visited,
+body.slf-body a[class*="button--primary"]:visited,
+body.slf-body .sl-home-btn-primary:visited,
+body.slf-body .sl-home-btn:visited,
+body.slf-body .sl-coc-problem__cta:visited,
+body.slf-body .sl-coc-customer-story__cta:visited,
+body.slf-body .slf-clients__cta:visited,
+body.slf-body a.sl-btn--primary:visited,
+body.slf-body a[class*="btn-primary"]:not([class*="secondary"]):hover,
+body.slf-body a[class*="btn--primary"]:not(.sl-contact-btn):hover,
+body.slf-body a[class*="button--primary"]:hover,
+body.slf-body .sl-home-btn-primary:hover,
+body.slf-body .sl-home-btn:hover,
+body.slf-body .sl-coc-problem__cta:hover,
+body.slf-body .sl-coc-customer-story__cta:hover,
+body.slf-body .slf-clients__cta:hover,
+body.slf-body a.sl-btn--primary:hover,
+body.slf-body a[class*="btn-primary"]:not([class*="secondary"]):focus,
+body.slf-body a[class*="btn--primary"]:not(.sl-contact-btn):focus,
+body.slf-body a[class*="button--primary"]:focus,
+body.slf-body .sl-home-btn-primary:focus,
+body.slf-body .sl-home-btn:focus,
+body.slf-body .sl-coc-problem__cta:focus,
+body.slf-body .sl-coc-customer-story__cta:focus,
+body.slf-body .slf-clients__cta:focus,
+body.slf-body a.sl-btn--primary:focus {
+	background: var(--sl-btn-primary-fill, linear-gradient(180deg, #ea3e24 0%, #ea3e24 100%)) !important;
+	background-color: transparent !important;
+	border-color: transparent !important;
+	color: #ffffff !important;
+}
+
+body.slf-body .scf-submit,
+body.slf-body .scf-lightbox-button,
+body.slf-body button.epsh-search-panel__submit,
+body.slf-body .sl-search-form__submit,
+body.slf-body header.slf-header .slf-header-cta,
+body.slf-body .slf-btn--primary,
+body.slf-body .epsh-site-footer .ans-footer-submit-btn,
+body.slf-body .scf-submit:hover,
+body.slf-body .scf-submit:focus,
+body.slf-body .scf-lightbox-button:hover,
+body.slf-body .scf-lightbox-button:focus,
+body.slf-body button.epsh-search-panel__submit:hover,
+body.slf-body button.epsh-search-panel__submit:focus-visible,
+body.slf-body .sl-search-form__submit:hover,
+body.slf-body .sl-search-form__submit:focus-visible,
+body.slf-body header.slf-header .slf-header-cta:hover,
+body.slf-body header.slf-header .slf-header-cta:focus-visible,
+body.slf-body .slf-btn--primary:hover,
+body.slf-body .slf-btn--primary:focus-visible,
+body.slf-body .epsh-site-footer .ans-footer-submit-btn:hover:not(:disabled) {
+	background: var(--sl-btn-primary-fill, linear-gradient(180deg, #ea3e24 0%, #ea3e24 100%)) !important;
+	background-color: transparent !important;
+	border-color: transparent !important;
+	color: #ffffff !important;
+}
+
+body.slf-body .epsh-search-panel__input:focus {
+	border-color: rgba(19, 93, 183, 0.45) !important;
+	box-shadow: 0 0 0 3px rgba(19, 93, 183, 0.14) !important;
+}
+
+body.slf-body .epsh-search-panel__view-all,
+body.slf-body .epsh-search-panel__view-all:hover,
+body.slf-body .epsh-search-panel__view-all:focus-visible {
+	background: var(--sl-btn-primary-fill, linear-gradient(180deg, #ea3e24 0%, #ea3e24 100%)) !important;
+	background-color: transparent !important;
+	border-color: transparent !important;
+	color: #ffffff !important;
+}
+
+#read-progress-bar {
+	background: var(--sl-chrome-fill, #1472ba) !important;
+}
+
+.progress-square__rect {
+	stroke: var(--sl-chrome-accent, #1472ba) !important;
+}
+
+#sl-scroll-top .sl-scroll-top,
+.sl-scroll-top-wrap .sl-scroll-top {
+	background: var(--sl-chrome-fill, #1472ba);
+	box-shadow: 0 6px 18px rgba(var(--sl-chrome-shadow-rgb, 20, 114, 186), 0.38);
+}
+
+#sl-scroll-top .sl-scroll-top:hover,
+#sl-scroll-top .sl-scroll-top:focus,
+.sl-scroll-top-wrap .sl-scroll-top:hover,
+.sl-scroll-top-wrap .sl-scroll-top:focus {
+	filter: brightness(1.06);
+}
+
+body.slf-body a[class*="btn-secondary"]:not(.sl-btn--secondary),
+body.slf-body a[class*="btn--secondary"]:not([class*="primary"]):not(.sl-btn--secondary):not(.sl-contact-btn),
+body.slf-body a[class*="button--secondary"],
+body.slf-body .sl-home-btn-secondary,
+body.slf-body .sl-fcp-btn-secondary,
+body.slf-body .sl-global-btn-secondary,
+body.slf-body .sl-dpdpa-btn-secondary,
+body.slf-body .sl-iwc-btn-secondary,
+body.slf-body .sl-sa-hero__button--secondary,
+body.slf-body .sl-code-of-conduct-hero__button--secondary,
+body.slf-body .sl-cybersecurity-awareness-hero__button--secondary,
+body.slf-body .dpdpa-btn--secondary,
+body.slf-body a[class*="btn-secondary"]:not(.sl-btn--secondary):visited,
+body.slf-body a[class*="btn--secondary"]:not([class*="primary"]):not(.sl-btn--secondary):not(.sl-contact-btn):visited,
+body.slf-body a[class*="button--secondary"]:visited,
+body.slf-body .sl-home-btn-secondary:visited,
+body.slf-body .sl-fcp-btn-secondary:visited,
+body.slf-body .sl-global-btn-secondary:visited,
+body.slf-body .sl-dpdpa-btn-secondary:visited,
+body.slf-body .sl-iwc-btn-secondary:visited,
+body.slf-body .sl-sa-hero__button--secondary:visited,
+body.slf-body .sl-code-of-conduct-hero__button--secondary:visited,
+body.slf-body .sl-cybersecurity-awareness-hero__button--secondary:visited,
+body.slf-body .dpdpa-btn--secondary:visited,
+body.slf-body a[class*="btn-secondary"]:not(.sl-btn--secondary):hover,
+body.slf-body a[class*="btn--secondary"]:not([class*="primary"]):not(.sl-btn--secondary):not(.sl-contact-btn):hover,
+body.slf-body a[class*="button--secondary"]:hover,
+body.slf-body .sl-home-btn-secondary:hover,
+body.slf-body .sl-fcp-btn-secondary:hover,
+body.slf-body .sl-global-btn-secondary:hover,
+body.slf-body .sl-dpdpa-btn-secondary:hover,
+body.slf-body .sl-iwc-btn-secondary:hover,
+body.slf-body .sl-sa-hero__button--secondary:hover,
+body.slf-body .sl-code-of-conduct-hero__button--secondary:hover,
+body.slf-body .sl-cybersecurity-awareness-hero__button--secondary:hover,
+body.slf-body .dpdpa-btn--secondary:hover,
+body.slf-body a[class*="btn-secondary"]:not(.sl-btn--secondary):focus,
+body.slf-body a[class*="btn--secondary"]:not([class*="primary"]):not(.sl-btn--secondary):not(.sl-contact-btn):focus,
+body.slf-body a[class*="button--secondary"]:focus,
+body.slf-body .sl-home-btn-secondary:focus,
+body.slf-body .sl-fcp-btn-secondary:focus,
+body.slf-body .sl-global-btn-secondary:focus,
+body.slf-body .sl-dpdpa-btn-secondary:focus,
+body.slf-body .sl-iwc-btn-secondary:focus,
+body.slf-body .sl-sa-hero__button--secondary:focus,
+body.slf-body .sl-code-of-conduct-hero__button--secondary:focus,
+body.slf-body .sl-cybersecurity-awareness-hero__button--secondary:focus,
+body.slf-body .dpdpa-btn--secondary:focus,
+body.slf-body a[class*="btn-secondary"]:not(.sl-btn--secondary):active,
+body.slf-body a[class*="btn--secondary"]:not([class*="primary"]):not(.sl-btn--secondary):not(.sl-contact-btn):active,
+body.slf-body a[class*="button--secondary"]:active,
+body.slf-body .sl-home-btn-secondary:active,
+body.slf-body .sl-fcp-btn-secondary:active,
+body.slf-body .sl-global-btn-secondary:active,
+body.slf-body .sl-dpdpa-btn-secondary:active,
+body.slf-body .sl-iwc-btn-secondary:active,
+body.slf-body .sl-sa-hero__button--secondary:active,
+body.slf-body .sl-code-of-conduct-hero__button--secondary:active,
+body.slf-body .sl-cybersecurity-awareness-hero__button--secondary:active,
+body.slf-body .dpdpa-btn--secondary:active {
+	background:
+		linear-gradient(var(--sl-btn-secondary-surface, #ffffff), var(--sl-btn-secondary-surface, #ffffff)) padding-box,
+		var(--sl-btn-primary-fill, linear-gradient(180deg, #ea3e24 0%, #ea3e24 100%)) border-box !important;
+	background-color: transparent !important;
+	border: 2px solid transparent !important;
+	color: var(--sl-btn-secondary-color, var(--sl-page-cta, #ea3e24)) !important;
+	-webkit-text-fill-color: currentColor;
+}
+
+body.slf-body .sl-coc-page a[class*="btn-secondary"],
+body.slf-body .sl-coc-page a[class*="button--secondary"],
+body.slf-body .sl-coc-page .sl-code-of-conduct-hero__button--secondary,
+body.slf-body .sl-csa-page a[class*="btn-secondary"],
+body.slf-body .sl-csa-page a[class*="button--secondary"],
+body.slf-body .sl-csa-page .sl-cybersecurity-awareness-hero__button--secondary {
+	--sl-btn-secondary-surface: var(--sl-page-bg, #f5f5f5);
+}
+
+body.slf-body .sl-hero a.sl-btn--secondary,
+body.slf-body .sl-hero a.sl-btn--secondary:visited,
+body.slf-body .sl-hero a.sl-btn--secondary:focus,
+body.slf-body .sl-hero a.sl-btn--secondary:active {
+	background: rgba(255, 255, 255, 0.06) !important;
+	background-color: rgba(255, 255, 255, 0.06) !important;
+	border: 2px solid rgba(255, 255, 255, 0.75) !important;
+	color: #ffffff !important;
+	-webkit-text-fill-color: #ffffff;
+	box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+body.slf-body .sl-hero a.sl-btn--secondary:hover,
+body.slf-body .sl-hero a.sl-btn--secondary:focus-visible {
+	background: #ffffff !important;
+	background-color: #ffffff !important;
+	border-color: #ffffff !important;
+	color: #16234e !important;
+	-webkit-text-fill-color: #16234e;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}

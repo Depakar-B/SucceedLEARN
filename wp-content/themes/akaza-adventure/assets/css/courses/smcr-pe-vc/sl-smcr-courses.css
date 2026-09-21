@@ -1,0 +1,128 @@
+/* =========================================================
+   SMCR Training for PE & VC Firms — Role-Based Courses
+   ========================================================= */
+
+   .sl-smcr-courses {
+	padding: 88px 0;
+	background: #f5f5f5;
+}
+
+.sl-smcr-courses__intro {
+	margin-bottom: 42px;
+}
+
+.sl-smcr-courses__intro h2 {
+	margin-top: 14px;
+	margin-bottom: 18px;
+}
+
+.sl-smcr-courses__intro h2 span {
+	color: var(--sl-heading-accent, #1472ba);
+}
+
+.sl-smcr-courses__intro p {
+	margin-bottom: 0;
+}
+
+/* ---------------------------------------------------------
+   Comparison table
+   --------------------------------------------------------- */
+
+.sl-smcr-courses__table-wrap {
+	overflow-x: auto;
+	background: #ffffff;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 16px;
+}
+
+.sl-smcr-courses__table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+.sl-smcr-courses__table th {
+	width: 50%;
+	padding: 20px 28px;
+	background: rgba(20, 114, 186, 0.05);
+	border-bottom: 1px solid rgba(22, 35, 78, 0.10);
+	color: var(--sl-page-navy, #16234e);
+	text-align: left;
+}
+
+.sl-smcr-courses__table th + th {
+	border-left: 1px solid rgba(22, 35, 78, 0.10);
+}
+
+.sl-smcr-courses__table td {
+	width: 50%;
+	padding: 32px 28px;
+	vertical-align: top;
+}
+
+.sl-smcr-courses__table td + td {
+	border-left: 1px solid rgba(22, 35, 78, 0.10);
+}
+
+.sl-smcr-courses__table .sl-panel-title {
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+
+.sl-smcr-courses__table td p {
+	margin-top: 0;
+	margin-bottom: 24px;
+}
+
+/* ---------------------------------------------------------
+   Course points
+   --------------------------------------------------------- */
+
+.sl-smcr-courses__list {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-smcr-courses__list li {
+	position: relative;
+	padding: 13px 0 13px 24px;
+	border-top: 1px solid rgba(22, 35, 78, 0.10);
+}
+
+.sl-smcr-courses__list li::before {
+	content: "";
+	position: absolute;
+	top: 21px;
+	left: 2px;
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: #1472ba;
+}
+
+/* ---------------------------------------------------------
+   Mobile
+   --------------------------------------------------------- */
+
+@media (max-width: 767px) {
+	.sl-smcr-courses {
+		padding: 60px 0;
+	}
+
+	.sl-smcr-courses__intro {
+		margin-bottom: 30px;
+	}
+
+	.sl-smcr-courses__table {
+		min-width: 680px;
+	}
+
+	.sl-smcr-courses__table th,
+	.sl-smcr-courses__table td {
+		padding: 22px 20px;
+	}
+}

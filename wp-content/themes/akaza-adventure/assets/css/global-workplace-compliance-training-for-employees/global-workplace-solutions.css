@@ -1,0 +1,312 @@
+/* =========================================
+   WORKPLACE LEARNING SOLUTIONS
+========================================= */
+
+.sl-global-solutions-section {
+	position: relative;
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+	font-family: var(--slf-font-body, "Space Grotesk", system-ui, sans-serif);
+}
+
+.sl-global-solutions-section .container {
+	width: 100%;
+	max-width: var(--sl-home-content-max, 1400px);
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.sl-global-solutions-heading {
+	max-width: 760px;
+	margin-bottom: 42px;
+}
+
+.sl-global-solutions-heading h2 {
+	margin: 0;
+	font-size: var(--sl-fs-h2);
+	font-weight: 700;
+	line-height: 1.2;
+	color: var(--gwct-navy);
+}
+
+.sl-global-solutions-heading h2 > span {
+	color: var(--sl-heading-accent, var(--sl-page-primary, #1472ba));
+}
+
+.sl-global-solutions-list {
+	display: flex;
+	flex-direction: column;
+	gap: 28px;
+}
+
+/* =========================================
+   SOLUTION CARD
+========================================= */
+
+.sl-global-solution {
+	padding: 34px;
+	border: 1px solid var(--gwct-border);
+	border-radius: 24px;
+	background: #ffffff;
+	box-shadow: 0 8px 24px rgba(31, 44, 86, 0.05);
+}
+
+.sl-global-solution--placeholder {
+	border-style: dashed;
+	background: rgba(255, 255, 255, 0.72);
+	box-shadow: none;
+}
+
+.sl-global-solution__head {
+	margin-bottom: 10px;
+}
+
+.sl-global-solution__title {
+	margin: 0 0 6px;
+	color: var(--gwct-primary);
+	font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+	font-weight: 700;
+	line-height: 1.25;
+}
+
+.sl-global-solution__subtitle {
+	margin: 0;
+	color: var(--gwct-navy);
+	font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+	font-weight: 600;
+	line-height: 1.4;
+}
+
+.sl-global-solution__copy {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	margin-bottom: 16px;
+}
+
+.sl-gwct-page .sl-global-solution__subtitle,
+.sl-gwct-page .sl-global-solution__text,
+.sl-gwct-page .sl-global-solution__text--lead {
+	margin: 0;
+}
+
+.sl-global-solution__text {
+	margin: 0;
+	color: var(--gwct-muted);
+	font-size: 17px;
+	font-weight: 400;
+	line-height: 1.6;
+}
+
+.sl-global-solution__text--lead {
+	margin: 0;
+	color: var(--sl-page-text, #4a4a4a);
+	font-size: 17px;
+	font-weight: 500;
+	line-height: 1.55;
+}
+
+.sl-global-solution__meta {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 20px;
+	margin-bottom: 20px;
+	align-items: stretch;
+}
+
+.sl-global-solution__meta--with-media {
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.sl-global-solution__block {
+	padding: 22px;
+	border: 1px solid var(--gwct-border);
+	border-radius: 20px;
+	background: linear-gradient(180deg, #ffffff 0%, var(--sl-page-bg, #f5f5f5) 100%);
+}
+
+.sl-global-solution__media {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100%;
+	overflow: hidden;
+	border: 1px solid var(--gwct-border);
+	border-radius: 20px;
+	background: linear-gradient(180deg, #ffffff 0%, var(--gwct-primary-soft, #eef7f8) 100%);
+}
+
+.sl-global-solution__media img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.sl-global-solution__label {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin: 0 0 16px;
+	padding-bottom: 14px;
+	border-bottom: 1px solid rgba(107, 124, 147, 0.18);
+	color: var(--gwct-navy);
+	font-size: 0.95rem;
+	font-weight: 700;
+	line-height: 1.35;
+	letter-spacing: 0.01em;
+}
+
+.sl-global-solution__label-icon {
+	width: 32px;
+	height: 32px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	border-radius: 10px;
+	background: var(--gwct-primary-soft);
+	color: var(--gwct-primary);
+	font-size: 15px;
+}
+
+.sl-global-solution__list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* Shared item chips — courses & outcomes */
+.sl-global-solution__chip {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 13px 14px;
+	border: 1px solid rgba(107, 124, 147, 0.18);
+	border-radius: 14px;
+	background: #ffffff;
+	transition:
+		border-color 0.25s ease,
+		box-shadow 0.25s ease;
+}
+
+.sl-global-solution__chip:hover {
+	border-color: rgba(20, 114, 186, 0.28);
+	box-shadow: 0 6px 16px rgba(20, 114, 186, 0.08);
+}
+
+.sl-global-solution__chip-icon {
+	width: 36px;
+	height: 36px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	border-radius: 10px;
+	background: var(--gwct-primary-soft);
+	color: var(--gwct-primary);
+	font-size: 16px;
+	overflow: hidden;
+}
+
+.sl-global-solution__chip-icon--flag {
+	background: #ffffff;
+	border: 1px solid rgba(107, 124, 147, 0.2);
+	padding: 4px;
+	box-sizing: border-box;
+}
+
+.sl-global-solution__chip-icon--flag img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 4px;
+}
+
+.sl-global-solution__chip-text {
+	color: var(--gwct-navy);
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 1.45;
+}
+
+.sl-global-solution__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+
+/* Button look: site-wide .sl-content-btn from sl-global-ui-buttons.css */
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+	.sl-global-solutions-section {
+		padding: 75px 0;
+	}
+
+	.sl-global-solution {
+		padding: 28px;
+	}
+
+	.sl-global-solution__meta,
+	.sl-global-solution__meta--with-media {
+		grid-template-columns: 1fr;
+	}
+
+	.sl-global-solution__media {
+		min-height: 220px;
+	}
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+	.sl-global-solutions-section {
+		padding: 60px 0;
+	}
+
+	.sl-global-solutions-heading {
+		margin-bottom: 28px;
+	}
+
+	.sl-global-solution {
+		padding: 22px 20px;
+		border-radius: 20px;
+	}
+
+	.sl-global-solution__text,
+	.sl-global-solution__text--lead {
+		font-size: 16px;
+		line-height: 1.7;
+	}
+
+	.sl-global-solution__block {
+		padding: 18px;
+	}
+
+	.sl-global-solution__chip-text {
+		font-size: 14px;
+	}
+
+	.sl-global-solutions-section .sl-content-btn {
+		width: 100%;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.sl-global-solutions-section .sl-content-btn:hover,
+	.sl-global-solutions-section .sl-content-btn:focus {
+		transform: none;
+	}
+}

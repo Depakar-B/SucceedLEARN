@@ -1,0 +1,256 @@
+/* SucceedLEARN — Code of Conduct — Why It Matters */
+
+.sl-code-conduct-matters {
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-code-conduct-matters__heading {
+	margin: 0 0 42px;
+}
+
+.sl-code-conduct-matters__lead {
+	margin: 0;
+	color: var(--sl-page-navy, #16234e);
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1.65;
+}
+
+.sl-code-conduct-matters__layout {
+	display: grid;
+	grid-template-columns: minmax(0, 0.45fr) minmax(0, 0.55fr);
+	gap: 40px;
+	align-items: stretch;
+}
+
+.sl-code-conduct-matters__media {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 76px) + 24px);
+	min-width: 0;
+	min-height: 0;
+	align-self: stretch;
+	overflow: hidden;
+	border: 1px solid rgba(107, 124, 147, 0.14);
+	border-radius: 18px;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-code-conduct-matters__media img {
+	position: absolute;
+	inset: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center center;
+	border: 0;
+	border-radius: 0;
+	background: transparent;
+}
+
+.sl-code-conduct-matters__content {
+	min-width: 0;
+}
+
+.sl-code-conduct-matters__intro {
+	margin: 0 0 22px;
+	color: var(--sl-page-primary, #1472ba);
+	font-weight: 600;
+	line-height: 1.6;
+}
+
+.sl-code-conduct-matters__list {
+	width: 100%;
+	margin: 0;
+	padding: 8px;
+	border: 1px solid rgba(107, 124, 147, 0.14);
+	border-radius: 16px;
+	background: var(--sl-page-white, #ffffff);
+	box-shadow: 0 8px 24px rgba(22, 35, 78, 0.05);
+	list-style: none;
+	box-sizing: border-box;
+}
+
+.sl-code-conduct-matters__list-item {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	width: 100%;
+	padding: 16px 18px;
+	border: 0;
+	border-radius: 12px;
+	background: transparent;
+	box-sizing: border-box;
+	transition: background 0.2s ease;
+}
+
+.sl-code-conduct-matters__list-item + .sl-code-conduct-matters__list-item {
+	margin-top: 0;
+	border-top: 1px solid rgba(107, 124, 147, 0.12);
+}
+
+.sl-code-conduct-matters__list-item:hover {
+	background: rgba(109, 195, 235, 0.08);
+}
+
+.sl-code-conduct-matters__list-index {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 38px;
+	width: 38px;
+	height: 38px;
+	border-radius: 10px;
+	background: rgba(109, 195, 235, 0.22);
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: 0.02em;
+}
+
+.sl-code-conduct-matters__question {
+	margin: 0;
+	color: var(--sl-page-navy, #16234e);
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 1.5;
+}
+
+.sl-code-conduct-matters__gap {
+	width: 100%;
+	margin-top: 32px;
+}
+
+.sl-code-conduct-matters__gap-inner {
+	display: grid;
+	grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+	gap: 28px;
+	align-items: center;
+	width: 100%;
+	padding: 28px 30px;
+	border: 1px solid rgba(107, 124, 147, 0.14);
+	border-left: 6px solid var(--sl-page-primary, #1472ba);
+	border-radius: 18px;
+	background: var(--sl-page-white, #ffffff);
+	box-shadow: 0 12px 32px rgba(22, 35, 78, 0.06);
+	text-align: left;
+	box-sizing: border-box;
+}
+
+.sl-code-conduct-matters__gap-copy {
+	min-width: 0;
+}
+
+.sl-code-conduct-matters__gap-copy .sl-home-sub-heading {
+	display: block;
+	margin-bottom: 12px;
+}
+
+.sl-code-conduct-matters__gap-copy h3 {
+	margin: 0 0 16px;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-code-conduct-matters__gap-copy p {
+	margin: 0;
+	color: var(--sl-page-text, #16234e);
+	line-height: 1.65;
+}
+
+.sl-code-conduct-matters__gap-highlight {
+	display: flex;
+	min-width: 0;
+	height: 100%;
+}
+
+.sl-code-conduct-matters__gap-lead {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	margin: 0 !important;
+	padding: 18px 22px;
+	border-radius: 12px;
+	background: rgba(109, 195, 235, 0.16);
+	color: var(--sl-page-navy, #16234e) !important;
+	font-size: 15px;
+	font-weight: 600 !important;
+	line-height: 1.55;
+	box-sizing: border-box;
+}
+
+@media (max-width: 991px) {
+	.sl-code-conduct-matters__layout {
+		grid-template-columns: 1fr;
+		gap: 32px;
+		align-items: start;
+	}
+
+	.sl-code-conduct-matters__media {
+		position: static;
+		overflow: hidden;
+		max-width: 420px;
+		aspect-ratio: 600 / 320;
+	}
+
+	.sl-code-conduct-matters__media img {
+		position: static;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center center;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-code-conduct-matters {
+		padding: 60px 0;
+	}
+
+	.sl-code-conduct-matters__heading {
+		margin-bottom: 32px;
+	}
+
+	.sl-code-conduct-matters__layout {
+		gap: 28px;
+	}
+
+	.sl-code-conduct-matters__media {
+		max-width: none;
+	}
+
+	.sl-code-conduct-matters__list {
+		padding: 6px;
+	}
+
+	.sl-code-conduct-matters__list-item {
+		align-items: flex-start;
+		padding: 14px 16px;
+	}
+
+	.sl-code-conduct-matters__list-index {
+		flex: 0 0 34px;
+		width: 34px;
+		height: 34px;
+		font-size: 11px;
+	}
+
+	.sl-code-conduct-matters__question {
+		font-size: 14px;
+	}
+
+	.sl-code-conduct-matters__gap-inner {
+		grid-template-columns: 1fr;
+		gap: 18px;
+		padding: 24px 22px;
+		border-left-width: 4px;
+		border-radius: 0 14px 14px 0;
+	}
+
+	.sl-code-conduct-matters__gap-lead {
+		padding: 16px 18px;
+		font-size: 14px;
+	}
+}

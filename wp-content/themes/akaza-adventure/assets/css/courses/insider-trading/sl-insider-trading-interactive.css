@@ -1,0 +1,80 @@
+/* =========================================================
+   SucceedLEARN
+   Insider Trading eLearning
+   Interactive Learning Section
+   Course-page foundation handles section spacing and container.
+   ========================================================= */
+
+   .sl-course-page .sl-insider-trading-interactive {
+	background: var(--course-white, #ffffff);
+}
+
+.sl-insider-trading-interactive__intro {
+	max-width: 960px;
+	margin-bottom: 48px;
+}
+
+.sl-insider-trading-interactive__intro h2 {
+	margin-bottom: 20px;
+}
+
+.sl-insider-trading-interactive__intro p {
+	margin: 0;
+}
+
+.sl-insider-trading-interactive__images {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 28px;
+}
+
+.sl-insider-trading-interactive__image {
+	margin: 0;
+	overflow: hidden;
+	border: 1px solid rgba(22, 35, 78, 0.1);
+	border-radius: 16px;
+	background: var(--course-light-bg, #f5f5f5);
+}
+
+.sl-insider-trading-interactive__image img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+/* ---------------------------------------------------------
+   Tablet
+   --------------------------------------------------------- */
+
+@media (max-width: 900px) {
+	.sl-insider-trading-interactive__intro {
+		margin-bottom: 40px;
+	}
+
+	.sl-insider-trading-interactive__images {
+		gap: 20px;
+	}
+
+	.sl-insider-trading-interactive__image {
+		border-radius: 12px;
+	}
+}
+
+/* ---------------------------------------------------------
+   Mobile
+   --------------------------------------------------------- */
+
+@media (max-width: 767px) {
+	.sl-insider-trading-interactive__intro {
+		margin-bottom: 32px;
+	}
+
+	.sl-insider-trading-interactive__images {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	.sl-insider-trading-interactive__image {
+		border-radius: 12px;
+	}
+}

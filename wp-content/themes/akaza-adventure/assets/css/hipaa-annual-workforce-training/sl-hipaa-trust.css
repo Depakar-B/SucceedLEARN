@@ -1,0 +1,132 @@
+/* =========================================================
+   HIPAA TRUST AND CREDENTIALS
+   All credentials use one grid and remain on one line.
+   All SVG icons use #1472ba.
+   ========================================================= */
+
+   .sl-hipaa-trust {
+	width: 100%;
+	padding: 80px 0;
+	background: var(--sl-page-white, #ffffff);
+	border-top: 1px solid rgba(107, 124, 147, 0.18);
+}
+
+.sl-hipaa-trust .container {
+	width: 100%;
+	overflow-x: auto;
+	overscroll-behavior-inline: contain;
+	scrollbar-width: thin;
+	-webkit-overflow-scrolling: touch;
+}
+
+
+/* =========================================================
+   SINGLE-LINE GRID
+   ========================================================= */
+
+.sl-hipaa-trust__grid {
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: max-content;
+	align-items: stretch;
+	justify-content: center;
+	gap: 14px;
+	width: max-content;
+	min-width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+
+/* =========================================================
+   CREDENTIAL ITEMS
+   ========================================================= */
+
+.sl-hipaa-trust__item {
+	display: inline-flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 10px;
+	min-height: 52px;
+	padding: 12px 16px;
+	color: var(--sl-page-navy, #16234e);
+	background: #f8faff;
+	border: 1px solid #d6dfec;
+	border-radius: 9px;
+	white-space: nowrap;
+}
+
+
+/* =========================================================
+   ICONS
+   ========================================================= */
+
+.sl-hipaa-trust__icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	flex: 0 0 20px;
+}
+
+.sl-hipaa-trust__icon svg {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+
+/* =========================================================
+   LABELS
+   ========================================================= */
+
+.sl-hipaa-trust__label {
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 1.35;
+	white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLET
+   The grid remains one line and scrolls when required.
+   ========================================================= */
+
+@media (max-width: 991px) {
+	.sl-hipaa-trust__grid {
+		justify-content: flex-start;
+		gap: 12px;
+	}
+
+	.sl-hipaa-trust__item {
+		padding: 12px 15px;
+	}
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+	.sl-hipaa-trust {
+		padding: 20px 0 24px;
+	}
+
+	.sl-hipaa-trust__grid {
+		justify-content: flex-start;
+		gap: 10px;
+	}
+
+	.sl-hipaa-trust__item {
+		min-height: 48px;
+		padding: 11px 14px;
+	}
+
+	.sl-hipaa-trust__label {
+		font-size: 14px;
+	}
+}

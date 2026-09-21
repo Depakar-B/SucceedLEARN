@@ -1,0 +1,58 @@
+/* =========================================================
+   S-PHISH — TRANSFORM PHISHING FAILURES
+   ========================================================= */
+
+   .sl-s-phish-learning {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.sl-s-phish-learning .sl-home-sub-heading {
+    display: block;
+    margin-bottom: 18px;
+}
+
+.sl-s-phish-learning h2 {
+    margin-bottom: 24px;
+}
+
+.sl-s-phish-learning .sl-panel-title {
+    margin-bottom: 24px !important;
+}
+
+.sl-s-phish-learning p {
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+.sl-s-phish-learning p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .sl-s-phish-learning {
+        padding: 60px 0;
+    }
+
+    .sl-s-phish-learning .sl-home-sub-heading {
+        margin-bottom: 14px;
+    }
+
+    .sl-s-phish-learning h2 {
+        margin-bottom: 20px;
+    }
+
+    .sl-s-phish-learning .sl-panel-title {
+        margin-bottom: 28px;
+    }
+
+    .sl-s-phish-learning p {
+        margin-bottom: 16px;
+    }
+}

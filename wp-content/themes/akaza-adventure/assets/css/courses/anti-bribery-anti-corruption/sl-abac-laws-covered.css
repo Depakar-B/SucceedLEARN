@@ -1,0 +1,288 @@
+/**
+ * ABAC Laws Covered
+ */
+
+ .sl-abac-laws-covered {
+    padding: var(--course-section-space, 90px) 0;
+    background: var(--course-light-bg, #f5f5f5);
+}
+
+
+/* --------------------------------------------------
+   Main Layout
+-------------------------------------------------- */
+
+.sl-abac-laws-covered__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: 80px;
+    align-items: start;
+}
+
+
+/* --------------------------------------------------
+   Left Intro
+-------------------------------------------------- */
+
+.sl-abac-laws-covered__intro {
+    width: 100%;
+    max-width: none;
+    text-align: left;
+}
+
+.sl-abac-laws-covered__intro h2 {
+    max-width: none;
+    margin-bottom: 22px;
+}
+
+.sl-abac-laws-covered__intro p {
+    width: 100%;
+    max-width: none;
+
+    margin: 0 0 32px;
+
+    color: var(--course-text, #4a4a4a);
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* --------------------------------------------------
+   Tabs
+-------------------------------------------------- */
+
+.sl-abac-laws-covered__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.sl-abac-laws-covered__tab {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 40px;
+
+    padding: 8px 14px;
+
+    border: 1px solid var(--course-navy, #16234e);
+    border-radius: 7px;
+
+    background: var(--course-white, #ffffff);
+
+    color: var(--course-navy, #16234e);
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.sl-abac-laws-covered__tab:hover {
+    border-color: var(--course-primary, #1472ba);
+    color: var(--course-primary, #1472ba);
+}
+
+.sl-abac-laws-covered__tab.is-active {
+    border-color: var(--course-primary, #1472ba);
+    background: var(--course-primary, #1472ba);
+    color: var(--course-white, #ffffff);
+}
+
+
+/* --------------------------------------------------
+   Right Panels
+-------------------------------------------------- */
+
+.sl-abac-laws-covered__panels {
+    min-width: 0;
+}
+
+.sl-abac-laws-covered__card {
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 100%;
+
+    padding: 42px;
+
+    border: 1px solid rgba(22, 35, 78, 0.1);
+    border-top: 4px solid var(--course-primary, #1472ba);
+    border-radius: 0 0 16px 16px;
+
+    background: var(--course-white, #ffffff);
+
+    box-shadow: 0 10px 28px rgba(22, 35, 78, 0.05);
+
+    box-sizing: border-box;
+}
+
+.sl-abac-laws-covered__card[hidden] {
+    display: none;
+}
+
+
+/* --------------------------------------------------
+   Faded Year
+-------------------------------------------------- */
+
+.sl-abac-laws-covered__year {
+    position: absolute;
+
+    top: -18px;
+    right: 16px;
+
+    color: rgba(20, 114, 186, 0.07);
+
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 1;
+
+    pointer-events: none;
+}
+
+
+/* --------------------------------------------------
+   Card Content
+-------------------------------------------------- */
+
+.sl-abac-laws-covered__card-content {
+    position: relative;
+    z-index: 1;
+}
+
+.sl-abac-laws-covered__card h3 {
+    margin: 0 0 28px;
+
+    color: var(--course-primary, #1472ba);
+
+    font-size: 28px;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+.sl-abac-laws-covered__card p {
+    margin: 0 0 20px;
+
+    color: var(--course-text, #4a4a4a);
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.sl-abac-laws-covered__card p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* --------------------------------------------------
+   Large Desktop
+-------------------------------------------------- */
+
+@media (min-width: 1400px) {
+
+    .sl-abac-laws-covered__layout {
+        gap: 100px;
+    }
+
+    .sl-abac-laws-covered__card {
+        padding: 46px;
+    }
+
+    .sl-abac-laws-covered__card h3 {
+        font-size: 30px;
+    }
+
+    .sl-abac-laws-covered__card p {
+        font-size: 16px;
+    }
+}
+
+
+/* --------------------------------------------------
+   Tablet
+-------------------------------------------------- */
+
+@media (max-width: 1000px) {
+
+    .sl-abac-laws-covered__layout {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .sl-abac-laws-covered__intro {
+        max-width: none;
+    }
+
+    .sl-abac-laws-covered__card {
+        padding: 36px;
+    }
+}
+
+
+/* --------------------------------------------------
+   Mobile
+-------------------------------------------------- */
+
+@media (max-width: 650px) {
+
+    .sl-abac-laws-covered {
+        padding-top: var(--course-section-space-mobile, 60px);
+        padding-bottom: var(--course-section-space-mobile, 60px);
+    }
+
+    .sl-abac-laws-covered__layout {
+        gap: 34px;
+    }
+
+    .sl-abac-laws-covered__intro p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    .sl-abac-laws-covered__tabs {
+        gap: 7px;
+    }
+
+    .sl-abac-laws-covered__tab {
+        min-height: 38px;
+
+        padding: 7px 11px;
+
+        font-size: 13px;
+    }
+
+    .sl-abac-laws-covered__card {
+        padding: 28px 22px 30px;
+
+        border-radius: 0 0 14px 14px;
+    }
+
+    .sl-abac-laws-covered__year {
+        top: -8px;
+        right: 8px;
+
+        font-size: 70px;
+    }
+
+    .sl-abac-laws-covered__card h3 {
+        margin-bottom: 22px;
+
+        font-size: 22px;
+    }
+
+    .sl-abac-laws-covered__card p {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+}

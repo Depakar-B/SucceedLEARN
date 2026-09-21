@@ -1,0 +1,40 @@
+/**
+ * SucceedLEARN AMP — Legal pages (Privacy, Terms, S-Phish Report).
+ * Matches desktop legal-page.css brand tokens.
+ *
+ * Brand: blue #1472ba, navy #16234e / #283384,
+ * neutrals #4A4A4A / #6B7C93 / #F5F3EF, soft #eaf3fa
+ */
+.sl-legal-amp-page{background:#f5f3ef}
+.sl-legal-amp{padding:16px 0 48px;background:#f5f3ef;color:#6b7c93}
+.sl-legal-amp__wrap{max-width:800px;margin:0 auto;padding:0 16px}
+.sl-legal-amp__crumbs{font-size:14px;color:#6b7c93;margin:0 0 14px;line-height:1.45}
+.sl-legal-amp__crumbs a{color:#16234e;text-decoration:none;font-weight:600}
+.sl-legal-amp__hero{margin:0 0 18px;padding-top:8px}
+.sl-legal-amp__eyebrow{display:inline-block;margin:0 0 10px;padding:6px 12px;border:1px solid rgba(20,114,186,.28);border-radius:999px;background:#fff;color:#1472ba;font-size:12px;font-weight:600;letter-spacing:.04em}
+.sl-legal-amp__hero h1{margin:0 0 12px;font-size:24px;line-height:1.25;color:#16234e;font-weight:750}
+.sl-legal-amp__lead{margin:0;font-size:15px;line-height:1.65;color:#6b7c93}
+.sl-legal-amp__toc{margin:0 0 20px;padding:14px 16px 10px;border:1px solid rgba(22,35,78,.1);border-radius:12px;background:#fff;box-shadow:0 8px 24px rgba(22,35,78,.05)}
+.sl-legal-amp__toc-title{margin:0 0 8px;padding:0 0 10px;font-size:15px;font-weight:700;letter-spacing:.02em;color:#16234e;border-bottom:1px solid rgba(22,35,78,.1)}
+.sl-legal-amp__toc-list{margin:0;padding:0;list-style:none}
+.sl-legal-amp__toc-list li{margin:0}
+.sl-legal-amp__toc-list a,.sl-legal-amp__toc-list button.sl-legal-amp__toc-link{display:block;width:100%;padding:11px 0;color:#4a4a4a;text-decoration:none;font-size:15px;line-height:1.45;font-weight:600;border:0;border-bottom:1px solid rgba(22,35,78,.08);background:transparent;text-align:left;font-family:inherit;cursor:pointer}
+.sl-legal-amp__toc-list li:last-child a,.sl-legal-amp__toc-list li:last-child button.sl-legal-amp__toc-link{border-bottom:0}
+.sl-legal-amp__body{color:#6b7c93;font-size:16px;line-height:1.7}
+.sl-legal-amp__body .sl-legal-section{padding:18px 0;border-bottom:1px solid rgba(22,35,78,.1)}
+.sl-legal-amp__body .sl-legal-section:last-child{border-bottom:0}
+.sl-legal-amp__body h2,.sl-legal-amp__body h3{color:#16234e;line-height:1.3;margin:0 0 .6em}
+.sl-legal-amp__body h2{font-size:18px;font-weight:700}
+.sl-legal-amp__body h3{font-size:15px;margin-top:1.1em;color:#283384;font-weight:700}
+.sl-legal-amp__body p,.sl-legal-amp__body ul,.sl-legal-amp__body ol{margin:0 0 1em}
+.sl-legal-amp__body ul{padding-left:1.15rem}
+.sl-legal-amp__body li{margin:0 0 .45em}
+.sl-legal-amp__body a{color:#1472ba;font-weight:600}
+.sl-legal-amp__body .sl-legal-address{display:block;margin:0 0 1em;padding:14px 16px;border-left:3px solid #1472ba;border-radius:0 10px 10px 0;background:#eaf3fa;font-style:normal;font-size:15px;line-height:1.65;color:#6b7c93}
+.sl-legal-amp__body .sl-legal-address strong{color:#16234e}
+@media (min-width:600px){
+.sl-legal-amp__hero h1{font-size:28px}
+.sl-legal-amp__body h2{font-size:20px}
+.sl-legal-amp__toc-title{font-size:16px}
+.sl-legal-amp__toc-list a,.sl-legal-amp__toc-list button.sl-legal-amp__toc-link{font-size:16px}
+}

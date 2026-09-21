@@ -1,0 +1,81 @@
+/**
+ * Political Donations Training — Regulatory Context.
+ */
+
+ .sl-political-donations-context {
+	padding: 80px 0;
+	background: #f5f5f5;
+}
+
+.sl-political-donations-context__heading {
+	margin-bottom: 36px;
+}
+
+.sl-political-donations-context__heading h2 {
+	margin: 0;
+}
+
+.sl-political-donations-context__heading h2 span {
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-political-donations-context__grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 20px;
+}
+
+.sl-political-donations-context__card {
+	display: flex;
+	flex-direction: column;
+	padding: 28px;
+	background: #ffffff;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 16px;
+	box-sizing: border-box;
+}
+
+.sl-political-donations-context__card-head {
+	min-height: 58px;
+}
+
+.sl-political-donations-context__card-head .sl-panel-title {
+	margin: 0;
+}
+
+.sl-political-donations-context__card-content {
+	margin-top: 12px;
+}
+
+.sl-political-donations-context__card-content p {
+	margin: 0;
+}
+
+@media (max-width: 991px) {
+	.sl-political-donations-context {
+		padding: 64px 0;
+	}
+
+	.sl-political-donations-context__grid {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
+	.sl-political-donations-context__card {
+		padding: 24px;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-political-donations-context {
+		padding: 56px 0;
+	}
+
+	.sl-political-donations-context__heading {
+		margin-bottom: 28px;
+	}
+
+	.sl-political-donations-context__card {
+		padding: 22px;
+	}
+}

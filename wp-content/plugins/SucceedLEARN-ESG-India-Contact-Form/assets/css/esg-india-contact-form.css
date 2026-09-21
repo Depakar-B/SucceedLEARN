@@ -1,0 +1,221 @@
+.esg-india-contact-form-form {
+	max-width: 500px;
+	margin: 1.5rem auto;
+}
+
+/* Hide honeypot field from users */
+.esg-india-contact-form-honeypot {
+	position: absolute;
+	left: -9999px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.esg-india-contact-form-field {
+	margin-bottom: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.esg-india-contact-form-field label {
+	font-weight: 600;
+	color: #0f172a;
+	margin-bottom: 0.25rem;
+	font-size: 0.95rem;
+}
+
+.esg-india-contact-form-required {
+	color: #dc2626;
+	margin-left: 2px;
+}
+
+.esg-india-contact-form-field input,
+.esg-india-contact-form-field textarea {
+	border: 1px solid #cbd5f5;
+	border-radius: 6px;
+	font-size: 1rem;
+	width: 100%;
+	box-sizing: border-box;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.esg-india-contact-form-field input:focus,
+.esg-india-contact-form-field textarea:focus {
+	outline: none;
+	border-color: #2563eb;
+	box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.esg-india-contact-form-field textarea {
+	resize: vertical;
+	min-height: 120px;
+}
+
+.esg-india-contact-form-checkbox {
+	flex-direction: row;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	margin-bottom: 0;
+}
+
+.esg-india-contact-form-checkbox input[type="checkbox"] {
+	width: auto;
+	margin-top: 0.25rem;
+	flex-shrink: 0;
+	/* Force native checkbox behavior in case theme CSS overrides it */
+	appearance: auto !important;
+	-webkit-appearance: checkbox !important;
+	opacity: 1 !important;
+	visibility: visible !important;
+	position: static !important;
+	pointer-events: auto !important;
+	z-index: 2;
+	cursor: pointer;
+	width: 16px !important;
+	height: 16px !important;
+	min-width: 16px !important;
+	min-height: 16px !important;
+	background: #fff !important;
+	background-image: none !important;
+	box-shadow: none !important;
+	border-radius: 3px !important;
+	accent-color: #2563eb !important;
+}
+
+/* Remove theme-injected pseudo elements that can render as extra inner boxes */
+.esg-india-contact-form-checkbox input[type="checkbox"]::before,
+.esg-india-contact-form-checkbox input[type="checkbox"]::after,
+.esg-india-contact-form-checkbox label::before,
+.esg-india-contact-form-checkbox label::after {
+	content: none !important;
+	display: none !important;
+}
+
+.esg-india-contact-form-checkbox label {
+	font-weight: normal;
+	cursor: pointer;
+	flex: 1;
+	line-height: 1.5;
+	pointer-events: auto;
+}
+
+.esg-india-contact-form-checkbox .esg-india-contact-form-error-message {
+	width: 100%;
+	margin-left: 0;
+}
+
+.esg-india-contact-form-checkbox a {
+	color: #2563eb;
+	text-decoration: underline;
+}
+
+.esg-india-contact-form-submit {
+	background: #2563eb;
+	color: #fff;
+	border: none;
+	border-radius: 6px;
+	padding: 0.875rem 2rem;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.2s ease, transform 0.1s ease;
+	width: 100%;
+	display: block;
+	margin: 0.5rem 0 0 0;
+	position: relative;
+	max-width: 45%;
+}
+
+.esg-india-contact-form-submit:hover {
+	background: #1d4ed8;
+}
+
+.esg-india-contact-form-submit:active {
+	transform: scale(0.98);
+}
+
+.esg-india-contact-form-submit:disabled {
+	cursor: not-allowed;
+}
+
+.esg-india-contact-form-submit.is-loading {
+	opacity: 0.6;
+	pointer-events: none;
+}
+
+.esg-india-contact-form-response {
+	margin-top: 1rem;
+	padding: 0.75rem 1rem;
+	border-radius: 6px;
+	font-weight: 600;
+	display: block;
+}
+
+.esg-india-contact-form-response.esg-india-contact-form-error {
+	color: #dc2626;
+	background-color: #fee2e2;
+	border: 1px solid #fecaca;
+}
+
+.esg-india-contact-form-response.esg-india-contact-form-success {
+	color: #15803d;
+	background-color: #d1fae5;
+	border: 1px solid #a7f3d0;
+}
+
+.esg-india-contact-form-error-message {
+	color: #dc2626;
+	font-size: 14px;
+	font-weight: normal;
+	margin-top: 0.75rem;
+	display: block;
+	/**min-height: 20px;**/
+}
+
+.esg-india-contact-form-field input:invalid:not(:focus):not(:placeholder-shown),
+.esg-india-contact-form-field textarea:invalid:not(:focus):not(:placeholder-shown) {
+	border-color: #cbd5f5;
+}
+
+.esg-india-contact-form-spinner {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	border: 2px solid rgba(255, 255, 255, 0.3);
+	border-top-color: #fff;
+	border-radius: 50%;
+	animation: esg-india-contact-form-spin 0.8s linear infinite;
+	margin-right: 8px;
+	vertical-align: middle;
+}
+.esg-india-contact-form-checkbox a{
+	color: #1472ba!important;
+    font-weight: 600;
+    text-decoration: none;
+}
+@keyframes esg-india-contact-form-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.esg-india-contact-form-submit-loading {
+	display: inline-flex;
+	align-items: center;
+}
+
+.esg-india-contact-form-submit.is-loading .esg-india-contact-form-submit-text {
+	display: none;
+}
+
+.esg-india-contact-form-submit.is-loading .esg-india-contact-form-submit-loading {
+	display: inline-flex !important;
+}
+
+

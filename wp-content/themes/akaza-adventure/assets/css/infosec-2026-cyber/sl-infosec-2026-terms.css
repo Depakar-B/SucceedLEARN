@@ -1,0 +1,373 @@
+/* =========================================================
+   SucceedLEARN
+   Cybersecurity Awareness Month 2026
+   Terms & Conditions
+   ========================================================= */
+
+   .sl-infosec-2026-terms {
+    position: relative;
+    z-index: 1;
+    padding: 90px 0;
+    background: var(--sl-page-bg, #f5f5f5);
+}
+
+
+/* ---------------------------------------------------------
+   Intro
+   --------------------------------------------------------- */
+
+.sl-infosec-2026-terms__intro {
+    margin: 0 auto 42px;
+}
+
+.sl-infosec-2026-terms__intro h2 {
+    margin-bottom: 16px;
+}
+
+.sl-infosec-2026-terms__intro p {
+    margin: 0;
+}
+
+
+/* ---------------------------------------------------------
+   Accordion (unique from FAQ: cards + chevron toggle)
+   --------------------------------------------------------- */
+
+.sl-infosec-2026-terms__content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0 auto;
+    border: 0;
+}
+
+.sl-infosec-2026-terms__item {
+    margin: 0;
+    padding: 0;
+    border: 1px solid rgba(107, 124, 147, 0.18);
+    border-radius: 14px;
+    background: var(--sl-page-white, #ffffff);
+    box-shadow: 0 8px 22px rgba(22, 35, 78, 0.04);
+    overflow: hidden;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sl-infosec-2026-terms__item[open] {
+    border-color: rgba(20, 114, 186, 0.35);
+    box-shadow: 0 12px 28px rgba(22, 35, 78, 0.08);
+}
+
+.sl-infosec-2026-terms__summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 0;
+    padding: 18px 18px 18px 20px;
+    cursor: pointer;
+    list-style: none;
+    color: var(--sl-page-navy, #16234e);
+    border-left: 3px solid transparent;
+    transition: color 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.sl-infosec-2026-terms__summary::-webkit-details-marker {
+    display: none;
+}
+
+.sl-infosec-2026-terms__summary::marker {
+    content: "";
+    display: none;
+}
+
+.sl-infosec-2026-terms__summary .sl-panel-title {
+    margin: 0;
+    flex: 1;
+    min-width: 0;
+    color: inherit;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.sl-infosec-2026-terms__toggle {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: rgba(20, 114, 186, 0.1);
+    color: var(--sl-page-primary, #1472ba);
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.sl-infosec-2026-terms__toggle::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    margin-top: -3px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg);
+    transition: transform 0.25s ease, margin-top 0.25s ease;
+}
+
+.sl-infosec-2026-terms__item[open] > .sl-infosec-2026-terms__summary {
+    color: var(--sl-page-primary, #1472ba);
+    border-left-color: var(--sl-page-primary, #1472ba);
+    background: rgba(20, 114, 186, 0.04);
+}
+
+.sl-infosec-2026-terms__item[open] > .sl-infosec-2026-terms__summary .sl-infosec-2026-terms__toggle {
+    background: rgba(20, 114, 186, 0.16);
+}
+
+.sl-infosec-2026-terms__item[open] > .sl-infosec-2026-terms__summary .sl-infosec-2026-terms__toggle::before {
+    margin-top: 3px;
+    transform: rotate(-135deg);
+}
+
+.sl-infosec-2026-terms__panel {
+    padding: 4px 20px 20px 23px;
+    border-top: 1px solid rgba(107, 124, 147, 0.12);
+}
+
+.sl-infosec-2026-terms__panel > p {
+    margin-top: 0;
+    margin-bottom: 14px;
+    color: var(--sl-page-text, #4A4A4A);
+}
+
+.sl-infosec-2026-terms__panel > p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ---------------------------------------------------------
+   Challenge criteria
+   --------------------------------------------------------- */
+
+.sl-infosec-2026-terms__criteria {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 18px 0 22px;
+}
+
+.sl-infosec-2026-terms__criterion {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+}
+
+.sl-infosec-2026-terms__criterion::before {
+    content: "";
+    flex: 0 0 7px;
+    width: 7px;
+    height: 7px;
+    margin-top: calc((1em * 1.65 - 7px) / 2);
+    border-radius: 50%;
+    background: var(--sl-page-primary, #1472ba);
+}
+
+.sl-infosec-2026-terms__number {
+    display: none;
+}
+
+.sl-infosec-2026-terms__criterion p {
+    margin: 0;
+    line-height: 1.65;
+}
+
+
+/* ---------------------------------------------------------
+   OR divider
+   --------------------------------------------------------- */
+
+.sl-infosec-2026-terms__or {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 0;
+    color: var(--sl-page-muted, #6b7c93);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+}
+
+.sl-infosec-2026-terms__or::before,
+.sl-infosec-2026-terms__or::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: rgba(107, 124, 147, 0.22);
+}
+
+
+/* ---------------------------------------------------------
+   Benefit rows
+   --------------------------------------------------------- */
+
+.sl-infosec-2026-terms__benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 18px 0 22px;
+}
+
+.sl-infosec-2026-terms__benefit {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+}
+
+.sl-infosec-2026-terms__benefit::before {
+    content: "";
+    flex: 0 0 7px;
+    width: 7px;
+    height: 7px;
+    margin-top: calc((1em * 1.65 - 7px) / 2);
+    border-radius: 50%;
+    background: var(--sl-page-primary, #1472ba);
+}
+
+.sl-infosec-2026-terms__benefit-label {
+    display: none;
+}
+
+.sl-infosec-2026-terms__benefit p {
+    margin: 0;
+    line-height: 1.65;
+}
+
+
+/* ---------------------------------------------------------
+   Complimentary benefit list
+   --------------------------------------------------------- */
+
+.sl-infosec-2026-terms__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 18px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sl-infosec-2026-terms__list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+}
+
+.sl-infosec-2026-terms__list-item::before {
+    content: "";
+    flex: 0 0 7px;
+    width: 7px;
+    height: 7px;
+    margin-top: calc((1em * 1.65 - 7px) / 2);
+    border-radius: 50%;
+    background: var(--sl-page-primary, #1472ba);
+}
+
+.sl-infosec-2026-terms__list-marker {
+    display: none;
+}
+
+.sl-infosec-2026-terms__list-item p {
+    margin: 0;
+    line-height: 1.65;
+}
+
+
+/* ---------------------------------------------------------
+   Tablet
+   --------------------------------------------------------- */
+
+@media (max-width: 991px) {
+
+    .sl-infosec-2026-terms {
+        padding: 75px 0;
+    }
+
+    .sl-infosec-2026-terms__intro,
+    .sl-infosec-2026-terms__content {
+        max-width: 100%;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   Mobile
+   --------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+    .sl-infosec-2026-terms {
+        padding: 60px 0;
+    }
+
+    .sl-infosec-2026-terms__intro {
+        margin-bottom: 32px;
+    }
+
+    .sl-infosec-2026-terms__content {
+        gap: 10px;
+    }
+
+    .sl-infosec-2026-terms__item {
+        border-radius: 12px;
+    }
+
+    .sl-infosec-2026-terms__summary {
+        padding: 14px 14px 14px 16px;
+        gap: 12px;
+    }
+
+    .sl-infosec-2026-terms__summary .sl-panel-title {
+        font-size: 0.98rem;
+    }
+
+    .sl-infosec-2026-terms__toggle {
+        flex-basis: 32px;
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+    }
+
+    .sl-infosec-2026-terms__panel {
+        padding: 4px 16px 16px 19px;
+    }
+
+    .sl-infosec-2026-terms__criteria {
+        margin-top: 16px;
+        margin-bottom: 20px;
+    }
+
+    .sl-infosec-2026-terms__benefits {
+        margin-top: 16px;
+    }
+
+    .sl-infosec-2026-terms__or {
+        gap: 9px;
+    }
+
+}

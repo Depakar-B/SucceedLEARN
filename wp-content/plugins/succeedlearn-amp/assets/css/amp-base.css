@@ -1,0 +1,4 @@
+/* Minimal AMP base resets */
+amp-img{max-width:100%}
+a{color:inherit}
+img{max-width:100%;height:auto}

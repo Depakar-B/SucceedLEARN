@@ -1,0 +1,84 @@
+/*
+ * DPDPA Compliance Training — Format / delivery table.
+ */
+
+.sl-dpdpa-format-delivery {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-dpdpa-format-delivery__table-wrap {
+	max-width: 900px;
+	margin: 0 auto;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	border: 1px solid rgba(107, 124, 147, 0.18);
+	border-radius: 16px;
+	background: var(--sl-page-white, #ffffff);
+	box-shadow: 0 8px 24px rgba(22, 35, 78, 0.04);
+}
+
+.sl-dpdpa-format-delivery__table {
+	width: 100%;
+	min-width: 640px;
+	border-collapse: collapse;
+	margin: 0;
+}
+
+.sl-dpdpa-format-delivery__table th,
+.sl-dpdpa-format-delivery__table td {
+	padding: 18px 24px;
+	text-align: left;
+	vertical-align: top;
+	border-bottom: 1px solid rgba(107, 124, 147, 0.14);
+}
+
+.sl-dpdpa-format-delivery__table tr:last-child th,
+.sl-dpdpa-format-delivery__table tr:last-child td {
+	border-bottom: 0;
+}
+
+.sl-dpdpa-format-delivery__table th {
+	width: 32%;
+	color: var(--sl-page-muted, #6B7C93);
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-dpdpa-format-delivery__table td {
+	color: var(--sl-page-navy, #16234e);
+	font-size: 16px;
+	line-height: 1.55;
+}
+
+.sl-dpdpa-format-delivery__table td strong {
+	font-weight: 700;
+}
+
+@media (max-width: 767px) {
+	.sl-dpdpa-format-delivery {
+		padding: 60px 0;
+	}
+
+	.sl-dpdpa-format-delivery__table {
+		min-width: 560px;
+		table-layout: fixed;
+	}
+
+	.sl-dpdpa-format-delivery__table th {
+		width: 112px;
+		max-width: 112px;
+		padding: 16px 12px 16px 16px;
+		white-space: normal;
+	}
+
+	.sl-dpdpa-format-delivery__table td {
+		width: auto;
+		padding: 16px 18px 16px 12px;
+	}
+}

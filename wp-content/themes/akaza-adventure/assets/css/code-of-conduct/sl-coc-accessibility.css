@@ -1,0 +1,94 @@
+/**
+ * SucceedLEARN — Code of Conduct Accessibility.
+ */
+
+ .sl-coc-accessibility {
+	padding: 90px 0;
+	background: var(--sl-page-white);
+}
+
+/* ---------------------------------------------------------
+   Section Intro
+   --------------------------------------------------------- */
+
+.sl-coc-accessibility__heading {
+	margin-bottom: 28px;
+	text-align: left;
+}
+
+.sl-coc-accessibility__heading p {
+	margin: 0;
+	color: var(--sl-page-muted);
+}
+
+/* ---------------------------------------------------------
+   Content
+   --------------------------------------------------------- */
+
+.sl-coc-accessibility__content {
+	text-align: left;
+}
+
+.sl-coc-accessibility__content h3 {
+	margin: 0 0 26px;
+	font-size: 20px;
+	line-height: 1.4;
+}
+
+/* ---------------------------------------------------------
+   Capability Pills
+   --------------------------------------------------------- */
+
+.sl-coc-accessibility__features {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin: 0;
+}
+
+.sl-coc-accessibility__feature {
+	display: inline-flex;
+	align-items: center;
+	justify-content: flex-start;
+	min-height: 34px;
+	padding: 7px 18px;
+	border-radius: 999px;
+	background: var(--sl-page-bg);
+	color: var(--sl-page-text);
+	font-size: 14px;
+	line-height: 1.4;
+	white-space: nowrap;
+}
+
+
+@media (max-width: 1100px) {
+
+	.sl-coc-accessibility__features {
+		gap: 8px;
+	}
+
+	.sl-coc-accessibility__feature {
+		padding: 7px 13px;
+		font-size: 13px;
+	}
+}
+
+/* ---------------------------------------------------------
+   Mobile
+   --------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+	.sl-coc-accessibility {
+		padding: 60px 0;
+	}
+
+	.sl-coc-accessibility__features {
+		flex-wrap: wrap;
+		align-items: flex-start;
+	}
+
+	.sl-coc-accessibility__feature {
+		white-space: normal;
+	}
+}

@@ -1,0 +1,244 @@
+/* SucceedLEARN — global course audience */
+
+.sl-course-audience {
+	--audience-bg: var(--course-white, #ffffff);
+	--audience-heading: var(--course-navy, #16234e);
+	--audience-text: var(--course-muted, #6b7c93);
+	--audience-accent: var(--course-primary, #1472ba);
+	--learning-accent: var(--audience-accent);
+	--learning-text: var(--audience-text);
+	width: 100%;
+	background: var(--audience-bg);
+	color: var(--audience-heading);
+}
+
+.sl-course-audience__container {
+	margin: 0 auto;
+	padding: 100px 0 105px;
+	display: grid;
+	grid-template-columns: minmax(280px, 0.92fr) minmax(0, 1.08fr);
+	gap: 72px;
+	align-items: center;
+}
+
+.sl-course-audience__visual {
+	min-width: 0;
+}
+
+.sl-course-audience__media {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	border-radius: 24px;
+	aspect-ratio: 0.92 / 1;
+	background: linear-gradient(160deg, #283384 0%, #16234e 58%, #0c1638 100%);
+}
+
+.sl-course-audience__image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.sl-course-audience__placeholder {
+	position: absolute;
+	inset: 0;
+}
+
+.sl-course-audience__road {
+	position: absolute;
+	left: -18%;
+	right: -24%;
+	bottom: 16%;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 92px;
+	background: #2a3148;
+	color: rgba(255, 255, 255, 0.88);
+	font-size: 13px;
+	font-weight: 800;
+	letter-spacing: 0.42em;
+	text-transform: uppercase;
+	transform: rotate(-18deg);
+	box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+.sl-course-audience__badge {
+	position: absolute;
+	top: 22px;
+	left: 22px;
+	z-index: 2;
+	max-width: 220px;
+	padding: 16px 18px;
+	border-radius: 16px;
+	background: #ffffff;
+	box-shadow: 0 14px 32px rgba(12, 22, 56, 0.16);
+}
+
+.sl-course-audience__badge strong {
+	display: block;
+	color: var(--audience-accent);
+	font-size: 22px;
+	font-weight: 750;
+	line-height: 1.15;
+}
+
+.sl-course-audience__badge span {
+	display: block;
+	margin-top: 6px;
+	color: var(--audience-heading);
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 1.4;
+}
+
+.sl-course-audience__content {
+	min-width: 0;
+	max-width: 640px;
+}
+
+.sl-course-audience__eyebrow {
+	display: inline-flex;
+	align-items: center;
+	margin-bottom: 18px;
+	color: var(--audience-accent);
+	font-size: 12px;
+	font-weight: 800;
+	line-height: 1.3;
+	letter-spacing: 1.7px;
+	text-transform: uppercase;
+}
+
+.sl-course-audience__eyebrow::before {
+	content: "";
+	width: 28px;
+	height: 2px;
+	margin-right: 11px;
+	background: var(--audience-accent);
+}
+
+.sl-course-audience__title {
+	max-width: 620px;
+	margin: 0;
+	color: var(--audience-heading);
+}
+
+.sl-course-audience__title-highlight {
+	color: var(--audience-accent);
+}
+
+.sl-course-audience__description {
+	max-width: 580px;
+	margin-top: 0;
+}
+
+.sl-course-audience__description p {
+	margin: 0;
+	color: var(--audience-text);
+	font-size: 16px;
+	line-height: 1.7;
+}
+
+.sl-course-audience__points {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin: 28px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-course-audience__points .sl-course-learning__point-text {
+	white-space: nowrap;
+}
+
+@media (min-width: 1600px) {
+	.sl-course-audience__container {
+		padding: 115px 0 120px;
+		gap: 90px;
+	}
+
+	.sl-course-audience__content {
+		max-width: 680px;
+	}
+
+	.sl-course-audience__description p {
+		font-size: 17px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.sl-course-audience__container {
+		grid-template-columns: 1fr;
+		gap: 42px;
+		padding: 80px 0 85px;
+	}
+
+	.sl-course-audience__media {
+		max-width: 560px;
+		aspect-ratio: 1.15 / 1;
+	}
+
+	.sl-course-audience__content {
+		max-width: none;
+	}
+}
+
+@media (max-width: 600px) {
+	.sl-course-audience__container {
+		padding: 60px 0 65px;
+		gap: 32px;
+	}
+
+	.sl-course-audience__media {
+		border-radius: 18px;
+	}
+
+	.sl-course-audience__badge {
+		top: 16px;
+		left: 16px;
+		max-width: 190px;
+		padding: 14px 15px;
+	}
+
+	.sl-course-audience__badge strong {
+		font-size: 18px;
+	}
+
+	.sl-course-audience__badge span {
+		font-size: 12px;
+	}
+
+	.sl-course-audience__eyebrow {
+		margin-bottom: 16px;
+		font-size: 10px;
+		letter-spacing: 1.35px;
+	}
+
+	.sl-course-audience__eyebrow::before {
+		width: 22px;
+		margin-right: 9px;
+	}
+
+	.sl-course-audience__description p {
+		font-size: 14px;
+	}
+
+	.sl-course-audience__points {
+		margin-top: 22px;
+	}
+
+	.sl-course-audience__points .sl-course-learning__point-text {
+		white-space: normal;
+	}
+
+	.sl-course-audience__road {
+		height: 72px;
+		font-size: 11px;
+		letter-spacing: 0.32em;
+	}
+}
+

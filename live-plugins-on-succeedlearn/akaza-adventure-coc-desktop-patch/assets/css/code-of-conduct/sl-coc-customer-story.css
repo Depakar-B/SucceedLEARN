@@ -1,0 +1,262 @@
+/* SucceedLEARN — Code of Conduct — Customer Story
+ * Circular cycle mirrors SAP behaviour section (ring + orbiting cards).
+ */
+
+.sl-coc-customer-story {
+	padding: 80px 0 90px;
+	background: var(--sl-page-bg);
+}
+
+.sl-coc-customer-story__heading {
+	margin-bottom: 54px;
+}
+
+.sl-coc-customer-story__heading p {
+	margin: 0;
+	color: var(--sl-page-muted);
+	line-height: 1.65;
+}
+
+/* =========================================================
+   CYCLE — square stage so ring, hub and cards share one centre
+   ========================================================= */
+
+.sl-coc-customer-story__cycle {
+	--sl-coc-orbit-radius: 31cqi;
+	position: relative;
+	width: min(100%, 920px);
+	aspect-ratio: 1 / 1;
+	margin: 0 auto;
+	container-type: inline-size;
+}
+
+.sl-coc-customer-story__ring {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 0;
+	width: calc(var(--sl-coc-orbit-radius) * 2);
+	height: calc(var(--sl-coc-orbit-radius) * 2);
+	border: 1.5px solid rgba(20, 114, 186, 0.34);
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	box-sizing: border-box;
+}
+
+.sl-coc-customer-story__centre {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: clamp(150px, 24%, 210px);
+	aspect-ratio: 1 / 1;
+	padding: 18px 14px;
+	text-align: center;
+	background: var(--sl-page-white, #ffffff);
+	border: 1px solid rgba(20, 114, 186, 0.22);
+	border-radius: 50%;
+	box-shadow: 0 10px 28px rgba(22, 35, 78, 0.08);
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	pointer-events: none;
+}
+
+.sl-coc-customer-story__centre-line {
+	margin: 0;
+	color: var(--sl-page-navy, #16234e);
+	font-size: clamp(15px, 1.7vw, 19px);
+	font-weight: 700;
+	line-height: 1.3;
+}
+
+.sl-coc-customer-story__centre-line + .sl-coc-customer-story__centre-line {
+	margin-top: 2px;
+	color: var(--sl-page-primary, #1472ba);
+}
+
+/* =========================================================
+   STORY CARDS — sit on the ring, evenly spaced
+   ========================================================= */
+
+.sl-coc-customer-story__card {
+	--sl-coc-orbit-angle: 0deg;
+
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 1;
+	display: block;
+	width: var(--sl-coc-card-width);
+	max-width: 48%;
+	padding: 18px 52px 20px 20px;
+	background: var(--sl-page-white, #ffffff);
+	border: 1px solid rgba(107, 124, 147, 0.16);
+	border-radius: 14px;
+	box-shadow: 0 8px 24px rgba(22, 35, 78, 0.06);
+	box-sizing: border-box;
+	text-align: left;
+	transform:
+		translate(-50%, -50%)
+		rotate(var(--sl-coc-orbit-angle))
+		translateY(calc(var(--sl-coc-orbit-radius) * -1))
+		translateY(-25%)
+		rotate(calc(var(--sl-coc-orbit-angle) * -1));
+	transition: box-shadow 0.2s ease;
+}
+
+.sl-coc-customer-story__card:hover {
+	box-shadow: 0 12px 28px rgba(22, 35, 78, 0.1);
+}
+
+.sl-coc-customer-story__number {
+	position: absolute;
+	top: 14px;
+	right: 14px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background: var(--sl-page-primary, #1472ba);
+	color: var(--sl-page-white, #ffffff);
+	font-size: 11px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.sl-coc-customer-story__card-body {
+	width: 100%;
+	min-width: 0;
+	text-align: left;
+}
+
+.sl-coc-customer-story__card h3.sl-panel-title {
+	margin: 0 0 6px;
+	text-align: left;
+}
+
+.sl-coc-customer-story__card p {
+	margin: 0;
+	color: var(--sl-page-text, #4a4a4a);
+	font-size: 14px;
+	line-height: 1.5;
+	text-align: left;
+}
+
+/* CTA */
+
+.sl-coc-customer-story__action {
+	display: flex;
+	justify-content: center;
+	margin-top: 36px;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+	.sl-coc-customer-story {
+		padding: 72px 0 80px;
+	}
+
+	.sl-coc-customer-story__cycle {
+		--sl-coc-orbit-radius: 29cqi;
+		--sl-coc-card-width: 240px;
+		width: min(100%, 720px);
+	}
+
+	.sl-coc-customer-story__card {
+		padding: 14px 46px 16px 14px;
+	}
+
+	.sl-coc-customer-story__number {
+		top: 12px;
+		right: 12px;
+		width: 30px;
+		height: 30px;
+		font-size: 10px;
+	}
+
+	.sl-coc-customer-story__card h3.sl-panel-title {
+		margin: 0 0 6px;
+	}
+
+	.sl-coc-customer-story__card p {
+		font-size: 13px;
+	}
+
+	.sl-coc-customer-story__centre {
+		width: clamp(130px, 26%, 170px);
+		padding: 14px 10px;
+	}
+
+	.sl-coc-customer-story__centre-line {
+		font-size: 14px;
+	}
+}
+
+/* =========================================================
+   MOBILE — stacked list, hide ring
+   ========================================================= */
+
+@media (max-width: 767px) {
+	.sl-coc-customer-story {
+		padding: 60px 0 70px;
+	}
+
+	.sl-coc-customer-story__heading {
+		margin-bottom: 40px;
+	}
+
+	.sl-coc-customer-story__ring {
+		display: none;
+	}
+
+	.sl-coc-customer-story__cycle {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		gap: 14px;
+		width: min(100%, 520px);
+		aspect-ratio: auto;
+		height: auto;
+	}
+
+	.sl-coc-customer-story__centre {
+		position: relative;
+		left: auto;
+		top: auto;
+		order: -1;
+		width: 100%;
+		max-width: none;
+		aspect-ratio: auto;
+		border-radius: 14px;
+		transform: none;
+		pointer-events: auto;
+		padding: 18px 16px;
+	}
+
+	.sl-coc-customer-story__card {
+		position: relative;
+		left: auto;
+		top: auto;
+		width: 100%;
+		max-width: none;
+		transform: none;
+	}
+
+	.sl-coc-customer-story__card:hover {
+		transform: translateY(-2px);
+	}
+
+	.sl-coc-customer-story__action {
+		margin-top: 28px;
+	}
+}

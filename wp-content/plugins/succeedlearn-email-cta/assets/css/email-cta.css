@@ -1,0 +1,181 @@
+/**
+ * SucceedLEARN Email CTA — desktop + AMP (inlined into amp-custom).
+ */
+
+.sl-ecta-wrap {
+	--sl-ecta-navy: var(--sl-page-navy, #16234e);
+	--sl-ecta-muted: var(--sl-page-muted, #6B7C93);
+	--sl-ecta-text: var(--sl-page-text, #4A4A4A);
+	--sl-ecta-bg: var(--sl-page-bg, #f5f5f5);
+	--sl-ecta-cta: var(--sl-page-cta, #ea3e24);
+	--sl-ecta-cta-hover: #d4351c;
+	--sl-ecta-white: #ffffff;
+	max-width: 640px;
+	margin: 0 auto;
+	padding: 28px 24px;
+	background: var(--sl-ecta-bg);
+	border: 1px solid rgba(107, 124, 147, 0.18);
+	border-radius: 14px;
+	box-sizing: border-box;
+}
+
+.sl-ecta-heading {
+	margin: 0 0 18px;
+	color: var(--sl-ecta-navy);
+	font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+	font-weight: 700;
+	line-height: 1.3;
+}
+
+.sl-ecta-form {
+	margin: 0;
+}
+
+.sl-ecta-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	align-items: stretch;
+}
+
+.sl-ecta-email {
+	flex: 1 1 220px;
+	min-width: 0;
+	padding: 12px 14px;
+	border: 1px solid rgba(107, 124, 147, 0.35);
+	border-radius: 8px;
+	font-size: 16px;
+	line-height: 1.4;
+	color: var(--sl-ecta-text);
+	background: var(--sl-ecta-white);
+	box-sizing: border-box;
+}
+
+.sl-ecta-email:focus {
+	outline: none;
+	border-color: var(--sl-ecta-cta);
+	box-shadow: 0 0 0 3px rgba(234, 62, 36, 0.15);
+}
+
+.sl-ecta-email::placeholder {
+	color: var(--sl-ecta-muted);
+}
+
+.sl-ecta-submit {
+	flex: 0 0 auto;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 48px;
+	padding: 12px 22px;
+	border: 0;
+	border-radius: 8px;
+	background: var(--sl-ecta-cta);
+	color: var(--sl-ecta-white);
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.2;
+	cursor: pointer;
+	box-shadow: 0 6px 16px rgba(234, 62, 36, 0.22);
+	transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.sl-ecta-submit:hover,
+.sl-ecta-submit:focus {
+	background: var(--sl-ecta-cta-hover);
+	color: var(--sl-ecta-white);
+}
+
+.sl-ecta-submit:disabled {
+	opacity: 0.7;
+	cursor: wait;
+}
+
+.sl-ecta-privacy {
+	margin: 12px 0 0;
+	font-size: 13px;
+	line-height: 1.45;
+	color: var(--sl-ecta-muted);
+}
+
+.sl-ecta-privacy a {
+	color: var(--sl-page-primary, #1472ba);
+	text-decoration: underline;
+}
+
+.sl-ecta-response {
+	margin: 12px 0 0;
+	min-height: 1.2em;
+	font-size: 14px;
+	color: var(--sl-ecta-text);
+}
+
+.sl-ecta-response.is-error {
+	color: #b42318;
+}
+
+.sl-ecta-success {
+	margin-top: 4px;
+}
+
+.sl-ecta-success-message {
+	margin: 0;
+	padding: 14px 16px;
+	border-left: 4px solid var(--sl-page-primary, #1472ba);
+	border-radius: 0 10px 10px 0;
+	background: rgba(109, 195, 235, 0.16);
+	color: var(--sl-ecta-navy);
+	font-size: 15px;
+	line-height: 1.45;
+}
+
+.sl-ecta-error-message {
+	margin: 12px 0 0;
+	color: #b42318;
+	font-size: 14px;
+}
+
+.sl-ecta-amp-error {
+	display: none;
+	width: 100%;
+	margin: 0;
+	font-size: 13px;
+	color: #b42318;
+}
+
+.sl-ecta-honeypot {
+	position: absolute !important;
+	left: -9999px !important;
+	width: 1px !important;
+	height: 1px !important;
+	overflow: hidden !important;
+	opacity: 0 !important;
+	pointer-events: none !important;
+}
+
+.sl-ecta-wrap .screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+@media (max-width: 560px) {
+	.sl-ecta-wrap {
+		padding: 22px 16px;
+	}
+
+	.sl-ecta-row {
+		flex-direction: column;
+	}
+
+	.sl-ecta-submit {
+		width: 100%;
+	}
+}

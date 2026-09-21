@@ -1,0 +1,317 @@
+/* SucceedLEARN — Code of Conduct — One Programme */
+
+.sl-coc-one-programme {
+	padding: 90px 0;
+	background: var(--sl-page-white);
+}
+
+.sl-coc-one-programme__heading {
+	margin: 0 0 48px;
+	text-align: left;
+}
+
+.sl-coc-page .sl-coc-one-programme__heading {
+	text-align: left;
+}
+
+.sl-coc-one-programme__heading .sl-home-sub-heading {
+	display: inline-flex;
+}
+
+.sl-coc-one-programme__heading h2 {
+	margin: 0 0 16px;
+}
+
+.sl-coc-one-programme__heading p {
+	margin: 0;
+	color: var(--sl-page-muted);
+	line-height: 1.65;
+}
+
+/* Hub-and-spoke diagram */
+
+.sl-coc-one-programme__diagram {
+	position: relative;
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(450px, 450px) minmax(0, 1fr);
+	grid-template-rows: auto auto auto;
+	gap: 36px 40px;
+	width: 100%;
+	align-items: center;
+	justify-items: center;
+}
+
+.sl-coc-one-programme__connections {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+	pointer-events: none;
+}
+
+.sl-coc-one-programme__connections line {
+	stroke: rgba(20, 114, 186, 0.32);
+	stroke-width: 1.2;
+	vector-effect: non-scaling-stroke;
+}
+
+/* Centre hub */
+
+.sl-coc-one-programme__centre {
+	position: relative;
+	z-index: 1;
+	grid-column: 2;
+	grid-row: 2;
+	width: 100%;
+	min-width: 450px;
+	max-width: 450px;
+	padding: 20px 24px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid var(--sl-page-primary, #1472ba);
+	border-radius: 18px;
+	background: var(--sl-page-white);
+	box-shadow: 0 14px 36px rgba(22, 35, 78, 0.1);
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.sl-coc-one-programme__centre-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	margin: 0 auto 10px;
+	border-radius: 50%;
+	background: var(--sl-page-primary, #1472ba);
+}
+
+.sl-coc-one-programme__centre-icon svg {
+	width: 22px;
+	height: 22px;
+	stroke: var(--sl-page-white, #ffffff);
+	stroke-width: 1.7;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.sl-coc-one-programme__centre-label {
+	margin-bottom: 4px;
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+}
+
+.sl-coc-one-programme__centre h3.sl-panel-title {
+	margin: 0 0 8px;
+}
+
+.sl-coc-one-programme__centre p {
+	margin: 0;
+	color: var(--sl-page-muted, #6b7c93);
+	font-size: 15px;
+	line-height: 1.45;
+}
+
+/* Outer cards — icon on top, title + copy full-width below (no side gutter) */
+
+.sl-coc-one-programme__card {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 10px;
+	width: 100%;
+	min-width: 450px;
+	max-width: 450px;
+	min-height: 0;
+	padding: 18px 22px;
+	border: 1px solid rgba(107, 124, 147, 0.14);
+	border-radius: 16px;
+	background: var(--sl-page-bg, #f5f5f5);
+	box-shadow: 0 8px 22px rgba(22, 35, 78, 0.05);
+	box-sizing: border-box;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sl-coc-one-programme__card:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 12px 28px rgba(22, 35, 78, 0.08);
+}
+
+.sl-coc-one-programme__card--hr {
+	grid-column: 2;
+	grid-row: 1;
+	min-width: 450px;
+	max-width: 450px;
+}
+
+.sl-coc-one-programme__card--compliance {
+	grid-column: 1;
+	grid-row: 2;
+	justify-self: end;
+}
+
+.sl-coc-one-programme__card--learning {
+	grid-column: 3;
+	grid-row: 2;
+	justify-self: start;
+}
+
+.sl-coc-one-programme__card--employees {
+	grid-column: 1;
+	grid-row: 3;
+	justify-self: end;
+}
+
+.sl-coc-one-programme__card--business {
+	grid-column: 3;
+	grid-row: 3;
+	justify-self: start;
+}
+
+.sl-coc-one-programme__icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 42px;
+	width: 42px;
+	height: 42px;
+	border-radius: 12px;
+	background: rgba(109, 195, 235, 0.22);
+}
+
+.sl-coc-one-programme__icon svg {
+	width: 22px;
+	height: 22px;
+	stroke: var(--sl-page-primary, #1472ba);
+	stroke-width: 1.6;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.sl-coc-one-programme__card > .sl-panel-title {
+	margin: 0;
+	width: 100%;
+}
+
+.sl-coc-one-programme__card p {
+	margin: 0;
+	width: 100%;
+	color: var(--sl-page-text, #4a4a4a);
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+	.sl-coc-one-programme {
+		padding: 70px 0;
+	}
+
+	.sl-coc-one-programme__heading {
+		margin-bottom: 36px;
+	}
+
+	.sl-coc-one-programme__diagram {
+		grid-template-columns: minmax(0, 1fr) minmax(220px, 300px) minmax(0, 1fr);
+		gap: 32px 28px;
+		max-width: 960px;
+	}
+
+	.sl-coc-one-programme__centre {
+		min-width: 0;
+		max-width: 320px;
+		padding: 18px 20px;
+	}
+
+	.sl-coc-one-programme__card,
+	.sl-coc-one-programme__card--hr {
+		min-width: 0;
+		max-width: 320px;
+		padding: 18px;
+	}
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+	.sl-coc-one-programme {
+		padding: 60px 0;
+	}
+
+	.sl-coc-one-programme__heading,
+	.sl-coc-page .sl-coc-one-programme__heading {
+		margin-bottom: 28px;
+		text-align: left;
+	}
+
+	.sl-coc-one-programme__heading p {
+		margin: 0;
+	}
+
+	.sl-coc-one-programme__connections {
+		display: none;
+	}
+
+	.sl-coc-one-programme__diagram {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		gap: 16px;
+		max-width: 480px;
+	}
+
+	.sl-coc-one-programme__centre,
+	.sl-coc-one-programme__card--hr,
+	.sl-coc-one-programme__card--compliance,
+	.sl-coc-one-programme__card--learning,
+	.sl-coc-one-programme__card--employees,
+	.sl-coc-one-programme__card--business {
+		grid-column: 1;
+		grid-row: auto;
+		justify-self: stretch;
+		min-width: 0;
+		max-width: none;
+	}
+
+	.sl-coc-one-programme__centre {
+		order: 1;
+		min-width: 0;
+		max-width: none;
+		padding: 20px 18px;
+	}
+
+	.sl-coc-one-programme__card--hr {
+		order: 2;
+	}
+
+	.sl-coc-one-programme__card--compliance {
+		order: 3;
+	}
+
+	.sl-coc-one-programme__card--learning {
+		order: 4;
+	}
+
+	.sl-coc-one-programme__card--employees {
+		order: 5;
+	}
+
+	.sl-coc-one-programme__card--business {
+		order: 6;
+	}
+
+	.sl-coc-one-programme__card p {
+		font-size: 14px;
+	}
+}

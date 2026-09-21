@@ -1,0 +1,121 @@
+/**
+ * Political Donations Training — Course Overview.
+ */
+
+ .sl-political-donations-overview {
+	padding: 80px 0;
+	background: #ffffff;
+}
+
+.sl-political-donations-overview__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+	gap: 64px;
+	align-items: start;
+}
+
+.sl-political-donations-overview__media {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 110px) + 24px);
+	align-self: start;
+}
+
+.sl-political-donations-overview__image {
+	width: 100%;
+	overflow: hidden;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 16px;
+	background: #ffffff;
+}
+
+.sl-political-donations-overview__image-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 460px;
+	padding: 30px;
+	background: #f5f5f5;
+	color: var(--sl-page-muted, #6b7c93);
+	text-align: center;
+}
+
+.sl-political-donations-overview__content {
+	min-width: 0;
+}
+
+.sl-political-donations-overview__content h2 {
+	margin: 12px 0 20px;
+}
+
+.sl-political-donations-overview__content h2 span {
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-political-donations-overview__copy {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.sl-political-donations-overview__copy p {
+	margin: 0;
+}
+
+.sl-political-donations-overview__emphasis {
+	margin-top: 32px;
+	padding: 24px 26px;
+	background: #f5f5f5;
+	border-left: 4px solid var(--sl-page-primary, #1472ba);
+	border-radius: 12px;
+}
+
+.sl-political-donations-overview__emphasis .sl-home-sub-heading {
+	display: block;
+	margin-bottom: 8px;
+}
+
+.sl-political-donations-overview__emphasis .sl-panel-title {
+	margin: 0 0 8px;
+}
+
+.sl-political-donations-overview__emphasis p {
+	margin: 0;
+}
+
+@media (max-width: 991px) {
+	.sl-political-donations-overview {
+		padding: 64px 0;
+	}
+
+	.sl-political-donations-overview__grid {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.sl-political-donations-overview__media {
+		position: static;
+	}
+
+	.sl-political-donations-overview__image-placeholder {
+		min-height: 420px;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-political-donations-overview {
+		padding: 56px 0;
+	}
+
+	.sl-political-donations-overview__grid {
+		gap: 32px;
+	}
+
+	.sl-political-donations-overview__image-placeholder {
+		min-height: 320px;
+	}
+
+	.sl-political-donations-overview__emphasis {
+		margin-top: 24px;
+		padding: 20px;
+	}
+}

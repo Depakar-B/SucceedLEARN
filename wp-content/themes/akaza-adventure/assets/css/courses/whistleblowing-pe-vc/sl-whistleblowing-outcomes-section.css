@@ -1,0 +1,76 @@
+/**
+ * Whistleblowing Training — Learning Outcomes.
+ *
+ * @package Akaza_Adventure
+ */
+
+ .sl-whistleblowing-outcomes-section {
+	background: #ffffff;
+	padding: 90px 0;
+}
+
+.sl-whistleblowing-outcomes-section__intro {
+	margin-bottom: 42px;
+}
+
+.sl-whistleblowing-outcomes-section__intro h2 {
+	margin-top: 14px;
+	margin-bottom: 0;
+}
+
+.sl-whistleblowing-outcomes-section__grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 20px;
+}
+
+.sl-whistleblowing-outcomes-section__card {
+	min-width: 0;
+	padding: 28px 26px 30px;
+	background: #f5f5f5;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 14px;
+	box-sizing: border-box;
+}
+
+.sl-whistleblowing-outcomes-section__card .sl-panel-title {
+	margin-top: 0;
+	margin-bottom: 12px;
+}
+
+.sl-whistleblowing-outcomes-section__card p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+	.sl-whistleblowing-outcomes-section {
+		padding: 72px 0;
+	}
+
+	.sl-whistleblowing-outcomes-section__grid {
+		gap: 16px;
+	}
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+	.sl-whistleblowing-outcomes-section {
+		padding: 60px 0;
+	}
+
+	.sl-whistleblowing-outcomes-section__intro {
+		margin-bottom: 30px;
+	}
+
+	.sl-whistleblowing-outcomes-section__grid {
+		grid-template-columns: 1fr;
+		gap: 12px;
+	}
+
+	.sl-whistleblowing-outcomes-section__card {
+		padding: 22px 20px 24px;
+		border-radius: 10px;
+	}
+}

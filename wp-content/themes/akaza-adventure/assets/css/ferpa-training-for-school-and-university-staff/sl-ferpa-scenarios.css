@@ -1,0 +1,315 @@
+/**
+ * SucceedLEARN — FERPA Staff Awareness
+ *
+ * Section: The Situations Staff Get Wrong
+ *
+ * @package Akaza_Adventure
+ */
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.sl-ferpa-scenarios {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+
+/* =========================================
+   TWO-COLUMN LAYOUT
+========================================= */
+
+.sl-ferpa-scenarios__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 0.43fr) minmax(0, 0.57fr);
+	gap: 52px;
+	align-items: start;
+}
+
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.sl-ferpa-scenarios__content {
+	min-width: 0;
+}
+
+.sl-ferpa-scenarios__heading {
+	margin-bottom: 34px;
+}
+
+.sl-ferpa-scenarios__heading h2 {
+	margin: 0 0 18px;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-ferpa-scenarios__heading h2 span {
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-ferpa-scenarios__heading p {
+	margin: 0;
+	color: var(--sl-page-text, #425b70);
+}
+
+
+/* =========================================
+   SCENARIO LIST
+========================================= */
+
+.sl-ferpa-scenarios__list {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-ferpa-scenarios__item {
+	display: grid;
+	grid-template-columns: 24px minmax(0, 1fr);
+	gap: 12px;
+	align-items: start;
+	padding: 17px 0;
+	border-bottom: 1px solid rgba(22, 35, 78, 0.12);
+}
+
+.sl-ferpa-scenarios__item:first-child {
+	padding-top: 0;
+}
+
+.sl-ferpa-scenarios__item:last-child {
+	border-bottom: 0;
+}
+
+.sl-ferpa-scenarios__check {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 22px;
+	height: 22px;
+	margin-top: 2px;
+	border-radius: 50%;
+	background: rgba(20, 114, 186, 0.09);
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-ferpa-scenarios__check svg {
+	display: block;
+	width: 14px;
+	height: 14px;
+}
+
+.sl-ferpa-scenarios__item p {
+	margin: 0;
+	color: var(--sl-page-text, #425b70);
+}
+
+.sl-ferpa-scenarios__item strong {
+	color: var(--sl-page-navy, #16234e);
+	font-weight: 700;
+}
+
+
+/* =========================================
+   RIGHT DASHBOARD
+========================================= */
+
+.sl-ferpa-scenarios__dashboard {
+	min-width: 0;
+	overflow: hidden;
+	border: 1px solid rgba(20, 114, 186, 0.18);
+	border-radius: 14px;
+	background: var(--sl-page-white, #ffffff);
+	box-shadow: 0 6px 22px rgba(22, 35, 78, 0.05);
+}
+
+
+/* =========================================
+   DASHBOARD HEADER
+========================================= */
+
+.sl-ferpa-scenarios__dashboard-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 18px;
+	padding: 20px 22px;
+	border-bottom: 1px solid rgba(22, 35, 78, 0.10);
+	background: rgba(20, 114, 186, 0.045);
+}
+
+.sl-ferpa-scenarios__dashboard-title {
+	min-width: 0;
+}
+
+.sl-ferpa-scenarios__dashboard-eyebrow {
+	display: block;
+	margin-bottom: 6px;
+	color: var(--sl-page-primary, #1472ba);
+	font-weight: 700;
+}
+
+.sl-ferpa-scenarios__dashboard-title h3 {
+	margin: 0;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-ferpa-scenarios__dashboard-badge {
+	flex: 0 0 auto;
+	padding: 6px 10px;
+	border: 1px solid rgba(20, 114, 186, 0.16);
+	border-radius: 999px;
+	background: rgba(20, 114, 186, 0.08);
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	line-height: 1;
+	white-space: nowrap;
+}
+
+
+/* =========================================
+   DASHBOARD ROWS
+========================================= */
+
+.sl-ferpa-scenarios__rows {
+	display: flex;
+	flex-direction: column;
+}
+
+.sl-ferpa-scenarios__row {
+	display: grid;
+	grid-template-columns: minmax(135px, 0.32fr) minmax(0, 0.68fr);
+	gap: 22px;
+	padding: 22px;
+	border-bottom: 1px solid rgba(22, 35, 78, 0.10);
+}
+
+.sl-ferpa-scenarios__row:last-child {
+	border-bottom: 0;
+}
+
+.sl-ferpa-scenarios__row-label {
+	min-width: 0;
+	padding-top: 3px;
+}
+
+.sl-ferpa-scenarios__row-label strong {
+	color: var(--sl-page-navy, #16234e);
+	font-weight: 700;
+}
+
+.sl-ferpa-scenarios__row-content {
+	min-width: 0;
+}
+
+
+/* =========================================
+   TAGS
+========================================= */
+
+.sl-ferpa-scenarios__tag {
+	display: inline-flex;
+	align-items: center;
+	padding: 5px 9px;
+	margin-bottom: 8px;
+	border-radius: 999px;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.03em;
+	line-height: 1;
+}
+
+.sl-ferpa-scenarios__tag--blue {
+	background: rgba(20, 114, 186, 0.10);
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-ferpa-scenarios__tag--orange {
+	background: rgba(234, 62, 36, 0.10);
+	color: var(--sl-page-cta, #ea3e24);
+}
+
+.sl-ferpa-scenarios__row-content p {
+	margin: 0;
+	color: var(--sl-page-text, #425b70);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1199px) {
+
+	.sl-ferpa-scenarios {
+		padding: 75px 0;
+	}
+
+	.sl-ferpa-scenarios__grid {
+		grid-template-columns: minmax(0, 0.42fr) minmax(0, 0.58fr);
+		gap: 32px;
+	}
+
+	.sl-ferpa-scenarios__dashboard-header {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+	.sl-ferpa-scenarios {
+		padding: 60px 0;
+	}
+
+	.sl-ferpa-scenarios__grid {
+		grid-template-columns: 1fr;
+		gap: 30px;
+	}
+
+	.sl-ferpa-scenarios__heading {
+		margin-bottom: 28px;
+	}
+
+	.sl-ferpa-scenarios__item {
+		grid-template-columns: 22px minmax(0, 1fr);
+		gap: 10px;
+		padding: 15px 0;
+	}
+
+	.sl-ferpa-scenarios__check {
+		width: 20px;
+		height: 20px;
+	}
+
+	.sl-ferpa-scenarios__check svg {
+		width: 13px;
+		height: 13px;
+	}
+
+	.sl-ferpa-scenarios__dashboard-header {
+		padding: 17px 16px;
+	}
+
+	.sl-ferpa-scenarios__row {
+		grid-template-columns: 1fr;
+		gap: 8px;
+		padding: 18px 16px;
+	}
+
+}

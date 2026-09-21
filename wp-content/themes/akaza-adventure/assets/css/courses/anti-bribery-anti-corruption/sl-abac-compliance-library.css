@@ -1,0 +1,252 @@
+/**
+ * ABAC Broader Compliance Library
+ */
+
+ .sl-abac-compliance-library {
+    padding: var(--course-section-space, 90px) 0;
+    background: var(--course-white, #ffffff);
+}
+
+
+/* --------------------------------------------------
+   Main Layout
+-------------------------------------------------- */
+
+.sl-abac-compliance-library__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: 90px;
+    align-items: center;
+}
+
+
+/* --------------------------------------------------
+   Left Intro
+-------------------------------------------------- */
+
+.sl-abac-compliance-library__intro {
+    width: 100%;
+    max-width: none;
+    text-align: left;
+}
+
+.sl-abac-compliance-library__intro h2 {
+    max-width: none;
+    margin-bottom: 22px;
+}
+
+.sl-abac-compliance-library__intro p {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+
+    color: var(--course-text, #4a4a4a);
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* --------------------------------------------------
+   Right Content
+-------------------------------------------------- */
+
+.sl-abac-compliance-library__content {
+    min-width: 0;
+}
+
+.sl-abac-compliance-library__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+/* --------------------------------------------------
+   Course Item
+-------------------------------------------------- */
+
+.sl-abac-compliance-library__item {
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr);
+    align-items: center;
+    gap: 14px;
+
+    min-height: 60px;
+    padding: 10px 16px;
+
+    border: 1px solid rgba(22, 35, 78, 0.12);
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.78);
+
+    box-shadow:
+        0 8px 24px rgba(22, 35, 78, 0.035);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    box-sizing: border-box;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.sl-abac-compliance-library__item:hover {
+    border-color: rgba(20, 114, 186, 0.3);
+
+    box-shadow:
+        0 12px 28px rgba(22, 35, 78, 0.07);
+
+    transform: translateY(-2px);
+}
+
+
+/* --------------------------------------------------
+   Number
+-------------------------------------------------- */
+
+.sl-abac-compliance-library__number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    border-radius: 9px;
+
+    background: rgba(22, 35, 78, 0.06);
+
+    color: var(--course-navy, #16234e);
+
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+
+/* --------------------------------------------------
+   Course Title
+-------------------------------------------------- */
+
+.sl-abac-compliance-library__title {
+    display: block;
+
+    color: var(--course-navy, #16234e);
+
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+
+/* --------------------------------------------------
+   Large Desktop
+-------------------------------------------------- */
+
+@media (min-width: 1400px) {
+
+    .sl-abac-compliance-library__layout {
+        gap: 110px;
+    }
+
+    .sl-abac-compliance-library__list {
+        gap: 16px;
+    }
+
+    .sl-abac-compliance-library__item {
+        min-height: 62px;
+        padding: 11px 20px;
+    }
+
+    .sl-abac-compliance-library__title {
+        font-size: 16px;
+    }
+}
+
+
+/* --------------------------------------------------
+   Tablet
+-------------------------------------------------- */
+
+@media (max-width: 1000px) {
+
+    .sl-abac-compliance-library__layout {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .sl-abac-compliance-library__intro {
+        max-width: none;
+    }
+}
+
+
+/* --------------------------------------------------
+   Mobile
+-------------------------------------------------- */
+
+@media (max-width: 650px) {
+
+    .sl-abac-compliance-library {
+        padding-top: var(--course-section-space-mobile, 60px);
+        padding-bottom: var(--course-section-space-mobile, 60px);
+    }
+
+    .sl-abac-compliance-library__layout {
+        gap: 34px;
+    }
+
+    .sl-abac-compliance-library__intro p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    .sl-abac-compliance-library__list {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .sl-abac-compliance-library__item {
+        grid-template-columns: 36px minmax(0, 1fr);
+        gap: 12px;
+
+        min-height: 56px;
+        padding: 9px 14px;
+
+        border-radius: 10px;
+    }
+
+    .sl-abac-compliance-library__number {
+        width: 34px;
+        height: 34px;
+    }
+
+    .sl-abac-compliance-library__title {
+        font-size: 14px;
+    }
+}
+
+
+/* --------------------------------------------------
+   Small Mobile
+-------------------------------------------------- */
+
+@media (max-width: 380px) {
+
+    .sl-abac-compliance-library__item {
+        padding: 8px 12px;
+    }
+
+    .sl-abac-compliance-library__title {
+        font-size: 13px;
+    }
+}

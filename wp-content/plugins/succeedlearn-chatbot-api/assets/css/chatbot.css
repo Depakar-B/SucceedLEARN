@@ -1,0 +1,1157 @@
+/**
+ * SucceedLearn Chatbot Styles
+ * Responsive and accessible chat widget styling
+ */
+
+/* Chat Widget Container */
+.succeedlearn-chatbot-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+/* Chat Toggle Button (Icon) */
+.succeedlearn-chatbot-toggle {
+    width: 210px;
+    height: 210px;
+    background: transparent;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: white;
+    border: none;
+}
+
+.succeedlearn-chatbot-toggle:hover {
+    transform: scale(1.05);
+}
+
+.succeedlearn-chatbot-toggle:focus {
+    outline: 3px solid rgba(102, 126, 234, 0.5);
+    outline-offset: 3px;
+}
+
+.succeedlearn-chatbot-toggle svg {
+    width: 28px;
+    height: 28px;
+}
+
+.succeedlearn-chatbot-toggle-fallback {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 28px;
+    height: 28px;
+    display: none;
+}
+
+.succeedlearn-chatbot-toggle-fallback-text {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #667eea;
+    font-weight: 700;
+    line-height: 1.1;
+    user-select: none;
+}
+
+.succeedlearn-chatbot-toggle-fallback-title {
+    font-size: 14px;
+}
+
+.succeedlearn-chatbot-toggle-fallback-subtitle {
+    font-size: 11px;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.succeedlearn-chatbot-toggle.is-fallback .succeedlearn-chatbot-toggle-fallback {
+    display: block;
+}
+
+.succeedlearn-chatbot-toggle.is-fallback .succeedlearn-chatbot-toggle-fallback-text {
+    display: block;
+    margin-top: 42px;
+}
+
+.succeedlearn-chatbot-toggle.is-fallback .succeedlearn-chatbot-toggle-lottie {
+    display: none;
+}
+
+.succeedlearn-chatbot-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.succeedlearn-chatbot-back-menu {
+    background: rgba(255, 255, 255, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    color: #fff;
+    height: 32px;
+    padding: 0 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.2s, border-color 0.2s;
+    flex-shrink: 0;
+}
+
+.succeedlearn-chatbot-back-menu:hover {
+    background: rgba(255, 255, 255, 0.32);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-1px);
+}
+
+.succeedlearn-chatbot-back-menu:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.35);
+    outline-offset: 2px;
+}
+
+/* Chat Window */
+.succeedlearn-chatbot-window {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 380px;
+    max-width: calc(100vw - 40px);
+    height: 600px;
+    max-height: calc(100vh - 120px);
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.succeedlearn-chatbot-window.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: all;
+}
+
+/* Chat Header */
+.succeedlearn-chatbot-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+.succeedlearn-chatbot-header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    min-width: 0;
+}
+
+.succeedlearn-chatbot-header-lottie {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.succeedlearn-chatbot-header-title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.succeedlearn-chatbot-close {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    padding: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    flex-shrink: 0;
+}
+
+.succeedlearn-chatbot-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Messages Area */
+.succeedlearn-chatbot-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.succeedlearn-chatbot-message {
+    max-width: 100%;
+    padding: 12px 16px;
+    border-radius: 18px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    animation: messageSlideIn 0.3s ease-out;
+}
+
+@keyframes messageSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.succeedlearn-chatbot-message-user {
+    background: #eef2ff; /* light primary tint */
+    color: #111827; /* near-black */
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+    border: 1px solid #dbe4ff;
+    max-width: 85%;
+}
+
+.succeedlearn-chatbot-message-bot {
+    background: white;
+    color: #333;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    line-height: 1.6;
+}
+
+.succeedlearn-chatbot-message-bot p {
+    margin: 0 0 10px 0;
+    line-height: 1.6;
+}
+
+.succeedlearn-chatbot-message-bot p:last-child {
+    margin-bottom: 0;
+}
+
+/* Enhanced List Styling */
+.succeedlearn-chatbot-message-bot ul,
+.succeedlearn-chatbot-message-bot ol {
+    margin: 12px 0;
+    padding-left: 0;
+    list-style-position: outside;
+}
+
+.succeedlearn-chatbot-message-bot ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.succeedlearn-chatbot-message-bot ul li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.succeedlearn-chatbot-message-bot ul li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+/* Unordered List Styling - Bullet Points */
+.succeedlearn-chatbot-unordered-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0;
+    counter-reset: none;
+}
+
+.succeedlearn-chatbot-unordered-list .succeedlearn-chatbot-list-item {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 8px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.succeedlearn-chatbot-unordered-list .succeedlearn-chatbot-list-item:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #4f46e5;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.succeedlearn-chatbot-unordered-list .succeedlearn-chatbot-list-item strong {
+    color: #1e293b;
+    font-weight: 600;
+}
+
+.succeedlearn-chatbot-unordered-list .succeedlearn-chatbot-list-item .course-price,
+.succeedlearn-chatbot-unordered-list .succeedlearn-chatbot-list-item .succeedlearn-chatbot-price {
+    color: #059669;
+    font-weight: 600;
+}
+
+.succeedlearn-chatbot-unordered-list .succeedlearn-chatbot-list-item .succeedlearn-chatbot-course-link {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.succeedlearn-chatbot-unordered-list .succeedlearn-chatbot-list-item .succeedlearn-chatbot-course-link:hover {
+    border-bottom-color: #4f46e5;
+}
+
+/* Fallback for regular ul elements (exclude our custom unordered list) */
+.succeedlearn-chatbot-message-bot ul:not(.succeedlearn-chatbot-unordered-list) {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0;
+}
+
+.succeedlearn-chatbot-message-bot ul:not(.succeedlearn-chatbot-unordered-list) li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.succeedlearn-chatbot-message-bot ul:not(.succeedlearn-chatbot-unordered-list) li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #4f46e5;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Ordered List Styling - Improved Alignment */
+.succeedlearn-chatbot-ordered-list {
+    counter-reset: list-counter;
+    padding-left: 0;
+    margin: 12px 0;
+    list-style: none;
+}
+
+.succeedlearn-chatbot-ordered-list .succeedlearn-chatbot-list-item {
+    position: relative;
+    padding-left: 32px;
+    padding-right: 8px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    display: block;
+}
+
+.succeedlearn-chatbot-ordered-list .succeedlearn-chatbot-list-item:before {
+    content: counter(list-counter) ".";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #667eea;
+    font-weight: 600;
+    font-size: 15px;
+    min-width: 28px;
+    text-align: right;
+    padding-right: 8px;
+    line-height: 1.7;
+}
+
+/* Ensure ordered list counter increments ONLY once (avoid 2,4,6...) */
+.succeedlearn-chatbot-ordered-list .succeedlearn-chatbot-list-item {
+    counter-increment: list-counter;
+}
+
+.succeedlearn-chatbot-ordered-list .succeedlearn-chatbot-list-item strong {
+    color: #333;
+    font-weight: 600;
+    margin-right: 6px;
+}
+
+.succeedlearn-chatbot-ordered-list .succeedlearn-chatbot-list-item .course-price,
+.succeedlearn-chatbot-ordered-list .succeedlearn-chatbot-list-item .succeedlearn-chatbot-price {
+    color: #ffffff;
+    font-weight: 600;
+    margin-left: 4px;
+}
+
+/* Ensure fallback <ol> rules do NOT apply to our custom ordered list */
+.succeedlearn-chatbot-message-bot ol:not(.succeedlearn-chatbot-ordered-list) li {
+    counter-increment: list-counter;
+}
+
+.succeedlearn-chatbot-ordered-list .succeedlearn-chatbot-list-item .succeedlearn-chatbot-course-link {
+    display: inline-block;
+    margin-top: 6px;
+    color: #667eea;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.succeedlearn-chatbot-ordered-list .succeedlearn-chatbot-list-item .succeedlearn-chatbot-course-link:hover {
+    text-decoration: underline;
+}
+
+/* Fallback for regular ol elements (exclude our custom ordered list) */
+.succeedlearn-chatbot-message-bot ol:not(.succeedlearn-chatbot-ordered-list) {
+    counter-reset: list-counter;
+    padding-left: 0;
+    margin: 12px 0;
+    list-style: none;
+}
+
+.succeedlearn-chatbot-message-bot ol:not(.succeedlearn-chatbot-ordered-list) li {
+    position: relative;
+    padding-left: 32px;
+    margin-bottom: 12px;
+    line-height: 1.7;
+    counter-increment: list-counter;
+}
+
+.succeedlearn-chatbot-message-bot ol:not(.succeedlearn-chatbot-ordered-list) li:before {
+    content: counter(list-counter) ".";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: 600;
+    font-size: 15px;
+    min-width: 28px;
+    text-align: right;
+    padding-right: 8px;
+    line-height: 1.7;
+}
+
+/* Course Cards */
+.succeedlearn-chatbot-course-card {
+    background: #ffffff;
+    border: 1px solid #e0e7ff;
+    border-radius: 12px;
+    padding: 20px;
+    min-height: 120px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    position: relative;
+    width: 100%;
+    clear: both;
+}
+
+.succeedlearn-chatbot-course-card:hover {
+    border-color: #667eea;
+    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.2), 0 2px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.succeedlearn-chatbot-course-card-number {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    color: #667eea;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1;
+    z-index: 1;
+}
+
+.succeedlearn-chatbot-course-card-title {
+    color: #1f2937;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.6;
+    margin: 0;
+    padding-left: 0;
+    display: block;
+    width: 100%;
+    flex-grow: 1;
+}
+
+/* If card has number, add left padding to title */
+.succeedlearn-chatbot-course-card .succeedlearn-chatbot-course-card-number ~ .succeedlearn-chatbot-course-card-title {
+    padding-left: 24px;
+}
+
+.succeedlearn-chatbot-course-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: nowrap;
+    margin-top: 4px;
+}
+
+.succeedlearn-chatbot-course-card-price {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.succeedlearn-chatbot-course-card-link {
+    background: #667eea;
+    color: #ffffff !important;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none !important;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    display: inline-block;
+    flex-shrink: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.succeedlearn-chatbot-course-card-link:hover {
+    background: #5568d3;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(102, 126, 234, 0.3);
+}
+
+.succeedlearn-chatbot-course-card-link:active {
+    transform: translateY(0);
+}
+
+.succeedlearn-chatbot-course-card-link:visited {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+/* Course List Items (legacy - kept for backward compatibility) */
+.succeedlearn-chatbot-course-item {
+    background: #f8f9fa;
+    border-left: 3px solid #667eea;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.succeedlearn-chatbot-course-item:hover {
+    background: #e9ecef;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.15);
+}
+
+.succeedlearn-chatbot-course-item strong {
+    color: #667eea;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.succeedlearn-chatbot-course-item .course-price {
+    color: #28a745;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.succeedlearn-chatbot-course-item .course-meta {
+    font-size: 12px;
+    color: #6c757d;
+    margin-top: 6px;
+}
+
+/* FAQ Items */
+.succeedlearn-chatbot-faq-item {
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.succeedlearn-chatbot-faq-item .faq-question {
+    color: #667eea;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.succeedlearn-chatbot-faq-item .faq-answer {
+    color: #495057;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-left: 0;
+}
+
+/* Section Headers */
+.succeedlearn-chatbot-section-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #667eea;
+    margin: 0 0 10px 0;
+    padding: 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e9ecef;
+    display: block;
+    line-height: 1.4;
+}
+
+.succeedlearn-chatbot-section-title:first-child {
+    margin-top: 0;
+}
+
+/* Improve content flow - elements stack one after another */
+.succeedlearn-chatbot-message-bot > * {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.succeedlearn-chatbot-message-bot > *:last-child {
+    margin-bottom: 0;
+}
+
+.succeedlearn-chatbot-message-bot p {
+    margin: 0 0 10px 0;
+    line-height: 1.6;
+}
+
+.succeedlearn-chatbot-message-bot p:last-child {
+    margin-bottom: 0;
+}
+
+/* Links */
+.succeedlearn-chatbot-message-bot a,
+.succeedlearn-chatbot-message-bot a:link {
+    color: #1472ba;
+    text-decoration: underline;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.succeedlearn-chatbot-message-bot a:hover,
+.succeedlearn-chatbot-message-bot a:active {
+    color: #0f5a94;
+    text-decoration: underline;
+}
+
+.succeedlearn-chatbot-message-bot a:visited {
+    color: #1472ba;
+}
+
+.succeedlearn-chatbot-message-bot a:hover {
+    border-bottom-color: #667eea;
+}
+
+/* Email Links */
+.succeedlearn-chatbot-email-link {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s;
+}
+
+.succeedlearn-chatbot-email-link:hover {
+    border-bottom-color: #667eea;
+    color: #5568d3;
+}
+
+/* Regular Links */
+.succeedlearn-chatbot-link {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s;
+}
+
+.succeedlearn-chatbot-link:hover {
+    border-bottom-color: #667eea;
+    color: #5568d3;
+}
+
+/* Course Link Button */
+.succeedlearn-chatbot-course-link {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 16px;
+    background: #667eea;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.succeedlearn-chatbot-course-link:hover {
+    background: #5568d3;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+    color: white;
+    text-decoration: none;
+}
+
+/* Price Highlight */
+.succeedlearn-chatbot-price {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+/* Better spacing for paragraphs */
+.succeedlearn-chatbot-message-bot p {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+.succeedlearn-chatbot-message-bot p:first-child {
+    margin-top: 0;
+}
+
+.succeedlearn-chatbot-message-bot p:last-child {
+    margin-bottom: 0;
+}
+
+.succeedlearn-chatbot-loading {
+    align-self: flex-start;
+}
+
+.succeedlearn-chatbot-loading-dots {
+    display: flex;
+    gap: 4px;
+    padding: 12px 16px;
+}
+
+.succeedlearn-chatbot-loading-dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #667eea;
+    animation: loadingDot 1.4s infinite;
+}
+
+.succeedlearn-chatbot-loading-dots span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.succeedlearn-chatbot-loading-dots span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes loadingDot {
+    0%, 60%, 100% {
+        transform: translateY(0);
+        opacity: 0.7;
+    }
+    30% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+}
+
+/* Quick Questions */
+.succeedlearn-chatbot-quick-questions {
+    padding: 12px 20px;
+    background: white;
+    border-top: 1px solid #e9ecef;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+/* Hide legacy quick-questions bar (menu is rendered inside chat now) */
+#succeedlearn-chatbot-quick-questions {
+    display: none !important;
+}
+
+/* Quick Options Buttons (1, 2, 3) */
+.succeedlearn-chatbot-quick-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.succeedlearn-chatbot-quick-option-btn {
+    width: 100%;
+    text-align: left;
+    background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%);
+    border: 2px solid #c7d2fe;
+    color: #4f46e5;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 3px rgba(79, 70, 229, 0.1);
+    position: relative;
+}
+
+.succeedlearn-chatbot-quick-option-btn:hover {
+    border-color: #667eea;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.25);
+    transform: translateX(4px);
+}
+
+.succeedlearn-chatbot-quick-option-btn:active {
+    transform: translateX(2px);
+    box-shadow: 0 2px 6px rgba(102, 126, 234, 0.2);
+}
+
+.succeedlearn-chatbot-quick-option-btn:focus {
+    outline: 3px solid rgba(102, 126, 234, 0.4);
+    outline-offset: 2px;
+}
+
+/* In-chat main menu buttons */
+.succeedlearn-chatbot-menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.succeedlearn-chatbot-menu-btn {
+    width: 100%;
+    text-align: left;
+    background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+    border: 2px solid #e0e7ff;
+    color: #4f46e5;
+    padding: 14px 18px;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 4px rgba(79, 70, 229, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+    position: relative;
+    overflow: hidden;
+}
+
+.succeedlearn-chatbot-menu-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.succeedlearn-chatbot-menu-btn:hover::before {
+    left: 100%;
+}
+
+.succeedlearn-chatbot-menu-btn:hover {
+    border-color: #667eea;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.35), 0 4px 8px rgba(102, 126, 234, 0.2);
+    transform: translateY(-2px);
+}
+
+.succeedlearn-chatbot-menu-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.succeedlearn-chatbot-menu-btn:focus {
+    outline: 3px solid rgba(102, 126, 234, 0.4);
+    outline-offset: 2px;
+    border-color: #667eea;
+}
+
+/* Category List Styling */
+.succeedlearn-chatbot-category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+.succeedlearn-chatbot-category-btn {
+    background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+    border: 2px solid #e0e7ff;
+    color: #4f46e5;
+    padding: 14px 18px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 4px rgba(79, 70, 229, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
+    white-space: normal;
+    width: 100%;
+    text-align: left;
+    line-height: 1.5;
+    word-wrap: break-word;
+    position: relative;
+}
+
+.succeedlearn-chatbot-category-btn:hover {
+    border-color: #667eea;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.25), 0 2px 6px rgba(102, 126, 234, 0.15);
+}
+
+.succeedlearn-chatbot-category-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 6px rgba(102, 126, 234, 0.2);
+}
+
+.succeedlearn-chatbot-category-btn:focus {
+    outline: 3px solid rgba(102, 126, 234, 0.4);
+    outline-offset: 2px;
+    border-color: #667eea;
+}
+
+/* In-chat go back CTA */
+.succeedlearn-chatbot-go-back {
+    margin-top: 12px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.succeedlearn-chatbot-go-back-btn {
+    background: #667eea;
+    border: 1px solid #667eea;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+    user-select: none;
+}
+
+.succeedlearn-chatbot-go-back-btn:hover {
+    background: #667eea;
+    border-color: #667eea;
+    color: #ffffff;
+    box-shadow: 0 6px 14px rgba(102, 126, 234, 0.25);
+}
+
+.succeedlearn-chatbot-go-back-btn:active { box-shadow: none; }
+
+.succeedlearn-chatbot-go-back-btn:focus {
+    outline: 3px solid rgba(102, 126, 234, 0.35);
+    outline-offset: 2px;
+}
+
+.quick-question-btn {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    color: #495057;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.quick-question-btn:hover {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+
+/* Input Area */
+.succeedlearn-chatbot-input-area {
+    padding: 16px 20px;
+    background: white;
+    border-top: 1px solid #e9ecef;
+    display: flex;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.succeedlearn-chatbot-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #e9ecef;
+    border-radius: 24px;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.succeedlearn-chatbot-input:focus {
+    border-color: #667eea;
+}
+
+.succeedlearn-chatbot-input:disabled {
+    background: #f8f9fa;
+    cursor: not-allowed;
+}
+
+.succeedlearn-chatbot-send {
+    background: #667eea !important;
+    border: none !important;
+    color: #ffffff !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    cursor: pointer;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    line-height: 1 !important;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    flex-shrink: 0;
+}
+
+.succeedlearn-chatbot-send:hover:not(:disabled) {
+    background: #5568d3;
+    box-shadow: 0 6px 14px rgba(102, 126, 234, 0.25);
+}
+
+.succeedlearn-chatbot-send:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background: #9ca3af !important;
+    transform: none;
+}
+
+.succeedlearn-chatbot-send:disabled:hover {
+    background: #9ca3af !important;
+    box-shadow: none;
+}
+
+.succeedlearn-chatbot-send svg {
+    width: 20px !important;
+    height: 20px !important;
+    display: block;
+    color: #ffffff !important;
+    fill: currentColor;
+    pointer-events: none;
+}
+
+/* Scrollbar */
+.succeedlearn-chatbot-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.succeedlearn-chatbot-messages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.succeedlearn-chatbot-messages::-webkit-scrollbar-thumb {
+    background: #ced4da;
+    border-radius: 3px;
+}
+
+.succeedlearn-chatbot-messages::-webkit-scrollbar-thumb:hover {
+    background: #adb5bd;
+}
+
+/* Contact Support Styling - Force line breaks */
+.succeedlearn-chatbot-contact-support {
+    display: block;
+    width: 100%;
+}
+
+.succeedlearn-chatbot-contact-line {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.succeedlearn-chatbot-contact-line:last-child {
+    margin-bottom: 0;
+}
+
+.succeedlearn-chatbot-contact-line p {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .succeedlearn-chatbot-widget {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .succeedlearn-chatbot-toggle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .succeedlearn-chatbot-window {
+        width: calc(100vw - 40px);
+        height: calc(100vh - 100px);
+        bottom: 0;
+        right: 20px;
+    }
+
+    .succeedlearn-chatbot-message {
+        max-width: 85%;
+    }
+}

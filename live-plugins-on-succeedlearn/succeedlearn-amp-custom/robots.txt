@@ -1,0 +1,14 @@
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /xmlrpc.php
+Disallow: /feed/
+Disallow: /contact.php
+Disallow: /em-directory/lost-password
+Disallow: /em-directory/emailactivate/
+Disallow: /em-directory/login/
+Disallow: /db.php
+Disallow: /thankyou
+Disallow: /cart
+Disallow: /my-account
+Disallow: /shrm-hyd-2023
+Sitemap: https://elearnposh.com/sitemap.xml

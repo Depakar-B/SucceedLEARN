@@ -1,0 +1,135 @@
+/**
+ * SucceedLEARN — S-Aware Hero
+ *
+ * @package Akaza_Adventure
+ */
+
+ .sl-saware-hero {
+	background: #ffffff;
+	padding: 96px 0 88px;
+}
+
+
+/* =========================================================
+   HERO GRID
+========================================================= */
+
+.sl-saware-hero__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+	gap: 72px;
+	align-items: center;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.sl-saware-hero__content {
+	min-width: 0;
+}
+
+.sl-saware-hero__content h1 {
+	margin: 0 0 18px;
+}
+
+.sl-saware-hero__content h2 {
+	margin-bottom: 18px;
+}
+
+.sl-saware-hero__content p {
+	margin: 0 0 16px;
+}
+
+.sl-saware-hero__content p:last-of-type {
+	margin-bottom: 0;
+}
+
+
+/* =========================================================
+   RIGHT IMAGE
+========================================================= */
+
+.sl-saware-hero__media {
+	min-width: 0;
+}
+
+.sl-saware-hero__image-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 480px;
+	padding: 40px;
+	border: 1px dashed rgba(22, 35, 78, 0.20);
+	border-radius: 16px;
+	background: #f5f5f5;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.sl-saware-hero__image-placeholder span {
+	color: var(--sl-page-muted, #6B7C93);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+	.sl-saware-hero {
+		padding: 76px 0 68px;
+	}
+
+	.sl-saware-hero__grid {
+		gap: 48px;
+	}
+
+	.sl-saware-hero__image-placeholder {
+		min-height: 400px;
+	}
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+	.sl-saware-hero {
+		padding: 56px 0;
+	}
+
+	.sl-saware-hero__grid {
+		grid-template-columns: 1fr;
+		gap: 36px;
+	}
+
+	.sl-saware-hero__content h1 {
+		margin-bottom: 14px;
+	}
+
+	.sl-saware-hero__content h2 {
+		margin-bottom: 16px;
+	}
+
+	.sl-saware-hero__content p {
+		margin-bottom: 14px;
+	}
+
+	.sl-saware-hero__actions {
+		margin-top: 24px;
+	}
+
+	.sl-saware-hero__image-placeholder {
+		min-height: 300px;
+		padding: 28px;
+		border-radius: 12px;
+	}
+
+}

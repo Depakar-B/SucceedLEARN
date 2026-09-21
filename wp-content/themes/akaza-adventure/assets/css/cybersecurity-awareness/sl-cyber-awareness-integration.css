@@ -1,0 +1,178 @@
+/**
+ * Cybersecurity Awareness — Integration Section
+ *
+ * Layout and component styling only.
+ * Typography is inherited from main.css.
+ */
+
+ .sl-cyber-awareness-integration {
+    padding: 90px 0;
+    background: var(--sl-page-bg);
+}
+
+
+/* -----------------------------------------
+   Main two-column layout
+----------------------------------------- */
+
+.sl-cyber-awareness-integration__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 64px;
+}
+
+
+/* -----------------------------------------
+   Image
+----------------------------------------- */
+
+.sl-cyber-awareness-integration__visual {
+	min-width: 0;
+}
+
+.sl-cyber-awareness-integration__image {
+	overflow: hidden;
+	width: 100%;
+	line-height: 0;
+}
+
+.sl-cyber-awareness-integration__image img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 16px;
+}
+
+
+/* -----------------------------------------
+   Content
+----------------------------------------- */
+
+.sl-cyber-awareness-integration__content {
+    min-width: 0;
+}
+
+
+.sl-cyber-awareness-integration__heading {
+    margin-bottom: 28px;
+}
+
+
+.sl-cyber-awareness-integration__heading h2 {
+    margin-bottom: 18px;
+}
+
+
+.sl-cyber-awareness-integration__heading p {
+    margin: 0;
+    color: var(--sl-page-muted);
+}
+
+
+/* -----------------------------------------
+   Integration items
+----------------------------------------- */
+
+.sl-cyber-awareness-integration__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.sl-cyber-awareness-integration__item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-height: 58px;
+    padding: 13px 14px;
+    border: 1px solid rgba(22, 35, 78, 0.09);
+    border-radius: 8px;
+    background: var(--sl-page-white, #ffffff);
+    box-sizing: border-box;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.sl-cyber-awareness-integration__item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(22, 35, 78, 0.08);
+}
+
+
+.sl-cyber-awareness-integration__item-title {
+    flex: 0 0 auto;
+    min-width: 110px;
+    color: var(--sl-page-primary);
+    font-weight: 700;
+}
+
+
+.sl-cyber-awareness-integration__item-text {
+    flex: 1 1 auto;
+    min-width: 0;
+    color: var(--sl-page-text);
+}
+
+
+/* -----------------------------------------
+   Responsive
+----------------------------------------- */
+
+@media (max-width: 900px) {
+
+    .sl-cyber-awareness-integration {
+        padding: 70px 0;
+    }
+
+    .sl-cyber-awareness-integration__grid {
+        grid-template-columns: 1fr;
+        gap: 42px;
+    }
+
+    .sl-cyber-awareness-integration__content {
+        order: 1;
+    }
+
+    .sl-cyber-awareness-integration__visual {
+        order: 2;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .sl-cyber-awareness-integration {
+        padding: 60px 0;
+    }
+
+    .sl-cyber-awareness-integration__item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        min-height: 0;
+        padding: 14px 16px;
+    }
+
+    .sl-cyber-awareness-integration__item-title {
+        min-width: 0;
+        width: 100%;
+        font-size: 15px;
+        line-height: 1.3;
+    }
+
+    .sl-cyber-awareness-integration__item-text {
+        width: 100%;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+	.sl-cyber-awareness-integration__image img {
+		border-radius: 12px;
+	}
+
+}

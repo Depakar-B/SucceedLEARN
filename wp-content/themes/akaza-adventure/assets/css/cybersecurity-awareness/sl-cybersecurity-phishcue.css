@@ -1,0 +1,181 @@
+/**
+ * Cybersecurity Awareness — PhishCue Section
+ *
+ * Layout and component styling only.
+ * Typography is inherited from main.css.
+ */
+
+ .sl-cyber-awareness-phishcue {
+    padding: 90px 0;
+    background: var(--sl-page-white);
+}
+
+
+/* -----------------------------------------
+   Main layout
+----------------------------------------- */
+
+.sl-cyber-awareness-phishcue__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 72px;
+}
+
+
+/* -----------------------------------------
+   Content
+----------------------------------------- */
+
+.sl-cyber-awareness-phishcue__content {
+	min-width: 0;
+}
+
+.sl-cyber-awareness-phishcue__availability {
+	margin: 8px 0 18px;
+	color: var(--sl-page-muted, #6b7c93);
+	font-size: 0.95em;
+	line-height: 1.45;
+}
+
+
+/* -----------------------------------------
+   Heading
+----------------------------------------- */
+
+.sl-cyber-awareness-phishcue__heading {
+    margin-bottom: 24px;
+}
+
+.sl-cyber-awareness-phishcue__heading h2 {
+    margin-bottom: 18px;
+}
+
+.sl-cyber-awareness-phishcue__heading p {
+    margin: 0;
+    color: var(--sl-page-muted);
+}
+
+
+/* -----------------------------------------
+   Feature checklist
+----------------------------------------- */
+
+.sl-cyber-awareness-phishcue__features {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    margin: 0 0 28px;
+    padding: 0;
+    list-style: none;
+}
+
+@media (min-width: 768px) {
+    .sl-cyber-awareness-phishcue__features {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 10px 20px;
+    }
+}
+
+
+.sl-cyber-awareness-phishcue__feature {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-width: 0;
+    min-height: 58px;
+    padding: 13px 14px;
+    border: 1px solid rgba(22, 35, 78, 0.09);
+    border-radius: 8px;
+    background: var(--sl-page-white, #ffffff);
+    color: var(--sl-page-text);
+    font-size: 13px;
+    line-height: 1.45;
+    box-sizing: border-box;
+}
+
+
+.sl-cyber-awareness-phishcue__check {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 17px;
+    height: 17px;
+    margin-top: 0;
+    color: var(--sl-page-primary);
+}
+
+
+.sl-cyber-awareness-phishcue__feature > span:last-child {
+    color: var(--sl-page-text);
+}
+
+
+/* Button look: site-wide .sl-content-btn from sl-global-ui-buttons.css */
+
+.sl-cyber-awareness-phishcue .sl-content-btn svg {
+    flex: 0 0 auto;
+}
+
+
+/* -----------------------------------------
+   Image area
+----------------------------------------- */
+
+.sl-cyber-awareness-phishcue__visual {
+    min-width: 0;
+}
+
+.sl-cyber-awareness-phishcue__image {
+    overflow: hidden;
+    width: 100%;
+    line-height: 0;
+}
+
+.sl-cyber-awareness-phishcue__image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+
+
+/* -----------------------------------------
+   Responsive
+----------------------------------------- */
+
+@media (max-width: 900px) {
+
+    .sl-cyber-awareness-phishcue {
+        padding: 70px 0;
+    }
+
+    .sl-cyber-awareness-phishcue__grid {
+        grid-template-columns: 1fr;
+        gap: 42px;
+    }
+
+    .sl-cyber-awareness-phishcue__content {
+        order: 1;
+    }
+
+    .sl-cyber-awareness-phishcue__visual {
+        order: 2;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .sl-cyber-awareness-phishcue {
+        padding: 60px 0;
+    }
+
+    .sl-cyber-awareness-phishcue__image img {
+        border-radius: 12px;
+    }
+
+}

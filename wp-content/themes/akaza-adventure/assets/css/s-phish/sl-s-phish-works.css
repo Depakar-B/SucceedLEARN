@@ -1,0 +1,363 @@
+/* =========================================================
+   S-PHISH — HOW S-PHISH WORKS
+   ========================================================= */
+
+.sl-s-phish-works {
+	padding: 80px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+	overflow: visible;
+}
+
+
+/* =========================================================
+   SECTION INTRO
+   ========================================================= */
+
+.sl-s-phish-works__intro {
+	width: 100%;
+	margin-bottom: 70px;
+}
+
+.sl-s-phish-works__intro .sl-home-sub-heading {
+	margin-bottom: 18px;
+}
+
+.sl-s-phish-works__intro h2 {
+	margin-bottom: 22px;
+}
+
+.sl-s-phish-works__intro .sl-panel-title {
+	margin-bottom: 24px;
+}
+
+.sl-s-phish-works__intro > p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+
+/* =========================================================
+   FIVE STEP TIMELINE
+   ========================================================= */
+
+.sl-s-phish-works__timeline {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(5, minmax(0, 1fr));
+	gap: 8px;
+	width: 100%;
+	max-width: 100%;
+	min-height: 680px;
+	box-sizing: border-box;
+	overflow: visible;
+}
+
+
+/* =========================================================
+   MAIN HORIZONTAL LINE
+   ========================================================= */
+
+.sl-s-phish-works__line {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	height: 2px;
+	transform: translateY(-50%);
+	background: var(--sl-page-primary, #1472ba);
+	z-index: 1;
+}
+
+
+/* =========================================================
+   STEP
+   ========================================================= */
+
+.sl-s-phish-works__step {
+	position: relative;
+	display: grid;
+	grid-template-rows: 1fr auto 1fr;
+	min-width: 0;
+	overflow: visible;
+	z-index: 2;
+}
+
+
+/* =========================================================
+   DESCRIPTION BOX
+   ========================================================= */
+
+.sl-s-phish-works__description {
+	width: 380px;
+	min-width: 380px;
+	max-width: none;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 14px 16px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: var(--sl-page-white, #ffffff);
+	border: 1px solid rgba(22, 35, 78, 0.12);
+	border-radius: 8px;
+	box-sizing: border-box;
+	box-shadow: 0 8px 24px rgba(22, 35, 78, 0.06);
+	position: relative;
+	z-index: 4;
+}
+
+/* Keep edge cards inside the timeline: left steps grow right, right steps grow left */
+.sl-s-phish-works__step:nth-of-type(1) .sl-s-phish-works__description,
+.sl-s-phish-works__step:nth-of-type(2) .sl-s-phish-works__description {
+	margin-left: 0;
+	margin-right: auto;
+}
+
+.sl-s-phish-works__step:nth-of-type(4) .sl-s-phish-works__description,
+.sl-s-phish-works__step:nth-of-type(5) .sl-s-phish-works__description {
+	width: 400px;
+	min-width: 400px;
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.sl-s-phish-works__description p {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 1.5;
+	color: var(--sl-page-text, #4a4a4a);
+}
+
+.sl-s-phish-works__description p:last-child {
+	margin-bottom: 0;
+}
+
+
+/* =========================================================
+   TOP DESCRIPTION
+   ========================================================= */
+
+.sl-s-phish-works__step--top .sl-s-phish-works__description {
+	grid-row: 1;
+	align-self: end;
+	margin-bottom: 34px;
+}
+
+
+/* =========================================================
+   BOTTOM DESCRIPTION
+   ========================================================= */
+
+.sl-s-phish-works__step--bottom .sl-s-phish-works__description {
+	grid-row: 3;
+	align-self: start;
+	margin-top: 34px;
+}
+
+
+/* =========================================================
+   NODE
+   ========================================================= */
+
+.sl-s-phish-works__node {
+	position: relative;
+	grid-row: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 0;
+}
+
+
+/* =========================================================
+   TITLE CARD BOX
+   ========================================================= */
+
+.sl-s-phish-works__card {
+	position: relative;
+	width: 100%;
+	max-width: 260px;
+	min-height: 56px;
+	padding: 12px 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background: var(--sl-page-white, #ffffff);
+	border: 1px solid rgba(22, 35, 78, 0.12);
+	border-radius: 8px;
+	box-sizing: border-box;
+	box-shadow: 0 8px 24px rgba(22, 35, 78, 0.06);
+	z-index: 3;
+}
+
+.sl-s-phish-works__card .sl-panel-title {
+	margin: 0;
+	font-size: 15px;
+	line-height: 1.3;
+	font-weight: 700;
+}
+
+
+/* =========================================================
+   VERTICAL CONNECTORS
+   ========================================================= */
+
+.sl-s-phish-works__node::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	width: 1px;
+	background: var(--sl-page-primary, #1472ba);
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+.sl-s-phish-works__step--top .sl-s-phish-works__node::before {
+	bottom: 100%;
+	height: 34px;
+}
+
+.sl-s-phish-works__step--bottom .sl-s-phish-works__node::before {
+	top: 100%;
+	height: 34px;
+}
+
+
+/* Desktop: no process dot over the middle title box */
+.sl-s-phish-works__node::after {
+	content: none;
+	display: none;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+	.sl-s-phish-works__timeline {
+		gap: 6px;
+	}
+
+	.sl-s-phish-works__description {
+		width: 300px;
+		min-width: 300px;
+		max-width: none;
+		padding: 12px 14px;
+	}
+
+	.sl-s-phish-works__step:nth-of-type(4) .sl-s-phish-works__description,
+	.sl-s-phish-works__step:nth-of-type(5) .sl-s-phish-works__description {
+		width: 320px;
+		min-width: 320px;
+	}
+
+	.sl-s-phish-works__card {
+		max-width: 220px;
+		padding: 10px 12px;
+	}
+
+	.sl-s-phish-works__card .sl-panel-title {
+		font-size: 14px;
+	}
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+	.sl-s-phish-works {
+		padding: 60px 0;
+	}
+
+	.sl-s-phish-works__intro {
+		margin-bottom: 45px;
+	}
+
+	.sl-s-phish-works__timeline {
+		display: flex;
+		flex-direction: column;
+		min-height: 0;
+		gap: 20px;
+		padding-left: 28px;
+	}
+
+	.sl-s-phish-works__line {
+		top: 0;
+		bottom: 0;
+		left: 8px;
+		right: auto;
+		width: 2px;
+		height: auto;
+		transform: none;
+	}
+
+	.sl-s-phish-works__step {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+	}
+
+	.sl-s-phish-works__step--top .sl-s-phish-works__description,
+	.sl-s-phish-works__step--bottom .sl-s-phish-works__description,
+	.sl-s-phish-works__step:nth-of-type(1) .sl-s-phish-works__description,
+	.sl-s-phish-works__step:nth-of-type(2) .sl-s-phish-works__description,
+	.sl-s-phish-works__step:nth-of-type(4) .sl-s-phish-works__description,
+	.sl-s-phish-works__step:nth-of-type(5) .sl-s-phish-works__description {
+		order: 2;
+		width: 100%;
+		min-width: 0;
+		max-width: none;
+		margin: 0;
+	}
+
+	.sl-s-phish-works__node {
+		order: 1;
+		justify-content: flex-start;
+	}
+
+	.sl-s-phish-works__card {
+		max-width: none;
+		width: 100%;
+		justify-content: flex-start;
+		text-align: left;
+		min-height: 0;
+		padding: 16px 18px;
+	}
+
+	.sl-s-phish-works__card .sl-panel-title {
+		font-size: 15px;
+	}
+
+	/* Mobile timeline dots sit on the side line, not inside the title box */
+	.sl-s-phish-works__node::after {
+		content: "";
+		display: block;
+		left: -28px;
+		top: 50%;
+		width: 12px;
+		height: 12px;
+		transform: translateY(-50%);
+		background: var(--sl-page-white, #ffffff);
+		border: 3px solid var(--sl-page-primary, #1472ba);
+		border-radius: 50%;
+		box-sizing: border-box;
+		z-index: 4;
+		position: absolute;
+	}
+
+	.sl-s-phish-works__node::before {
+		top: 50% !important;
+		bottom: auto !important;
+		left: -28px;
+		width: 28px;
+		height: 1px !important;
+		transform: translateY(-50%);
+	}
+}

@@ -1,0 +1,68 @@
+/**
+ * Whistleblowing Training — About / Overview.
+ *
+ * @package Akaza_Adventure
+ */
+
+ .sl-whistleblowing-overview {
+	background: #ffffff;
+	padding: 90px 0;
+}
+
+.sl-whistleblowing-overview__grid {
+	display: grid;
+	grid-template-columns: minmax(320px, 0.85fr) minmax(0, 1.15fr);
+	gap: 80px;
+	align-items: start;
+}
+
+.sl-whistleblowing-overview__intro {
+	min-width: 0;
+}
+
+.sl-whistleblowing-overview__intro h2 {
+	margin-top: 14px;
+	margin-bottom: 0;
+}
+
+.sl-whistleblowing-overview__content {
+	min-width: 0;
+	padding-top: 4px;
+}
+
+.sl-whistleblowing-overview__content p {
+	margin-top: 0;
+	margin-bottom: 22px;
+}
+
+.sl-whistleblowing-overview__content p:last-child {
+	margin-bottom: 0;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+	.sl-whistleblowing-overview {
+		padding: 72px 0;
+	}
+
+	.sl-whistleblowing-overview__grid {
+		grid-template-columns: 1fr 1fr;
+		gap: 48px;
+	}
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+	.sl-whistleblowing-overview {
+		padding: 60px 0;
+	}
+
+	.sl-whistleblowing-overview__grid {
+		grid-template-columns: 1fr;
+		gap: 28px;
+	}
+
+	.sl-whistleblowing-overview__content {
+		padding-top: 0;
+	}
+}

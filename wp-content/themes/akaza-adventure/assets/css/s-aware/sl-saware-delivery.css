@@ -1,0 +1,144 @@
+/**
+ * SucceedLEARN — S-Aware
+ * Section: Flexible Delivery for Your Learning Environment
+ */
+
+.sl-saware-delivery {
+	padding: 76px 0 88px;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-saware-delivery__intro-block {
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 36px;
+}
+
+.sl-saware-delivery__intro-block h2 {
+	margin-bottom: 18px;
+}
+
+.sl-saware-delivery__intro {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.sl-saware-delivery__intro p {
+	margin: 0;
+}
+
+/* Delivery Options — two boxes inline */
+
+.sl-saware-delivery__options {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 24px;
+	align-items: stretch;
+}
+
+.sl-saware-delivery__option {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	height: 100%;
+	padding: 22px 24px;
+	border: 1px solid rgba(22, 35, 78, 0.12);
+	border-radius: 14px;
+	background: var(--sl-page-white, #ffffff);
+	box-sizing: border-box;
+}
+
+.sl-saware-delivery__option-header {
+	display: grid;
+	grid-template-columns: 40px minmax(0, 1fr);
+	gap: 14px;
+	align-items: start;
+	padding-bottom: 16px;
+	border-bottom: 1px solid rgba(22, 35, 78, 0.10);
+}
+
+.sl-saware-delivery__option-number {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 34px;
+	height: 34px;
+	border: 1px solid rgba(20, 114, 186, 0.18);
+	border-radius: 8px;
+	background: rgba(20, 114, 186, 0.08);
+	color: var(--sl-page-primary, #1472ba);
+	font-weight: 700;
+	line-height: 1;
+}
+
+.sl-saware-delivery__option-header .sl-panel-title {
+	margin: 0;
+}
+
+.sl-saware-delivery__option-content {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+	gap: 12px;
+	padding-top: 16px;
+}
+
+.sl-saware-delivery__option-content p {
+	margin: 0;
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+
+	.sl-saware-delivery {
+		padding: 64px 0 72px;
+	}
+
+	.sl-saware-delivery__intro-block {
+		margin-bottom: 28px;
+	}
+
+	.sl-saware-delivery__options {
+		gap: 18px;
+	}
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+
+	.sl-saware-delivery {
+		padding: 52px 0 60px;
+	}
+
+	.sl-saware-delivery__intro-block {
+		margin-bottom: 22px;
+	}
+
+	.sl-saware-delivery__intro {
+		gap: 12px;
+	}
+
+	.sl-saware-delivery__options {
+		grid-template-columns: 1fr;
+		gap: 14px;
+	}
+
+	.sl-saware-delivery__option {
+		padding: 18px 16px;
+		border-radius: 12px;
+	}
+
+	.sl-saware-delivery__option-header {
+		grid-template-columns: 36px minmax(0, 1fr);
+		gap: 12px;
+		padding-bottom: 14px;
+	}
+
+	.sl-saware-delivery__option-content {
+		gap: 10px;
+		padding-top: 14px;
+	}
+}

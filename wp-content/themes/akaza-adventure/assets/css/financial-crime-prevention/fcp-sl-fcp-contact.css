@@ -1,0 +1,181 @@
+/**
+ * Financial Crime Prevention — Contact section.
+ */
+
+.sl-fcp-contact {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-white);
+}
+
+.sl-fcp-contact__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+	gap: 70px;
+	align-items: center;
+}
+
+.sl-fcp-contact__heading {
+	max-width: 760px;
+	margin-bottom: 30px;
+}
+
+.sl-fcp-contact__heading h2 {
+	margin-bottom: 24px;
+	font-size: var(--sl-fs-h2);
+	font-weight: 700;
+	line-height: 1.2;
+	max-width: none;
+}
+
+.sl-fcp-contact__lead {
+	margin-bottom: 0;
+	font-size: 21px;
+	line-height: 1.65;
+}
+
+.sl-fcp-contact__body {
+	max-width: 720px;
+	margin-bottom: 36px;
+}
+
+.sl-fcp-contact__body p {
+	margin-bottom: 20px;
+}
+
+.sl-fcp-contact__body p:last-child {
+	margin-bottom: 0;
+}
+
+.sl-fcp-contact__details {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 18px;
+	max-width: 720px;
+}
+
+.sl-fcp-contact__detail {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 110px;
+	padding: 22px 24px;
+	border: 1px solid rgba(107, 124, 147, 0.22);
+	border-radius: 16px;
+	background: var(--sl-page-white);
+	text-decoration: none;
+}
+
+a.sl-fcp-contact__detail {
+	transition:
+		transform 0.2s ease,
+		border-color 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+a.sl-fcp-contact__detail:hover {
+	transform: translateY(-3px);
+	border-color: var(--sl-page-primary);
+	box-shadow: 0 12px 30px rgba(22, 35, 78, 0.08);
+}
+
+.sl-fcp-contact__detail-label {
+	margin-bottom: 8px;
+	color: var(--sl-page-navy);
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 1.35;
+}
+
+.sl-fcp-contact__detail-value {
+	color: var(--sl-page-primary);
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 1.45;
+}
+
+.sl-fcp-contact__form-wrap {
+	min-width: 0;
+	padding: 38px;
+	border: 1px solid rgba(107, 124, 147, 0.22);
+	border-radius: 24px;
+	background: var(--sl-page-white);
+	box-shadow: 0 22px 55px rgba(22, 35, 78, 0.08);
+	box-sizing: border-box;
+}
+
+.sl-fcp-contact__form-wrap .sl-home-form-wrapper,
+.sl-fcp-contact__form-wrap .sl-home-form-wrapper--slim {
+	display: block;
+	max-width: none;
+	width: 100%;
+	align-items: stretch;
+}
+
+.sl-fcp-contact__form-wrap .sl-home-form-wrapper--slim .scf-form-wrap,
+.sl-fcp-contact__form-wrap .sl-home-form-wrapper--slim .scf-form-wrap.scf-form-wrap-course {
+	width: 100%;
+	max-width: none;
+	margin: 0;
+}
+
+@media (min-width: 1400px) {
+	.sl-fcp-contact {
+		padding: 100px 0;
+	}
+
+	.sl-fcp-contact__grid {
+		gap: 80px;
+	}
+
+	.sl-fcp-contact__form-wrap {
+		padding: 42px;
+	}
+}
+
+@media (max-width: 1199px) {
+	.sl-fcp-contact {
+		padding: 80px 0;
+	}
+
+	.sl-fcp-contact__grid {
+		gap: 50px;
+	}
+
+	.sl-fcp-contact__form-wrap {
+		padding: 32px;
+	}
+}
+
+@media (max-width: 991px) {
+	.sl-fcp-contact__grid {
+		grid-template-columns: 1fr;
+		gap: 45px;
+	}
+
+	.sl-fcp-contact__heading,
+	.sl-fcp-contact__body,
+	.sl-fcp-contact__details {
+		max-width: 900px;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-fcp-contact {
+		padding: 60px 0;
+	}
+
+	.sl-fcp-contact__details {
+		grid-template-columns: 1fr;
+	}
+
+	.sl-fcp-contact__detail {
+		padding: 20px;
+	}
+
+	.sl-fcp-contact__form-wrap {
+		padding: 26px 22px;
+		border-radius: 18px;
+	}
+}

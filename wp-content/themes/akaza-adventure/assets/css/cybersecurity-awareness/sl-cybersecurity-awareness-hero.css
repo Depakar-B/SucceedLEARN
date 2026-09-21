@@ -1,0 +1,123 @@
+/* SucceedLEARN — Cybersecurity Awareness Month Hero
+ * Header clearance is on #sl-csa-main; hero uses normal section top padding.
+ */
+
+.sl-cyber-awareness-hero {
+	padding: 32px 0 64px;
+	background: var(--sl-page-white, #ffffff);
+}
+.sl-cyber-awareness-hero__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+	align-items: center;
+	gap: 56px;
+}
+
+.sl-cyber-awareness-hero__content {
+	min-width: 0;
+}
+
+.sl-cyber-awareness-hero .sl-home-sub-heading {
+	display: flex;
+	align-items: center;
+	margin: 0 0 16px;
+}
+
+.sl-cyber-awareness-hero h1 {
+	margin: 0 0 18px;
+}
+
+.sl-cyber-awareness-hero__tagline {
+	margin: 0 0 18px;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-cyber-awareness-hero__description {
+	max-width: 640px;
+	margin: 0;
+	color: var(--sl-page-text, #4a4a4a);
+}
+
+
+/* =========================================================
+   CTAs — layout only. Fill comes from sl-global-buttons.css
+   ========================================================= */
+
+.sl-cyber-awareness-hero__actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 14px;
+	margin-top: 28px;
+}
+
+/* Button look: site-wide .sl-hero-btn from sl-global-ui-buttons.css */
+
+.sl-cyber-awareness-hero__cta svg,
+.sl-cyber-awareness-hero .sl-hero-btn svg {
+	display: block;
+	flex: 0 0 auto;
+	width: 18px;
+	height: 18px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.8;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   Visual
+   ========================================================= */
+
+.sl-cyber-awareness-hero__visual {
+	min-width: 0;
+}
+
+.sl-cyber-awareness-hero__image {
+	overflow: hidden;
+	width: 100%;
+	line-height: 0;
+}
+
+.sl-cyber-awareness-hero__image img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 12px;
+}
+
+
+@media (max-width: 991px) {
+	.sl-cyber-awareness-hero {
+		padding: 28px 0 48px;
+	}
+
+	.sl-cyber-awareness-hero__grid {
+		grid-template-columns: minmax(0, 1fr);
+		gap: 36px;
+	}
+
+	.sl-cyber-awareness-hero__visual {
+		max-width: 560px;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-cyber-awareness-hero {
+		padding: 24px 0 44px;
+	}
+
+	.sl-cyber-awareness-hero__actions {
+		align-items: stretch;
+		flex-direction: column;
+		margin-top: 24px;
+	}
+
+	.sl-cyber-awareness-hero__actions .sl-hero-btn {
+		width: 100%;
+		white-space: normal;
+	}
+}

@@ -1,0 +1,87 @@
+/*
+ * DPDPA Compliance Training — Scorecard CTA (light UI).
+ */
+
+.sl-dpdpa-scorecard-cta {
+	position: relative;
+	z-index: 1;
+	padding: 40px 0 90px;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-dpdpa-scorecard-cta__inner {
+	position: relative;
+	padding: 56px 48px;
+	overflow: hidden;
+	text-align: center;
+	border: 1px solid rgba(107, 124, 147, 0.18);
+	border-radius: 24px;
+	background:
+		radial-gradient(circle at top left, rgba(109, 195, 235, 0.18), transparent 42%),
+		radial-gradient(circle at bottom right, rgba(20, 114, 186, 0.08), transparent 46%),
+		var(--sl-page-bg, #f5f5f5);
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-dpdpa-scorecard-cta__eyebrow {
+	position: relative;
+	z-index: 1;
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	margin: 0 0 14px;
+	color: var(--sl-heading-accent, var(--sl-page-primary, #1472ba));
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+.sl-dpdpa-scorecard-cta__eyebrow::before {
+	content: "";
+	display: block;
+	width: 28px;
+	height: 2px;
+	border-radius: 999px;
+	background: var(--sl-heading-accent, var(--sl-page-primary, #1472ba));
+}
+
+.sl-dpdpa-scorecard-cta__inner h2 {
+	position: relative;
+	z-index: 1;
+	margin: 0 auto 16px;
+	max-width: 18ch;
+	font-size: var(--sl-fs-h2, clamp(30px, 2.7vw, 48px));
+	font-weight: 700;
+	line-height: 1.2;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-dpdpa-scorecard-cta__inner h2 > span {
+	color: var(--sl-heading-accent, var(--sl-page-primary, #1472ba));
+}
+
+.sl-dpdpa-scorecard-cta__inner p {
+	position: relative;
+	z-index: 1;
+	margin: 0 auto 28px;
+	max-width: 46ch;
+	color: var(--sl-page-muted, #6b7c93);
+	font-size: 16px;
+	line-height: 1.7;
+}
+
+.sl-dpdpa-scorecard-cta__inner .sl-content-btn {
+	position: relative;
+	z-index: 1;
+}
+
+@media (max-width: 767px) {
+	.sl-dpdpa-scorecard-cta {
+		padding: 20px 0 60px;
+	}
+
+	.sl-dpdpa-scorecard-cta__inner {
+		padding: 40px 22px;
+	}
+}

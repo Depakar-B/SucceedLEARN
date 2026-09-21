@@ -1,0 +1,99 @@
+/**
+ * SucceedLEARN — Code of Conduct Learning Experience.
+ */
+
+ .sl-coc-learning {
+	padding: 90px 0;
+	background: var(--sl-page-bg);
+}
+
+/* Heading */
+
+.sl-coc-learning__heading {
+	margin: 0 0 34px;
+}
+
+.sl-coc-learning__heading p {
+	margin: 0;
+	color: var(--sl-page-muted);
+}
+
+/* Grid */
+
+.sl-coc-learning__grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 20px;
+}
+
+/* Card */
+
+.sl-coc-learning__card {
+	display: flex;
+	flex-direction: column;
+	min-height: 148px;
+	padding: 22px;
+	border: 1px solid rgba(107, 124, 147, 0.08);
+	border-radius: 10px;
+	background: var(--sl-page-white);
+}
+
+/* Icon */
+
+.sl-coc-learning__icon {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	width: 28px;
+	height: 28px;
+	margin-bottom: 12px;
+}
+
+.sl-coc-learning__icon svg {
+	width: 25px;
+	height: 25px;
+	fill: none;
+	stroke: var(--sl-heading-accent);
+	stroke-width: 1.5;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+/* Card heading */
+
+.sl-coc-learning__card h3.sl-panel-title {
+	margin: 0 0 8px;
+}
+
+/* Card copy */
+
+.sl-coc-learning__card p {
+	margin: 0;
+	color: var(--sl-page-text);
+	font-size: 15px;
+	line-height: 1.45;
+}
+
+/* Responsive */
+
+@media (max-width: 991px) {
+
+	.sl-coc-learning__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 767px) {
+
+	.sl-coc-learning {
+		padding: 60px 0;
+	}
+
+	.sl-coc-learning__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.sl-coc-learning__card {
+		min-height: 0;
+	}
+}

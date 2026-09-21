@@ -1,0 +1,144 @@
+/**
+ * SMCR Training — Practical Learning.
+ *
+ * @package Akaza_Adventure
+ */
+
+/* ---------------------------------------------------------
+   Practical Learning
+--------------------------------------------------------- */
+
+.sl-smcr-practical-learning {
+	padding: 96px 0;
+	background: #f5f5f5;
+}
+
+.sl-smcr-practical-learning__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	gap: 72px;
+	align-items: center;
+}
+
+/* ---------------------------------------------------------
+   Image
+--------------------------------------------------------- */
+
+.sl-smcr-practical-learning__media {
+	align-self: start;
+}
+
+.sl-smcr-practical-learning__image {
+	width: 100%;
+	overflow: hidden;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 16px;
+	background: #ffffff;
+	box-sizing: border-box;
+}
+
+.sl-smcr-practical-learning__image-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 520px;
+	padding: 32px;
+	background: #ffffff;
+	box-sizing: border-box;
+}
+
+.sl-smcr-practical-learning__image-placeholder span {
+	color: #6b7c93;
+}
+
+/* ---------------------------------------------------------
+   Content
+--------------------------------------------------------- */
+
+.sl-smcr-practical-learning__content {
+	min-width: 0;
+}
+
+.sl-smcr-practical-learning__content .sl-home-sub-heading {
+	display: block;
+	margin-bottom: 14px;
+}
+
+.sl-smcr-practical-learning__content h2 {
+	margin-top: 0;
+	margin-bottom: 24px;
+}
+
+.sl-smcr-practical-learning__content p {
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+.sl-smcr-practical-learning__content p:last-child {
+	margin-bottom: 0;
+}
+
+/* ---------------------------------------------------------
+   Assessment Emphasis
+--------------------------------------------------------- */
+
+.sl-smcr-practical-learning__emphasis {
+	margin-top: 28px;
+	padding: 22px 24px;
+	background: #ffffff;
+	border-left: 4px solid var(--sl-page-primary, #1472ba);
+	border-radius: 10px;
+	box-sizing: border-box;
+}
+
+.sl-smcr-practical-learning__emphasis p {
+	margin: 0;
+}
+
+/* ---------------------------------------------------------
+   Tablet
+--------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+	.sl-smcr-practical-learning {
+		padding: 80px 0;
+	}
+
+	.sl-smcr-practical-learning__grid {
+		gap: 44px;
+	}
+
+	.sl-smcr-practical-learning__image-placeholder {
+		min-height: 420px;
+	}
+}
+
+/* ---------------------------------------------------------
+   Mobile
+--------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+	.sl-smcr-practical-learning {
+		padding: 64px 0;
+	}
+
+	.sl-smcr-practical-learning__grid {
+		grid-template-columns: 1fr;
+		gap: 32px;
+	}
+
+	.sl-smcr-practical-learning__image-placeholder {
+		min-height: 320px;
+	}
+
+	.sl-smcr-practical-learning__image {
+		border-radius: 12px;
+	}
+
+	.sl-smcr-practical-learning__emphasis {
+		margin-top: 24px;
+		padding: 18px 20px;
+	}
+}

@@ -1,0 +1,234 @@
+/**
+ * Desktop header shell: shadow, scroll states, layout polish.
+ */
+
+html {
+	margin-top: 0 !important;
+}
+
+/*
+ * Theme CSS uses overflow-x:hidden on html/body to kill horizontal scroll.
+ * That makes body a scroll container and breaks position:sticky in Chromium,
+ * so the smart header can hide on scroll-down but never reappear on scroll-up.
+ * overflow-x:clip prevents horizontal bleed without creating a scroll container.
+ */
+html,
+body.epsh-has-fixed-header,
+body.epsh-smart-header {
+	overflow-x: clip !important;
+}
+
+body.epsh-smart-header {
+	--epsh-header-wrap-pad: 10px;
+	--epsh-header-logo-max-h: 56px;
+	--epsh-header-pad-x: var(--slf-header-gutter, clamp(1.25rem, 2.5vw, 2.5rem));
+	--epsh-header-content-max: var(--sl-home-content-max, 1400px);
+}
+
+body.epsh-smart-header .site-header,
+body.epsh-smart-header .genesis-header {
+	width: 100% !important;
+	max-width: none !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	margin-bottom: 0 !important;
+	box-sizing: border-box;
+	background: #ffffff !important;
+	border-bottom: 1px solid rgba(74, 74, 74, 0.35);
+	box-shadow: none;
+	transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	will-change: transform;
+}
+
+/* Single company-colour logo on all pages */
+.epsh-site-logo {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+}
+
+.epsh-site-logo img,
+.epsh-site-logo__img {
+	display: block;
+	max-height: var(--epsh-header-logo-max-h, 56px);
+	width: auto;
+	height: auto;
+	object-fit: contain;
+}
+
+/* Fixed header uses an in-flow spacer — do not pad body/site-inner. */
+body.epsh-has-fixed-header,
+body.epsh-smart-header {
+	padding-top: 0 !important;
+}
+
+body.epsh-has-fixed-header .site-inner,
+body.epsh-smart-header .site-inner,
+body.epsh-has-fixed-header .content-sidebar-wrap,
+body.epsh-smart-header .content-sidebar-wrap {
+	margin-top: 0 !important;
+	padding-top: 0 !important;
+}
+
+.epsh-header-spacer {
+	display: none !important;
+	width: 0 !important;
+	height: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	border: 0 !important;
+	pointer-events: none !important;
+	visibility: hidden !important;
+	overflow: hidden !important;
+}
+
+body.epsh-smart-header .site-header.epsh-header-scrolled,
+body.epsh-smart-header .genesis-header.epsh-header-scrolled {
+	background: #ffffff !important;
+	border-bottom-color: rgba(74, 74, 74, 0.35);
+	box-shadow: none;
+}
+
+body.epsh-smart-header .site-header.epsh-header-at-top,
+body.epsh-smart-header .genesis-header.epsh-header-at-top,
+.site-header.epsh-header-at-top,
+.genesis-header.epsh-header-at-top {
+	margin-bottom: 0 !important;
+}
+
+body.epsh-smart-header .site-header.epsh-header-hidden,
+body.epsh-smart-header .genesis-header.epsh-header-hidden {
+	transform: translate3d(0, calc(-1 * var(--epsh-header-hide-shift, 128px)), 0);
+	pointer-events: none;
+}
+
+/* Legacy / non-custom nav header row */
+body.epsh-smart-header:not(.epsh-custom-desktop-nav) .site-header .wrap,
+body.epsh-smart-header:not(.epsh-custom-desktop-nav) .genesis-header .wrap {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: space-between !important;
+	gap: 16px !important;
+	padding-top: var(--epsh-header-wrap-pad) !important;
+	padding-bottom: var(--epsh-header-wrap-pad) !important;
+	padding-left: var(--epsh-header-pad-x, 16px) !important;
+	padding-right: var(--epsh-header-pad-x, 16px) !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	box-sizing: border-box !important;
+}
+
+body.epsh-has-top-bar.epsh-smart-header:not(.epsh-custom-desktop-nav) .site-header > .wrap,
+body.epsh-has-top-bar.epsh-smart-header:not(.epsh-custom-desktop-nav) .genesis-header > .wrap {
+	padding-bottom: 4px !important;
+}
+
+body.epsh-smart-header .title-area img,
+body.epsh-smart-header .custom-logo-link img,
+body.epsh-smart-header .site-header .site-title img {
+	max-height: var(--epsh-header-logo-max-h);
+	max-width: 100%;
+	width: auto;
+	height: auto;
+	object-fit: contain;
+	object-position: left center;
+}
+
+body.epsh-smart-header .title-area,
+body.epsh-smart-header .wp-custom-logo .title-area {
+	flex: 0 1 auto;
+	min-width: 0;
+	max-width: min(480px, 38%) !important;
+}
+
+body.epsh-custom-desktop-nav.epsh-smart-header .epsh-desktop-nav-wrap {
+	flex: 1 1 auto;
+	min-width: 0;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+}
+
+body.epsh-custom-desktop-nav .site-header,
+body.epsh-custom-desktop-nav .genesis-header {
+	overflow: visible;
+}
+
+/* Never collapse the header shell (guards against malformed polish selectors). */
+@media (min-width: 1201px) {
+	body.epsh-custom-desktop-nav.epsh-has-top-bar .site-header,
+	body.epsh-custom-desktop-nav.epsh-has-top-bar .genesis-header {
+		display: flex !important;
+		visibility: visible !important;
+	}
+
+	body.epsh-custom-desktop-nav:not(.epsh-has-top-bar) .site-header,
+	body.epsh-custom-desktop-nav:not(.epsh-has-top-bar) .genesis-header {
+		display: block !important;
+		visibility: visible !important;
+	}
+}
+
+/* Top bar below main header row — stable without JS DOM moves */
+body.epsh-has-top-bar .site-header,
+body.epsh-has-top-bar .genesis-header {
+	display: flex !important;
+	flex-direction: column !important;
+	align-items: stretch !important;
+	flex-wrap: nowrap !important;
+	gap: 0 !important;
+}
+
+body.epsh-has-top-bar .site-header > .wrap,
+body.epsh-has-top-bar .genesis-header > .wrap {
+	flex: 0 0 auto;
+	width: 100% !important;
+	max-width: 100% !important;
+	padding-left: var(--epsh-header-pad-x, 16px);
+	padding-right: var(--epsh-header-pad-x, 16px);
+	box-sizing: border-box;
+	order: 1;
+	padding-bottom: 4px !important;
+}
+
+body.epsh-has-top-bar .site-header > .epsh-top-bar--header,
+body.epsh-has-top-bar .genesis-header > .epsh-top-bar--header {
+	flex: 0 0 auto;
+	width: 100%;
+	order: 2;
+	margin: 0;
+}
+
+body.epsh-has-top-bar .site-header:not(.epsh-header-hidden) > .epsh-top-bar--header,
+body.epsh-has-top-bar .genesis-header:not(.epsh-header-hidden) > .epsh-top-bar--header {
+	display: block !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+
+body.epsh-has-top-bar .site-header.epsh-header-hidden > .epsh-top-bar--header,
+body.epsh-has-top-bar .genesis-header.epsh-header-hidden > .epsh-top-bar--header {
+	display: none !important;
+	visibility: hidden !important;
+	opacity: 0 !important;
+}
+
+/* Monitors: cap inner content width; shell stays full bleed */
+@media (min-width: 1201px) {
+	body.epsh-smart-header .site-header .wrap,
+	body.epsh-smart-header .genesis-header .wrap,
+	body.epsh-has-top-bar .site-header > .wrap,
+	body.epsh-has-top-bar .genesis-header > .wrap {
+		max-width: var(--epsh-header-content-max, 1290px) !important;
+	}
+
+	.epsh-top-bar--header .epsh-top-bar__inner {
+		max-width: var(--epsh-header-content-max, 1290px);
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

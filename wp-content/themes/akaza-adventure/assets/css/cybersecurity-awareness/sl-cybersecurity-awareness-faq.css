@@ -1,0 +1,134 @@
+/**
+ * Cybersecurity Awareness — FAQ
+ *
+ * Professional one-column numbered accordion.
+ * Section background comes from sl-csa-section-rhythm.css (white / bg alternate).
+ */
+
+.sl-csa-page > section.sl-faq-section.sl-csa-faq {
+	--sl-faq-bg: var(--sl-page-bg, #f5f5f5);
+	--sl-faq-surface: var(--sl-page-white, #ffffff);
+	--sl-faq-border: rgba(107, 124, 147, 0.18);
+	--sl-csa-faq-num-w: 2.5rem;
+}
+
+/* Full page content width; no intro max-width. */
+.sl-csa-faq.sl-faq-section .container {
+	max-width: var(--sl-home-content-max, 1400px);
+}
+
+.sl-csa-faq.sl-faq-section .shead,
+.sl-csa-faq.sl-faq-section .sl-home-section-heading {
+	max-width: none;
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+.sl-csa-faq.sl-faq-section .sl-faq-intro {
+	max-width: none;
+	width: 100%;
+}
+
+/* One-column list */
+.sl-csa-faq.sl-faq-section .sl-faq-list {
+	display: block;
+	width: 100%;
+	border-top: 1px solid var(--sl-faq-border);
+}
+
+.sl-csa-faq.sl-faq-section details.faq {
+	margin: 0;
+	border: none;
+	border-bottom: 1px solid var(--sl-faq-border);
+	border-radius: 0;
+	background: transparent;
+	box-shadow: none;
+	overflow: visible;
+}
+
+.sl-csa-faq.sl-faq-section details.faq:hover,
+.sl-csa-faq.sl-faq-section details.faq[open] {
+	border-color: var(--sl-faq-border);
+	box-shadow: none;
+}
+
+.sl-csa-faq.sl-faq-section details.faq summary {
+	align-items: flex-start;
+	padding: 24px 0;
+	gap: 20px;
+}
+
+.sl-csa-faq.sl-faq-section--numbered .sl-faq-summary-text {
+	display: grid;
+	grid-template-columns: var(--sl-csa-faq-num-w) minmax(0, 1fr);
+	align-items: start;
+	gap: 16px;
+	width: 100%;
+}
+
+.sl-csa-faq.sl-faq-section--numbered .sl-faq-number {
+	width: var(--sl-csa-faq-num-w);
+	min-width: var(--sl-csa-faq-num-w);
+	margin: 0;
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 1.45;
+	letter-spacing: 0.02em;
+	text-align: left;
+	font-variant-numeric: tabular-nums;
+}
+
+.sl-csa-faq.sl-faq-section--numbered .sl-faq-question {
+	margin: 0;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 1.4;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-csa-faq.sl-faq-section details.faq[open] summary .sl-faq-question {
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-csa-faq.sl-faq-section details.faq summary::after {
+	margin-top: 2px;
+}
+
+/* Align answers under the question text (after the number column). */
+.sl-csa-faq.sl-faq-section--numbered details.faq .sl-faq-panel-inner {
+	padding: 0 28px 24px calc(var(--sl-csa-faq-num-w) + 16px);
+}
+
+.sl-csa-faq.sl-faq-section details.faq .sl-faq-panel-inner p,
+.sl-csa-faq.sl-faq-section details.faq .sl-faq-answer {
+	max-width: none;
+}
+
+@media (max-width: 767px) {
+	.sl-csa-faq.sl-faq-section {
+		--sl-csa-faq-num-w: 2rem;
+	}
+
+	.sl-csa-faq.sl-faq-section .shead,
+	.sl-csa-faq.sl-faq-section .sl-home-section-heading {
+		margin-bottom: 28px;
+	}
+
+	.sl-csa-faq.sl-faq-section details.faq summary {
+		padding: 18px 0;
+		gap: 14px;
+	}
+
+	.sl-csa-faq.sl-faq-section--numbered .sl-faq-summary-text {
+		gap: 12px;
+	}
+
+	.sl-csa-faq.sl-faq-section--numbered .sl-faq-question {
+		font-size: 16px;
+	}
+
+	.sl-csa-faq.sl-faq-section--numbered details.faq .sl-faq-panel-inner {
+		padding: 0 0 18px calc(var(--sl-csa-faq-num-w) + 12px);
+	}
+}

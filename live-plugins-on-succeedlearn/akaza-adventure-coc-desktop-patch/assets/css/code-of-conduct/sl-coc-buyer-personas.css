@@ -1,0 +1,114 @@
+/**
+ * SucceedLEARN — Code of Conduct Buyer Personas.
+ */
+
+ .sl-coc-buyer-personas {
+	padding: 90px 0;
+	background: var(--sl-page-bg);
+}
+
+/* ---------------------------------------------------------
+   Section Intro
+   --------------------------------------------------------- */
+
+.sl-coc-buyer-personas__heading {
+	margin-bottom: 28px;
+	text-align: left;
+}
+
+/* ---------------------------------------------------------
+   Main Layout
+   --------------------------------------------------------- */
+
+.sl-coc-buyer-personas__layout {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	gap: 26px;
+	align-items: start;
+}
+
+/* ---------------------------------------------------------
+   Sticky Visual
+   --------------------------------------------------------- */
+
+.sl-coc-buyer-personas__visual {
+	position: sticky;
+	top: 90px;
+}
+
+.sl-coc-buyer-personas__visual img {
+	display: block;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+/* ---------------------------------------------------------
+   Persona Cards
+   --------------------------------------------------------- */
+
+.sl-coc-buyer-personas__cards {
+	display: grid;
+	gap: 16px;
+}
+
+.sl-coc-buyer-personas__card {
+	padding: 20px 22px;
+	border-radius: 10px;
+	background: var(--sl-page-white);
+}
+
+.sl-coc-buyer-personas__card h3.sl-panel-title {
+	margin: 0 0 9px;
+}
+
+.sl-coc-buyer-personas__card p {
+	margin: 0;
+	color: var(--sl-page-text);
+	font-size: 15px;
+	line-height: 1.45;
+}
+
+/* ---------------------------------------------------------
+   Tablet
+   --------------------------------------------------------- */
+
+@media (max-width: 991px) {
+
+	.sl-coc-buyer-personas__layout {
+		grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+		gap: 20px;
+	}
+
+	.sl-coc-buyer-personas__visual {
+		top: 80px;
+	}
+
+	.sl-coc-buyer-personas__card {
+		padding: 18px 20px;
+	}
+}
+
+/* ---------------------------------------------------------
+   Mobile
+   --------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+	.sl-coc-buyer-personas {
+		padding: 60px 0;
+	}
+
+	.sl-coc-buyer-personas__layout {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	.sl-coc-buyer-personas__visual {
+		position: static;
+	}
+
+	.sl-coc-buyer-personas__cards {
+		gap: 14px;
+	}
+}

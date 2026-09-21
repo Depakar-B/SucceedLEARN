@@ -1,0 +1,92 @@
+.fmbx-form-wrap {
+	max-width: 720px;
+	font-family: inherit;
+}
+
+.fmbx-form {
+	display: grid;
+	gap: 18px;
+}
+
+.fmbx-field label,
+.fmbx-field legend {
+	display: block;
+	margin-bottom: 7px;
+	color: #1e293b;
+	font-weight: 600;
+}
+
+.fmbx-field fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.fmbx-field input:not([type="radio"]):not([type="checkbox"]),
+.fmbx-field textarea,
+.fmbx-field select {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 11px 12px;
+	border: 1px solid #94a3b8;
+	border-radius: 6px;
+	background: #fff;
+	color: #0f172a;
+	font: inherit;
+}
+
+.fmbx-field input:focus,
+.fmbx-field textarea:focus,
+.fmbx-field select:focus {
+	border-color: #2271b1;
+	outline: 2px solid #72aee6;
+	outline-offset: 1px;
+}
+
+.fmbx-choice {
+	display: flex !important;
+	gap: 8px;
+	align-items: flex-start;
+	font-weight: 400 !important;
+}
+
+.fmbx-submit {
+	justify-self: start;
+	padding: 11px 20px;
+	border: 1px solid #135e96;
+	border-radius: 6px;
+	background: #2271b1;
+	color: #fff;
+	font: inherit;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.fmbx-submit:hover,
+.fmbx-submit:focus {
+	background: #135e96;
+}
+
+.fmbx-alert {
+	margin-bottom: 18px;
+	padding: 12px 14px;
+	border-radius: 6px;
+}
+
+.fmbx-alert--success {
+	background: #edfaef;
+	color: #116329;
+}
+
+.fmbx-alert--error {
+	background: #fcf0f1;
+	color: #8a2424;
+}
+
+.fmbx-honeypot {
+	position: absolute !important;
+	left: -10000px !important;
+	width: 1px !important;
+	height: 1px !important;
+	overflow: hidden !important;
+}

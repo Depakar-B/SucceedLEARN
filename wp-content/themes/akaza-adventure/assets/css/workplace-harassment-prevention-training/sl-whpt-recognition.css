@@ -1,0 +1,180 @@
+/* =========================================================
+   SucceedLEARN
+   Workplace Harassment Prevention Training
+   Recognition Section
+   ========================================================= */
+
+   .sl-whpt-recognition {
+	padding: 96px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-whpt-recognition__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	gap: 56px;
+	align-items: center;
+}
+
+.sl-whpt-recognition__content {
+	min-width: 0;
+}
+
+.sl-whpt-recognition__content h2 {
+	margin-bottom: 28px;
+}
+
+.sl-whpt-recognition__content p {
+	margin: 0 0 20px;
+}
+
+.sl-whpt-recognition__lead {
+	max-width: 720px;
+}
+
+/* ---------------------------------------------------------
+   Learning pathway
+   --------------------------------------------------------- */
+
+.sl-whpt-recognition__path {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 34px;
+	padding-top: 26px;
+	border-top: 1px solid rgba(22, 35, 78, 0.12);
+}
+
+.sl-whpt-recognition__step {
+	display: inline-flex;
+	align-items: center;
+	gap: 9px;
+}
+
+.sl-whpt-recognition__number {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background: rgba(20, 114, 186, 0.10);
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.sl-whpt-recognition__label {
+	color: var(--sl-page-navy, #16234e);
+	font-size: 15px;
+	font-weight: 700;
+	white-space: nowrap;
+}
+
+.sl-whpt-recognition__arrow {
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+/* ---------------------------------------------------------
+   Image area
+   --------------------------------------------------------- */
+
+.sl-whpt-recognition__media {
+	width: 100%;
+}
+
+.sl-whpt-recognition__image-placeholder {
+	width: 100%;
+	aspect-ratio: 720 / 620;
+	min-height: 420px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	padding: 32px;
+	border: 1px dashed rgba(20, 114, 186, 0.35);
+	border-radius: 18px;
+	background: rgba(20, 114, 186, 0.06);
+	color: var(--sl-page-primary, #1472ba);
+	text-align: center;
+}
+
+.sl-whpt-recognition__image-placeholder span {
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.sl-whpt-recognition__image-placeholder small {
+	color: var(--sl-page-muted, #6b7c93);
+	font-size: 13px;
+}
+
+/* ---------------------------------------------------------
+   Desktop
+   --------------------------------------------------------- */
+
+@media (min-width: 1000px) {
+
+	.sl-whpt-recognition__grid {
+		grid-template-columns: minmax(0, 1fr) minmax(420px, 0.9fr);
+		gap: 72px;
+	}
+
+}
+
+/* ---------------------------------------------------------
+   Tablet
+   --------------------------------------------------------- */
+
+@media (max-width: 999px) {
+
+	.sl-whpt-recognition {
+		padding: 80px 0;
+	}
+
+	.sl-whpt-recognition__grid {
+		gap: 44px;
+	}
+
+	.sl-whpt-recognition__image-placeholder {
+		min-height: 360px;
+	}
+
+}
+
+/* ---------------------------------------------------------
+   Mobile
+   --------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+	.sl-whpt-recognition {
+		padding: 64px 0;
+	}
+
+	.sl-whpt-recognition__grid {
+		gap: 36px;
+	}
+
+	.sl-whpt-recognition__path {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 14px;
+	}
+
+	.sl-whpt-recognition__arrow {
+		display: none;
+	}
+
+	.sl-whpt-recognition__image-placeholder {
+		min-height: 300px;
+		border-radius: 14px;
+	}
+
+}

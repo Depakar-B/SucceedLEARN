@@ -1,0 +1,197 @@
+﻿/**
+ * Political Donations Training — Hero.
+ */
+
+ .sl-political-donations-hero {
+	padding: 120px 0 80px;
+	background: #ffffff;
+}
+
+.sl-political-donations-hero__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.05fr) minmax(480px, 0.85fr);
+	gap: 64px;
+	align-items: center;
+}
+
+.sl-political-donations-hero__content {
+	min-width: 0;
+}
+
+.sl-political-donations-hero__content h1 {
+	margin: 14px 0 24px;
+}
+
+.sl-political-donations-hero__content h1 span {
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-political-donations-hero__copy {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.sl-political-donations-hero__copy p {
+	margin: 0;
+}
+
+.sl-political-donations-hero__actions {
+	margin-top: 30px;
+}
+
+.sl-political-donations-hero__tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-top: 22px;
+}
+
+.sl-political-donations-hero__tag {
+	margin: 0;
+	padding: 7px 12px;
+	border: 1px solid rgba(20, 114, 186, 0.10);
+	border-radius: 999px;
+	background: rgba(20, 114, 186, 0.06);
+	color: var(--sl-page-navy, #16234e);
+	font-size: 14px;
+	line-height: 1.4;
+}
+
+.sl-political-donations-hero__visual {
+	min-width: 0;
+}
+
+.sl-political-donations-hero__panel {
+	padding: 28px;
+	background: #ffffff;
+	border: 1px solid rgba(22, 35, 78, 0.12);
+	border-radius: 22px;
+	box-shadow: 0 18px 45px rgba(22, 35, 78, 0.08);
+}
+
+.sl-political-donations-hero__panel-head {
+	margin-bottom: 20px;
+}
+
+.sl-political-donations-hero__panel-head h2 {
+	margin: 0;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-political-donations-hero__steps {
+	display: flex;
+	flex-direction: column;
+}
+
+.sl-political-donations-hero__step {
+	display: grid;
+	grid-template-columns: 44px minmax(0, 1fr);
+	gap: 14px;
+	align-items: center;
+	padding: 18px;
+	background: #f5f5f5;
+	border-radius: 14px;
+}
+
+.sl-political-donations-hero__step-number {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: var(--sl-page-primary, #1472ba);
+	color: #ffffff;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.sl-political-donations-hero__step-content {
+	min-width: 0;
+}
+
+.sl-political-donations-hero__step-content .sl-panel-title {
+	margin: 0 0 5px;
+}
+
+.sl-political-donations-hero__step-content p {
+	margin: 0;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.sl-political-donations-hero__connector {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 30px;
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 22px;
+	line-height: 1;
+}
+
+.sl-political-donations-hero__step--final {
+	background: var(--sl-page-navy, #16234e);
+}
+
+.sl-political-donations-hero__step--final .sl-political-donations-hero__step-number {
+	background: var(--sl-page-primary, #1472ba);
+}
+
+.sl-political-donations-hero__step--final .sl-panel-title,
+.sl-political-donations-hero__step--final p {
+	color: #ffffff;
+}
+
+@media (max-width: 1100px) {
+	.sl-political-donations-hero__grid {
+		grid-template-columns: 1fr;
+		gap: 48px;
+	}
+
+	.sl-political-donations-hero__visual {
+		max-width: 760px;
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-political-donations-hero {
+		padding: 120px 0 60px;
+	}
+
+	.sl-political-donations-hero__grid {
+		gap: 36px;
+	}
+
+	.sl-political-donations-hero__actions {
+		flex-direction: column;
+	}
+
+	.sl-political-donations-hero__actions .sl-hero-btn {
+		width: 100%;
+		justify-content: center;
+	}
+
+	.sl-political-donations-hero__panel {
+		padding: 20px;
+		border-radius: 16px;
+	}
+
+	.sl-political-donations-hero__step {
+		grid-template-columns: 38px minmax(0, 1fr);
+		gap: 12px;
+		padding: 15px;
+	}
+
+	.sl-political-donations-hero__step-number {
+		width: 36px;
+		height: 36px;
+	}
+
+	.sl-political-donations-hero__tags {
+		gap: 7px;
+	}
+}

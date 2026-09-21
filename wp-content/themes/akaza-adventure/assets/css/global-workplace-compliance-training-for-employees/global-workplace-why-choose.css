@@ -1,0 +1,165 @@
+/* =========================================
+   WHY ORGANIZATIONS CHOOSE SUCCEED LEARN
+========================================= */
+
+.sl-global-why-section {
+	position: relative;
+	padding: 90px 0;
+	background: #ffffff;
+	font-family: var(--slf-font-body, "Space Grotesk", system-ui, sans-serif);
+}
+
+.sl-global-why-section .container {
+	width: 100%;
+	max-width: var(--sl-home-content-max, 1400px);
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.sl-global-why-heading {
+	max-width: 820px;
+	margin: 0 auto 42px;
+	text-align: center;
+}
+
+.sl-global-why-heading h2 {
+	margin: 0 0 16px;
+	font-size: var(--sl-fs-h2);
+	font-weight: 700;
+	line-height: 1.2;
+	color: var(--gwct-navy);
+}
+
+.sl-global-why-heading h2 > span {
+	color: var(--sl-heading-accent, var(--sl-page-primary, #1472ba));
+}
+
+.sl-global-why-intro {
+	margin: 0 auto;
+	max-width: 720px;
+	color: var(--gwct-muted);
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.75;
+}
+
+.sl-global-why-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 22px;
+}
+
+.sl-global-why-card {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto auto;
+	align-items: center;
+	column-gap: 12px;
+	row-gap: 8px;
+	height: 100%;
+	padding: 20px 22px;
+	border: 1px solid var(--gwct-border);
+	border-radius: 20px;
+	background: linear-gradient(180deg, #ffffff 0%, var(--sl-page-bg, #f5f5f5) 100%);
+	box-shadow: 0 8px 22px rgba(31, 44, 86, 0.05);
+	transition:
+		transform 0.3s ease,
+		border-color 0.3s ease,
+		box-shadow 0.3s ease;
+}
+
+.sl-global-why-card:hover {
+	transform: translateY(-4px);
+	border-color: rgba(20, 114, 186, 0.28);
+	box-shadow: 0 14px 32px rgba(20, 114, 186, 0.1);
+}
+
+.sl-global-why-card__icon {
+	grid-column: 1;
+	grid-row: 1;
+	width: 40px;
+	height: 40px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 0;
+	border-radius: 12px;
+	background: var(--gwct-primary-soft);
+	color: var(--gwct-primary);
+	font-size: 20px;
+	flex-shrink: 0;
+}
+
+.sl-global-why-card__title {
+	grid-column: 2;
+	grid-row: 1;
+	margin: 0;
+	color: var(--gwct-navy);
+	font-size: 1.05rem;
+	font-weight: 700;
+	line-height: 1.3;
+}
+
+.sl-global-why-card__text {
+	grid-column: 1 / -1;
+	grid-row: 2;
+	margin: 0;
+	color: var(--gwct-muted);
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 1.6;
+}
+
+@media (max-width: 991px) {
+	.sl-global-why-section {
+		padding: 75px 0;
+	}
+
+	.sl-global-why-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 18px;
+	}
+
+	.sl-global-why-intro {
+		font-size: 17px;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-global-why-section {
+		padding: 60px 0;
+	}
+
+	.sl-global-why-heading {
+		margin-bottom: 28px;
+		text-align: left;
+	}
+
+
+	.sl-global-why-intro {
+		font-size: 16px;
+		line-height: 1.7;
+	}
+
+	.sl-global-why-grid {
+		grid-template-columns: 1fr;
+		gap: 14px;
+	}
+
+	.sl-global-why-card {
+		padding: 18px 18px;
+	}
+
+	.sl-global-why-card:hover {
+		transform: none;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.sl-global-why-card,
+	.sl-global-why-card:hover {
+		transform: none;
+	}
+}

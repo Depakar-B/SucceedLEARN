@@ -1,0 +1,184 @@
+/* SucceedLEARN — shared course page foundation */
+
+body.epsh-classic-header:not(.epsh-home-overlay) #main-content.sl-course-page,
+body.epsh-classic-header:not(.epsh-home-overlay) main.sl-course-page {
+	padding-top: 0 !important;
+}
+
+.sl-course-page {
+	--sl-page-navy: #16234e;
+	--sl-page-primary: #1472ba;
+	--sl-page-primary-dark: #283384;
+	--sl-page-primary-soft: #6dc3eb;
+	--sl-page-cta: #ea3e24;
+	--sl-page-text: #4a4a4a;
+	--sl-page-muted: #6b7c93;
+	--sl-page-bg: #f5f5f5;
+	--sl-page-white: #ffffff;
+	--sl-heading-accent: var(--sl-page-primary, #1472ba);
+	--course-primary: #1472ba;
+	--course-secondary: #283384;
+	--course-accent: #0e9f4a;
+	--course-accent-on-dark: #beafff;
+	--course-cta: #ea3e24;
+	--course-navy: #16234e;
+	--course-text: #4a4a4a;
+	--course-muted: #6b7c93;
+	--course-light-bg: #f5f5f5;
+	--course-white: #ffffff;
+	--course-container: 1240px;
+	--course-section-space: 90px;
+	--course-section-space-mobile: 60px;
+	font-family: var(--slf-font-body, "Space Grotesk", system-ui, sans-serif);
+	color: var(--course-text);
+	background: var(--course-white);
+}
+
+/*
+ * Shared course content shell.
+ * One place for width: custom .container + all sl-course-*__container sections.
+ * Default 1240px; 1380px at 1600px+.
+ */
+.sl-course-page .container,
+.sl-course-hero__container,
+.sl-course-highlights__container,
+.sl-course-risk__container,
+.sl-course-curriculum__container,
+.sl-course-learning__container,
+.sl-course-localisation__container,
+.sl-course-audience__container,
+.sl-course-delivery__container,
+.sl-course-faq__container,
+.sl-course-cta__container {
+	width: min(calc(100% - 64px), var(--course-container, 1240px));
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+}
+
+.sl-course-page .container {
+	max-width: none;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+@media (min-width: 1600px) {
+	.sl-course-page {
+		--course-container: 1380px;
+	}
+
+	.sl-course-page .container,
+	.sl-course-hero__container,
+	.sl-course-highlights__container,
+	.sl-course-risk__container,
+	.sl-course-curriculum__container,
+	.sl-course-learning__container,
+	.sl-course-localisation__container,
+	.sl-course-audience__container,
+	.sl-course-delivery__container,
+	.sl-course-faq__container,
+	.sl-course-cta__container {
+		width: min(calc(100% - 100px), var(--course-container, 1380px));
+	}
+}
+
+@media (max-width: 1000px) {
+	.sl-course-page .container,
+	.sl-course-hero__container,
+	.sl-course-highlights__container,
+	.sl-course-risk__container,
+	.sl-course-curriculum__container,
+	.sl-course-learning__container,
+	.sl-course-localisation__container,
+	.sl-course-audience__container,
+	.sl-course-delivery__container,
+	.sl-course-faq__container,
+	.sl-course-cta__container {
+		width: min(calc(100% - 48px), var(--course-container, 1240px));
+	}
+}
+
+@media (max-width: 600px) {
+	.sl-course-page .container,
+	.sl-course-hero__container,
+	.sl-course-highlights__container,
+	.sl-course-risk__container,
+	.sl-course-curriculum__container,
+	.sl-course-learning__container,
+	.sl-course-localisation__container,
+	.sl-course-audience__container,
+	.sl-course-delivery__container,
+	.sl-course-faq__container,
+	.sl-course-cta__container {
+		width: calc(100% - 36px);
+	}
+}
+
+@media (max-width: 380px) {
+	.sl-course-page .container,
+	.sl-course-hero__container,
+	.sl-course-highlights__container,
+	.sl-course-risk__container,
+	.sl-course-curriculum__container,
+	.sl-course-learning__container,
+	.sl-course-localisation__container,
+	.sl-course-audience__container,
+	.sl-course-delivery__container,
+	.sl-course-faq__container,
+	.sl-course-cta__container {
+		width: calc(100% - 28px);
+	}
+}
+
+.sl-course-page h1,
+.sl-course-page h2,
+.sl-course-page h3 {
+	line-height: 1.15;
+	margin: 0;
+	color: var(--course-navy, #16234e);
+}
+
+.sl-course-page h2 {
+	margin-bottom: 16px;
+	line-height: 1.2;
+}
+
+.sl-course-page h3 {
+	font-size: 18px;
+	color: var(--sl-heading-accent);
+}
+
+.sl-course-page h2 > span {
+	color: var(--sl-heading-accent);
+}
+
+.sl-course-page p {
+	margin: 1rem 0;
+	line-height: 1.8;
+	color: var(--course-text, #4a4a4a);
+}
+
+.sl-course-page .sl-home-sub-heading {
+	color: var(--sl-heading-accent);
+}
+
+.sl-course-page .sl-home-sub-heading::before {
+	background: var(--sl-heading-accent);
+}
+
+/*
+ * Custom course sections (not the shared sl-course-* components)
+ * pick up standard vertical rhythm from --course-section-space.
+ * Shared DD-style sections keep their own padding.
+ */
+.sl-course-page > section:not([class^="sl-course-"]):not([class*=" sl-course-"]) {
+	padding-top: var(--course-section-space, 90px);
+	padding-bottom: var(--course-section-space, 90px);
+}
+
+@media (max-width: 767px) {
+	.sl-course-page > section:not([class^="sl-course-"]):not([class*=" sl-course-"]) {
+		padding-top: var(--course-section-space-mobile, 60px);
+		padding-bottom: var(--course-section-space-mobile, 60px);
+	}
+}

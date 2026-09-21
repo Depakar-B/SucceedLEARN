@@ -1,0 +1,318 @@
+/**
+ * S-Aware — From Awareness to Behaviour Change
+ *
+ * @package Akaza_Adventure
+ */
+
+ .sl-saware-behaviour-change {
+	padding: 76px 0 88px;
+	background: var(--sl-page-white, #ffffff);
+}
+
+
+/* Section Heading
+-------------------------------------------------------------- */
+
+.sl-saware-behaviour-change__heading {
+	margin-bottom: 18px;
+}
+
+.sl-saware-behaviour-change__heading h2 {
+	margin-bottom: 0;
+}
+
+
+/* Introduction
+-------------------------------------------------------------- */
+
+.sl-saware-behaviour-change__intro {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin-bottom: 48px;
+}
+
+.sl-saware-behaviour-change__intro p {
+	margin: 0;
+}
+
+
+/* Main Layout
+-------------------------------------------------------------- */
+
+.sl-saware-behaviour-change__layout {
+	display: grid;
+	grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+	gap: 68px;
+	align-items: start;
+}
+
+
+/* Image
+-------------------------------------------------------------- */
+
+.sl-saware-behaviour-change__media {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 110px) + 24px);
+	width: 100%;
+	min-width: 0;
+	align-self: start;
+}
+
+.sl-saware-behaviour-change__image {
+	width: 100%;
+	overflow: hidden;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 16px;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-saware-behaviour-change__image-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 560px;
+	padding: 30px;
+	box-sizing: border-box;
+	background: #f5f5f5;
+	color: var(--sl-page-muted, #6b7c93);
+	text-align: center;
+}
+
+.sl-saware-behaviour-change__image img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+
+/* Behaviour Journey
+-------------------------------------------------------------- */
+
+.sl-saware-behaviour-change__journey {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+
+/* Connecting Line
+-------------------------------------------------------------- */
+
+.sl-saware-behaviour-change__journey-line {
+	position: absolute;
+	top: 24px;
+	bottom: 24px;
+	left: 19px;
+	width: 1px;
+	background: rgba(20, 114, 186, 0.20);
+}
+
+
+/* Journey Step
+-------------------------------------------------------------- */
+
+.sl-saware-behaviour-change__step {
+	position: relative;
+	display: grid;
+	grid-template-columns: 40px minmax(0, 1fr);
+	gap: 22px;
+	padding: 0 0 28px;
+}
+
+.sl-saware-behaviour-change__step:last-child {
+	padding-bottom: 0;
+}
+
+
+/* Step Marker
+-------------------------------------------------------------- */
+
+.sl-saware-behaviour-change__step-marker {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	box-sizing: border-box;
+	border: 1px solid rgba(20, 114, 186, 0.20);
+	border-radius: 50%;
+	background: var(--sl-page-white, #ffffff);
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+
+/* Step Content
+-------------------------------------------------------------- */
+
+.sl-saware-behaviour-change__step-content {
+	min-width: 0;
+	padding: 2px 0 26px;
+	border-bottom: 1px solid rgba(22, 35, 78, 0.10);
+}
+
+.sl-saware-behaviour-change__step:last-child .sl-saware-behaviour-change__step-content {
+	padding-bottom: 0;
+	border-bottom: 0;
+}
+
+
+/* Step Heading
+-------------------------------------------------------------- */
+
+.sl-saware-behaviour-change__step-heading {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px 14px;
+	margin-bottom: 8px;
+}
+
+.sl-saware-behaviour-change__step-heading .sl-panel-title {
+	margin: 0;
+}
+
+
+/* Action Label
+-------------------------------------------------------------- */
+
+.sl-saware-behaviour-change__step-action {
+	display: inline-flex;
+	align-items: center;
+	padding: 5px 10px;
+	border-radius: 999px;
+	background: rgba(20, 114, 186, 0.08);
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+
+/* Description
+-------------------------------------------------------------- */
+
+.sl-saware-behaviour-change__step-content p {
+	margin: 0;
+}
+
+
+/* Closing Statement
+-------------------------------------------------------------- */
+
+.sl-saware-behaviour-change__closing {
+	margin-top: 42px;
+	padding: 22px 26px;
+	border-left: 3px solid var(--sl-page-primary, #1472ba);
+	background: rgba(20, 114, 186, 0.05);
+}
+
+.sl-saware-behaviour-change__closing p {
+	margin: 0;
+}
+
+
+/* Tablet
+-------------------------------------------------------------- */
+
+@media (max-width: 991px) {
+
+	.sl-saware-behaviour-change {
+		padding: 64px 0 72px;
+	}
+
+	.sl-saware-behaviour-change__intro {
+		margin-bottom: 40px;
+	}
+
+	.sl-saware-behaviour-change__layout {
+		grid-template-columns: 1fr;
+		gap: 42px;
+	}
+
+	.sl-saware-behaviour-change__media {
+		position: static;
+		top: auto;
+	}
+
+	.sl-saware-behaviour-change__image-placeholder {
+		min-height: 420px;
+	}
+
+	.sl-saware-behaviour-change__journey-line {
+		top: 22px;
+		left: 18px;
+		bottom: 22px;
+	}
+}
+
+
+/* Mobile
+-------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+	.sl-saware-behaviour-change {
+		padding: 52px 0 60px;
+	}
+
+	.sl-saware-behaviour-change__intro {
+		gap: 10px;
+		margin-bottom: 32px;
+	}
+
+	.sl-saware-behaviour-change__layout {
+		gap: 32px;
+	}
+
+	.sl-saware-behaviour-change__image {
+		border-radius: 12px;
+	}
+
+	.sl-saware-behaviour-change__image-placeholder {
+		min-height: 320px;
+		padding: 24px;
+	}
+
+	.sl-saware-behaviour-change__step {
+		grid-template-columns: 34px minmax(0, 1fr);
+		gap: 14px;
+		padding-bottom: 22px;
+	}
+
+	.sl-saware-behaviour-change__step-marker {
+		width: 34px;
+		height: 34px;
+	}
+
+	.sl-saware-behaviour-change__journey-line {
+		top: 18px;
+		left: 16px;
+		bottom: 18px;
+	}
+
+	.sl-saware-behaviour-change__step-content {
+		padding: 0 0 20px;
+	}
+
+	.sl-saware-behaviour-change__step-heading {
+		gap: 8px 10px;
+		margin-bottom: 7px;
+	}
+
+	.sl-saware-behaviour-change__step-action {
+		padding: 4px 8px;
+		font-size: 12px;
+	}
+
+	.sl-saware-behaviour-change__closing {
+		margin-top: 30px;
+		padding: 18px 20px;
+	}
+}

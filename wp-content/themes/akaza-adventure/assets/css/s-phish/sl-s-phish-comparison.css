@@ -1,0 +1,164 @@
+/* =========================================================
+   S-PHISH - TRADITIONAL APPROACH VS S-PHISH
+   ========================================================= */
+
+   .sl-s-phish-comparison {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.sl-s-phish-comparison__intro {
+    width: 100%;
+    margin-bottom: 45px;
+}
+
+.sl-s-phish-comparison__intro .sl-home-sub-heading {
+    display: block;
+    margin-bottom: 14px;
+}
+
+.sl-s-phish-comparison__intro h2 {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+   ========================================================= */
+
+.sl-s-phish-comparison__table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.sl-s-phish-comparison__table {
+    width: 100%;
+    min-width: 900px;
+
+    border-collapse: separate;
+    border-spacing: 0;
+
+    border: 1px solid rgba(22, 35, 78, 0.12);
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.sl-s-phish-comparison__table thead th {
+    padding: 22px 24px;
+
+    background: #16234e;
+    color: #ffffff;
+
+    text-align: left;
+    vertical-align: middle;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.sl-s-phish-comparison__table thead th:first-child {
+    width: 22%;
+}
+
+.sl-s-phish-comparison__table thead th:nth-child(2),
+.sl-s-phish-comparison__table thead th:nth-child(3) {
+    width: 39%;
+}
+
+.sl-s-phish-comparison__sphish-heading {
+    background: #1472ba !important;
+}
+
+
+/* =========================================================
+   BODY CELLS
+   ========================================================= */
+
+.sl-s-phish-comparison__table tbody th,
+.sl-s-phish-comparison__table tbody td {
+    padding: 22px 24px;
+
+    border-bottom: 1px solid rgba(22, 35, 78, 0.10);
+
+    text-align: left;
+    vertical-align: middle;
+
+    box-sizing: border-box;
+}
+
+.sl-s-phish-comparison__table tbody tr:last-child th,
+.sl-s-phish-comparison__table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.sl-s-phish-comparison__table tbody th {
+    background: #f5f5f5;
+    color: var(--slf-navy);
+}
+
+.sl-s-phish-comparison__table tbody td {
+    background: #ffffff;
+}
+
+.sl-s-phish-comparison__table .sl-s-phish-comparison__sphish-cell {
+    background: rgba(20, 114, 186, 0.055);
+}
+
+
+/* =========================================================
+   COLUMN DIVIDERS
+   ========================================================= */
+
+.sl-s-phish-comparison__table tbody th,
+.sl-s-phish-comparison__table tbody td {
+    border-right: 1px solid rgba(22, 35, 78, 0.08);
+}
+
+.sl-s-phish-comparison__table tbody th:last-child,
+.sl-s-phish-comparison__table tbody td:last-child {
+    border-right: 0;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .sl-s-phish-comparison {
+        padding: 60px 0;
+    }
+
+    .sl-s-phish-comparison__intro {
+        margin-bottom: 32px;
+    }
+
+    .sl-s-phish-comparison__table {
+        min-width: 760px;
+    }
+
+    .sl-s-phish-comparison__table thead th,
+    .sl-s-phish-comparison__table tbody th,
+    .sl-s-phish-comparison__table tbody td {
+        padding: 17px 18px;
+    }
+
+}

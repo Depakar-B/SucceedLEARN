@@ -1,0 +1,84 @@
+/**
+ * SMCR Training — Contact Course Cards.
+ *
+ * Global contact layout remains in sl-global-contact.css.
+ * This file only styles the SMCR-specific course cards.
+ *
+ * @package Akaza_Adventure
+ */
+
+/* ---------------------------------------------------------
+   Course Cards
+--------------------------------------------------------- */
+
+.sl-smcr-contact__courses {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 12px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.sl-smcr-contact__course-card {
+	padding: 20px 22px;
+	background: #ffffff;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 12px;
+	box-sizing: border-box;
+}
+
+.sl-smcr-contact__course-card .sl-panel-title {
+	margin-top: 0;
+	margin-bottom: 7px;
+}
+
+.sl-smcr-contact__course-card p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.sl-smcr-contact__course-label {
+	display: block;
+	margin-bottom: 8px;
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	line-height: 1.4;
+	text-transform: uppercase;
+}
+
+/* ---------------------------------------------------------
+   Tablet
+--------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+	.sl-smcr-contact__courses {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 12px;
+	}
+
+	.sl-smcr-contact__course-card {
+		padding: 18px;
+	}
+}
+
+/* ---------------------------------------------------------
+   Mobile
+--------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+	.sl-smcr-contact__courses {
+		grid-template-columns: 1fr;
+		gap: 10px;
+		margin-top: 24px;
+		margin-bottom: 24px;
+	}
+
+	.sl-smcr-contact__course-card {
+		padding: 18px;
+		border-radius: 10px;
+	}
+}

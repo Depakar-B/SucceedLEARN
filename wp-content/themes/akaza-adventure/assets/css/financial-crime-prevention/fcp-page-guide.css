@@ -1,0 +1,283 @@
+/* Financial Crime Prevention — page guide */
+
+.sl-fcp-page-guide {
+	position: relative;
+	z-index: 20;
+	/* Light overlap into hero padding only — keeps CTAs clear */
+	margin-top: -40px;
+	margin-bottom: 0;
+}
+
+.sl-fcp-page-guide .container {
+	width: 100%;
+	max-width: var(--sl-home-content-max, 1400px);
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.sl-fcp-page-guide__box {
+	position: relative;
+	z-index: 21;
+	background: var(--sl-page-white);
+	border: 1px solid rgba(107, 124, 147, 0.22);
+	border-radius: 24px;
+	padding: 34px 38px;
+	box-shadow: 0 22px 55px rgba(22, 35, 78, 0.1);
+}
+
+.sl-fcp-page-guide__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 30px;
+	padding-bottom: 26px;
+	border-bottom: 1px solid rgba(107, 124, 147, 0.22);
+}
+
+.sl-fcp-page-guide__title-wrap {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+}
+
+.sl-fcp-page-guide__title-wrap h2 {
+	margin: 0;
+line-height: 1.2;
+}
+
+.sl-fcp-page-guide__number {
+	width: 45px;
+	height: 45px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 45px;
+	border-radius: 12px;
+	background: var(--sl-page-primary);
+	color: var(--sl-page-white);
+	font-size: 17px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.sl-fcp-page-guide__intro {
+	margin: 0;
+	text-align: right;
+}
+
+.sl-fcp-page-guide__nav {
+	padding-top: 0;
+}
+
+.sl-fcp-page-guide__grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.sl-fcp-page-guide__item {
+	min-height: 94px;
+	display: flex;
+	align-items: flex-start;
+	gap: 18px;
+	padding: 25px 22px 21px 0;
+	margin-right: 22px;
+	border-bottom: 1px solid rgba(107, 124, 147, 0.22);
+	text-decoration: none;
+	transition:
+		color 0.2s ease,
+		transform 0.2s ease;
+}
+
+.sl-fcp-page-guide__grid > .sl-fcp-page-guide__item:nth-child(4n) {
+	margin-right: 0;
+}
+
+.sl-fcp-page-guide__item-number {
+	flex: 0 0 auto;
+	color: var(--sl-page-primary);
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1.4;
+}
+
+.sl-fcp-page-guide__item-title {
+	color: var(--sl-page-navy);
+	font-size: 17px;
+	font-weight: 700;
+	line-height: 1.5;
+}
+
+.sl-fcp-page a.sl-fcp-page-guide__item {
+	color: inherit;
+}
+
+.sl-fcp-page-guide__item:hover {
+	transform: translateX(3px);
+}
+
+.sl-fcp-page-guide__item:hover .sl-fcp-page-guide__item-title {
+	color: var(--sl-page-primary);
+}
+
+.sl-fcp-after-guide {
+	position: relative;
+	z-index: 1;
+	padding-top: 90px;
+}
+
+@media (min-width: 1400px) {
+	.sl-fcp-page-guide {
+		margin-top: -48px;
+	}
+
+	.sl-fcp-page-guide__box {
+		padding: 38px 40px;
+	}
+
+	.sl-fcp-after-guide {
+		padding-top: 100px;
+	}
+}
+
+@media (max-width: 1199px) {
+	.sl-fcp-page-guide {
+		margin-top: -36px;
+	}
+
+	.sl-fcp-page-guide__box {
+		padding: 30px;
+	}
+
+	.sl-fcp-page-guide__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.sl-fcp-page-guide__item {
+		margin-right: 15px;
+	}
+
+	.sl-fcp-page-guide__grid > .sl-fcp-page-guide__item:nth-child(4n) {
+		margin-right: 15px;
+	}
+
+	.sl-fcp-page-guide__grid > .sl-fcp-page-guide__item:nth-child(2n) {
+		margin-right: 0;
+	}
+
+
+	.sl-fcp-after-guide {
+		padding-top: 80px;
+	}
+}
+
+@media (max-width: 991px) {
+	.sl-fcp-page-guide {
+		margin-top: -32px;
+	}
+
+	.sl-fcp-page-guide__header {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 14px;
+	}
+
+	.sl-fcp-page-guide__intro {
+		text-align: left;
+	}
+
+	.sl-fcp-page-guide__item {
+		margin-right: 12px;
+	}
+
+	.sl-fcp-after-guide {
+		padding-top: 70px;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-fcp-page-guide {
+		margin-top: -24px;
+	}
+
+	.sl-fcp-page-guide__box {
+		padding: 24px 20px;
+		border-radius: 18px;
+	}
+
+	.sl-fcp-page-guide__header {
+		padding-bottom: 20px;
+	}
+
+	.sl-fcp-page-guide__number {
+		width: 40px;
+		height: 40px;
+		flex-basis: 40px;
+		border-radius: 10px;
+		font-size: 15px;
+	}
+
+
+	.sl-fcp-page-guide__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.sl-fcp-page-guide__item {
+		min-height: auto;
+		margin-right: 0;
+		padding: 18px 0;
+		gap: 14px;
+	}
+
+	.sl-fcp-page-guide__grid > .sl-fcp-page-guide__item:nth-child(n) {
+		margin-right: 0;
+	}
+
+	.sl-fcp-page-guide__item-title {
+		font-size: 16px;
+	}
+
+	.sl-fcp-after-guide {
+		padding-top: 56px;
+	}
+}
+
+@media (max-width: 480px) {
+	.sl-fcp-page-guide {
+		margin-top: -16px;
+	}
+
+	.sl-fcp-page-guide__box {
+		padding: 20px 16px;
+		border-radius: 16px;
+	}
+
+	.sl-fcp-page-guide__title-wrap {
+		gap: 11px;
+	}
+
+	.sl-fcp-page-guide__item {
+		gap: 12px;
+	}
+
+	.sl-fcp-page-guide__item-number {
+		font-size: 14px;
+	}
+
+	.sl-fcp-page-guide__item-title {
+		font-size: 15px;
+		line-height: 1.45;
+	}
+
+	.sl-fcp-after-guide {
+		padding-top: 48px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.sl-fcp-page-guide__item,
+	.sl-fcp-page-guide__item:hover {
+		transform: none;
+	}
+}

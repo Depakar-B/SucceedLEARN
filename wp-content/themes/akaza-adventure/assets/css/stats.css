@@ -1,0 +1,122 @@
+/*=====================
+    Stats Section
+=====================*/
+
+.stats-section {
+    padding: 50px 0;
+    background: #F7F7F7;
+    font-family: var(--slf-font-body, "Space Grotesk", system-ui, sans-serif);
+}
+
+.stats-section .container {
+    width: 100%;
+    max-width: var(--sl-home-content-max, 1400px);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.stats-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.stats-section .col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 992px) {
+    .stats-section .col-lg-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+.stat-item {
+    position: relative;
+    padding: 15px;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Vertical Divider */
+
+@media (min-width: 992px) {
+    .stat-item:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 15%;
+        width: 1px;
+        height: 70%;
+        background: #e2e2e2;
+    }
+}
+
+
+/* Numbers — accent follows page primary when set */
+
+.stat-item .counter,
+.stat-item span {
+    display: inline-block;
+    margin: 0;
+    color: var(--sl-heading-accent, #1472ba);
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+
+/* Description */
+
+.stat-item p {
+    margin-top: 10px;
+    margin-bottom: 0;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+/* Tablet */
+
+@media (max-width: 991px) {
+
+    .stat-item {
+        margin-bottom: 30px;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 576px) {
+
+    .stats-section {
+        padding: 40px 0;
+    }
+
+    .stat-item .counter,
+    .stat-item span {
+        font-size: 2.2rem;
+    }
+
+    .stat-item p {
+        font-size: 0.9rem;
+    }
+
+}

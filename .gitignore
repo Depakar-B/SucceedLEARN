@@ -1,0 +1,41 @@
+﻿# Secrets / local config
+wp-config.php
+wp-config-local.php
+.env
+.env.*
+**/credentials.json
+**/client_secret*.json
+**/*credentials*.json
+
+# WordPress core (reinstallable)
+wp-admin/
+wp-includes/
+license.txt
+readme.html
+/wp-*.php
+/xmlrpc.php
+/index.php
+
+# Generated / bulky media
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backup*/
+wp-content/ai1wm-backups/
+wp-content/w3tc-config/
+
+# Huge third-party dump (not source)
+wp-content/plugins/all-in-one-wp-migration-master/
+
+# Local drop folders / duplicate plugin copies
+_incoming/
+wp-content/plugins fro referal/
+
+# Tooling / junk
+*.log
+.DS_Store
+Thumbs.db
+node_modules/
+vendor/
+_tmp_*.php
+.cursor/

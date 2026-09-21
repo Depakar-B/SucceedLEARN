@@ -1,0 +1,346 @@
+/* SucceedLEARN GDPR Employee Awareness — Sales & Marketing Module */
+
+.sl-gdpr-sales-marketing {
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+
+/* =========================================================
+   Main Layout
+   ========================================================= */
+
+.sl-gdpr-sales-marketing__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 0.4fr) minmax(0, 0.6fr);
+	gap: 56px;
+	align-items: start;
+}
+
+.sl-gdpr-sales-marketing__content {
+	width: 100%;
+	min-width: 0;
+}
+
+.sl-gdpr-sales-marketing__heading {
+	margin: 0 0 30px;
+}
+
+.sl-gdpr-sales-marketing__heading p {
+	margin: 0;
+	color: var(--sl-page-text, #4A4A4A);
+}
+
+
+/* =========================================================
+   Feature list (global .sl-list-item chrome)
+   ========================================================= */
+
+.sl-gdpr-sales-marketing__list {
+	margin: 0;
+}
+
+.sl-gdpr-sales-marketing__list .sl-list-item {
+	display: grid;
+	grid-template-columns: minmax(0, 240px) minmax(0, 1fr);
+	align-items: center;
+	column-gap: 16px;
+	font-size: 16px;
+}
+
+.sl-gdpr-sales-marketing__list .sl-list-item__label {
+	flex: none;
+	width: 100%;
+	max-width: none;
+	min-width: 0;
+	line-height: 1.4;
+}
+
+.sl-gdpr-sales-marketing__list .sl-list-item__text {
+	min-width: 0;
+	line-height: 1.5;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.sl-gdpr-sales-marketing__actions {
+	display: flex;
+	align-items: center;
+	margin-top: 28px;
+}
+
+
+/* =========================================================
+   Right Country Panel
+   ========================================================= */
+
+.sl-gdpr-sales-marketing__panel {
+	width: 100%;
+	overflow: hidden;
+
+	border: 1px solid rgba(22, 35, 78, 0.12);
+	border-radius: 14px;
+
+	background: var(--sl-page-white, #fff);
+}
+
+
+/* =========================================================
+   Panel Header
+   ========================================================= */
+
+.sl-gdpr-sales-marketing__panel-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	padding: 22px;
+
+	border-bottom: 1px solid rgba(22, 35, 78, 0.12);
+}
+
+.sl-gdpr-sales-marketing__panel-eyebrow {
+	display: block;
+	margin-bottom: 7px;
+	color: var(--sl-page-muted, #6B7C93);
+}
+
+.sl-gdpr-sales-marketing__panel-header .sl-panel-title {
+	margin: 0;
+}
+
+.sl-gdpr-sales-marketing__legend {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	gap: 8px;
+}
+
+
+/* =========================================================
+   Legend
+   ========================================================= */
+
+.sl-gdpr-sales-marketing__legend-item {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+
+	padding: 5px 9px;
+
+	border: 1px solid rgba(20, 114, 186, 0.18);
+	border-radius: 999px;
+
+	background: rgba(20, 114, 186, 0.05);
+	color: var(--sl-page-primary-dark, #283384);
+}
+
+.sl-gdpr-sales-marketing__legend-dot {
+	width: 7px;
+	height: 7px;
+	flex: 0 0 7px;
+
+	border-radius: 50%;
+	background: var(--sl-page-primary, #1472ba);
+}
+
+.sl-gdpr-sales-marketing__legend-dot--consent {
+	background: var(--sl-page-primary-dark, #283384);
+}
+
+
+/* =========================================================
+   Country Rows
+   ========================================================= */
+
+/*
+ * No internal scrolling here.
+ * The complete country panel is allowed to grow naturally.
+ */
+
+.sl-gdpr-sales-marketing__countries {
+	width: 100%;
+}
+
+.sl-gdpr-sales-marketing__country {
+	display: grid;
+
+	/*
+	 * Smaller country column.
+	 * More space is given to the explanation.
+	 */
+	grid-template-columns: minmax(110px, 0.30fr) minmax(0, 0.70fr);
+
+	column-gap: 18px;
+
+	padding: 20px 22px;
+
+	border-bottom: 1px solid rgba(22, 35, 78, 0.10);
+}
+
+.sl-gdpr-sales-marketing__country:last-child {
+	border-bottom: 0;
+}
+
+.sl-gdpr-sales-marketing__country-name {
+	display: flex;
+	align-items: center;
+	gap: 9px;
+
+	align-self: center;
+
+	min-width: 0;
+
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-gdpr-sales-marketing__country-name strong {
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-gdpr-sales-marketing__status-dot {
+	width: 8px;
+	height: 8px;
+	flex: 0 0 8px;
+
+	border-radius: 50%;
+	background: var(--sl-page-primary, #1472ba);
+}
+
+.sl-gdpr-sales-marketing__status-dot--consent {
+	background: var(--sl-page-primary-dark, #283384);
+}
+
+.sl-gdpr-sales-marketing__country-detail {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 7px;
+
+	min-width: 0;
+}
+
+.sl-gdpr-sales-marketing__tag {
+	display: inline-flex;
+	padding: 5px 9px;
+
+	border: 1px solid rgba(20, 114, 186, 0.18);
+	border-radius: 5px;
+
+	background: rgba(20, 114, 186, 0.07);
+	color: var(--sl-page-primary-dark, #283384);
+}
+
+.sl-gdpr-sales-marketing__tag--consent {
+	border-color: rgba(40, 51, 132, 0.18);
+	background: rgba(40, 51, 132, 0.07);
+	color: var(--sl-page-primary-dark, #283384);
+}
+
+.sl-gdpr-sales-marketing__country-detail p {
+	margin: 0;
+	color: var(--sl-page-text, #4A4A4A);
+}
+
+
+/* =========================================================
+   Panel Footer
+   ========================================================= */
+
+.sl-gdpr-sales-marketing__panel-footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	gap: 16px;
+
+	padding: 15px 22px;
+
+	border-top: 1px solid rgba(22, 35, 78, 0.12);
+
+	background: rgba(20, 114, 186, 0.03);
+
+	color: var(--sl-page-muted, #6B7C93);
+}
+
+.sl-gdpr-sales-marketing__panel-footer a {
+	color: var(--sl-page-primary, #1472ba);
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.sl-gdpr-sales-marketing__panel-footer a:hover {
+	color: var(--sl-page-primary-dark, #283384);
+}
+
+
+/* =========================================================
+   Tablet
+   ========================================================= */
+
+@media (max-width: 999px) {
+
+	.sl-gdpr-sales-marketing {
+		padding: 75px 0;
+	}
+
+	.sl-gdpr-sales-marketing__grid {
+		grid-template-columns: 1fr;
+		gap: 45px;
+	}
+}
+
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+	.sl-gdpr-sales-marketing {
+		padding: 60px 0;
+	}
+
+	.sl-gdpr-sales-marketing__grid {
+		gap: 35px;
+	}
+
+	.sl-gdpr-sales-marketing__heading {
+		margin-bottom: 26px;
+	}
+
+	.sl-gdpr-sales-marketing__list .sl-list-item {
+		grid-template-columns: 1fr;
+		row-gap: 6px;
+	}
+
+	.sl-gdpr-sales-marketing__panel-header {
+		align-items: flex-start;
+		flex-direction: column;
+		padding: 20px;
+	}
+
+	.sl-gdpr-sales-marketing__legend {
+		justify-content: flex-start;
+	}
+
+	.sl-gdpr-sales-marketing__country {
+		grid-template-columns: 1fr;
+		row-gap: 12px;
+		padding: 20px;
+	}
+
+	.sl-gdpr-sales-marketing__country-name {
+		align-self: auto;
+	}
+
+	.sl-gdpr-sales-marketing__panel-footer {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 16px 20px;
+	}
+}

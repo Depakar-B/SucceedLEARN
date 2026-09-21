@@ -1,0 +1,17 @@
+/*
+ * Security Awareness — leadership section.
+ * Cards / heading reuse sl-sa-annual-training.css
+ */
+
+.sl-sa-leadership {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+@media (max-width: 767px) {
+	.sl-sa-leadership {
+		padding: 60px 0;
+	}
+}

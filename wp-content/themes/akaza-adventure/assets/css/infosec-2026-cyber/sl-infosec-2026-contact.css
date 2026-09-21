@@ -1,0 +1,262 @@
+/*
+ * SucceedLEARN
+ * Cybersecurity Awareness Month 2026
+ * Contact Section
+ *
+ * Layout and campaign-specific presentation only.
+ * Button/form styling remains global/plugin controlled.
+ */
+
+ .sl-infosec-2026-contact {
+	padding: 90px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-infosec-2026-contact__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+	gap: 48px;
+	align-items: start;
+}
+
+/* --------------------------------
+   Left Content
+--------------------------------- */
+
+.sl-infosec-2026-contact__content {
+	padding-top: 12px;
+}
+
+.sl-infosec-2026-contact__content .sl-home-sub-heading {
+	display: inline-block;
+	margin-bottom: 14px;
+}
+
+.sl-infosec-2026-contact__content h2 {
+	margin-bottom: 20px;
+}
+
+.sl-infosec-2026-contact__content h2 span {
+	color: var(
+		--sl-heading-accent,
+		var(--sl-page-primary, #1472ba)
+	);
+}
+
+.sl-infosec-2026-contact__lead {
+	margin: 0 0 24px;
+}
+
+/* --------------------------------
+   Campaign Price Highlight
+--------------------------------- */
+
+.sl-infosec-2026-contact__price {
+	display: inline-flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: baseline;
+	gap: 8px;
+	margin: 4px 0 24px;
+	padding: 18px 24px;
+	border: 1px solid rgba(20, 114, 186, 0.18);
+	border-left: 4px solid var(
+		--sl-page-primary,
+		#1472ba
+	);
+	border-radius: 10px;
+	background: var(--sl-page-white, #fff);
+	white-space: nowrap;
+}
+
+.sl-infosec-2026-contact__price-amount {
+	display: inline;
+	font-family: var(
+		--slf-font-body,
+		"Space Grotesk",
+		system-ui,
+		sans-serif
+	);
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 1;
+	color: var(
+		--sl-page-primary,
+		#1472ba
+	);
+}
+
+.sl-infosec-2026-contact__price-label {
+	display: inline;
+	margin-top: 0;
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 1.4;
+	color: var(
+		--sl-page-navy,
+		#16234e
+	);
+}
+
+.sl-infosec-2026-contact__description {
+	max-width: 620px;
+	margin: 0 0 24px;
+}
+
+.sl-infosec-2026-contact__whatsapp {
+	display: inline-flex;
+	align-items: center;
+	gap: 12px;
+	width: auto;
+	max-width: 100%;
+	min-height: 56px;
+	margin-top: 4px;
+	padding: 10px 18px;
+	border: 1px solid #25d366;
+	border-radius: 12px;
+	background: #25d366;
+	color: #ffffff;
+	text-decoration: none;
+	box-sizing: border-box;
+	box-shadow: 0 12px 28px rgba(37, 211, 102, 0.28);
+	transition:
+		transform 0.2s ease,
+		background 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.sl-infosec-2026-contact__whatsapp:hover,
+.sl-infosec-2026-contact__whatsapp:focus {
+	transform: translateY(-2px);
+	background: #1ebe57;
+	border-color: #1ebe57;
+	color: #ffffff;
+	box-shadow: 0 16px 32px rgba(37, 211, 102, 0.34);
+}
+
+.sl-infosec-2026-contact__whatsapp-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 auto;
+	width: 28px;
+	height: 28px;
+	color: #ffffff;
+}
+
+.sl-infosec-2026-contact__whatsapp-icon svg {
+	display: block;
+	width: 22px;
+	height: 22px;
+}
+
+.sl-infosec-2026-contact__whatsapp-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 2px;
+	min-width: 0;
+}
+
+.sl-infosec-2026-contact__whatsapp-label {
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1.25;
+}
+
+.sl-infosec-2026-contact__whatsapp-number {
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1.25;
+	letter-spacing: 0.01em;
+}
+
+/* --------------------------------
+   Form
+--------------------------------- */
+
+.sl-infosec-2026-contact__form-wrap {
+	width: 100%;
+	max-width: 620px;
+	margin-left: auto;
+}
+
+.sl-infosec-2026-contact__form-wrap
+.sl-home-form-wrapper {
+	width: 100%;
+}
+
+/*
+ * Do not style the form fields or submit
+ * button here. Those belong to the
+ * SucceedLEARN common contact form.
+ */
+
+
+/* --------------------------------
+   Tablet
+--------------------------------- */
+
+@media (max-width: 999px) {
+
+	.sl-infosec-2026-contact {
+		padding: 75px 0;
+	}
+
+	.sl-infosec-2026-contact__grid {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.sl-infosec-2026-contact__content {
+		padding-top: 0;
+	}
+
+	.sl-infosec-2026-contact__form-wrap {
+		max-width: 700px;
+		margin-left: 0;
+	}
+
+}
+
+
+/* --------------------------------
+   Mobile
+--------------------------------- */
+
+@media (max-width: 767px) {
+
+	.sl-infosec-2026-contact {
+		padding: 60px 0;
+	}
+
+	.sl-infosec-2026-contact__grid {
+		gap: 32px;
+	}
+
+	.sl-infosec-2026-contact__content h2 {
+		margin-bottom: 18px;
+	}
+
+	.sl-infosec-2026-contact__lead {
+		margin-bottom: 20px;
+	}
+
+	.sl-infosec-2026-contact__price {
+		width: fit-content;
+		max-width: 100%;
+		margin-bottom: 20px;
+		padding: 16px 20px;
+		white-space: normal;
+		flex-wrap: wrap;
+	}
+
+	.sl-infosec-2026-contact__price-amount {
+		font-size: 28px;
+	}
+
+	.sl-infosec-2026-contact__form-wrap {
+		max-width: 100%;
+	}
+
+}

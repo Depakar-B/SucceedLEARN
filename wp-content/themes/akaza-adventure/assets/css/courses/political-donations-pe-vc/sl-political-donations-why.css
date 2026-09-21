@@ -1,0 +1,98 @@
+/**
+ * Political Donations Training — Why SucceedLEARN.
+ *
+ * @package Akaza_Adventure
+ */
+
+ .sl-political-donations-why {
+	background: var(--sl-page-bg, #f5f3ef);
+	padding: 88px 0;
+}
+
+.sl-political-donations-why__intro {
+	margin-bottom: 38px;
+}
+
+.sl-political-donations-why__intro h2 {
+	margin-bottom: 18px;
+}
+
+.sl-political-donations-why__intro p {
+	margin: 0;
+	max-width: 850px;
+}
+
+.sl-political-donations-why__grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.sl-political-donations-why__item {
+	min-width: 0;
+	padding: 24px 28px 24px 0;
+	border-bottom: 1px solid rgba(22, 35, 78, 0.12);
+}
+
+.sl-political-donations-why__item:nth-child(even) {
+	padding-left: 32px;
+	padding-right: 0;
+	border-left: 1px solid rgba(22, 35, 78, 0.12);
+}
+
+.sl-political-donations-why__item:nth-child(-n + 2) {
+	padding-top: 0;
+}
+
+.sl-political-donations-why__item .sl-panel-title {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.sl-political-donations-why__item p {
+	margin: 0;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+	.sl-political-donations-why {
+		padding: 72px 0;
+	}
+
+	.sl-political-donations-why__item {
+		padding-right: 22px;
+	}
+
+	.sl-political-donations-why__item:nth-child(even) {
+		padding-left: 22px;
+	}
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+	.sl-political-donations-why {
+		padding: 60px 0;
+	}
+
+	.sl-political-donations-why__intro {
+		margin-bottom: 28px;
+	}
+
+	.sl-political-donations-why__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.sl-political-donations-why__item,
+	.sl-political-donations-why__item:nth-child(even),
+	.sl-political-donations-why__item:nth-child(-n + 2) {
+		padding: 20px 0;
+		border-left: 0;
+	}
+
+	.sl-political-donations-why__item:first-child {
+		padding-top: 0;
+	}
+
+	.sl-political-donations-why__item:last-child {
+		padding-bottom: 0;
+	}
+}

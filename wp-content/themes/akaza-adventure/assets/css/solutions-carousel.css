@@ -1,0 +1,184 @@
+/**
+ * Reusable solutions card grid (About, Contact, etc.).
+ * Accent follows --sl-page-primary when set on the page wrapper.
+ * Neutrals from SucceedLearn brand: #16234e, #6B7C93, #f5f5f5
+ */
+
+.sl-solutions-cards {
+	--sl-sc-accent: var(--sl-page-primary, #0e9f4a);
+	--sl-sc-accent-dark: var(--sl-page-primary-dark, #0d723b);
+	--sl-sc-accent-soft: var(--sl-page-primary-soft, #eaf6ef);
+	--sl-sc-navy: #16234e;
+	--sl-sc-muted: #6b7c93;
+	--sl-sc-blue: #1472ba;
+	--sl-sc-soft: #f5f5f5;
+
+	padding: clamp(48px, 7vw, 80px) 0;
+	background: var(--sl-sc-soft);
+	font-family: var(--slf-font-body, "Space Grotesk", system-ui, sans-serif);
+}
+
+.sl-solutions-cards__container {
+	width: min(1180px, calc(100% - 40px));
+	margin: 0 auto;
+}
+
+.sl-solutions-cards__header {
+	max-width: 720px;
+	margin: 0 0 36px;
+}
+
+.sl-solutions-cards__header .sl-home-sub-heading {
+	display: inline-flex;
+	align-items: center;
+	gap: 0;
+	margin: 0 0 14px;
+	padding: 8px 16px;
+	border: 1px solid rgba(22, 35, 78, 0.12);
+	border-radius: 50px;
+	background: #ffffff;
+	color: var(--sl-sc-accent);
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.4;
+	box-shadow: 0 8px 20px rgba(22, 35, 78, 0.04);
+}
+
+.sl-solutions-cards__header .sl-home-sub-heading::before {
+	display: none;
+	content: none;
+}
+
+.sl-solutions-cards__header h2 {
+	margin: 0 0 12px;
+	color: var(--sl-sc-navy);
+	line-height: 1.2;
+}
+
+.sl-solutions-cards__header p {
+	margin: 0;
+	color: var(--sl-sc-muted);
+	font-size: 17px;
+	line-height: 1.7;
+}
+
+.sl-solutions-cards__grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 22px;
+	align-items: stretch;
+}
+
+.sl-solutions-cards__card {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 28px;
+	border-radius: 16px;
+	background: #ffffff;
+	border: 1px solid rgba(22, 35, 78, 0.08);
+	box-shadow: 0 10px 28px rgba(22, 35, 78, 0.06);
+	transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.sl-solutions-cards__card:hover {
+	box-shadow: 0 14px 36px rgba(22, 35, 78, 0.1);
+	transform: translateY(-3px);
+}
+
+.sl-solutions-cards__icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 64px;
+	height: 64px;
+	margin-bottom: 20px;
+	border-radius: 14px;
+	background: var(--sl-sc-accent-soft);
+	border: 1px solid rgba(22, 35, 78, 0.1);
+	flex-shrink: 0;
+}
+
+.sl-solutions-cards__icon img {
+	display: block;
+	width: 36px;
+	height: 36px;
+	object-fit: contain;
+}
+
+.sl-solutions-cards__body {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	min-height: 0;
+}
+
+.sl-solutions-cards__body h3 {
+	margin: 0 0 14px;
+	color: var(--sl-sc-navy);
+	font-size: 1.1rem;
+	font-weight: 800;
+	line-height: 1.35;
+}
+
+.sl-solutions-cards__body p {
+	margin: 0 0 20px;
+	color: var(--sl-sc-muted);
+	font-size: 15px;
+	line-height: 1.7;
+	flex: 1;
+}
+
+.sl-solutions-cards__link {
+	display: inline-flex;
+	align-items: center;
+	margin-top: auto;
+	color: var(--sl-sc-accent-dark);
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 1.45;
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+.sl-solutions-cards__link:hover,
+.sl-solutions-cards__link:focus {
+	color: var(--sl-sc-blue);
+	text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+	.sl-solutions-cards__grid {
+		gap: 18px;
+	}
+}
+
+@media (max-width: 640px) {
+	.sl-solutions-cards__container {
+		width: min(100% - 30px, 1180px);
+	}
+
+	.sl-solutions-cards__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.sl-solutions-cards__card {
+		padding: 22px 20px;
+	}
+
+	.sl-solutions-cards__body h3 {
+		font-size: 1.05rem;
+	}
+
+	.sl-solutions-cards__body p {
+		font-size: 14px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.sl-solutions-cards__card,
+	.sl-solutions-cards__card:hover {
+		transition: none;
+		transform: none;
+	}
+}

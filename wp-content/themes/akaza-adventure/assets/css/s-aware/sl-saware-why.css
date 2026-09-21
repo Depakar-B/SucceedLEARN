@@ -1,0 +1,149 @@
+/**
+ * SucceedLEARN — S-Aware
+ * Section: Why S-Aware?
+ */
+
+ .sl-saware-why {
+	padding: 76px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-saware-why__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+	gap: 64px;
+	align-items: start;
+}
+
+/* --------------------------------
+   Content
+--------------------------------- */
+
+.sl-saware-why__content {
+	min-width: 0;
+}
+
+.sl-saware-why__heading {
+	margin-bottom: 18px;
+}
+
+.sl-saware-why__copy {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.sl-saware-why__copy p {
+	margin: 0;
+}
+
+/* --------------------------------
+   Image
+   Sticky + inner scroll for tall
+   screenshots / visuals
+--------------------------------- */
+
+.sl-saware-why__media {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 110px) + 24px);
+	width: 100%;
+	min-width: 0;
+	align-self: start;
+}
+
+.sl-saware-why__image-scroll {
+	width: 100%;
+	max-height: min(
+		620px,
+		calc(100vh - var(--slf-header-clearance, 110px) - 64px)
+	);
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	overscroll-behavior: contain;
+
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 16px;
+	background: #ffffff;
+	scrollbar-width: thin;
+}
+
+.sl-saware-why__image-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	/* Taller than the scroll viewport so overflow scroll is available */
+	min-height: 520px;
+	padding: 40px;
+	box-sizing: border-box;
+
+	background: #ffffff;
+	color: var(--sl-page-muted, #6b7c93);
+	text-align: center;
+}
+
+.sl-saware-why__image-scroll img {
+	display: block;
+	width: 100%;
+	height: auto;
+	vertical-align: top;
+}
+
+/* --------------------------------
+   Tablet
+--------------------------------- */
+
+@media (max-width: 991px) {
+
+	.sl-saware-why {
+		padding: 64px 0;
+	}
+
+	.sl-saware-why__grid {
+		grid-template-columns: 1fr;
+		gap: 42px;
+	}
+
+	.sl-saware-why__media {
+		position: static;
+		top: auto;
+	}
+
+	.sl-saware-why__image-scroll {
+		max-height: 520px;
+	}
+
+	.sl-saware-why__image-placeholder {
+		min-height: 720px;
+	}
+}
+
+/* --------------------------------
+   Mobile
+--------------------------------- */
+
+@media (max-width: 767px) {
+
+	.sl-saware-why {
+		padding: 52px 0;
+	}
+
+	.sl-saware-why__grid {
+		gap: 32px;
+	}
+
+	.sl-saware-why__image-scroll {
+		max-height: 420px;
+		border-radius: 12px;
+	}
+
+	.sl-saware-why__image-placeholder {
+		min-height: 560px;
+		padding: 28px;
+	}
+
+	.sl-saware-why__copy {
+		gap: 12px;
+	}
+}

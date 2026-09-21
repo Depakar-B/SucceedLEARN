@@ -1,0 +1,148 @@
+/**
+ * Whistleblowing Training — Legal & Regulatory Context.
+ *
+ * @package Akaza_Adventure
+ */
+
+ .sl-whistleblowing-regulatory {
+	background: #f5f5f5;
+	padding: 90px 0;
+}
+
+.sl-whistleblowing-regulatory__intro {
+	margin-bottom: 42px;
+}
+
+.sl-whistleblowing-regulatory__intro h2 {
+	margin-top: 14px;
+	margin-bottom: 18px;
+}
+
+.sl-whistleblowing-regulatory__intro > p {
+	margin-top: 0;
+	margin-bottom: 0;
+	max-width: 850px;
+}
+
+.sl-whistleblowing-regulatory__table-wrap {
+	width: 100%;
+	overflow-x: auto;
+}
+
+.sl-whistleblowing-regulatory__table {
+	width: 100%;
+	border-collapse: collapse;
+	background: #ffffff;
+	border: 1px solid rgba(22, 35, 78, 0.12);
+	border-radius: 14px;
+	overflow: hidden;
+}
+
+.sl-whistleblowing-regulatory__table th {
+	padding: 20px 24px;
+	background: #16234e;
+	color: #ffffff;
+	text-align: left;
+	font-size: 17px;
+	font-weight: 700;
+	line-height: 1.4;
+}
+
+.sl-whistleblowing-regulatory__table td {
+	width: 50%;
+	padding: 20px 24px;
+	border-top: 1px solid rgba(22, 35, 78, 0.10);
+	vertical-align: top;
+}
+
+.sl-whistleblowing-regulatory__table td + td {
+	border-left: 1px solid rgba(22, 35, 78, 0.10);
+}
+
+.sl-whistleblowing-regulatory__item {
+	display: block;
+	position: relative;
+	padding-left: 20px;
+}
+
+.sl-whistleblowing-regulatory__item::before {
+	content: "";
+	position: absolute;
+	top: 0.65em;
+	left: 0;
+	width: 7px;
+	height: 7px;
+	background: var(--sl-page-primary, #1472ba);
+	border-radius: 50%;
+	transform: translateY(-50%);
+}
+
+.sl-whistleblowing-regulatory__notice {
+	display: grid;
+	grid-template-columns: auto minmax(0, 1fr);
+	gap: 18px;
+	align-items: start;
+	margin-top: 30px;
+	padding: 24px 26px;
+	background: #ffffff;
+	border-left: 4px solid var(--sl-page-primary, #1472ba);
+	border-radius: 10px;
+	box-sizing: border-box;
+}
+
+.sl-whistleblowing-regulatory__notice-label {
+	padding-top: 2px;
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 1.4;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+.sl-whistleblowing-regulatory__notice p {
+	margin: 0;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+	.sl-whistleblowing-regulatory {
+		padding: 72px 0;
+	}
+
+	.sl-whistleblowing-regulatory__table th,
+	.sl-whistleblowing-regulatory__table td {
+		padding: 18px 20px;
+	}
+
+	.sl-whistleblowing-regulatory__notice {
+		margin-top: 24px;
+	}
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+	.sl-whistleblowing-regulatory {
+		padding: 60px 0;
+	}
+
+	.sl-whistleblowing-regulatory__intro {
+		margin-bottom: 30px;
+	}
+
+	.sl-whistleblowing-regulatory__table {
+		min-width: 620px;
+	}
+
+	.sl-whistleblowing-regulatory__table th,
+	.sl-whistleblowing-regulatory__table td {
+		padding: 16px;
+	}
+
+	.sl-whistleblowing-regulatory__notice {
+		grid-template-columns: 1fr;
+		gap: 8px;
+		margin-top: 20px;
+		padding: 20px;
+	}
+}

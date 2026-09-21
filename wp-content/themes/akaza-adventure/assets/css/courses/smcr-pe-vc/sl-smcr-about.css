@@ -1,0 +1,121 @@
+/* =========================================================
+   SMCR Training for PE & VC Firms — About Training
+   ========================================================= */
+
+   .sl-smcr-about {
+	padding: 88px 0;
+	background: #ffffff;
+}
+
+.sl-smcr-about__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+	gap: 72px;
+	align-items: start;
+}
+
+.sl-smcr-about__media {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 110px) + 24px);
+	align-self: start;
+}
+
+.sl-smcr-about__image {
+	width: 100%;
+	overflow: hidden;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 16px;
+	background: #ffffff;
+}
+
+.sl-smcr-about__image-placeholder {
+	min-height: 520px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 32px;
+	background: #f5f5f5;
+	text-align: center;
+}
+
+.sl-smcr-about__content {
+	min-width: 0;
+	padding-top: 8px;
+}
+
+.sl-smcr-about__content h2 {
+	margin-top: 14px;
+	margin-bottom: 24px;
+}
+
+.sl-smcr-about__content h2 span {
+	color: var(--sl-heading-accent, #1472ba);
+}
+
+.sl-smcr-about__content p {
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+.sl-smcr-about__content p:last-child {
+	margin-bottom: 0;
+}
+
+.sl-smcr-about__intro {
+	padding-left: 20px;
+	border-left: 3px solid #1472ba;
+}
+
+/* ---------------------------------------------------------
+   Tablet
+   --------------------------------------------------------- */
+
+@media (max-width: 991px) {
+	.sl-smcr-about {
+		padding: 72px 0;
+	}
+
+	.sl-smcr-about__grid {
+		grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+		gap: 44px;
+	}
+
+	.sl-smcr-about__media {
+		position: static;
+	}
+
+	.sl-smcr-about__image-placeholder {
+		min-height: 420px;
+	}
+}
+
+/* ---------------------------------------------------------
+   Mobile
+   --------------------------------------------------------- */
+
+@media (max-width: 767px) {
+	.sl-smcr-about {
+		padding: 56px 0;
+	}
+
+	.sl-smcr-about__grid {
+		grid-template-columns: 1fr;
+		gap: 32px;
+	}
+
+	.sl-smcr-about__image-placeholder {
+		min-height: 320px;
+	}
+
+	.sl-smcr-about__content {
+		padding-top: 0;
+	}
+
+	.sl-smcr-about__content h2 {
+		margin-bottom: 20px;
+	}
+
+	.sl-smcr-about__intro {
+		padding-left: 16px;
+	}
+}

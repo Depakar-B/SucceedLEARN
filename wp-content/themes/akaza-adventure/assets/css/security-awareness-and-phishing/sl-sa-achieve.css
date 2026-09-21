@@ -1,0 +1,112 @@
+/*
+ * Security Awareness — What Can Your Organization Achieve?
+ */
+
+.sl-sa-achieve {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-sa-achieve__intro {
+	margin-bottom: 40px;
+}
+
+.sl-sa-achieve__intro h2 {
+	margin-bottom: 16px;
+}
+
+.sl-sa-achieve__intro p {
+	margin-bottom: 16px;
+}
+
+.sl-sa-achieve__intro p:last-child {
+	margin-bottom: 0;
+}
+
+.sl-sa-achieve__grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 24px;
+}
+
+.sl-sa-achieve__card {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	height: 100%;
+	min-width: 0;
+	padding: 28px 24px;
+	border: 1px solid rgba(107, 124, 147, 0.18);
+	border-radius: 16px;
+	background: var(--sl-page-white, #ffffff);
+	box-shadow: 0 8px 24px rgba(22, 35, 78, 0.04);
+	text-align: left;
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.sl-sa-achieve__card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 14px 32px rgba(22, 35, 78, 0.1);
+}
+
+.sl-sa-achieve__icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 auto;
+	width: 48px;
+	height: 48px;
+	margin: 0 0 16px;
+	border-radius: 12px;
+	background: rgba(109, 195, 235, 0.22);
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-sa-achieve__icon svg {
+	display: block;
+	width: 24px;
+	height: 24px;
+}
+
+.sl-sa-achieve__text {
+	margin: 0;
+	color: var(--sl-page-navy, #16234e);
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.55;
+	text-align: left;
+}
+
+@media (max-width: 1199px) {
+	.sl-sa-achieve__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-sa-achieve {
+		padding: 60px 0;
+	}
+
+	.sl-sa-achieve__intro {
+		margin-bottom: 28px;
+	}
+
+	.sl-sa-achieve__grid {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
+	.sl-sa-achieve__card {
+		padding: 22px 20px;
+	}
+
+	.sl-sa-achieve__text {
+		font-size: 15px;
+	}
+}

@@ -1,0 +1,172 @@
+/**
+ * Header-integrated top bar (desktop) + bottom notification (mobile).
+ */
+
+/* ── Desktop bar (inside .site-header, bottom row) ── */
+.epsh-top-bar--header {
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* Desktop top bar hides with the smart-scroll header (no separate strip on scroll down). */
+body.epsh-has-top-bar .site-header:not(.epsh-header-hidden) .epsh-top-bar--header,
+body.epsh-has-top-bar .genesis-header:not(.epsh-header-hidden) .epsh-top-bar--header,
+body.epsh-has-top-bar .site-header:not(.epsh-header-hidden) > .epsh-top-bar--header,
+body.epsh-has-top-bar .genesis-header:not(.epsh-header-hidden) > .epsh-top-bar--header {
+	display: block !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+
+body.epsh-has-top-bar .site-header.epsh-header-hidden .epsh-top-bar--header,
+body.epsh-has-top-bar .genesis-header.epsh-header-hidden .epsh-top-bar--header {
+	display: none !important;
+	visibility: hidden !important;
+	opacity: 0 !important;
+	pointer-events: none !important;
+}
+
+.epsh-top-bar--header .epsh-top-bar__inner {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+	padding: 3px 16px 4px;
+	text-align: center;
+	line-height: 1.45;
+	box-sizing: border-box;
+}
+
+@media (min-width: 1201px) {
+	.epsh-top-bar--header .epsh-top-bar__inner {
+		max-width: var(--epsh-header-content-max, 1290px);
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.epsh-top-bar--header .epsh-top-bar__message {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	font-family: "Space Grotesk", system-ui, sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	line-height: inherit;
+	color: #ffffff;
+	white-space: normal;
+}
+
+.epsh-top-bar--header .epsh-top-bar__actions {
+	display: inline;
+}
+
+.epsh-top-bar--header .epsh-top-bar__cta {
+	display: inline-block;
+	margin: 1px 0 0 14px;
+	padding: 0 12px 1px;
+	border-radius: 3px;
+	border: none;
+	background: var(--epsh-topbar-btn, #0e9aaa);
+	color: #ffffff !important;
+	font-family: "Space Grotesk", system-ui, sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.5;
+	text-decoration: none;
+	white-space: nowrap;
+	vertical-align: middle;
+	box-sizing: border-box;
+	transition: opacity 0.1s ease;
+}
+
+.epsh-top-bar--header .epsh-top-bar__cta + .epsh-top-bar__cta {
+	margin-left: 8px;
+}
+
+.epsh-top-bar--header .epsh-top-bar__cta:hover,
+.epsh-top-bar--header .epsh-top-bar__cta:focus {
+	color: #ffffff !important;
+	opacity: 0.9;
+	text-decoration: none;
+}
+
+/* ── Shared / fallback ── */
+.epsh-top-bar__inner {
+	box-sizing: border-box;
+}
+
+.epsh-top-bar__message {
+	overflow-wrap: anywhere;
+	word-break: break-word;
+}
+
+/* ── Mobile bottom banner ── */
+.epsh-top-bar--mobile {
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.epsh-top-bar--mobile .epsh-top-bar__inner {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 12px 20px;
+	padding: 12px 20px;
+	padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+}
+
+.epsh-top-bar--mobile .epsh-top-bar__message {
+	display: block;
+	flex: 0 1 auto;
+	width: auto;
+	max-width: 620px;
+	min-width: 0;
+	margin: 0;
+	padding: 0;
+	font-family: "Space Grotesk", system-ui, sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.5;
+	text-align: center;
+	color: #ffffff;
+}
+
+.epsh-top-bar--mobile .epsh-top-bar__actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	flex-shrink: 0;
+	width: auto;
+}
+
+.epsh-top-bar--mobile .epsh-top-bar__cta {
+	display: inline-block;
+	padding: 10px 20px;
+	border-radius: 5px;
+	border: 2px solid var(--epsh-topbar-btn, #fa8b05);
+	background: var(--epsh-topbar-btn, #fa8b05);
+	color: #ffffff !important;
+	font-family: "Space Grotesk", system-ui, sans-serif;
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 1;
+	text-decoration: none;
+	white-space: nowrap;
+	box-sizing: border-box;
+}
+
+.epsh-top-bar--mobile .epsh-top-bar__cta:hover,
+.epsh-top-bar--mobile .epsh-top-bar__cta:focus {
+	color: #ffffff !important;
+	opacity: 0.9;
+	text-decoration: none;
+}

@@ -1,0 +1,540 @@
+.scf-form-wrap {
+	--scf-brand: #1472ba;
+	--scf-brand-hover: #16234e;
+	--scf-brand-fill: var(--sl-btn-primary-fill, linear-gradient(180deg, #ea3e24 0%, #ea3e24 100%));
+	--scf-text: #0f172a;
+	--scf-muted: #64748b;
+	--scf-border: #d7e3ef;
+	--scf-input-bg: #ffffff;
+
+	max-width: 480px;
+	margin: 1.5rem auto;
+	padding: 1.75rem 1.5rem;
+	box-sizing: border-box;
+	background: transparent;
+	border: 1px solid var(--scf-border);
+	border-radius: 14px;
+	box-shadow: 0 8px 28px rgba(20, 114, 186, 0.08);
+}
+
+/* Compact layout for dedicated course form (tab view: full width, no card bg) */
+.scf-form-wrap.scf-form-wrap-course {
+	max-width: none;
+	width: 100%;
+	padding: 1.5rem 1.25rem;
+	background: transparent;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	box-sizing: border-box;
+}
+
+.scf-form-wrap h2.scf-form-title,
+body.slf-body .scf-form-wrap h2.scf-form-title,
+body.slf-body #main-content.sl-coc-page .scf-form-wrap h2.scf-form-title,
+body.slf-body main.sl-coc-page .scf-form-wrap h2.scf-form-title,
+body.slf-body #sl-csa-main .scf-form-wrap h2.scf-form-title,
+body.slf-body main.sl-csa-page .scf-form-wrap h2.scf-form-title,
+body.slf-body .sl-csa-page .scf-form-wrap h2.scf-form-title {
+	margin: 0 0 1.25rem;
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 1.35;
+	letter-spacing: normal;
+	color: var(--scf-text);
+}
+
+.scf-form-wrap.scf-form-wrap-course h2.scf-form-title {
+	text-align: center;
+}
+
+.scf-form-wrap.scf-form-wrap-course .scf-field-row {
+	gap: 0.75rem;
+}
+
+.scf-form-wrap.scf-form-wrap-course .scf-submit {
+	max-width: 100%;
+}
+
+.scf-form {
+	max-width: 100%;
+	margin: 0;
+}
+
+/* Hide honeypot field from users */
+.scf-honeypot {
+	position: absolute;
+	left: -9999px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.scf-field {
+	margin-bottom: 0.9rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.scf-field label {
+	font-weight: 600;
+	color: var(--scf-text);
+	margin-bottom: 0.35rem;
+	font-size: 0.875rem;
+}
+
+.scf-helper-text {
+	display: block;
+	margin-bottom: 0.35rem;
+	font-size: 0.8rem;
+	color: #475569;
+}
+
+.scf-helper-text.is-hidden {
+	display: none;
+}
+
+.scf-other-course-hint {
+	margin-top: 0.35rem;
+	margin-bottom: 0;
+}
+
+.scf-required {
+	color: #dc2626;
+	margin-left: 2px;
+}
+
+.scf-field input:not([type="checkbox"]):not([type="radio"]),
+.scf-field select,
+.scf-field textarea {
+	border: 1px solid var(--scf-border);
+	border-radius: 8px;
+	font-size: 0.95rem;
+	line-height: 1.4;
+	padding: 0.7rem 0.85rem;
+	background-color: var(--scf-input-bg);
+	color: var(--scf-text);
+	width: 100%;
+	box-sizing: border-box;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Keep Chrome autofill from changing background colors */
+.scf-field input:-webkit-autofill,
+.scf-field textarea:-webkit-autofill,
+.scf-field select:-webkit-autofill {
+	-webkit-text-fill-color: #0f172a;
+	transition: background-color 9999s ease-in-out 0s;
+	box-shadow: 0 0 0px 1000px #ffffff inset;
+}
+
+.scf-field input::placeholder,
+.scf-field textarea::placeholder {
+	color: rgba(15, 23, 42, 0.42);
+}
+
+.scf-field input:not([type="checkbox"]):not([type="radio"]):focus,
+.scf-field select:focus,
+.scf-field textarea:focus {
+	outline: none;
+	border-color: var(--scf-border);
+	box-shadow: none;
+}
+
+/* Custom select arrow with right-side spacing */
+.scf-field select {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='%230f172a' d='M5.6 7.8a1 1 0 0 1 1.4 0L10 10.8l3-3a1 1 0 1 1 1.4 1.4l-3.7 3.7a1 1 0 0 1-1.4 0L5.6 9.2a1 1 0 0 1 0-1.4Z'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 0.85rem center;
+	background-size: 18px 18px;
+	padding-right: 2.75rem;
+}
+
+.scf-field select::-ms-expand {
+	display: none;
+}
+
+.scf-field textarea {
+	resize: vertical;
+	min-height: 88px;
+}
+
+/* Two-column layout for name and email fields */
+.scf-field-row {
+	display: flex;
+	gap: 1rem;
+	margin-bottom: 0;
+}
+
+.scf-field-row .scf-field {
+	flex: 1;
+	min-width: 0;
+	margin-bottom: 0.9rem;
+}
+
+@media (max-width: 420px) {
+	.scf-form-wrap {
+		padding: 1.25rem 1rem;
+		border-radius: 12px;
+	}
+
+	.scf-field-row {
+		flex-direction: column;
+		gap: 0;
+	}
+
+	.scf-field label {
+		font-size: 0.85rem;
+	}
+
+	.scf-field input:not([type="checkbox"]):not([type="radio"]),
+	.scf-field select,
+	.scf-field textarea {
+		font-size: 0.95rem;
+	}
+
+	.scf-submit {
+		max-width: 100%;
+	}
+}
+
+.scf-field.scf-checkbox,
+.scf-checkbox {
+	flex-direction: row;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	position: relative;
+	pointer-events: auto;
+	display: flex;
+	gap: 0;
+	margin-bottom: 0.35rem;
+}
+
+.scf-field.scf-checkbox label,
+.scf-checkbox label {
+	font-weight: 400;
+	font-size: 0.75rem;
+	color: var(--scf-muted);
+	cursor: pointer;
+	flex: 1;
+	line-height: 1.35;
+	pointer-events: auto;
+	user-select: none;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 0.2rem;
+	min-height: 1.2em;
+}
+
+.scf-form-wrap .scf-form p.scf-recaptcha-notice,
+.scf-form-wrap p.scf-recaptcha-notice {
+	margin: 0.5rem 0 !important;
+	font-size: 10px !important;
+	line-height: 1.3 !important;
+	font-weight: 400 !important;
+	color: #94a3b8 !important;
+}
+
+/* Hide floating reCAPTCHA badge; show “This site is protected by reCAPTCHA.” in .scf-recaptcha-notice (Google requirement). */
+.grecaptcha-badge {
+	visibility: hidden !important;
+	opacity: 0 !important;
+	pointer-events: none !important;
+	width: 0 !important;
+	height: 0 !important;
+	overflow: hidden !important;
+}
+
+.scf-checkbox input[type="checkbox"],
+.scf-form .scf-checkbox input[type="checkbox"],
+body .scf-form .scf-checkbox input[type="checkbox"] {
+	width: 1em !important;
+	height: 1em !important;
+	margin: 0.15rem 0.4rem 0 0 !important;
+	flex-shrink: 0;
+	cursor: pointer !important;
+	pointer-events: auto !important;
+	position: relative;
+	z-index: 10;
+	opacity: 1 !important;
+	appearance: checkbox;
+	-webkit-appearance: checkbox;
+	-moz-appearance: checkbox;
+	border: initial !important;
+	background: initial !important;
+	padding: 0 !important;
+	box-shadow: none !important;
+	vertical-align: middle;
+}
+
+.scf-checkbox input[type="checkbox"]::before,
+.scf-checkbox input[type="checkbox"]::after,
+.scf-checkbox input[type="checkbox"]:checked::before,
+.scf-checkbox input[type="checkbox"]:checked::after,
+.scf-form .scf-checkbox input[type="checkbox"]::before,
+.scf-form .scf-checkbox input[type="checkbox"]::after,
+.scf-form .scf-checkbox input[type="checkbox"]:checked::before,
+.scf-form .scf-checkbox input[type="checkbox"]:checked::after,
+body .scf-form .scf-checkbox input[type="checkbox"]::before,
+body .scf-form .scf-checkbox input[type="checkbox"]::after,
+body .scf-form .scf-checkbox input[type="checkbox"]:checked::before,
+body .scf-form .scf-checkbox input[type="checkbox"]:checked::after {
+	display: none !important;
+	content: "" !important;
+	width: 0 !important;
+	height: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	border: none !important;
+	background: transparent !important;
+	box-shadow: none !important;
+	visibility: hidden !important;
+	opacity: 0 !important;
+	position: absolute !important;
+	left: -9999px !important;
+	font-family: initial !important;
+	font-size: 0 !important;
+	line-height: 0 !important;
+	float: none !important;
+}
+
+.scf-checkbox input[type="checkbox"]:focus {
+	outline: none;
+	box-shadow: none !important;
+}
+
+.scf-checkbox input[type="checkbox"]:focus-visible {
+	outline: 2px solid #94a3b8;
+	outline-offset: 2px;
+}
+
+.scf-checkbox input[type="checkbox"]:hover {
+	cursor: pointer;
+}
+
+.scf-checkbox label a {
+	pointer-events: auto;
+	position: relative;
+	z-index: 1;
+	font-size: inherit;
+}
+
+.scf-checkbox .scf-error-message {
+	width: 100%;
+	margin-left: 0;
+}
+
+.scf-checkbox a {
+	color: var(--scf-brand);
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.scf-checkbox a:hover,
+.scf-checkbox a:focus {
+	color: var(--scf-brand-hover);
+	text-decoration: underline;
+}
+
+.scf-interest-group {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0.45rem 0.85rem;
+	align-items: start;
+}
+
+@media (max-width: 480px) {
+	.scf-interest-group {
+		grid-template-columns: 1fr;
+	}
+}
+
+.scf-interest-option {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.45rem;
+}
+
+.scf-interest-option label {
+	font-weight: 400;
+	font-size: 0.9rem;
+	color: var(--scf-text);
+	line-height: 1.3;
+	margin-bottom: 0;
+	cursor: pointer;
+}
+
+.scf-interest-option input[type="checkbox"] {
+	margin-top: 0.15rem;
+	width: 1em !important;
+	height: 1em !important;
+	flex-shrink: 0;
+	cursor: pointer !important;
+	opacity: 1 !important;
+	appearance: checkbox;
+	-webkit-appearance: checkbox;
+	-moz-appearance: checkbox;
+	border: initial !important;
+	background: initial !important;
+	padding: 0 !important;
+	box-shadow: none !important;
+	vertical-align: middle;
+}
+
+.scf-interest-option input[type="checkbox"]::before,
+.scf-interest-option input[type="checkbox"]::after,
+.scf-interest-option input[type="checkbox"]:checked::before,
+.scf-interest-option input[type="checkbox"]:checked::after {
+	display: none !important;
+	content: "" !important;
+	width: 0 !important;
+	height: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	border: none !important;
+	background: transparent !important;
+	box-shadow: none !important;
+	visibility: hidden !important;
+	opacity: 0 !important;
+	position: absolute !important;
+	left: -9999px !important;
+	font-size: 0 !important;
+	line-height: 0 !important;
+}
+
+.scf-interest-option input[type="checkbox"]:focus {
+	outline: none;
+	box-shadow: none !important;
+}
+
+.scf-interest-option input[type="checkbox"]:focus-visible {
+	outline: 2px solid #94a3b8;
+	outline-offset: 2px;
+}
+
+.scf-submit {
+	background: var(--scf-brand-fill);
+	background-color: transparent;
+	color: #fff;
+	border: 1px solid transparent;
+	border-radius: 8px;
+	padding: 0.85rem 1.5rem;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: filter 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+	width: fit-content;
+	min-width: 148px;
+	display: inline-block;
+	margin: 12px 0 0;
+	position: relative;
+	max-width: 100%;
+	box-shadow: 0 6px 16px rgba(26, 59, 135, 0.22);
+}
+
+.scf-submit:hover:not(:disabled),
+.scf-submit:focus:not(:disabled) {
+	background: var(--scf-brand-fill);
+	background-color: transparent;
+	filter: brightness(1.05);
+	box-shadow: 0 6px 16px rgba(22, 35, 78, 0.28);
+}
+
+.scf-submit:active {
+	transform: scale(0.98);
+}
+
+.scf-submit:disabled {
+	cursor: not-allowed;
+}
+
+.scf-submit.is-loading {
+	opacity: 0.6;
+	pointer-events: none;
+}
+
+.scf-response {
+	margin-top: 0.75rem;
+	padding: 0.75rem 1rem;
+	border-radius: 8px;
+	font-weight: 600;
+	font-size: 0.9rem;
+	display: none;
+}
+
+.scf-response:not(:empty),
+.scf-response.scf-error,
+.scf-response.scf-success {
+	display: block;
+}
+
+.scf-response.scf-error {
+	color: #dc2626;
+	background-color: #fee2e2;
+	border: 1px solid #fecaca;
+}
+
+.scf-response.scf-success {
+	color: #15803d;
+	background-color: #d1fae5;
+	border: 1px solid #a7f3d0;
+	margin-top: 8px !important;
+}
+
+.scf-error-message {
+	color: #dc2626;
+	font-size: 0.8rem;
+	font-weight: normal;
+	margin-top: 0.35rem;
+	display: none;
+}
+
+.scf-error-message:not(:empty) {
+	display: block;
+}
+
+.scf-field input:invalid:not(:focus):not(:placeholder-shown),
+.scf-field textarea:invalid:not(:focus):not(:placeholder-shown) {
+	border-color: var(--scf-border);
+}
+
+.scf-spinner {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	border: 2px solid rgba(255, 255, 255, 0.3);
+	border-top-color: #fff;
+	border-radius: 50%;
+	animation: scf-spin 0.8s linear infinite;
+	margin-right: 8px;
+	vertical-align: middle;
+}
+
+@keyframes scf-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.scf-submit-loading {
+	display: inline-flex;
+	align-items: center;
+}
+
+.scf-submit.is-loading .scf-submit-text {
+	display: none;
+}
+
+.scf-submit.is-loading .scf-submit-loading {
+	display: inline-flex !important;
+}

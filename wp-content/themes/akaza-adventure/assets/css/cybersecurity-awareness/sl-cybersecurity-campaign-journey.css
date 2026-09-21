@@ -1,0 +1,185 @@
+/**
+ * Cybersecurity Awareness Month
+ * Campaign Journey Section
+ *
+ * Layout and component styles only.
+ */
+
+ .sl-cybersecurity-campaign-journey {
+    padding: 80px 0;
+    background: var(--sl-page-white, #ffffff);
+}
+
+/* ---------------------------------------------------------
+   Section heading
+   --------------------------------------------------------- */
+
+.sl-cybersecurity-campaign-journey__heading {
+    margin-bottom: 42px;
+}
+
+/*
+ * Description intentionally sits below the H2.
+ * No max-width is applied so the intro can use
+ * the available section width.
+ */
+
+.sl-cybersecurity-campaign-journey__heading p {
+    margin: 0;
+}
+
+
+/* ---------------------------------------------------------
+   Stage layout
+   --------------------------------------------------------- */
+
+.sl-cybersecurity-campaign-journey__stages {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border-top: 1px solid rgba(20, 114, 186, 0.18);
+}
+
+
+/* ---------------------------------------------------------
+   Individual stage
+   --------------------------------------------------------- */
+
+.sl-cybersecurity-campaign-journey__stage {
+    position: relative;
+    min-width: 0;
+    padding: 24px 28px 10px 18px;
+    border-right: 1px solid rgba(20, 114, 186, 0.18);
+}
+
+.sl-cybersecurity-campaign-journey__stage:first-child {
+    padding-left: 0;
+}
+
+.sl-cybersecurity-campaign-journey__stage:last-child {
+    padding-right: 0;
+    border-right: 0;
+}
+
+
+/* ---------------------------------------------------------
+   Stage number
+   --------------------------------------------------------- */
+
+.sl-cybersecurity-campaign-journey__number {
+    display: block;
+    margin-bottom: 12px;
+
+    color: var(--sl-page-primary, #1472ba);
+    font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   Stage heading
+   --------------------------------------------------------- */
+
+body.slf-body .sl-csa-page .sl-cybersecurity-campaign-journey__stage h3 {
+	margin: 0 0 8px;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 1.3;
+	color: var(--sl-page-navy, #16234e);
+}
+
+
+/* ---------------------------------------------------------
+   Stage description
+   --------------------------------------------------------- */
+
+.sl-cybersecurity-campaign-journey__stage p {
+    margin: 0;
+    color: var(--sl-page-muted, #6b7c93);
+}
+
+
+/* ---------------------------------------------------------
+   Hover treatment
+   --------------------------------------------------------- */
+
+.sl-cybersecurity-campaign-journey__stage {
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.sl-cybersecurity-campaign-journey__stage:hover {
+    transform: translateY(-3px);
+}
+
+
+/* ---------------------------------------------------------
+   Tablet
+   --------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+    .sl-cybersecurity-campaign-journey {
+        padding: 70px 0;
+    }
+
+    .sl-cybersecurity-campaign-journey__stages {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        border-top: 1px solid rgba(20, 114, 186, 0.18);
+    }
+
+    .sl-cybersecurity-campaign-journey__stage {
+        padding: 24px 22px;
+        border-right: 1px solid rgba(20, 114, 186, 0.18);
+        border-bottom: 1px solid rgba(20, 114, 186, 0.18);
+    }
+
+    .sl-cybersecurity-campaign-journey__stage:first-child {
+        padding-left: 0;
+    }
+
+    .sl-cybersecurity-campaign-journey__stage:nth-child(2) {
+        padding-right: 0;
+    }
+
+    .sl-cybersecurity-campaign-journey__stage:nth-child(2),
+    .sl-cybersecurity-campaign-journey__stage:nth-child(4) {
+        border-right: 0;
+    }
+
+    .sl-cybersecurity-campaign-journey__stage:nth-child(3),
+    .sl-cybersecurity-campaign-journey__stage:nth-child(4) {
+        border-bottom: 0;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   Mobile
+   --------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+    .sl-cybersecurity-campaign-journey {
+        padding: 60px 0;
+    }
+
+    .sl-cybersecurity-campaign-journey__heading {
+        margin-bottom: 32px;
+    }
+
+    .sl-cybersecurity-campaign-journey__stages {
+        grid-template-columns: 1fr;
+    }
+
+    .sl-cybersecurity-campaign-journey__stage,
+    .sl-cybersecurity-campaign-journey__stage:first-child,
+    .sl-cybersecurity-campaign-journey__stage:nth-child(2) {
+        padding: 22px 0;
+        border-right: 0;
+        border-bottom: 1px solid rgba(20, 114, 186, 0.18);
+    }
+
+    .sl-cybersecurity-campaign-journey__stage:last-child {
+        border-bottom: 0;
+    }
+}

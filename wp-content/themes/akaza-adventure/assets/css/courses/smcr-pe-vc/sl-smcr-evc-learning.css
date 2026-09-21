@@ -1,0 +1,130 @@
+/**
+ * SMCR Training — E/VC-Focused Learning.
+ *
+ * @package Akaza_Adventure
+ */
+
+ .sl-smcr-evc-learning {
+	padding: 96px 0;
+	background: #ffffff;
+}
+
+/* ---------------------------------------------------------
+   Intro
+--------------------------------------------------------- */
+
+.sl-smcr-evc-learning__intro {
+	margin-bottom: 48px;
+}
+
+.sl-smcr-evc-learning__intro .sl-home-sub-heading {
+	display: block;
+	margin-bottom: 14px;
+}
+
+.sl-smcr-evc-learning__intro h2 {
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+.sl-smcr-evc-learning__intro p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* ---------------------------------------------------------
+   Cards
+--------------------------------------------------------- */
+
+.sl-smcr-evc-learning__grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 24px;
+}
+
+.sl-smcr-evc-learning__card {
+	display: flex;
+	flex-direction: column;
+	min-height: 250px;
+	padding: 30px;
+	background: #f5f5f5;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 14px;
+	box-sizing: border-box;
+}
+
+.sl-smcr-evc-learning__number {
+	display: block;
+	margin-bottom: 22px;
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: 0.04em;
+}
+
+.sl-smcr-evc-learning__card .sl-panel-title {
+	margin-top: 0;
+	margin-bottom: 14px;
+}
+
+.sl-smcr-evc-learning__card p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* ---------------------------------------------------------
+   Tablet
+--------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+	.sl-smcr-evc-learning {
+		padding: 80px 0;
+	}
+
+	.sl-smcr-evc-learning__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.sl-smcr-evc-learning__card {
+		min-height: 230px;
+		padding: 26px;
+	}
+
+	.sl-smcr-evc-learning__card:last-child {
+		grid-column: 1 / -1;
+	}
+}
+
+/* ---------------------------------------------------------
+   Mobile
+--------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+	.sl-smcr-evc-learning {
+		padding: 64px 0;
+	}
+
+	.sl-smcr-evc-learning__intro {
+		margin-bottom: 32px;
+	}
+
+	.sl-smcr-evc-learning__grid {
+		grid-template-columns: 1fr;
+		gap: 14px;
+	}
+
+	.sl-smcr-evc-learning__card,
+	.sl-smcr-evc-learning__card:last-child {
+		grid-column: auto;
+		min-height: auto;
+		padding: 24px;
+		border-radius: 12px;
+	}
+
+	.sl-smcr-evc-learning__number {
+		margin-bottom: 18px;
+	}
+}

@@ -1,0 +1,157 @@
+/* =========================================================
+   SMCR Training for PE & VC Firms — FCA Conduct Rules
+   ========================================================= */
+
+   .sl-smcr-conduct-rules {
+	padding: 88px 0;
+	background: #f5f5f5;
+}
+
+.sl-smcr-conduct-rules__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+	gap: 72px;
+	align-items: start;
+}
+
+/* ---------------------------------------------------------
+   Image
+   --------------------------------------------------------- */
+
+.sl-smcr-conduct-rules__media {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 110px) + 24px);
+	align-self: start;
+}
+
+.sl-smcr-conduct-rules__image {
+	width: 100%;
+	overflow: hidden;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 16px;
+	background: #ffffff;
+}
+
+.sl-smcr-conduct-rules__image-placeholder {
+	min-height: 520px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 32px;
+	background: #ffffff;
+	text-align: center;
+}
+
+/* ---------------------------------------------------------
+   Content
+   --------------------------------------------------------- */
+
+.sl-smcr-conduct-rules__content {
+	min-width: 0;
+	padding-top: 8px;
+}
+
+.sl-smcr-conduct-rules__content h2 {
+	margin-top: 14px;
+	margin-bottom: 22px;
+}
+
+.sl-smcr-conduct-rules__content h2 span {
+	color: var(--sl-heading-accent, #1472ba);
+}
+
+.sl-smcr-conduct-rules__intro {
+	margin-top: 0;
+	margin-bottom: 30px;
+}
+
+/* ---------------------------------------------------------
+   Scenario cards
+   --------------------------------------------------------- */
+
+.sl-smcr-conduct-rules__cards {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 16px;
+}
+
+.sl-smcr-conduct-rules__card {
+	min-width: 0;
+	padding: 24px;
+	background: #ffffff;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 14px;
+	box-sizing: border-box;
+}
+
+.sl-smcr-conduct-rules__card .sl-panel-title {
+	margin-top: 0;
+	margin-bottom: 12px;
+}
+
+.sl-smcr-conduct-rules__card p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* ---------------------------------------------------------
+   Tablet
+   --------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+	.sl-smcr-conduct-rules__grid {
+		grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+		gap: 44px;
+	}
+
+	.sl-smcr-conduct-rules__cards {
+		grid-template-columns: 1fr;
+	}
+
+	.sl-smcr-conduct-rules__media {
+		position: static;
+	}
+
+	.sl-smcr-conduct-rules__image-placeholder {
+		min-height: 420px;
+	}
+}
+
+/* ---------------------------------------------------------
+   Mobile
+   --------------------------------------------------------- */
+
+@media (max-width: 767px) {
+	.sl-smcr-conduct-rules {
+		padding: 56px 0;
+	}
+
+	.sl-smcr-conduct-rules__grid {
+		grid-template-columns: 1fr;
+		gap: 32px;
+	}
+
+	.sl-smcr-conduct-rules__media {
+		order: -1;
+	}
+
+	.sl-smcr-conduct-rules__image-placeholder {
+		min-height: 320px;
+	}
+
+	.sl-smcr-conduct-rules__content {
+		padding-top: 0;
+	}
+
+	.sl-smcr-conduct-rules__content h2 {
+		margin-bottom: 20px;
+	}
+
+	.sl-smcr-conduct-rules__cards {
+		gap: 14px;
+	}
+
+	.sl-smcr-conduct-rules__card {
+		padding: 22px;
+	}
+}

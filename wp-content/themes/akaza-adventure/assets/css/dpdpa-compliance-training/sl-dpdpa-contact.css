@@ -1,0 +1,153 @@
+/*
+ * DPDPA Compliance Training — Contact / request a demo.
+ */
+
+.sl-dpdpa-contact {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-dpdpa-contact__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+	gap: 70px;
+	align-items: center;
+}
+
+.sl-dpdpa-contact__heading {
+	max-width: 760px;
+	margin-bottom: 30px;
+}
+
+.sl-dpdpa-contact__heading h2 {
+	margin-bottom: 24px;
+}
+
+.sl-dpdpa-contact__lead {
+	margin-bottom: 0;
+	font-size: 21px;
+	line-height: 1.65;
+}
+
+.sl-dpdpa-contact__bullets {
+	margin: 0 0 36px;
+	padding: 0;
+	list-style: none;
+	max-width: 720px;
+}
+
+.sl-dpdpa-contact__bullets li {
+	position: relative;
+	padding-left: 22px;
+	margin-bottom: 12px;
+	color: var(--sl-page-text, #16234e);
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+.sl-dpdpa-contact__bullets li::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0.55em;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: var(--sl-page-primary, #1472ba);
+}
+
+.sl-dpdpa-contact__details {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 18px;
+	max-width: 720px;
+}
+
+.sl-dpdpa-contact__detail {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 110px;
+	padding: 22px 24px;
+	border: 1px solid rgba(107, 124, 147, 0.22);
+	border-radius: 16px;
+	background: var(--sl-page-white, #ffffff);
+	text-decoration: none;
+	transition:
+		transform 0.2s ease,
+		border-color 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+a.sl-dpdpa-contact__detail:hover {
+	transform: translateY(-3px);
+	border-color: var(--sl-page-primary, #1472ba);
+	box-shadow: 0 12px 30px rgba(22, 35, 78, 0.08);
+}
+
+.sl-dpdpa-contact__detail-label {
+	margin-bottom: 8px;
+	color: var(--sl-page-navy, #16234e);
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 1.35;
+}
+
+.sl-dpdpa-contact__detail-value {
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 1.45;
+}
+
+.sl-dpdpa-contact__form-wrap {
+	min-width: 0;
+	padding: 38px;
+	border: 1px solid rgba(107, 124, 147, 0.22);
+	border-radius: 24px;
+	background: var(--sl-page-white, #ffffff);
+	box-shadow: 0 22px 55px rgba(22, 35, 78, 0.08);
+	box-sizing: border-box;
+}
+
+.sl-dpdpa-contact__form-wrap .sl-home-form-wrapper,
+.sl-dpdpa-contact__form-wrap .sl-home-form-wrapper--slim {
+	display: block;
+	max-width: none;
+	width: 100%;
+	align-items: stretch;
+}
+
+.sl-dpdpa-contact__form-wrap .sl-home-form-wrapper--slim .scf-form-wrap,
+.sl-dpdpa-contact__form-wrap .sl-home-form-wrapper--slim .scf-form-wrap.scf-form-wrap-course {
+	width: 100%;
+	max-width: none;
+	margin: 0;
+}
+
+@media (max-width: 991px) {
+	.sl-dpdpa-contact__grid {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.sl-dpdpa-contact__details {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-dpdpa-contact {
+		padding: 60px 0;
+	}
+
+	.sl-dpdpa-contact__form-wrap {
+		padding: 24px;
+	}
+
+	.sl-dpdpa-contact__lead {
+		font-size: 18px;
+	}
+}

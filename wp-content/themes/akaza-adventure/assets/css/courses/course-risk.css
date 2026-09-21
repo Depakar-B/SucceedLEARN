@@ -1,0 +1,257 @@
+/* SucceedLEARN — course risk overview */
+
+.sl-course-risk {
+	--risk-bg: #ffffff;
+	--risk-heading: #16234e;
+	--risk-text: #6b7c93;
+	--risk-accent: var(--course-primary, #1472ba);
+	--risk-accent-light: #f5f5f5;
+	--risk-border: rgba(22, 35, 78, 0.14);
+	--risk-card-bg: #ffffff;
+	width: 100%;
+	background: var(--risk-bg);
+	color: var(--risk-heading);
+}
+
+.sl-course-risk__container {
+	margin: 0 auto;
+	padding: 95px 0 105px;
+}
+
+.sl-course-risk__intro {
+	margin-bottom: 32px;
+}
+
+.sl-course-risk__eyebrow {
+	display: inline-flex;
+	align-items: center;
+	margin-bottom: 18px;
+	color: var(--risk-accent);
+	font-size: 12px;
+	font-weight: 800;
+	line-height: 1.3;
+	letter-spacing: 1.7px;
+	text-transform: uppercase;
+}
+
+.sl-course-risk__eyebrow::before {
+	content: "";
+	width: 28px;
+	height: 2px;
+	margin-right: 11px;
+	background: var(--risk-accent);
+}
+
+.sl-course-risk__title {
+	max-width: 760px;
+	margin: 0;
+	color: var(--risk-heading);
+}
+
+.sl-course-risk__title-main {
+	display: block;
+}
+
+.sl-course-risk__title-highlight {
+	display: block;
+	margin-top: 3px;
+	color: var(--risk-accent);
+}
+
+.sl-course-risk__description {
+	margin-top: 0;
+	color: var(--risk-text);
+	font-size: 16px;
+	line-height: 1.75;
+}
+
+.sl-course-risk__description p {
+	margin: 0;
+}
+
+.sl-course-risk__grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 18px;
+}
+
+.sl-course-risk-card {
+	position: relative;
+	min-height: 200px;
+	padding: 28px;
+	border: 1px solid var(--risk-border);
+	border-radius: 15px;
+	background: var(--risk-card-bg);
+	overflow: hidden;
+	transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.sl-course-risk-card::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, rgba(104, 42, 123, 0.55), transparent);
+	opacity: 0;
+	transition: opacity 200ms ease;
+}
+
+.sl-course-risk-card__icon {
+	width: 48px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 21px;
+	border-radius: 12px;
+	background: linear-gradient(135deg, #f5f5f5 0%, #deddff 100%);
+	color: var(--risk-accent);
+	font-size: 17px;
+	font-weight: 700;
+	line-height: 1;
+	box-shadow: inset 0 0 0 1px rgba(104, 42, 123, 0.08);
+}
+
+.sl-course-risk-card__title {
+	margin: 0;
+	color: var(--risk-heading);
+	font-weight: 750;
+	line-height: 1.3;
+	letter-spacing: -0.25px;
+}
+
+.sl-course-risk-card__text {
+	max-width: 330px;
+	margin: 10px 0 0;
+	color: var(--risk-text);
+	font-size: 13px;
+	font-weight: 450;
+	line-height: 1.65;
+}
+
+.sl-course-risk-card:hover {
+	transform: translateY(-4px);
+	border-color: rgba(104, 42, 123, 0.3);
+	box-shadow: 0 14px 35px rgba(22, 35, 78, 0.1);
+}
+
+.sl-course-risk-card:hover::before {
+	opacity: 1;
+}
+
+.sl-course-risk-card:hover .sl-course-risk-card__icon {
+	background: linear-gradient(135deg, #deddff, #f5f5f5);
+}
+
+@media (min-width: 1600px) {
+	.sl-course-risk__container {
+		padding-top: 110px;
+		padding-bottom: 120px;
+	}
+
+	.sl-course-risk__description {
+		font-size: 17px;
+		gap: 45px;
+	}
+
+	.sl-course-risk__grid {
+		gap: 20px;
+	}
+
+	.sl-course-risk-card {
+		min-height: 220px;
+		padding: 32px;
+	}
+
+	.sl-course-risk-card__text {
+		font-size: 14px;
+	}
+}
+
+@media (min-width: 1200px) and (max-width: 1599px) {
+	.sl-course-risk-card {
+		padding: 27px;
+	}
+}
+
+@media (max-width: 900px) {
+	.sl-course-risk__container {
+		padding: 75px 0 80px;
+	}
+
+	.sl-course-risk__description {
+		grid-template-columns: 1fr;
+		gap: 12px;
+		font-size: 15px;
+	}
+
+	.sl-course-risk__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 16px;
+	}
+
+	.sl-course-risk-card {
+		min-height: 195px;
+		padding: 25px;
+	}
+}
+
+@media (max-width: 600px) {
+	.sl-course-risk__container {
+		padding: 60px 0 65px;
+	}
+
+	.sl-course-risk__eyebrow {
+		margin-bottom: 15px;
+		font-size: 10px;
+		letter-spacing: 1.3px;
+	}
+
+	.sl-course-risk__eyebrow::before {
+		width: 22px;
+		margin-right: 9px;
+	}
+
+	.sl-course-risk__title-highlight {
+		margin-top: 2px;
+	}
+
+	.sl-course-risk__description {
+		font-size: 14px;
+		line-height: 1.7;
+	}
+
+	.sl-course-risk__grid {
+		grid-template-columns: 1fr;
+		gap: 13px;
+	}
+
+	.sl-course-risk-card {
+		min-height: auto;
+		padding: 23px;
+		border-radius: 14px;
+	}
+
+	.sl-course-risk-card__icon {
+		width: 44px;
+		height: 44px;
+		margin-bottom: 18px;
+		border-radius: 11px;
+	}
+
+	.sl-course-risk-card__text {
+		max-width: none;
+		margin-top: 8px;
+		font-size: 13px;
+		line-height: 1.6;
+	}
+}
+
+@media (max-width: 380px) {
+
+	.sl-course-risk-card {
+		padding: 21px;
+	}
+}

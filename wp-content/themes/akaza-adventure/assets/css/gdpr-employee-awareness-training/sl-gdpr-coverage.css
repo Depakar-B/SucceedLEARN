@@ -1,0 +1,120 @@
+/* SucceedLEARN GDPR Employee Awareness — Course Coverage */
+
+.sl-gdpr-coverage {
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-gdpr-coverage__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+	gap: 64px;
+	align-items: center;
+}
+
+.sl-gdpr-coverage__visual {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.sl-gdpr-coverage__image {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.sl-gdpr-coverage__image-placeholder {
+	width: 100%;
+	aspect-ratio: 720 / 620;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px dashed rgba(20, 114, 186, 0.35);
+	border-radius: 14px;
+	background: rgba(20, 114, 186, 0.04);
+}
+
+.sl-gdpr-coverage__image-placeholder span {
+	color: var(--sl-page-muted, #6B7C93);
+}
+
+.sl-gdpr-coverage__content {
+	width: 100%;
+}
+
+.sl-gdpr-coverage__heading {
+	margin: 0 0 30px;
+}
+
+.sl-gdpr-coverage__heading p {
+	margin: 0;
+	color: var(--sl-page-text, #4A4A4A);
+}
+
+.sl-gdpr-coverage .sl-highlight {
+	margin-top: 30px;
+}
+
+.sl-gdpr-coverage .sl-highlight p {
+	margin: 0;
+	color: var(--sl-page-text, #4A4A4A);
+}
+
+.sl-gdpr-coverage .sl-highlight strong {
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-gdpr-coverage__actions {
+	display: flex;
+	align-items: center;
+	margin-top: 28px;
+}
+
+
+/* Tablet */
+@media (max-width: 999px) {
+
+	.sl-gdpr-coverage {
+		padding: 75px 0;
+	}
+
+	.sl-gdpr-coverage__grid {
+		grid-template-columns: 1fr;
+		gap: 45px;
+	}
+
+	.sl-gdpr-coverage__visual {
+		order: 1;
+	}
+
+	.sl-gdpr-coverage__content {
+		order: 2;
+	}
+}
+
+
+/* Mobile */
+@media (max-width: 767px) {
+
+	.sl-gdpr-coverage {
+		padding: 60px 0;
+	}
+
+	.sl-gdpr-coverage__grid {
+		gap: 35px;
+	}
+
+	.sl-gdpr-coverage__heading {
+		margin-bottom: 24px;
+	}
+
+	.sl-gdpr-coverage .sl-highlight {
+		margin-top: 24px;
+	}
+
+	.sl-gdpr-coverage__actions {
+		margin-top: 24px;
+	}
+}

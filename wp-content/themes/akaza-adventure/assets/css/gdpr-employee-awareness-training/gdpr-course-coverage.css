@@ -1,0 +1,193 @@
+/*
+ * SucceedLEARN — GDPR
+ * Everything Your Team Needs on GDPR
+ */
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.sl-gdpr-coverage {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+
+/* =========================================
+   MAIN GRID
+========================================= */
+
+.sl-gdpr-coverage__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(480px, 0.9fr);
+	align-items: center;
+	gap: 70px;
+}
+
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.sl-gdpr-coverage__content {
+	min-width: 0;
+}
+
+.sl-gdpr-coverage__heading {
+	margin-bottom: 28px;
+}
+
+.sl-gdpr-coverage__heading h2 {
+	margin: 0;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-gdpr-coverage__heading h2 span {
+	color: var(--sl-primary, #1472ba);
+}
+
+.sl-gdpr-coverage__intro {
+	max-width: 700px;
+}
+
+.sl-gdpr-coverage__intro p {
+	margin: 0;
+	color: var(--sl-page-text, #425b70);
+}
+
+
+/* =========================================
+   INFORMATION NOTE
+========================================= */
+
+.sl-gdpr-coverage__note {
+	margin-top: 40px;
+	padding: 22px 24px;
+	border: 1px solid rgba(20, 114, 186, 0.22);
+	border-radius: 12px;
+	background: rgba(20, 114, 186, 0.07);
+}
+
+.sl-gdpr-coverage__note p {
+	margin: 0;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-gdpr-coverage__note strong {
+	color: #1472ba;
+}
+
+
+/* =========================================
+   IMAGE / VISUAL
+========================================= */
+
+.sl-gdpr-coverage__visual {
+	width: 100%;
+	min-width: 0;
+}
+
+.sl-gdpr-coverage__image-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	aspect-ratio: 720 / 620;
+	min-height: 420px;
+	border: 1px dashed rgba(20, 114, 186, 0.3);
+	border-radius: 16px;
+	background: #ffffff;
+	color: #1472ba;
+}
+
+.sl-gdpr-coverage__placeholder-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	padding: 30px;
+	text-align: center;
+}
+
+.sl-gdpr-coverage__placeholder-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 54px;
+	height: 54px;
+	border-radius: 12px;
+	background: rgba(20, 114, 186, 0.08);
+}
+
+.sl-gdpr-coverage__placeholder-icon svg {
+	width: 27px;
+	height: 27px;
+}
+
+.sl-gdpr-coverage__placeholder-title {
+	color: var(--sl-page-navy, #16234e);
+	font-weight: 700;
+}
+
+.sl-gdpr-coverage__placeholder-size {
+	color: var(--sl-page-text, #425b70);
+	font-size: 13px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1199px) {
+
+	.sl-gdpr-coverage {
+		padding: 75px 0;
+	}
+
+	.sl-gdpr-coverage__grid {
+		grid-template-columns: minmax(0, 1fr) minmax(400px, 0.9fr);
+		gap: 45px;
+	}
+
+	.sl-gdpr-coverage__note {
+		margin-top: 32px;
+	}
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+	.sl-gdpr-coverage {
+		padding: 60px 0;
+	}
+
+	.sl-gdpr-coverage__grid {
+		grid-template-columns: 1fr;
+		gap: 36px;
+	}
+
+	.sl-gdpr-coverage__heading {
+		margin-bottom: 24px;
+	}
+
+	.sl-gdpr-coverage__note {
+		margin-top: 28px;
+		padding: 20px;
+	}
+
+	.sl-gdpr-coverage__image-placeholder {
+		min-height: 300px;
+		aspect-ratio: 4 / 3;
+	}
+
+}

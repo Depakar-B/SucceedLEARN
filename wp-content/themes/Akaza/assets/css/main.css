@@ -1,0 +1,88 @@
+/* Akaza — base styles (redesign tokens go here) */
+
+:root {
+	--akaza-text: #1a1a1a;
+	--akaza-bg: #ffffff;
+	--akaza-muted: #5c5c5c;
+	--akaza-max: 1120px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: Georgia, "Times New Roman", serif;
+	color: var(--akaza-text);
+	background: var(--akaza-bg);
+	line-height: 1.5;
+}
+
+a {
+	color: inherit;
+}
+
+.site-header__inner,
+.site-footer__inner,
+.site-main {
+	width: min(100% - 2rem, var(--akaza-max));
+	margin-inline: auto;
+}
+
+.site-header {
+	padding: 0;
+	border-bottom: none;
+}
+
+.site-header.epsh-site-header {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.site-header__inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.site-logo {
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.site-nav .menu {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.site-main {
+	padding: 3rem 0;
+	min-height: 50vh;
+}
+
+.akaza-starter h1 {
+	margin: 0 0 0.75rem;
+	font-size: clamp(1.75rem, 4vw, 2.75rem);
+	line-height: 1.15;
+}
+
+.akaza-starter p {
+	margin: 0;
+	color: var(--akaza-muted);
+	max-width: 40rem;
+}
+
+.site-footer {
+	padding: 2rem 0;
+	border-top: 1px solid #e8e8e8;
+	color: var(--akaza-muted);
+	font-size: 0.9rem;
+}

@@ -1,0 +1,216 @@
+/**
+ * Anti-Bribery & Anti-Corruption — in-page navigation.
+ *
+ * @package Akaza_Adventure
+ */
+
+.sl-anti-bribery-page-nav {
+	--sl-ab-nav-navy: var(--course-navy, #16234e);
+	--sl-ab-nav-blue: var(--course-primary, #1472ba);
+	--sl-ab-nav-muted: var(--course-text, #4a4a4a);
+
+	position: sticky;
+	top: var(--slf-header-clearance, 76px);
+	z-index: 50;
+	padding: 22px 0 24px;
+	background:
+		linear-gradient(
+			180deg,
+			rgba(245, 245, 245, 0.98) 0%,
+			rgba(255, 255, 255, 0.96) 100%
+		);
+	border-bottom: 1px solid rgba(22, 35, 78, 0.1);
+	box-shadow: 0 8px 24px rgba(22, 35, 78, 0.04);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	box-sizing: border-box;
+}
+
+.sl-anti-bribery-page-nav__container {
+	width: min(calc(100% - 64px), var(--course-container, 1240px));
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 56px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
+	gap: 16px;
+	box-sizing: border-box;
+}
+
+.sl-anti-bribery-page-nav__label {
+	flex: 0 0 auto;
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	padding: 0;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	line-height: 1.2;
+	color: var(--sl-ab-nav-navy);
+	white-space: nowrap;
+}
+
+.sl-anti-bribery-page-nav__label::before {
+	content: "";
+	width: 3px;
+	height: 14px;
+	border-radius: 2px;
+	background: var(--sl-ab-nav-blue);
+	flex: 0 0 auto;
+}
+
+.sl-anti-bribery-page-nav__links {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: nowrap;
+	gap: 4px;
+	min-width: 0;
+	flex: 0 1 auto;
+	margin: 0;
+	padding: 6px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	border-radius: 999px;
+	background: #ffffff;
+	border: 1px solid rgba(22, 35, 78, 0.08);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	-webkit-overflow-scrolling: touch;
+	box-sizing: border-box;
+}
+
+.sl-anti-bribery-page-nav__links::-webkit-scrollbar {
+	display: none;
+}
+
+.sl-anti-bribery-page-nav__link {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 40px;
+	padding: 8px 16px;
+	border-radius: 999px;
+	color: var(--sl-ab-nav-muted);
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.25;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	transition:
+		color 0.2s ease,
+		background-color 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.sl-anti-bribery-page-nav__link:hover {
+	color: var(--sl-ab-nav-blue);
+	background: rgba(20, 114, 186, 0.08);
+}
+
+.sl-anti-bribery-page-nav__link:focus-visible {
+	outline: 2px solid var(--sl-ab-nav-blue);
+	outline-offset: 2px;
+}
+
+.sl-anti-bribery-page-nav__link.is-active {
+	color: #ffffff;
+	background: var(--sl-ab-nav-navy);
+	box-shadow: 0 6px 16px rgba(22, 35, 78, 0.18);
+}
+
+.sl-anti-bribery-page-nav__link.is-active:hover {
+	color: #ffffff;
+	background: var(--sl-ab-nav-navy);
+}
+
+/* --------------------------------------------------
+   Tablet
+-------------------------------------------------- */
+
+@media (max-width: 1000px) {
+	.sl-anti-bribery-page-nav {
+		padding: 18px 0 20px;
+	}
+
+	.sl-anti-bribery-page-nav__container {
+		width: min(calc(100% - 48px), var(--course-container, 1240px));
+	}
+
+	.sl-anti-bribery-page-nav__label {
+		font-size: 11px;
+	}
+
+	.sl-anti-bribery-page-nav__link {
+		font-size: 13px;
+		padding-left: 14px;
+		padding-right: 14px;
+	}
+}
+
+/* --------------------------------------------------
+   Mobile
+-------------------------------------------------- */
+
+@media (max-width: 767px) {
+	.sl-anti-bribery-page-nav {
+		top: var(--slf-header-clearance, 64px);
+		padding: 16px 0 18px;
+	}
+
+	.sl-anti-bribery-page-nav__container {
+		width: calc(100% - 36px);
+		min-height: 0;
+		justify-content: flex-start;
+		gap: 10px;
+	}
+
+	.sl-anti-bribery-page-nav__links {
+		flex: 1 1 auto;
+		justify-content: flex-start;
+		flex-wrap: nowrap;
+		mask-image: linear-gradient(
+			90deg,
+			transparent 0,
+			#000 16px,
+			#000 calc(100% - 16px),
+			transparent 100%
+		);
+		-webkit-mask-image: linear-gradient(
+			90deg,
+			transparent 0,
+			#000 16px,
+			#000 calc(100% - 16px),
+			transparent 100%
+		);
+	}
+
+	.sl-anti-bribery-page-nav__link {
+		min-height: 36px;
+		padding: 7px 12px;
+		font-size: 12px;
+	}
+}
+
+/* --------------------------------------------------
+   Small Mobile
+-------------------------------------------------- */
+
+@media (max-width: 380px) {
+	.sl-anti-bribery-page-nav__container {
+		width: calc(100% - 28px);
+	}
+
+	.sl-anti-bribery-page-nav__label {
+		display: none;
+	}
+}

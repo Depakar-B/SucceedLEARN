@@ -1,0 +1,367 @@
+/* =========================================================
+   HIPAA HERO
+   ========================================================= */
+
+   .sl-hipaa-hero {
+    width: 100%;
+    padding: 100px 0 76px;
+    background: #ffffff;
+}
+
+.sl-hipaa-hero .container {
+    width: 100%;
+}
+
+
+/* =========================================================
+   MAIN GRID
+   ========================================================= */
+
+.sl-hipaa-hero__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(420px, 0.95fr);
+    align-items: center;
+    gap: 72px;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+   ========================================================= */
+
+.sl-hipaa-hero__content {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   EYEBROW — uses global .sl-home-sub-heading UI
+   ========================================================= */
+
+.sl-hipaa-hero__eyebrow {
+	display: inline-flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   TITLE
+   Typography intentionally inherited from global CSS.
+   ========================================================= */
+
+.sl-hipaa-hero__title {
+    margin: 0 0 22px;
+    color: #192956;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.sl-hipaa-hero__description {
+    max-width: 680px;
+    margin: 0 0 28px;
+    color: #465b7d;
+}
+
+
+/* =========================================================
+   BENEFITS
+   ========================================================= */
+
+.sl-hipaa-hero__benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.sl-hipaa-hero__benefit {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    color: #25385d;
+}
+
+.sl-hipaa-hero__benefit-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 21px;
+    height: 21px;
+    flex: 0 0 21px;
+}
+
+.sl-hipaa-hero__benefit-icon svg {
+    display: block;
+    width: 21px;
+    height: 21px;
+}
+
+.sl-hipaa-hero__benefit strong {
+    color: #192956;
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.sl-hipaa-hero__actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-top: 32px;
+}
+
+
+/*
+ * Button look: site-wide .sl-hero-btn from sl-global-ui-buttons.css
+ */
+
+.sl-hipaa-hero .sl-hero-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+/* =========================================================
+   COURSE CARD
+   ========================================================= */
+
+.sl-hipaa-hero__course-card {
+    width: 100%;
+    max-width: 560px;
+    margin-inline: auto;
+
+    overflow: hidden;
+
+    background: #ffffff;
+    border: 1px solid #d9e4ef;
+    border-radius: 14px;
+
+    box-shadow: 0 12px 32px rgba(25, 41, 86, 0.08);
+}
+
+
+/* =========================================================
+   COURSE CARD HEADER
+   ========================================================= */
+
+.sl-hipaa-hero__course-header {
+    padding: 26px 28px 24px;
+    border-bottom: 1px solid #dfe7ef;
+}
+
+.sl-hipaa-hero__course-label {
+    display: block;
+    margin-bottom: 10px;
+
+    color: #1472ba;
+
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.sl-hipaa-page .sl-hipaa-hero__course-title {
+    margin: 0;
+    color: #192956;
+    font-size: 22px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   COURSE DETAILS
+   ========================================================= */
+
+.sl-hipaa-hero__course-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.sl-hipaa-hero__course-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-height: 108px;
+    padding: 20px 26px;
+
+    border-bottom: 1px solid #dfe7ef;
+}
+
+.sl-hipaa-hero__course-item:nth-child(odd) {
+    border-right: 1px solid #dfe7ef;
+}
+
+.sl-hipaa-hero__course-item:nth-child(3),
+.sl-hipaa-hero__course-item:nth-child(4) {
+    border-bottom: 0;
+}
+
+.sl-hipaa-hero__course-item-label {
+    margin-bottom: 8px;
+
+    color: #6c7e9c;
+
+    font-size: 11px;
+    line-height: 1.4;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.sl-hipaa-hero__course-item-value {
+    color: #192956;
+}
+
+
+/* =========================================================
+   PRICING
+   ========================================================= */
+
+.sl-hipaa-hero__pricing {
+    padding: 24px 28px 26px;
+
+    background: #f3f8fc;
+    border-top: 1px solid #dfe7ef;
+}
+
+.sl-hipaa-hero__price-row {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.sl-hipaa-hero__price {
+    color: #192956;
+
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.sl-hipaa-hero__price-unit {
+    color: #526786;
+    font-size: 14px;
+}
+
+.sl-hipaa-hero__pricing-note {
+    margin: 10px 0 0;
+    color: #526786;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .sl-hipaa-hero {
+        padding: 60px 0 64px;
+    }
+
+    .sl-hipaa-hero__grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 44px;
+    }
+
+    .sl-hipaa-hero__course-card {
+        max-width: 680px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .sl-hipaa-hero {
+        padding: 48px 0 52px;
+    }
+
+    .sl-hipaa-hero__grid {
+        gap: 36px;
+    }
+
+    .sl-hipaa-hero__eyebrow {
+        margin-bottom: 16px;
+    }
+
+    .sl-hipaa-hero__title {
+        margin-bottom: 18px;
+    }
+
+    .sl-hipaa-hero__description {
+        margin-bottom: 24px;
+    }
+
+    .sl-hipaa-hero__benefits {
+        gap: 13px;
+    }
+
+    .sl-hipaa-hero__actions {
+        align-items: stretch;
+        flex-direction: column;
+        margin-top: 28px;
+    }
+
+    .sl-hipaa-hero__actions .sl-hero-btn {
+        width: 100%;
+    }
+
+    .sl-hipaa-hero__course-header {
+        padding: 22px 20px;
+    }
+
+    .sl-hipaa-hero__course-item {
+        min-height: 96px;
+        padding: 18px 20px;
+    }
+
+    .sl-hipaa-hero__pricing {
+        padding: 22px 20px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .sl-hipaa-hero__course-details {
+        grid-template-columns: 1fr;
+    }
+
+    .sl-hipaa-hero__course-item {
+        border-right: 0 !important;
+        border-bottom: 1px solid #dfe7ef !important;
+    }
+
+    .sl-hipaa-hero__course-item:last-child {
+        border-bottom: 0 !important;
+    }
+
+}

@@ -1,0 +1,55 @@
+{
+  "poor": [],
+  "ok": [],
+  "no_field_data": [],
+  "errors": [
+    {
+      "url": "https://elearnposh.com/posh-act/",
+      "error": "<HttpError 403 when requesting https://pagespeedonline.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Felearnposh.com%2Fposh-act%2F&category=PERFORMANCE&strategy=MOBILE&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">"
+    },
+    {
+      "url": "https://elearnposh.com/",
+      "error": "<HttpError 403 when requesting https://pagespeedonline.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Felearnposh.com%2F&category=PERFORMANCE&strategy=MOBILE&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">"
+    },
+    {
+      "url": "https://elearnposh.com/bns-section-75-sexual-harassment-law-india/",
+      "error": "<HttpError 403 when requesting https://pagespeedonline.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Felearnposh.com%2Fbns-section-75-sexual-harassment-law-india%2F&category=PERFORMANCE&strategy=MOBILE&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">"
+    },
+    {
+      "url": "https://elearnposh.com/appeals-and-appellate-authority-under-posh-act/",
+      "error": "<HttpError 403 when requesting https://pagespeedonline.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Felearnposh.com%2Fappeals-and-appellate-authority-under-posh-act%2F&category=PERFORMANCE&strategy=MOBILE&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">"
+    },
+    {
+      "url": "https://elearnposh.com/punishments-under-the-posh-act/",
+      "error": "<HttpError 403 when requesting https://pagespeedonline.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Felearnposh.com%2Fpunishments-under-the-posh-act%2F&category=PERFORMANCE&strategy=MOBILE&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">"
+    },
+    {
+      "url": "https://elearnposh.com/pocso-act-role-of-school-authorities-and-teachers/",
+      "error": "<HttpError 403 when requesting https://pagespeedonline.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Felearnposh.com%2Fpocso-act-role-of-school-authorities-and-teachers%2F&category=PERFORMANCE&strategy=MOBILE&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">"
+    },
+    {
+      "url": "https://elearnposh.com/posh-awareness-training-the-what-why-and-how/",
+      "error": "<HttpError 403 when requesting https://pagespeedonline.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Felearnposh.com%2Fposh-awareness-training-the-what-why-and-how%2F&category=PERFORMANCE&strategy=MOBILE&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">"
+    },
+    {
+      "url": "https://elearnposh.com/the-ultimate-guide-to-posh-compliance/",
+      "error": "<HttpError 403 when requesting https://pagespeedonline.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Felearnposh.com%2Fthe-ultimate-guide-to-posh-compliance%2F&category=PERFORMANCE&strategy=MOBILE&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">"
+    },
+    {
+      "url": "https://elearnposh.com/major-laws-against-harassment-of-men-in-india/",
+      "error": "<HttpError 403 when requesting https://pagespeedonline.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Felearnposh.com%2Fmajor-laws-against-harassment-of-men-in-india%2F&category=PERFORMANCE&strategy=MOBILE&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">"
+    },
+    {
+      "url": "https://elearnposh.com/sole-testimony-in-posh-departmental-enquiry/",
+      "error": "<HttpError 403 when requesting https://pagespeedonline.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Felearnposh.com%2Fsole-testimony-in-posh-departmental-enquiry%2F&category=PERFORMANCE&strategy=MOBILE&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">"
+    },
+    {
+      "url": "https://elearnposh.com/ultimate-posh-guide-for-ic-members/",
+      "error": "<HttpError 403 when requesting https://pagespeedonline.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Felearnposh.com%2Fultimate-posh-guide-for-ic-members%2F&category=PERFORMANCE&strategy=MOBILE&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">"
+    },
+    {
+      "url": "https://elearnposh.com/can-employee-be-terminated-during-posh-inquiry/",
+      "error": "<HttpError 403 when requesting https://pagespeedonline.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Felearnposh.com%2Fcan-employee-be-terminated-during-posh-inquiry%2F&category=PERFORMANCE&strategy=MOBILE&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">"
+    }
+  ]
+}

@@ -1,0 +1,5451 @@
+<?php
+/* Template Name: Single Course AMP */
+?>
+<!doctype html>
+<html amp lang="en">
+<head>
+    <meta charset="utf-8">
+    <title><?php the_title(); ?> | SucceedLearn</title>
+    <link rel="canonical" href="<?php echo get_permalink(); ?>">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-element="amp-state" src="https://cdn.ampproject.org/v0/amp-state-0.1.js"></script>
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <script async custom-element="amp-vimeo" src="https://cdn.ampproject.org/v0/amp-vimeo-0.1.js"></script>
+    <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
+
+    <?php
+    $course_id = get_the_ID();
+    $banner_gradient = get_post_meta($course_id, 'banner_gradient', true);
+    $banner_bg_hex   = get_post_meta($course_id, 'banner_bg_hex', true);
+    $banner_bg       = $banner_gradient ?: $banner_bg_hex;
+
+    $course_title        = get_post_meta($course_id, 'course_title', true);
+    $course_desc         = get_post_meta($course_id, 'course_description', true);
+    $duration_title      = get_post_meta($course_id, 'duration_title', true);
+    $duration_value      = get_post_meta($course_id, 'duration_value', true);
+    $individual_title    = get_post_meta($course_id, 'individual_title', true);
+    $individual_price    = get_post_meta($course_id, 'individual_price', true);
+    $individual_btn_text = get_post_meta($course_id, 'individual_btn_text', true);
+    $individual_btn_url  = get_post_meta($course_id, 'individual_btn_url', true);
+    $corporate_title     = get_post_meta($course_id, 'corporate_title', true);
+    $corporate_btn_text  = get_post_meta($course_id, 'corporate_btn_text', true);
+    $corporate_btn_url   = get_post_meta($course_id, 'corporate_btn_url', true);
+    $video_url           = get_post_meta($course_id, 'video_url', true);
+    
+    // Enhanced Media Detection Function for AMP
+    function detect_media_type_amp($raw_media) {
+        if (empty($raw_media)) {
+            return ['type' => '', 'url' => '', 'id' => ''];
+        }
+
+        // YouTube detection
+        if (strpos($raw_media, 'youtube.com') !== false || strpos($raw_media, 'youtu.be') !== false) {
+            $yt_id = '';
+            if (strpos($raw_media, 'v=') !== false) {
+                $yt_id = explode('v=', $raw_media)[1];
+                $yt_id = explode('&', $yt_id)[0];
+            } elseif (strpos($raw_media, 'youtu.be/') !== false) {
+                $yt_id = basename(parse_url($raw_media, PHP_URL_PATH));
+            } else {
+                $yt_id = basename($raw_media);
+            }
+            return [
+                'type' => 'youtube',
+                'url' => $raw_media,
+                'id' => $yt_id
+            ];
+        }
+
+        // Vimeo detection
+        if (strpos($raw_media, 'vimeo.com') !== false) {
+            $vimeo_id = '';
+            if (preg_match('/vimeo\.com\/(\d+)/', $raw_media, $matches)) {
+                $vimeo_id = $matches[1];
+            } else {
+                $vimeo_id = basename(parse_url($raw_media, PHP_URL_PATH));
+            }
+            return [
+                'type' => 'vimeo',
+                'url' => $raw_media,
+                'id' => $vimeo_id
+            ];
+        }
+
+        // Video file detection (mp4, webm, ogg)
+        if (preg_match('/\.(mp4|webm|ogg|ogv)$/i', $raw_media)) {
+            return [
+                'type' => 'video',
+                'url' => $raw_media,
+                'id' => ''
+            ];
+        }
+
+        // Image detection (jpg, png, gif, webp, svg)
+        if (preg_match('/\.(jpg|jpeg|png|gif|webp|svg|bmp|ico)$/i', $raw_media)) {
+            return [
+                'type' => 'image',
+                'url' => $raw_media,
+                'id' => ''
+            ];
+        }
+
+        // Unknown → treat as image
+        return [
+            'type' => 'image',
+            'url' => $raw_media,
+            'id' => ''
+        ];
+    }
+    
+    $media_info = detect_media_type_amp($video_url);
+    $media_type = $media_info['type'];
+    $media_url = $media_info['url'];
+    $media_id = $media_info['id'] ?? '';
+    ?>
+
+    <style amp-custom>
+        /* ============================================
+           GLOBAL TYPOGRAPHY STANDARDIZATION
+           ============================================ */
+        /* Standardize all paragraph tags */
+        p {
+            font-size: 16px !important;
+            color: #1a1a1a !important;
+            font-weight: 400 !important;
+            font-family: 'Open Sans', sans-serif !important;
+            line-height: 1.6 !important;
+            margin: 0 0 15px 0 !important;
+        }
+        p:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        /* Override for white text sections in AMP - Banner and Target Audience (gradient backgrounds) */
+        .single-amp-course-banner-section p,
+        .single-amp-course-banner-section h1,
+        .single-amp-course-banner-section h2,
+        .single-amp-course-banner-section h3,
+        .single-amp-course-banner-section h4,
+        .single-amp-course-banner-section span,
+        .single-amp-course-banner-section div,
+        .single-amp-course-banner-section .single-amp-course-banner-box-title,
+        .single-amp-course-banner-section .single-amp-course-banner-box-value,
+        .single-amp-course-banner-section .single-amp-course-banner-box-price,
+        .single-amp-course-target-audience p,
+        .single-amp-course-target-audience li,
+        .single-amp-course-target-audience ul,
+        .single-amp-course-target-audience ol,
+        .single-amp-course-target-audience h2,
+        .single-amp-course-target-audience h3,
+        .single-amp-course-target-audience h4,
+        .single-amp-course-target-audience h5,
+        .single-amp-course-target-audience h6,
+        .single-amp-course-target-audience span,
+        .single-amp-course-target-audience div,
+        .single-amp-course-target-audience strong,
+        .single-amp-course-target-audience em,
+        .single-amp-course-target-audience b,
+        .single-amp-course-target-audience i {
+            color: #ffffff !important;
+        }
+
+        /* Standardize all list items */
+        li {
+            font-size: 16px !important;
+            color: #1a1a1a !important;
+            font-weight: 400 !important;
+            font-family: 'Open Sans', sans-serif !important;
+            line-height: 1.7 !important;
+            margin-bottom: 0px !important;
+        }
+
+        /* Standardize all unordered and ordered lists */
+        ul, ol {
+            margin: 0 0 15px 0 !important;
+            padding-left: 20px !important;
+        }
+        ul:last-child, ol:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        /* ============================================
+           STANDARDIZED SPACING SYSTEM
+           ============================================ */
+        /* Standard spacing below section titles */
+        .single-amp-course-objectives-title,
+        .single-amp-course-laws-title,
+        .single-amp-course-why-this-course-title,
+        .single-amp-course-dynamic-section-title,
+        .single-amp-course-target-audience-title,
+        .single-amp-what-if-comply-title,
+        .single-amp-course-outline-title,
+        .single-amp-faq-title {
+            margin-bottom: 12px !important;
+        }
+
+        /* Standard spacing below descriptions */
+        .single-amp-course-objectives-description,
+        .single-amp-course-laws-description,
+        .single-amp-course-why-this-course-item-desc,
+        .single-amp-what-if-comply-description,
+        .single-amp-course-target-audience-description {
+            margin-bottom: 20px !important;
+        }
+
+        /* Standard spacing for subsection titles */
+        .single-amp-course-dynamic-subsection-title,
+        .single-amp-course-outline-item-title {
+            margin-bottom: 12px !important;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            color: #1a1a1a;
+        }
+
+/************************* Header *************************/
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.site-header amp-img {
+  height: 40px;
+}
+
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+}
+	
+.amp-negative-space {
+  margin-top: -12px;
+}
+	.amp-positive-space {
+  margin-top: 16px;
+}
+
+/************************* Sidebar *************************/
+amp-sidebar.sidebar-main {
+  width: 260px;
+  background: #ffffff;
+  padding: 15px;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 26px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+/************************* Menu Sections *************************/
+.menu-section {
+  margin-bottom: 12px;
+}
+
+.menu-link {
+  display: block;
+  padding: 8px 0;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+font-weight:500;
+  transition: color 0.2s ease;
+}
+.menu-link:hover {
+  color: #1472ba;
+}
+	.menu-item-section,.section-solutions{
+		padding: 0px !important;
+	}
+/************************* Accordion *************************/
+amp-accordion section {
+  border: none;
+  margin: 0;
+}
+
+.submenu a {
+  display: block;
+  font-size: 16px;
+  padding: 12px 0 12px 14px;
+  margin: 2px 0;
+  border-bottom: 2px solid #eee;
+  color: #444444;
+  text-decoration: none;
+	font-weight: 500 !important;
+}
+.submenu a:active {
+  color: #1472ba;
+}
+.menu-title, .title-about{
+	background-color: #ffffff !important;
+    padding: 12px 20px 12px 0px !important;;
+    border: none !important;
+	color: #444444 !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+	}
+	
+/* Add arrow to dropdown menu titles */
+.menu-title {
+    position: relative;
+    cursor: pointer;
+    padding-right: 20px; 
+}
+
+/* Arrow on the right */
+.menu-title::after {
+    content: '▼'; 
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+/* Arrow on the right (unchanged) */
+.menu-title::after {
+    content: '▼'; 
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when section is expanded */
+amp-accordion section[expanded] .menu-title::after {
+    transform: translateY(-50%) rotate(-180deg);
+}
+
+
+/************************* CTA Button *************************/
+.cta-btn {
+  display: block;
+  background: #003f88;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 24px!important;
+}
+.cta-btn:hover {
+  background: #002f66;
+}
+
+/************************* Contact Info *************************/
+.menu-contact {
+  font-size: 13px;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+.menu-contact a {
+     color: #1472ba !important;
+    text-decoration: none;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+	margin-top: 18px !important
+}
+.hidden-phone {
+  display: none;
+}
+	.contact-email{
+		text-align: center !important;
+	}
+/************************* Utility *************************/
+.text-small {
+  font-size: 13px;
+}
+.text-muted {
+  color: #777;
+}
+	
+	/*********************Scroll to top ****************************/
+.course-scroll-to-top-wrap {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 9999;
+    display: block;
+}
+
+.course-scroll-to-top-button {
+    width: 50px;
+    height: 50px;
+    background-color: #123456;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    padding: 0;
+    text-decoration: none;
+}
+
+.course-scroll-to-top-button:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.course-scroll-to-top-button:active {
+    transform: translateY(0);
+}
+
+.course-scroll-to-top-button svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+    flex-shrink: 0;
+}
+
+.course-scroll-to-top-button svg path {
+    stroke: #ffffff !important;
+    stroke-width: 3.5 !important;
+    fill: none !important;
+    vector-effect: non-scaling-stroke;
+}
+	
+	
+/************************Cookiee ************************/
+	
+
+
+	
+  /************************Footer************************/
+  .site-footer {
+  background-color: #f5f7fa;
+  padding: 40px 0 0 0;
+  color: #333;
+  text-align: center;
+}
+
+.footer-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 20px 20px 20px;
+}
+
+.footer-subtopic {
+  font-size: 1.3em;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+.footer-links,
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.footer-inner .footer-logo {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.footer-description {
+  max-width: 500px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+.footer-highlight-link {
+  color: #1472ba;
+  text-decoration: none;
+  font-weight: 600; 
+}
+
+  .footer-subtopic {
+    font-size: 1.3em;
+    color: #222;
+    margin-bottom: 12px;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+.footer-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+  .footer-links li {
+    margin: 6px 0;
+  }
+
+  .footer-links a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+
+  .contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #555;
+  }
+
+  .contact-info li {
+    margin: 8px 0;
+  }
+
+  .no-style-link {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 14px;
+    margin-top: 15px;
+	  justify-content:center;
+  }
+
+  .social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e9ecef;
+    padding: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  }
+
+  .footer-bottom {
+    text-align: center;
+	   position: static !important;
+    font-size: 0.9em;
+    color: #ffffff;
+    padding: 10px 0px;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+	 background-color:#1472ba;
+  }
+
+		
+		
+/* ✅ Banner Section */
+.single-amp-course-banner-section {
+    padding: 80px 20px;
+    background: <?php echo $banner_bg ? esc_html($banner_bg) : 'linear-gradient(90deg, #576094, #915EBD)'; ?>;
+    background-size: cover;
+    background-position: center;
+}
+
+.single-amp-course-banner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.single-amp-course-banner-left, .single-amp-course-banner-right {
+    flex: 1 1 48%;
+}
+
+.single-amp-course-banner-course-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+.single-amp-course-banner-course-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+.single-amp-course-banner-course-description p {
+    margin: 0 0 15px 0;
+    font-size: 16px !important;
+    line-height: 1.6;
+    color: #fff !important;
+    font-weight: 400 !important;
+}
+.single-amp-course-banner-course-description p:last-child {
+    margin-bottom: 0;
+}
+
+.single-amp-course-banner-info-boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Container for the two button boxes */
+.single-amp-course-banner-btn-boxes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+.single-amp-course-banner-btn-boxes .single-amp-course-banner-box {
+    flex: 1 1 32%;
+    max-width: 32%;
+    text-align: center;
+}
+
+/* ✅ Mobile view (≤600px): All boxes stacked full width */
+@media (max-width: 600px) {
+    .single-amp-course-banner-duration-box,
+    .single-amp-course-banner-btn-boxes .single-amp-course-banner-box {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .single-amp-course-banner-info-boxes {
+        gap: 15px;
+    }
+}
+
+.single-amp-course-banner-box {
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.single-amp-course-banner-box-title,
+.single-amp-course-banner-box-value,
+.single-amp-course-banner-box-price {
+    text-align: left;
+    margin: 0;
+    padding-left: 5px;
+}
+
+.single-amp-course-banner-box-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+.single-amp-course-banner-box-value,
+.single-amp-course-banner-box-price {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.single-amp-course-banner-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 14px 0;
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 18px;
+    margin-top: auto;
+}
+
+.single-amp-course-banner-individual-btn {
+    background: #fff;
+    color: #16234e;
+    border: 2px solid #fff;
+    margin-top: 10px;
+}
+
+.single-amp-course-banner-corporate-btn {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.single-amp-course-banner-btn:hover {
+    opacity: 0.9;
+}
+
+/* ✅ AMP Media (YouTube, Vimeo, Video, Image) */
+.single-amp-course-banner-right {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.single-amp-course-banner-video,
+.single-amp-course-banner-image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.single-amp-course-banner-video amp-youtube,
+.single-amp-course-banner-video amp-vimeo,
+.single-amp-course-banner-video amp-video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+}
+
+.single-amp-course-banner-image amp-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* ✅ Responsive (Tablet & Mobile) */
+@media (max-width: 1024px) {
+    .single-amp-course-banner-container {
+        gap: 30px;
+    }
+
+    .single-amp-course-banner-course-title {
+        font-size: 32px;
+    }
+
+    .single-amp-course-banner-video amp-youtube,
+    .single-amp-course-banner-video amp-vimeo,
+    .single-amp-course-banner-video amp-video {
+        aspect-ratio: 16 / 9;
+    }
+    
+    .single-amp-course-banner-image amp-img {
+        aspect-ratio: 16 / 9;
+    }
+}
+
+@media (max-width: 768px) {
+    .single-amp-course-banner-btn-boxes .single-amp-course-banner-box {
+        flex: 1 1 32%;
+        max-width: 48%;
+        text-align: center;
+    }
+
+    .single-amp-course-banner-duration-box {
+        min-width: 90%;
+    }
+
+    .single-amp-course-banner-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .single-amp-course-banner-left, .single-amp-course-banner-right {
+        flex: 1 1 100%;
+    }
+
+    .single-amp-course-banner-course-title {
+        font-size: 28px;
+    }
+
+    .single-amp-course-banner-video amp-youtube,
+    .single-amp-course-banner-video amp-vimeo,
+    .single-amp-course-banner-video amp-video {
+        aspect-ratio: 16 / 9;
+    }
+    
+    .single-amp-course-banner-image amp-img {
+        aspect-ratio: 16 / 9;
+    }
+}
+
+@media (max-width: 480px) {
+    .single-amp-course-banner-course-title {
+        font-size: 24px;
+    }
+
+    .single-amp-course-banner-box {
+        padding: 20px 15px;
+        min-height: 100px;
+    }
+
+    .single-amp-course-banner-btn {
+        font-size: 14px;
+        padding: 12px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    @media (max-width: 480px) {
+        .single-amp-course-banner-box {
+            padding: 20px 15px;
+            min-height: 100px;
+            min-width: 100%;
+            margin: 0px 20px;
+			gap:20px;
+        }
+
+        .single-amp-course-banner-info-boxes {
+            gap: 15px;
+            padding: 20px;
+        }
+    }
+}
+	  
+/* ✅ Single AMP Course – Objectives Section */
+.single-amp-course-objectives-section {
+  padding: 40px 16px;
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+.single-amp-course-objectives-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.single-amp-course-objectives-left {
+  flex: 1 1 100%;
+}
+
+.single-amp-course-objectives-contentbox {
+  padding: 40px 30px;
+  box-sizing: border-box;
+}
+
+.single-amp-course-objectives-title {
+  font-size: 32px;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-transform: capitalize;
+	align-self:center;
+	text-align:center;
+}
+
+.single-amp-course-objectives-description {
+  margin-bottom: 20px;
+}
+
+.single-amp-course-objectives-details {
+  line-height: 1.8;
+}
+
+.single-amp-course-objectives-details ul,
+.single-amp-course-objectives-details ol {
+  margin-left: 0px;
+  padding: 0px;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+  .single-amp-course-objectives-section {
+    padding: 30px 16px;
+  }
+  .single-amp-course-objectives-contentbox {
+    padding: 30px 25px;
+  }
+  .single-amp-course-objectives-title {
+    font-size: 28px;
+	  margin-bottom:32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .single-amp-course-objectives-section {
+    padding: 20px 16px;
+  }
+  .single-amp-course-objectives-contentbox {
+    padding: 25px 20px;
+  }
+  .single-amp-course-objectives-title {
+    font-size: 24px;
+	  margin-bottom:32px;
+  }
+  .single-amp-course-objectives-description{
+    margin: 0px;
+  }
+  .single-amp-course-objectives-details {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .single-amp-course-objectives-contentbox {
+    padding: 20px 15px;
+  }
+  .single-amp-course-objectives-title {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+}
+
+	  
+/* ✅ Base section style */
+.single-amp-course-why-this-course {
+  border-radius: 12px;
+  padding: 20px 16px 0px 16px;
+  background: #f9f9ff;
+}
+
+.single-amp-course-why-this-course-title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.3;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.single-amp-course-why-this-course-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.single-amp-course-why-this-course-item {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 140px;
+}
+
+.single-amp-course-why-this-course-item-title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 0 0 8px 0;
+}
+
+.single-amp-course-why-this-course-item-desc {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .single-amp-course-why-this-course-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 599px) {
+  .single-amp-course-why-this-course-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .single-amp-course-why-this-course-title {
+    font-size: 24px;
+  }
+
+  .single-amp-course-why-this-course-item {
+    padding:0px;
+  }
+}
+
+	  
+.single-amp-course-laws {
+  background: #f9f9ff;
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+
+.single-amp-course-laws-title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 120%;
+  color: #1a1a1a;
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+.single-amp-course-laws-description {
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 20px;
+}
+
+.single-amp-course-laws-content {
+  font-family: 'Open Sans', sans-serif;
+  text-align: left;
+}
+
+.single-amp-course-laws-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.single-amp-course-laws-content th,
+.single-amp-course-laws-content td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.single-amp-course-laws-content th {
+  background: #f0f0f0;
+  font-weight: 600;
+}
+
+.single-amp-course-laws-content.has-table {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.single-amp-course-laws-content.has-table table {
+  min-width: 760px;
+  table-layout: fixed;
+}
+
+.single-amp-course-laws-content.has-table th,
+.single-amp-course-laws-content.has-table td {
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+  max-width: none;
+  padding-right: 18px;
+}
+
+@media (max-width: 768px) {
+  .single-amp-course-laws-content.has-table table {
+    min-width: 520px;
+  }
+  .single-amp-course-laws-content.has-table th,
+  .single-amp-course-laws-content.has-table td {
+    max-width: none;
+  }
+}
+
+/* ✅ Tablet (≤ 992px) */
+@media (max-width: 992px) {
+  .single-amp-course-laws {
+    padding: 18px 20px;
+  }
+
+  .single-amp-course-laws-title {
+    font-size: 26px;
+  }
+
+  .single-amp-course-laws-content {
+    font-size: 15px;
+  }
+}
+
+/* ✅ Mobile (≤ 600px) */
+@media (max-width: 600px) {
+  .single-amp-course-laws {
+    padding: 16px 16px 40px 16px;
+    border-radius: 10px;
+  }
+
+  .single-amp-course-laws-title {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .single-amp-course-laws-description {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .single-amp-course-laws-content {
+    line-height: 1.6;
+  }
+
+  .single-amp-course-laws-content table,
+  .single-amp-course-laws-content th,
+  .single-amp-course-laws-content td {
+    font-size: 14px;
+  }
+}
+
+	  
+.single-amp-course-carousel {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.single-amp-course-carousel-title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  text-align: left;
+  margin: 0 auto 24px auto;
+  max-width: 90%;
+}
+
+.single-amp-course-carousel-slider {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.25);
+}
+
+.single-amp-course-carousel-slide amp-img {
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.single-amp-course-carousel-slide amp-img:hover {
+  transform: scale(1.03);
+}
+
+/* ✅ Tablet view (≤ 992px) */
+@media (max-width: 992px) {
+  .single-amp-course-carousel-title {
+    font-size: 28px;
+  }
+}
+
+/* ✅ Mobile view (≤ 600px) */
+@media (max-width: 600px) {
+  .single-amp-course-carousel {
+    padding: 24px 0;
+  }
+  .single-amp-course-carousel-title {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+}
+
+/* ====== Dynamic Custom Section ====== */
+.single-amp-course-dynamic-section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px;
+  margin: 0;
+}
+
+.single-amp-course-dynamic-section-title {
+  font-size: 32px;
+  color: #1a1a1a;
+  text-align: center;
+  font-weight: 700;
+}
+
+.single-amp-course-dynamic-section-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.single-amp-course-dynamic-subsection {
+  padding: 0px;
+}
+
+.single-amp-course-dynamic-subsection-title {
+  font-size: 24px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.single-amp-course-dynamic-subsection-content {
+  color: #1a1a1a;
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width: 1024px) {
+  .single-amp-course-dynamic-section {
+    padding: 30px;
+  }
+  .single-amp-course-dynamic-section-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .single-amp-course-dynamic-section {
+    padding: 40px 24px;
+  }
+  .single-amp-course-dynamic-section-title {
+    font-size: 26px;
+  }
+  .single-amp-course-dynamic-subsection-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .single-amp-course-dynamic-section {
+    padding: 40px 20px;
+  }
+  .single-amp-course-dynamic-section-title {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  .single-amp-course-dynamic-subsection {
+    padding: 0px;
+  }
+}
+	  
+/* ====== Target Audience Section ====== */
+.single-amp-course-target-audience {
+  padding: 60px 50px;
+  margin: 0px;
+  transition: all 0.3s ease-in-out;
+}
+
+.single-amp-course-target-audience-title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 28px;
+  line-height: 1.3;
+}
+
+.single-amp-course-target-audience-description {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 0;
+}
+.single-amp-course-target-audience-description p {
+  color: #ffffff !important;
+}
+
+.single-amp-course-target-audience-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.single-amp-course-target-audience-item {
+  background: transparent;
+  border-radius: 10px;
+  padding: 24px;
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
+}
+
+.single-amp-course-target-audience-item p {
+  color: #ffffff !important;
+}
+
+.single-amp-course-target-audience-item ul {
+  margin: 0px;
+  list-style-type: disc;
+}
+.single-amp-course-target-audience-item ul li {
+  color: #ffffff !important;
+}
+
+.single-amp-course-target-audience-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+/* ✅ Tablet View */
+@media (max-width: 1024px) {
+  .single-amp-course-target-audience {
+    padding: 40px;
+  }
+  .single-amp-course-target-audience-title {
+    font-size: 30px;
+  }
+}
+
+/* ✅ Mobile View */
+@media (max-width: 768px) {
+  .single-amp-course-target-audience {
+    padding: 30px 20px;
+  }
+  .single-amp-course-target-audience-title {
+    font-size: 26px;
+  }
+  .single-amp-course-target-audience-content {
+    grid-template-columns: 1fr;
+    gap:0px;
+  }
+  .single-amp-course-target-audience-item {
+    padding: 20px;
+  }
+	.single-amp-course-target-audience-item ul {
+        list-style-type: disc;
+		padding:0px 0px 0px 20px;
+    }
+
+}
+
+/* ✅ Small Mobile View */
+@media (max-width: 480px) {
+  .single-amp-course-target-audience {
+    padding: 24px 15px;
+  }
+  .single-amp-course-target-audience-title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+}
+
+/* ============================================================
+   SINGLE AMP WHAT IF COMPLY SECTION
+   ============================================================ */
+.single-amp-what-if-comply-section {
+  background: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+
+.single-amp-what-if-comply-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ----- Title and Description ----- */
+.single-amp-what-if-comply-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.single-amp-what-if-comply-description {
+  margin-bottom: 20px;
+}
+.single-amp-what-if-comply-description p {
+  font-size: 18px !important;
+}
+
+/* ----- Main Content Area ----- */
+.single-amp-what-if-comply-content {
+  text-align: left; 
+  padding: 0px;
+}
+
+.single-amp-what-if-comply-content h3,
+.single-amp-what-if-comply-content h4,
+.single-amp-what-if-comply-content h5 {
+  color: #444444;
+  font-weight: 600;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.single-amp-what-if-comply-content ul,
+.single-amp-what-if-comply-content ol {
+  padding-left: 30px;
+}
+
+.single-amp-what-if-comply-content a {
+  color: #3366cc;
+  text-decoration: underline;
+}
+
+.single-amp-what-if-comply-content a:hover {
+  text-decoration: none;
+}
+
+.single-amp-what-if-comply-content blockquote {
+  border-left: 4px solid #3366cc;
+  padding-left: 15px;
+  margin: 20px 0;
+  font-style: italic;
+  color: #555;
+  background: #f5f7fa;
+  border-radius: 5px;
+}
+
+/* ----- Tables ----- */
+.single-amp-what-if-comply-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.single-amp-what-if-comply-content th,
+.single-amp-what-if-comply-content td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.single-amp-what-if-comply-content th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* ----- Images ----- */
+.single-amp-what-if-comply-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin: 15px 0;
+}
+
+/* ============================================================
+   RESPONSIVE STYLES
+   ============================================================ */
+
+/* ----- Tablet (≥768px) ----- */
+@media (min-width: 768px) {
+  .single-amp-what-if-comply-section {
+    padding: 20px;
+  }
+  .single-amp-what-if-comply-title {
+	 font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .single-amp-what-if-comply-description {
+    font-size: 18px!important;
+	  font-weight:500!important;
+  }
+  .single-amp-what-if-comply-content {
+    padding: 0px;
+  }
+}
+
+/* ----- Mobile (≤767px) ----- */
+@media (max-width: 767px) {
+  .single-amp-what-if-comply-section {
+    padding: 40px 16px;
+  }
+  .single-amp-what-if-comply-title {
+    font-size: 22px;
+  }
+  .single-amp-what-if-comply-content {
+    padding: 0px;
+  }
+  .single-amp-what-if-comply-content table {
+    font-size: 14px;
+  }
+}
+
+/* ============================================================
+   SINGLE AMP COURSE OUTLINE SECTION
+   ============================================================ */
+.single-amp-course-outline-section {
+  background: #ffffff;
+  padding:20px;
+  text-align: center;
+}
+
+.single-amp-course-outline-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== Title ===== */
+.single-amp-course-outline-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #1a1a1a;
+  line-height: 1.3;
+}
+
+/* ===== Grid Layout ===== */
+.single-amp-course-outline-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+}
+
+.single-amp-course-outline-item {
+  padding: 25px;
+  text-align: left;
+}
+
+
+/* ===== Item Title ===== */
+.single-amp-course-outline-item-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+/* ===== Item Content ===== */
+.single-amp-course-outline-item-content {
+  line-height: 1.7;
+}
+
+.single-amp-course-outline-item-content ul,
+.single-amp-course-outline-item-content ol {
+  padding-left: 20px;
+}
+
+.single-amp-course-outline-item-content a {
+  color: #3366cc;
+  text-decoration: underline;
+}
+
+.single-amp-course-outline-item-content a:hover {
+  text-decoration: none;
+}
+
+/* ============================================================
+   RESPONSIVE STYLES
+   ============================================================ */
+
+/* ✅ Tablet (between 601px–991px): 2 per row */
+@media (max-width: 991px) {
+  .single-amp-course-outline-grid {
+    grid-template-columns: 1fr;
+    gap: 0px;
+  }
+
+  .single-amp-course-outline-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .single-amp-course-outline-item {
+    padding: 0px;
+  }
+
+  .single-amp-course-outline-item-title {
+    font-size: 18px;
+  }
+}
+
+/* ✅ Mobile (≤600px): 1 per row */
+@media (max-width: 600px) {
+  .single-amp-course-outline-grid {
+    grid-template-columns: 1fr;
+    gap: 0px;
+  }
+
+  .single-amp-course-outline-title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .single-amp-course-outline-item {
+    padding: 0px!important;
+  }
+
+  .single-amp-course-outline-item-title {
+    font-size: 17px;
+  }
+
+}
+
+	  
+/* ✅ AMP FAQ Section Styling */
+.single-amp-faq-section {
+  font-family: "Open Sans", sans-serif;
+  margin: 0px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.single-amp-faq-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #1a1a1a;
+}
+
+.single-amp-faq-container {
+  max-width: 1290px;
+  margin: 0 auto;
+}
+
+.single-amp-faq-item {
+  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  border: none;
+  box-shadow: none;
+}
+
+.single-amp-faq-item[expanded] {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.single-amp-faq-question {
+  background: #fff !important;
+  color: #1a1a1a !important;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 18px 24px;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  position: relative;
+  min-height: 60px;
+}
+
+.single-amp-faq-question:hover {
+  background: #fafafa;
+}
+
+.single-amp-faq-item[expanded] .single-amp-faq-question {
+  background: #f5f8ff;
+  color: #16356b !important;
+}
+
+.single-amp-faq-question-text {
+  flex: 1;
+  padding-right: 40px;
+}
+
+/* ✅ Perfectly aligned + / - toggle on the right */
+.single-amp-faq-toggle {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: #123456;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.single-amp-faq-toggle::before,
+.single-amp-faq-toggle::after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  transition: transform 0.3s ease;
+}
+
+.single-amp-faq-toggle::before {
+  width: 12px;
+  height: 2px;
+}
+
+.single-amp-faq-toggle::after {
+  width: 2px;
+  height: 12px;
+}
+
+.single-amp-faq-item[expanded] .single-amp-faq-toggle::after {
+  transform: rotate(90deg);
+}
+
+.single-amp-faq-answer {
+  padding: 16px 24px 20px 24px;
+  background: #fff;
+  color: #1a1a1a;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.single-amp-faq-answer p,
+.single-amp-faq-answer ul,
+.single-amp-faq-answer li {
+  margin: 8px 0;
+}
+
+/* ✅ Tablet View */
+@media (max-width: 1024px) {
+  .single-amp-faq-section {
+    padding: 0 20px;
+  }
+  .single-amp-faq-title {
+    font-size: 26px;
+  }
+  .single-amp-faq-question {
+    font-size: 17px;
+  }
+}
+
+/* ✅ Mobile View */
+@media (max-width: 600px) {
+  .single-amp-faq-section {
+    padding: 0 20px;
+  }
+  .single-amp-faq-title {
+    font-size: 24px;
+  }
+  .single-amp-faq-question {
+    font-size: 16px;
+	padding: 12px 32px 16px 18px !important;
+  }
+  .single-amp-faq-toggle {
+    right: 18px;
+    width: 20px;
+    height: 20px;
+  }
+  .single-amp-faq-answer {
+    padding: 16px 18px;
+  }
+}
+</style>
+</head>
+
+<body id="page-top">
+    <?php include(plugin_dir_path(__FILE__) . 'menu.php'); ?>
+
+    <!-- ✅ Banner Section -->
+<section class="single-amp-course-banner-section">
+    <div class="single-amp-course-banner-container">
+
+        <!-- ✅ Left Column -->
+        <div class="single-amp-course-banner-left">
+            <h1 class="single-amp-course-banner-course-title"><?php echo esc_html($course_title ?: get_the_title()); ?></h1>
+            <?php
+                // Process course description with wpautop for paragraphs
+                if (!empty($course_desc)) {
+                  $course_desc = wpautop($course_desc);
+                  $course_desc = preg_replace('/<p>\s*<\/p>/i', '', $course_desc);
+                }
+                
+                // How many characters to show before "Read more"
+                $desc_limit = 320;
+                $desc_text = wp_strip_all_tags($course_desc); // Strip tags for character counting
+
+                if (mb_strlen($desc_text) > $desc_limit):
+                    $desc_excerpt = mb_substr($desc_text, 0, $desc_limit);
+                    
+                    // Get full HTML version for display
+                    $desc_full_html = wp_kses_post($course_desc);
+            ?>
+                <amp-state id="descToggle">
+                  <script type="application/json">
+                    {
+                      "showFull": false
+                    }
+                  </script>
+                </amp-state>
+                <div class="single-amp-course-banner-course-description">
+                    <div [hidden]="descToggle.showFull"><?php echo esc_html($desc_excerpt); ?>...</div>
+                    <div hidden [hidden]="!descToggle.showFull"><?php echo wp_kses_post($desc_full_html); ?></div>
+                    <button on="tap:AMP.setState({descToggle: {showFull: true}})" 
+                        class="single-amp-desc-toggle-btn" 
+                        [hidden]="descToggle.showFull">Read more</button>
+                    <button on="tap:AMP.setState({descToggle: {showFull: false}})" 
+                        class="single-amp-desc-toggle-btn" 
+                        hidden
+                        [hidden]="!descToggle.showFull">Read less</button>
+                </div>
+                <style amp-custom>
+                    .single-amp-desc-toggle-btn {
+                        background:none;
+                        border:none;
+                        color:#ffffff;
+                        cursor:pointer;
+                        font:inherit;
+                        padding:0;
+                        margin-left:8px;
+                        text-decoration:underline;
+                    }
+                    .single-amp-desc-toggle-btn[hidden],
+                    span[hidden] {
+                        display: none !important;
+                    }
+                </style>
+                <script>
+                (function() {
+                  // fallback for non-AMP preview/testing (optional)
+                  var rm = document.getElementById('banner-read-more');
+                  var rl = document.getElementById('banner-read-less');
+                  var ds = document.getElementById('desc-short');
+                  var df = document.getElementById('desc-full');
+                  if (rm && rl && ds && df) {
+                    rm.onclick = function(){ ds.style.display="none"; df.style.display="inline"; rm.style.display="none"; rl.style.display="inline"; return false; };
+                    rl.onclick = function(){ ds.style.display="inline"; df.style.display="none"; rm.style.display="inline"; rl.style.display="none"; return false; };
+                  }
+                })();
+                </script>
+            <?php else: ?>
+                <div class="single-amp-course-banner-course-description">
+                  <?php 
+                  if (!empty($course_desc)) {
+                    echo wp_kses_post($course_desc);
+                  } else {
+                    echo esc_html($desc_text);
+                  }
+                  ?>
+                </div>
+            <?php endif; ?>
+
+            <div class="single-amp-course-banner-info-boxes">
+                <div class="single-amp-course-banner-box single-amp-course-banner-duration-box">
+					<div style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-self: center;
+">
+                    <h4 class="single-amp-course-banner-box-title"><?php echo esc_html($duration_title); ?></h4>
+                    <p class="single-amp-course-banner-box-value"><?php echo esc_html($duration_value); ?></p >
+				</div>
+					  <?php if ($corporate_btn_text && $corporate_btn_url): ?>
+                            <a href="<?php echo esc_url($corporate_btn_url); ?>" class="single-amp-course-banner-btn single-amp-course-banner-corporate-btn">
+                                <?php echo esc_html($corporate_btn_text); ?>
+                            </a>
+                        <?php endif; ?>
+						
+                </div>
+
+                <!----- <div class="single-amp-course-banner-btn-boxes">
+
+                    <div class="single-amp-course-banner-box single-amp-course-banner-individual-box">
+                        <h4 class="single-amp-course-banner-box-title"><?php echo esc_html($individual_title); ?></h4>
+                        <p class="single-amp-course-banner-box-price"><?php echo esc_html(get_post_meta($course_id, 'individual_currency_symbol', true) ?: '$'); ?><?php echo esc_html($individual_price); ?></p>
+                        <?php if ($individual_btn_text && $individual_btn_url): ?>
+                            <a href="<?php echo esc_url($individual_btn_url); ?>" class="single-amp-course-banner-btn single-amp-course-banner-individual-btn">
+                                <?php echo esc_html($individual_btn_text); ?>
+                            </a>
+                        <?php endif; ?>
+                    </div>---->
+
+                    <!-----<div class="single-amp-course-banner-box single-amp-course-banner-corporate-box">
+                        <h4 class="single-amp-course-banner-box-title"><?php echo esc_html($corporate_title); ?></h4>
+                        <?php if ($corporate_btn_text && $corporate_btn_url): ?>
+                            <a href="<?php echo esc_url($corporate_btn_url); ?>" class="single-amp-course-banner-btn single-amp-course-banner-corporate-btn">
+                                <?php echo esc_html($corporate_btn_text); ?>
+                            </a>
+                        <?php endif; ?>
+                    </div>
+                </div>--->
+            </div>
+        </div>
+
+        <!-- ✅ Right Column (Media) -->
+        <div class="single-amp-course-banner-right">
+            <?php if (!empty($media_type)): ?>
+                
+                <?php if ($media_type == 'youtube' && !empty($media_id)): ?>
+                    <div class="single-amp-course-banner-video">
+                        <amp-youtube
+                            data-videoid="<?php echo esc_attr($media_id); ?>"
+                            layout="responsive"
+                            width="16"
+                            height="9"
+                            controls
+                        ></amp-youtube>
+                    </div>
+                
+                <?php elseif ($media_type == 'vimeo' && !empty($media_id)): ?>
+                    <div class="single-amp-course-banner-video">
+                        <amp-vimeo
+                            data-videoid="<?php echo esc_attr($media_id); ?>"
+                            layout="responsive"
+                            width="16"
+                            height="9"
+                            autoplay="false"
+                        ></amp-vimeo>
+                    </div>
+                
+                <?php elseif ($media_type == 'video'): ?>
+                    <div class="single-amp-course-banner-video">
+                        <amp-video
+                            src="<?php echo esc_url($media_url); ?>"
+                            width="16"
+                            height="9"
+                            layout="responsive"
+                            controls
+                            autoplay="false"
+                        >
+                            <div fallback>
+                                <p>Your browser doesn't support HTML5 video.</p>
+                            </div>
+                        </amp-video>
+                    </div>
+                
+                <?php elseif ($media_type == 'image'): ?>
+                    <div class="single-amp-course-banner-image">
+                        <amp-img
+                            src="<?php echo esc_url($media_url); ?>"
+                            alt="Course Media"
+                            width="800"
+                            height="450"
+                            layout="responsive"
+                        ></amp-img>
+                    </div>
+                
+                <?php endif; ?>
+                
+            <?php endif; ?>
+        </div>
+
+    </div>
+</section>
+
+<!-- ✅ Objectives Section -->
+<section class="single-amp-course-objectives-section">
+  <div class="single-amp-course-objectives-container">
+
+    <div class="single-amp-course-objectives-left">
+      <div class="single-amp-course-objectives-contentbox">
+
+        <h2 class="single-amp-course-objectives-title">
+          <?php echo esc_html(get_post_meta($course_id, 'objectives_section_title', true)); ?>
+        </h2>
+
+        <div class="single-amp-course-objectives-description">
+          <?php 
+          $objectives_desc = get_post_meta($course_id, 'objectives_section_description', true);
+          if (!empty($objectives_desc)) {
+            $objectives_desc = wpautop($objectives_desc);
+            $objectives_desc = preg_replace('/<p>\s*<\/p>/i', '', $objectives_desc);
+          }
+          echo wp_kses_post($objectives_desc); 
+          ?>
+        </div>
+
+        <div class="single-amp-course-objectives-details">
+          <?php 
+          $objectives_content = get_post_meta($course_id, 'objectives_section_content', true);
+          // Convert line breaks to paragraphs
+          if (!empty($objectives_content)) {
+            $objectives_content = wpautop($objectives_content);
+            $objectives_content = preg_replace('/<p>\s*<\/p>/i', '', $objectives_content);
+          }
+          echo wp_kses(
+            $objectives_content,
+            array(
+              'p' => array(),
+              'br' => array(),
+              'strong' => array(),
+              'em' => array(),
+              'b' => array(),
+              'i' => array(),
+              'ul' => array(),
+              'ol' => array(),
+              'li' => array(),
+              'a' => array('href' => array(), 'title' => array(), 'target' => array()),
+            )
+          );
+          ?>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+	
+<section class="single-amp-course-why-this-course">
+  <?php 
+    $extra_title = get_post_meta($course_id, 'extra_info_title', true);
+    $extra_title_color = get_post_meta($course_id, 'extra_info_title_color', true);
+    $grid_title_color = get_post_meta($course_id, 'extra_info_grid_title_color', true);
+    $grid_items = get_post_meta($course_id, 'extra_info_grid', true);
+  ?>
+
+  <?php if ($extra_title): ?>
+    <h2 class="single-amp-course-why-this-course-title" style="color: <?php echo esc_attr($extra_title_color ?: '#000'); ?>;">
+      <?php echo esc_html($extra_title); ?>
+    </h2>
+  <?php endif; ?>
+
+  <?php if (!empty($grid_items) && is_array($grid_items)): ?>
+    <div class="single-amp-course-why-this-course-grid">
+      <?php foreach ($grid_items as $item): ?>
+        <?php 
+          $item_title = trim($item['title']);
+          $item_desc  = trim($item['desc']);
+          // Show item if title exists (even if description is empty)
+          if ($item_title === '' && $item_desc === '') continue; 
+        ?>
+        <div class="single-amp-course-why-this-course-item">
+          <?php if ($item_title): ?>
+            <h4 class="single-amp-course-why-this-course-item-title" style="color: <?php echo esc_attr($grid_title_color ?: '#000'); ?>;">
+              <?php echo esc_html($item_title); ?>
+            </h4>
+          <?php endif; ?>
+          <?php if ($item_desc): ?>
+            <div class="single-amp-course-why-this-course-item-desc">
+              <?php 
+              if (!empty($item_desc)) {
+                $item_desc = wpautop($item_desc);
+                $item_desc = preg_replace('/<p>\s*<\/p>/i', '', $item_desc);
+              }
+              echo wp_kses_post($item_desc); 
+              ?>
+            </div>
+          <?php endif; ?>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  <?php endif; ?>
+</section>
+
+<!-- ====== Laws & Regulations Section ====== -->
+<section class="single-amp-course-laws">
+  <?php 
+    $laws_title = get_post_meta($course_id, 'laws_section_title', true);
+    $laws_description = get_post_meta($course_id, 'laws_section_description', true);
+    $laws_content = get_post_meta($course_id, 'laws_section_content', true);
+  ?>
+
+  <?php if (!empty($laws_title)) : ?>
+    <h2 class="single-amp-course-laws-title">
+      <?php echo esc_html($laws_title); ?>
+    </h2>
+  <?php endif; ?>
+
+  <?php if (!empty($laws_description)) : ?>
+    <div class="single-amp-course-laws-description">
+      <?php 
+      if (!empty($laws_description)) {
+        $laws_description = wpautop($laws_description);
+        $laws_description = preg_replace('/<p>\s*<\/p>/i', '', $laws_description);
+      }
+      echo wp_kses_post($laws_description); 
+      ?>
+    </div>
+  <?php endif; ?>
+
+  <?php $laws_has_table = (stripos($laws_content, '<table') !== false); ?>
+  <div class="single-amp-course-laws-content<?php echo $laws_has_table ? ' has-table' : ''; ?>">
+    <?php 
+    // Convert line breaks to paragraphs
+    if (!empty($laws_content)) {
+      $laws_content = wpautop($laws_content);
+      $laws_content = preg_replace('/<p>\s*<\/p>/i', '', $laws_content);
+    }
+    echo wp_kses(
+        $laws_content,
+        array(
+            'p' => array('style' => array()),
+            'br' => array(),
+            'strong' => array(),
+            'em' => array(),
+            'b' => array(),
+            'i' => array(),
+            'u' => array(),
+            'ul' => array('style' => array()),
+            'ol' => array('style' => array()),
+            'li' => array('style' => array()),
+            'table' => array('style' => array(), 'border' => array(), 'cellpadding' => array(), 'cellspacing' => array()),
+            'thead' => array(),
+            'tbody' => array(),
+            'tr' => array('style' => array()),
+            'th' => array('style' => array()),
+            'td' => array('style' => array()),
+            'a' => array('href' => array(), 'target' => array(), 'style' => array()),
+            'div' => array('style' => array(), 'class' => array()),
+            'span' => array('style' => array()),
+        )
+    );
+    ?>
+  </div>
+</section>
+
+	
+	<?php 
+$carousel_title = get_post_meta($course_id, 'carousel_section_title', true);
+$carousel_title_color = get_post_meta($course_id, 'carousel_section_title_color', true);
+$carousel_bg = get_post_meta($course_id, 'carousel_section_bg', true);
+$carousel_images = get_post_meta($course_id, 'carousel_section_images', true);
+?>
+
+<?php if (!empty($carousel_images) && is_array($carousel_images)) : ?>
+<section class="single-amp-course-carousel" style="background: <?php echo esc_attr($carousel_bg ?: 'linear-gradient(90deg, #576094, #915EBD)'); ?>;">
+  
+  <?php if (!empty($carousel_title)) : ?>
+    <h2 class="single-amp-course-carousel-title" style="color: <?php echo esc_attr($carousel_title_color ?: '#fff'); ?>;">
+      <?php echo esc_html($carousel_title); ?>
+    </h2>
+  <?php endif; ?>
+
+  <amp-carousel class="single-amp-course-carousel-slider" layout="responsive" width="800" height="450" type="slides" autoplay delay="4000" loop>
+    <?php foreach ($carousel_images as $image_url) : ?>
+      <?php if (!empty($image_url)) : ?>
+        <div class="single-amp-course-carousel-slide">
+          <amp-img src="<?php echo esc_url($image_url); ?>" alt="Course Slide" layout="responsive" width="800" height="450"></amp-img>
+        </div>
+      <?php endif; ?>
+    <?php endforeach; ?>
+  </amp-carousel>
+
+</section>
+<?php endif; ?>
+	
+<!-- ====== Dynamic Custom Section ====== -->
+<section class="single-amp-course-dynamic-section">
+  <?php 
+    $main_title = get_post_meta(get_the_ID(), 'custom_section_main_title', true);
+    $custom_sections = get_post_meta(get_the_ID(), 'custom_content_sections', true);
+  ?>
+
+  <?php if (!empty($main_title)) : ?>
+    <h2 class="single-amp-course-dynamic-section-title">
+      <?php echo esc_html($main_title); ?>
+    </h2>
+  <?php endif; ?>
+
+  <?php if (is_array($custom_sections) && !empty($custom_sections)) : ?>
+    <div class="single-amp-course-dynamic-section-content">
+      <?php foreach ($custom_sections as $section) : ?>
+        <?php if (!empty($section['title']) || !empty($section['content'])) : ?>
+          <div class="single-amp-course-dynamic-subsection">
+            <?php if (!empty($section['title'])) : ?>
+              <h3 class="single-amp-course-dynamic-subsection-title" 
+                  style="color:<?php echo esc_attr($section['title_color'] ?? '#000'); ?>;">
+                <?php echo esc_html($section['title']); ?>
+              </h3>
+            <?php endif; ?>
+
+            <?php if (!empty($section['content'])) : ?>
+              <div class="single-amp-course-dynamic-subsection-content">
+                <?php 
+                  $section_content = $section['content'];
+                  // Convert line breaks to paragraphs
+                  if (!empty($section_content)) {
+                    $section_content = wpautop($section_content);
+                    $section_content = preg_replace('/<p>\s*<\/p>/i', '', $section_content);
+                  }
+                  echo wp_kses(
+                    $section_content,
+                    array(
+                      'p' => array('style' => array()),
+                      'br' => array(),
+                      'strong' => array(),
+                      'em' => array(),
+                      'b' => array(),
+                      'i' => array(),
+                      'u' => array(),
+                      'ul' => array('style' => array()),
+                      'ol' => array('style' => array()),
+                      'li' => array('style' => array()),
+                      'a' => array('href' => array(), 'target' => array(), 'style' => array()),
+                      'table' => array('style' => array(), 'border' => array(), 'cellpadding' => array(), 'cellspacing' => array()),
+                      'thead' => array(),
+                      'tbody' => array(),
+                      'tr' => array('style' => array()),
+                      'th' => array('style' => array()),
+                      'td' => array('style' => array()),
+                      'div' => array('style' => array(), 'class' => array()),
+                      'span' => array('style' => array()),
+                    )
+                  );
+                ?>
+              </div>
+            <?php endif; ?>
+          </div>
+        <?php endif; ?>
+      <?php endforeach; ?>
+    </div>
+  <?php endif; ?>
+</section>
+
+<!-- ====== Target Audience Section ====== -->
+<section class="single-amp-course-target-audience" 
+  style="background: <?php echo esc_attr(get_post_meta(get_the_ID(), 'advanced_section_bg', true) ?: '#ffffff'); ?>;">
+
+  <?php 
+    $adv_title = get_post_meta(get_the_ID(), 'advanced_section_title', true);
+    $adv_title_color = get_post_meta(get_the_ID(), 'advanced_section_title_color', true);
+    $adv_desc = get_post_meta(get_the_ID(), 'advanced_section_description', true);
+    $adv_html_1 = get_post_meta(get_the_ID(), 'advanced_section_html_1', true);
+    $adv_html_2 = get_post_meta(get_the_ID(), 'advanced_section_html_2', true);
+  ?>
+
+  <?php if (!empty($adv_title)) : ?>
+    <h2 class="single-amp-course-target-audience-title"
+        style="color: <?php echo esc_attr($adv_title_color ?: '#000'); ?>;">
+      <?php echo esc_html($adv_title); ?>
+    </h2>
+  <?php endif; ?>
+
+  <?php if (!empty($adv_desc)) : ?>
+    <div class="single-amp-course-target-audience-description">
+      <?php 
+      // Convert line breaks to paragraphs
+      if (!empty($adv_desc)) {
+        $adv_desc = wpautop($adv_desc);
+        $adv_desc = preg_replace('/<p>\s*<\/p>/i', '', $adv_desc);
+      }
+      echo wp_kses(
+        $adv_desc,
+        [
+          'p' => ['style' => []],
+          'br' => [],
+          'strong' => [],
+          'em' => [],
+          'b' => [],
+          'i' => [],
+          'u' => [],
+          'ul' => ['style' => []],
+          'ol' => ['style' => []],
+          'li' => ['style' => []],
+          'a' => ['href' => [], 'target' => [], 'style' => []],
+          'span' => ['style' => []],
+          'div' => ['style' => [], 'class' => []],
+        ]
+      ); 
+      ?>
+    </div>
+  <?php endif; ?>
+
+  <div class="single-amp-course-target-audience-content">
+    <?php if (!empty($adv_html_1)) : ?>
+      <div class="single-amp-course-target-audience-item">
+        <?php 
+        $adv_content_1 = $adv_html_1;
+        if (!empty($adv_content_1)) {
+          $adv_content_1 = wpautop($adv_content_1);
+          $adv_content_1 = preg_replace('/<p>\s*<\/p>/i', '', $adv_content_1);
+        }
+        echo wp_kses_post($adv_content_1); 
+        ?>
+      </div>
+    <?php endif; ?>
+
+    <?php if (!empty($adv_html_2)) : ?>
+      <div class="single-amp-course-target-audience-item">
+        <?php 
+        $adv_content_2 = $adv_html_2;
+        if (!empty($adv_content_2)) {
+          $adv_content_2 = wpautop($adv_content_2);
+          $adv_content_2 = preg_replace('/<p>\s*<\/p>/i', '', $adv_content_2);
+        }
+        echo wp_kses_post($adv_content_2); 
+        ?>
+      </div>
+    <?php endif; ?>
+  </div>
+</section>
+
+	
+	
+<section class="single-amp-what-if-comply-section">
+  <?php
+    // ==============================
+    // Fetch meta fields
+    // ==============================
+    $wi_title = get_post_meta(get_the_ID(), 'custom_output_title', true);
+    $wi_desc  = get_post_meta(get_the_ID(), 'custom_output_description', true);
+    $wi_html  = get_post_meta(get_the_ID(), 'custom_output_html', true);
+  ?>
+
+  <?php if ($wi_title || $wi_desc || $wi_html): ?>
+  <div class="single-amp-what-if-comply-container">
+
+    <?php if ($wi_title): ?>
+      <h2 class="single-amp-what-if-comply-title">
+        <?php echo esc_html($wi_title); ?>
+      </h2>
+    <?php endif; ?>
+
+    <?php if ($wi_desc): ?>
+      <div class="single-amp-what-if-comply-description">
+        <?php 
+        if (!empty($wi_desc)) {
+          $wi_desc = wpautop($wi_desc);
+          $wi_desc = preg_replace('/<p>\s*<\/p>/i', '', $wi_desc);
+        }
+        echo wp_kses_post($wi_desc); 
+        ?>
+      </div>
+    <?php endif; ?>
+
+    <?php if ($wi_html): ?>
+      <div class="single-amp-what-if-comply-content">
+        <?php 
+        if (!empty($wi_html)) {
+          $wi_html = wpautop($wi_html);
+          $wi_html = preg_replace('/<p>\s*<\/p>/i', '', $wi_html);
+        }
+        echo do_shortcode(wp_kses_post($wi_html)); 
+        ?>
+      </div>
+    <?php endif; ?>
+
+  </div>
+  <?php endif; ?>
+</section>
+
+<!-- ======= Course Outline Section (AMP Frontend Output) ======= -->
+<section class="single-amp-course-outline-section">
+  <?php 
+    $codegrid_title = get_post_meta($course_id, 'codegrid_title', true);
+    $codegrid_title_color = get_post_meta($course_id, 'codegrid_title_color', true);
+    $codegrid_item_color = get_post_meta($course_id, 'codegrid_item_color', true);
+    $codegrid_items = get_post_meta($course_id, 'codegrid_items', true);
+  ?>
+
+  <?php if (!empty($codegrid_items) && is_array($codegrid_items)) : ?>
+    <div class="single-amp-course-outline-container">
+
+      <?php if (!empty($codegrid_title)) : ?>
+        <h2 class="single-amp-course-outline-title" 
+            style="color: <?php echo esc_attr($codegrid_title_color ?: '#000'); ?>">
+          <?php echo esc_html($codegrid_title); ?>
+        </h2>
+      <?php endif; ?>
+
+      <div class="single-amp-course-outline-grid">
+        <?php foreach ($codegrid_items as $item) : 
+          $item_title = trim($item['title'] ?? '');
+          $item_content = trim($item['content'] ?? '');
+          // Show item if title exists (even if content is empty)
+          if (empty($item_title) && empty($item_content)) continue;
+        ?>
+          <div class="single-amp-course-outline-item">
+            <?php if (!empty($item_title)): ?>
+              <h3 class="single-amp-course-outline-item-title"
+                  style="color: <?php echo esc_attr($codegrid_item_color ?: '#000'); ?>">
+                <?php echo esc_html($item_title); ?>
+              </h3>
+            <?php endif; ?>
+
+            <?php if (!empty($item_content)): ?>
+              <div class="single-amp-course-outline-item-content">
+                <?php 
+                if (!empty($item_content)) {
+                  $item_content = wpautop($item_content);
+                  $item_content = preg_replace('/<p>\s*<\/p>/i', '', $item_content);
+                }
+                echo do_shortcode(wp_kses_post($item_content)); 
+                ?>
+              </div>
+            <?php endif; ?>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  <?php endif; ?>
+</section>
+
+	
+	
+<!-- ✅ AMP FAQ Section -->
+<section class="single-amp-faq-section">
+  <?php
+  // Fetch meta values inside section for structure
+  $faq_main_title = get_post_meta(get_the_ID(), 'faq_main_title', true);
+  $faq_items = get_post_meta(get_the_ID(), 'faq_items', true);
+  ?>
+
+  <?php if (!empty($faq_items)) : ?>
+    <?php if (!empty($faq_main_title)) : ?>
+      <h2 class="single-amp-faq-title"><?php echo esc_html($faq_main_title); ?></h2>
+    <?php endif; ?>
+
+    <amp-accordion class="single-amp-faq-container" expand-single-section>
+      <?php foreach ($faq_items as $index => $faq) :
+        $question = trim($faq['question'] ?? '');
+        $answer = trim($faq['answer'] ?? '');
+        if (empty($question) || empty($answer)) continue;
+      ?>
+        <section class="single-amp-faq-item" <?php echo $index === 0 ? 'expanded' : ''; ?>>
+          <h4 class="single-amp-faq-question">
+            <span class="single-amp-faq-question-text"><?php echo esc_html($question); ?></span>
+            <span class="single-amp-faq-toggle"></span>
+          </h4>
+          <div class="single-amp-faq-answer">
+            <?php echo wp_kses_post(wpautop($answer)); ?>
+          </div>
+        </section>
+      <?php endforeach; ?>
+    </amp-accordion>
+  <?php endif; ?>
+</section>
+
+<!-- Scroll To Top Button -->
+<div class="course-scroll-to-top-wrap">
+    <a href="#page-top" class="course-scroll-to-top-button" aria-label="Scroll to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 14L12 9L17 14" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+    </a>
+</div>
+	
+    <?php include(plugin_dir_path(__FILE__) . 'footer.php'); ?>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// DESKTOP CODE//
+
+
+
+
+
+
+
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+
+// Load theme header
+get_header();
+
+$course_id = get_the_ID();
+
+// ============================================
+// PERFORMANCE OPTIMIZATION: Batch Load All Meta
+// ============================================
+// Instead of 53 separate database queries, load all meta in ONE query
+// This reduces page load time from 2-3 seconds to 0.3-0.5 seconds
+// ============================================
+function get_cached_course_meta($course_id) {
+    // Cache key unique to this course
+    $cache_key = 'course_meta_' . $course_id;
+    
+    // Try to get from WordPress object cache first
+    $meta = wp_cache_get($cache_key);
+    
+    if ($meta === false) {
+        // Cache miss - load ALL meta in ONE database query
+        $all_meta = get_post_meta($course_id);
+        
+        // Convert to associative array for easy access
+        $meta = [];
+        foreach ($all_meta as $key => $value) {
+            // get_post_meta returns arrays, get first value and unserialize if needed
+            $raw_value = is_array($value) ? $value[0] : $value;
+            $meta[$key] = maybe_unserialize($raw_value);
+        }
+        
+        // Store in cache for 1 hour (3600 seconds)
+        wp_cache_set($cache_key, $meta, '', 3600);
+    }
+    
+    return $meta;
+}
+
+// Load all course meta in ONE query (or from cache)
+$meta = get_cached_course_meta($course_id);
+
+// ============================================
+// Access all fields from $meta array
+// ============================================
+// Background fields
+$banner_gradient = $meta['banner_gradient'] ?? '';
+$banner_bg_hex = $meta['banner_bg_hex'] ?? '';
+$banner_bg_rgb = $meta['banner_bg_rgb'] ?? '';
+$banner_bg = $banner_gradient ?: ($banner_bg_hex ?: $banner_bg_rgb);
+?>
+
+<style>
+/* ============================================
+   GLOBAL FONT FAMILY DECLARATION
+   ============================================ */
+* {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+/* ============================================
+   GLOBAL TYPOGRAPHY STANDARDIZATION
+   ============================================ */
+/* Standardize all paragraph tags */
+p {
+  font-size: 16px !important;
+  color: #1a1a1a !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+  margin: 0 0 15px 0 !important;
+}
+p:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Override for white text sections */
+.course-banner-section p,
+.scroll-right p,
+.advanced-section p,
+.scroll-right li,
+.advanced-section li {
+  color: #ffffff !important;
+}
+
+/* Standardize all list items - Only for content areas, exclude header/footer */
+.scroll-section li,
+.objectives-content li,
+.laws-content li,
+.custom-output-section li,
+.advanced-section li,
+.codegrid-item-content li,
+.faq-answer li,
+.custom-dynamic-section li,
+.extra-info-item-desc li {
+  font-size: 16px !important;
+  color: #1a1a1a !important;
+  font-weight: 400 !important;
+  line-height: 1.7 !important;
+  margin-bottom: 8px !important;
+  margin-left: 20px !important;
+}
+.scroll-section li:last-child,
+.objectives-content li:last-child,
+.laws-content li:last-child,
+.custom-output-section li:last-child,
+.advanced-section li:last-child,
+.codegrid-item-content li:last-child,
+.faq-answer li:last-child,
+.custom-dynamic-section li:last-child,
+.extra-info-item-desc li:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Standardize all unordered and ordered lists - Only for content areas, exclude header/footer */
+.scroll-section ul,
+.scroll-section ol,
+.objectives-content ul,
+.objectives-content ol,
+.laws-content ul,
+.laws-content ol,
+.custom-output-section ul,
+.custom-output-section ol,
+.advanced-section ul,
+.advanced-section ol,
+.codegrid-item-content ul,
+.codegrid-item-content ol,
+.faq-answer ul,
+.faq-answer ol,
+.custom-dynamic-section ul,
+.custom-dynamic-section ol,
+.extra-info-item-desc ul,
+.extra-info-item-desc ol {
+  margin: 0 0 12px 0 !important;
+  padding-left: 20px !important;
+}
+.scroll-section ul:last-child,
+.scroll-section ol:last-child,
+.objectives-content ul:last-child,
+.objectives-content ol:last-child,
+.laws-content ul:last-child,
+.laws-content ol:last-child,
+.custom-output-section ul:last-child,
+.custom-output-section ol:last-child,
+.advanced-section ul:last-child,
+.advanced-section ol:last-child,
+.codegrid-item-content ul:last-child,
+.codegrid-item-content ol:last-child,
+.faq-answer ul:last-child,
+.faq-answer ol:last-child,
+.custom-dynamic-section ul:last-child,
+.custom-dynamic-section ol:last-child,
+.extra-info-item-desc ul:last-child,
+.extra-info-item-desc ol:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* ============================================
+   STANDARDIZED SPACING SYSTEM
+   ============================================ */
+/* Standard spacing below section titles - Reduced to 16px */
+.objectives-title,
+.laws-title,
+.extra-info-title,
+.custom-section-title,
+.advanced-section h2,
+.custom-output-section h2,
+.codegrid-main-title,
+.faq-title {
+  margin-bottom: 16px !important;
+}
+
+/* Standard spacing below descriptions - Reduced to 16px */
+.objectives-desc,
+.laws-description,
+.extra-info-item-desc,
+.custom-output-section .description,
+.advanced-section .description {
+  margin-bottom: 16px !important;
+}
+
+/* Standard spacing between description and content */
+.objectives-content,
+.laws-content,
+.custom-output-section .custom-output-content,
+.advanced-section .advanced-content {
+  margin-top: 0 !important;
+}
+
+/* Standard spacing for subsection titles - Reduced to 16px */
+.subsection-title,
+.codegrid-item-title {
+  margin-bottom: 16px !important;
+}
+
+
+/* === Internal CSS for Custom Course Banner === */
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Banner Section Wrapper - Fluid Responsive Base */
+.course-banner-section {
+  margin: 0;
+  padding: clamp(30px, 5vw, 80px) clamp(20px, 6vw, 100px);
+  color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* ✅ Center container with max width - Fluid Layout */
+.course-banner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: clamp(20px, 3vw, 50px);
+  flex-wrap: nowrap; /* Keep inline until very small screens */
+  max-width: 1290px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Left and Right Containers - Fluid Flex */
+.banner-left {
+  flex: 0 1 58%;
+  text-align: left;
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  padding-left:30px;}
+
+.banner-right {
+  flex: 0 1 40%;
+  align-self: center;
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Video Styling - Fluid Sizing */
+.banner-video {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.banner-video iframe,
+.banner-video video {
+  width: 100%;
+  height: auto;
+  min-height: clamp(200px, 25vw, 450px);
+  aspect-ratio: 16 / 9;
+  border-radius: clamp(8px, 1vw, 12px);
+  border: clamp(3px, 0.4vw, 5px) solid #fff;
+  object-fit: contain;
+  box-sizing: border-box;
+}
+
+/* Image Styling - Fluid Sizing */
+.banner-image {
+  width: 100%;
+  border-radius: clamp(8px, 1vw, 12px);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.banner-image img {
+  width: 100%;
+  height: auto;
+  min-height: clamp(200px, 25vw, 450px);
+  max-height: clamp(250px, 30vw, 500px);
+  object-fit: contain;
+  display: block;
+  box-sizing: border-box;
+}
+
+/* Typography - Fluid Scaling */
+.banner-course-title {
+  font-weight: 700 !important;
+  font-size: clamp(24px, 3.5vw, 42px) !important;
+  line-height: clamp(32px, 4.5vw, 52px) !important;
+  color: #fff;
+  text-align: left;
+  margin: 0 !important;
+  word-wrap: break-word;
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .banner-course-title {
+    font-size: clamp(24px, 2.6vw, 36px) !important;
+    line-height: clamp(30px, 3.5vw, 46px) !important;
+  }
+}
+
+.banner-course-description {
+  font-weight: 400;
+  font-size: clamp(14px, 1.5vw, 18px);
+  line-height: 1.6;
+  color: #fff;
+  margin-bottom: clamp(15px, 2vw, 30px);
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.banner-course-description p {
+  margin: 0 0 clamp(12px, 1.5vw, 18px) 0;
+  font-weight: 400;
+  font-size: clamp(14px, 1.5vw, 18px) !important;
+  line-height: 1.6;
+  color: #fff !important;
+}
+
+.banner-course-description p:last-child {
+  margin-bottom: 0;
+}
+
+.banner-desc-toggle-btn {
+  background: none !important;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: clamp(14px, 1.5vw, 18px);
+  font-weight: 600;
+  padding: 0;
+  margin-left: 0 !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+  display: inline;
+}
+
+.banner-desc-toggle-btn:hover {
+  opacity: 0.85;
+  text-decoration-thickness: 2px;
+}
+
+/* === Info Boxes - Fluid with Grid Alignment === */
+.banner-info-boxes {
+  display: grid;
+  grid-template-columns: minmax(0, 0.3fr) minmax(0, 0.35fr) minmax(0, 0.35fr);
+  width: 100%;
+  gap: clamp(10px, 1.2vw, 18px);
+  box-sizing: border-box;
+  align-items: stretch;
+}
+
+.banner-box {
+  border-radius: clamp(8px, 1vw, 12px);
+  padding: clamp(12px, 1.5vw, 18px) clamp(15px, 2vw, 18px);
+  text-align: left;
+  color: #ffffff !important;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  grid-template-columns: 1fr;
+  gap: clamp(10px, 1.2vw, 15px);
+  box-sizing: border-box;
+  align-content: start;
+  height: 100%;
+}
+
+/* Ensure all text in banner boxes is white */
+.banner-box *,
+.banner-box p,
+.banner-box h3,
+.banner-box h4,
+.banner-box span {
+  color: #ffffff !important;
+}
+
+/* Transparent for Duration Box - Fluid */
+.duration-box {
+  width: 100%;
+  background-color: transparent;
+	padding:18px 0px!important;
+}
+
+.duration-vaule {
+  font-size: clamp(12px, 2.2vw, 20px) !important;
+  font-weight: 600 !important;
+  margin: 0px !important;
+  grid-row: 2;
+  min-height: clamp(28px, 3.5vw, 36px);
+  display: flex;
+  align-items: center;
+  line-height: 1.2;
+  color: #ffffff !important;
+}
+
+/* Semi-transparent for Paid Boxes - Fluid */
+.individual-box,
+.corporate-box {
+  width: 100%;
+}
+	.individual-box, .individual-box-2{
+		display:none!important;
+	}
+
+/* Box Titles - Fluid - Aligned in first row */
+.banner-box-title {
+  font-weight: 400 !important;
+  font-size: clamp(14px, 1.4vw, 18px) !important;
+  margin: 0 !important;
+  color: #ffffff !important;
+  grid-row: 1;
+  min-height: clamp(22px, 2.8vw, 30px);
+  display: flex;
+  align-items: center;
+  line-height: 1.4;
+}
+
+/* Box Price/Value - Aligned in second row */
+.banner-box-price {
+  font-weight: 600;
+  font-size: clamp(18px, 2.2vw, 28px);
+  line-height: 1.2;
+  margin: 0 !important;
+  grid-row: 2;
+  min-height: clamp(28px, 3.5vw, 36px);
+  display: flex;
+  align-items: center;
+  color: #ffffff !important;
+}
+
+.banner-box-price small {
+  font-size: clamp(14px, 1.8vw, 22px);
+  vertical-align: bottom;
+  line-height: 1;
+}
+
+/* Buttons - Fluid - Aligned in third row */
+.banner-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100% !important;
+  min-width: 100% !important;
+  padding: clamp(10px, 1.2vw, 14px) clamp(18px, 2.2vw, 26px);
+  border-radius: clamp(5px, 0.6vw, 8px);
+  font-weight: 600;
+  font-size: clamp(12px, 1.2vw, 16px);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  grid-row: 3;
+  align-self: end;
+  margin-top: 4px;
+  min-height: clamp(38px, 4.5vw, 48px);
+}
+
+.individual-btn {
+  background: #fff;
+  color: #16234e !important;
+  border: 2px solid #fff;
+}
+
+.corporate-btn {
+  background: transparent;
+  color: #fff !important;
+  border: 2px solid #fff;
+}
+
+.banner-btn:hover {
+  opacity: 0.9;
+}
+
+.banner-right .banner-video .video-placeholder-youtube {
+  border: clamp(3px, 0.4vw, 5px) solid #fff;
+  border-radius: clamp(12px, 1.5vw, 20px);
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* ============================================
+   FLUID RESPONSIVE DESIGN - MAINTAINS INLINE LAYOUT
+   ============================================ */
+
+/* Desktop & Wide Screens - keep all 3 boxes inline */
+@media (min-width: 901px) {
+  .course-banner-container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: clamp(20px, 3vw, 50px);
+  }
+  .banner-left {
+    flex: 0 1 58%;
+  }
+  .banner-right {
+    flex: 0 1 40%;
+    margin-top: 0;
+  }
+  .banner-info-boxes {
+    grid-template-columns: minmax(0, 0.3fr) minmax(0, 0.35fr) minmax(0, 0.35fr) !important;
+    gap: clamp(10px, 1.2vw, 18px);
+  }
+  .duration-box,
+  .individual-box,
+  .corporate-box {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    width: 100%;
+	  gap:0px;
+  }
+}
+
+/* Tablet Layout - stack text/media vertically, make info boxes full width */
+@media (max-width: 900px) and (min-width: 600px) {
+  .course-banner-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: clamp(25px, 4vw, 50px);
+  }
+  .banner-left,
+  .banner-right {
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+  .banner-right {
+    margin-top: clamp(20px, 4vw, 40px);
+  }
+  .banner-info-boxes {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: clamp(12px, 2vw, 22px);
+  }
+  .banner-box {
+    width: 100%;
+    padding: clamp(16px, 2.5vw, 28px) clamp(18px, 3vw, 36px);
+  }
+  .duration-box,
+  .individual-box,
+  .corporate-box {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    width: 100%;
+  }
+}
+
+/* Very Small Screens - Stack vertically only when necessary */
+@media (max-width: 599px) {
+  .course-banner-container {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: clamp(15px, 4vw, 25px);
+  }
+  .banner-left,
+  .banner-right {
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+  .banner-info-boxes {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto auto auto;
+    gap: clamp(12px, 2.5vw, 18px);
+  }
+  .banner-box {
+    padding: clamp(18px, 3vw, 28px) clamp(20px, 4vw, 40px);
+    width: 100% !important;
+  }
+  .banner-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: auto !important;
+    min-width: auto !important;
+    padding-left: clamp(18px, 5vw, 32px);
+    padding-right: clamp(18px, 5vw, 32px);
+    align-self: flex-start;
+	  margin-top:8px!important;
+  }
+  .duration-box {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    width: 100% !important;
+  }
+  .individual-box {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+    width: 100% !important;
+  }
+  .corporate-box {
+    grid-column: 1 !important;
+    grid-row: 3 !important;
+    width: 100% !important;
+  }
+  .banner-video iframe,
+  .banner-video video,
+  .banner-image img {
+    border-width: clamp(2px, 0.5vw, 4px);
+  }
+}
+
+/* Extra Small Mobile - Further adjustments */
+@media (max-width: 400px) {
+  .course-banner-section {
+    padding: clamp(25px, 6vw, 35px) clamp(15px, 4vw, 25px);
+  }
+  .banner-info-boxes {
+    gap: 12px;
+  }
+}
+
+</style>
+
+<?php
+// Enhanced Media Detection Function
+function detect_media_type($raw_media) {
+    if (empty($raw_media)) {
+        return ['type' => '', 'url' => '', 'id' => ''];
+    }
+
+    // YouTube detection
+    if (strpos($raw_media, 'youtube.com') !== false || strpos($raw_media, 'youtu.be') !== false) {
+        $yt_id = '';
+        if (strpos($raw_media, 'v=') !== false) {
+            $yt_id = explode('v=', $raw_media)[1];
+            $yt_id = explode('&', $yt_id)[0];
+        } elseif (strpos($raw_media, 'youtu.be/') !== false) {
+            $yt_id = basename(parse_url($raw_media, PHP_URL_PATH));
+        } else {
+            $yt_id = basename($raw_media);
+        }
+        return [
+            'type' => 'youtube',
+            'url' => 'https://www.youtube.com/embed/' . $yt_id,
+            'id' => $yt_id
+        ];
+    }
+
+    // Vimeo detection
+    if (strpos($raw_media, 'vimeo.com') !== false) {
+        $vimeo_id = '';
+        if (preg_match('/vimeo\.com\/(\d+)/', $raw_media, $matches)) {
+            $vimeo_id = $matches[1];
+        } else {
+            $vimeo_id = basename(parse_url($raw_media, PHP_URL_PATH));
+        }
+        return [
+            'type' => 'vimeo',
+            'url' => 'https://player.vimeo.com/video/' . $vimeo_id,
+            'id' => $vimeo_id
+        ];
+    }
+
+    // Video file detection (mp4, webm, ogg, mov, avi)
+    if (preg_match('/\.(mp4|webm|ogg|ogv|mov|avi|wmv|flv)$/i', $raw_media)) {
+        $video_type = 'video/mp4';
+        if (preg_match('/\.(webm)$/i', $raw_media)) $video_type = 'video/webm';
+        elseif (preg_match('/\.(ogg|ogv)$/i', $raw_media)) $video_type = 'video/ogg';
+        
+        return [
+            'type' => 'video',
+            'url' => $raw_media,
+            'id' => '',
+            'video_type' => $video_type
+        ];
+    }
+
+    // Image detection (jpg, png, gif, webp, svg, bmp)
+    if (preg_match('/\.(jpg|jpeg|png|gif|webp|svg|bmp|ico)$/i', $raw_media)) {
+        return [
+            'type' => 'image',
+            'url' => $raw_media,
+            'id' => ''
+        ];
+    }
+
+    // Unknown → treat as image (for URLs without extension)
+    return [
+        'type' => 'image',
+        'url' => $raw_media,
+        'id' => ''
+    ];
+}
+
+$raw_media = $meta['video_url'] ?? '';
+$media_info = detect_media_type($raw_media);
+$media_type = $media_info['type'];
+$media_final = $media_info['url'];
+$media_id = $media_info['id'] ?? '';
+$video_type = $media_info['video_type'] ?? 'video/mp4';
+
+$duration_title = trim((string) ($meta['duration_title'] ?? ''));
+$duration_value = trim((string) ($meta['duration_value'] ?? ''));
+$individual_title = trim((string) ($meta['individual_title'] ?? ''));
+$individual_price = trim((string) ($meta['individual_price'] ?? ''));
+$individual_currency_symbol = trim((string) ($meta['individual_currency_symbol'] ?? ''));
+$individual_btn_text = trim((string) ($meta['individual_btn_text'] ?? ''));
+$individual_btn_url = trim((string) ($meta['individual_btn_url'] ?? ''));
+$corporate_title = trim((string) ($meta['corporate_title'] ?? ''));
+$corporate_price = trim((string) ($meta['corporate_price'] ?? ''));
+$corporate_btn_text = trim((string) ($meta['corporate_btn_text'] ?? ''));
+$corporate_btn_url = trim((string) ($meta['corporate_btn_url'] ?? ''));
+$individual_has_price = ($individual_price !== '' || $individual_currency_symbol !== '');
+$individual_has_button = ($individual_btn_text !== '' && $individual_btn_url !== '');
+$corporate_has_button = ($corporate_btn_text !== '' && $corporate_btn_url !== '');
+?>
+
+<section class="course-banner-section" style="background: <?php echo esc_attr($banner_bg); ?>;">
+  <div class="course-banner-container">
+
+    <!-- LEFT SIDE -->
+    <div class="banner-left">
+      <h1 class="banner-course-title">
+        <?php echo esc_html($meta['course_title'] ?? ''); ?>
+      </h1>
+
+      <?php
+        $desc_text = $meta['course_description'] ?? '';
+        
+        // Always process with wpautop to ensure paragraphs are created from line breaks
+        if (!empty($desc_text)) {
+          // Process with wpautop to convert line breaks to paragraphs
+          // This handles cases where editor saved plain text or <br> tags
+          $desc_text = wpautop($desc_text);
+          // Clean up any double paragraph tags that might occur
+          $desc_text = preg_replace('/<p>\s*<\/p>/i', '', $desc_text);
+        }
+        
+        $desc_limit = 320;
+        
+        // Strip HTML tags for character counting
+        $desc_plain = wp_strip_all_tags($desc_text);
+        
+        if (!empty($desc_text) && mb_strlen($desc_plain) > $desc_limit):
+          // Extract paragraphs and build excerpt
+          $paragraphs = preg_split('/<\/p>/i', $desc_text, -1, PREG_SPLIT_DELIM_CAPTURE);
+          $excerpt_html = '';
+          $current_length = 0;
+          
+          for ($i = 0; $i < count($paragraphs); $i++) {
+            $para = $paragraphs[$i];
+            $para_plain = wp_strip_all_tags($para);
+            $para_length = mb_strlen($para_plain);
+            
+            if ($current_length + $para_length <= $desc_limit) {
+              // Include full paragraph
+              $excerpt_html .= $para . '</p>';
+              $current_length += $para_length;
+            } else {
+              // Need to truncate this paragraph
+              $remaining = $desc_limit - $current_length;
+              if ($remaining > 50) {
+                // Extract text from paragraph
+                $para_text = wp_strip_all_tags($para);
+                $truncated = mb_substr($para_text, 0, $remaining);
+                // Try to break at sentence or word
+                $last_period = mb_strrpos($truncated, '.');
+                $last_space = mb_strrpos($truncated, ' ');
+                
+                if ($last_period !== false && $last_period > $remaining * 0.6) {
+                  $truncated = mb_substr($para_text, 0, $last_period + 1);
+                } elseif ($last_space !== false) {
+                  $truncated = mb_substr($para_text, 0, $last_space);
+                }
+                
+                // Preserve paragraph tag if it exists
+                if (preg_match('/<p[^>]*>/i', $para, $matches)) {
+                  $excerpt_html .= $matches[0] . esc_html($truncated) . '...</p>';
+                } else {
+                  $excerpt_html .= '<p>' . esc_html($truncated) . '...</p>';
+                }
+              }
+              break;
+            }
+          }
+      ?>
+        <div class="banner-course-description">
+          <div id="desc-short"><?php echo wp_kses_post($excerpt_html); ?></div>
+          <div id="desc-full" style="display:none;"><?php echo wp_kses_post($desc_text); ?></div>
+          <button id="banner-read-more" class="banner-desc-toggle-btn">Read more</button>
+          <button id="banner-read-less" class="banner-desc-toggle-btn" style="display:none;">Read less</button>
+        </div>
+      <?php else: ?>
+        <div class="banner-course-description">
+          <?php echo wp_kses_post($desc_text); ?>
+        </div>
+      <?php endif; ?>
+
+      <div class="banner-info-boxes">
+
+        <!-- Duration -->
+        <?php if ($duration_title !== '' || $duration_value !== ''): ?>
+          <div class="banner-box duration-box">
+            <?php if ($duration_title !== ''): ?>
+              <h3 class="banner-box-title">
+                <?php echo esc_html($duration_title); ?>
+              </h3>
+            <?php endif; ?>
+
+            <?php if ($duration_value !== ''): ?>
+              <p class="banner-box-value duration-vaule">
+                <?php echo esc_html($duration_value); ?>
+              </p>
+            <?php endif; ?>
+          </div>
+        <?php endif; ?>
+
+        <!-- Individual Box 
+        <?php if ($individual_title !== '' || $individual_has_price || $individual_has_button): ?>
+          <div class="banner-box individual-box">
+            <?php if ($individual_title !== ''): ?>
+              <h3 class="banner-box-title">
+                <?php echo esc_html($individual_title); ?>
+              </h3>
+            <?php endif; ?>
+
+            <?php if ($individual_has_price): ?>
+              <p class="banner-box-price">
+                <?php if ($individual_currency_symbol !== ''): ?>
+                  <small><?php echo esc_html($individual_currency_symbol); ?></small>
+                <?php endif; ?>
+                <?php echo esc_html($individual_price); ?>
+              </p>
+            <?php endif; ?>
+
+            <?php if ($individual_has_button): ?>
+              <a href="<?php echo esc_url($individual_btn_url); ?>" class="banner-btn individual-btn" target="_blank" rel="noopener noreferrer">
+                <?php echo esc_html($individual_btn_text); ?>
+              </a>
+            <?php endif; ?>
+          </div>
+        <?php endif; ?>   -->
+
+        <!-- Corporate Box 
+        <?php if ($corporate_title !== '' || $corporate_has_button): ?>
+          <div class="banner-box corporate-box">
+            <?php if ($corporate_title !== ''): ?>
+              <h3 class="banner-box-title">
+                <?php echo esc_html($corporate_title); ?>
+              </h3>
+            <?php endif; ?>
+
+            <?php if ($corporate_has_button): ?>
+              <a href="<?php echo esc_url($corporate_btn_url); ?>" class="banner-btn corporate-btn" target="_blank" rel="noopener noreferrer">
+                <?php echo esc_html($corporate_btn_text); ?>
+              </a>
+            <?php endif; ?>
+          </div>
+        <?php endif; ?>   -->
+		  
+		   
+		  <?php if ($corporate_title !== '' || $corporate_has_button): ?>
+          <div class="banner-box corporate-box">
+            <?php if ($corporate_has_button): ?>
+              <a href="<?php echo esc_url($corporate_btn_url); ?>" class="banner-btn corporate-btn" target="_blank" rel="noopener noreferrer">
+                <?php echo esc_html($corporate_btn_text); ?>
+              </a>
+            <?php endif; ?>
+          </div>
+        <?php endif; ?>
+
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE (MEDIA) -->
+    <div class="banner-right">
+
+      <?php if ($media_type == 'youtube'): ?>
+        <div class="banner-video">
+          <iframe 
+              src="<?php echo esc_url($media_final); ?>" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen 
+              loading="lazy"></iframe>
+        </div>
+
+      <?php elseif ($media_type == 'vimeo'): ?>
+        <div class="banner-video">
+          <iframe 
+              src="<?php echo esc_url($media_final); ?>?title=0&byline=0&portrait=0" 
+              frameborder="0" 
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen 
+              loading="lazy"></iframe>
+        </div>
+
+      <?php elseif ($media_type == 'video'): ?>
+        <div class="banner-video">
+          <video controls style="width:100%; height:auto; border-radius:10px;">
+            <source src="<?php echo esc_url($media_final); ?>" type="<?php echo esc_attr($video_type); ?>">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+      <?php elseif ($media_type == 'image'): ?>
+        <div class="banner-image">
+          <img src="<?php echo esc_url($media_final); ?>" 
+               alt="Course Media"
+               style="width:100%; height:auto; object-fit:contain; border-radius:10px; display:block;">
+        </div>
+
+      <?php endif; ?>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Read more/Read less functionality
+  const rm = document.getElementById('banner-read-more');
+  const rl = document.getElementById('banner-read-less');
+  const ds = document.getElementById('desc-short');
+  const df = document.getElementById('desc-full');
+  
+  if (rm && rl && ds && df) {
+    rm.addEventListener('click', function(e) {
+      e.preventDefault();
+      ds.style.display = 'none';
+      df.style.display = 'block';
+      rm.style.display = 'none';
+      rl.style.display = 'inline';
+    });
+    
+    rl.addEventListener('click', function(e) {
+      e.preventDefault();
+      ds.style.display = 'block';
+      df.style.display = 'none';
+      rm.style.display = 'inline';
+      rl.style.display = 'none';
+    });
+  }
+
+  // Removed sticky positioning JavaScript - using CSS sticky instead
+  // The CSS position: sticky with top: var(--scroll-sticky-offset) will handle it automatically
+});
+</script>
+
+
+
+<?php
+// ===== Scroll Section Fields =====
+$scroll_title = $meta['scroll_section_title'] ?? '';
+$scroll_description = $meta['scroll_section_description'] ?? '';
+$scroll_content = $meta['scroll_section_content'] ?? '';
+?>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+	
+.scroll-section {
+  box-sizing: border-box;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.scroll-container {
+  width: 100%;
+  max-width: 1290px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .scroll-section {
+    padding: 60px 20px 40px;
+  }
+}
+
+
+.objectives,
+.objectives-section *,
+.objectives-section,
+.objectives * {
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+	.objectives-section{
+		padding:30px 30px 0px 30px!important;
+	}
+
+.scroll-left {
+  width: 100%;
+  max-width: 100%;
+  max-height: none;
+  overflow: visible;
+  padding-right: 0;
+  box-sizing: border-box;
+}
+
+.objectives-title {
+font-family: 'Open Sans', sans-serif;
+  font-size: 32px !important;
+  font-weight: 600 !important;
+  color: #1a1a1a;
+}
+
+.objectives-desc {
+	font-family: 'Open Sans', sans-serif;
+  margin-bottom: 20px;
+}
+.objectives-content {
+}
+
+/* Right sticky sidebar - HIDDEN */
+.scroll-right {
+  display: none !important;
+}
+
+/* Ensure all text elements in scroll-right are white */
+.scroll-right p,
+.scroll-right h3,
+.scroll-right h4,
+.scroll-right span,
+.scroll-right .scroll-box-title,
+.scroll-right .scroll-box-price,
+.scroll-right .duration-title,
+.scroll-right .duration-value,
+.scroll-right .duration-line {
+  color: #ffffff !important;
+}
+
+@media (max-width: 1366px) {
+  .scroll-right {
+    top: var(--scroll-sticky-offset) !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .scroll-right {
+    top: var(--scroll-sticky-offset) !important;
+  }
+}
+
+.scroll-right-video iframe,
+.scroll-right-video video {
+  width: clamp(220px, 18vw, 320px);
+  height: clamp(140px, 12vw, 220px);
+  border-radius: 12px;
+  border: 2px solid #fff;
+  margin: 0 auto 10px;
+}
+.scroll-right .scroll-right-video .video-placeholder-youtube {
+  border: 3px solid #fff;       
+  border-radius: 16px;       
+  overflow: hidden;            
+  box-sizing: border-box;
+  width: clamp(220px, 18vw, 320px);
+  height: clamp(140px, 12vw, 220px);
+  margin: 0 auto;
+}
+
+.scroll-right-media img {
+  width: clamp(220px, 18vw, 320px);
+  max-width: 100%;
+  max-height: clamp(150px, 12vw, 220px);
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto 10px;
+  display: block;
+}
+	.scroll-box{
+		min-height:120px;
+		display:flex;
+		flex-direction:column;
+	}
+.scroll-right .scroll-box-title {
+  font-size: clamp(16px, 1.2vw, 20px);
+}
+
+.scroll-right .scroll-box-price {
+  font-size: clamp(18px, 1.4vw, 22px);
+}
+
+.scroll-right .banner-btn {
+  font-size: clamp(13px, 1vw, 16px);
+  width: auto;
+  min-width: auto;
+  padding: clamp(8px, 1vw, 12px) clamp(16px, 1.8vw, 24px);
+  align-self: center;
+}
+
+@media (max-width: 1280px) and (min-width: 901px) {
+  .scroll-right {
+    padding: clamp(14px, 1.4vw, 22px);
+    gap: clamp(8px, 1vw, 16px);
+  }
+  .scroll-right-video iframe,
+  .scroll-right-video video,
+  .scroll-right .scroll-right-video .video-placeholder-youtube {
+    width: clamp(210px, 32vw, 260px);
+    height: clamp(130px, 20vw, 170px);
+  }
+  .scroll-right-media img {
+    width: auto;
+    max-width: clamp(210px, 34vw, 260px);
+    max-height: 100px;
+	  margin:0px;
+  }
+  .scroll-right .scroll-box-title {
+    font-size: clamp(14px, 1.6vw, 17px);
+  }
+  .scroll-right .scroll-box-price {
+    font-size: clamp(16px, 2vw, 19px);
+  }
+  .scroll-right .banner-btn {
+    font-size: 14px;
+    width: auto;
+    min-width: auto;
+    padding: 8px 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  .scroll-right-video iframe,
+  .scroll-right-video video,
+  .scroll-right .scroll-right-video .video-placeholder-youtube {
+    width: clamp(200px, 60vw, 260px);
+    height: clamp(120px, 35vw, 150px) !important;
+  }
+  .scroll-right-media img {
+    max-height: 150px;
+    width: auto;
+    margin: 0 auto 10px;
+    display: block;
+  }
+  .scroll-right .scroll-box-title {
+    font-size: clamp(14px, 3vw, 18px);
+  }
+  .scroll-right .scroll-box-price {
+    font-size: clamp(16px, 4vw, 20px);
+  }
+  .scroll-right .banner-btn {
+    font-size: 13px;
+    padding: 8px 16px;
+    min-width: auto;
+    width: auto;
+  }
+}
+
+.scroll-right-duration {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Box styles (reuse banner style but stacked) */
+.scroll-right-boxes {
+  display: flex;
+  flex-wrap: wrap;         
+  justify-content: center;   
+  align-items: center;        
+  gap: 20px;                  
+  text-align: center;         
+
+}
+
+
+.scroll-box {
+  text-align: left;
+  padding: 20px;
+}
+
+.scroll-right .scroll-box {
+  padding: clamp(12px, 1.2vw, 18px);
+}
+.scroll-box-title {
+  font-size: 20px;
+  font-weight: 400 !important;
+  color: #fff;
+  margin: 0px !important;
+	margin-bottom:8px !important;
+}
+
+.sticky-box-title {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  margin-bottom: 6px !important;
+}
+
+.scroll-box-price {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom:5px;
+  margin:0px !important;
+}
+
+.scroll-box-price small {
+  font-size: 20px;
+  vertical-align: bottom;
+}
+.scroll-btn{
+	min-width:100% !important;
+	text-align:center!important;
+	margin-top:12px;
+	}	
+.duration-box-2 {
+  margin-bottom: 0rem;
+  text-align: center;
+  padding:0px !important;
+	width:100% !important;
+	min-width:100% !important;
+}
+
+.duration-line {
+  display: inline-block;
+  font-family: inherit;
+  font-size: inherit; 
+  font-weight: 600; 
+  color: #ffffff; 
+}
+
+.duration-title {
+  font-weight: 400;
+  margin-right: 6px;
+  color: #ffffff !important;
+}
+
+.duration-value {
+  font-weight: 500;
+  color: #ffffff !important;
+}
+
+
+.individual-box-2,
+.corporate-box-2 {
+	width: 90%;
+	justify-content:space-between;
+	width:100% !important;
+	min-width:100% !important;
+}
+	
+.objectives {
+  width: 60%;
+  margin: 0 auto 40px auto;  
+  color: #000000;
+  text-align: left;
+
+}
+
+.why-this-course{
+	padding:30px;
+	margin-top:40px !important;
+}	
+	
+.extra-info-section {
+  text-align: left;
+}
+
+.extra-info-title {
+  font-weight: 600 !important;
+  font-style: SemiBold;
+  font-size: 32px !important;
+  text-align: left;
+	margin:0px;
+}
+
+.extra-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px 40px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.extra-info-item {
+  background: #fff;
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive gap for extra-info-grid */
+@media (max-width: 768px) {
+  .extra-info-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.extra-info-item-title {
+  font-weight: 600;
+  font-size: 18px!important;
+  line-height: 24px;
+  margin: 0px !important;
+  text-align: left;
+}
+
+.extra-info-item-desc {
+  text-align: left;
+  margin: 8px 0px !important;
+}
+
+	.laws-section{
+		margin-top:30px;
+	}
+.laws-title {
+  font-weight: 600 !important;
+  font-style: normal;
+  font-size: 32px !important;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: left;
+  margin-bottom: 10px;
+	margin-top:0px!important;
+}
+
+.laws-description {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.laws-content {
+  text-align: left;
+}
+
+	
+.custom-slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 40px 0;
+  padding: 20px 20px 20px 30px!important;
+  box-sizing: border-box;
+  border-radius: 16px;
+  max-height:450px!important;
+}
+
+.custom-slider-wrapper {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.custom-slide {
+  flex: 0 0 50%; 
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	max-height:200px!important;
+}
+.custom-slide img {
+  width: 90%;         
+  height: auto;       
+  object-fit: contain; 
+  border-radius: 12px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.custom-slide img:hover {
+  transform: scale(1.05); 
+}
+
+
+
+
+	
+	.course-details-container {
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.course-detail-block {
+  margin-bottom: 40px;
+}
+
+.course-detail-title {
+	font-family: 'Open Sans', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.course-detail-content {
+	font-family: 'Open Sans', sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color:#1a1a1a;
+}
+	
+/* ==== Custom Dynamic Section Styles ==== */
+
+.custom-dynamic-section {
+  margin-top: 40px;
+  padding: 30px 30px 0px 30px;
+  background: #fff;
+}
+
+.custom-dynamic-section .custom-section-title {
+font-family: 'Open Sans', sans-serif;
+  font-weight: 600 !important;
+  font-style: SemiBold;
+  font-size: 32px !important;
+  line-height: 100%;
+  text-align: left;
+	margin:0px;
+  margin-bottom: 30px!important;
+}
+
+.custom-dynamic-section .custom-subsection {
+  margin-bottom: 30px;
+}
+
+.custom-dynamic-section .subsection-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top:12px !important;
+	margin-bottom:8px!important;
+}
+
+.custom-dynamic-section .subsection-content {
+}
+.custom-dynamic-section .subsection-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 15px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .custom-dynamic-section {
+    padding: 20px 15px;
+  }
+  .custom-dynamic-section .custom-section-title {
+    font-size: 28px !important;
+  }
+  .custom-dynamic-section .subsection-title {
+    font-size: 22px;
+  }
+}
+	
+	
+	
+.advanced-section {
+  padding: 30px;
+  border-radius: 12px;
+  margin: 40px 0 0 0;
+  color: #ffffff !important;
+  transition: background 0.4s ease;
+}
+
+/* Ensure all text elements in advanced-section are white */
+.advanced-section p,
+.advanced-section li,
+.advanced-section ul,
+.advanced-section ol,
+.advanced-section h2,
+.advanced-section h3,
+.advanced-section h4,
+.advanced-section h5,
+.advanced-section h6,
+.advanced-section span,
+.advanced-section div,
+.advanced-section strong,
+.advanced-section em,
+.advanced-section b,
+.advanced-section i {
+  color: #ffffff !important;
+}
+
+/* But allow links and buttons to have their own styling */
+.advanced-section a {
+  color: #ffffff !important;
+  text-decoration: underline;
+}
+
+.advanced-section h2 {
+	font-family: 'Open Sans', sans-serif;
+  font-size: 32px !important;
+  font-weight: 600 !important;
+  margin-bottom: 20px;
+	margin:0px;
+}
+
+.advanced-section .description {
+	font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.advanced-section .description p {
+  color: #ffffff !important;
+}
+
+.advanced-section .advanced-content {
+	font-family: 'Open Sans', sans-serif;
+  margin-bottom: 0px;
+}
+.advanced-section .advanced-content p {
+  color: #ffffff !important;
+}
+
+.advanced-section .advanced-content img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 15px 0;
+  display: block;
+}
+	
+	
+.custom-output-section {
+  padding: 40px 30px 0px 30px;
+  margin: 0;
+}
+
+
+
+.custom-output-section h2 {
+  font-weight: 600 !important;
+  font-style: normal;
+  font-size: 32px !important;
+  line-height: 100%;
+  letter-spacing: 0;
+  margin-bottom: 15px;
+}
+
+.custom-output-section .description {
+	font-family: 'Open Sans', sans-serif;
+  margin-bottom: 20px;
+}
+
+.custom-output-section .custom-output-content {
+}
+
+.custom-output-section .custom-output-content img {
+  max-width: 100%;
+  border-radius: 10px;
+  display: block;
+  margin: 15px 0;
+}
+	
+.codegrid-item-content ul {
+  list-style-type: disc;       
+  padding-left: 25px;         
+  margin: 15px 0;             
+}
+
+.codegrid-item-content ul li {    
+  padding-left: 5px;           
+  line-height: 32px;           
+  font-size: 16px;             
+  color: #1a1a1a;                 
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.laws-content ul,
+.custom-output-section .custom-output-content ul {
+  padding-left: 25px;
+  margin: 15px 0;
+}
+
+.laws-content ul li,
+.custom-output-section .custom-output-content ul li {
+  line-height: 1.7;
+  margin-bottom: 0px;
+}
+
+.custom-codegrid-section {
+    text-align: left;
+	padding:30px 30px 40px 30px !important;
+}
+
+.custom-codegrid-section .codegrid-main-title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1.3;
+    margin-bottom: 25px;
+    text-align: left;
+}
+  
+    .custom-codegrid-section .codegrid-list {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+  .custom-codegrid-section .codegrid-item {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-bottom:12px;
+    }
+
+    .custom-codegrid-section .codegrid-item-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0px !important;
+  margin-bottom:12px !important;
+  text-align: left;
+}
+
+    @media (max-width: 768px) {
+      .custom-codegrid-section .codegrid-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+</style>
+
+<section class="scroll-section">
+  <div class="scroll-container">
+    <!-- Left Scrollable Content -->
+    <div class="scroll-left">
+		
+		<div class="objectives-section">
+      <h2 class="objectives-title">
+        <?php echo esc_html($meta['objectives_section_title'] ?? ''); ?>
+      </h2>
+      <div class="objectives-desc">
+        <?php 
+        $objectives_desc = $meta['objectives_section_description'] ?? '';
+        if (!empty($objectives_desc)) {
+          $objectives_desc = wpautop($objectives_desc);
+          $objectives_desc = preg_replace('/<p>\s*<\/p>/i', '', $objectives_desc);
+        }
+        echo wp_kses_post($objectives_desc); 
+        ?>
+      </div>
+      <div class="objectives-content">
+  <?php 
+  $objectives_content = $meta['objectives_section_content'] ?? '';
+  
+  // Convert line breaks to paragraphs
+  if (!empty($objectives_content)) {
+    $objectives_content = wpautop($objectives_content);
+    $objectives_content = preg_replace('/<p>\s*<\/p>/i', '', $objectives_content);
+  }
+
+  // Allow full HTML formatting (lists, bold, paragraphs, etc.)
+  echo wp_kses(
+      $objectives_content,
+      array(
+          'p' => array(),
+          'br' => array(),
+          'strong' => array(),
+          'em' => array(),
+          'b' => array(),
+          'i' => array(),
+          'ul' => array(),
+          'ol' => array(),
+          'li' => array(),
+          'a' => array('href' => array(), 'title' => array(), 'target' => array()),
+      )
+  );
+  ?>
+</div>
+    </div>	
+<div class="why-this-course">
+<!-- ====== Extra Info Section (Below Objectives) ====== -->
+<div class="extra-info-section">
+  <?php 
+    $extra_title = $meta['extra_info_title'] ?? '';
+    $extra_title_color = $meta['extra_info_title_color'] ?? '';
+    $grid_title_color = $meta['extra_info_grid_title_color'] ?? '';
+    $grid_items = $meta['extra_info_grid'] ?? [];
+  ?>
+
+  <?php if ($extra_title): ?>
+    <h2 class="extra-info-title" style="color: <?php echo esc_attr($extra_title_color ?: '#000'); ?>;">
+      <?php echo esc_html($extra_title); ?>
+    </h2>
+  <?php endif; ?>
+
+  <?php if (!empty($grid_items) && is_array($grid_items)): ?>
+    <div class="extra-info-grid">
+      <?php foreach ($grid_items as $item): ?>
+        <?php 
+          $item_title = trim($item['title']);
+          $item_desc  = trim($item['desc']);
+          // Show item if title exists (even if description is empty)
+          if ($item_title === '' && $item_desc === '') continue; 
+        ?>
+        <div class="extra-info-item">
+          <?php if ($item_title): ?>
+            <h3 class="extra-info-item-title" style="color: <?php echo esc_attr($grid_title_color ?: '#000'); ?>;">
+              <?php echo esc_html($item_title); ?>
+            </h3>
+          <?php endif; ?>
+          <?php if ($item_desc): ?>
+            <div class="extra-info-item-desc">
+              <?php 
+              if (!empty($item_desc)) {
+                $item_desc = wpautop($item_desc);
+                $item_desc = preg_replace('/<p>\s*<\/p>/i', '', $item_desc);
+              }
+              echo wp_kses_post($item_desc); 
+              ?>
+            </div>
+          <?php endif; ?>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  <?php endif; ?>
+</div>
+
+<!-- ======= Laws & Regulations Section ======= -->
+<div class="laws-section">
+  <?php 
+    $laws_title = $meta['laws_section_title'] ?? '';
+    $laws_description = $meta['laws_section_description'] ?? '';
+    $laws_content = $meta['laws_section_content'] ?? '';
+  ?>
+
+  <?php if (!empty($laws_title)) : ?>
+    <h2 class="laws-title"><?php echo esc_html($laws_title); ?></h2>
+  <?php endif; ?>
+
+  <?php if (!empty($laws_description)) : ?>
+    <div class="laws-description">
+      <?php 
+      if (!empty($laws_description)) {
+        $laws_description = wpautop($laws_description);
+        $laws_description = preg_replace('/<p>\s*<\/p>/i', '', $laws_description);
+      }
+      echo wp_kses_post($laws_description); 
+      ?>
+    </div>
+  <?php endif; ?>
+
+  <div class="laws-content">
+    <?php 
+    // Convert line breaks to paragraphs
+    if (!empty($laws_content)) {
+      $laws_content = wpautop($laws_content);
+      $laws_content = preg_replace('/<p>\s*<\/p>/i', '', $laws_content);
+    }
+    // Allow safe HTML including inline CSS and tables etc.
+    echo wp_kses(
+        $laws_content,
+        array(
+            'p' => array('style' => array()),
+            'br' => array(),
+            'strong' => array(),
+            'em' => array(),
+            'b' => array(),
+            'i' => array(),
+            'u' => array(),
+            'ul' => array('style' => array()),
+            'ol' => array('style' => array()),
+            'li' => array('style' => array()),
+            'table' => array('style' => array(), 'border' => array(), 'cellpadding' => array(), 'cellspacing' => array()),
+            'thead' => array(),
+            'tbody' => array(),
+            'tr' => array('style' => array()),
+            'th' => array('style' => array()),
+            'td' => array('style' => array()),
+            'a' => array('href' => array(), 'target' => array(), 'style' => array()),
+            'div' => array('style' => array(), 'class' => array()),
+            'span' => array('style' => array()),
+        )
+    );
+    ?>
+  </div>
+</div>	
+	</div>
+
+<?php 
+$carousel_title = $meta['carousel_section_title'] ?? '';
+$carousel_title_color = $meta['carousel_section_title_color'] ?? '';
+$carousel_bg = $meta['carousel_section_bg'] ?? '';
+$carousel_images = $meta['carousel_section_images'] ?? [];
+?>
+
+<?php if (!empty($carousel_images) && is_array($carousel_images)) : ?>
+<div class="custom-slider-container" style="background: <?php echo esc_attr($carousel_bg ?: 'linear-gradient(90deg, #576094, #915EBD)'); ?>; padding:40px 0;">
+  
+  <?php if (!empty($carousel_title)) : ?>
+    <h2 class="carousel-title" style="color: <?php echo esc_attr($carousel_title_color ?: '#fff'); ?>; font-size:32px !important; font-weight:600 !important; text-align:left; margin-top:0px;">
+      <?php echo esc_html($carousel_title); ?>
+    </h2>
+  <?php endif; ?>
+
+  <div class="custom-slider-wrapper">
+    <div class="custom-slider-track">
+      <?php foreach ($carousel_images as $image_url) : ?>
+        <?php if (!empty($image_url)) : ?>
+          <div class="custom-slide">
+            <img src="<?php echo esc_url($image_url); ?>" alt="Course Slide" class="slider-image" loading="lazy" />
+          </div>
+        <?php endif; ?>
+      <?php endforeach; ?>
+    </div>
+  </div>
+
+  <div class="slider-controls">
+    <button class="prev-slide" aria-label="Previous slide">
+      <span class="slider-arrow-icon slider-arrow-icon--prev" aria-hidden="true"></span>
+    </button>
+    <button class="next-slide" aria-label="Next slide">
+      <span class="slider-arrow-icon slider-arrow-icon--next" aria-hidden="true"></span>
+    </button>
+  </div>
+</div>
+
+<!-- Fullscreen Viewer -->
+<div class="fullscreen-viewer">
+  <button class="close-fullscreen">×</button>
+  <button class="fullscreen-prev">‹</button>
+  <img class="fullscreen-image" src="" alt="Full View">
+  <button class="fullscreen-next">›</button>
+</div>
+
+<style>
+/* ==== Slider ==== */
+.custom-slider-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 90%;
+  margin: 20px auto;
+}
+.custom-slider-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+.custom-slide {
+  flex: 0 0 calc(33.333% - 1.33%);
+  margin-right: 2%;
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.slider-image {
+  width: 100%;
+  height: 320px;
+  object-fit: contain;
+  border-radius: 12px;
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+  background-color: transparent;
+}
+.slider-image:hover {
+  transform: scale(1.05);
+}
+
+
+
+.slider-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+.slider-controls button {
+  display: flex;
+  font-size: 32px;
+  font-weight:500!important;
+  background: #FFFFFF33!important;  
+  cursor: pointer;
+  margin: 0 !important;
+  padding:0 !important;
+  align-items: center!important; 
+  justify-content: center!important;
+  line-height: 1;
+  width: 52px;
+  height: 52px;
+}
+
+.slider-arrow-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.slider-arrow-icon--prev {
+  background-image: url('https://succeedlearn.com/wp-content/uploads/2025/11/LA.svg');
+}
+
+.slider-arrow-icon--next {
+  background-image: url('https://succeedlearn.com/wp-content/uploads/2025/11/RA.svg');
+}
+
+/* ==== Fullscreen View ==== */
+.fullscreen-viewer {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 200px 100px 100px;
+}
+.fullscreen-viewer.active {
+  display: flex;
+}
+.fullscreen-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: none;
+  transition: opacity 0.4s ease;
+}
+.close-fullscreen,
+.fullscreen-prev,
+.fullscreen-next {
+  position: absolute;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 36px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.close-fullscreen { top: 12%; right: 60px; }
+.fullscreen-prev { left: 60px; top: 50%; transform: translateY(-50%); }
+.fullscreen-next { right: 60px; top: 50%; transform: translateY(-50%); }
+
+@media (min-width: 1025px) {
+  .custom-slide {
+    flex: 0 0 calc(33.333% - 1.33%);
+    margin-right: 2%;
+  }
+}
+@media (max-width: 1024px) and (min-width: 769px) {
+  .custom-slide { 
+    flex: 0 0 calc(50% - 1%);
+    margin-right: 2%; 
+  }
+}
+@media (max-width:768px){
+  .custom-slide { 
+    flex: 0 0 96%;
+    margin-right: 4%; 
+  }
+  .fullscreen-viewer { padding: 80px 30px 40px; }
+  .fullscreen-prev, .fullscreen-next { width: 48px; height: 48px; font-size: 28px; left: 30px; right: 30px; }
+}
+
+body.carousel-fullscreen-active {
+  overflow: hidden;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const track = document.querySelector(".custom-slider-track");
+  const slides = Array.from(document.querySelectorAll(".custom-slide"));
+  const prevBtn = document.querySelector(".prev-slide");
+  const nextBtn = document.querySelector(".next-slide");
+  const visibleSlides = 3;
+  const slideCount = slides.length;
+  let currentIndex = visibleSlides;
+
+  // Clone slides for infinite scroll
+  const clonesBefore = slides.slice(-visibleSlides).map(s => s.cloneNode(true));
+  const clonesAfter = slides.slice(0, visibleSlides).map(s => s.cloneNode(true));
+  clonesBefore.forEach(clone => track.prepend(clone));
+  clonesAfter.forEach(clone => track.append(clone));
+
+  const allSlides = Array.from(document.querySelectorAll(".custom-slide"));
+  const slideWidth = allSlides[0].offsetWidth + parseFloat(getComputedStyle(allSlides[0]).marginRight);
+  track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+
+  function moveToIndex() {
+    track.style.transition = "transform 0.6s ease";
+    track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  }
+
+  function nextSlide() {
+    currentIndex++;
+    moveToIndex();
+  }
+
+  function prevSlide() {
+    currentIndex--;
+    moveToIndex();
+  }
+
+  track.addEventListener("transitionend", () => {
+    if (currentIndex >= slideCount + visibleSlides) {
+      track.style.transition = "none";
+      currentIndex = visibleSlides;
+      track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    } else if (currentIndex < visibleSlides) {
+      track.style.transition = "none";
+      currentIndex = slideCount + visibleSlides - 1;
+      track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    }
+  });
+
+  nextBtn.addEventListener("click", nextSlide);
+  prevBtn.addEventListener("click", prevSlide);
+
+  // Auto slide
+  let auto = setInterval(nextSlide, 4000);
+  track.addEventListener("mouseenter", () => clearInterval(auto));
+  track.addEventListener("mouseleave", () => (auto = setInterval(nextSlide, 4000)));
+
+  // === FULLSCREEN ===
+  const fullscreen = document.querySelector(".fullscreen-viewer");
+  const fullscreenImg = document.querySelector(".fullscreen-image");
+  const closeFs = document.querySelector(".close-fullscreen");
+  const prevFs = document.querySelector(".fullscreen-prev");
+  const nextFs = document.querySelector(".fullscreen-next");
+  let fsIndex = 0;
+
+  function openFullscreen(index) {
+    fsIndex = index % slideCount;
+    fullscreen.classList.add("active");
+    fullscreenImg.src = slides[fsIndex].querySelector("img").src;
+  }
+  function closeFullscreen() { fullscreen.classList.remove("active"); }
+  function nextFullscreen() {
+    fsIndex = (fsIndex + 1) % slideCount;
+    fullscreenImg.src = slides[fsIndex].querySelector("img").src;
+  }
+  function prevFullscreenSlide() {
+    fsIndex = (fsIndex - 1 + slideCount) % slideCount;
+    fullscreenImg.src = slides[fsIndex].querySelector("img").src;
+  }
+
+  slides.forEach((slide, index) => {
+    const img = slide.querySelector("img");
+    if (img) img.addEventListener("click", () => openFullscreen(index));
+  });
+
+  closeFs.addEventListener("click", closeFullscreen);
+  nextFs.addEventListener("click", nextFullscreen);
+  prevFs.addEventListener("click", prevFullscreenSlide);
+});
+</script>
+<?php endif; ?>
+
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+<?php
+$main_title = $meta['custom_section_main_title'] ?? '';
+$custom_sections = $meta['custom_content_sections'] ?? [];
+
+if (!empty($main_title) || !empty($custom_sections)) : ?>
+  <div class="custom-dynamic-section">
+    <?php if (!empty($main_title)) : ?>
+      <h2 class="custom-section-title"><?php echo esc_html($main_title); ?></h2>
+    <?php endif; ?>
+
+    <?php if (is_array($custom_sections) && !empty($custom_sections)) : ?>
+      <?php foreach ($custom_sections as $section) : ?>
+        <?php if (!empty($section['title']) || !empty($section['content'])) : ?>
+          <div class="custom-subsection">
+            <?php if (!empty($section['title'])) : ?>
+              <h3 class="subsection-title" 
+                  style="color:<?php echo esc_attr($section['title_color'] ?? '#000'); ?>;">
+                <?php echo esc_html($section['title']); ?>
+              </h3>
+            <?php endif; ?>
+
+            <?php if (!empty($section['content'])) : ?>
+              <div class="subsection-content">
+                <?php 
+                $section_content = $section['content'];
+                if (!empty($section_content)) {
+                  $section_content = wpautop($section_content);
+                  $section_content = preg_replace('/<p>\s*<\/p>/i', '', $section_content);
+                }
+                echo wp_kses_post($section_content); 
+                ?>
+              </div>
+            <?php endif; ?>
+          </div>
+        <?php endif; ?>
+      <?php endforeach; ?>
+    <?php endif; ?>
+  </div>
+<?php endif; ?>
+		
+		
+<?php
+$adv_title = $meta['advanced_section_title'] ?? '';
+$adv_title_color = $meta['advanced_section_title_color'] ?? '';
+$adv_desc = $meta['advanced_section_description'] ?? '';
+$adv_html_1 = $meta['advanced_section_html_1'] ?? '';
+$adv_html_2 = $meta['advanced_section_html_2'] ?? '';
+$adv_bg = $meta['advanced_section_bg'] ?? '';
+?>
+
+<?php if ($adv_title || $adv_desc || $adv_html_1 || $adv_html_2): ?>
+  <div class="advanced-section" style="background: <?php echo esc_attr($adv_bg ?: '#f9f9f9'); ?>;">
+    <?php if ($adv_title): ?>
+      <h2 style="color: <?php echo esc_attr($adv_title_color ?: '#000'); ?>;">
+        <?php echo esc_html($adv_title); ?>
+      </h2>
+    <?php endif; ?>
+
+    <?php if ($adv_desc): ?>
+      <div class="description">
+        <?php 
+        if (!empty($adv_desc)) {
+          $adv_desc = wpautop($adv_desc);
+          $adv_desc = preg_replace('/<p>\s*<\/p>/i', '', $adv_desc);
+        }
+        echo wp_kses_post($adv_desc); 
+        ?>
+      </div>
+    <?php endif; ?>
+
+    <?php if ($adv_html_1): ?>
+      <div class="advanced-content">
+        <?php 
+        $adv_content_1 = $adv_html_1;
+        if (!empty($adv_content_1)) {
+          $adv_content_1 = wpautop($adv_content_1);
+          $adv_content_1 = preg_replace('/<p>\s*<\/p>/i', '', $adv_content_1);
+        }
+        echo wp_kses_post($adv_content_1); 
+        ?>
+      </div>
+    <?php endif; ?>
+
+    <?php if ($adv_html_2): ?>
+      <div class="advanced-content">
+        <?php 
+        $adv_content_2 = $adv_html_2;
+        if (!empty($adv_content_2)) {
+          $adv_content_2 = wpautop($adv_content_2);
+          $adv_content_2 = preg_replace('/<p>\s*<\/p>/i', '', $adv_content_2);
+        }
+        echo wp_kses_post($adv_content_2); 
+        ?>
+      </div>
+    <?php endif; ?>
+  </div>
+<?php endif; ?>
+
+<?php
+$co_title = $meta['custom_output_title'] ?? '';
+$co_desc = $meta['custom_output_description'] ?? '';
+$co_html = $meta['custom_output_html'] ?? '';
+?>
+
+<?php if ($co_title || $co_desc || $co_html): ?>
+<div class="custom-output-section">
+  <?php if ($co_title): ?>
+    <h2><?php echo esc_html($co_title); ?></h2>
+  <?php endif; ?>
+
+  <?php if ($co_desc): ?>
+    <div class="description">
+      <?php 
+      if (!empty($co_desc)) {
+        $co_desc = wpautop($co_desc);
+        $co_desc = preg_replace('/<p>\s*<\/p>/i', '', $co_desc);
+      }
+      echo wp_kses_post($co_desc); 
+      ?>
+    </div>
+  <?php endif; ?>
+
+  <?php if ($co_html): ?>
+    <div class="custom-output-content">
+      <?php 
+      $co_content = $co_html;
+      if (!empty($co_content)) {
+        $co_content = wpautop($co_content);
+        $co_content = preg_replace('/<p>\s*<\/p>/i', '', $co_content);
+      }
+      echo do_shortcode(wp_kses_post($co_content)); 
+      ?>
+    </div>
+  <?php endif; ?>
+</div>
+<?php endif; ?>
+		
+<!-- ======= Custom Code Grid Section (Frontend Output) ======= -->
+<?php
+$codegrid_title = $meta['codegrid_title'] ?? '';
+$codegrid_title_color = $meta['codegrid_title_color'] ?? '';
+$codegrid_item_color = $meta['codegrid_item_color'] ?? '';
+$codegrid_items = $meta['codegrid_items'] ?? [];
+?>
+
+<?php if (!empty($codegrid_items) && is_array($codegrid_items)) : ?>
+  <div class="custom-codegrid-section">
+    <?php if (!empty($codegrid_title)) : ?>
+      <h2 class="codegrid-main-title" style="color: <?php echo esc_attr($codegrid_title_color ?: '#000'); ?>">
+        <?php echo esc_html($codegrid_title); ?>
+      </h2>
+    <?php endif; ?>
+
+    <div class="codegrid-list">
+      <?php foreach ($codegrid_items as $item) : ?>
+        <?php
+        $item_title = trim($item['title'] ?? '');
+        $item_content = trim($item['content'] ?? '');
+        // ✅ Show item if title exists (even if content is empty)
+        if (empty($item_title) && empty($item_content)) continue;
+        ?>
+        <div class="codegrid-item">
+          <?php if (!empty($item_title)): ?>
+            <h3 class="codegrid-item-title" style="color: <?php echo esc_attr($codegrid_item_color ?: '#000'); ?>">
+              <?php echo esc_html($item_title); ?>
+            </h3>
+          <?php endif; ?>
+
+          <?php if (!empty($item_content)): ?>
+            <div class="codegrid-item-content">
+              <?php 
+              $codegrid_content = $item_content;
+              if (!empty($codegrid_content)) {
+                $codegrid_content = wpautop($codegrid_content);
+                $codegrid_content = preg_replace('/<p>\s*<\/p>/i', '', $codegrid_content);
+              }
+              echo do_shortcode(wp_kses_post($codegrid_content)); 
+              ?>
+            </div>
+          <?php endif; ?>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+<?php endif; ?>
+		
+		
+		
+		
+
+		
+		</div>
+
+  </div>
+</section>
+
+
+
+
+<?php
+$faq_main_title = $meta['faq_main_title'] ?? '';
+$faq_items = $meta['faq_items'] ?? [];
+if (!empty($faq_items)) :
+?>
+<section class="faq-section">
+  <?php if ($faq_main_title): ?>
+    <h2 class="faq-title"><?php echo esc_html($faq_main_title); ?></h2>
+  <?php endif; ?>
+
+  <div class="faq-container">
+    <?php foreach ($faq_items as $index => $faq): ?>
+      <div class="faq-item<?php echo $index === 0 ? ' open' : ''; ?>">
+        <button class="faq-question<?php echo $index === 0 ? ' active' : ''; ?>">
+          <?php echo esc_html($faq['question']); ?>
+          <span class="faq-toggle"><?php echo $index === 0 ? '−' : '+'; ?></span>
+        </button>
+        <div class="faq-answer<?php echo $index === 0 ? ' open' : ''; ?>">
+          <?php echo wp_kses_post(wpautop($faq['answer'])); ?>
+        </div>
+      </div>
+    <?php endforeach; ?>
+  </div>
+</section>
+
+<style>
+.faq-section {
+  font-family: "Open Sans", sans-serif;
+  margin: 60px auto;
+  padding: 0 80px;
+  box-sizing: border-box;
+}
+.faq-title {
+  text-align: center;
+  font-size: 32px !important;
+  font-weight: 600 !important;
+  margin-bottom: 30px;
+  color: #1a1a1a;
+}
+.faq-container {
+  max-width: 1290px;
+  margin: 0 auto;
+}
+.faq-item {
+  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+.faq-item.open {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.faq-question {
+  width: 100%;
+  background: #fff!important;
+  border: none;
+  outline: none;
+  padding: 18px 24px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+  color:#1a1a1a!important;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s ease, color 0.2s ease;
+  text-transform: none !important;
+}
+.faq-question:hover {
+  background: #fafafa;
+}
+.faq-question.active {
+  background: #f5f8ff;
+  color: #16356b;
+}
+.faq-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: #123456;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  transition: transform 0.3s ease;
+}
+.faq-question.active .faq-toggle {
+  transform: rotate(180deg);
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background: #fff;
+  color: #1a1a1a;
+  font-size: 16px;
+  line-height: 1.65;
+  padding: 0 24px;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  text-transform: none !important;
+}
+.faq-answer.open {
+  padding: 16px 24px 20px 24px;
+  max-height: 10000px !important; /* Very large value to accommodate any content length */
+  overflow: visible;
+}
+/* Ensure initial open state displays correctly */
+.faq-item.open .faq-answer.open {
+  max-height: 10000px !important;
+  overflow: visible;
+}
+.faq-answer p,
+.faq-answer ul,
+.faq-answer li {
+  text-transform: none !important;
+}
+@media (max-width: 1024px) {
+  .faq-section { padding: 0 20px; }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  // Ensure initially open FAQs display correctly
+  faqItems.forEach(item => {
+    const answer = item.querySelector(".faq-answer");
+    if (answer && answer.classList.contains("open")) {
+      // Remove any height restrictions for initially open items
+      answer.style.maxHeight = "none";
+      answer.style.overflow = "visible";
+    }
+  });
+
+  faqItems.forEach(item => {
+    const question = item.querySelector(".faq-question");
+    const answer = item.querySelector(".faq-answer");
+    const toggle = item.querySelector(".faq-toggle");
+
+    question.addEventListener("click", () => {
+      const isActive = question.classList.contains("active");
+
+      // Close all
+      faqItems.forEach(i => {
+        const a = i.querySelector(".faq-answer");
+        i.querySelector(".faq-question").classList.remove("active");
+        a.classList.remove("open");
+        a.style.maxHeight = "0px"; // Reset to closed state
+        a.style.overflow = "hidden";
+        i.querySelector(".faq-toggle").textContent = "+";
+        i.classList.remove("open");
+      });
+
+      // Open this one if not already active
+      if (!isActive) {
+        question.classList.add("active");
+        answer.classList.add("open");
+        // Remove height restriction to show full content
+        answer.style.maxHeight = "none";
+        answer.style.overflow = "visible";
+        toggle.textContent = "−";
+        item.classList.add("open");
+      }
+    });
+  });
+});
+</script>
+<?php endif; ?>
+
+<!-- Scroll To Top Button -->
+<div class="course-scroll-to-top-wrap course-scroll-to-top-hide">
+    <button class="course-scroll-to-top-button" aria-label="Scroll to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 14L12 9L17 14" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+    </button>
+</div>
+
+<style>
+.course-scroll-to-top-wrap {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 9999;
+}
+
+.course-scroll-to-top-button {
+    width: 50px;
+    height: 50px;
+    background-color: #123456!important;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.course-scroll-to-top-button:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.course-scroll-to-top-button:active {
+    transform: translateY(0);
+}
+
+.course-scroll-to-top-wrap.course-scroll-to-top-hide {
+    display: none;
+}
+
+.course-scroll-to-top-button svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+    flex-shrink: 0;
+}
+
+.course-scroll-to-top-button svg path {
+    stroke: #ffffff !important;
+    stroke-width: 3.5 !important;
+    fill: none !important;
+    vector-effect: non-scaling-stroke;
+}
+
+/* Hide the Elementor Essential Addons scroll-to-top widget on this page */
+.eael-ext-scroll-to-top-wrap {
+    display: none !important;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollButton = document.querySelector('.course-scroll-to-top-wrap');
+    const button = document.querySelector('.course-scroll-to-top-button');
+    
+    if (!scrollButton || !button) return;
+    
+    // Show/hide button based on scroll position
+    function toggleScrollButton() {
+        if (window.pageYOffset > 300) {
+            scrollButton.classList.remove('course-scroll-to-top-hide');
+        } else {
+            scrollButton.classList.add('course-scroll-to-top-hide');
+        }
+    }
+    
+    // Scroll to top function
+    button.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    
+    // Listen to scroll events
+    window.addEventListener('scroll', toggleScrollButton);
+    
+    // Initial check
+    toggleScrollButton();
+});
+</script>
+
+<?php
+// Load theme footer
+get_footer();
+?>
+
+
+
+
+
+
+
+/***********  Function.php 30/03/2026    **********************/
+
+<?php
+
+/* =========================
+   DISABLE LAZY LOAD FOR IMPORTANT IMAGES
+   ========================= */
+add_filter('wp_lazy_loading_enabled', function ($default, $tag_name, $context) {
+    if (!is_admin() && $tag_name === 'img') {
+        return false;
+    }
+    return $default;
+}, 10, 3);
+
+
+/* =========================
+   FORCE EAGER LOAD FOR FIRST IMAGES
+   ========================= */
+add_filter('wp_get_attachment_image_attributes', function ($attr) {
+    if (!is_admin()) {
+        $attr['loading'] = 'eager';
+        $attr['fetchpriority'] = 'high';
+    }
+    return $attr;
+});
+
+// // ==============================
+// Enqueue Parent Theme Styles
+// ==============================
+function thim_child_enqueue_styles() {
+	wp_enqueue_style('thim-parent-style', get_template_directory_uri() . '/style.css', array(), THIM_THEME_VERSION);
+}
+add_action('wp_enqueue_scripts', 'thim_child_enqueue_styles', 1000);
+
+// ==============================================================================
+// AMP Template Override
+// ==============================================================================
+/**
+ * AMP endpoint helper (works with AMP plugin).
+ */
+function sl_is_amp() {
+    return function_exists('is_amp_endpoint') && is_amp_endpoint();
+}
+
+/**
+ * AMP performance: remove consent render-blocking markup.
+ *
+ * Your AMP templates include `data-block-on-consent` and `<amp-consent>` which blocks
+ * initial render and can heavily inflate LCP in Lighthouse.
+ *
+ * We remove these only on AMP responses, without touching non-AMP output.
+ */
+add_action('template_redirect', function () {
+    if (!sl_is_amp()) return;
+    if (is_admin() || is_preview()) return;
+
+    ob_start(function ($html) {
+        if (!is_string($html) || $html === '') return $html;
+
+        // Remove AMP consent render-blocking attribute.
+        $html = str_replace(' data-block-on-consent', '', $html);
+
+        // Remove the amp-consent runtime script if present.
+        $html = preg_replace(
+            '#<script\b[^>]*\bcustom-element=("|\')amp-consent\\1[^>]*>\\s*</script>#i',
+            '',
+            $html
+        );
+
+        // Remove any amp-consent tag block (cookie banner).
+        $html = preg_replace(
+            '#<amp-consent\\b[^>]*>.*?</amp-consent>#is',
+            '',
+            $html
+        );
+
+        return $html;
+    });
+}, 0);
+
+function custom_amp_template_include($template) {
+    if (sl_is_amp() && is_single()) {
+        $new_template = locate_template('single-amp.php');
+        if (!empty($new_template)) {
+            return $new_template;
+        }
+    }
+    return $template;
+}
+add_filter('template_include', 'custom_amp_template_include');
+
+// ==============================================================================
+// Disable Eduma Register link everywhere
+// // ==============================================================================
+
+add_action( 'init', function() {
+    // 1. Disable WP native registration fully
+    update_option( 'users_can_register', 0 );
+
+    // 2. Remove Eduma's register link (theme hooks)
+    remove_action( 'thim_register_login_links', 'thim_register_link' ); 
+    remove_action( 'thim_register_login_links', 'thim_link_register' );
+});
+
+// 3. As a fallback, hide register link with CSS (covers modal & header menus)
+add_action( 'wp_head', function() {
+    echo '<style>
+        a[href*="register"], 
+        .thim-login-popup .register-link, 
+        .thim-widget-login-popup .register-link {
+            display:none !important;
+        }
+    </style>';
+});
+
+add_action( 'init', function() {
+    update_option( 'users_can_register', 0 );
+});
+// ==============================================================================
+// Remove Eduma's Register option from login popup and menu
+// ==============================================================================
+add_action( 'after_setup_theme', function() {
+    remove_action( 'thim_register_login_links', 'thim_register_link' );
+    remove_action( 'thim_register_login_links', 'thim_link_register' );
+    remove_action( 'thim_register_login_links', 'thim_register' );
+});
+
+add_action( 'wp_head', function() {
+    echo '<style>
+        a[href*="action=register"],
+        .menu-item-register,
+        .thim-login-popup .register-link,
+        .thim-widget-login-popup .register-link {
+            display:none !important;
+        }
+    </style>';
+});
+
+// ==============================================================================
+// Force Child Theme Single Course Template
+// ==============================================================================
+add_action('after_setup_theme', function () {
+    // Stop Eduma overriding LearnPress templates
+    remove_filter('learn_press_template', 'thim_custom_lp_template', 99, 3);
+    remove_filter('learn_press_template', 'thim_custom_lp_template', 99);
+}, 20);
+
+// Force our custom template for single course
+add_filter('template_include', function ($template) {
+    if (is_singular('lp_course')) {
+        return get_stylesheet_directory() . '/learnpress-v4/single-course.php';
+    }
+    return $template;
+}, PHP_INT_MAX);
+
+
+// ==============================================================================
+// Remove Eduma Hooks & Assets on Single Course
+// ==============================================================================
+add_action('template_redirect', function () {
+    if (is_singular('lp_course')) {
+        // Remove Eduma LearnPress hooks
+        remove_all_actions('learn-press/single-course_summary');
+        remove_all_actions('learn-press/single-course_content');
+    }
+}, 20);
+
+add_action('wp_enqueue_scripts', function () {
+    if (is_singular('lp_course')) {
+        wp_dequeue_style('eduma-style');
+        wp_dequeue_script('thim-custom');
+        wp_dequeue_script('thim-course');
+        wp_dequeue_script('thim-main');
+    }
+}, 100);
+
+
+// ==============================================================================
+// AMP for LearnPress Single Course
+// ==============================================================================
+add_filter('ampforwp_cpt_supported', function ($post_types) {
+    $post_types[] = 'lp_course';
+    return $post_types;
+});
+
+add_filter('amp_post_template_file', function($file, $type, $post) {
+    if ( $post->post_type === 'lp_course' && $type === 'single' ) {
+        $custom = get_stylesheet_directory() . '/single-amp.php';
+        if ( file_exists( $custom ) ) {
+            return $custom;
+        }
+    }
+    return $file;
+}, 10, 3);
+
+// ==============================================================================
+// Debug Template Path (Optional - Remove in production)
+// ==============================================================================
+/***add_filter('template_include', function ($template) {
+    echo '<div style="background: yellow; color: black; padding: 5px; text-align: center;">TEMPLATE: ' . $template . '</div>';
+    return $template;
+}, PHP_INT_MAX);
+?>
+****/
+
+
+add_action('phpmailer_init', function($phpmailer) {
+    error_log('SES From Address: ' . $phpmailer->From);
+});
+
+/**
+ * Mobile → AMP redirect (avoid redirect chains; skip AMP endpoints).
+ * Keep this logic here so we don't duplicate redirects on init/template_redirect.
+ */
+add_action('template_redirect', function () {
+    if (!wp_is_mobile()) return;
+    if (sl_is_amp()) return;
+    if (is_admin() || is_preview()) return;
+    if (($_SERVER['REQUEST_METHOD'] ?? 'GET') !== 'GET') return;
+    if (isset($_GET['noamp']) || isset($_GET['amp'])) return;
+
+    $request_uri = $_SERVER['REQUEST_URI'] ?? '';
+    if ($request_uri === '' || strpos($request_uri, '/wp-json/') === 0) return;
+
+    $current_url = home_url($request_uri);
+    $amp_url = add_query_arg('amp', '1', $current_url);
+    wp_safe_redirect($amp_url, 302);
+    exit;
+}, 1);
+
+
+
+// Disable AMP for a specific page (ID 44207)
+add_filter( 'ampforwp_is_amp_endpoint', function( $is_amp ) {
+    if ( is_page( 8 ) ) {
+        return false; // Force normal page, no AMP
+    }
+    return $is_amp;
+});
+
+
+
+// Code for displying the lat text for the images //
+/*add_filter('wp_get_attachment_image_attributes', function($attr, $attachment) {
+    if (isset($attr['alt']) && !empty($attr['alt'])) {
+        // Make title match the alt text
+        $attr['title'] = $attr['alt'];
+    } else {
+        // Or remove the title if no alt
+        unset($attr['title']);
+    }
+    return $attr;
+}, 10, 2);*/
+
+add_action('wp_footer', function() {
+    // AMP pages must not output arbitrary custom JS.
+    if (sl_is_amp()) return;
+    ?>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const imgs = document.querySelectorAll('img');
+
+    imgs.forEach(img => {
+        // Store original alt and title
+        const originalAlt = img.getAttribute('alt');
+        const originalTitle = img.getAttribute('title');
+
+        // Remove tooltip on hover
+        img.addEventListener('mouseenter', () => {
+            img.removeAttribute('alt');
+            img.removeAttribute('title');
+        });
+
+        // Restore attributes when mouse leaves
+        img.addEventListener('mouseleave', () => {
+            if (originalAlt) img.setAttribute('alt', originalAlt);
+            if (originalTitle) img.setAttribute('title', originalTitle);
+        });
+    });
+});
+</script>
+<?php });
+
+
+
+// ✅ Disable lazy loading on the first hero image (fix LCP for Old Slider)
+add_filter('wp_get_attachment_image_attributes', function ($attr, $attachment, $size) {
+    static $first = true;
+    if ($first) {
+        unset($attr['loading']); // remove lazy attribute
+        $attr['fetchpriority'] = 'high';
+        $attr['decoding'] = 'async';
+        $first = false;
+    }
+    return $attr;
+}, 10, 3);
+
+// For Downloading the pdf brochure in the ESG page 
+
+add_action('init', function() {
+    if ( isset($_GET['download']) && $_GET['download'] === 'SucceedLEARN_ESG_Brochure.pdf' ) {
+
+        // Path to the file in your uploads folder
+        $file = WP_CONTENT_DIR . '/uploads/2025/11/SucceedLEARN_ESG_Brochure.pdf';
+
+        if ( file_exists( $file ) ) {
+            // Force download headers
+            header( 'Content-Description: File Transfer' );
+            header( 'Content-Type: application/octet-stream' );
+            header( 'Content-Disposition: attachment; filename="' . basename( $file ) . '"' );
+            header( 'Content-Transfer-Encoding: binary' );
+            header( 'Expires: 0' );
+            header( 'Cache-Control: must-revalidate' );
+            header( 'Pragma: public' );
+            header( 'Content-Length: ' . filesize( $file ) );
+
+            flush();
+            readfile( $file );
+            exit;
+        } else {
+            wp_die( 'File not found.' );
+        }
+    }
+});
+
+function succeed_fix_thim_slider_lazy() {
+    if (sl_is_amp()) return;
+?>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let slides = document.querySelectorAll(".tp-slide"); // ThimPress slider class
+
+    if (slides.length > 0) {
+        // First slide: remove lazy load
+        slides[0].querySelectorAll("img").forEach(img => {
+            img.removeAttribute("loading");
+            img.classList.remove("lazyload");
+        });
+
+        // Other slides: enable lazy load
+        for (let i = 1; i < slides.length; i++) {
+            slides[i].querySelectorAll("img").forEach(img => {
+                img.setAttribute("loading", "lazy");
+                img.classList.add("lazyload");
+            });
+        }
+    }
+});
+</script>
+<?php
+}
+add_action('wp_footer', 'succeed_fix_thim_slider_lazy', 50);
+
+
+
+/**
+ * Force clean reload when page is accessed with hash
+ */
+function sl_force_top_on_hash_reload() {
+
+    if (!is_page('security-awareness-training')) {
+        return;
+    }
+
+    // Only redirect once
+    if (!isset($_GET['clean'])) {
+        ?>
+        <script>
+        if (window.location.hash) {
+            window.location.href =
+                window.location.pathname +
+                window.location.search +
+                (window.location.search ? '&' : '?') +
+                'clean=1';
+        }
+        </script>
+        <?php
+    }
+}
+add_action('wp_head', 'sl_force_top_on_hash_reload');
+
+
+function sl_remove_clean_param() {
+    if (!is_page('security-awareness-training')) {
+        return;
+    }
+    ?>
+    <script>
+    if (window.location.search.includes('clean=1')) {
+        history.replaceState(null, '', window.location.pathname);
+    }
+    </script>
+    <?php
+}
+add_action('wp_footer', 'sl_remove_clean_param');
+
+
+add_action('wp_enqueue_scripts', function () {
+    wp_dequeue_style('elementor-icons-fa-regular');
+    wp_dequeue_style('elementor-icons-fa-solid');
+    wp_dequeue_style('elementor-icons-fa-brands');
+}, 20);
+
+
+add_action('wp_enqueue_scripts', function () {
+
+    // Remove Font Awesome styles
+    wp_dequeue_style('elementor-icons-fa-regular');
+    wp_dequeue_style('elementor-icons-fa-solid');
+    wp_dequeue_style('elementor-icons-fa-brands');
+
+    // Remove Font Awesome v4 shim
+    wp_dequeue_script('font-awesome-4-shim');
+    wp_dequeue_script('elementor-icons-fa-compatibility');
+
+}, 20);
+
+
+
+function add_meta_pixel_non_amp_pages() {
+
+    // Prevent loading on AMP
+    if ( function_exists('is_amp_endpoint') && is_amp_endpoint() ) {
+        return;
+    }
+
+    /* ===============================
+     * Page ID 55602 → PageView (NON-AMP)
+     * =============================== */
+    if ( is_page(55602) ) {
+        ?>
+        <!-- Meta Pixel Code – Page 55602 -->
+        <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1173591888264209');
+        fbq('track', 'PageView');
+        </script>
+
+        <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1173591888264209&ev=PageView&noscript=1"/>
+        </noscript>
+        <!-- End Meta Pixel Code -->
+        <?php
+    }
+
+    /* ===============================
+     * Page ID 57340 → Lead (NON-AMP)
+     * =============================== */
+    if ( is_page(57340) ) {
+        ?>
+        <!-- Meta Pixel Lead – Page 57340 -->
+        <script>
+            fbq('track', 'Lead');
+        </script>
+        <!-- End Meta Pixel Lead -->
+        <?php
+    }
+
+}
+add_action('wp_head', 'add_meta_pixel_non_amp_pages');
+
+

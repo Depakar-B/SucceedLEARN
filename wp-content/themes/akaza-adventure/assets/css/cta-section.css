@@ -1,0 +1,358 @@
+/*=========================================
+CTA Section
+=========================================*/
+
+.sl-home-cta-section{
+
+    padding:90px 0;
+
+    background:linear-gradient(180deg,#F8FAFC 0%,#F2F5F8 100%);
+
+    font-family: var(--slf-font-body, "Space Grotesk", system-ui, sans-serif);
+
+}
+
+.sl-home-cta-section .container{
+    width:100%;
+    max-width:var(--sl-home-content-max, 1400px);
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+.sl-home-cta-section .row{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-left:-15px;
+    margin-right:-15px;
+}
+
+.sl-home-cta-section .col-md-5{
+    width:100%;
+    padding-left:15px;
+    padding-right:15px;
+    box-sizing:border-box;
+}
+
+@media(min-width:768px){
+    .sl-home-cta-section .col-md-5{
+        flex:0 0 41.6667%;
+        max-width:41.6667%;
+    }
+}
+
+.sl-home-btn-primary,
+.sl-home-btn-secondary{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+}
+
+
+.sl-home-cta-wrapper{
+
+    margin:auto;
+
+    text-align:center;
+
+
+}
+
+
+/* Heading */
+
+.sl-home-cta-wrapper h2{color:#1F2C56;
+margin:20px 0;
+
+    line-height:1.2;
+
+}
+
+
+.sl-home-cta-wrapper p{
+
+    max-width:620px;
+
+    margin:0 auto;
+
+    color:#555;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+/* Buttons */
+
+.sl-home-cta-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    margin-top:40px;
+
+}
+
+
+.sl-home-btn-primary{
+
+    padding:14px 34px;
+
+    border-radius:8px;
+
+    transition:.3s;
+    
+    min-width:200px;
+
+    height: 48px;
+
+}
+
+
+.sl-home-btn-primary:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+.sl-home-btn-secondary{
+
+    border:2px solid #1F2C56;
+
+    color:#1F2C56;
+
+    padding:14px 34px;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+    min-width:200px;
+
+    height: 48px;
+}
+
+.sl-home-btn-secondary:hover{
+
+    background:#1F2C56;
+
+    color:#fff;
+
+}
+
+
+/* Contact */
+
+.sl-home-contact-row{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:40px;
+
+    margin-top:45px;
+
+}
+
+.sl-home-contact-box{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:10px;
+
+    align-items:center;
+
+    font-size:17px;
+
+    padding:18px 28px;
+
+    position:relative;
+
+}
+
+.sl-home-contact-box + .sl-home-contact-box::before{
+
+    content:'';
+
+    position:absolute;
+
+    left:-20px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:1px;
+
+    height:60%;
+
+    background:#ddd;
+
+}
+
+.sl-home-contact-icon{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:36px;
+
+    height:36px;
+
+    flex-shrink:0;
+
+    border-radius:8px;
+
+    background:#E8EAF6;
+
+    color:#3F51B5;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    line-height:1;
+
+    box-shadow:0 4px 12px rgba(31,44,86,.12);
+
+}
+
+.sl-home-contact-label{
+
+    color:#1F2C56;
+
+    font-weight:600;
+
+}
+
+.sl-home-contact-label::after{
+
+    content:':';
+
+}
+
+
+.sl-home-contact-box a{
+
+    color: var(--sl-heading-accent, #135db7);
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+
+.sl-home-contact-box a:hover{
+
+    color: var(--sl-heading-accent, #135db7);
+
+}
+
+
+/* Responsive */
+
+@media(max-width:991px){
+
+    .sl-home-cta-wrapper{
+
+        padding:50px 35px;
+
+    }
+
+
+}
+
+
+@media(max-width:767px){
+
+    .sl-home-cta-section{
+
+        padding:60px 0;
+
+    }
+
+    .sl-home-cta-wrapper{
+
+        padding:40px 25px;
+
+    }
+
+
+    .sl-home-cta-buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .sl-home-btn-primary,
+    .sl-home-btn-secondary{
+
+        width:100%;
+
+        max-width:280px;
+
+    }
+
+    .sl-home-contact-row{
+
+        flex-direction:column;
+
+        gap:32px;
+
+        margin-top:35px;
+
+        align-items:center;
+
+    }
+
+    .sl-home-contact-box{
+
+        flex-direction:column;
+
+        width:100%;
+
+        max-width:320px;
+
+        margin-bottom:0;
+
+        padding:20px 24px;
+
+    }
+
+    .sl-home-contact-box + .sl-home-contact-box::before{
+
+        left:50%;
+
+        top:-16px;
+
+        transform:translateX(-50%);
+
+        width:60%;
+
+        height:1px;
+
+    }
+
+}

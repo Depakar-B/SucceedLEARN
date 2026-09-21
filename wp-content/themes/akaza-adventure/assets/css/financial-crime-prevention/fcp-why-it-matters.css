@@ -1,0 +1,170 @@
+/* Financial Crime Prevention — Why it matters now */
+
+.sl-fcp-statistics {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-bg);
+}
+
+.sl-fcp-statistics__heading {
+	max-width: 900px;
+	margin-bottom: 48px;
+}
+
+.sl-fcp-statistics__heading h2 {
+	margin: 0 0 16px;
+}
+
+.sl-fcp-statistics__heading h3 {
+	margin: 0;
+	color: var(--sl-page-primary);
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1.55;
+	letter-spacing: 0;
+}
+
+.sl-fcp-statistics__grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 24px;
+	align-items: stretch;
+}
+
+.sl-fcp-statistics__card {
+	height: 100%;
+	min-height: 100%;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	align-content: stretch;
+	padding: 32px 28px;
+	border: 1px solid rgba(107, 124, 147, 0.18);
+	border-radius: 18px;
+	background: var(--sl-page-white);
+	box-shadow: 0 10px 28px rgba(22, 35, 78, 0.05);
+}
+
+.sl-fcp-statistics__value {
+	margin: 0 0 16px;
+	color: var(--sl-page-primary);
+	font-size: 24px;
+	font-weight: 800;
+	line-height: 1.1;
+}
+
+.sl-fcp-statistics__text {
+	margin: 0;
+	color: var(--sl-page-text);
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.7;
+}
+
+.sl-fcp-statistics__source {
+	margin: 22px 0 0;
+	padding-top: 16px;
+	border-top: 1px solid rgba(107, 124, 147, 0.16);
+	color: var(--sl-page-muted);
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1.5;
+}
+
+@media (min-width: 1400px) {
+	.sl-fcp-statistics {
+		padding: 100px 0;
+	}
+
+	.sl-fcp-statistics__heading {
+		margin-bottom: 52px;
+	}
+
+	.sl-fcp-statistics__card {
+		padding: 36px 30px;
+	}
+}
+
+@media (max-width: 1199px) {
+	.sl-fcp-statistics {
+		padding: 80px 0;
+	}
+
+	.sl-fcp-statistics__heading {
+		margin-bottom: 40px;
+	}
+
+	.sl-fcp-statistics__heading h3 {
+		font-size: 18px;
+	}
+
+	.sl-fcp-statistics__grid {
+		gap: 20px;
+	}
+
+	.sl-fcp-statistics__card {
+		padding: 28px 24px;
+	}
+
+	.sl-fcp-statistics__value {
+		font-size: 40px;
+	}
+}
+
+@media (max-width: 991px) {
+	.sl-fcp-statistics {
+		padding: 70px 0;
+	}
+
+	.sl-fcp-statistics__heading {
+		margin-bottom: 34px;
+	}
+
+	.sl-fcp-statistics__heading h3 {
+		font-size: 17px;
+	}
+
+	.sl-fcp-statistics__grid {
+		grid-template-columns: 1fr;
+		gap: 18px;
+	}
+
+	.sl-fcp-statistics__value {
+		font-size: 38px;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-fcp-statistics {
+		padding: 60px 0;
+	}
+
+	.sl-fcp-statistics__heading {
+		margin-bottom: 28px;
+	}
+
+	.sl-fcp-statistics__card {
+		padding: 24px 20px;
+		border-radius: 16px;
+	}
+
+	.sl-fcp-statistics__value {
+		font-size: 34px;
+		margin-bottom: 12px;
+	}
+
+	.sl-fcp-statistics__text {
+		margin-bottom: 18px;
+		font-size: 15px;
+	}
+}
+
+@media (max-width: 480px) {
+	.sl-fcp-statistics__value {
+		font-size: 30px;
+	}
+
+	.sl-fcp-statistics__source {
+		font-size: 12px;
+	}
+}

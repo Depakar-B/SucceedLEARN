@@ -1,0 +1,129 @@
+/* Financial Crime Prevention — Training by role */
+
+.sl-fcp-training-roles {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-white);
+}
+
+.sl-fcp-training-roles__heading {
+	max-width: 900px;
+	margin-bottom: 40px;
+}
+
+.sl-fcp-training-roles__heading h2 {
+	margin: 0 0 16px;
+}
+
+.sl-fcp-training-roles__heading p {
+	max-width: 850px;
+	margin: 0;
+}
+
+.sl-fcp-training-roles__table-wrap {
+	width: 100%;
+	max-width: 1100px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow-x: auto;
+	border: 1px solid rgba(107, 124, 147, 0.22);
+	border-radius: 14px;
+	box-shadow: 0 10px 30px rgba(22, 35, 78, 0.06);
+	background: var(--sl-page-white);
+}
+
+.sl-fcp-training-roles__table {
+	width: 100%;
+	min-width: 720px;
+	border-collapse: separate;
+	border-spacing: 0;
+	background: var(--sl-page-white);
+}
+
+.sl-fcp-training-roles__table thead {
+	background: var(--sl-page-navy);
+}
+
+.sl-fcp-training-roles__table th,
+.sl-fcp-training-roles__table td {
+	padding: 16px 18px;
+	border-bottom: 1px solid rgba(107, 124, 147, 0.18);
+	text-align: left;
+	vertical-align: top;
+}
+
+.sl-fcp-training-roles__table thead th {
+	color: var(--sl-page-white);
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 1.4;
+}
+
+.sl-fcp-training-roles__table thead th:first-child {
+	border-radius: 13px 0 0 0;
+}
+
+.sl-fcp-training-roles__table thead th:last-child {
+	border-radius: 0 13px 0 0;
+}
+
+.sl-fcp-training-roles__table tbody th {
+	width: 28%;
+	color: var(--sl-page-navy);
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1.5;
+}
+
+.sl-fcp-training-roles__table tbody td {
+	width: 36%;
+	color: var(--sl-page-text);
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.6;
+}
+
+.sl-fcp-training-roles__table tbody tr:last-child th,
+.sl-fcp-training-roles__table tbody tr:last-child td {
+	border-bottom: 0;
+}
+
+.sl-fcp-training-roles__table tbody tr:hover {
+	background: rgba(109, 195, 235, 0.08);
+}
+
+@media (min-width: 1400px) {
+	.sl-fcp-training-roles {
+		padding: 100px 0;
+	}
+
+	.sl-fcp-training-roles__heading {
+		margin-bottom: 48px;
+	}
+}
+
+@media (max-width: 1199px) {
+	.sl-fcp-training-roles {
+		padding: 80px 0;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-fcp-training-roles {
+		padding: 60px 0;
+	}
+
+	.sl-fcp-training-roles__heading {
+		margin-bottom: 28px;
+	}
+
+	.sl-fcp-training-roles__table {
+		min-width: 680px;
+	}
+
+	.sl-fcp-training-roles__table th,
+	.sl-fcp-training-roles__table td {
+		padding: 13px 12px;
+	}
+}

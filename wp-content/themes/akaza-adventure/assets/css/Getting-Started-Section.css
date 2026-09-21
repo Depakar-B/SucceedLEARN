@@ -1,0 +1,245 @@
+/*==================================================
+        Getting Started Section
+==================================================*/
+
+.sl-home-getting-started-section{
+    padding:80px 0;
+    background:#ffffff;
+    font-family: var(--slf-font-body, "Space Grotesk", system-ui, sans-serif);
+}
+
+.sl-home-getting-started-section .container{
+    width:100%;
+    max-width:var(--sl-home-content-max, 1400px);
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+.sl-home-getting-started-section .row{
+    display:flex;
+    flex-wrap:wrap;
+    margin-left:-15px;
+    margin-right:-15px;
+}
+
+.sl-home-getting-started-section .row.g-4{
+    row-gap:1.5rem;
+}
+
+.sl-home-getting-started-section .col-md-6,
+.sl-home-getting-started-section .col-lg-3{
+    width:100%;
+    padding-left:15px;
+    padding-right:15px;
+    box-sizing:border-box;
+}
+
+@media(min-width:768px){
+    .sl-home-getting-started-section .col-md-6{
+        flex:0 0 50%;
+        max-width:50%;
+    }
+}
+
+@media(min-width:992px){
+    .sl-home-getting-started-section .col-lg-3{
+        flex:0 0 25%;
+        max-width:25%;
+    }
+}
+
+
+/* Heading */
+
+.sl-home-getting-started-heading{
+    margin-bottom:50px;
+}
+
+.sl-home-getting-started-heading h2{color:#1F2C56;
+    margin-top:18px;
+}
+
+
+/* Card */
+
+.sl-home-step-card{
+
+    background:#F7F7F7;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    height:100%;
+
+    border:1px solid transparent;
+
+}
+
+
+/* Icon */
+
+.sl-home-step-icon{
+
+    width:56px;
+    height:56px;
+
+    border-radius:50%;
+
+    background:transparent;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#1F2C56;
+
+    font-size:22px;
+
+    margin-bottom:18px;
+
+}
+
+.sl-home-step-icon img{
+    width:28px;
+    height:28px;
+    object-fit:contain;
+}
+
+
+/* Label */
+
+.sl-home-step-label{
+
+    display:block;
+
+    color:var(--sl-heading-accent, #1472ba);
+
+    font-size:15px;
+
+    margin-bottom:12px;
+
+}
+
+
+/* Title */
+
+.sl-home-step-card h3{
+
+    font-size:24px;
+
+    color:#1F2C56;
+
+    font-weight:700;
+
+    line-height:1.3;
+
+    margin-bottom:15px;
+
+}
+
+
+/* Description */
+
+.sl-home-step-card p{
+
+    color:#555;
+
+    line-height:1.7;
+
+    margin-bottom:0;
+
+}
+
+
+/* Entrance animation — card 1 from left; later cards slide out from under the previous toward the right */
+
+.sl-home-getting-started-section .row{
+    overflow:visible;
+}
+
+.sl-home-getting-started-section .col-md-6,
+.sl-home-getting-started-section .col-lg-3{
+    overflow:visible;
+}
+
+.sl-home-step-enter{
+    height:100%;
+    opacity:0;
+    position:relative;
+    z-index:var(--sl-gs-z, 1);
+}
+
+.sl-home-step-enter--from-left{
+    transform:translateX(-48px);
+}
+
+/* Start one column to the left (under the previous card), then slide right into place */
+.sl-home-step-enter--from-under{
+    transform:translateX(calc(-100% - 30px));
+}
+
+.sl-home-getting-started-section.is-inview .sl-home-step-enter--from-left{
+    animation:sl-gs-from-left .6s ease-out var(--sl-gs-delay, 0s) forwards;
+}
+
+.sl-home-getting-started-section.is-inview .sl-home-step-enter--from-under{
+    animation:sl-gs-from-under .65s ease-out var(--sl-gs-delay, 0s) forwards;
+}
+
+@keyframes sl-gs-from-left{
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@keyframes sl-gs-from-under{
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce){
+    .sl-home-step-enter,
+    .sl-home-step-enter--from-left,
+    .sl-home-step-enter--from-under{
+        opacity:1;
+        transform:none;
+    }
+
+    .sl-home-getting-started-section.is-inview .sl-home-step-enter--from-left,
+    .sl-home-getting-started-section.is-inview .sl-home-step-enter--from-under{
+        animation:none;
+    }
+}
+
+
+/* Responsive */
+
+@media(max-width:991px){
+
+    .sl-home-getting-started-section{
+        padding:60px 0;
+    }
+
+
+}
+
+@media(max-width:767px){
+
+
+    .sl-home-step-card{
+        padding:25px;
+    }
+
+    .sl-home-step-card h3{
+        font-size:22px;
+    }
+
+}

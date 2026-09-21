@@ -1,0 +1,118 @@
+/* SucceedLEARN GDPR Employee Awareness — Course Modules */
+
+.sl-gdpr-course-modules {
+	padding: 90px 0;
+	background: var(--sl-page-white, #fff);
+}
+
+.sl-gdpr-course-modules__heading {
+	margin: 0 0 40px;
+}
+
+.sl-gdpr-course-modules__heading p {
+	max-width: 760px;
+	margin: 0;
+	color: var(--sl-page-text, #4A4A4A);
+}
+
+.sl-gdpr-course-modules__grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 16px;
+}
+
+.sl-gdpr-course-modules__card {
+	display: flex;
+	flex-direction: column;
+	min-height: 190px;
+	padding: 24px 22px;
+	border: 1px solid rgba(22, 35, 78, 0.12);
+	border-radius: 12px;
+	background: var(--sl-page-white, #fff);
+}
+
+.sl-gdpr-course-modules__number {
+	margin-bottom: 16px;
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-gdpr-course-modules__content {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
+
+.sl-gdpr-course-modules__content p {
+	margin: 10px 0 0;
+	color: var(--sl-page-muted, #6B7C93);
+}
+
+/*
+ * Featured signature module.
+ * Uses the existing SucceedLEARN brand treatment rather
+ * than the dark colour from the reference design.
+ */
+.sl-gdpr-course-modules__card--featured {
+	border-color: rgba(20, 114, 186, 0.3);
+	border-top: 3px solid var(--sl-page-primary, #1472ba);
+	background: rgba(20, 114, 186, 0.06);
+}
+
+.sl-gdpr-course-modules__card--featured
+	.sl-gdpr-course-modules__number {
+	color: var(--sl-page-primary-dark, #283384);
+}
+
+.sl-gdpr-course-modules__label {
+	display: inline-flex;
+	align-self: flex-start;
+	margin-bottom: 8px;
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-gdpr-course-modules__card--featured
+	.sl-panel-title {
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-gdpr-course-modules__badge {
+	display: inline-flex;
+	align-self: flex-start;
+	margin-top: auto;
+	padding: 5px 9px;
+	border-radius: 5px;
+	background: rgba(20, 114, 186, 0.12);
+	color: var(--sl-page-primary-dark, #283384);
+}
+
+@media (max-width: 999px) {
+
+	.sl-gdpr-course-modules {
+		padding: 75px 0;
+	}
+
+	.sl-gdpr-course-modules__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 767px) {
+
+	.sl-gdpr-course-modules {
+		padding: 60px 0;
+	}
+
+	.sl-gdpr-course-modules__heading {
+		margin-bottom: 30px;
+	}
+
+	.sl-gdpr-course-modules__grid {
+		grid-template-columns: 1fr;
+		gap: 14px;
+	}
+
+	.sl-gdpr-course-modules__card {
+		min-height: 0;
+		padding: 22px 20px;
+	}
+}

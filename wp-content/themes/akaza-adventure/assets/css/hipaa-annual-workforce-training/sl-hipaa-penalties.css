@@ -1,0 +1,407 @@
+/* =========================================================
+   HIPAA PENALTY TIERS
+   ========================================================= */
+
+   .sl-hipaa-penalties {
+	width: 100%;
+	padding: 96px 0;
+	color: var(--sl-page-white, #ffffff);
+	background: var(--sl-page-navy, #16234e);
+}
+
+
+/* =========================================================
+   TWO-COLUMN GRID
+   ========================================================= */
+
+.sl-hipaa-penalties__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.05fr) minmax(420px, 0.95fr);
+	align-items: start;
+	gap: 64px;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+   ========================================================= */
+
+.sl-hipaa-penalties__content {
+	min-width: 0;
+}
+
+.sl-hipaa-penalties__intro {
+	width: 100%;
+	margin-bottom: 36px;
+}
+
+.sl-hipaa-penalties__intro .sl-home-sub-heading {
+	display: flex;
+	align-items: center;
+	margin-bottom: 16px;
+	color: var(--sl-page-primary-soft, #6dc3eb);
+}
+
+.sl-hipaa-penalties__intro
+	.sl-home-sub-heading::before {
+	background: var(--sl-page-primary-soft, #6dc3eb);
+}
+
+.sl-hipaa-penalties__intro h2 {
+	width: 100%;
+	margin-bottom: 18px;
+	color: var(--sl-page-white, #ffffff);
+	text-wrap: balance;
+}
+
+.sl-hipaa-penalties__intro h2 > span {
+	color: var(--sl-page-primary-soft, #6dc3eb);
+}
+
+.sl-hipaa-penalties__intro p {
+	width: 100%;
+	margin: 0;
+	color: rgba(255, 255, 255, 0.82);
+	line-height: 1.75;
+	text-wrap: pretty;
+}
+
+
+/* =========================================================
+   PENALTY-TIER LIST
+   ========================================================= */
+
+.sl-hipaa-penalties__list {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-hipaa-penalties__list-item {
+	display: grid;
+	grid-template-columns: 42px minmax(0, 1fr);
+	align-items: start;
+	gap: 15px;
+	margin: 0;
+	padding: 19px 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.sl-hipaa-penalties__list-item:first-child {
+	border-top: 0;
+}
+
+.sl-hipaa-penalties__list-index {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 38px;
+	height: 38px;
+	color: var(--sl-page-white, #ffffff);
+	background: var(--sl-page-primary, #1472ba);
+	border-radius: 50%;
+	font-size: 11px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.sl-hipaa-penalties__list-content {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	min-width: 0;
+}
+
+.sl-hipaa-penalties__list-content strong {
+	color: var(--sl-page-white, #ffffff);
+	font-size: 16px;
+	line-height: 1.4;
+}
+
+.sl-hipaa-penalties__list-content > span {
+	color: rgba(255, 255, 255, 0.76);
+	font-size: 14px;
+	line-height: 1.65;
+	text-wrap: pretty;
+}
+
+
+/* =========================================================
+   SUPPORTING NOTE
+   ========================================================= */
+
+.sl-hipaa-penalties__note {
+	display: grid;
+	grid-template-columns: 30px minmax(0, 1fr);
+	align-items: start;
+	gap: 12px;
+	margin-top: 25px;
+	padding-top: 22px;
+	border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.sl-hipaa-penalties__note-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 28px;
+	height: 28px;
+	color: var(--sl-page-primary-soft, #6dc3eb);
+}
+
+.sl-hipaa-penalties__note-icon svg {
+	display: block;
+	width: 23px;
+	height: 23px;
+}
+
+.sl-hipaa-penalties__note p {
+	margin: 0;
+	color: rgba(255, 255, 255, 0.68);
+	font-size: 13px;
+	line-height: 1.7;
+	text-wrap: pretty;
+}
+
+
+/* =========================================================
+   STICKY RIGHT COLUMN
+   ========================================================= */
+
+.sl-hipaa-penalties__findings-wrap {
+	position: sticky;
+	top: 120px;
+	align-self: start;
+	min-width: 0;
+}
+
+
+/* =========================================================
+   WHITE FINDINGS PANEL
+   ========================================================= */
+
+.sl-hipaa-penalties__findings {
+	overflow: hidden;
+	background: var(--sl-page-white, #ffffff);
+	border: 1px solid rgba(109, 195, 235, 0.58);
+	border-radius: 14px;
+}
+
+
+/* =========================================================
+   FINDINGS HEADER
+   ========================================================= */
+
+.sl-hipaa-penalties__findings-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 24px;
+	min-height: 102px;
+	padding: 22px 24px;
+	background: #f2f8fc;
+	border-bottom: 1px solid rgba(20, 114, 186, 0.2);
+}
+
+.sl-hipaa-penalties__findings-label {
+	display: block;
+	margin-bottom: 5px;
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 11px;
+	font-weight: 700;
+	line-height: 1.3;
+	text-transform: uppercase;
+}
+
+.sl-hipaa-penalties__findings-header h3 {
+	margin: 0;
+	color: var(--sl-page-navy, #16234e);
+	font-size: 22px;
+	line-height: 1.3;
+	text-wrap: pretty;
+}
+
+.sl-hipaa-penalties__findings-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 42px;
+	height: 42px;
+	flex: 0 0 42px;
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-hipaa-penalties__findings-icon svg {
+	display: block;
+	width: 31px;
+	height: 31px;
+}
+
+
+/* =========================================================
+   FINDINGS TABLE
+   ========================================================= */
+
+.sl-hipaa-penalties__table {
+	display: flex;
+	flex-direction: column;
+}
+
+.sl-hipaa-penalties__finding {
+	display: grid;
+	grid-template-columns: minmax(130px, 0.72fr) minmax(0, 1.28fr);
+	align-items: stretch;
+	min-height: 112px;
+	background: var(--sl-page-white, #ffffff);
+	border-bottom: 1px solid rgba(107, 124, 147, 0.18);
+	transition: background-color 0.2s ease;
+}
+
+.sl-hipaa-penalties__finding:last-child {
+	border-bottom: 0;
+}
+
+.sl-hipaa-penalties__finding:hover {
+	background: #f8fbfe;
+}
+
+
+/* =========================================================
+   FINDING TITLE COLUMN
+   ========================================================= */
+
+.sl-hipaa-penalties__finding-title {
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	background: rgba(109, 195, 235, 0.08);
+	border-right: 1px solid rgba(107, 124, 147, 0.18);
+}
+
+.sl-hipaa-penalties__finding-title strong {
+	color: var(--sl-page-navy, #16234e);
+	font-size: 15px;
+	line-height: 1.45;
+	text-wrap: pretty;
+}
+
+
+/* =========================================================
+   FINDING DETAIL COLUMN
+   ========================================================= */
+
+.sl-hipaa-penalties__finding-detail {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	padding: 20px;
+}
+
+.sl-hipaa-penalties__finding-badge {
+	display: inline-flex;
+	align-items: center;
+	width: fit-content;
+	margin-bottom: 8px;
+	padding: 5px 9px;
+	color: var(--sl-page-primary, #1472ba);
+	background: rgba(109, 195, 235, 0.16);
+	border: 1px solid rgba(20, 114, 186, 0.2);
+	border-radius: 999px;
+	font-size: 10px;
+	font-weight: 700;
+	line-height: 1.2;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+
+.sl-hipaa-penalties__finding-detail p {
+	margin: 0;
+	color: var(--sl-page-text, #4a4a4a);
+	font-size: 13px;
+	line-height: 1.65;
+	text-wrap: pretty;
+}
+
+
+/* =========================================================
+   TABLET
+   Sticky behaviour is removed when columns stack.
+   ========================================================= */
+
+@media (max-width: 991px) {
+	.sl-hipaa-penalties {
+		padding: 72px 0;
+	}
+
+	.sl-hipaa-penalties__grid {
+		grid-template-columns: minmax(0, 1fr);
+		gap: 44px;
+	}
+
+	.sl-hipaa-penalties__findings-wrap {
+		position: static;
+		top: auto;
+	}
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+	.sl-hipaa-penalties {
+		padding: 60px 0;
+	}
+
+	.sl-hipaa-penalties__intro {
+		margin-bottom: 28px;
+	}
+
+	.sl-hipaa-penalties__intro h2 {
+		margin-bottom: 16px;
+		text-wrap: pretty;
+	}
+
+	.sl-hipaa-penalties__grid {
+		gap: 36px;
+	}
+
+	.sl-hipaa-penalties__list-item {
+		grid-template-columns: 36px minmax(0, 1fr);
+		gap: 12px;
+		padding: 17px 0;
+	}
+
+	.sl-hipaa-penalties__list-index {
+		width: 34px;
+		height: 34px;
+	}
+
+	.sl-hipaa-penalties__findings-header {
+		min-height: 0;
+		padding: 20px;
+	}
+
+	.sl-hipaa-penalties__finding {
+		grid-template-columns: minmax(0, 1fr);
+		min-height: 0;
+	}
+
+	.sl-hipaa-penalties__finding-title {
+		padding: 17px 18px 7px;
+		background: var(--sl-page-white, #ffffff);
+		border-right: 0;
+	}
+
+	.sl-hipaa-penalties__finding-detail {
+		padding: 7px 18px 18px;
+	}
+
+	.sl-hipaa-penalties__finding-badge {
+		margin-bottom: 7px;
+	}
+}

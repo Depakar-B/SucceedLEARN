@@ -1,0 +1,155 @@
+/*
+ * SucceedLEARN
+ * Workplace Harassment Prevention
+ * Why organisations choose SucceedLEARN
+ */
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.sl-harassment-why {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.sl-harassment-why__heading {
+	margin-bottom: 45px;
+}
+
+.sl-harassment-why__heading h2 {
+	margin: 0;
+}
+
+.sl-harassment-why__heading h2 span {
+	color: var(--sl-heading-accent, #1472ba);
+}
+
+
+/* =========================================
+   CARD GRID
+========================================= */
+
+.sl-harassment-why__grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 24px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.sl-harassment-why__card {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	min-width: 0;
+	min-height: 100%;
+	padding: 30px 28px;
+	border: 1px solid rgba(22, 35, 78, 0.11);
+	border-radius: 16px;
+	background: var(--sl-page-white, #ffffff);
+	transition:
+		transform 0.2s ease,
+		border-color 0.2s ease;
+}
+
+.sl-harassment-why__card:hover {
+	transform: translateY(-4px);
+	border-color: rgba(20, 114, 186, 0.25);
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.sl-harassment-why__number {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 42px;
+	height: 42px;
+	margin-bottom: 22px;
+	border-radius: 8px;
+	background: rgba(20, 114, 186, 0.08);
+	color: var(--sl-page-primary, #1472ba);
+	font-weight: 700;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.sl-harassment-why__card-content {
+	width: 100%;
+}
+
+.sl-harassment-why__card-content p {
+	margin: 10px 0 0;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1199px) {
+
+	.sl-harassment-why {
+		padding: 75px 0;
+	}
+
+	.sl-harassment-why__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 20px;
+	}
+
+	.sl-harassment-why__card {
+		padding: 26px 24px;
+	}
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+	.sl-harassment-why {
+		padding: 60px 0;
+	}
+
+	.sl-harassment-why__heading {
+		margin-bottom: 30px;
+	}
+
+	.sl-harassment-why__grid {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
+	.sl-harassment-why__card {
+		padding: 24px 20px;
+	}
+
+	.sl-harassment-why__number {
+		width: 40px;
+		height: 40px;
+		margin-bottom: 18px;
+	}
+
+}

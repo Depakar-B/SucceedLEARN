@@ -1,0 +1,68 @@
+/* =========================================================
+ * Security Awareness — Platform overview
+ * ========================================================= */
+
+.sl-sa-platform {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-sa-platform__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+	gap: 60px;
+	align-items: center;
+}
+
+.sl-sa-platform__media {
+	width: 100%;
+}
+
+.sl-sa-platform__image {
+	overflow: hidden;
+	width: 100%;
+	line-height: 0;
+	border-radius: 24px;
+}
+
+.sl-sa-platform__image img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.sl-sa-platform__content h2 {
+	margin-bottom: 24px;
+}
+
+.sl-sa-platform__lead {
+	margin-bottom: 24px !important;
+}
+
+.sl-sa-platform__content .sl-content-btn {
+	margin-top: 8px;
+}
+
+@media (max-width: 991px) {
+	.sl-sa-platform__grid {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.sl-sa-platform__media {
+		max-width: 520px;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-sa-platform {
+		padding: 60px 0;
+	}
+
+	.sl-sa-platform__image {
+		border-radius: 18px;
+	}
+}

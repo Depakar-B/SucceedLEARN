@@ -1,0 +1,339 @@
+/*=================================================
+        Featured Product Section
+=================================================*/
+
+.sl-home-feature-product-section{
+    padding:80px 0;
+    background:#ffffff;
+    font-family: var(--slf-font-body, "Space Grotesk", system-ui, sans-serif);
+}
+
+.sl-home-feature-product-section .container{
+    width:100%;
+    max-width:var(--sl-home-content-max, 1400px);
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+.sl-home-feature-product-section .row{
+    display:flex;
+    flex-wrap:wrap;
+    margin-left:-12px;
+    margin-right:-12px;
+}
+
+.sl-home-feature-product-section .row.g-3{
+    gap:24px;
+    margin-left:0;
+    margin-right:0;
+}
+
+.sl-home-feature-product-section .row.g-3 > [class*="col-"]{
+    padding-left:0;
+    padding-right:0;
+}
+
+.sl-home-feature-product-section .row.align-items-center{
+    align-items:center;
+}
+
+.sl-home-feature-product-section .col-lg-6,
+.sl-home-feature-product-section .col-md-6,
+.sl-home-feature-product-section .col-md-12{
+    width:100%;
+    padding-left:12px;
+    padding-right:12px;
+    box-sizing:border-box;
+}
+
+.sl-home-feature-product-section .row.g-3 > .col-md-6,
+.sl-home-feature-product-section .row.g-3 > .col-md-12{
+    width:100%;
+}
+
+.sl-home-feature-product-section .mt-3{
+    margin-top:1rem;
+}
+
+.sl-home-feature-product-section .mt-4{
+    margin-top:1.5rem;
+    display:inline-flex;
+}
+
+@media(min-width:768px){
+    .sl-home-feature-product-section .col-md-6{
+        flex:0 0 50%;
+        max-width:50%;
+    }
+
+    .sl-home-feature-product-section .col-md-12{
+        flex:0 0 100%;
+        max-width:100%;
+    }
+
+    .sl-home-feature-product-section .row.g-3 > .col-md-6{
+        flex:0 0 calc(50% - 12px);
+        max-width:calc(50% - 12px);
+    }
+
+    .sl-home-feature-product-section .row.g-3 > .col-md-12{
+        flex:0 0 100%;
+        max-width:100%;
+    }
+}
+
+@media(min-width:992px){
+    .sl-home-feature-product-section .col-lg-6{
+        flex:0 0 50%;
+        max-width:50%;
+    }
+}
+
+
+
+/* Heading */
+
+.sl-home-feature-product-content h2{color:#1F2C56;
+    line-height:1.2;
+    margin:20px 0;
+
+}
+
+
+.sl-home-feature-product-content h3{
+
+    color: var(--sl-heading-accent, #135db7);
+    font-size: 28px;
+    margin-bottom: 20px;
+
+}
+
+
+.sl-home-feature-product-content p{
+
+    line-height:1.8;
+    color:#444;
+
+}
+
+
+
+/*====================================
+        Feature Pills
+====================================*/
+
+
+.sl-home-feature-pill{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:#ffffff;
+
+    border:1px solid #E7E7E7;
+
+    border-radius:50px;
+
+    padding:14px 20px;
+
+    transition:all .3s ease;
+
+    height:100%;
+
+}
+
+
+.sl-home-feature-pill__icon{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-shrink:0;
+
+    width:24px;
+
+    height:24px;
+
+    border-radius:50%;
+
+    background: var(--sl-heading-accent, #135db7);
+
+    color:#ffffff;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    line-height:1;
+
+}
+
+
+.sl-home-feature-pill__text{
+
+    color:#1F2C56;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    line-height:1.35;
+
+}
+
+
+.sl-home-feature-pill:hover{
+
+    border-color: var(--sl-heading-accent, #135db7);
+
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+
+    transform:translateY(-2px);
+
+}
+
+
+
+/*====================================
+        Metric Cards
+====================================*/
+
+
+.sl-home-metric-card{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    height:100%;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+
+    transition:all .3s ease;
+
+}
+
+
+.sl-home-metric-card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+
+.sl-home-metric-card h4{
+
+    font-size:18px;
+
+    color:#1F2C56;
+
+    margin-bottom:15px;
+
+}
+
+
+.sl-home-metric-card__value{
+
+    display:block;
+
+    font-size:32px;
+
+    font-weight:700;
+
+    color: var(--sl-heading-accent, #135db7);
+
+}
+
+
+.sl-home-metric-card__arrow{
+
+    display:inline;
+
+    margin-right:0.15em;
+
+    font-size:inherit;
+
+    font-weight:inherit;
+
+    color:inherit;
+
+}
+
+
+
+/*====================================
+        CTA BUTTON
+====================================*/
+
+
+.sl-home-btn{
+
+    padding:12px 30px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+
+.sl-home-btn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+
+
+/*====================================
+        Responsive
+====================================*/
+
+
+@media(max-width:991px){
+
+    .sl-home-feature-product-section{
+
+        padding:60px 0;
+
+    }
+
+
+    .sl-home-feature-product-content{
+
+        margin-bottom:50px;
+
+    }
+
+
+
+
+}
+
+
+
+@media(max-width:767px){
+
+
+
+    .sl-home-feature-product-content h3{
+
+        font-size:24px;
+
+    }
+
+}

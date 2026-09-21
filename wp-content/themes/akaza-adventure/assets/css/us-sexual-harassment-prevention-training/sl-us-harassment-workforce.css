@@ -1,0 +1,244 @@
+/* =========================================================
+   US Sexual Harassment Prevention — Workforce Configuration
+   ========================================================= */
+
+   .sl-us-harassment-workforce {
+	padding: 76px 0 88px;
+	background: var(--sl-page-white, #ffffff);
+}
+
+/* ---------------------------------------------------------
+   Intro
+   --------------------------------------------------------- */
+
+.sl-us-harassment-workforce__intro {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	margin-bottom: 34px;
+}
+
+.sl-us-harassment-workforce__intro h2 {
+	margin: 0 0 2px;
+}
+
+.sl-us-harassment-workforce__intro h2 span {
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-us-harassment-workforce__intro p {
+	margin: 0;
+}
+
+/* ---------------------------------------------------------
+   Assignment emphasis
+   --------------------------------------------------------- */
+
+.sl-us-harassment-workforce__assignment {
+	margin-bottom: 16px;
+	}
+
+.sl-us-harassment-workforce__assignment h3 {
+	margin: 0;
+	color: var(--sl-page-primary, #1472ba);
+}
+
+/* ---------------------------------------------------------
+   Configure
+   --------------------------------------------------------- */
+
+.sl-us-harassment-workforce__configure {
+	margin-bottom: 32px;
+}
+
+.sl-us-harassment-workforce__configure h4 {
+	margin: 0 0 18px;
+	color: var(--sl-page-navy, #16234e);
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.sl-us-harassment-workforce__configure-intro {
+	margin-bottom: 26px;
+}
+
+.sl-us-harassment-workforce__configure-intro p {
+	margin: 0;
+}
+
+/* ---------------------------------------------------------
+   List + image area
+   --------------------------------------------------------- */
+
+.sl-us-harassment-workforce__list-area {
+	display: grid;
+	grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+	gap: 48px;
+	align-items: start;
+}
+
+.sl-us-harassment-workforce__list-content {
+	min-width: 0;
+}
+
+.sl-us-harassment-workforce__list {
+	margin: 0;
+}
+
+.sl-us-harassment-workforce__media {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 110px) + 24px);
+	align-self: start;
+	width: 100%;
+	min-width: 0;
+}
+
+.sl-us-harassment-workforce__image {
+	width: 100%;
+	overflow: hidden;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 16px;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-us-harassment-workforce__image-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	padding: 24px;
+	box-sizing: border-box;
+	background: #f5f5f5;
+	color: var(--sl-page-muted, #6b7c93);
+	text-align: center;
+}
+
+.sl-us-harassment-workforce__image img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+/* ---------------------------------------------------------
+   Configure closing text
+   --------------------------------------------------------- */
+
+.sl-us-harassment-workforce__configure-closing {
+	margin-top: 26px;
+}
+
+.sl-us-harassment-workforce__configure-closing p {
+	margin: 0;
+}
+
+/* ---------------------------------------------------------
+   Delivery box
+   --------------------------------------------------------- */
+
+.sl-us-harassment-workforce__delivery {
+	padding: 30px 32px;
+	background: rgba(20, 114, 186, 0.06);
+	border: 1px solid rgba(20, 114, 186, 0.14);
+	border-left: 4px solid var(--sl-page-primary, #1472ba);
+	border-radius: 14px;
+}
+
+.sl-us-harassment-workforce__delivery .sl-panel-title {
+	margin-top: 0;
+	margin-bottom: 14px;
+}
+
+.sl-us-harassment-workforce__delivery p {
+	margin: 0;
+}
+
+.sl-us-harassment-workforce__actions {
+	margin-top: 24px;
+}
+
+/* ---------------------------------------------------------
+   Responsive
+   --------------------------------------------------------- */
+
+@media (max-width: 991px) {
+
+	.sl-us-harassment-workforce {
+		padding: 64px 0 72px;
+	}
+
+	.sl-us-harassment-workforce__assignment {
+		margin-bottom: 18px;
+	}
+
+	.sl-us-harassment-workforce__configure {
+		margin-bottom: 52px;
+	}
+
+	.sl-us-harassment-workforce__list-area {
+		grid-template-columns: 1fr;
+		gap: 34px;
+	}
+
+	.sl-us-harassment-workforce__media {
+		position: static;
+		top: auto;
+	}
+
+	.sl-us-harassment-workforce__image-placeholder {
+		aspect-ratio: 16 / 10;
+	}
+
+}
+
+@media (max-width: 767px) {
+
+	.sl-us-harassment-workforce {
+		padding: 52px 0 60px;
+	}
+
+	.sl-us-harassment-workforce__intro {
+		gap: 12px;
+		margin-bottom: 26px;
+	}
+
+	.sl-us-harassment-workforce__assignment {
+		margin-bottom: 16px;
+		padding: 18px 18px;
+	}
+
+	.sl-us-harassment-workforce__configure {
+		margin-bottom: 42px;
+	}
+
+	.sl-us-harassment-workforce__configure-intro {
+		margin-bottom: 22px;
+	}
+
+	.sl-us-harassment-workforce__list-area {
+		gap: 28px;
+	}
+
+	.sl-us-harassment-workforce__image {
+		border-radius: 12px;
+	}
+
+	.sl-us-harassment-workforce__image-placeholder {
+		aspect-ratio: 16 / 10;
+		padding: 20px;
+	}
+
+	.sl-us-harassment-workforce__configure-closing {
+		margin-top: 22px;
+	}
+
+	.sl-us-harassment-workforce__delivery {
+		padding: 24px 20px;
+		border-radius: 12px;
+	}
+
+	.sl-us-harassment-workforce__actions {
+		margin-top: 20px;
+	}
+
+}

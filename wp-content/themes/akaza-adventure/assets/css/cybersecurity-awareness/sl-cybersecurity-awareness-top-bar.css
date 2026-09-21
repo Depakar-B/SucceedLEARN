@@ -1,0 +1,94 @@
+/* Cybersecurity Awareness — top announcement bar */
+
+.sl-csa-top-bar {
+	--sl-csa-top-bar-bg: rgba(20, 114, 186, 0.92);
+
+	position: sticky;
+	top: var(--sl-csa-header-height, 80px);
+	z-index: 100;
+	color: #ffffff;
+	background: var(--sl-csa-top-bar-bg);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+	transform: translate3d(0, 0, 0);
+	transition: transform 0.28s ease;
+	will-change: transform;
+}
+
+.sl-csa-top-bar .container {
+	width: 100%;
+	max-width: var(--sl-home-content-max, 1400px);
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: var(--slf-gutter, clamp(1.25rem, 3vw, 3rem));
+	padding-right: var(--slf-gutter, clamp(1.25rem, 3vw, 3rem));
+	box-sizing: border-box;
+}
+
+.sl-csa-top-bar__inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	gap: 24px 40px;
+	min-height: var(--sl-csa-top-bar-height, 52px);
+	padding: 12px 0;
+}
+
+body.slf-body .sl-csa-top-bar p,
+.sl-csa-top-bar__label,
+.sl-csa-top-bar__note {
+	margin: 0;
+	font-family: var(--slf-font-body, "Space Grotesk", system-ui, sans-serif);
+	line-height: 1.4;
+	color: #ffffff;
+}
+
+.sl-csa-top-bar__label {
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.sl-csa-top-bar__note {
+	font-size: 14px;
+	font-weight: 500;
+	text-align: right;
+}
+
+@media (max-width: 991px) {
+	.sl-csa-top-bar__inner {
+		gap: 16px 24px;
+		padding: 12px 0;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-csa-top-bar__inner {
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		gap: 6px;
+		min-height: 0;
+		padding: 14px 0;
+	}
+
+	.sl-csa-top-bar__label {
+		font-size: 13px;
+		letter-spacing: 0.04em;
+	}
+
+	.sl-csa-top-bar__note {
+		font-size: 13px;
+		text-align: left;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.sl-csa-top-bar {
+		backdrop-filter: none;
+		-webkit-backdrop-filter: none;
+		background: #1472ba;
+	}
+}

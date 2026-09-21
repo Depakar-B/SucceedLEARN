@@ -1,0 +1,193 @@
+/* SucceedLEARN — global button UI (site-wide)
+ *
+ * Same idea as global h1 / h2 / h3 in main.css:
+ * one shared look for hero CTAs and in-page content CTAs.
+ *
+ * Hero:
+ *   <div class="sl-hero-actions">
+ *     <a class="sl-hero-btn sl-hero-btn-primary" href="...">Label <span>→</span></a>
+ *     <a class="sl-hero-btn sl-hero-btn-secondary" href="...">Label</a>
+ *   </div>
+ *
+ * Content / section:
+ *   <div class="sl-content-actions">
+ *     <a class="sl-content-btn sl-content-btn-primary" href="...">Label <span>→</span></a>
+ *     <a class="sl-content-btn sl-content-btn-secondary" href="...">Label</a>
+ *   </div>
+ *
+ * Fill colours are reinforced by sl-global-buttons.css (loaded after this file).
+ */
+
+:root {
+	--sl-ui-btn-min-height: 48px;
+	--sl-ui-btn-padding: 13px 20px;
+	--sl-ui-btn-radius: 8px;
+	--sl-ui-btn-gap: 10px;
+	--sl-ui-btn-font-size: 15px;
+	--sl-ui-btn-font-weight: 700;
+	--sl-ui-btn-arrow-size: 18px;
+}
+
+/* =========================================================
+   SHARED ACTION ROWS
+   ========================================================= */
+
+.sl-hero-actions,
+.sl-content-actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 14px;
+}
+
+.sl-hero-actions {
+	margin-top: 28px;
+}
+
+.sl-content-actions {
+	margin-top: 28px;
+}
+
+/* =========================================================
+   SHARED BUTTON SHAPE (hero + content)
+   ========================================================= */
+
+.sl-hero-btn,
+.sl-content-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--sl-ui-btn-gap);
+	width: fit-content;
+	max-width: 100%;
+	min-width: 0;
+	min-height: var(--sl-ui-btn-min-height);
+	margin: 0;
+	padding: var(--sl-ui-btn-padding);
+	border-radius: var(--sl-ui-btn-radius);
+	box-sizing: border-box;
+	font-family: var(--slf-font-body, "Space Grotesk", system-ui, sans-serif);
+	font-size: var(--sl-ui-btn-font-size);
+	font-weight: var(--sl-ui-btn-font-weight);
+	line-height: 1.3;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	cursor: pointer;
+	transition:
+		filter 0.2s ease,
+		transform 0.2s ease,
+		box-shadow 0.2s ease,
+		border-color 0.2s ease,
+		background 0.2s ease,
+		color 0.2s ease;
+}
+
+.sl-hero-btn span,
+.sl-content-btn span {
+	font-size: var(--sl-ui-btn-arrow-size);
+	line-height: 1;
+}
+
+/* =========================================================
+   PRIMARY — gradient fill, white label
+   ========================================================= */
+
+body.slf-body a.sl-hero-btn-primary,
+body.slf-body a.sl-hero-btn-primary:visited,
+body.slf-body button.sl-hero-btn-primary,
+body.slf-body a.sl-content-btn-primary,
+body.slf-body a.sl-content-btn-primary:visited,
+body.slf-body button.sl-content-btn-primary {
+	background: var(--sl-btn-primary-fill, linear-gradient(180deg, #ea3e24 0%, #ea3e24 100%));
+	background-color: transparent;
+	border: 1px solid transparent;
+	color: #ffffff;
+	box-shadow: 0 6px 16px var(--sl-btn-primary-shadow, rgba(234, 62, 36, 0.28));
+}
+
+body.slf-body a.sl-hero-btn-primary:hover,
+body.slf-body a.sl-hero-btn-primary:focus,
+body.slf-body button.sl-hero-btn-primary:hover,
+body.slf-body button.sl-hero-btn-primary:focus,
+body.slf-body a.sl-content-btn-primary:hover,
+body.slf-body a.sl-content-btn-primary:focus,
+body.slf-body button.sl-content-btn-primary:hover,
+body.slf-body button.sl-content-btn-primary:focus {
+	filter: brightness(1.05);
+	transform: translateY(-2px);
+	color: #ffffff;
+	box-shadow: 0 12px 25px var(--sl-btn-primary-shadow, rgba(234, 62, 36, 0.28));
+}
+
+body.slf-body a.sl-hero-btn-primary:active,
+body.slf-body button.sl-hero-btn-primary:active,
+body.slf-body a.sl-content-btn-primary:active,
+body.slf-body button.sl-content-btn-primary:active {
+	filter: brightness(0.98);
+	transform: translateY(0);
+}
+
+/* =========================================================
+   SECONDARY — gradient outline (light page surfaces)
+   ========================================================= */
+
+body.slf-body a.sl-hero-btn-secondary,
+body.slf-body a.sl-hero-btn-secondary:visited,
+body.slf-body button.sl-hero-btn-secondary,
+body.slf-body a.sl-content-btn-secondary,
+body.slf-body a.sl-content-btn-secondary:visited,
+body.slf-body button.sl-content-btn-secondary {
+	background:
+		linear-gradient(
+			var(--sl-btn-secondary-surface, var(--sl-page-white, #ffffff)),
+			var(--sl-btn-secondary-surface, var(--sl-page-white, #ffffff))
+		)
+		padding-box,
+		var(--sl-btn-primary-fill, linear-gradient(180deg, #ea3e24 0%, #ea3e24 100%)) border-box;
+	background-color: transparent;
+	border: 2px solid transparent;
+	color: var(--sl-btn-secondary-color, var(--sl-page-cta, #ea3e24));
+	box-shadow: none;
+}
+
+body.slf-body a.sl-hero-btn-secondary:hover,
+body.slf-body a.sl-hero-btn-secondary:focus,
+body.slf-body button.sl-hero-btn-secondary:hover,
+body.slf-body button.sl-hero-btn-secondary:focus,
+body.slf-body a.sl-content-btn-secondary:hover,
+body.slf-body a.sl-content-btn-secondary:focus,
+body.slf-body button.sl-content-btn-secondary:hover,
+body.slf-body button.sl-content-btn-secondary:focus {
+	transform: translateY(-2px);
+	color: var(--sl-btn-secondary-color, var(--sl-page-cta, #ea3e24));
+	box-shadow: 0 12px 25px var(--sl-btn-primary-shadow, rgba(234, 62, 36, 0.16));
+}
+
+body.slf-body a.sl-hero-btn-secondary:active,
+body.slf-body button.sl-hero-btn-secondary:active,
+body.slf-body a.sl-content-btn-secondary:active,
+body.slf-body button.sl-content-btn-secondary:active {
+	transform: translateY(0);
+}
+
+/* Soft / alt section backgrounds (grey bands) */
+body.slf-body .sl-page-bg .sl-hero-btn-secondary,
+body.slf-body .sl-page-bg .sl-content-btn-secondary,
+body.slf-body [class*="-page"] [style*="--sl-page-bg"] .sl-content-btn-secondary {
+	--sl-btn-secondary-surface: var(--sl-page-bg, #f5f5f5);
+}
+
+@media (max-width: 767px) {
+	.sl-hero-actions,
+	.sl-content-actions {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.sl-hero-btn,
+	.sl-content-btn {
+		width: 100%;
+		white-space: normal;
+	}
+}

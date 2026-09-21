@@ -1,0 +1,506 @@
+{
+  "site": "sc-domain:elearnposh.com",
+  "inspected": [
+    {
+      "url": "https://elearnposh.com/posh-act/amp/",
+      "ampUrl": null,
+      "verdict": null,
+      "ampIndexStatusVerdict": null,
+      "pageFetchState": null,
+      "lastCrawlTime": null,
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=xYJJZMSx2U2BZY7t-BIcMA&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/posh-act/",
+      "ampUrl": "https://elearnposh.com/posh-act/",
+      "verdict": "PASS",
+      "ampIndexStatusVerdict": "PASS",
+      "pageFetchState": "SUCCESSFUL",
+      "lastCrawlTime": "2026-06-25T21:38:02Z",
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=jg_QaP8_xaw5nBITPuZ3_Q&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/amp/",
+      "ampUrl": null,
+      "verdict": null,
+      "ampIndexStatusVerdict": null,
+      "pageFetchState": null,
+      "lastCrawlTime": null,
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=4E2wLyaiGqfCA5taJBUP8w&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/",
+      "ampUrl": "https://elearnposh.com/",
+      "verdict": "PASS",
+      "ampIndexStatusVerdict": "PASS",
+      "pageFetchState": "SUCCESSFUL",
+      "lastCrawlTime": "2026-06-30T11:53:54Z",
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=HSmCnmAW2AbSymwWyVzFNw&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/bns-section-75-sexual-harassment-law-india/amp/",
+      "ampUrl": null,
+      "verdict": null,
+      "ampIndexStatusVerdict": null,
+      "pageFetchState": null,
+      "lastCrawlTime": null,
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=5MgJphXb1fIBUNwxGddPrw&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/bns-section-75-sexual-harassment-law-india/",
+      "ampUrl": "https://elearnposh.com/bns-section-75-sexual-harassment-law-india/",
+      "verdict": "PASS",
+      "ampIndexStatusVerdict": "PASS",
+      "pageFetchState": "SUCCESSFUL",
+      "lastCrawlTime": "2026-06-25T21:18:01Z",
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=rc3OBB93WNtiJfjlBrKwVw&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/appeals-and-appellate-authority-under-posh-act/amp/",
+      "ampUrl": null,
+      "verdict": null,
+      "ampIndexStatusVerdict": null,
+      "pageFetchState": null,
+      "lastCrawlTime": null,
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=yGA8ik0q-iF5TY5NiAOm_A&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/appeals-and-appellate-authority-under-posh-act/",
+      "ampUrl": "https://elearnposh.com/appeals-and-appellate-authority-under-posh-act/",
+      "verdict": "PASS",
+      "ampIndexStatusVerdict": "PASS",
+      "pageFetchState": "SUCCESSFUL",
+      "lastCrawlTime": "2026-06-25T20:53:20Z",
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=9E8t3W5MgWti65yiddp5kg&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/punishments-under-the-posh-act/amp/",
+      "ampUrl": null,
+      "verdict": null,
+      "ampIndexStatusVerdict": null,
+      "pageFetchState": null,
+      "lastCrawlTime": null,
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=F86rqUQ5irrHjghsJ_9viw&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/punishments-under-the-posh-act/",
+      "ampUrl": "https://elearnposh.com/punishments-under-the-posh-act/",
+      "verdict": "PASS",
+      "ampIndexStatusVerdict": "PASS",
+      "pageFetchState": "SUCCESSFUL",
+      "lastCrawlTime": "2026-06-25T22:05:04Z",
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=oHJugotPauTGdDSvgvmJKg&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/pocso-act-role-of-school-authorities-and-teachers/amp/",
+      "ampUrl": null,
+      "verdict": null,
+      "ampIndexStatusVerdict": null,
+      "pageFetchState": null,
+      "lastCrawlTime": null,
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=s6u0Fq5lZMgA4Ctze7U2-Q&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/pocso-act-role-of-school-authorities-and-teachers/",
+      "ampUrl": "https://elearnposh.com/pocso-act-role-of-school-authorities-and-teachers/",
+      "verdict": "PASS",
+      "ampIndexStatusVerdict": "PASS",
+      "pageFetchState": "SUCCESSFUL",
+      "lastCrawlTime": "2026-06-27T22:23:28Z",
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=tLViHXTCi3WYcZa3UswuRA&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/the-ultimate-guide-to-posh-compliance/amp/",
+      "ampUrl": null,
+      "verdict": null,
+      "ampIndexStatusVerdict": null,
+      "pageFetchState": null,
+      "lastCrawlTime": null,
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=uRZ9wN85AKU3P7fhPjOMRw&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/the-ultimate-guide-to-posh-compliance/",
+      "ampUrl": "https://elearnposh.com/the-ultimate-guide-to-posh-compliance/",
+      "verdict": "PASS",
+      "ampIndexStatusVerdict": "PASS",
+      "pageFetchState": "SUCCESSFUL",
+      "lastCrawlTime": "2026-06-25T22:28:47Z",
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=8zZ-7XS6xNzrSZv71bugFQ&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/posh-awareness-training-the-what-why-and-how/amp/",
+      "ampUrl": null,
+      "verdict": null,
+      "ampIndexStatusVerdict": null,
+      "pageFetchState": null,
+      "lastCrawlTime": null,
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=qZh55m4BXy2U6OCSK5CEUA&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/posh-awareness-training-the-what-why-and-how/",
+      "ampUrl": "https://elearnposh.com/posh-awareness-training-the-what-why-and-how/",
+      "verdict": "PASS",
+      "ampIndexStatusVerdict": "PASS",
+      "pageFetchState": "SUCCESSFUL",
+      "lastCrawlTime": "2026-06-25T21:44:18Z",
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=B2Z9WVQ7ZRuJ8zuaQ8Cgng&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/sole-testimony-in-posh-departmental-enquiry/amp/",
+      "ampUrl": null,
+      "verdict": null,
+      "ampIndexStatusVerdict": null,
+      "pageFetchState": null,
+      "lastCrawlTime": null,
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=W3CJRwg915MD3K4U1j48Gg&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/sole-testimony-in-posh-departmental-enquiry/",
+      "ampUrl": "https://elearnposh.com/sole-testimony-in-posh-departmental-enquiry/",
+      "verdict": "PASS",
+      "ampIndexStatusVerdict": "PASS",
+      "pageFetchState": "SUCCESSFUL",
+      "lastCrawlTime": "2026-06-26T00:15:19Z",
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=Qms2XfluYfuAygIf3vnOdQ&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/major-laws-against-harassment-of-men-in-india/amp/",
+      "ampUrl": null,
+      "verdict": null,
+      "ampIndexStatusVerdict": null,
+      "pageFetchState": null,
+      "lastCrawlTime": null,
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=56tq9b4T0Hd4wmyeOnFDmA&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/major-laws-against-harassment-of-men-in-india/",
+      "ampUrl": "https://elearnposh.com/major-laws-against-harassment-of-men-in-india/",
+      "verdict": "PASS",
+      "ampIndexStatusVerdict": "PASS",
+      "pageFetchState": "SUCCESSFUL",
+      "lastCrawlTime": "2026-06-25T23:50:36Z",
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=Ec4hcKWlo-0yT8kFimv_5g&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/ultimate-posh-guide-for-ic-members/amp/",
+      "ampUrl": null,
+      "verdict": null,
+      "ampIndexStatusVerdict": null,
+      "pageFetchState": null,
+      "lastCrawlTime": null,
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=XNC5KBgZ-wwGSpKWRlbTUA&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/ultimate-posh-guide-for-ic-members/",
+      "ampUrl": null,
+      "verdict": null,
+      "ampIndexStatusVerdict": null,
+      "pageFetchState": null,
+      "lastCrawlTime": null,
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=eVNfLIFxoGZImq5OuIZ9Fw&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/role-powers-of-internal-committee/amp/",
+      "ampUrl": "https://elearnposh.com/role-powers-of-internal-committee/amp/",
+      "verdict": "PASS",
+      "ampIndexStatusVerdict": "PASS",
+      "pageFetchState": "SUCCESSFUL",
+      "lastCrawlTime": "2026-06-25T22:10:59Z",
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=Yyw1xkjcszu9HpM33JxWZA&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/role-powers-of-internal-committee/amp/",
+      "ampUrl": "https://elearnposh.com/role-powers-of-internal-committee/amp/",
+      "verdict": "PASS",
+      "ampIndexStatusVerdict": "PASS",
+      "pageFetchState": "SUCCESSFUL",
+      "lastCrawlTime": "2026-06-25T22:10:59Z",
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=QGCRD9pGwHSbManwM-O0vw&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/can-employee-be-terminated-during-posh-inquiry/amp/",
+      "ampUrl": null,
+      "verdict": null,
+      "ampIndexStatusVerdict": null,
+      "pageFetchState": null,
+      "lastCrawlTime": null,
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=K390X2Uf_BOSDDYeA6FzPw&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/can-employee-be-terminated-during-posh-inquiry/",
+      "ampUrl": "https://elearnposh.com/can-employee-be-terminated-during-posh-inquiry/",
+      "verdict": "PASS",
+      "ampIndexStatusVerdict": "PASS",
+      "pageFetchState": "SUCCESSFUL",
+      "lastCrawlTime": "2026-06-25T21:19:41Z",
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=OCFYLaCSLQQWVI-orXOfow&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/posh-compliance-updates-2026-india/amp/",
+      "ampUrl": null,
+      "verdict": null,
+      "ampIndexStatusVerdict": null,
+      "pageFetchState": null,
+      "lastCrawlTime": null,
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=UlOzAS0hJXGytRWbQN4ycA&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/posh-compliance-updates-2026-india/",
+      "ampUrl": "https://elearnposh.com/posh-compliance-updates-2026-india/",
+      "verdict": "PASS",
+      "ampIndexStatusVerdict": "PASS",
+      "pageFetchState": "SUCCESSFUL",
+      "lastCrawlTime": "2026-06-25T05:43:43Z",
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=5xkU00Z4E0cbBPL8x4cb5g&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/local-complaints-committee/amp/",
+      "ampUrl": null,
+      "verdict": null,
+      "ampIndexStatusVerdict": null,
+      "pageFetchState": null,
+      "lastCrawlTime": null,
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=wT8H_GtjXPYwmrlVMkXJbg&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/local-complaints-committee/",
+      "ampUrl": "https://elearnposh.com/local-complaints-committee/",
+      "verdict": "PASS",
+      "ampIndexStatusVerdict": "PASS",
+      "pageFetchState": "SUCCESSFUL",
+      "lastCrawlTime": "2026-06-25T23:49:08Z",
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=cLAuLTzUL-2-FYAvMFsWJQ&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/sexual-harassment-updates-jan-2026-posh-law-india/amp/",
+      "ampUrl": null,
+      "verdict": null,
+      "ampIndexStatusVerdict": null,
+      "pageFetchState": null,
+      "lastCrawlTime": null,
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=kHp0BCYF0Z-eE33Wc7vAtA&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/sexual-harassment-updates-jan-2026-posh-law-india/",
+      "ampUrl": "https://elearnposh.com/sexual-harassment-updates-jan-2026-posh-law-india/",
+      "verdict": "PASS",
+      "ampIndexStatusVerdict": "PASS",
+      "pageFetchState": "SUCCESSFUL",
+      "lastCrawlTime": "2026-06-25T03:51:03Z",
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=XVHQ6fLRQZhX2oEiN1ZaaA&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/tricky-cases-handled-by-internal-committee/amp/",
+      "ampUrl": null,
+      "verdict": null,
+      "ampIndexStatusVerdict": null,
+      "pageFetchState": null,
+      "lastCrawlTime": null,
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=WA-fCYiY6aJuL5kbnQW1lg&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/tricky-cases-handled-by-internal-committee/",
+      "ampUrl": "https://elearnposh.com/tricky-cases-handled-by-internal-committee/",
+      "verdict": "PASS",
+      "ampIndexStatusVerdict": "PASS",
+      "pageFetchState": "SUCCESSFUL",
+      "lastCrawlTime": "2026-06-26T00:52:17Z",
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=oOBGfRQQUHuqKABAC8kPoQ&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/board-resolution-for-internal-committee/amp/",
+      "ampUrl": null,
+      "verdict": null,
+      "ampIndexStatusVerdict": null,
+      "pageFetchState": null,
+      "lastCrawlTime": null,
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=fjPNdwOUZEdsxbeY_CwhYQ&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/board-resolution-for-internal-committee/",
+      "ampUrl": "https://elearnposh.com/board-resolution-for-internal-committee/",
+      "verdict": "PASS",
+      "ampIndexStatusVerdict": "PASS",
+      "pageFetchState": "SUCCESSFUL",
+      "lastCrawlTime": "2026-06-25T03:32:58Z",
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=ggrBRvpZ6Z_LRofOuj43-A&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/the-subtle-signs-of-sexual-harassment/amp/",
+      "ampUrl": null,
+      "verdict": null,
+      "ampIndexStatusVerdict": null,
+      "pageFetchState": null,
+      "lastCrawlTime": null,
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=uG72oZxgGJow10s5YtggZQ&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/the-subtle-signs-of-sexual-harassment/",
+      "ampUrl": "https://elearnposh.com/the-subtle-signs-of-sexual-harassment/",
+      "verdict": "PASS",
+      "ampIndexStatusVerdict": "PASS",
+      "pageFetchState": "SUCCESSFUL",
+      "lastCrawlTime": "2026-06-26T00:22:36Z",
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=fdvxWO2FgP3pKqx1ZiWvvA&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/conciliation-under-the-posh-law/amp/",
+      "ampUrl": null,
+      "verdict": null,
+      "ampIndexStatusVerdict": null,
+      "pageFetchState": null,
+      "lastCrawlTime": null,
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=A3hmm_fV6PqPZTOcCZ0oFA&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/conciliation-under-the-posh-law/",
+      "ampUrl": "https://elearnposh.com/conciliation-under-the-posh-law/",
+      "verdict": "PASS",
+      "ampIndexStatusVerdict": "PASS",
+      "pageFetchState": "SUCCESSFUL",
+      "lastCrawlTime": "2026-06-25T21:21:21Z",
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=UXLrzr9Zav8qRLtBzVa4HQ&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/elearnposh-frequently-asked-questions-faqs/amp/",
+      "ampUrl": null,
+      "verdict": null,
+      "ampIndexStatusVerdict": null,
+      "pageFetchState": null,
+      "lastCrawlTime": null,
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=iKjqldZJ5RZKMVJp4jHgaA&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/elearnposh-frequently-asked-questions-faqs/",
+      "ampUrl": "https://elearnposh.com/elearnposh-frequently-asked-questions-faqs/",
+      "verdict": "PASS",
+      "ampIndexStatusVerdict": "PASS",
+      "pageFetchState": "SUCCESSFUL",
+      "lastCrawlTime": "2026-06-25T21:26:22Z",
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=U1gTADq-JjqATTNgjtYIhg&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/blog-workplace-harassment-and-sexual-harassment/amp/",
+      "ampUrl": null,
+      "verdict": null,
+      "ampIndexStatusVerdict": null,
+      "pageFetchState": null,
+      "lastCrawlTime": null,
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=AxuGez_YFnwYMAtGRMqv1w&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/blog-workplace-harassment-and-sexual-harassment/",
+      "ampUrl": "https://elearnposh.com/blog-workplace-harassment-and-sexual-harassment/",
+      "verdict": "PASS",
+      "ampIndexStatusVerdict": "PASS",
+      "pageFetchState": "SUCCESSFUL",
+      "lastCrawlTime": "2026-06-25T22:58:19Z",
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=INiR3EkEBboyILByPXfZoQ&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/false-complaints/amp/",
+      "ampUrl": null,
+      "verdict": null,
+      "ampIndexStatusVerdict": null,
+      "pageFetchState": null,
+      "lastCrawlTime": null,
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=LaqFJHSDi30JZLAytxGI5A&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/false-complaints/",
+      "ampUrl": "https://elearnposh.com/false-complaints/",
+      "verdict": "PASS",
+      "ampIndexStatusVerdict": "PASS",
+      "pageFetchState": "SUCCESSFUL",
+      "lastCrawlTime": "2026-06-25T23:39:50Z",
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=4jXPnNSo_kGcR8V12XzL9Q&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/posh-courses/posh-for-ic-members/amp/",
+      "ampUrl": null,
+      "verdict": null,
+      "ampIndexStatusVerdict": null,
+      "pageFetchState": null,
+      "lastCrawlTime": null,
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=XUq8T_QveyowOj1eQ0kfjg&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/posh-courses/posh-for-ic-members/",
+      "ampUrl": null,
+      "verdict": null,
+      "ampIndexStatusVerdict": null,
+      "pageFetchState": null,
+      "lastCrawlTime": null,
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=R0qZ36n_J7bRqkLwQjETqg&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/posh-inquiries-and-absence-of-evidence/amp/",
+      "ampUrl": null,
+      "verdict": null,
+      "ampIndexStatusVerdict": null,
+      "pageFetchState": null,
+      "lastCrawlTime": null,
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=JQUbOshyLqnE9KWd8coLzQ&utm_medium=link&utm_source=api"
+    },
+    {
+      "url": "https://elearnposh.com/posh-inquiries-and-absence-of-evidence/",
+      "ampUrl": "https://elearnposh.com/posh-inquiries-and-absence-of-evidence/",
+      "verdict": "PASS",
+      "ampIndexStatusVerdict": "PASS",
+      "pageFetchState": "SUCCESSFUL",
+      "lastCrawlTime": "2026-06-26T00:08:03Z",
+      "issues": [],
+      "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:elearnposh.com&id=d8OF38BgOhWB4fUoM6MpWw&utm_medium=link&utm_source=api"
+    }
+  ],
+  "issue_summary": {}
+}

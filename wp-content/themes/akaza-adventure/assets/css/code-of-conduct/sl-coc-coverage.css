@@ -1,0 +1,95 @@
+/* SucceedLEARN — Code of Conduct Course Coverage */
+
+.sl-coc-coverage {
+	padding: 0px 0px 90px 0px;
+	background: var(--sl-page-white);
+}
+
+.sl-coc-coverage__heading {
+	margin: 0 0 38px;
+}
+
+.sl-coc-coverage__heading p {
+	margin: 0;
+	color: var(--sl-page-muted);
+}
+
+.sl-coc-coverage__grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 20px;
+}
+
+.sl-coc-coverage__card {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	min-height: 220px;
+	padding: 24px;
+	border: 1px solid rgba(107, 124, 147, 0.12);
+	border-radius: 10px;
+	background: var(--sl-page-bg, #f5f5f5);
+	box-sizing: border-box;
+}
+
+.sl-coc-coverage__card h3.sl-panel-title {
+	margin: 0 0 12px;
+}
+
+.sl-coc-coverage__card p {
+	margin: 0;
+	color: var(--sl-page-text);
+}
+
+.sl-coc-coverage__card p + p {
+	margin-top: 10px;
+}
+
+.sl-coc-coverage__card-principle {
+	font-weight: 600;
+	color: var(--sl-page-navy);
+}
+
+@media (max-width: 1199px) {
+	.sl-coc-coverage {
+		padding: 75px 0;
+	}
+
+	.sl-coc-coverage__grid {
+		gap: 16px;
+	}
+
+	.sl-coc-coverage__card {
+		padding: 22px;
+	}
+}
+
+@media (max-width: 991px) {
+	.sl-coc-coverage__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-coc-coverage {
+		padding: 60px 0;
+	}
+
+	.sl-coc-coverage__heading {
+		margin-bottom: 28px;
+	}
+
+	.sl-coc-coverage__grid {
+		grid-template-columns: 1fr;
+		gap: 14px;
+	}
+
+	.sl-coc-coverage__card {
+		min-height: 0;
+		padding: 22px;
+	}
+
+	.sl-coc-coverage__head {
+		min-height: 0;
+	}
+}

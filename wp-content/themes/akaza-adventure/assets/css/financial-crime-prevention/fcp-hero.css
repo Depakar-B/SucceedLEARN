@@ -1,0 +1,222 @@
+/* Financial Crime Prevention — hero layout */
+
+.sl-fcp-hero {
+	position: relative;
+	overflow: hidden;
+	/* Extra bottom space so the page-guide overlap never covers CTAs */
+	padding: calc(var(--slf-header-clearance, 76px) + 70px) 0 150px;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-fcp-hero .container {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	max-width: var(--sl-home-content-max, 1400px);
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.sl-fcp-hero .slf-hero-breadcrumbs,
+.sl-fcp-hero .breadcrumb,
+.sl-fcp-hero nav[aria-label="Breadcrumb"] {
+	margin-bottom: 24px;
+}
+
+.sl-fcp-hero-row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-left: -15px;
+	margin-right: -15px;
+	row-gap: 24px;
+}
+
+.sl-fcp-hero-row > [class*="col-"] {
+	width: 100%;
+	padding-left: 15px;
+	padding-right: 15px;
+	box-sizing: border-box;
+}
+
+@media (min-width: 992px) {
+	.sl-fcp-hero-row > .col-lg-7 {
+		flex: 0 0 58.3333%;
+		max-width: 58.3333%;
+	}
+
+	.sl-fcp-hero-row > .col-lg-5 {
+		flex: 0 0 41.6667%;
+		max-width: 41.6667%;
+	}
+}
+
+.sl-fcp-hero__content {
+	max-width: 820px;
+}
+
+.sl-fcp-hero__content h1 {
+	margin: 0 0 18px;
+	font-size: var(--sl-fs-h1);
+	font-weight: 800;
+	letter-spacing: var(--sl-ls-h1, -0.02em);
+	line-height: 1.15;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-fcp-hero__content .sl-fcp-hero__lead {
+	max-width: 720px;
+	margin: 0 0 16px;
+	font-size: var(--sl-fs-hero-h2, 32px);
+	font-weight: 600;
+	line-height: 1.35;
+}
+
+.sl-fcp-hero__content p {
+	margin: 0 0 16px;
+	max-width: 720px;
+}
+
+.sl-fcp-hero__content > p:last-of-type {
+	margin-bottom: 0;
+}
+
+.sl-fcp-hero__points {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 14px 28px;
+	margin: 28px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-fcp-hero__points li {
+	display: inline-flex;
+	align-items: center;
+	gap: 9px;
+	color: var(--sl-page-navy);
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 1.4;
+}
+
+.sl-fcp-hero__dot {
+	width: 7px;
+	height: 7px;
+	flex: 0 0 7px;
+	border-radius: 50%;
+	background: var(--sl-page-primary);
+}
+
+.sl-fcp-hero__actions {
+	position: relative;
+	z-index: 25;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 14px;
+	margin-top: 34px;
+}
+
+/* Button look: site-wide .sl-hero-btn from sl-global-ui-buttons.css */
+
+.sl-fcp-hero__media {
+	position: relative;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.sl-fcp-hero__media img {
+	display: block;
+	width: 100%;
+	height: auto;
+	max-width: 100%;
+	object-fit: contain;
+}
+
+@media (min-width: 1400px) {
+	.sl-fcp-hero__content {
+		max-width: 850px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.sl-fcp-hero {
+		padding: calc(var(--slf-header-clearance, 76px) + 70px) 0 160px;
+	}
+
+	.sl-fcp-hero-row {
+		row-gap: 32px;
+	}
+}
+
+@media (max-width: 1199px) {
+	.sl-fcp-hero__content {
+		max-width: 760px;
+	}
+}
+
+@media (max-width: 991px) {
+	.sl-fcp-hero {
+		padding: calc(var(--slf-header-clearance, 76px) + 65px) 0 120px;
+	}
+
+	.sl-fcp-hero__content {
+		max-width: 100%;
+	}
+
+	.sl-fcp-hero__actions {
+		margin-top: 28px;
+	}
+
+	.sl-fcp-hero__media {
+		margin-top: 8px;
+		max-width: 560px;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-fcp-hero {
+		padding: calc(var(--slf-header-clearance, 76px) + 50px) 0 90px;
+	}
+
+	.sl-fcp-hero__points {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 12px;
+		margin-top: 24px;
+	}
+
+	.sl-fcp-hero__actions {
+		width: 100%;
+		margin-top: 26px;
+	}
+
+	.sl-fcp-hero__actions .sl-hero-btn {
+		width: 100%;
+		text-align: center;
+	}
+
+	.sl-fcp-hero__media {
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 480px) {
+	.sl-fcp-hero {
+		padding: calc(var(--slf-header-clearance, 76px) + 40px) 0 80px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.sl-fcp-hero .sl-hero-btn,
+	.sl-fcp-hero .sl-hero-btn:hover,
+	.sl-fcp-hero .sl-hero-btn:focus {
+		transform: none;
+	}
+}

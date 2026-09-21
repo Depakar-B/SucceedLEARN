@@ -1,0 +1,187 @@
+/* =========================================================
+   SMCR Training for PE & VC Firms — Senior Managers
+   ========================================================= */
+
+   .sl-smcr-senior-managers {
+	padding: 88px 0;
+	background: #ffffff;
+}
+
+.sl-smcr-senior-managers__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+	gap: 72px;
+	align-items: start;
+}
+
+.sl-smcr-senior-managers__content {
+	min-width: 0;
+}
+
+.sl-smcr-senior-managers__content h2 {
+	margin-top: 14px;
+	margin-bottom: 24px;
+}
+
+.sl-smcr-senior-managers__content h2 span {
+	color: var(--sl-heading-accent, #1472ba);
+}
+
+.sl-smcr-senior-managers__content > p {
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+.sl-smcr-senior-managers__content > p:last-of-type {
+	margin-bottom: 32px;
+}
+
+/* ---------------------------------------------------------
+   Learning areas
+   --------------------------------------------------------- */
+
+.sl-smcr-senior-managers__learning .sl-panel-title {
+	margin-top: 0;
+	margin-bottom: 18px;
+}
+
+.sl-smcr-senior-managers__learning .sl-list {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-smcr-senior-managers__learning .sl-list-item {
+	display: grid;
+	grid-template-columns: 42px minmax(0, 1fr);
+	gap: 14px;
+	align-items: start;
+	padding: 18px 20px;
+	background: #ffffff;
+	border: 1px solid rgba(22, 35, 78, 0.12);
+	border-radius: 12px;
+	box-sizing: border-box;
+}
+
+.sl-smcr-senior-managers__learning .sl-list-item__label {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 34px;
+	height: 34px;
+	background: rgba(20, 114, 186, 0.08);
+	border: 1px solid rgba(20, 114, 186, 0.18);
+	border-radius: 8px;
+	color: var(--sl-page-primary, #1472ba);
+	font-weight: 700;
+	line-height: 1;
+}
+
+.sl-smcr-senior-managers__learning .sl-list-item__text {
+	min-width: 0;
+	padding-top: 7px;
+}
+
+/* ---------------------------------------------------------
+   Image
+   --------------------------------------------------------- */
+
+.sl-smcr-senior-managers__media {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 110px) + 24px);
+	align-self: start;
+}
+
+.sl-smcr-senior-managers__image {
+	width: 100%;
+	overflow: hidden;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 16px;
+	background: #ffffff;
+}
+
+.sl-smcr-senior-managers__image-placeholder {
+	min-height: 520px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 32px;
+	background: #f5f5f5;
+	text-align: center;
+}
+
+/* ---------------------------------------------------------
+   Tablet
+   --------------------------------------------------------- */
+
+@media (max-width: 991px) {
+	.sl-smcr-senior-managers {
+		padding: 72px 0;
+	}
+
+	.sl-smcr-senior-managers__grid {
+		grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+		gap: 44px;
+	}
+
+	.sl-smcr-senior-managers__media {
+		position: static;
+	}
+
+	.sl-smcr-senior-managers__image-placeholder {
+		min-height: 420px;
+	}
+}
+
+/* ---------------------------------------------------------
+   Mobile
+   --------------------------------------------------------- */
+
+@media (max-width: 767px) {
+	.sl-smcr-senior-managers {
+		padding: 56px 0;
+	}
+
+	.sl-smcr-senior-managers__grid {
+		grid-template-columns: 1fr;
+		gap: 32px;
+	}
+
+	.sl-smcr-senior-managers__media {
+		order: -1;
+	}
+
+	.sl-smcr-senior-managers__image-placeholder {
+		min-height: 320px;
+	}
+
+	.sl-smcr-senior-managers__content h2 {
+		margin-bottom: 20px;
+	}
+
+	.sl-smcr-senior-managers__content > p:last-of-type {
+		margin-bottom: 26px;
+	}
+
+	.sl-smcr-senior-managers__learning .sl-list {
+		gap: 12px;
+	}
+
+	.sl-smcr-senior-managers__learning .sl-list-item {
+		grid-template-columns: 36px minmax(0, 1fr);
+		gap: 12px;
+		padding: 16px;
+	}
+
+	.sl-smcr-senior-managers__learning .sl-list-item__label {
+		width: 32px;
+		height: 32px;
+	}
+
+	.sl-smcr-senior-managers__learning .sl-list-item__text {
+		padding-top: 6px;
+	}
+}

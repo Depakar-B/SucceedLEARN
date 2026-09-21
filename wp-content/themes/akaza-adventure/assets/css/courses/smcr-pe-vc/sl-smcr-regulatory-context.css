@@ -1,0 +1,143 @@
+/**
+ * SMCR Training — UK Regulatory Context.
+ *
+ * @package Akaza_Adventure
+ */
+
+/* ---------------------------------------------------------
+   Regulatory Context
+--------------------------------------------------------- */
+
+.sl-smcr-regulatory-context {
+	padding: 96px 0;
+	background: #ffffff;
+}
+
+.sl-smcr-regulatory-context__grid {
+	display: grid;
+	grid-template-columns: minmax(320px, 0.85fr) minmax(0, 1.15fr);
+	gap: 72px;
+	align-items: start;
+}
+
+/* ---------------------------------------------------------
+   Introduction
+--------------------------------------------------------- */
+
+.sl-smcr-regulatory-context__intro {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 110px) + 24px);
+	align-self: start;
+}
+
+.sl-smcr-regulatory-context__intro .sl-home-sub-heading {
+	display: block;
+	margin-bottom: 14px;
+}
+
+.sl-smcr-regulatory-context__intro h2 {
+	margin-top: 0;
+	margin-bottom: 24px;
+}
+
+.sl-smcr-regulatory-context__intro p {
+	margin-top: 0;
+	margin-bottom: 18px;
+}
+
+.sl-smcr-regulatory-context__intro p:last-child {
+	margin-bottom: 0;
+}
+
+/* ---------------------------------------------------------
+   Regulatory Cards
+--------------------------------------------------------- */
+
+.sl-smcr-regulatory-context__cards {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 18px;
+}
+
+.sl-smcr-regulatory-context__card {
+	padding: 30px;
+	background: #f5f5f5;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 14px;
+	box-sizing: border-box;
+}
+
+.sl-smcr-regulatory-context__card .sl-panel-title {
+	margin-top: 0;
+	margin-bottom: 12px;
+}
+
+.sl-smcr-regulatory-context__card p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.sl-smcr-regulatory-context__label {
+	display: inline-block;
+	margin-bottom: 12px;
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	line-height: 1.4;
+	text-transform: uppercase;
+}
+
+/* ---------------------------------------------------------
+   Tablet
+--------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+	.sl-smcr-regulatory-context {
+		padding: 80px 0;
+	}
+
+	.sl-smcr-regulatory-context__grid {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.sl-smcr-regulatory-context__intro {
+		position: static;
+	}
+
+	.sl-smcr-regulatory-context__cards {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 16px;
+	}
+
+	.sl-smcr-regulatory-context__card {
+		padding: 24px;
+	}
+}
+
+/* ---------------------------------------------------------
+   Mobile
+--------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+	.sl-smcr-regulatory-context {
+		padding: 64px 0;
+	}
+
+	.sl-smcr-regulatory-context__grid {
+		gap: 32px;
+	}
+
+	.sl-smcr-regulatory-context__cards {
+		grid-template-columns: 1fr;
+		gap: 14px;
+	}
+
+	.sl-smcr-regulatory-context__card {
+		padding: 24px;
+		border-radius: 12px;
+	}
+}

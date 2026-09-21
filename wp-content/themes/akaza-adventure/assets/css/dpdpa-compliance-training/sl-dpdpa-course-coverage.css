@@ -1,0 +1,319 @@
+/**
+ * SucceedLEARN — DPDPA Course Coverage
+ *
+ * @package Akaza_Adventure
+ */
+
+ .sl-dpdpa-course-coverage {
+	background: #f5f5f5;
+	padding: 80px 0;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.sl-dpdpa-course-coverage__heading {
+	margin-bottom: 30px;
+}
+
+.sl-dpdpa-course-coverage__heading h2 {
+	margin-bottom: 14px;
+}
+
+.sl-dpdpa-course-coverage__heading p {
+	margin: 0;
+}
+
+
+/* =========================================================
+   COVERAGE CARDS
+========================================================= */
+
+.sl-dpdpa-course-coverage__grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 16px 20px;
+}
+
+.sl-dpdpa-course-coverage__card {
+	display: flex;
+	align-items: flex-start;
+	gap: 16px;
+	width: 100%;
+	padding: 20px 22px;
+	border: 1px solid rgb(107 124 147 / 18%);
+	border-radius: 14px;
+	background: var(--sl-page-white, #ffffff);
+	box-sizing: border-box;
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.sl-dpdpa-course-coverage__number {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 36px;
+	width: 36px;
+	height: 36px;
+	border-radius: 9px;
+	background: var(--sl-page-primary, #1472ba);
+	color: #ffffff;
+	font-weight: 700;
+	line-height: 1;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.sl-dpdpa-course-coverage__card-content {
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+.sl-dpdpa-course-coverage__card-content .sl-panel-title {
+	margin-bottom: 6px;
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-dpdpa-course-coverage__card-content p {
+	margin: 0;
+}
+
+
+/* =========================================================
+   CURRICULUM TOGGLE
+========================================================= */
+
+.sl-dpdpa-course-coverage__curriculum {
+	margin-top: 24px;
+}
+
+.sl-dpdpa-course-coverage__toggle {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	width: 100%;
+	padding: 16px 18px;
+	border: 1px solid rgb(107 124 147 / 18%);
+	border-radius: 10px;
+	background: #ffffff;
+	color: var(--sl-page-navy, #16234e);
+	cursor: pointer;
+	text-align: left;
+	box-sizing: border-box;
+	transition:
+		border-color 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.sl-dpdpa-course-coverage__toggle:hover {
+	border-color: rgb(20 114 186 / 35%);
+	box-shadow: 0 4px 14px rgb(22 35 78 / 6%);
+}
+
+.sl-dpdpa-course-coverage__toggle-title {
+	flex: 1 1 auto;
+}
+
+.sl-dpdpa-course-coverage__toggle-action {
+	color: var(--sl-page-primary, #1472ba);
+	font-weight: 700;
+	white-space: nowrap;
+}
+
+.sl-dpdpa-course-coverage__toggle-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 28px;
+	width: 28px;
+	height: 28px;
+	border: 1px solid rgb(20 114 186 / 20%);
+	border-radius: 50%;
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 20px;
+	line-height: 1;
+	transition: transform 0.2s ease;
+}
+
+.sl-dpdpa-course-coverage__toggle[aria-expanded="true"]
+.sl-dpdpa-course-coverage__toggle-icon {
+	transform: rotate(45deg);
+}
+
+
+/* =========================================================
+   CURRICULUM PANEL
+========================================================= */
+
+.sl-dpdpa-course-coverage__panel {
+	margin-top: 14px;
+	padding: 26px;
+	border: 1px solid rgb(107 124 147 / 18%);
+	border-radius: 14px;
+	background: #ffffff;
+}
+
+.sl-dpdpa-course-coverage__panel[hidden] {
+	display: none;
+}
+
+.sl-dpdpa-course-coverage__panel-heading {
+	margin-bottom: 20px;
+	padding-bottom: 16px;
+	border-bottom: 1px solid rgb(107 124 147 / 14%);
+}
+
+.sl-dpdpa-course-coverage__panel-heading h3 {
+	margin: 0;
+}
+
+
+/* =========================================================
+   CURRICULUM ITEMS
+========================================================= */
+
+.sl-dpdpa-course-coverage__curriculum-list {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 14px 20px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-dpdpa-course-coverage__curriculum-item {
+	display: grid;
+	grid-template-columns: 42px minmax(0, 1fr);
+	gap: 14px;
+	align-items: start;
+	padding: 18px;
+	border: 1px solid rgb(107 124 147 / 15%);
+	border-radius: 12px;
+	background: #ffffff;
+	box-sizing: border-box;
+}
+
+.sl-dpdpa-course-coverage__curriculum-number {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	border-radius: 9px;
+	background: rgb(20 114 186 / 8%);
+	border: 1px solid rgb(20 114 186 / 18%);
+	color: var(--sl-page-primary, #1472ba);
+	font-weight: 700;
+	line-height: 1;
+}
+
+.sl-dpdpa-course-coverage__curriculum-content {
+	min-width: 0;
+}
+
+.sl-dpdpa-course-coverage__curriculum-content h4 {
+	margin: 0 0 6px;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-dpdpa-course-coverage__curriculum-content p {
+	margin: 0;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+	.sl-dpdpa-course-coverage {
+		padding: 68px 0;
+	}
+
+	.sl-dpdpa-course-coverage__grid,
+	.sl-dpdpa-course-coverage__curriculum-list {
+		grid-template-columns: 1fr;
+	}
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+	.sl-dpdpa-course-coverage {
+		padding: 56px 0;
+	}
+
+	.sl-dpdpa-course-coverage__heading {
+		margin-bottom: 24px;
+	}
+
+	.sl-dpdpa-course-coverage__grid {
+		gap: 12px;
+	}
+
+	.sl-dpdpa-course-coverage__card {
+		gap: 12px;
+		padding: 17px 16px;
+		border-radius: 12px;
+	}
+
+	.sl-dpdpa-course-coverage__number {
+		flex: 0 0 34px;
+		width: 34px;
+		height: 34px;
+	}
+
+	.sl-dpdpa-course-coverage__curriculum {
+		margin-top: 20px;
+	}
+
+	.sl-dpdpa-course-coverage__toggle {
+		gap: 10px;
+		padding: 15px 14px;
+	}
+
+	.sl-dpdpa-course-coverage__toggle-action {
+		font-size: 13px;
+	}
+
+	.sl-dpdpa-course-coverage__toggle-icon {
+		flex: 0 0 26px;
+		width: 26px;
+		height: 26px;
+	}
+
+	.sl-dpdpa-course-coverage__panel {
+		padding: 18px;
+	}
+
+	.sl-dpdpa-course-coverage__curriculum-list {
+		gap: 10px;
+	}
+
+	.sl-dpdpa-course-coverage__curriculum-item {
+		grid-template-columns: 36px minmax(0, 1fr);
+		gap: 12px;
+		padding: 15px;
+	}
+
+	.sl-dpdpa-course-coverage__curriculum-number {
+		width: 32px;
+		height: 32px;
+	}
+
+}

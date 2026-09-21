@@ -1,0 +1,102 @@
+/* SucceedLEARN — Code of Conduct Differentiation */
+
+.sl-coc-differentiation {
+	padding: 90px 0;
+	background: var(--sl-page-bg);
+}
+
+.sl-coc-differentiation__heading {
+	margin: 0 0 34px;
+}
+
+.sl-coc-differentiation__grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 36px;
+	align-items: stretch;
+}
+
+.sl-coc-differentiation__card {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 28px 30px;
+	border: 1px solid rgba(107, 124, 147, 0.14);
+	border-radius: 14px;
+	background: var(--sl-page-white);
+	box-shadow: 0 8px 24px rgba(22, 35, 78, 0.04);
+}
+
+.sl-coc-differentiation__card-head {
+	display: flex;
+	align-items: flex-start;
+	flex: 0 0 auto;
+	margin-bottom: 16px;
+}
+
+.sl-coc-differentiation__card h3.sl-panel-title {
+	margin: 0;
+}
+
+.sl-coc-differentiation__card .sl-coc-reporting__list {
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+	margin-top: 0;
+}
+
+.sl-coc-differentiation__card .sl-coc-reporting__list-item {
+	flex: 1 1 0;
+	align-items: center;
+	min-height: 48px;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.sl-coc-differentiation__card .sl-coc-reporting__list-item:first-child {
+	border-top: 0;
+}
+
+/* Button look: site-wide .sl-content-btn from sl-global-ui-buttons.css */
+
+/* Tablet */
+
+@media (max-width: 991px) {
+	.sl-coc-differentiation {
+		padding: 70px 0;
+	}
+
+	.sl-coc-differentiation__grid {
+		gap: 24px;
+	}
+
+	.sl-coc-differentiation__card {
+		padding: 24px;
+	}
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+	.sl-coc-differentiation {
+		padding: 60px 0;
+	}
+
+	.sl-coc-differentiation__grid {
+		grid-template-columns: 1fr;
+		gap: 18px;
+	}
+
+	.sl-coc-differentiation__card-head {
+		min-height: calc(18px * 1.35 * 2);
+	}
+
+	.sl-coc-differentiation__card .sl-coc-reporting__list-item {
+		flex: 0 0 auto;
+		min-height: 44px;
+	}
+
+	.sl-coc-differentiation__card {
+		padding: 22px;
+	}
+}

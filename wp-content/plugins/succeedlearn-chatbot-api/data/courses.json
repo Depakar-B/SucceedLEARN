@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "title": "POSH Compliance Training",
+    "description": "Comprehensive training on Prevention of Sexual Harassment Act. Learn about workplace conduct rules, reporting procedures, and legal compliance.",
+    "price": 299.99,
+    "category": "Compliance",
+    "duration": "4 weeks",
+    "certificate": true,
+    "created_at": "2024-01-01 00:00:00"
+  },
+  {
+    "id": 1,
+    "title": "Workplace Ethics",
+    "description": "Develop ethical decision-making skills and understand professional conduct standards in the workplace.",
+    "price": 199.99,
+    "category": "Professional Development",
+    "duration": "3 weeks",
+    "certificate": true,
+    "created_at": "2024-01-01 00:00:00"
+  },
+  {
+    "id": 2,
+    "title": "HR Compliance",
+    "description": "Master HR compliance requirements, employment laws, and best practices for human resources management.",
+    "price": 399.99,
+    "category": "Compliance",
+    "duration": "6 weeks",
+    "certificate": true,
+    "created_at": "2024-01-01 00:00:00"
+  }
+]

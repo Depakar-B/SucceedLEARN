@@ -1,0 +1,149 @@
+/* =========================================================
+   SucceedLEARN
+   Gifts & Entertainment Training for PE/VC Professionals
+   Target Audience
+
+   Container and section spacing come from course-global.css.
+   ========================================================= */
+
+   .sl-course-page .sl-gifts-entertainment-target-audience {
+	background: var(--course-light-bg, #f5f5f5);
+}
+
+.sl-gifts-entertainment-target-audience__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	gap: 72px;
+	align-items: start;
+}
+
+
+/* =========================================================
+   Left: Introduction
+   ========================================================= */
+
+.sl-gifts-entertainment-target-audience__intro {
+	min-width: 0;
+}
+
+.sl-gifts-entertainment-target-audience__intro h2 {
+	margin-bottom: 20px;
+}
+
+.sl-gifts-entertainment-target-audience__intro p {
+	margin: 0;
+}
+
+
+/* =========================================================
+   Right: Audience List
+   ========================================================= */
+
+.sl-gifts-entertainment-target-audience__list {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+}
+
+.sl-gifts-entertainment-target-audience__item {
+	display: grid;
+	grid-template-columns: 48px minmax(0, 1fr);
+	gap: 14px;
+	align-items: start;
+
+	padding: 0 0 28px;
+
+	border-bottom: 1px solid rgba(22, 35, 78, 0.14);
+}
+
+.sl-gifts-entertainment-target-audience__item
+	+ .sl-gifts-entertainment-target-audience__item {
+	padding-top: 20px;
+}
+
+.sl-gifts-entertainment-target-audience__item:last-child {
+	padding-bottom: 0;
+	border-bottom: 0;
+}
+
+
+/* =========================================================
+   Audience Label
+   ========================================================= */
+
+.sl-gifts-entertainment-target-audience__number {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 44px;
+	height: 44px;
+
+	border-radius: 12px;
+	background: rgba(20, 114, 186, 0.09);
+
+	color: var(--course-primary, #1472ba);
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+
+/* =========================================================
+   Audience Content
+   ========================================================= */
+
+.sl-gifts-entertainment-target-audience__item-content {
+	min-width: 0;
+}
+
+.sl-gifts-entertainment-target-audience__item-content h3 {
+	margin: 0 0 8px;
+	color: var(--course-navy, #16234e);
+}
+
+.sl-gifts-entertainment-target-audience__item-content p {
+	margin: 0;
+}
+
+
+/* =========================================================
+   Tablet
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+	.sl-gifts-entertainment-target-audience__grid {
+		gap: 48px;
+	}
+}
+
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+	.sl-gifts-entertainment-target-audience__grid {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.sl-gifts-entertainment-target-audience__item {
+		grid-template-columns: 42px minmax(0, 1fr);
+		gap: 12px;
+		padding-bottom: 22px;
+	}
+
+	.sl-gifts-entertainment-target-audience__item
+		+ .sl-gifts-entertainment-target-audience__item {
+		padding-top: 18px;
+	}
+
+	.sl-gifts-entertainment-target-audience__number {
+		width: 40px;
+		height: 40px;
+		border-radius: 10px;
+	}
+}

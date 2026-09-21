@@ -1,0 +1,98 @@
+.sl-uk-sexual-harassment-settings {
+    padding: 80px 0;
+    background: #f5f5f5;
+}
+
+.sl-uk-sexual-harassment-settings__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 70px;
+    align-items: start;
+}
+
+/* Image */
+.sl-uk-sexual-harassment-settings__media {
+    position: sticky;
+    top: calc(var(--slf-header-clearance, 110px) + 24px);
+    align-self: start;
+}
+
+.sl-uk-sexual-harassment-settings__image {
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid rgba(22, 35, 78, 0.10);
+    border-radius: 16px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.sl-uk-sexual-harassment-settings__image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 520px;
+    padding: 30px;
+    box-sizing: border-box;
+    color: #6b7c93;
+    text-align: center;
+}
+
+.sl-uk-sexual-harassment-settings__image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Content */
+.sl-uk-sexual-harassment-settings__content > p:first-of-type {
+    margin-top: 0;
+}
+
+.sl-uk-sexual-harassment-settings__content .sl-list {
+    margin-top: 28px;
+}
+
+.sl-uk-sexual-harassment-settings__closing {
+    margin-top: 28px;
+    margin-bottom: 0;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .sl-uk-sexual-harassment-settings__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .sl-uk-sexual-harassment-settings__media {
+        position: static;
+    }
+
+    .sl-uk-sexual-harassment-settings__image-placeholder {
+        min-height: 420px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .sl-uk-sexual-harassment-settings {
+        padding: 60px 0;
+    }
+
+    .sl-uk-sexual-harassment-settings__grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .sl-uk-sexual-harassment-settings__image-placeholder {
+        min-height: 320px;
+    }
+
+    .sl-uk-sexual-harassment-settings__content .sl-list {
+        margin-top: 22px;
+    }
+
+    .sl-uk-sexual-harassment-settings__closing {
+        margin-top: 22px;
+    }
+}

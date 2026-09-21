@@ -1,0 +1,278 @@
+/**
+ * ABAC Decision Journey
+ */
+
+ .sl-abac-decision-journey {
+    padding: var(--course-section-space, 90px) 0;
+    background: var(--course-white, #ffffff);
+}
+
+
+/* Intro */
+
+.sl-abac-decision-journey__intro {
+    width: 100%;
+    margin-bottom: 56px;
+    text-align: left;
+}
+
+.sl-abac-decision-journey__intro h2 {
+    margin-bottom: 0;
+}
+
+
+/* Timeline */
+
+.sl-abac-decision-journey__timeline {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+
+    margin-bottom: 58px;
+}
+
+.sl-abac-decision-journey__line {
+    position: absolute;
+
+    top: 24px;
+    left: 10%;
+    right: 10%;
+
+    height: 1px;
+
+    background: rgba(20, 114, 186, 0.25);
+
+    z-index: 0;
+}
+
+
+/* Step */
+
+.sl-abac-decision-journey__step {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0 18px;
+
+    text-align: center;
+
+    z-index: 1;
+}
+
+
+/* Number */
+
+.sl-abac-decision-journey__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 22px;
+
+    border: 4px solid var(--course-white, #ffffff);
+    border-radius: 50%;
+
+    background: var(--course-primary, #1472ba);
+
+    box-shadow: 0 0 0 1px rgba(20, 114, 186, 0.22);
+
+    color: var(--course-white, #ffffff);
+
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+
+/* Content */
+
+.sl-abac-decision-journey__content {
+    width: 100%;
+}
+
+.sl-abac-decision-journey__content h3 {
+    margin: 0 0 10px;
+
+    color: var(--course-navy, #16234e);
+
+    font-size: 17px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.sl-abac-decision-journey__content p {
+    margin: 0;
+
+    color: var(--course-text, #4a4a4a);
+
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+
+/* Bottom media */
+
+.sl-abac-decision-journey__media {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.sl-abac-decision-journey__media-item {
+    overflow: hidden;
+
+    aspect-ratio: 16 / 8;
+
+    border: 1px dashed rgba(22, 35, 78, 0.28);
+    border-radius: 16px;
+
+    background: #f5f7fa;
+}
+
+.sl-abac-decision-journey__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        repeating-linear-gradient(
+            135deg,
+            #f5f7fa 0,
+            #f5f7fa 12px,
+            #edf1f6 12px,
+            #edf1f6 24px
+        );
+
+    color: #6b7c93;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* Large desktop */
+
+@media (min-width: 1400px) {
+
+    .sl-abac-decision-journey__step {
+        padding: 0 24px;
+    }
+
+    .sl-abac-decision-journey__content h3 {
+        font-size: 18px;
+    }
+
+    .sl-abac-decision-journey__content p {
+        font-size: 15px;
+    }
+}
+
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+
+    .sl-abac-decision-journey__timeline {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        row-gap: 44px;
+    }
+
+    .sl-abac-decision-journey__line {
+        display: none;
+    }
+
+    .sl-abac-decision-journey__step {
+        padding: 0 14px;
+    }
+
+    .sl-abac-decision-journey__media {
+        grid-template-columns: 1fr;
+    }
+
+    .sl-abac-decision-journey__media-item {
+        aspect-ratio: 16 / 8;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .sl-abac-decision-journey {
+        padding-top: var(--course-section-space-mobile, 60px);
+        padding-bottom: var(--course-section-space-mobile, 60px);
+    }
+
+    .sl-abac-decision-journey__intro {
+        margin-bottom: 40px;
+    }
+
+    .sl-abac-decision-journey__timeline {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        margin-bottom: 40px;
+    }
+
+    .sl-abac-decision-journey__line {
+        display: block;
+
+        top: 24px;
+        bottom: 24px;
+        left: 23px;
+        right: auto;
+
+        width: 1px;
+        height: auto;
+    }
+
+    .sl-abac-decision-journey__step {
+        display: grid;
+        grid-template-columns: 48px minmax(0, 1fr);
+
+        align-items: start;
+        gap: 18px;
+
+        padding: 0 0 34px;
+
+        text-align: left;
+    }
+
+    .sl-abac-decision-journey__step:last-child {
+        padding-bottom: 0;
+    }
+
+    .sl-abac-decision-journey__number {
+        margin: 0;
+    }
+
+    .sl-abac-decision-journey__content h3 {
+        margin-top: 4px;
+
+        font-size: 18px;
+    }
+
+    .sl-abac-decision-journey__content p {
+        font-size: 14px;
+    }
+
+    .sl-abac-decision-journey__media {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .sl-abac-decision-journey__media-item {
+        aspect-ratio: 16 / 9;
+    }
+}

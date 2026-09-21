@@ -1,0 +1,136 @@
+/**
+ * SucceedLEARN — S-Aware
+ * Section: Learning That Reflects Your Organisation
+ */
+
+.sl-saware-customisation {
+	padding: 76px 0 88px;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-saware-customisation__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+	gap: 64px;
+	align-items: start;
+}
+
+/* Image (sticky while content scrolls — no inner scrollbar) */
+
+.sl-saware-customisation__media {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 110px) + 24px);
+	width: 100%;
+	min-width: 0;
+	align-self: start;
+}
+
+.sl-saware-customisation__image {
+	width: 100%;
+	overflow: hidden;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 16px;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-saware-customisation__image-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 520px;
+	padding: 30px;
+	box-sizing: border-box;
+	background: #ffffff;
+	color: var(--sl-page-muted, #6b7c93);
+	text-align: center;
+}
+
+.sl-saware-customisation__image img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+/* Content */
+
+.sl-saware-customisation__content {
+	min-width: 0;
+}
+
+.sl-saware-customisation__content h2 {
+	margin-bottom: 18px;
+}
+
+.sl-saware-customisation__intro {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	margin-bottom: 28px;
+}
+
+.sl-saware-customisation__intro p {
+	margin: 0;
+}
+
+.sl-saware-customisation__list {
+	margin-bottom: 24px;
+}
+
+.sl-saware-customisation__highlight {
+	margin-top: 0;
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+
+	.sl-saware-customisation {
+		padding: 64px 0 72px;
+	}
+
+	.sl-saware-customisation__grid {
+		grid-template-columns: 1fr;
+		gap: 42px;
+	}
+
+	.sl-saware-customisation__media {
+		position: static;
+		top: auto;
+	}
+
+	.sl-saware-customisation__image-placeholder {
+		min-height: 420px;
+	}
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+
+	.sl-saware-customisation {
+		padding: 52px 0 60px;
+	}
+
+	.sl-saware-customisation__grid {
+		gap: 32px;
+	}
+
+	.sl-saware-customisation__image {
+		border-radius: 12px;
+	}
+
+	.sl-saware-customisation__image-placeholder {
+		min-height: 320px;
+		padding: 24px;
+	}
+
+	.sl-saware-customisation__intro {
+		gap: 12px;
+		margin-bottom: 22px;
+	}
+
+	.sl-saware-customisation__list {
+		margin-bottom: 20px;
+	}
+}

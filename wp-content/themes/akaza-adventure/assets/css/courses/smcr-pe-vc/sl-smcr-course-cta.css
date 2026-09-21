@@ -1,0 +1,177 @@
+/**
+ * SMCR Training — Course CTA.
+ *
+ * @package Akaza_Adventure
+ */
+
+ .sl-smcr-course-cta {
+	padding: 96px 0;
+	background: #f5f5f5;
+}
+
+.sl-smcr-course-cta__panel {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	gap: 64px;
+	align-items: center;
+	padding: 64px 68px;
+	background: linear-gradient(
+		135deg,
+		#16234e 0%,
+		#283384 100%
+	);
+	border-radius: 20px;
+	box-sizing: border-box;
+}
+
+/* ---------------------------------------------------------
+   Content
+--------------------------------------------------------- */
+
+.sl-smcr-course-cta__content {
+	min-width: 0;
+}
+
+.sl-smcr-course-cta__content .sl-home-sub-heading {
+	display: block;
+	margin-bottom: 14px;
+	color: #6dc3eb;
+}
+
+.sl-smcr-course-cta__content h2 {
+	margin-top: 0;
+	margin-bottom: 20px;
+	color: #ffffff;
+}
+
+.sl-smcr-course-cta__content h2 span {
+	color: #6dc3eb;
+}
+
+.sl-smcr-course-cta__content p {
+	margin: 0;
+	color: rgba(255, 255, 255, 0.82);
+}
+
+/* ---------------------------------------------------------
+   Actions
+--------------------------------------------------------- */
+
+.sl-smcr-course-cta__actions {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	flex-shrink: 0;
+	min-width: 210px;
+}
+
+.sl-smcr-course-cta__button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	min-height: 52px;
+	padding: 14px 22px;
+	border: 1px solid transparent;
+	border-radius: 8px;
+	box-sizing: border-box;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1.4;
+	text-align: center;
+	text-decoration: none;
+	transition:
+		background-color 0.2s ease,
+		border-color 0.2s ease,
+		transform 0.2s ease;
+}
+
+.sl-smcr-course-cta__button span {
+	transition: transform 0.2s ease;
+}
+
+.sl-smcr-course-cta__button:hover span {
+	transform: translateX(4px);
+}
+
+/* Primary */
+
+.sl-smcr-course-cta__button--primary {
+	background: #ffffff;
+	border-color: #ffffff;
+	color: #16234e;
+}
+
+.sl-smcr-course-cta__button--primary:hover {
+	background: #f5f5f5;
+}
+
+/* Secondary */
+
+.sl-smcr-course-cta__button--secondary {
+	background: transparent;
+	border-color: rgba(255, 255, 255, 0.55);
+	color: #ffffff;
+}
+
+.sl-smcr-course-cta__button--secondary:hover {
+	background: rgba(255, 255, 255, 0.10);
+	border-color: #ffffff;
+}
+
+.sl-smcr-course-cta__button:focus-visible {
+	outline: 2px solid #ffffff;
+	outline-offset: 4px;
+}
+
+/* ---------------------------------------------------------
+   Tablet
+--------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+	.sl-smcr-course-cta {
+		padding: 80px 0;
+	}
+
+	.sl-smcr-course-cta__panel {
+		grid-template-columns: 1fr;
+		gap: 32px;
+		padding: 48px;
+	}
+
+	.sl-smcr-course-cta__actions {
+		flex-direction: row;
+		min-width: 0;
+	}
+
+	.sl-smcr-course-cta__button {
+		flex: 1;
+	}
+}
+
+/* ---------------------------------------------------------
+   Mobile
+--------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+	.sl-smcr-course-cta {
+		padding: 64px 0;
+	}
+
+	.sl-smcr-course-cta__panel {
+		gap: 28px;
+		padding: 36px 24px;
+		border-radius: 14px;
+	}
+
+	.sl-smcr-course-cta__actions {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.sl-smcr-course-cta__button {
+		width: 100%;
+	}
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<ruleset name="Post Lattice">
+	<description>PHPCS rules for the Post Lattice plugin.</description>
+
+	<file>.</file>
+
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/assets/*</exclude-pattern>
+
+	<arg name="extensions" value="php"/>
+	<arg value="s"/>
+
+	<rule ref="WordPress">
+		<!-- Prefixes must be 4+ chars for PrefixAllGlobals (plt is too short). -->
+	</rule>
+
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="Post_Lattice"/>
+				<element value="post_lattice"/>
+				<element value="PLT"/>
+			</property>
+		</properties>
+	</rule>
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="post-lattice"/>
+			</property>
+		</properties>
+	</rule>
+</ruleset>

@@ -1,0 +1,415 @@
+/* =========================================================
+   SucceedLEARN — Code of Conduct Hero
+   ========================================================= */
+
+.sl-code-of-conduct-hero {
+	position: relative;
+	overflow: hidden;
+	padding: 0;
+	background: var(--sl-page-bg);
+}
+
+.sl-code-of-conduct-hero__grid {
+	position: relative;
+	display: grid;
+	grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+	gap: 0;
+	align-items: stretch;
+	min-height: 680px;
+}
+
+
+/* =========================================================
+   Hero Content
+   ========================================================= */
+
+.sl-code-of-conduct-hero__content {
+	position: relative;
+	z-index: 1;
+	padding: calc(var(--slf-header-clearance, 76px) + 40px) 48px 100px 0;
+}
+
+.sl-code-of-conduct-hero .sl-home-sub-heading {
+	color: var(--sl-heading-accent);
+}
+
+.sl-code-of-conduct-hero .sl-home-sub-heading::before {
+	background: var(--sl-heading-accent);
+}
+
+.sl-code-of-conduct-hero__highlight {
+	color: var(--sl-heading-accent);
+}
+
+.sl-code-of-conduct-hero__breadcrumb {
+	margin: 0 0 28px;
+	color: var(--sl-page-muted);
+}
+
+.sl-code-of-conduct-hero__breadcrumb span {
+	display: inline-block;
+}
+
+.sl-code-of-conduct-hero__content h1 {
+	margin: 16px 0 24px;
+}
+
+.sl-code-of-conduct-hero__lead {
+	margin: 0 0 32px;
+	color: var(--sl-page-text);
+	max-width: 600px !important;
+}
+
+
+/* =========================================================
+   CTA Buttons
+   ========================================================= */
+
+.sl-code-of-conduct-hero__actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 14px;
+}
+
+/* Button look: site-wide .sl-hero-btn from sl-global-ui-buttons.css */
+
+.sl-code-of-conduct-hero__button-icon,
+.sl-code-of-conduct-hero .sl-hero-btn svg {
+	flex: 0 0 auto;
+	stroke: currentColor;
+	color: inherit;
+}
+
+
+/* =========================================================
+   Hero Visual
+   ========================================================= */
+
+.sl-code-of-conduct-hero__visual {
+	position: relative;
+	z-index: 1;
+	min-height: 100%;
+	align-self: stretch;
+	isolation: isolate;
+}
+
+
+/* =========================================================
+   Image Placeholder
+   ========================================================= */
+
+.sl-code-of-conduct-hero__image {
+	position: absolute;
+	inset: 0;
+	overflow: hidden;
+	border-radius: 0;
+}
+
+.sl-code-of-conduct-hero__image img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+
+/* =========================================================
+   Floating Label (between columns)
+   ========================================================= */
+
+.sl-code-of-conduct-hero__floating-label {
+	position: absolute;
+	top: calc(var(--slf-header-clearance, 76px) + 28px);
+	left: 32px;
+	z-index: 4;
+
+	display: inline-flex;
+	align-items: center;
+	gap: 12px;
+	max-width: calc(100% - 64px);
+
+	padding: 14px 22px;
+	border-radius: 50px;
+
+	color: var(--sl-page-navy);
+	font-size: 15px;
+	font-weight: 600;
+	background: var(--sl-page-white);
+
+	box-shadow: 0 14px 40px rgba(22, 35, 78, 0.14);
+}
+
+.sl-code-of-conduct-hero__status-dot {
+	width: 12px;
+	height: 12px;
+	flex: 0 0 12px;
+	border-radius: 50%;
+	background: #0e9f4a;
+}
+
+
+/* =========================================================
+   Interactive Assessment (between columns)
+   ========================================================= */
+
+.sl-code-of-conduct-hero__assessment {
+	position: absolute;
+	left: 50%;
+	top: calc(50% + 70px);
+	z-index: 15;
+	transform: translate(-50%, -50%);
+
+	width: min(520px, calc(100% - 48px));
+	padding: 28px 30px 26px;
+
+	border-radius: 16px;
+
+	background: var(--sl-page-white);
+
+	box-shadow: 0 24px 64px rgba(22, 35, 78, 0.18);
+}
+
+/* ~20–25% on left column, rest on image column */
+@media (min-width: 992px) {
+
+	.sl-code-of-conduct-hero__assessment {
+		left: calc(55% + min(520px, calc(100% - 48px)) * 0.28);
+	}
+}
+
+.sl-code-of-conduct-hero__assessment-top {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+
+	margin-bottom: 18px;
+}
+
+.sl-code-of-conduct-hero__assessment-category {
+	color: var(--sl-page-primary);
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+}
+
+.sl-code-of-conduct-hero__assessment-label {
+	color: var(--sl-page-muted);
+	font-size: 13px;
+	font-weight: 500;
+}
+
+.sl-code-of-conduct-hero__question {
+	margin: 0 0 18px;
+}
+
+body.slf-body main.sl-coc-page .sl-code-of-conduct-hero__question,
+body.slf-body #main-content.sl-coc-page .sl-code-of-conduct-hero__question {
+	color: var(--sl-page-text);
+}
+
+.sl-code-of-conduct-hero__options {
+	display: grid;
+	gap: 10px;
+}
+
+.sl-code-of-conduct-hero__option {
+	width: 100%;
+	padding: 15px 18px;
+
+	text-align: left;
+	cursor: pointer;
+
+	color: var(--sl-page-text);
+	font-size: 15px;
+	line-height: 1.45;
+	background: var(--sl-page-white);
+
+	border: 1px solid rgba(107, 124, 147, 0.28);
+	border-radius: 10px;
+
+	transition:
+		background-color 0.2s ease,
+		border-color 0.2s ease,
+		transform 0.2s ease;
+}
+
+.sl-code-of-conduct-hero__option:hover:not(.is-correct):not(.is-incorrect) {
+	transform: translateY(-1px);
+}
+
+.sl-code-of-conduct-hero__option:focus-visible {
+
+	outline-offset: 3px;
+}
+
+.sl-code-of-conduct-hero__feedback {
+	display: none;
+	margin-top: 12px;
+	padding: 12px 14px;
+	border-radius: 8px;
+	font-size: 15px;
+	line-height: 1.55;
+}
+
+.sl-code-of-conduct-hero__feedback.is-visible {
+	display: block;
+}
+
+.sl-code-of-conduct-hero__feedback.is-success {
+	background: rgba(14, 159, 74, 0.14);
+	color: var(--sl-page-navy);
+}
+
+.sl-code-of-conduct-hero__feedback.is-error {
+	background: rgba(234, 62, 36, 0.14);
+	color: var(--sl-page-navy);
+}
+
+.sl-code-of-conduct-hero__option.is-correct,
+.sl-code-of-conduct-hero__option.is-correct:hover {
+	background: rgba(14, 159, 74, 0.12);
+	border-color: #0d723b;
+}
+
+.sl-code-of-conduct-hero__option.is-incorrect,
+.sl-code-of-conduct-hero__option.is-incorrect:hover {
+	background: rgba(234, 62, 36, 0.12);
+	border-color: #c9341e;
+}
+
+
+/* =========================================================
+   Tablet
+   ========================================================= */
+
+@media (min-width: 992px) {
+
+	.sl-code-of-conduct-hero .container {
+		padding-right: 0;
+		padding-left: var(--slf-gutter, clamp(1.25rem, 3vw, 3rem));
+	}
+
+	.sl-code-of-conduct-hero__grid {
+		min-height: 720px;
+	}
+
+	.sl-code-of-conduct-hero__visual {
+		min-height: 720px;
+	}
+
+	.sl-code-of-conduct-hero__image {
+		left: 0;
+		right: auto;
+		top: 0;
+		bottom: 0;
+		width: calc(
+			100% + (50vw - min(100vw, var(--sl-home-content-max, 1400px)) / 2 + var(--slf-gutter, clamp(1.25rem, 3vw, 3rem)))
+		);
+		max-width: none;
+		border-radius: 18px 0 0 18px;
+	}
+
+	.sl-code-of-conduct-hero__image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+}
+
+@media (max-width: 1199px) {
+
+	.sl-code-of-conduct-hero__grid {
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	}
+
+	.sl-code-of-conduct-hero__content {
+		padding-right: 32px;
+	}
+
+	.sl-code-of-conduct-hero__floating-label {
+		top: calc(var(--slf-header-clearance, 76px) + 24px);
+		left: 24px;
+		max-width: calc(100% - 48px);
+	}
+
+	.sl-code-of-conduct-hero__assessment {
+		width: min(480px, calc(100% - 56px));
+	}
+
+}
+
+
+/* =========================================================
+   Mobile / Tablet
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+	.sl-code-of-conduct-hero__content {
+		padding: calc(var(--slf-header-clearance, 76px) + 50px) 0 40px;
+	}
+
+	.sl-code-of-conduct-hero__grid {
+		grid-template-columns: 1fr;
+		min-height: 0;
+	}
+
+	.sl-code-of-conduct-hero__visual {
+		min-height: 520px;
+	}
+
+	.sl-code-of-conduct-hero__floating-label {
+		top: calc(var(--slf-header-clearance, 76px) + 20px);
+		left: 20px;
+	}
+
+	.sl-code-of-conduct-hero__assessment {
+		left: 50%;
+		top: calc(54% + 50px);
+		width: calc(100% - 40px);
+		padding: 24px;
+	}
+
+	.sl-code-of-conduct-hero__image {
+		border-radius: 18px;
+	}
+
+}
+
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+	.sl-code-of-conduct-hero__content {
+		padding: calc(var(--slf-header-clearance, 76px) + 40px) 0 32px;
+	}
+
+	.sl-code-of-conduct-hero__visual {
+		min-height: 420px;
+	}
+
+	.sl-code-of-conduct-hero__assessment {
+		top: calc(56% + 40px);
+		width: calc(100% - 30px);
+		padding: 22px;
+	}
+
+	.sl-code-of-conduct-hero__actions {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.sl-code-of-conduct-hero__actions .sl-hero-btn {
+		width: 100%;
+		text-align: center;
+	}
+
+}

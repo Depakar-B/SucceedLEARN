@@ -1,0 +1,270 @@
+/**
+ * SucceedLEARN — S-Aware
+ * Section: Designed Around How Employees Actually Learn
+ *
+ * Five cards orbit a centred hub on a shared circular ring
+ * (same pattern as SAP .sl-sa-behaviour).
+ */
+
+.sl-saware-learning {
+	padding: 76px 0 90px;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.sl-saware-learning__intro {
+	width: 100%;
+	margin-bottom: 52px;
+}
+
+.sl-saware-learning__intro p {
+	margin: 0 0 14px;
+	color: var(--sl-page-text, #4a4a4a);
+}
+
+.sl-saware-learning__intro p:last-child {
+	margin-bottom: 0;
+}
+
+/* =========================================================
+   CYCLE — square stage so ring, hub and cards share one centre
+========================================================= */
+
+.sl-saware-learning__cycle {
+	--sl-saware-orbit-radius: 30cqi;
+	--sl-saware-card-width: 400px;
+
+	position: relative;
+	width: min(100%, 980px);
+	aspect-ratio: 1 / 1;
+	margin: 0 auto;
+	container-type: inline-size;
+}
+
+.sl-saware-learning__ring {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 0;
+	width: calc(var(--sl-saware-orbit-radius) * 2);
+	height: calc(var(--sl-saware-orbit-radius) * 2);
+	border: 1.5px solid rgba(20, 114, 186, 0.34);
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	box-sizing: border-box;
+}
+
+.sl-saware-learning__centre {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: clamp(150px, 24%, 210px);
+	aspect-ratio: 1 / 1;
+	padding: 18px 14px;
+	text-align: center;
+	background: var(--sl-page-white, #ffffff);
+	border: 1px solid rgba(20, 114, 186, 0.22);
+	border-radius: 50%;
+	box-shadow: 0 10px 28px rgba(22, 35, 78, 0.08);
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	pointer-events: none;
+}
+
+.sl-saware-learning__centre-line {
+	margin: 0;
+	color: var(--sl-page-navy, #16234e);
+	font-size: clamp(15px, 1.7vw, 19px);
+	font-weight: 700;
+	line-height: 1.3;
+}
+
+.sl-saware-learning__centre-line + .sl-saware-learning__centre-line {
+	margin-top: 2px;
+	color: var(--sl-page-primary, #1472ba);
+}
+
+/* =========================================================
+   CARDS — sit on the ring, evenly spaced (72deg apart)
+========================================================= */
+
+.sl-saware-learning__card {
+	--sl-saware-orbit-angle: 0deg;
+
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 1;
+	display: block;
+	width: var(--sl-saware-card-width);
+	max-width: 48%;
+	padding: 18px 52px 20px 20px;
+	background: var(--sl-page-white, #ffffff);
+	border: 1px solid rgba(107, 124, 147, 0.16);
+	border-radius: 14px;
+	box-shadow: 0 8px 24px rgba(22, 35, 78, 0.06);
+	box-sizing: border-box;
+	text-align: left;
+	/* Centre → rotate → move to ring → push card outside so it rests on the line → un-rotate */
+	transform:
+		translate(-50%, -50%)
+		rotate(var(--sl-saware-orbit-angle))
+		translateY(calc(var(--sl-saware-orbit-radius) * -1))
+		translateY(-54%)
+		rotate(calc(var(--sl-saware-orbit-angle) * -1));
+	transition: box-shadow 0.2s ease;
+}
+
+.sl-saware-learning__card:hover {
+	box-shadow: 0 12px 28px rgba(22, 35, 78, 0.1);
+}
+
+.sl-saware-learning__number {
+	position: absolute;
+	top: 14px;
+	right: 14px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background: var(--sl-page-primary, #1472ba);
+	color: var(--sl-page-white, #ffffff);
+	font-size: 11px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.sl-saware-learning__card-body {
+	width: 100%;
+	min-width: 0;
+	text-align: left;
+}
+
+.sl-saware-learning__card-body .sl-panel-title {
+	margin: 0 0 8px;
+	color: var(--sl-page-navy, #16234e);
+	font-size: 17px;
+	line-height: 1.3;
+}
+
+.sl-saware-learning__card-body p {
+	margin: 0;
+	color: var(--sl-page-text, #4a4a4a);
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+	.sl-saware-learning {
+		padding: 64px 0 72px;
+	}
+
+	.sl-saware-learning__intro {
+		margin-bottom: 40px;
+	}
+
+	.sl-saware-learning__cycle {
+		--sl-saware-orbit-radius: 28cqi;
+		--sl-saware-card-width: 260px;
+		width: min(100%, 760px);
+	}
+
+	.sl-saware-learning__card {
+		padding: 14px 46px 16px 14px;
+	}
+
+	.sl-saware-learning__number {
+		top: 12px;
+		right: 12px;
+		width: 30px;
+		height: 30px;
+		font-size: 10px;
+	}
+
+	.sl-saware-learning__card-body .sl-panel-title {
+		font-size: 15px;
+	}
+
+	.sl-saware-learning__card-body p {
+		font-size: 13px;
+	}
+
+	.sl-saware-learning__centre {
+		width: clamp(130px, 26%, 170px);
+		padding: 14px 10px;
+	}
+
+	.sl-saware-learning__centre-line {
+		font-size: 14px;
+	}
+}
+
+/* =========================================================
+   MOBILE — stacked list, hide ring
+========================================================= */
+
+@media (max-width: 767px) {
+	.sl-saware-learning {
+		padding: 52px 0 64px;
+	}
+
+	.sl-saware-learning__intro {
+		margin-bottom: 32px;
+	}
+
+	.sl-saware-learning__ring {
+		display: none;
+	}
+
+	.sl-saware-learning__cycle {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		gap: 16px;
+		width: min(100%, 520px);
+		aspect-ratio: auto;
+		height: auto;
+	}
+
+	.sl-saware-learning__centre {
+		position: relative;
+		left: auto;
+		top: auto;
+		order: -1;
+		width: 100%;
+		max-width: none;
+		aspect-ratio: auto;
+		border-radius: 14px;
+		transform: none;
+		pointer-events: auto;
+		padding: 18px 16px;
+	}
+
+	.sl-saware-learning__card {
+		position: relative;
+		left: auto;
+		top: auto;
+		width: 100%;
+		max-width: none;
+		transform: none;
+	}
+
+	.sl-saware-learning__card:hover {
+		transform: translateY(-2px);
+	}
+}

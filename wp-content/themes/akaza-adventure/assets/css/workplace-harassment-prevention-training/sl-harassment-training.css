@@ -1,0 +1,268 @@
+/*
+ * SucceedLEARN
+ * Workplace Harassment Prevention
+ * What is workplace harassment prevention training?
+ */
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.sl-harassment-training {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+
+/* =========================================
+   MAIN GRID
+========================================= */
+
+.sl-harassment-training__grid {
+	display: grid;
+	grid-template-columns: minmax(380px, 0.75fr) minmax(0, 1.15fr);
+	align-items: start;
+	gap: 70px;
+}
+
+
+/* =========================================
+   LEFT VISUAL
+========================================= */
+
+.sl-harassment-training__visual {
+	position: sticky;
+	top: 110px;
+}
+
+.sl-harassment-training__visual-card {
+	padding: 18px;
+	border: 1px solid rgba(20, 114, 186, 0.14);
+	border-radius: 18px;
+	background: #ffffff;
+}
+
+
+/* =========================================
+   IMAGE PLACEHOLDER
+========================================= */
+
+.sl-harassment-training__image-placeholder {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 560px;
+	border-radius: 13px;
+	background: #eef6ff;
+	text-align: center;
+}
+
+.sl-harassment-training__image-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 76px;
+	height: 76px;
+	margin-bottom: 18px;
+	border-radius: 18px;
+	background: #ffffff;
+	color: var(--sl-primary, #1472ba);
+}
+
+.sl-harassment-training__image-icon svg {
+	width: 38px;
+	height: 38px;
+}
+
+.sl-harassment-training__image-title {
+	color: var(--sl-page-navy, #16234e);
+	font-weight: 700;
+}
+
+.sl-harassment-training__image-size {
+	margin-top: 6px;
+	color: #607487;
+	font-size: 13px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.sl-harassment-training__heading {
+	margin-bottom: 26px;
+}
+
+.sl-harassment-training__heading h2 {
+	margin: 0;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-harassment-training__heading h2 span {
+	color: var(--sl-primary, #1472ba);
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.sl-harassment-training__intro p {
+	margin: 0 0 16px;
+}
+
+.sl-harassment-training__intro p:last-child {
+	margin-bottom: 0;
+}
+
+
+/* =========================================
+   QUESTIONS
+========================================= */
+
+.sl-harassment-training__questions {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin: 28px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+
+/* =========================================
+   QUESTION ITEM
+========================================= */
+
+.sl-harassment-training__question {
+	display: grid;
+	grid-template-columns: 38px minmax(0, 1fr);
+	align-items: center;
+	gap: 16px;
+	padding: 14px 18px;
+	border: 1px solid rgba(20, 114, 186, 0.13);
+	border-radius: 10px;
+	background: #f9fbfd;
+	transition:
+		transform 0.2s ease,
+		border-color 0.2s ease,
+		background 0.2s ease;
+}
+
+.sl-harassment-training__question:hover {
+	transform: translateX(3px);
+	border-color: rgba(20, 114, 186, 0.28);
+	background: #ffffff;
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.sl-harassment-training__number {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	border-radius: 8px;
+	background: rgba(20, 114, 186, 0.08);
+	color: var(--sl-primary, #1472ba);
+	font-weight: 700;
+}
+
+
+/* =========================================
+   QUESTION TEXT
+========================================= */
+
+.sl-harassment-training__question p {
+	margin: 0;
+}
+
+
+/* =========================================
+   CONCLUSION
+========================================= */
+
+.sl-harassment-training__conclusion {
+	margin-top: 28px;
+	padding: 22px 24px;
+	border-left: 3px solid var(--sl-primary, #1472ba);
+	border-radius: 0 10px 10px 0;
+	background: rgba(20, 114, 186, 0.06);
+}
+
+.sl-harassment-training__conclusion p {
+	margin: 0;
+	color: var(--sl-page-navy, #16234e);
+	font-weight: 600;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1199px) {
+
+	.sl-harassment-training {
+		padding: 75px 0;
+	}
+
+	.sl-harassment-training__grid {
+		grid-template-columns: minmax(320px, 0.7fr) minmax(0, 1fr);
+		gap: 45px;
+	}
+
+	.sl-harassment-training__image-placeholder {
+		min-height: 480px;
+	}
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+	.sl-harassment-training {
+		padding: 60px 0;
+	}
+
+	.sl-harassment-training__grid {
+		grid-template-columns: 1fr;
+		gap: 36px;
+	}
+
+	.sl-harassment-training__visual {
+		position: static;
+	}
+
+	.sl-harassment-training__image-placeholder {
+		min-height: 320px;
+	}
+
+	.sl-harassment-training__questions {
+		margin-top: 24px;
+	}
+
+	.sl-harassment-training__question {
+		grid-template-columns: 36px minmax(0, 1fr);
+		gap: 12px;
+		padding: 13px 14px;
+	}
+
+	.sl-harassment-training__conclusion {
+		padding: 20px;
+	}
+
+}

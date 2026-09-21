@@ -1,0 +1,180 @@
+.sl-us-harassment-hero {
+	padding: 120px 0 88px;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-us-harassment-hero__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+	gap: 72px;
+	align-items: start;
+}
+
+/* Hero content */
+
+.sl-us-harassment-hero__content {
+	min-width: 0;
+}
+
+.sl-us-harassment-hero__content h1 {
+	margin-bottom: 20px;
+}
+
+/*
+ * Hero H2 typography and colour are controlled globally
+ * through the .sl-hero-h2 class in main.css.
+ */
+.sl-us-harassment-hero__content .sl-hero-h2 {
+	margin-bottom: 22px;
+}
+
+/* Dual-colour Hero H1 */
+
+.sl-us-harassment-hero__content h1 span {
+	color: var(--sl-heading-accent, #1472ba);
+}
+
+.sl-us-harassment-hero__copy {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.sl-us-harassment-hero__copy p {
+	margin: 0;
+}
+
+/* Key statement */
+
+.sl-us-harassment-hero__statement {
+	margin-top: 26px;
+	padding: 18px 22px;
+	border-left: 3px solid var(--sl-page-primary, #1472ba);
+	background: rgba(20, 114, 186, 0.05);
+}
+
+.sl-us-harassment-hero__statement p {
+	margin: 0;
+	color: var(--sl-page-navy, #16234e);
+	font-weight: 600;
+}
+
+/* CTA */
+
+.sl-us-harassment-hero__actions {
+	margin-top: 28px;
+}
+
+/* Right-side image */
+
+.sl-us-harassment-hero__media {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 110px) + 24px);
+	align-self: start;
+	width: 100%;
+	min-width: 0;
+}
+
+.sl-us-harassment-hero__image {
+	width: 100%;
+	max-height: calc(100vh - 168px);
+	overflow-x: hidden;
+	overflow-y: auto;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 16px;
+	background: var(--sl-page-white, #ffffff);
+	scrollbar-width: thin;
+}
+
+.sl-us-harassment-hero__image-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 620px;
+	padding: 30px;
+	box-sizing: border-box;
+	background: #f5f5f5;
+	color: var(--sl-page-muted, #6b7c93);
+	text-align: center;
+}
+
+.sl-us-harassment-hero__image img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+
+	.sl-us-harassment-hero {
+		padding: 120px 0 72px;
+	}
+
+	.sl-us-harassment-hero__grid {
+		grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+		gap: 48px;
+	}
+
+	.sl-us-harassment-hero__media {
+		position: static;
+		top: auto;
+	}
+
+	.sl-us-harassment-hero__image {
+		max-height: none;
+		overflow: hidden;
+	}
+
+	.sl-us-harassment-hero__image-placeholder {
+		min-height: 460px;
+	}
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+
+	.sl-us-harassment-hero {
+		padding: 120px 0 60px;
+	}
+
+	.sl-us-harassment-hero__grid {
+		grid-template-columns: 1fr;
+		gap: 36px;
+	}
+
+	.sl-us-harassment-hero__content h1 {
+		margin-bottom: 18px;
+	}
+
+	.sl-us-harassment-hero__content .sl-hero-h2 {
+		margin-bottom: 18px;
+	}
+
+	.sl-us-harassment-hero__copy {
+		gap: 12px;
+	}
+
+	.sl-us-harassment-hero__statement {
+		margin-top: 22px;
+		padding: 16px 18px;
+	}
+
+	.sl-us-harassment-hero__actions {
+		margin-top: 24px;
+	}
+
+	.sl-us-harassment-hero__image {
+		border-radius: 12px;
+		max-height: none;
+		overflow: hidden;
+	}
+
+	.sl-us-harassment-hero__image-placeholder {
+		min-height: 320px;
+		padding: 24px;
+	}
+}

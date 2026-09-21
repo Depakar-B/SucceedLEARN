@@ -1,0 +1,37 @@
+/* SucceedLEARN — global panel / card title (site-wide)
+ *
+ * Opt-in heading for titles inside cards, tiles, and feature panels.
+ * Size 24px, weight 700, brand blue.
+ *
+ * Markup:
+ *   <h3 class="sl-panel-title">Title</h3>
+ */
+
+:root {
+	--sl-panel-title-size: 24px;
+	--sl-panel-title-weight: 700;
+	--sl-panel-title-line: 1.3;
+	--sl-panel-title-color: var(--sl-heading-accent, var(--sl-page-primary, #1472ba));
+}
+
+.sl-panel-title,
+h3.sl-panel-title,
+body.slf-body h3.sl-panel-title,
+body.slf-body main h3.sl-panel-title,
+body.slf-body #main-content h3.sl-panel-title,
+body.slf-body main.sl-coc-page h3.sl-panel-title,
+body.slf-body #main-content.sl-coc-page h3.sl-panel-title {
+	margin: 0;
+	font-family: var(--slf-font-body, "Space Grotesk", system-ui, sans-serif);
+	font-size: var(--sl-panel-title-size);
+	font-weight: var(--sl-panel-title-weight);
+	line-height: var(--sl-panel-title-line);
+	letter-spacing: normal;
+	color: var(--sl-panel-title-color);
+}
+
+.sl-panel-title > span,
+h3.sl-panel-title > span,
+body.slf-body h3.sl-panel-title > span {
+	color: var(--sl-panel-title-color);
+}

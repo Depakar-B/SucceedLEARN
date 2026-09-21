@@ -1,0 +1,99 @@
+/**
+ * UK Sexual Harassment Prevention Training — Hero
+ */
+
+ .sl-uk-sexual-harassment-hero {
+	padding: 120px 0 80px;
+	background: #ffffff;
+}
+
+.sl-uk-sexual-harassment-hero__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(420px, 0.9fr);
+	gap: 70px;
+	align-items: center;
+}
+
+.sl-uk-sexual-harassment-hero__content {
+	min-width: 0;
+}
+
+.sl-uk-sexual-harassment-hero__content h1 {
+	margin-top: 0;
+	margin-bottom: 24px;
+}
+
+.sl-uk-sexual-harassment-hero__content h1 span {
+	color: var(--sl-heading-accent, #1472ba);
+}
+
+.sl-uk-sexual-harassment-hero__content .sl-hero-h2 {
+	margin-top: 0;
+	margin-bottom: 26px;
+}
+
+.sl-uk-sexual-harassment-hero__copy {
+	margin: 0;
+}
+
+.sl-uk-sexual-harassment-hero__copy p {
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+
+.sl-uk-sexual-harassment-hero__copy p:last-child {
+	margin-bottom: 0;
+}
+
+.sl-uk-sexual-harassment-hero .sl-hero-actions {
+	margin-top: 32px;
+}
+
+.sl-uk-sexual-harassment-hero__media {
+	width: 100%;
+}
+
+.sl-uk-sexual-harassment-hero__image {
+	width: 100%;
+	overflow: hidden;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 16px;
+	background: #f5f5f5;
+}
+
+.sl-uk-sexual-harassment-hero__image-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 520px;
+	padding: 30px;
+	box-sizing: border-box;
+	color: #6b7c93;
+	text-align: center;
+}
+
+@media (max-width: 1000px) {
+	.sl-uk-sexual-harassment-hero__grid {
+		grid-template-columns: 1fr;
+		gap: 48px;
+	}
+
+	.sl-uk-sexual-harassment-hero__media {
+		max-width: 720px;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-uk-sexual-harassment-hero {
+		padding: 120px 0 56px;
+	}
+
+	.sl-uk-sexual-harassment-hero__grid {
+		gap: 36px;
+	}
+
+	.sl-uk-sexual-harassment-hero__image-placeholder {
+		min-height: 320px;
+		padding: 24px;
+	}
+}

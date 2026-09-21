@@ -1,0 +1,100 @@
+/**
+ * SucceedLEARN — Code of Conduct Audience.
+ */
+
+ .sl-coc-audience {
+	padding: 90px 0;
+	background: var(--sl-page-white);
+}
+
+/* ---------------------------------------------------------
+   Section Intro
+   --------------------------------------------------------- */
+
+.sl-coc-audience__heading {
+	margin-bottom: 28px;
+	text-align: left;
+}
+
+.sl-coc-audience__heading p {
+	margin: 0;
+	color: var(--sl-page-muted);
+}
+
+/* ---------------------------------------------------------
+   Supporting Content
+   --------------------------------------------------------- */
+
+.sl-coc-audience__content {
+	text-align: left;
+}
+
+.sl-coc-audience__content > h3 {
+	margin: 0 0 22px;
+	font-size: 20px;
+	line-height: 1.4;
+}
+
+/* ---------------------------------------------------------
+   Audience Grid
+   --------------------------------------------------------- */
+
+.sl-coc-audience__grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 20px;
+}
+
+/* ---------------------------------------------------------
+   Audience Card
+   --------------------------------------------------------- */
+
+.sl-coc-audience__card {
+	min-height: 120px;
+	padding: 22px;
+	border: 1px solid rgba(107, 124, 147, 0.08);
+	border-radius: 10px;
+	background: var(--sl-page-bg);
+}
+
+.sl-coc-audience__card h3.sl-panel-title {
+	margin: 0 0 10px;
+}
+
+.sl-coc-audience__card p {
+	margin: 0;
+	color: var(--sl-page-text);
+	font-size: 15px;
+	line-height: 1.45;
+}
+
+/* ---------------------------------------------------------
+   Tablet
+   --------------------------------------------------------- */
+
+@media (max-width: 991px) {
+
+	.sl-coc-audience__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+/* ---------------------------------------------------------
+   Mobile
+   --------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+	.sl-coc-audience {
+		padding: 60px 0;
+	}
+
+	.sl-coc-audience__grid {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
+	.sl-coc-audience__card {
+		min-height: 0;
+	}
+}

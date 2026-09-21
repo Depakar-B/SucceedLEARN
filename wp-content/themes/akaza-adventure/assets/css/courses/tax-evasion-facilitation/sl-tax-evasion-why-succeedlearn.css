@@ -1,0 +1,175 @@
+/**
+ * Preventing the Facilitation of Tax Evasion Training — Why SucceedLEARN.
+ *
+ * @package Akaza_Adventure
+ */
+
+ .sl-tax-evasion-why-succeedlearn {
+	background: var(--sl-page-white, #ffffff);
+	padding: 88px 0;
+}
+
+.sl-tax-evasion-why-succeedlearn__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+	gap: 72px;
+	align-items: start;
+}
+
+
+/*
+ * Content
+ */
+
+.sl-tax-evasion-why-succeedlearn__content {
+	min-width: 0;
+}
+
+.sl-tax-evasion-why-succeedlearn__content h2 {
+	margin-bottom: 20px;
+}
+
+.sl-tax-evasion-why-succeedlearn__content > p {
+	margin: 0 0 36px;
+	max-width: 900px;
+}
+
+
+/*
+ * Benefit cards
+ */
+
+.sl-tax-evasion-why-succeedlearn__benefits {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.sl-tax-evasion-why-succeedlearn__benefit {
+	min-width: 0;
+	padding: 22px 26px 24px 0;
+	box-sizing: border-box;
+	border-top: 1px solid rgba(22, 35, 78, 0.12);
+}
+
+.sl-tax-evasion-why-succeedlearn__benefit:nth-child(2n) {
+	padding-right: 0;
+	padding-left: 26px;
+	border-left: 1px solid rgba(22, 35, 78, 0.12);
+}
+
+.sl-tax-evasion-why-succeedlearn__benefit:nth-child(1),
+.sl-tax-evasion-why-succeedlearn__benefit:nth-child(2) {
+	border-top: 1px solid rgba(22, 35, 78, 0.12);
+}
+
+.sl-tax-evasion-why-succeedlearn__benefit:nth-child(3),
+.sl-tax-evasion-why-succeedlearn__benefit:nth-child(4) {
+	border-bottom: 1px solid rgba(22, 35, 78, 0.12);
+}
+
+.sl-tax-evasion-why-succeedlearn__benefit .sl-panel-title {
+	margin-top: 0;
+	margin-bottom: 8px;
+}
+
+.sl-tax-evasion-why-succeedlearn__benefit p {
+	margin: 0;
+}
+
+
+/*
+ * Right image
+ */
+
+.sl-tax-evasion-why-succeedlearn__media {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 110px) + 24px);
+	align-self: start;
+}
+
+.sl-tax-evasion-why-succeedlearn__image {
+	width: 100%;
+	overflow: hidden;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 16px;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-tax-evasion-why-succeedlearn__image-placeholder {
+	display: flex;
+	min-height: 500px;
+	align-items: center;
+	justify-content: center;
+	padding: 30px;
+	box-sizing: border-box;
+	background: #f5f7fa;
+	color: var(--sl-page-primary, #1472ba);
+	text-align: center;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+
+/*
+ * Tablet
+ */
+
+@media (max-width: 991px) {
+
+	.sl-tax-evasion-why-succeedlearn {
+		padding: 72px 0;
+	}
+
+	.sl-tax-evasion-why-succeedlearn__grid {
+		grid-template-columns: 1fr;
+		gap: 42px;
+	}
+
+	.sl-tax-evasion-why-succeedlearn__media {
+		position: static;
+		order: 2;
+	}
+
+	.sl-tax-evasion-why-succeedlearn__image-placeholder {
+		min-height: 420px;
+	}
+}
+
+
+/*
+ * Mobile
+ */
+
+@media (max-width: 767px) {
+
+	.sl-tax-evasion-why-succeedlearn {
+		padding: 60px 0;
+	}
+
+	.sl-tax-evasion-why-succeedlearn__grid {
+		gap: 32px;
+	}
+
+	.sl-tax-evasion-why-succeedlearn__content > p {
+		margin-bottom: 28px;
+	}
+
+	.sl-tax-evasion-why-succeedlearn__benefits {
+		grid-template-columns: 1fr;
+	}
+
+	.sl-tax-evasion-why-succeedlearn__benefit,
+	.sl-tax-evasion-why-succeedlearn__benefit:nth-child(2n) {
+		padding: 20px 0;
+		border-left: 0;
+		border-bottom: 1px solid rgba(22, 35, 78, 0.12);
+	}
+
+	.sl-tax-evasion-why-succeedlearn__benefit:first-child {
+		border-top: 1px solid rgba(22, 35, 78, 0.12);
+	}
+
+	.sl-tax-evasion-why-succeedlearn__image-placeholder {
+		min-height: 320px;
+	}
+}

@@ -1,0 +1,470 @@
+<?php
+/**
+ * Theme functions.php (cleaned + performance-focused)
+ */
+
+/* =========================================================
+ * Helpers
+ * ========================================================= */
+if (!function_exists('sl_is_amp')) {
+    function sl_is_amp() {
+        return function_exists('is_amp_endpoint') && is_amp_endpoint();
+    }
+}
+
+/* =========================================================
+ * Enqueue parent theme stylesheet
+ * ========================================================= */
+function thim_child_enqueue_styles() {
+    wp_enqueue_style(
+        'thim-parent-style',
+        get_template_directory_uri() . '/style.css',
+        array(),
+        defined('THIM_THEME_VERSION') ? THIM_THEME_VERSION : null
+    );
+}
+add_action('wp_enqueue_scripts', 'thim_child_enqueue_styles', 1000);
+
+/* =========================================================
+ * Image loading policy (NON-AMP)
+ * - Keep lazy loading enabled globally
+ * - First meaningful attachment image: eager + high priority
+ * - Others: lazy
+ * ========================================================= */
+add_filter('wp_lazy_loading_enabled', function ($enabled, $tag_name) {
+    if (is_admin() || sl_is_amp()) return $enabled;
+    if ($tag_name === 'img') return true;
+    return $enabled;
+}, 999, 2);
+
+add_filter('wp_get_attachment_image_attributes', function ($attr) {
+    if (is_admin() || sl_is_amp()) return $attr;
+
+    static $first_image_done = false;
+
+    if (!$first_image_done) {
+        $attr['loading'] = 'eager';
+        $attr['fetchpriority'] = 'high';
+        $attr['decoding'] = 'async';
+        $first_image_done = true;
+    } else {
+        if (empty($attr['loading']) || strtolower((string)$attr['loading']) === 'eager') {
+            $attr['loading'] = 'lazy';
+        }
+        if (!empty($attr['fetchpriority']) && strtolower((string)$attr['fetchpriority']) === 'high') {
+            $attr['fetchpriority'] = 'auto';
+        }
+    }
+
+    return $attr;
+}, 999);
+
+/* =========================================================
+ * AMP render optimization
+ * - Remove render-blocking consent wrapper on AMP output
+ * ========================================================= */
+add_action('template_redirect', function () {
+    if (!sl_is_amp() || is_admin() || is_preview()) return;
+
+    ob_start(function ($html) {
+        if (!is_string($html) || $html === '') return $html;
+
+        // Remove render-blocking consent attribute.
+        $html = str_replace(' data-block-on-consent', '', $html);
+
+        // Remove amp-consent runtime script.
+        $html = preg_replace(
+            '#<script\b[^>]*\bcustom-element=("|\')amp-consent\\1[^>]*>\s*</script>#i',
+            '',
+            $html
+        );
+
+        // Remove amp-consent element block.
+        $html = preg_replace('#<amp-consent\b[^>]*>.*?</amp-consent>#is', '', $html);
+
+        return $html;
+    });
+}, 0);
+
+/* =========================================================
+ * Template override: single AMP template
+ * ========================================================= */
+function custom_amp_template_include($template) {
+    if (sl_is_amp() && is_single()) {
+        $new_template = locate_template('single-amp.php');
+        if (!empty($new_template)) {
+            return $new_template;
+        }
+    }
+    return $template;
+}
+add_filter('template_include', 'custom_amp_template_include');
+
+/* =========================================================
+ * Disable registration links/options (Eduma + WP)
+ * ========================================================= */
+add_action('init', function() {
+    update_option('users_can_register', 0);
+    remove_action('thim_register_login_links', 'thim_register_link');
+    remove_action('thim_register_login_links', 'thim_link_register');
+    remove_action('thim_register_login_links', 'thim_register');
+});
+
+add_action('wp_head', function() {
+    echo '<style>
+        a[href*="register"],
+        a[href*="action=register"],
+        .menu-item-register,
+        .thim-login-popup .register-link,
+        .thim-widget-login-popup .register-link {
+            display:none !important;
+        }
+    </style>';
+});
+
+/* =========================================================
+ * Force child theme LearnPress single course template
+ * ========================================================= */
+add_action('after_setup_theme', function () {
+    remove_filter('learn_press_template', 'thim_custom_lp_template', 99, 3);
+    remove_filter('learn_press_template', 'thim_custom_lp_template', 99);
+}, 20);
+
+add_filter('template_include', function ($template) {
+    if (is_singular('lp_course')) {
+        $custom = get_stylesheet_directory() . '/learnpress-v4/single-course.php';
+        if (file_exists($custom)) {
+            return $custom;
+        }
+    }
+    return $template;
+}, PHP_INT_MAX);
+
+/* =========================================================
+ * Remove Eduma LP hooks/assets on single course
+ * ========================================================= */
+add_action('template_redirect', function () {
+    if (is_singular('lp_course')) {
+        remove_all_actions('learn-press/single-course_summary');
+        remove_all_actions('learn-press/single-course_content');
+    }
+}, 20);
+
+add_action('wp_enqueue_scripts', function () {
+    if (is_singular('lp_course')) {
+        wp_dequeue_style('eduma-style');
+        wp_dequeue_script('thim-custom');
+        wp_dequeue_script('thim-course');
+        wp_dequeue_script('thim-main');
+    }
+}, 100);
+
+/* =========================================================
+ * AMP for LearnPress course
+ * ========================================================= */
+add_filter('ampforwp_cpt_supported', function ($post_types) {
+    $post_types[] = 'lp_course';
+    return $post_types;
+});
+
+add_filter('amp_post_template_file', function($file, $type, $post) {
+    if (!empty($post) && $post->post_type === 'lp_course' && $type === 'single') {
+        $custom = get_stylesheet_directory() . '/single-amp.php';
+        if (file_exists($custom)) {
+            return $custom;
+        }
+    }
+    return $file;
+}, 10, 3);
+
+/* =========================================================
+ * Mobile -> AMP redirect
+ * ========================================================= */
+add_action('template_redirect', function () {
+    if (!wp_is_mobile()) return;
+    if (sl_is_amp()) return;
+    if (is_admin() || is_preview()) return;
+    if (($_SERVER['REQUEST_METHOD'] ?? 'GET') !== 'GET') return;
+    if (isset($_GET['noamp']) || isset($_GET['amp'])) return;
+
+    $request_uri = $_SERVER['REQUEST_URI'] ?? '';
+    if ($request_uri === '' || strpos($request_uri, '/wp-json/') === 0) return;
+
+    $current_url = home_url($request_uri);
+    $amp_url = add_query_arg('amp', '1', $current_url);
+    wp_safe_redirect($amp_url, 302);
+    exit;
+}, 1);
+
+/* Disable AMP for specific page */
+add_filter('ampforwp_is_amp_endpoint', function($is_amp) {
+    if (is_page(8)) {
+        return false;
+    }
+    return $is_amp;
+});
+
+/* =========================================================
+ * PDF force-download
+ * ========================================================= */
+add_action('init', function() {
+    if (!isset($_GET['download'])) {
+        return;
+    }
+
+    $requested = basename( (string) wp_unslash( $_GET['download'] ) );
+    $allowed   = array(
+        'SucceedLEARN_ESG_Brochure.pdf' => WP_CONTENT_DIR . '/uploads/2025/11/SucceedLEARN_ESG_Brochure.pdf',
+        'Security-Behaviour-Culture-Suite-Brochure.pdf' => WP_CONTENT_DIR . '/uploads/2026/09/Security-Behaviour-Culture-Suite-Brochure.pdf',
+    );
+
+    if ( ! isset( $allowed[ $requested ] ) ) {
+        return;
+    }
+
+    $file = $allowed[ $requested ];
+    if (!file_exists($file)) {
+        wp_die('File not found.');
+    }
+
+    header('Content-Description: File Transfer');
+    header('Content-Type: application/octet-stream');
+    header('Content-Disposition: attachment; filename="' . basename($file) . '"');
+    header('Content-Transfer-Encoding: binary');
+    header('Expires: 0');
+    header('Cache-Control: must-revalidate');
+    header('Pragma: public');
+    header('Content-Length: ' . filesize($file));
+
+    flush();
+    readfile($file);
+    exit;
+});
+
+/* =========================================================
+ * Slider lazy/eager balancing (NON-AMP only)
+ * ========================================================= */
+function succeed_fix_thim_slider_lazy() {
+    if (sl_is_amp()) return;
+    ?>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const slides = document.querySelectorAll(".tp-slide");
+        if (!slides.length) return;
+
+        // First slide: high priority
+        slides[0].querySelectorAll("img").forEach(function(img) {
+            img.removeAttribute("loading");
+            img.setAttribute("fetchpriority", "high");
+            img.classList.remove("lazyload");
+        });
+
+        // Remaining slides: lazy
+        for (let i = 1; i < slides.length; i++) {
+            slides[i].querySelectorAll("img").forEach(function(img) {
+                img.setAttribute("loading", "lazy");
+                img.classList.add("lazyload");
+            });
+        }
+    });
+    </script>
+    <?php
+}
+add_action('wp_footer', 'succeed_fix_thim_slider_lazy', 50);
+
+/* =========================================================
+ * Security-awareness page hash clean flow
+ * ========================================================= */
+function sl_force_top_on_hash_reload() {
+    if (!is_page('security-awareness-training')) return;
+    if (isset($_GET['clean'])) return;
+    ?>
+    <script>
+    if (window.location.hash) {
+        window.location.href =
+            window.location.pathname +
+            window.location.search +
+            (window.location.search ? '&' : '?') +
+            'clean=1';
+    }
+    </script>
+    <?php
+}
+add_action('wp_head', 'sl_force_top_on_hash_reload');
+
+function sl_remove_clean_param() {
+    if (!is_page('security-awareness-training')) return;
+    ?>
+    <script>
+    if (window.location.search.includes('clean=1')) {
+        history.replaceState(null, '', window.location.pathname);
+    }
+    </script>
+    <?php
+}
+add_action('wp_footer', 'sl_remove_clean_param');
+
+/* =========================================================
+ * Remove unused Font Awesome assets (deduplicated)
+ * ========================================================= */
+add_action('wp_enqueue_scripts', function () {
+    wp_dequeue_style('elementor-icons-fa-regular');
+    wp_dequeue_style('elementor-icons-fa-solid');
+    wp_dequeue_style('elementor-icons-fa-brands');
+
+    wp_dequeue_script('font-awesome-4-shim');
+    wp_dequeue_script('elementor-icons-fa-compatibility');
+}, 20);
+
+/* =========================================================
+ * Optional SES debug
+ * ========================================================= */
+add_action('phpmailer_init', function($phpmailer) {
+    error_log('SES From Address: ' . $phpmailer->From);
+});
+
+/* =========================================================
+ * Meta Pixel (NON-AMP only)
+ * ========================================================= */
+function add_meta_pixel_non_amp_pages() {
+    if (sl_is_amp()) return;
+
+    if (is_page(55602)) {
+        ?>
+        <!-- Meta Pixel Code – Page 55602 -->
+        <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1173591888264209');
+        fbq('track', 'PageView');
+        </script>
+        <noscript>
+            <img height="1" width="1" style="display:none"
+                 src="https://www.facebook.com/tr?id=1173591888264209&ev=PageView&noscript=1" alt=""/>
+        </noscript>
+        <!-- End Meta Pixel Code -->
+        <?php
+    }
+
+    if (is_page(57340)) {
+        ?>
+        <!-- Meta Pixel Lead – Page 57340 -->
+        <script>fbq('track', 'Lead');</script>
+        <!-- End Meta Pixel Lead -->
+        <?php
+    }
+}
+add_action('wp_head', 'add_meta_pixel_non_amp_pages');
+
+
+/* =========================================================
+ * Remove image hover tooltip text on NON-AMP pages
+ * (keeps alt text for accessibility)
+ * ========================================================= */
+
+// Case 1: WP attachment images
+add_filter('wp_get_attachment_image_attributes', function($attr) {
+    if (function_exists('is_amp_endpoint') && is_amp_endpoint()) {
+        return $attr; // do nothing on AMP
+    }
+
+    if (isset($attr['title'])) {
+        unset($attr['title']);
+    }
+
+    return $attr;
+}, 20);
+
+// Case 2: Hardcoded <img title="..."> in post/page content
+add_filter('the_content', function($content) {
+    if (is_admin()) return $content;
+    if (function_exists('is_amp_endpoint') && is_amp_endpoint()) return $content;
+
+    // Remove only title attribute from img tags
+    $content = preg_replace('/(<img\b[^>]*?)\s+title=("|\')(.*?)\2([^>]*>)/i', '$1$4', $content);
+
+    return $content;
+}, 20);
+
+/* =========================================================
+ * ULTIMATE FONT CLEANUP (FINAL FIX)
+ * ========================================================= */
+
+/**
+ * 1. Remove Google Fonts (enqueue)
+ */
+add_action('wp_enqueue_scripts', function () {
+
+    global $wp_styles;
+
+    if (empty($wp_styles->registered)) return;
+
+    foreach ($wp_styles->registered as $handle => $style) {
+
+        if (!empty($style->src) && (
+            strpos($style->src, 'googleapis') !== false ||
+            strpos($style->src, 'gstatic') !== false
+        )) {
+            wp_dequeue_style($handle);
+            wp_deregister_style($handle);
+        }
+    }
+
+}, 999);
+
+
+/**
+ * 2. Remove Google Fonts from HTML + CSS (IMPORTANT FIX)
+ */
+add_action('template_redirect', function () {
+
+    ob_start(function ($html) {
+
+        if (!$html) return $html;
+
+        // Remove <link> Google Fonts
+        $html = preg_replace('#<link[^>]+fonts\.googleapis\.com[^>]+>#i', '', $html);
+
+        // Remove @import Google Fonts (THIS WAS YOUR ISSUE)
+        $html = preg_replace('#@import\s+url\([\'"]?https:\/\/fonts\.googleapis\.com[^)]+[\'"]?\);?#i', '', $html);
+
+        // Remove gstatic font-face
+        $html = preg_replace('#@font-face\s*{[^}]*gstatic[^}]*}#i', '', $html);
+
+        return $html;
+    });
+
+});
+
+
+/**
+ * 3. Remove duplicate Open Sans (theme)
+ */
+add_action('wp_enqueue_scripts', function () {
+
+    global $wp_styles;
+
+    if (empty($wp_styles->registered)) return;
+
+    foreach ($wp_styles->registered as $handle => $style) {
+
+        if (!empty($style->src)) {
+
+            // Remove Open Sans duplicates (keep ONLY OMGF)
+            if (
+                strpos($style->src, 'open-sans') !== false &&
+                strpos($style->src, 'omgf') === false
+            ) {
+                wp_dequeue_style($handle);
+            }
+        }
+    }
+
+}, 999);
+

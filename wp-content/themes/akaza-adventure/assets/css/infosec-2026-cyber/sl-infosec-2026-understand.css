@@ -1,0 +1,192 @@
+/**
+ * SucceedLEARN
+ * Cybersecurity Awareness Month 2026
+ * What Can the Simulation Help You Understand?
+ *
+ * Section layout only.
+ * Global typography and button styles are reused.
+ */
+
+ .sl-infosec-2026-understand {
+	padding: 90px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+
+/* =========================================================
+   MAIN GRID
+========================================================= */
+
+.sl-infosec-2026-understand__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+	gap: 70px;
+	align-items: start;
+}
+
+
+/* =========================================================
+   IMAGE (sticky while list scrolls)
+========================================================= */
+
+.sl-infosec-2026-understand__media {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 110px) + 24px);
+	width: 100%;
+	min-width: 0;
+	align-self: start;
+}
+
+.sl-infosec-2026-understand__image {
+	overflow: hidden;
+	width: 100%;
+	line-height: 0;
+	border-radius: 16px;
+}
+
+.sl-infosec-2026-understand__image img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.sl-infosec-2026-understand__content {
+	min-width: 0;
+}
+
+.sl-infosec-2026-understand__content h2 {
+	margin: 0 0 34px;
+}
+
+.sl-infosec-2026-understand__content h2 span {
+	color: var(
+		--sl-heading-accent,
+		var(--sl-page-primary, #1472ba)
+	);
+}
+
+
+/* =========================================================
+   LIST — Mobile: 1 card / Tablet+: 2 cards per row
+========================================================= */
+
+.sl-infosec-2026-understand__list {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	gap: 12px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+
+/* =========================================================
+   LIST ITEM
+========================================================= */
+
+.sl-infosec-2026-understand__item {
+	display: block;
+	min-width: 0;
+	margin: 0;
+	padding: 18px;
+	border: 1px solid rgba(22, 35, 78, 0.09);
+	border-radius: 10px;
+	background: var(--sl-page-white, #fff);
+	box-sizing: border-box;
+}
+
+.sl-infosec-2026-understand__item:last-child {
+	padding-bottom: 18px;
+}
+
+
+/* =========================================================
+   ITEM CONTENT
+========================================================= */
+
+.sl-infosec-2026-understand__item-content {
+	min-width: 0;
+}
+
+.sl-infosec-2026-understand__item-content .sl-panel-title {
+	margin-bottom: 6px;
+}
+
+.sl-infosec-2026-understand__item-content p {
+	margin: 0;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 768px) {
+	.sl-infosec-2026-understand__list {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 14px;
+	}
+
+	.sl-infosec-2026-understand__item {
+		padding: 20px;
+	}
+}
+
+@media (max-width: 1000px) {
+
+	.sl-infosec-2026-understand {
+		padding: 70px 0;
+	}
+
+	.sl-infosec-2026-understand__grid {
+		grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+		gap: 45px;
+	}
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+	.sl-infosec-2026-understand {
+		padding: 60px 0;
+	}
+
+	.sl-infosec-2026-understand__grid {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.sl-infosec-2026-understand__media {
+		order: 1;
+		position: static;
+		top: auto;
+	}
+
+	.sl-infosec-2026-understand__content {
+		order: 2;
+	}
+
+	.sl-infosec-2026-understand__content h2 {
+		margin-bottom: 28px;
+	}
+
+	.sl-infosec-2026-understand__list {
+		grid-template-columns: minmax(0, 1fr);
+		gap: 12px;
+	}
+
+	.sl-infosec-2026-understand__item {
+		padding: 18px;
+	}
+
+}

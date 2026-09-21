@@ -1,0 +1,162 @@
+/**
+ * UK Sexual Harassment Prevention Training — From Policy to Action
+ */
+
+ .sl-uk-sexual-harassment-action {
+	padding: 80px 0;
+	background: #ffffff;
+}
+
+.sl-uk-sexual-harassment-action__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+	gap: 70px;
+	align-items: start;
+}
+
+/* Image */
+
+.sl-uk-sexual-harassment-action__media {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 110px) + 24px);
+	align-self: start;
+}
+
+.sl-uk-sexual-harassment-action__image {
+	width: 100%;
+	overflow: hidden;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 16px;
+	background: #f5f5f5;
+	box-sizing: border-box;
+}
+
+.sl-uk-sexual-harassment-action__image-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 520px;
+	padding: 30px;
+	box-sizing: border-box;
+	color: #6b7c93;
+	text-align: center;
+}
+
+/* Content */
+
+.sl-uk-sexual-harassment-action__content {
+	min-width: 0;
+}
+
+/* Supplied span text above H2 */
+
+.sl-uk-sexual-harassment-action__intro {
+	display: block;
+	margin-bottom: 14px;
+	color: var(--sl-page-primary, #1472ba);
+	font-weight: 600;
+}
+
+.sl-uk-sexual-harassment-action__content h2 {
+	margin-top: 0;
+	margin-bottom: 22px;
+}
+
+.sl-uk-sexual-harassment-action__content > p {
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+/* Numbered points */
+
+.sl-uk-sexual-harassment-action__list {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin: 28px 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-uk-sexual-harassment-action__item {
+	display: grid;
+	grid-template-columns: 42px minmax(0, 1fr);
+	gap: 14px;
+	align-items: start;
+	padding: 16px 18px;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 10px;
+	background: #f5f5f5;
+	box-sizing: border-box;
+}
+
+.sl-uk-sexual-harassment-action__number {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 34px;
+	height: 34px;
+	border: 1px solid rgba(20, 114, 186, 0.18);
+	border-radius: 8px;
+	background: rgba(20, 114, 186, 0.08);
+	color: var(--sl-page-primary, #1472ba);
+	font-weight: 700;
+	line-height: 1;
+}
+
+.sl-uk-sexual-harassment-action__text {
+	align-self: center;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+	.sl-uk-sexual-harassment-action {
+		padding: 64px 0;
+	}
+
+	.sl-uk-sexual-harassment-action__grid {
+		grid-template-columns: 1fr;
+		gap: 44px;
+	}
+
+	.sl-uk-sexual-harassment-action__media {
+		position: static;
+	}
+
+	.sl-uk-sexual-harassment-action__image-placeholder {
+		min-height: 420px;
+	}
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+	.sl-uk-sexual-harassment-action {
+		padding: 52px 0;
+	}
+
+	.sl-uk-sexual-harassment-action__grid {
+		gap: 32px;
+	}
+
+	.sl-uk-sexual-harassment-action__image {
+		border-radius: 12px;
+	}
+
+	.sl-uk-sexual-harassment-action__image-placeholder {
+		min-height: 320px;
+		padding: 24px;
+	}
+
+	.sl-uk-sexual-harassment-action__item {
+		grid-template-columns: 36px minmax(0, 1fr);
+		gap: 12px;
+		padding: 15px 16px;
+	}
+
+	.sl-uk-sexual-harassment-action__number {
+		width: 32px;
+		height: 32px;
+	}
+}

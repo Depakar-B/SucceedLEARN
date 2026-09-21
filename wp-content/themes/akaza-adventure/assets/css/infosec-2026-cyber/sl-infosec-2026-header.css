@@ -1,0 +1,218 @@
+/**
+ * Infosec 2026 Cyber — custom single-page header.
+ */
+
+:root {
+	--sl-infosec-header-height: 80px;
+	--sl-infosec-scroll-offset: var(--sl-infosec-header-height);
+}
+
+body.sl-infosec-landing {
+	--slf-header-clearance: var(--sl-infosec-header-height);
+	padding-top: 0 !important;
+}
+
+body.sl-infosec-landing #main-content.sl-infosec-2026-cyber-page,
+body.sl-infosec-landing main.sl-infosec-2026-cyber-page {
+	/* Sticky Infosec header clearance; hero uses normal section top padding */
+	padding-top: var(--sl-infosec-header-height) !important;
+}
+
+body.sl-infosec-landing .site-header,
+body.sl-infosec-landing .genesis-header,
+body.sl-infosec-landing .epsh-mobile-header-wrap,
+body.sl-infosec-landing .epsh-mobile-only,
+body.sl-infosec-landing .epsh-top-bar {
+	display: none !important;
+}
+
+body.sl-infosec-landing .sl-infosec-2026-cyber-page [id] {
+	scroll-margin-top: calc(var(--sl-infosec-scroll-offset) + 16px);
+}
+
+.sl-infosec-header {
+	--sl-infosec-header-bg: rgba(255, 255, 255, 0.96);
+	--sl-infosec-header-border: rgba(107, 124, 147, 0.18);
+	--sl-infosec-header-link: var(--sl-page-navy, #16234e);
+	--sl-infosec-header-link-active: var(--sl-page-primary, #1472ba);
+
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 200;
+	min-height: var(--sl-infosec-header-height);
+	background: var(--sl-infosec-header-bg);
+	border-bottom: 1px solid var(--sl-infosec-header-border);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	transform: translate3d(0, 0, 0);
+	transition: transform 0.28s ease;
+	will-change: transform;
+}
+
+.sl-infosec-header.is-hidden {
+	transform: translate3d(0, -100%, 0);
+	pointer-events: none;
+}
+
+.sl-infosec-header .container {
+	width: 100%;
+	max-width: var(--sl-home-content-max, 1400px);
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: var(--slf-gutter, clamp(1.25rem, 3vw, 3rem));
+	padding-right: var(--slf-gutter, clamp(1.25rem, 3vw, 3rem));
+	box-sizing: border-box;
+}
+
+.sl-infosec-header__inner {
+	display: grid;
+	grid-template-columns: minmax(0, auto) minmax(0, 1fr) auto;
+	align-items: center;
+	gap: 24px 32px;
+	min-height: var(--sl-infosec-header-height);
+	padding: 14px 0;
+}
+
+.sl-infosec-header__logo {
+	display: flex;
+	align-items: center;
+	justify-self: start;
+	min-width: 0;
+	text-decoration: none;
+}
+
+.sl-infosec-header__logo img {
+	display: block;
+	width: auto;
+	max-width: min(180px, 34vw);
+	height: auto;
+	max-height: 44px;
+}
+
+.sl-infosec-header__nav {
+	justify-self: center;
+	min-width: 0;
+}
+
+.sl-infosec-header__nav-list {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 12px 28px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-infosec-header__nav-link {
+	color: var(--sl-infosec-header-link);
+	font-family: var(--slf-font-body, "Space Grotesk", system-ui, sans-serif);
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 1.4;
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+.sl-infosec-header__nav-link:hover,
+.sl-infosec-header__nav-link:focus-visible {
+	color: var(--sl-infosec-header-link-active);
+}
+
+.sl-infosec-header__actions {
+	display: flex;
+	align-items: center;
+	justify-self: end;
+	gap: 16px;
+	min-width: 0;
+}
+
+.sl-infosec-header__cta svg {
+	width: 18px;
+	height: 18px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.8;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+@media (max-width: 991px) {
+	:root {
+		--sl-infosec-header-height: 76px;
+	}
+
+	.sl-infosec-header__inner {
+		gap: 16px 20px;
+		padding: 12px 0;
+	}
+
+	.sl-infosec-header__nav-list {
+		gap: 10px 20px;
+	}
+
+	.sl-infosec-header__nav-link {
+		font-size: 14px;
+	}
+
+	.sl-infosec-header__cta {
+		padding-inline: 14px;
+		font-size: 13px;
+	}
+}
+
+@media (max-width: 767px) {
+	:root {
+		--sl-infosec-header-height: 118px;
+	}
+
+	.sl-infosec-header__inner {
+		grid-template-columns: minmax(0, 1fr) auto;
+		grid-template-areas:
+			"logo actions"
+			"nav nav";
+		gap: 12px 16px;
+		padding: 12px 0 14px;
+	}
+
+	.sl-infosec-header__logo {
+		grid-area: logo;
+	}
+
+	.sl-infosec-header__nav {
+		grid-area: nav;
+		justify-self: stretch;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.sl-infosec-header__nav-list {
+		justify-content: flex-start;
+		flex-wrap: nowrap;
+		gap: 18px;
+		padding-bottom: 2px;
+	}
+
+	.sl-infosec-header__actions {
+		grid-area: actions;
+		justify-self: end;
+		gap: 12px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.sl-infosec-header {
+		backdrop-filter: none;
+		-webkit-backdrop-filter: none;
+		background: #ffffff;
+		transition: none;
+	}
+
+	.sl-infosec-header__nav-link {
+		transition: none;
+	}
+}

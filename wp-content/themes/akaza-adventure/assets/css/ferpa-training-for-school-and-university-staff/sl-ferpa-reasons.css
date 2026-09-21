@@ -1,0 +1,201 @@
+/**
+ * SucceedLEARN — FERPA Staff Awareness
+ * Section: Why Staff Training Matters
+ *
+ * @package Akaza_Adventure
+ */
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.sl-ferpa-reasons {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.sl-ferpa-reasons__heading {
+	margin-bottom: 48px;
+}
+
+.sl-ferpa-reasons__heading h2 {
+	margin: 0 0 18px;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-ferpa-reasons__heading h2 span {
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-ferpa-reasons__heading p {
+	margin: 0;
+	color: var(--sl-page-text, #425b70);
+}
+
+
+/* =========================================
+   CARD GRID
+========================================= */
+
+.sl-ferpa-reasons__grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 22px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.sl-ferpa-reasons__card {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	height: 100%;
+	padding: 28px 26px 30px;
+	border: 1px solid rgba(20, 114, 186, 0.14);
+	border-radius: 14px;
+	background: var(--sl-page-white, #ffffff);
+	box-shadow: 0 6px 22px rgba(22, 35, 78, 0.045);
+	box-sizing: border-box;
+	transition:
+		transform 0.2s ease,
+		border-color 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.sl-ferpa-reasons__card:hover {
+	transform: translateY(-4px);
+	border-color: rgba(20, 114, 186, 0.28);
+	box-shadow: 0 12px 30px rgba(22, 35, 78, 0.08);
+}
+
+
+/* =========================================
+   ICON + TITLE
+========================================= */
+
+.sl-ferpa-reasons__card-top {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: 12px;
+	margin-bottom: 14px;
+	text-align: left;
+}
+
+.sl-ferpa-reasons__icon-wrap {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 auto;
+	width: 42px;
+	height: 42px;
+	margin: 0;
+	border-radius: 9px;
+	background: rgba(20, 114, 186, 0.08);
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-ferpa-reasons__icon {
+	display: block;
+	width: 24px;
+	height: 24px;
+}
+
+.sl-ferpa-reasons__card-top .sl-panel-title {
+	flex: 1;
+	min-width: 0;
+	margin: 0;
+	color: var(--sl-page-navy, #16234e);
+	text-align: left;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.sl-ferpa-reasons__card-content {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	text-align: left;
+}
+
+.sl-ferpa-reasons__card p {
+	margin: 0;
+	color: var(--sl-page-text, #425b70);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1199px) {
+
+	.sl-ferpa-reasons {
+		padding: 75px 0;
+	}
+
+	.sl-ferpa-reasons__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.sl-ferpa-reasons__card:last-child {
+		grid-column: 1 / -1;
+		max-width: calc(50% - 11px);
+	}
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+	.sl-ferpa-reasons {
+		padding: 60px 0;
+	}
+
+	.sl-ferpa-reasons__heading {
+		margin-bottom: 30px;
+	}
+
+	.sl-ferpa-reasons__grid {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
+	.sl-ferpa-reasons__card:last-child {
+		grid-column: auto;
+		max-width: none;
+	}
+
+	.sl-ferpa-reasons__card {
+		padding: 24px 22px;
+	}
+
+	.sl-ferpa-reasons__icon-wrap {
+		width: 40px;
+		height: 40px;
+	}
+
+	.sl-ferpa-reasons__icon {
+		width: 23px;
+		height: 23px;
+	}
+
+}

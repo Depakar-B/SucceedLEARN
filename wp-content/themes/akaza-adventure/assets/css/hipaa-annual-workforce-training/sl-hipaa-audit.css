@@ -1,0 +1,142 @@
+/* =========================================================
+   HIPAA AUDIT READINESS
+   ========================================================= */
+
+   .sl-hipaa-audit {
+	width: 100%;
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+
+/* =========================================================
+   INTRO
+   Full container width with no max-width restrictions.
+   ========================================================= */
+
+.sl-hipaa-audit__intro {
+	width: 100%;
+	margin-bottom: 42px;
+}
+
+.sl-hipaa-audit__intro .sl-home-sub-heading {
+	display: flex;
+	align-items: center;
+	margin-bottom: 16px;
+}
+
+.sl-hipaa-audit__intro h2 {
+	width: 100%;
+	margin-bottom: 18px;
+	text-wrap: balance;
+}
+
+.sl-hipaa-audit__intro p {
+	width: 100%;
+	margin: 0;
+	text-wrap: pretty;
+}
+
+
+/* =========================================================
+   FEATURE GRID
+   ========================================================= */
+
+.sl-hipaa-audit__grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	align-items: stretch;
+	gap: 18px;
+}
+
+
+/* =========================================================
+   FEATURE CARDS
+   Primary blue border: #1472ba.
+   ========================================================= */
+
+.sl-hipaa-audit__card {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	min-height: 124px;
+	padding: 20px 22px;
+	background: var(--sl-page-white, #ffffff);
+	border: 1px solid rgba(107, 124, 147, 0.26);
+	border-left: 4px solid var(--sl-page-primary, #1472ba);
+	border-radius: 7px;
+	transition:
+		border-color 0.25s ease,
+		transform 0.25s ease;
+}
+
+.sl-hipaa-audit__card:hover {
+	border-color: var(--sl-page-primary, #1472ba);
+	transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   CARD TITLES
+   ========================================================= */
+
+.sl-hipaa-audit__card h3 {
+	margin: 0 0 8px;
+	font-size: 18px;
+	line-height: 1.4;
+	color: var(--sl-page-navy, #16234e);
+	text-wrap: pretty;
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+   ========================================================= */
+
+.sl-hipaa-audit__card p {
+	margin: 0;
+	color: var(--sl-page-text, #4a4a4a);
+	line-height: 1.7;
+	text-wrap: pretty;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+	.sl-hipaa-audit {
+		padding: 72px 0;
+	}
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+	.sl-hipaa-audit {
+		padding: 60px 0;
+	}
+
+	.sl-hipaa-audit__intro {
+		margin-bottom: 32px;
+	}
+
+	.sl-hipaa-audit__intro h2 {
+		margin-bottom: 16px;
+		text-wrap: pretty;
+	}
+
+	.sl-hipaa-audit__grid {
+		grid-template-columns: minmax(0, 1fr);
+		gap: 16px;
+	}
+
+	.sl-hipaa-audit__card {
+		min-height: 0;
+		padding: 20px;
+	}
+}

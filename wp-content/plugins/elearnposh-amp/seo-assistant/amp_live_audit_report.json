@@ -1,0 +1,180 @@
+{
+  "urls_checked": 17,
+  "fetch_failures": {
+    "https://elearnposh.com/posh-courses/posh-for-employees/amp/": "HTTP 404"
+  },
+  "issue_counts": {
+    "doctype_missing": 0,
+    "html_amp_missing": 4,
+    "v0_js_missing": 4,
+    "boilerplate_missing": 4,
+    "viewport_missing": 0,
+    "on_without_tabindex": 0,
+    "on_without_role": 0,
+    "duplicate_canonical": 0,
+    "raw_iframe": 2,
+    "raw_img": 4,
+    "inline_style_important": 2,
+    "disallowed_style_tag": 4,
+    "target_blank_no_noopener": 4,
+    "amp_bind_without_script": 4
+  },
+  "validator_error_counts": {
+    "validator_unavailable: HTTP Error 400: Bad Request": 16
+  },
+  "per_url": {
+    "https://elearnposh.com/amp/": {
+      "fetch_error": null,
+      "pattern_issues": [],
+      "validator_errors": [
+        "validator_unavailable: HTTP Error 400: Bad Request"
+      ]
+    },
+    "https://elearnposh.com/": {
+      "fetch_error": null,
+      "pattern_issues": [
+        "html_amp_missing",
+        "v0_js_missing",
+        "boilerplate_missing",
+        "raw_iframe",
+        "raw_img",
+        "inline_style_important",
+        "disallowed_style_tag",
+        "target_blank_no_noopener",
+        "amp_bind_without_script"
+      ],
+      "validator_errors": [
+        "validator_unavailable: HTTP Error 400: Bad Request"
+      ]
+    },
+    "https://elearnposh.com/posh-act/amp/": {
+      "fetch_error": null,
+      "pattern_issues": [],
+      "validator_errors": [
+        "validator_unavailable: HTTP Error 400: Bad Request"
+      ]
+    },
+    "https://elearnposh.com/posh-act/": {
+      "fetch_error": null,
+      "pattern_issues": [
+        "html_amp_missing",
+        "v0_js_missing",
+        "boilerplate_missing",
+        "raw_iframe",
+        "raw_img",
+        "disallowed_style_tag",
+        "target_blank_no_noopener",
+        "amp_bind_without_script"
+      ],
+      "validator_errors": [
+        "validator_unavailable: HTTP Error 400: Bad Request"
+      ]
+    },
+    "https://elearnposh.com/about-us/amp/": {
+      "fetch_error": null,
+      "pattern_issues": [],
+      "validator_errors": [
+        "validator_unavailable: HTTP Error 400: Bad Request"
+      ]
+    },
+    "https://elearnposh.com/contact/amp/": {
+      "fetch_error": null,
+      "pattern_issues": [
+        "html_amp_missing",
+        "v0_js_missing",
+        "boilerplate_missing",
+        "raw_img",
+        "disallowed_style_tag",
+        "target_blank_no_noopener",
+        "amp_bind_without_script"
+      ],
+      "validator_errors": [
+        "validator_unavailable: HTTP Error 400: Bad Request"
+      ]
+    },
+    "https://elearnposh.com/posh-compliance-updates-2026-india/amp/": {
+      "fetch_error": null,
+      "pattern_issues": [],
+      "validator_errors": [
+        "validator_unavailable: HTTP Error 400: Bad Request"
+      ]
+    },
+    "https://elearnposh.com/posh-compliance-updates-2026-india/": {
+      "fetch_error": null,
+      "pattern_issues": [
+        "html_amp_missing",
+        "v0_js_missing",
+        "boilerplate_missing",
+        "raw_img",
+        "inline_style_important",
+        "disallowed_style_tag",
+        "target_blank_no_noopener",
+        "amp_bind_without_script"
+      ],
+      "validator_errors": [
+        "validator_unavailable: HTTP Error 400: Bad Request"
+      ]
+    },
+    "https://elearnposh.com/sexual-harassment-updates-jan-2026-posh-law-india/amp/": {
+      "fetch_error": null,
+      "pattern_issues": [],
+      "validator_errors": [
+        "validator_unavailable: HTTP Error 400: Bad Request"
+      ]
+    },
+    "https://elearnposh.com/bns-section-75-sexual-harassment-law-india/amp/": {
+      "fetch_error": null,
+      "pattern_issues": [],
+      "validator_errors": [
+        "validator_unavailable: HTTP Error 400: Bad Request"
+      ]
+    },
+    "https://elearnposh.com/role-powers-of-internal-committee/amp/": {
+      "fetch_error": null,
+      "pattern_issues": [],
+      "validator_errors": [
+        "validator_unavailable: HTTP Error 400: Bad Request"
+      ]
+    },
+    "https://elearnposh.com/cross-examination-in-posh-inquiries-precision/amp/": {
+      "fetch_error": null,
+      "pattern_issues": [],
+      "validator_errors": [
+        "validator_unavailable: HTTP Error 400: Bad Request"
+      ]
+    },
+    "https://elearnposh.com/she-box-a-single-window-platform-for-posh-compliance/amp/": {
+      "fetch_error": null,
+      "pattern_issues": [],
+      "validator_errors": [
+        "validator_unavailable: HTTP Error 400: Bad Request"
+      ]
+    },
+    "https://elearnposh.com/solutions/posh-training-for-employees/amp/": {
+      "fetch_error": null,
+      "pattern_issues": [],
+      "validator_errors": [
+        "validator_unavailable: HTTP Error 400: Bad Request"
+      ]
+    },
+    "https://elearnposh.com/posh-courses/posh-for-employees/amp/": {
+      "fetch_error": "HTTP 404",
+      "pattern_issues": [],
+      "validator_errors": []
+    },
+    "https://elearnposh.com/our-webinars/amp/": {
+      "fetch_error": null,
+      "pattern_issues": [],
+      "validator_errors": [
+        "validator_unavailable: HTTP Error 400: Bad Request"
+      ]
+    },
+    "https://elearnposh.com/blog/amp/": {
+      "fetch_error": null,
+      "pattern_issues": [],
+      "validator_errors": [
+        "validator_unavailable: HTTP Error 400: Bad Request"
+      ]
+    }
+  }
+}

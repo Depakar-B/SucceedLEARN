@@ -1,0 +1,227 @@
+/*=====================================
+Outcomes Section
+=====================================*/
+
+.sl-home-outcomes-section{
+    padding:80px 0;
+    background:#F7F7F7;
+    font-family: var(--slf-font-body, "Space Grotesk", system-ui, sans-serif);
+}
+
+.sl-home-outcomes-section--white{
+    background:#ffffff;
+}
+
+.sl-home-outcomes-section .container{
+    width:100%;
+    max-width:var(--sl-home-content-max, 1400px);
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+/* Heading (self-contained for reuse outside homepage) */
+.sl-home-outcomes-section .sl-home-section-heading{
+    margin-bottom:50px;
+}
+
+.sl-home-outcomes-section .sl-home-sub-heading{
+    font-size:18px;
+    font-weight:500;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    text-transform:none;
+}
+
+.sl-home-outcomes-section .sl-home-section-heading h2{
+    margin-top:15px;
+    margin-bottom:0;
+    line-height:1.2;
+    color:#1F2C56;
+}
+
+.sl-home-outcomes-section .sl-home-outcomes-intro{
+    margin:18px 0 0;
+    max-width:70ch;
+    color:#333;
+    font-size:1.05rem;
+    line-height:1.7;
+}
+
+.sl-home-outcomes-section .row{
+    display:flex;
+    flex-wrap:wrap;
+    margin-left:-15px;
+    margin-right:-15px;
+}
+
+.sl-home-outcomes-section .row.g-4{
+    row-gap:1.5rem;
+}
+
+.sl-home-outcomes-section .col-lg-4{
+    width:100%;
+    padding-left:15px;
+    padding-right:15px;
+    box-sizing:border-box;
+}
+
+@media(min-width:992px){
+    .sl-home-outcomes-section .col-lg-4{
+        flex:0 0 33.3333%;
+        max-width:33.3333%;
+    }
+}
+
+/* Cards */
+
+.sl-home-outcome-card{
+    background:#ffffff;
+    border-radius:15px;
+    padding:30px;
+    height:100%;
+    box-shadow:0 5px 25px rgba(0,0,0,.05);
+    transition:.35s;
+}
+
+.sl-home-outcome-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.sl-home-outcome-card h3{
+    color: var(--sl-heading-accent, #135db7);
+    font-size:24px;
+    font-weight:700;
+    margin:0 0 20px;
+}
+
+.sl-home-outcome-card p{
+    margin:0;
+    color:#333;
+    line-height:1.7;
+}
+
+.sl-home-outcome-card p + p{
+    margin-top:14px;
+}
+
+.sl-home-outcome-quote{
+    font-weight:600;
+    color:#1F2C56;
+}
+
+.sl-home-outcome-card ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.sl-home-outcome-card li{
+    position:relative;
+    padding-left:24px;
+    margin-bottom:15px;
+    color:#333;
+    line-height:1.7;
+}
+
+.sl-home-outcome-card li:last-child{
+    margin-bottom:0;
+}
+
+.sl-home-outcome-card li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:12px;
+    width:12px;
+    height:1px;
+    background:#bfc8d4;
+}
+
+/* Compliance Tags — two per row */
+
+.sl-home-tag-wrapper{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:10px;
+}
+
+.sl-home-tag-wrapper span{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:#f3f3f3;
+    padding:10px 12px;
+    border-radius:12px;
+    font-size:13px;
+    line-height:1.35;
+    color:#333;
+    box-sizing:border-box;
+    min-height:44px;
+}
+
+/* Footer strip — text only */
+
+.sl-home-outcome-footer{
+    background:#ffffff;
+    border-radius:15px;
+    padding:30px 35px;
+    margin-top:40px;
+    text-align:left;
+}
+
+.sl-home-outcome-footer h4{
+    color:#1F2C56;
+    font-size:30px;
+    font-weight:700;
+    margin:0 0 10px;
+    line-height:1.3;
+}
+
+.sl-home-outcome-footer p{
+    color:#333;
+    margin:0;
+    line-height:1.8;
+}
+
+/* Responsive */
+
+@media(max-width:991px){
+    .sl-home-outcomes-section{
+        padding:60px 0;
+    }
+
+    .sl-home-outcome-card h3{
+        font-size:22px;
+    }
+
+    .sl-home-outcome-footer h4{
+        font-size:26px;
+    }
+}
+
+@media(max-width:767px){
+    .sl-home-outcomes-section{
+        padding:50px 0;
+    }
+
+    .sl-home-outcome-card{
+        padding:25px;
+    }
+
+    .sl-home-outcome-card h3{
+        font-size:22px;
+    }
+
+    .sl-home-outcome-footer{
+        padding:20px;
+    }
+
+    .sl-home-outcome-footer h4{
+        font-size:24px;
+    }
+}

@@ -1,0 +1,136 @@
+/* =========================================================
+   SucceedLEARN
+   Gifts & Entertainment Training for PE/VC Professionals
+   Practical E-Learning
+
+   Container and section spacing come from course-global.css.
+   ========================================================= */
+
+   .sl-course-page .sl-gifts-entertainment-practical-elearning {
+	background: var(--course-light-bg, #f5f5f5);
+}
+
+
+/* =========================================================
+   Main Layout
+   ========================================================= */
+
+.sl-gifts-entertainment-practical-elearning__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	gap: 72px;
+	align-items: center;
+}
+
+
+/* =========================================================
+   Left: Content
+   ========================================================= */
+
+.sl-gifts-entertainment-practical-elearning__content {
+	min-width: 0;
+}
+
+.sl-gifts-entertainment-practical-elearning__content h2 {
+	margin-bottom: 20px;
+}
+
+.sl-gifts-entertainment-practical-elearning__content p {
+	margin: 1rem 0;
+}
+
+.sl-gifts-entertainment-practical-elearning__content p:first-of-type {
+	margin-top: 0;
+}
+
+
+/* =========================================================
+   Right: Assessment Image
+   ========================================================= */
+
+.sl-gifts-entertainment-practical-elearning__media {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 0;
+}
+
+.sl-gifts-entertainment-practical-elearning__image-placeholder {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	width: min(100%, 560px);
+	aspect-ratio: 1.45 / 1;
+
+	padding: 32px;
+	box-sizing: border-box;
+
+	background: rgba(20, 114, 186, 0.035);
+	border: 1px dashed rgba(20, 114, 186, 0.35);
+	border-radius: 16px;
+
+	text-align: center;
+}
+
+.sl-gifts-entertainment-practical-elearning__image-placeholder strong {
+	color: var(--course-navy, #16234e);
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1.4;
+}
+
+.sl-gifts-entertainment-practical-elearning__image-placeholder span {
+	max-width: 380px;
+	margin-top: 10px;
+
+	color: var(--course-primary, #1472ba);
+	font-size: 13px;
+	line-height: 1.6;
+}
+
+
+/* =========================================================
+   Tablet
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+	.sl-gifts-entertainment-practical-elearning__grid {
+		gap: 48px;
+	}
+}
+
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+	.sl-gifts-entertainment-practical-elearning__grid {
+		grid-template-columns: 1fr;
+		gap: 36px;
+	}
+
+	.sl-gifts-entertainment-practical-elearning__content {
+		order: 1;
+	}
+
+	.sl-gifts-entertainment-practical-elearning__media {
+		order: 2;
+	}
+
+	.sl-gifts-entertainment-practical-elearning__content h2 {
+		margin-bottom: 18px;
+	}
+
+	.sl-gifts-entertainment-practical-elearning__image-placeholder {
+		width: 100%;
+		max-width: 560px;
+		aspect-ratio: 1.25 / 1;
+		padding: 24px;
+		border-radius: 12px;
+	}
+}

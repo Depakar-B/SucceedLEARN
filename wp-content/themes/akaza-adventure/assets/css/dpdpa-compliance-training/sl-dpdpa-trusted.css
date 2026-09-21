@@ -1,0 +1,286 @@
+/**
+ * SucceedLEARN — DPDPA Compliance Training
+ *
+ * Section: Trusted by organisations
+ *
+ * @package Akaza_Adventure
+ */
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.sl-dpdpa-trusted {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: #f5f5f5;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.sl-dpdpa-trusted__heading {
+	margin-bottom: 42px;
+}
+
+.sl-dpdpa-trusted__heading h2 {
+	margin: 0 0 16px;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-dpdpa-trusted__heading h2 span {
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-dpdpa-trusted__heading p {
+	margin: 0;
+	color: var(--sl-page-text, #425b70);
+}
+
+
+/* =========================================
+   TWO-COLUMN LAYOUT
+========================================= */
+
+.sl-dpdpa-trusted__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+	gap: 48px;
+	align-items: center;
+}
+
+
+/* =========================================
+   LOGO GRID
+========================================= */
+
+.sl-dpdpa-trusted__logos {
+	min-width: 0;
+	display: flex;
+	align-items: center;
+	align-self: center;
+}
+
+.sl-dpdpa-trusted__logo-grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	grid-auto-rows: 132px;
+	gap: 10px;
+	width: 100%;
+	height: auto;
+	align-content: center;
+}
+
+.sl-dpdpa-trusted__logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 132px;
+	min-height: 0;
+	padding: 14px 16px;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 8px;
+	background: var(--sl-page-white, #ffffff);
+	box-sizing: border-box;
+	transition:
+		transform 0.2s ease,
+		border-color 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.sl-dpdpa-trusted__logo:hover {
+	transform: translateY(-2px);
+	border-color: rgba(20, 114, 186, 0.24);
+	box-shadow: 0 6px 18px rgba(22, 35, 78, 0.05);
+}
+
+.sl-dpdpa-trusted__logo img {
+	display: block;
+	width: auto;
+	max-width: 100%;
+	height: auto;
+	max-height: 52px;
+	object-fit: contain;
+}
+
+.sl-dpdpa-trusted__logo-placeholder {
+	display: block;
+	color: var(--sl-page-navy, #16234e);
+	font-weight: 700;
+	text-align: center;
+}
+
+
+/* =========================================
+   RIGHT PROOF PANEL
+========================================= */
+
+.sl-dpdpa-trusted__proof {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	padding: 0;
+	border: 1px solid rgba(20, 114, 186, 0.14);
+	border-radius: 12px;
+	background: var(--sl-page-white, #ffffff);
+	overflow: hidden;
+}
+
+.sl-dpdpa-trusted__proof-item {
+	display: flex;
+	align-items: center;
+	min-height: 72px;
+	padding: 18px 22px;
+}
+
+.sl-dpdpa-trusted__proof-item + .sl-dpdpa-trusted__proof-item {
+	border-top: 1px solid rgba(22, 35, 78, 0.10);
+}
+
+
+/* =========================================
+   900+ NUMBER
+========================================= */
+
+.sl-dpdpa-trusted__proof-number {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 auto;
+	min-width: 58px;
+	height: 42px;
+	margin-right: 16px;
+	padding: 6px 8px;
+	border-radius: 8px;
+	background: rgba(20, 114, 186, 0.08);
+	border: 1px solid rgba(20, 114, 186, 0.16);
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 16px;
+	font-weight: 800;
+	line-height: 1;
+}
+
+
+/* =========================================
+   PROOF ICON
+========================================= */
+
+.sl-dpdpa-trusted__proof-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 42px;
+	width: 42px;
+	height: 42px;
+	margin-right: 16px;
+	border-radius: 8px;
+	background: rgba(20, 114, 186, 0.08);
+	border: 1px solid rgba(20, 114, 186, 0.16);
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-dpdpa-trusted__proof-icon svg {
+	display: block;
+	width: 22px;
+	height: 22px;
+}
+
+
+/* =========================================
+   PROOF CONTENT
+========================================= */
+
+.sl-dpdpa-trusted__proof-content {
+	min-width: 0;
+}
+
+.sl-dpdpa-trusted__proof-content h3 {
+	margin: 0;
+	color: var(--sl-page-navy, #16234e);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1199px) {
+
+	.sl-dpdpa-trusted {
+		padding: 75px 0;
+	}
+
+	.sl-dpdpa-trusted__grid {
+		grid-template-columns: minmax(0, 1fr);
+		gap: 32px;
+	}
+
+	.sl-dpdpa-trusted__logo-grid {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+	.sl-dpdpa-trusted {
+		padding: 60px 0;
+	}
+
+	.sl-dpdpa-trusted__heading {
+		margin-bottom: 30px;
+	}
+
+	.sl-dpdpa-trusted__grid {
+		gap: 24px;
+	}
+
+	.sl-dpdpa-trusted__logo-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		grid-auto-rows: 120px;
+		gap: 10px;
+	}
+
+	.sl-dpdpa-trusted__logo {
+		height: 52px;
+		padding: 8px 12px;
+	}
+
+	.sl-dpdpa-trusted__logo img {
+		max-height: 32px;
+		height: auto;
+	}
+
+	.sl-dpdpa-trusted__proof-item {
+		min-height: 64px;
+		padding: 15px 16px;
+	}
+
+	.sl-dpdpa-trusted__proof-number {
+		min-width: 52px;
+		height: 38px;
+		margin-right: 12px;
+	}
+
+	.sl-dpdpa-trusted__proof-icon {
+		flex-basis: 38px;
+		width: 38px;
+		height: 38px;
+		margin-right: 12px;
+	}
+
+	.sl-dpdpa-trusted__proof-icon svg {
+		width: 21px;
+		height: 21px;
+	}
+
+}

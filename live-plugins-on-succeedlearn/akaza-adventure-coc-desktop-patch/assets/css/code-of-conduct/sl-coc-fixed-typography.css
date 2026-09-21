@@ -1,0 +1,162 @@
+/**
+ * SucceedLEARN — Code of Conduct page fixed typography.
+ * Keeps desktop font size, weight, and line-height at all breakpoints.
+ * Loaded after section CSS to override responsive type reductions.
+ */
+
+body.slf-body main.sl-coc-page h1,
+body.slf-body #main-content.sl-coc-page h1 {
+	font-size: 60px;
+	font-weight: 800;
+	letter-spacing: var(--sl-ls-h1);
+	line-height: 1.15;
+}
+
+body.slf-body main.sl-coc-page h2,
+body.slf-body #main-content.sl-coc-page h2 {
+	font-size: 48px;
+	font-weight: 700;
+	letter-spacing: var(--sl-ls-h2);
+	line-height: 1.2;
+}
+
+/* Hero supporting h2 stays at the site-wide 32px scale */
+body.slf-body main.sl-coc-page section[class*="-hero"] h2,
+body.slf-body #main-content.sl-coc-page section[class*="-hero"] h2 {
+	font-size: var(--sl-fs-hero-h2, 32px);
+	line-height: 1.35;
+}
+
+/* Contact form title — sub-section scale, not page section h2 */
+body.slf-body main.sl-coc-page .scf-form-wrap h2.scf-form-title,
+body.slf-body #main-content.sl-coc-page .scf-form-wrap h2.scf-form-title {
+	font-size: 32px;
+	font-weight: 700;
+	letter-spacing: normal;
+	line-height: 1.35;
+}
+
+body.slf-body main.sl-coc-page p,
+body.slf-body #main-content.sl-coc-page p {
+	font-size: 18px;
+	font-weight: 400;
+	letter-spacing: var(--sl-ls-body);
+	line-height: 1.8;
+}
+
+.sl-coc-page .sl-home-sub-heading,
+.sl-csa-page .sl-home-sub-heading {
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1.3;
+}
+
+/* Section-specific mobile reductions — restore desktop sizes */
+
+.sl-coc-page .sl-coc-section-close__text {
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1.65;
+}
+
+.sl-coc-page .sl-coc-decision__panel-top h3 {
+	font-size: 28px;
+	line-height: 1.3;
+}
+
+.sl-coc-page .sl-coc-section-close__text {
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1.65;
+}
+
+.sl-coc-page .sl-coc-decision__reveal-btn {
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 1.45;
+}
+
+.sl-coc-page .sl-coc-decision__feedback-answer {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.65;
+}
+
+.sl-coc-page .sl-coc-emerging-risks__list-index {
+	font-size: 12px;
+}
+
+.sl-coc-page .sl-coc-emerging-risks__list-label {
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 1.5;
+}
+
+.sl-coc-page .sl-coc-stats__counter {
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.sl-coc-page .sl-coc-stats__label {
+	font-size: 16px;
+	line-height: 1.45;
+}
+
+.sl-coc-page .sl-coc-accessibility__feature {
+	font-size: 14px;
+	line-height: 1.4;
+}
+
+.sl-coc-page .sl-code-conduct-matters__lead {
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1.65;
+}
+
+.sl-coc-page .sl-code-conduct-matters__list-index {
+	font-size: 12px;
+}
+
+.sl-coc-page .sl-code-conduct-matters__question {
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 1.5;
+}
+
+.sl-coc-page .sl-code-conduct-matters__gap-lead {
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 1.55;
+}
+
+.sl-coc-page .sl-coc-coverage__head h3 {
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 1.3;
+}
+
+body.slf-body main.sl-coc-page .sl-coc-coverage__card h3.sl-panel-title,
+body.slf-body #main-content.sl-coc-page .sl-coc-coverage__card h3.sl-panel-title {
+	font-size: var(--sl-panel-title-size, 24px);
+	font-weight: var(--sl-panel-title-weight, 700);
+	line-height: var(--sl-panel-title-line, 1.3);
+	color: var(--sl-panel-title-color, var(--sl-heading-accent, #1472ba));
+}
+
+.sl-coc-page .sl-coc-interactive__card-head h3.sl-panel-title {
+	font-size: var(--sl-panel-title-size, 24px);
+	line-height: var(--sl-panel-title-line, 1.3);
+}
+
+.sl-coc-page .sl-coc-problem__number {
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.sl-coc-page .sl-coc-problem__card h3.sl-panel-title {
+	font-size: var(--sl-panel-title-size, 24px);
+	font-weight: var(--sl-panel-title-weight, 700);
+	line-height: var(--sl-panel-title-line, 1.3);
+}

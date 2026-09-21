@@ -1,0 +1,224 @@
+/**
+ * SucceedLEARN
+ * Cybersecurity Awareness Month 2026
+ * How the Campaign Works
+ *
+ * Left: step cards. Right: title + image (sticky).
+ */
+
+.sl-infosec-2026-how-it-works {
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-infosec-2026-how-it-works__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	gap: 28px;
+	align-items: start;
+}
+
+.sl-infosec-2026-how-it-works__intro {
+	margin: 0;
+	min-width: 0;
+}
+
+.sl-infosec-2026-how-it-works__intro .sl-home-sub-heading {
+	display: inline-block;
+	margin-bottom: 14px;
+}
+
+.sl-infosec-2026-how-it-works__intro h2 {
+	margin: 0;
+}
+
+.sl-infosec-2026-how-it-works__intro h2 > span {
+	color: var(--sl-heading-accent, var(--sl-page-primary, #1472ba));
+}
+
+.sl-infosec-2026-how-it-works__media {
+	width: 100%;
+	min-width: 0;
+	margin-top: 24px;
+}
+
+.sl-infosec-2026-how-it-works__image {
+	overflow: hidden;
+	width: 100%;
+	line-height: 0;
+	border-radius: 16px;
+}
+
+.sl-infosec-2026-how-it-works__image img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.sl-infosec-2026-how-it-works__cards {
+	min-width: 0;
+}
+
+.sl-infosec-2026-how-it-works__steps {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	min-width: 0;
+}
+
+/* Step cards */
+.sl-infosec-2026-how-it-works__step {
+	display: grid;
+	grid-template-columns: 48px minmax(0, 1fr);
+	gap: 16px;
+	padding: 24px;
+	border: 1px solid rgba(107, 124, 147, 0.18);
+	border-radius: 14px;
+	background: var(--sl-page-white, #fff);
+	box-sizing: border-box;
+}
+
+.sl-infosec-2026-how-it-works__number {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 48px;
+	height: 48px;
+	border-radius: 12px;
+	background: rgba(20, 114, 186, 0.1);
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.sl-infosec-2026-how-it-works__content {
+	min-width: 0;
+}
+
+.sl-infosec-2026-how-it-works__content .sl-panel-title {
+	margin: 0 0 10px;
+}
+
+.sl-infosec-2026-how-it-works__content p {
+	margin: 0 0 12px;
+	color: var(--sl-page-text, #4a4a4a);
+}
+
+.sl-infosec-2026-how-it-works__content p:last-child {
+	margin-bottom: 0;
+}
+
+.sl-infosec-2026-how-it-works__note {
+	margin-top: 4px !important;
+	color: var(--sl-page-navy, #16234e) !important;
+}
+
+.sl-infosec-2026-how-it-works__list {
+	margin: 14px 0 16px;
+}
+
+.sl-infosec-2026-how-it-works__closing {
+	margin-top: 4px !important;
+}
+
+.sl-infosec-2026-how-it-works__outcomes {
+	margin: 16px 0 18px;
+}
+
+.sl-infosec-2026-how-it-works__outcome {
+	padding: 18px;
+	border: 1px solid rgba(107, 124, 147, 0.18);
+	border-radius: 12px;
+	background: transparent;
+	margin-bottom: 32px;
+}
+
+.sl-infosec-2026-how-it-works__outcome h4 {
+	margin: 0 0 8px;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 1.3;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-infosec-2026-how-it-works__outcome p {
+	margin: 0;
+}
+
+.sl-infosec-2026-how-it-works__continue {
+	margin: 0 0 20px !important;
+	font-weight: 700;
+	font-style: italic;
+	text-align: center;
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-infosec-2026-how-it-works__content .sl-content-actions {
+	margin-top: 0;
+}
+
+@media (min-width: 900px) {
+	.sl-infosec-2026-how-it-works__grid {
+		grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+		gap: 48px;
+		align-items: center;
+	}
+
+	.sl-infosec-2026-how-it-works__cards {
+		order: -1;
+	}
+
+	.sl-infosec-2026-how-it-works__intro {
+		position: sticky;
+		top: calc(var(--slf-header-clearance, 76px) + 24px);
+		align-self: start;
+		padding-top: 24px;
+		padding-bottom: 24px;
+	}
+
+	.sl-infosec-2026-how-it-works__media {
+		margin-top: 28px;
+	}
+}
+
+@media (min-width: 1100px) {
+	.sl-infosec-2026-how-it-works__grid {
+		gap: 56px;
+	}
+}
+
+@media (max-width: 899px) {
+	.sl-infosec-2026-how-it-works {
+		padding: 70px 0;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-infosec-2026-how-it-works {
+		padding: 60px 0;
+	}
+
+	.sl-infosec-2026-how-it-works__step {
+		grid-template-columns: 40px minmax(0, 1fr);
+		gap: 12px;
+		padding: 18px;
+	}
+
+	.sl-infosec-2026-how-it-works__number {
+		width: 40px;
+		height: 40px;
+		font-size: 14px;
+		border-radius: 10px;
+	}
+
+	.sl-infosec-2026-how-it-works__content .sl-content-actions {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.sl-infosec-2026-how-it-works__content .sl-content-btn {
+		width: 100%;
+		max-width: 100%;
+	}
+}

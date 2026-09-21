@@ -1,0 +1,226 @@
+/* SucceedLEARN — global course localisation */
+
+.sl-course-localisation {
+	--localisation-bg: var(--course-light-bg, #f5f5f5);
+	--localisation-heading: var(--course-navy, #16234e);
+	--localisation-text: var(--course-muted, #6b7c93);
+	--localisation-accent: var(--course-primary, #1472ba);
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	background: var(--localisation-bg);
+	color: var(--localisation-heading);
+}
+
+.sl-course-localisation__container {
+	margin: 0 auto;
+	padding: 95px 0 85px;
+}
+
+.sl-course-localisation__intro {
+	margin-bottom: 32px;
+}
+
+.sl-course-localisation__eyebrow {
+	display: inline-flex;
+	align-items: center;
+	margin-bottom: 18px;
+	color: var(--localisation-accent);
+	font-size: 12px;
+	font-weight: 800;
+	line-height: 1.3;
+	letter-spacing: 1.7px;
+	text-transform: uppercase;
+}
+
+.sl-course-localisation__eyebrow::before {
+	content: "";
+	width: 28px;
+	height: 2px;
+	margin-right: 11px;
+	background: var(--localisation-accent);
+}
+
+.sl-course-localisation__title {
+	max-width: 700px;
+	margin: 0;
+	color: var(--localisation-heading);
+}
+
+.sl-course-localisation__title > span {
+	display: block;
+}
+
+.sl-course-localisation__title-highlight {
+	color: var(--localisation-accent);
+}
+
+
+.sl-course-localisation__description p {
+	margin: 0;
+	color: var(--localisation-text);
+	font-size: 16px;
+	line-height: 1.7;
+}
+
+.sl-course-localisation__callout {
+	display: flex;
+	align-items: flex-start;
+	gap: 16px;
+	margin-bottom: 24px;
+	padding: 20px 25px;
+	border: 1px solid rgba(22, 35, 78, 0.12);
+	border-left: 3px solid var(--localisation-accent);
+	border-radius: 7px;
+	background: var(--course-white, #ffffff);
+}
+
+.sl-course-localisation__callout-icon {
+	flex: 0 0 auto;
+	padding-top: 2px;
+	color: var(--localisation-heading);
+	font-size: 12px;
+	line-height: 1;
+}
+
+.sl-course-localisation__callout-content {
+	min-width: 0;
+}
+
+.sl-course-localisation__callout-title {
+	margin: 0;
+	color: var(--localisation-heading);
+	font-weight: 750;
+	line-height: 1.4;
+}
+
+.sl-course-localisation__callout-text {
+	max-width: 1100px;
+	margin: 7px 0 0;
+	color: var(--localisation-text);
+	font-size: 12px;
+	line-height: 1.65;
+}
+
+.sl-course-localisation__grid {
+	margin-top: 0;
+}
+
+.sl-course-localisation__grid .sl-course-risk-card {
+	background: #ffffff;
+	border: 1px solid rgba(22, 35, 78, 0.14);
+	box-shadow: none;
+}
+
+.sl-course-localisation__grid .sl-course-risk-card:hover {
+	border-color: rgba(22, 35, 78, 0.28);
+	box-shadow: 0 14px 35px rgba(22, 35, 78, 0.08);
+}
+
+.sl-course-localisation__grid .sl-course-risk-card__icon {
+	width: 34px;
+	height: 27px;
+	margin-bottom: 19px;
+	border-radius: 5px;
+	font-size: 10px;
+	font-weight: 800;
+	letter-spacing: 0.2px;
+}
+
+.sl-course-localisation__note {
+	max-width: 900px;
+	margin: 28px auto 0;
+	text-align: center;
+}
+
+.sl-course-localisation__note p {
+	margin: 0;
+	color: var(--course-text, #4a4a4a);
+	font-size: 13px;
+	line-height: 1.65;
+}
+
+@media (min-width: 1600px) {
+	.sl-course-localisation__container {
+		padding: 110px 0 100px;
+	}
+
+	.sl-course-localisation__description p {
+		font-size: 17px;
+	}
+
+	.sl-course-localisation__callout {
+		padding: 23px 28px;
+		margin-bottom: 27px;
+	}
+
+	.sl-course-localisation__callout-text {
+		font-size: 13px;
+	}
+
+	.sl-course-localisation__note {
+		margin-top: 32px;
+	}
+
+	.sl-course-localisation__note p {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 900px) {
+	.sl-course-localisation__container {
+		padding: 75px 0 80px;
+	}
+
+}
+
+@media (max-width: 600px) {
+	.sl-course-localisation__container {
+		padding: 60px 0 65px;
+	}
+
+	.sl-course-localisation__eyebrow {
+		margin-bottom: 16px;
+		font-size: 10px;
+		letter-spacing: 1.35px;
+	}
+
+	.sl-course-localisation__eyebrow::before {
+		width: 22px;
+		margin-right: 9px;
+	}
+
+	.sl-course-localisation__description p {
+		font-size: 14px;
+		line-height: 1.7;
+	}
+
+	.sl-course-localisation__callout {
+		gap: 11px;
+		margin-bottom: 16px;
+		padding: 17px 16px;
+	}
+
+	.sl-course-localisation__callout-text {
+		font-size: 11px;
+		line-height: 1.6;
+	}
+
+	.sl-course-localisation__grid .sl-course-risk-card__icon {
+		width: 34px;
+		height: 27px;
+		margin-bottom: 16px;
+		border-radius: 5px;
+	}
+
+	.sl-course-localisation__note {
+		margin-top: 22px;
+		padding: 0 5px;
+	}
+
+	.sl-course-localisation__note p {
+		font-size: 12px;
+		line-height: 1.65;
+	}
+}
+

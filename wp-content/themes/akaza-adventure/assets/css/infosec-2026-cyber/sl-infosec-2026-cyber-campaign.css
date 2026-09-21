@@ -1,0 +1,243 @@
+/**
+ * SucceedLEARN
+ * Cybersecurity Awareness Month 2026
+ * Campaign Section
+ *
+ * Layout and component styling only.
+ * CTA appearance comes from the global button CSS.
+ */
+
+.sl-infosec-2026-cyber-campaign {
+	padding: 70px 0;
+	background: var(--sl-page-white, #fff);
+}
+
+.sl-infosec-2026-cyber-campaign__card {
+	position: relative;
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	gap: 20px;
+	padding: 36px;
+	border: 1px solid rgba(20, 114, 186, 0.18);
+	border-radius: 18px;
+	background: linear-gradient(
+		135deg,
+		#f4f8fd 0%,
+		#eef5fc 100%
+	);
+	align-items: center;
+}
+
+/* --------------------------------
+   CONTENT
+--------------------------------- */
+
+.sl-infosec-2026-cyber-campaign__content {
+	min-width: 0;
+}
+
+.sl-infosec-2026-cyber-campaign__content .sl-home-sub-heading {
+	display: inline-block;
+	margin-bottom: 12px;
+}
+
+.sl-infosec-2026-cyber-campaign__content h2 {
+	margin: 0 0 14px;
+	font-size: clamp(26px, 2.4vw, 34px);
+	line-height: 1.25;
+}
+
+.sl-infosec-2026-cyber-campaign__content h2 span {
+	display: block;
+	color: var(
+		--sl-heading-accent,
+		var(--sl-page-primary, #1472ba)
+	);
+}
+
+.sl-infosec-2026-cyber-campaign__lead {
+	margin: 0;
+	max-width: 52ch;
+}
+
+/* --------------------------------
+   OFFER
+--------------------------------- */
+
+.sl-infosec-2026-cyber-campaign__offer {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: center;
+	width: 100%;
+	min-width: 0;
+	max-width: none;
+	padding: 24px;
+	border: 1px solid rgba(20, 114, 186, 0.16);
+	border-radius: 14px;
+	background: var(--sl-page-white, #fff);
+	box-sizing: border-box;
+	align-items:center;
+}
+
+.sl-infosec-2026-cyber-campaign__offer-label {
+	margin-bottom: 8px;
+	color: var(
+		--sl-page-primary,
+		#1472ba
+	);
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: normal;
+	text-transform: none;
+}
+
+/* --------------------------------
+   PRICE
+--------------------------------- */
+
+.sl-infosec-2026-cyber-campaign__price {
+	display: flex;
+	align-items: baseline;
+	flex-wrap: wrap;
+	gap: 4px;
+	margin-bottom: 18px;
+	color: var(
+		--sl-page-navy,
+		#16234e
+	);
+	font-size: 17px;
+	font-weight: 600;
+	line-height: 1.3;
+}
+
+.sl-infosec-2026-cyber-campaign__currency,
+.sl-infosec-2026-cyber-campaign__unit {
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	letter-spacing: normal;
+	margin: 0;
+	color: inherit;
+}
+
+.sl-infosec-2026-cyber-campaign__amount {
+	margin: 0;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 1.3;
+	letter-spacing: normal;
+	color: var(
+		--sl-page-primary,
+		#1472ba
+	);
+}
+
+/* --------------------------------
+   CTA
+--------------------------------- */
+
+.sl-infosec-2026-cyber-campaign__actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin: 0;
+	text-align: center;
+}
+
+.sl-infosec-2026-cyber-campaign__actions .sl-content-btn {
+	display: inline-flex;
+	width: auto;
+	max-width: 100%;
+	box-sizing: border-box;
+	justify-content: center;
+	white-space: nowrap;
+	text-align: center;
+}
+
+@media (max-width: 767px) {
+	.sl-infosec-2026-cyber-campaign__actions .sl-content-btn {
+		width: 100%;
+		max-width: 100%;
+		white-space: normal;
+	}
+}
+
+/* --------------------------------
+   TERMS
+--------------------------------- */
+
+.sl-infosec-2026-cyber-campaign__terms {
+	margin: 12px 0 0;
+	color: var(
+		--sl-page-muted,
+		#6B7C93
+	);
+	font-size: 13px;
+	line-height: 1.45;
+}
+
+/* --------------------------------
+   TABLET / DESKTOP
+--------------------------------- */
+
+@media (min-width: 800px) {
+	.sl-infosec-2026-cyber-campaign__card {
+		grid-template-columns: minmax(0, 1.1fr) minmax(340px, 0.9fr);
+		gap: 20px;
+		padding: 40px 42px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.sl-infosec-2026-cyber-campaign {
+		padding: 90px 0;
+	}
+
+	.sl-infosec-2026-cyber-campaign__card {
+		grid-template-columns: minmax(0, 1fr) minmax(380px, 420px);
+		gap: 24px;
+		padding: 44px 48px;
+	}
+
+	.sl-infosec-2026-cyber-campaign__content h2 {
+		font-size: 42px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.sl-infosec-2026-cyber-campaign__card {
+		grid-template-columns: minmax(0, 1fr) 420px;
+		gap: 28px;
+	}
+}
+
+/* --------------------------------
+   MOBILE
+--------------------------------- */
+
+@media (max-width: 799px) {
+	.sl-infosec-2026-cyber-campaign {
+		padding: 55px 0;
+	}
+
+	.sl-infosec-2026-cyber-campaign__card {
+		padding: 28px 22px;
+		border-radius: 14px;
+		gap: 18px;
+	}
+
+	.sl-infosec-2026-cyber-campaign__offer {
+		padding: 20px 18px;
+	}
+
+	.sl-infosec-2026-cyber-campaign__content h2 {
+		font-size: 26px;
+	}
+
+	.sl-infosec-2026-cyber-campaign__price {
+		font-size: 16px;
+	}
+}

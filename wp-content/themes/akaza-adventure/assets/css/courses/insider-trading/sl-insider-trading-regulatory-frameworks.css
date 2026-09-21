@@ -1,0 +1,352 @@
+/* =========================================================
+   SucceedLEARN
+   Insider Trading eLearning
+   Market Abuse Regulations and Insider Trading
+
+   Container and section spacing come from course-global.css.
+   ========================================================= */
+
+   .sl-course-page .sl-insider-trading-regulatory-frameworks {
+	background: var(--course-light-bg, #f5f5f5);
+}
+
+
+/* =========================================================
+   Section Intro
+   ========================================================= */
+
+.sl-insider-trading-regulatory-frameworks__intro {
+	max-width: 980px;
+	margin-bottom: 48px;
+}
+
+.sl-insider-trading-regulatory-frameworks__intro h2 {
+	margin-bottom: 20px;
+}
+
+.sl-insider-trading-regulatory-frameworks__intro p {
+	max-width: 900px;
+	margin: 0;
+}
+
+
+/* =========================================================
+   Jurisdiction Cards
+   ========================================================= */
+
+.sl-insider-trading-regulatory-frameworks__card {
+	display: grid;
+	grid-template-columns: minmax(0, 1.15fr) minmax(360px, 0.85fr);
+	gap: 56px;
+	align-items: stretch;
+
+	margin-bottom: 28px;
+	padding: 36px;
+
+	background: var(--course-white, #ffffff);
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 18px;
+
+	box-sizing: border-box;
+}
+
+.sl-insider-trading-regulatory-frameworks__card--us {
+	grid-template-columns: minmax(360px, 0.85fr) minmax(0, 1.15fr);
+}
+
+
+/* =========================================================
+   Card Content
+   ========================================================= */
+
+.sl-insider-trading-regulatory-frameworks__content {
+	min-width: 0;
+}
+
+.sl-insider-trading-regulatory-frameworks__label {
+	display: block;
+	margin-bottom: 12px;
+
+	color: var(--course-primary, #1472ba);
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1.4;
+}
+
+.sl-insider-trading-regulatory-frameworks__content h3 {
+	margin-bottom: 18px;
+	color: var(--course-navy, #16234e);
+}
+
+.sl-insider-trading-regulatory-frameworks__description {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.sl-insider-trading-regulatory-frameworks__description p {
+	margin: 0 0 12px;
+}
+
+.sl-insider-trading-regulatory-frameworks__description strong {
+	color: var(--course-navy, #16234e);
+}
+
+
+/* =========================================================
+   Key Topics
+   ========================================================= */
+
+.sl-insider-trading-regulatory-frameworks__topics {
+	margin-top: 18px;
+}
+
+.sl-insider-trading-regulatory-frameworks__topics-label {
+	display: block;
+	margin-bottom: 8px;
+
+	color: var(--course-primary, #1472ba);
+	font-weight: 700;
+	line-height: 1.4;
+}
+
+.sl-insider-trading-regulatory-frameworks__topics ul {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0 28px;
+
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-insider-trading-regulatory-frameworks__topics li {
+	position: relative;
+	padding: 7px 0 7px 18px;
+
+	color: var(--course-text, #4a4a4a);
+	line-height: 1.5;
+}
+
+.sl-insider-trading-regulatory-frameworks__topics li::before {
+	content: "";
+	position: absolute;
+	top: 0.7em;
+	left: 0;
+
+	width: 6px;
+	height: 6px;
+
+	background: var(--course-primary, #1472ba);
+	border-radius: 50%;
+}
+
+
+/* =========================================================
+   Employee Question
+   ========================================================= */
+
+.sl-insider-trading-regulatory-frameworks__question {
+	margin-top: 22px;
+	padding: 18px 20px;
+
+	background: rgba(20, 114, 186, 0.06);
+	border-left: 4px solid var(--course-primary, #1472ba);
+	border-radius: 0 10px 10px 0;
+}
+
+.sl-insider-trading-regulatory-frameworks__question span {
+	display: block;
+	margin-bottom: 7px;
+
+	color: var(--course-primary, #1472ba);
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 1.4;
+}
+
+.sl-insider-trading-regulatory-frameworks__question p {
+	margin: 0;
+
+	color: var(--course-navy, #16234e);
+	font-weight: 600;
+	line-height: 1.6;
+}
+
+
+/* =========================================================
+   Card CTA
+   ========================================================= */
+
+.sl-insider-trading-regulatory-frameworks__card .sl-content-actions {
+	margin-top: 22px;
+}
+
+
+/* =========================================================
+   Card Image
+   ========================================================= */
+
+.sl-insider-trading-regulatory-frameworks__media {
+	min-width: 0;
+	min-height: 100%;
+	overflow: hidden;
+
+	border-radius: 14px;
+}
+
+.sl-insider-trading-regulatory-frameworks__media img {
+	display: block;
+
+	width: 100%;
+	height: 100%;
+	min-height: 420px;
+
+	object-fit: cover;
+}
+
+
+/* =========================================================
+   Other Jurisdictions
+   ========================================================= */
+
+.sl-insider-trading-regulatory-frameworks__other {
+	margin-top: 56px;
+	padding: 38px 42px;
+
+	background: var(--course-white, #ffffff);
+	border: 1px solid rgba(20, 114, 186, 0.16);
+	border-left: 4px solid var(--course-primary, #1472ba);
+	border-radius: 0 16px 16px 0;
+}
+
+.sl-insider-trading-regulatory-frameworks__other-content {
+	max-width: 1000px;
+}
+
+.sl-insider-trading-regulatory-frameworks__other h3 {
+	margin-bottom: 18px;
+}
+
+.sl-insider-trading-regulatory-frameworks__other p {
+	margin: 0 0 14px;
+}
+
+.sl-insider-trading-regulatory-frameworks__other p:last-of-type {
+	margin-bottom: 0;
+}
+
+.sl-insider-trading-regulatory-frameworks__other .sl-content-actions {
+	margin-top: 24px;
+}
+
+
+/* =========================================================
+   Regulatory Note
+   ========================================================= */
+
+.sl-insider-trading-regulatory-frameworks__note {
+	margin-top: 24px;
+	padding: 0 4px;
+}
+
+.sl-insider-trading-regulatory-frameworks__note p {
+	margin: 0;
+
+	color: var(--course-muted, #6b7c93);
+	font-size: 14px;
+	line-height: 1.7;
+}
+
+.sl-insider-trading-regulatory-frameworks__note strong {
+	color: var(--course-navy, #16234e);
+}
+
+
+/* =========================================================
+   Tablet
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+	.sl-insider-trading-regulatory-frameworks__card,
+	.sl-insider-trading-regulatory-frameworks__card--us {
+		grid-template-columns: 1fr;
+		gap: 32px;
+	}
+
+	.sl-insider-trading-regulatory-frameworks__card--us
+	.sl-insider-trading-regulatory-frameworks__media {
+		order: 1;
+	}
+
+	.sl-insider-trading-regulatory-frameworks__card--us
+	.sl-insider-trading-regulatory-frameworks__content {
+		order: 2;
+	}
+
+	.sl-insider-trading-regulatory-frameworks__media img {
+		min-height: 320px;
+		max-height: 420px;
+	}
+}
+
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+	.sl-insider-trading-regulatory-frameworks__intro {
+		margin-bottom: 36px;
+	}
+
+	.sl-insider-trading-regulatory-frameworks__intro h2 {
+		margin-bottom: 18px;
+	}
+
+	.sl-insider-trading-regulatory-frameworks__card,
+	.sl-insider-trading-regulatory-frameworks__card--us {
+		gap: 24px;
+		margin-bottom: 18px;
+		padding: 22px;
+		border-radius: 14px;
+	}
+
+	.sl-insider-trading-regulatory-frameworks__card--uk
+	.sl-insider-trading-regulatory-frameworks__media {
+		order: 2;
+	}
+
+	.sl-insider-trading-regulatory-frameworks__card--uk
+	.sl-insider-trading-regulatory-frameworks__content {
+		order: 1;
+	}
+
+	.sl-insider-trading-regulatory-frameworks__card--india
+	.sl-insider-trading-regulatory-frameworks__media {
+		order: 2;
+	}
+
+	.sl-insider-trading-regulatory-frameworks__card--india
+	.sl-insider-trading-regulatory-frameworks__content {
+		order: 1;
+	}
+
+	.sl-insider-trading-regulatory-frameworks__media img {
+		min-height: 240px;
+		max-height: 320px;
+		border-radius: 12px;
+	}
+
+	.sl-insider-trading-regulatory-frameworks__topics ul {
+		grid-template-columns: 1fr;
+	}
+
+	.sl-insider-trading-regulatory-frameworks__other {
+		margin-top: 36px;
+		padding: 26px 22px;
+		border-radius: 0 12px 12px 0;
+	}
+}

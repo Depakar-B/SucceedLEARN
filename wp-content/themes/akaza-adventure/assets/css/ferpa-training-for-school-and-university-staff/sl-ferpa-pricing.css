@@ -1,0 +1,277 @@
+/**
+ * SucceedLEARN — FERPA Staff Awareness
+ *
+ * Section: Pricing
+ *
+ * @package Akaza_Adventure
+ */
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.sl-ferpa-pricing {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+
+/* =========================================
+   TWO-COLUMN LAYOUT
+========================================= */
+
+.sl-ferpa-pricing__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+	gap: 56px;
+	align-items: center;
+}
+
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.sl-ferpa-pricing__content {
+	min-width: 0;
+}
+
+.sl-ferpa-pricing__heading {
+	margin-bottom: 30px;
+}
+
+.sl-ferpa-pricing__heading h2 {
+	margin: 0 0 18px;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-ferpa-pricing__heading h2 span {
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-ferpa-pricing__heading p {
+	margin: 0;
+	color: var(--sl-page-text, #425b70);
+}
+
+
+/* =========================================
+   WHY THIS MATTERS
+========================================= */
+
+.sl-ferpa-pricing__why {
+	padding: 20px 22px;
+	border: 1px solid rgba(20, 114, 186, 0.20);
+	border-left: 3px solid var(--sl-page-primary, #1472ba);
+	border-radius: 10px;
+	background: rgba(20, 114, 186, 0.055);
+}
+
+.sl-ferpa-pricing__why p {
+	margin: 0;
+	color: var(--sl-page-text, #425b70);
+}
+
+.sl-ferpa-pricing__why strong {
+	color: var(--sl-page-navy, #16234e);
+	font-weight: 700;
+}
+
+
+/* =========================================
+   TABLE WRAPPER
+========================================= */
+
+.sl-ferpa-pricing__table-wrap {
+	min-width: 0;
+}
+
+
+/* =========================================
+   PRICING TABLE
+========================================= */
+
+.sl-ferpa-pricing__table {
+	overflow: hidden;
+	border: 1px solid rgba(22, 35, 78, 0.12);
+	border-radius: 14px;
+	background: var(--sl-page-white, #ffffff);
+	box-shadow: 0 8px 26px rgba(22, 35, 78, 0.06);
+}
+
+
+/* =========================================
+   TABLE HEADER
+========================================= */
+
+.sl-ferpa-pricing__table-head {
+	display: grid;
+	grid-template-columns: minmax(150px, 0.75fr) minmax(130px, 0.65fr) minmax(100px, 0.60fr);
+	align-items: center;
+	min-height: 50px;
+	padding: 0 20px;
+	background: var(--sl-page-navy, #16234e);
+	color: #ffffff;
+}
+
+.sl-ferpa-pricing__table-head > div {
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	line-height: 1.2;
+	text-transform: uppercase;
+}
+
+
+/* =========================================
+   TABLE BODY
+========================================= */
+
+.sl-ferpa-pricing__table-body {
+	display: flex;
+	flex-direction: column;
+}
+
+
+/* =========================================
+   PRICING ROW
+========================================= */
+
+.sl-ferpa-pricing__row {
+	display: grid;
+	grid-template-columns: minmax(150px, 0.75fr) minmax(130px, 0.65fr) minmax(100px, 0.60fr);
+	align-items: center;
+	min-height: 68px;
+	padding: 0 20px;
+	border-bottom: 1px solid rgba(22, 35, 78, 0.10);
+}
+
+.sl-ferpa-pricing__row:last-child {
+	border-bottom: 0;
+}
+
+
+/* =========================================
+   SEATS
+========================================= */
+
+.sl-ferpa-pricing__seats {
+	color: var(--sl-page-text, #425b70);
+}
+
+
+/* =========================================
+   PRICE
+========================================= */
+
+.sl-ferpa-pricing__price {
+	color: var(--sl-page-navy, #16234e);
+	font-weight: 700;
+}
+
+
+/* =========================================
+   DETAILS
+========================================= */
+
+.sl-ferpa-pricing__details {
+	min-width: 0;
+}
+
+.sl-ferpa-pricing__detail {
+	display: inline-flex;
+	align-items: center;
+}
+
+.sl-ferpa-pricing__detail--save {
+	color: #0e9f4a;
+	font-weight: 600;
+}
+
+.sl-ferpa-pricing__detail--custom {
+	color: var(--sl-page-primary, #1472ba);
+	font-weight: 600;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1199px) {
+
+	.sl-ferpa-pricing {
+		padding: 75px 0;
+	}
+
+	.sl-ferpa-pricing__grid {
+		grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+		gap: 34px;
+	}
+
+	.sl-ferpa-pricing__table-head,
+	.sl-ferpa-pricing__row {
+		grid-template-columns:
+			minmax(120px, 0.75fr)
+			minmax(110px, 0.65fr)
+			minmax(90px, 0.60fr);
+	}
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+	.sl-ferpa-pricing {
+		padding: 60px 0;
+	}
+
+	.sl-ferpa-pricing__grid {
+		grid-template-columns: 1fr;
+		gap: 30px;
+	}
+
+	.sl-ferpa-pricing__heading {
+		margin-bottom: 24px;
+	}
+
+	.sl-ferpa-pricing__why {
+		padding: 18px 18px;
+	}
+
+	.sl-ferpa-pricing__table {
+		border-radius: 12px;
+	}
+
+	.sl-ferpa-pricing__table-head,
+	.sl-ferpa-pricing__row {
+		grid-template-columns: 1fr 0.8fr;
+	}
+
+	.sl-ferpa-pricing__table-head {
+		padding: 0 16px;
+	}
+
+	.sl-ferpa-pricing__row {
+		position: relative;
+		min-height: 72px;
+		padding: 12px 16px;
+	}
+
+	.sl-ferpa-pricing__table-head > div:nth-child(3),
+	.sl-ferpa-pricing__row > div:nth-child(3) {
+		display: none;
+	}
+
+	.sl-ferpa-pricing__price {
+		text-align: right;
+	}
+
+}

@@ -1,0 +1,324 @@
+/* =========================================================
+   HIPAA — WHY TRUST US
+   ========================================================= */
+
+   .sl-hipaa-why-us {
+	width: 100%;
+	padding: 96px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+
+/* =========================================================
+   TWO-COLUMN LAYOUT
+   ========================================================= */
+
+.sl-hipaa-why-us__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.08fr) minmax(420px, 0.92fr);
+	align-items: start;
+	gap: 68px;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+   ========================================================= */
+
+.sl-hipaa-why-us__content {
+	min-width: 0;
+}
+
+.sl-hipaa-why-us__intro {
+	width: 100%;
+	margin-bottom: 34px;
+}
+
+.sl-hipaa-why-us__intro .sl-home-sub-heading {
+	display: flex;
+	align-items: center;
+	margin-bottom: 16px;
+}
+
+.sl-hipaa-why-us__intro h2 {
+	width: 100%;
+	margin-bottom: 18px;
+	text-wrap: balance;
+}
+
+.sl-hipaa-why-us__intro p {
+	width: 100%;
+	margin: 0;
+	text-wrap: pretty;
+}
+
+
+/* =========================================================
+   NUMBERED LIST
+   Uses the established CoC reporting-list structure.
+   ========================================================= */
+
+.sl-hipaa-why-us__list {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-hipaa-why-us__list-item {
+	display: grid;
+	grid-template-columns: 42px minmax(0, 1fr);
+	align-items: start;
+	gap: 15px;
+	margin: 0;
+	padding: 19px 0;
+	border-top: 1px solid rgba(107, 124, 147, 0.18);
+}
+
+.sl-hipaa-why-us__list-item:first-child {
+	border-top: 0;
+}
+
+.sl-hipaa-why-us__list-index {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 38px;
+	height: 38px;
+	color: var(--sl-page-white, #ffffff);
+	background: var(--sl-page-primary, #1472ba);
+	border-radius: 50%;
+	font-size: 11px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.sl-hipaa-why-us__list-content {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	min-width: 0;
+}
+
+.sl-hipaa-why-us__list-content strong {
+	color: var(--sl-page-navy, #16234e);
+	font-size: 16px;
+	line-height: 1.45;
+}
+
+.sl-hipaa-why-us__list-content > span {
+	color: var(--sl-page-text, #4a4a4a);
+	font-size: 14px;
+	line-height: 1.7;
+	text-wrap: pretty;
+}
+
+
+/* =========================================================
+   STICKY RIGHT COLUMN
+   ========================================================= */
+
+.sl-hipaa-why-us__visual {
+	position: sticky;
+	top: 120px;
+	align-self: start;
+	min-width: 0;
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.sl-hipaa-why-us__figure {
+	width: 100%;
+	margin: 0;
+}
+
+.sl-hipaa-why-us__image {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	background: var(--sl-page-white, #ffffff);
+	border: 1px solid rgba(107, 124, 147, 0.28);
+	border-radius: 14px;
+}
+
+.sl-hipaa-why-us__image img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+/* =========================================================
+   SIMPLE IMAGE PLACEHOLDER
+   ========================================================= */
+
+.sl-hipaa-why-us__placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 8px;
+	width: 100%;
+	height: 100%;
+	padding: 28px;
+	color: var(--sl-page-muted, #6b7c93);
+	text-align: center;
+}
+
+.sl-hipaa-why-us__placeholder-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 38px;
+	height: 38px;
+	margin-bottom: 4px;
+}
+
+.sl-hipaa-why-us__placeholder-icon svg {
+	display: block;
+	width: 34px;
+	height: 34px;
+}
+
+.sl-hipaa-why-us__placeholder strong {
+	color: var(--sl-page-navy, #16234e);
+	font-size: 16px;
+	line-height: 1.4;
+}
+
+.sl-hipaa-why-us__placeholder > span:last-child {
+	color: var(--sl-page-muted, #6b7c93);
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+
+/* =========================================================
+   IMAGE CAPTION
+   ========================================================= */
+
+.sl-hipaa-why-us__figure figcaption {
+	margin-top: 12px;
+	color: var(--sl-page-muted, #6b7c93);
+	font-size: 13px;
+	line-height: 1.6;
+	text-align: center;
+	text-wrap: pretty;
+}
+
+
+/* =========================================================
+   CLIENT NAMES
+   ========================================================= */
+
+.sl-hipaa-why-us__clients {
+	margin-top: 28px;
+	text-align: center;
+}
+
+.sl-hipaa-why-us__clients > p {
+	margin: 0 0 15px;
+	color: var(--sl-page-muted, #6b7c93);
+	font-size: 11px;
+	font-weight: 700;
+	line-height: 1.5;
+	text-transform: uppercase;
+}
+
+.sl-hipaa-why-us__clients ul {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 12px 24px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-hipaa-why-us__clients li {
+	color: var(--sl-page-navy, #16234e);
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1.4;
+	white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLET
+   Sticky behaviour is removed when columns stack.
+   ========================================================= */
+
+@media (max-width: 991px) {
+	.sl-hipaa-why-us {
+		padding: 72px 0;
+	}
+
+	.sl-hipaa-why-us__grid {
+		grid-template-columns: minmax(0, 1fr);
+		gap: 44px;
+	}
+
+	.sl-hipaa-why-us__visual {
+		position: static;
+		top: auto;
+	}
+
+	.sl-hipaa-why-us__image {
+		max-height: 520px;
+	}
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+	.sl-hipaa-why-us {
+		padding: 60px 0;
+	}
+
+	.sl-hipaa-why-us__intro {
+		margin-bottom: 28px;
+	}
+
+	.sl-hipaa-why-us__intro h2 {
+		margin-bottom: 16px;
+		text-wrap: pretty;
+	}
+
+	.sl-hipaa-why-us__grid {
+		gap: 36px;
+	}
+
+	.sl-hipaa-why-us__list-item {
+		grid-template-columns: 36px minmax(0, 1fr);
+		gap: 12px;
+		padding: 17px 0;
+	}
+
+	.sl-hipaa-why-us__list-index {
+		width: 34px;
+		height: 34px;
+	}
+
+	.sl-hipaa-why-us__placeholder {
+		padding: 22px 18px;
+	}
+
+	.sl-hipaa-why-us__clients {
+		margin-top: 22px;
+	}
+
+	.sl-hipaa-why-us__clients ul {
+		gap: 10px 18px;
+	}
+}

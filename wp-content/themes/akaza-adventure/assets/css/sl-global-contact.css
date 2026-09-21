@@ -1,0 +1,300 @@
+/*
+ * SucceedLEARN — Global contact section
+ *
+ * Layout + action buttons + form panel chrome.
+ * Apply only on pages that opt in (start with US harassment).
+ *
+ * Markup:
+ *   <section class="sl-contact sl-contact--on-white" id="contact">
+ *     <div class="container">
+ *       <div class="sl-contact__grid">
+ *         <div class="sl-contact__content">…</div>
+ *         <div class="sl-contact__form-panel">…form…</div>
+ *       </div>
+ *     </div>
+ *   </section>
+ *
+ * Section variants (pick one):
+ *   .sl-contact--on-white  → white section bg, form with no border/padding chrome
+ *   .sl-contact--on-soft   → #f5f5f5 section bg, white form card with border + padding
+ *
+ * Contact action buttons:
+ *   <a class="sl-contact-btn sl-contact-btn--email" href="mailto:…">…</a>
+ *   <a class="sl-contact-btn sl-contact-btn--whatsapp" href="…">…</a>
+ *
+ * Do not use --primary/--secondary here: global CTA attribute selectors
+ * (btn--primary / btn--secondary) would restyle them.
+ *
+ * Button look stays the same on --on-white and --on-soft.
+ * Only the section background / form panel chrome changes.
+ */
+
+.sl-contact {
+	padding: 90px 0;
+}
+
+.sl-contact--on-white {
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-contact--on-soft {
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-contact__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+	gap: 64px;
+	align-items: start;
+}
+
+.sl-contact__content {
+	min-width: 0;
+}
+
+.sl-contact__content h2 {
+	margin-bottom: 22px;
+}
+
+.sl-contact__content h2 span {
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-contact__copy {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.sl-contact__copy p {
+	margin: 0;
+	color: var(--sl-page-text, #4A4A4A);
+	line-height: 1.7;
+}
+
+.sl-contact__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin-top: 30px;
+}
+
+/* =========================================================
+   Contact action buttons (email / WhatsApp chips)
+   Same UI on white or soft section backgrounds.
+   Email = border-only. WhatsApp = filled green.
+   ========================================================= */
+
+.sl-contact-btn {
+	box-sizing: border-box;
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	min-height: 56px;
+	padding: 10px 16px;
+	border: 1px solid transparent;
+	border-radius: 12px;
+	text-decoration: none;
+	transition:
+		border-color 0.2s ease,
+		background 0.2s ease,
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.sl-contact-btn:hover,
+.sl-contact-btn:focus {
+	transform: translateY(-2px);
+	outline: none;
+}
+
+.sl-contact-btn__stack {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 2px;
+	min-width: 0;
+}
+
+.sl-contact-btn__label {
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 1.25;
+}
+
+.sl-contact-btn__value {
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 1.3;
+	word-break: break-word;
+}
+
+.sl-contact-btn__icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 auto;
+	color: currentColor;
+}
+
+.sl-contact-btn__icon svg {
+	display: block;
+	width: 22px;
+	height: 22px;
+}
+
+/* Primary (email): border-only chip */
+.sl-contact-btn--email {
+	border-color: rgba(107, 124, 147, 0.28);
+	background: transparent;
+}
+
+.sl-contact-btn--email .sl-contact-btn__label {
+	color: var(--sl-page-muted, #6B7C93);
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.sl-contact-btn--email .sl-contact-btn__value {
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-contact-btn--email:hover,
+.sl-contact-btn--email:focus {
+	border-color: var(--sl-page-primary, #1472ba);
+	background: transparent;
+	box-shadow: 0 8px 20px rgba(22, 35, 78, 0.08);
+}
+
+/* WhatsApp: filled green, white icon + text (always) */
+.sl-contact-btn--whatsapp {
+	border-color: #25d366;
+	background: #25d366;
+	color: #ffffff !important;
+	box-shadow: 0 12px 28px rgba(37, 211, 102, 0.28);
+}
+
+.sl-contact-btn--whatsapp .sl-contact-btn__label,
+.sl-contact-btn--whatsapp .sl-contact-btn__value,
+.sl-contact-btn--whatsapp .sl-contact-btn__icon,
+.sl-contact-btn--whatsapp:visited,
+.sl-contact-btn--whatsapp:visited .sl-contact-btn__label,
+.sl-contact-btn--whatsapp:visited .sl-contact-btn__value,
+.sl-contact-btn--whatsapp:visited .sl-contact-btn__icon {
+	color: #ffffff !important;
+}
+
+.sl-contact-btn--whatsapp .sl-contact-btn__label {
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1.25;
+}
+
+.sl-contact-btn--whatsapp:hover,
+.sl-contact-btn--whatsapp:focus,
+.sl-contact-btn--whatsapp:active {
+	border-color: #1ebe57;
+	background: #1ebe57;
+	color: #ffffff !important;
+	box-shadow: 0 16px 32px rgba(37, 211, 102, 0.34);
+}
+
+.sl-contact-btn--whatsapp:hover .sl-contact-btn__label,
+.sl-contact-btn--whatsapp:hover .sl-contact-btn__value,
+.sl-contact-btn--whatsapp:hover .sl-contact-btn__icon,
+.sl-contact-btn--whatsapp:focus .sl-contact-btn__label,
+.sl-contact-btn--whatsapp:focus .sl-contact-btn__value,
+.sl-contact-btn--whatsapp:focus .sl-contact-btn__icon,
+.sl-contact-btn--whatsapp:active .sl-contact-btn__label,
+.sl-contact-btn--whatsapp:active .sl-contact-btn__value,
+.sl-contact-btn--whatsapp:active .sl-contact-btn__icon {
+	color: #ffffff !important;
+}
+
+/* =========================================================
+   Form panel variants
+   ========================================================= */
+
+.sl-contact__form-panel {
+	min-width: 0;
+}
+
+.sl-contact__form-panel .sl-home-form-wrapper,
+.sl-contact__form-panel .sl-home-form-wrapper--slim {
+	display: block;
+	width: 100%;
+	max-width: none;
+	margin: 0;
+	align-items: stretch;
+}
+
+.sl-contact__form-panel .sl-home-form-wrapper--slim .scf-form-wrap,
+.sl-contact__form-panel .sl-home-form-wrapper--slim .scf-form-wrap.scf-form-wrap-course,
+.sl-contact__form-panel .ssf-form-wrap {
+	width: 100%;
+	max-width: none;
+	margin: 0;
+}
+
+/* White section: form sits flush, no card chrome */
+.sl-contact--on-white .sl-contact__form-panel {
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	background: transparent;
+	box-shadow: none;
+}
+
+/* Soft section (#f5f5f5): white form card with border + padding */
+.sl-contact--on-soft .sl-contact__form-panel {
+	padding: 32px;
+	border: 1px solid rgba(107, 124, 147, 0.18);
+	border-radius: 20px;
+	background: var(--sl-page-white, #ffffff);
+	box-shadow: 0 18px 48px rgba(22, 35, 78, 0.07);
+	box-sizing: border-box;
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (max-width: 991px) {
+	.sl-contact {
+		padding: 72px 0;
+	}
+
+	.sl-contact__grid {
+		grid-template-columns: 1fr;
+		gap: 48px;
+	}
+
+	.sl-contact--on-soft .sl-contact__form-panel {
+		padding: 28px 24px;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-contact {
+		padding: 60px 0;
+	}
+
+	.sl-contact__grid {
+		gap: 36px;
+	}
+
+	.sl-contact__actions {
+		flex-direction: column;
+		align-items: stretch;
+		margin-top: 24px;
+	}
+
+	.sl-contact-btn {
+		width: 100%;
+	}
+
+	.sl-contact--on-soft .sl-contact__form-panel {
+		padding: 24px 18px;
+		border-radius: 16px;
+	}
+}

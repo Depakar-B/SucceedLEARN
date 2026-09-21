@@ -1,0 +1,295 @@
+/*
+ * DPDPA Compliance Training — Hero + workday dashboard.
+ */
+
+.sl-dpdpa-hero {
+	position: relative;
+	z-index: 1;
+	padding: calc(var(--slf-header-clearance, 76px) + 70px) 0 90px;
+	background:
+		radial-gradient(900px 460px at 0% 0%, rgba(109, 195, 235, 0.22), transparent 70%),
+		radial-gradient(900px 460px at 100% 0%, rgba(20, 114, 186, 0.1), transparent 72%),
+		var(--sl-page-white, #ffffff);
+}
+
+.sl-dpdpa-hero__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+	gap: 40px;
+	align-items: stretch;
+}
+
+.sl-dpdpa-hero__copy .sl-home-sub-heading {
+	margin-bottom: 14px;
+}
+
+.sl-dpdpa-hero__copy h1 {
+	margin-bottom: 16px;
+}
+
+.sl-dpdpa-hero__lede {
+	margin: 0;
+	max-width: 62ch;
+	color: var(--sl-page-muted, #6b7c93);
+	font-size: 18px;
+	line-height: 1.8;
+}
+
+.sl-dpdpa-hero__fine {
+	margin: 14px 0 0;
+	font-size: 14px;
+	color: var(--sl-page-muted, #6b7c93);
+}
+
+.sl-dpdpa-hero__trust {
+	margin: 18px 0 0;
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--sl-page-muted, #6b7c93);
+}
+
+.sl-dpdpa-hero__trust strong {
+	color: var(--sl-page-navy, #16234e);
+	font-weight: 800;
+}
+
+.sl-dpdpa-workday {
+	background: var(--sl-page-navy, #16234e);
+	border-radius: 18px;
+	padding: 28px;
+	box-shadow: 0 30px 70px rgba(22, 35, 78, 0.18);
+	color: var(--sl-page-white, #ffffff);
+	overflow: visible;
+}
+
+.sl-dpdpa-workday__top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+.sl-dpdpa-workday__label {
+	font-size: 11px;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.62);
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-weight: 600;
+}
+
+.sl-dpdpa-workday__live {
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: var(--sl-page-primary-soft, #6dc3eb);
+	animation: slDpdpaLivePulse 2s ease-in-out infinite;
+}
+
+.sl-dpdpa-workday__clock {
+	font-size: 13px;
+	color: var(--sl-page-cta, #ea3e24);
+	font-weight: 700;
+	font-variant-numeric: tabular-nums;
+}
+
+.sl-dpdpa-workday__grid {
+	display: grid;
+	grid-template-columns: repeat(20, minmax(0, 1fr));
+	gap: 5px;
+	margin-bottom: 22px;
+}
+
+.sl-dpdpa-workday__dot {
+	aspect-ratio: 1;
+	border-radius: 2.5px;
+	background: rgba(255, 255, 255, 0.14);
+	position: relative;
+}
+
+.sl-dpdpa-workday__dot.on {
+	background: rgba(255, 255, 255, 0.42);
+}
+
+.sl-dpdpa-workday__dot.hit {
+	background: var(--sl-page-primary, #1472ba);
+	animation: slDpdpaFadeIn 0.5s ease;
+}
+
+.sl-dpdpa-workday__dot.bad {
+	background: var(--sl-page-cta, #ea3e24);
+	cursor: help;
+	animation: slDpdpaBadPulse 2.4s ease-in-out infinite;
+}
+
+.sl-dpdpa-workday__tip {
+	position: absolute;
+	bottom: calc(100% + 8px);
+	left: 50%;
+	transform: translateX(-50%);
+	background: var(--sl-page-white, #ffffff);
+	color: var(--sl-page-navy, #16234e);
+	font-size: 11.5px;
+	font-weight: 600;
+	padding: 7px 10px;
+	border-radius: 6px;
+	box-shadow: 0 2px 8px rgba(22, 35, 78, 0.08), 0 16px 36px rgba(22, 35, 78, 0.1);
+	white-space: nowrap;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.15s;
+	z-index: 6;
+}
+
+.sl-dpdpa-workday__dot.bad:hover .sl-dpdpa-workday__tip {
+	opacity: 1;
+}
+
+.sl-dpdpa-workday__tip::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	border: 5px solid transparent;
+	border-top-color: var(--sl-page-white, #ffffff);
+}
+
+.sl-dpdpa-workday__count {
+	border-top: 1px solid rgba(255, 255, 255, 0.15);
+	padding-top: 20px;
+}
+
+.sl-dpdpa-workday__num {
+	font-size: 44px;
+	font-weight: 700;
+	letter-spacing: -0.03em;
+	line-height: 1;
+	display: block;
+	font-variant-numeric: tabular-nums;
+	color: var(--sl-page-white, #ffffff);
+}
+
+.sl-dpdpa-workday__sub {
+	font-size: 13.5px;
+	color: rgba(255, 255, 255, 0.68);
+	margin-top: 7px;
+	display: block;
+}
+
+.sl-dpdpa-workday__math {
+	display: flex;
+	margin-top: 20px;
+	border-top: 1px solid rgba(255, 255, 255, 0.15);
+	padding-top: 18px;
+}
+
+.sl-dpdpa-workday__m {
+	flex: 1;
+	padding-right: 14px;
+}
+
+.sl-dpdpa-workday__m .k {
+	font-size: 17px;
+	font-weight: 600;
+	color: var(--sl-page-white, #ffffff);
+	display: block;
+}
+
+.sl-dpdpa-workday__m .l {
+	font-size: 11.5px;
+	color: rgba(255, 255, 255, 0.58);
+	margin-top: 3px;
+	display: block;
+	line-height: 1.45;
+}
+
+.sl-dpdpa-workday__foot {
+	margin-top: 18px;
+	padding-top: 16px;
+	border-top: 1px solid rgba(255, 255, 255, 0.15);
+	font-size: 12.5px;
+	color: rgba(255, 255, 255, 0.68);
+	display: flex;
+	align-items: center;
+	gap: 9px;
+}
+
+.sl-dpdpa-workday__foot .sq {
+	width: 9px;
+	height: 9px;
+	border-radius: 2px;
+	background: var(--sl-page-cta, #ea3e24);
+	flex-shrink: 0;
+}
+
+@keyframes slDpdpaLivePulse {
+	0%,
+	100% {
+		opacity: 1;
+		box-shadow: 0 0 0 0 rgba(109, 195, 235, 0.5);
+	}
+	50% {
+		opacity: 0.55;
+		box-shadow: 0 0 0 4px rgba(109, 195, 235, 0);
+	}
+}
+
+@keyframes slDpdpaBadPulse {
+	0%,
+	100% {
+		box-shadow: 0 0 0 0 rgba(234, 62, 36, 0.55);
+	}
+	50% {
+		box-shadow: 0 0 0 5px rgba(234, 62, 36, 0);
+	}
+}
+
+@keyframes slDpdpaFadeIn {
+	from {
+		opacity: 0.14;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@media (max-width: 991px) {
+	.sl-dpdpa-hero {
+		padding: calc(var(--slf-header-clearance, 76px) + 55px) 0 60px;
+	}
+
+	.sl-dpdpa-hero__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.sl-dpdpa-workday {
+		width: min(520px, 100%);
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media (max-width: 720px) {
+	.sl-dpdpa-workday__math {
+		flex-wrap: wrap;
+		gap: 14px;
+	}
+
+	.sl-dpdpa-workday__m {
+		flex: 0 0 45%;
+	}
+}
+
+@media (max-width: 575px) {
+	.sl-dpdpa-workday {
+		padding: 22px 18px;
+	}
+
+	.sl-dpdpa-workday__num {
+		font-size: 36px;
+	}
+}

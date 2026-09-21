@@ -1,0 +1,252 @@
+{
+  "export_file": "c:\\Users\\SucceedTech\\Downloads\\elearnposh.com-AMP-Issue-2026-06-22.xlsx",
+  "total_urls": 60,
+  "still_failing": [],
+  "not_amp": [
+    {
+      "url": "https://elearnposh.com/equality-and-diversity/",
+      "tested": "https://elearnposh.com/equality-and-diversity/amp/",
+      "len": 989648
+    }
+  ],
+  "fetch_errors": [],
+  "passing": [
+    {
+      "url": "https://elearnposh.com/workplace-romance-posh-compliance-guide/",
+      "tested": "https://elearnposh.com/workplace-romance-posh-compliance-guide/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/prevention-of-sexual-harassment-working-remotely/",
+      "tested": "https://elearnposh.com/prevention-of-sexual-harassment-working-remotely/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/posh-act/",
+      "tested": "https://elearnposh.com/posh-act/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/posh-courses/pocso-prevention-of-child-sexual-abuse/",
+      "tested": "https://elearnposh.com/posh-courses/pocso-prevention-of-child-sexual-abuse/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/",
+      "tested": "https://elearnposh.com/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/handling-hostile-work-environment-effectively/",
+      "tested": "https://elearnposh.com/handling-hostile-work-environment-effectively/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/build-posh-awareness-about-posh-in-the-new-normal/",
+      "tested": "https://elearnposh.com/build-posh-awareness-about-posh-in-the-new-normal/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/training-posh-committees-strategies-for-a-safer-workplace/",
+      "tested": "https://elearnposh.com/training-posh-committees-strategies-for-a-safer-workplace/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/important-announcement-on-annual-report-filing/",
+      "tested": "https://elearnposh.com/important-announcement-on-annual-report-filing/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/7-point-sexual-harassment-prevention-at-workplace/",
+      "tested": "https://elearnposh.com/7-point-sexual-harassment-prevention-at-workplace/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/posh-inquiries-and-absence-of-evidence/",
+      "tested": "https://elearnposh.com/posh-inquiries-and-absence-of-evidence/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/posh-in-higher-educational-institutions/",
+      "tested": "https://elearnposh.com/posh-in-higher-educational-institutions/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/solutions/posh-training-for-employees/",
+      "tested": "https://elearnposh.com/solutions/posh-training-for-employees/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/conciliation-under-the-posh-law/",
+      "tested": "https://elearnposh.com/conciliation-under-the-posh-law/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/posh-courses/posh-for-employees/",
+      "tested": "https://elearnposh.com/posh-courses/posh-for-employees/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/deepfake-workplace-harassment/",
+      "tested": "https://elearnposh.com/deepfake-workplace-harassment/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/gender-neutrality-and-posh-law/",
+      "tested": "https://elearnposh.com/gender-neutrality-and-posh-law/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/elearnposh-frequently-asked-questions-faqs/",
+      "tested": "https://elearnposh.com/elearnposh-frequently-asked-questions-faqs/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/punishments-under-the-posh-act/",
+      "tested": "https://elearnposh.com/punishments-under-the-posh-act/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/cross-examination-in-posh-inquiries-precision/",
+      "tested": "https://elearnposh.com/cross-examination-in-posh-inquiries-precision/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/cross-examination-in-posh-inquiries-precision/amp/",
+      "tested": "https://elearnposh.com/cross-examination-in-posh-inquiries-precision/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/posh-compliance-updates-2026-india/",
+      "tested": "https://elearnposh.com/posh-compliance-updates-2026-india/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/our-webinars/",
+      "tested": "https://elearnposh.com/our-webinars/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/major-laws-against-harassment-of-men-in-india/",
+      "tested": "https://elearnposh.com/major-laws-against-harassment-of-men-in-india/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/false-complaints/",
+      "tested": "https://elearnposh.com/false-complaints/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/blog/",
+      "tested": "https://elearnposh.com/blog/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/blog-workplace-harassment-and-sexual-harassment/",
+      "tested": "https://elearnposh.com/blog-workplace-harassment-and-sexual-harassment/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/third-party-harassment-under-posh/amp/",
+      "tested": "https://elearnposh.com/third-party-harassment-under-posh/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/addressing-challenges-in-posh-inquiries/",
+      "tested": "https://elearnposh.com/addressing-challenges-in-posh-inquiries/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/board-resolution-for-internal-committee/",
+      "tested": "https://elearnposh.com/board-resolution-for-internal-committee/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/online-vs-classroom-training-for-posh-awareness/",
+      "tested": "https://elearnposh.com/online-vs-classroom-training-for-posh-awareness/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/reporting-sexual-harassment-in-workplace/",
+      "tested": "https://elearnposh.com/reporting-sexual-harassment-in-workplace/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/conflict-of-interest-in-the-internal-committee/",
+      "tested": "https://elearnposh.com/conflict-of-interest-in-the-internal-committee/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/transgender-rights-at-workplace/",
+      "tested": "https://elearnposh.com/transgender-rights-at-workplace/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/posh-courses/posh-for-ic-members/",
+      "tested": "https://elearnposh.com/posh-courses/posh-for-ic-members/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/local-complaints-committee/",
+      "tested": "https://elearnposh.com/local-complaints-committee/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/the-subtle-signs-of-sexual-harassment/",
+      "tested": "https://elearnposh.com/the-subtle-signs-of-sexual-harassment/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/posh-insights-help-you-build-respectful-workplaces/",
+      "tested": "https://elearnposh.com/posh-insights-help-you-build-respectful-workplaces/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/role-powers-of-internal-committee/amp/",
+      "tested": "https://elearnposh.com/role-powers-of-internal-committee/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/the-legality-of-anonymous-complaints-under-posh-law/",
+      "tested": "https://elearnposh.com/the-legality-of-anonymous-complaints-under-posh-law/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/posh-act-submit-annual-report/",
+      "tested": "https://elearnposh.com/posh-act-submit-annual-report/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/tricky-cases-handled-by-internal-committee/",
+      "tested": "https://elearnposh.com/tricky-cases-handled-by-internal-committee/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/interim-measures-in-posh-cases/",
+      "tested": "https://elearnposh.com/interim-measures-in-posh-cases/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/fighting-sexual-harassment-during-the-new-normal/",
+      "tested": "https://elearnposh.com/fighting-sexual-harassment-during-the-new-normal/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/update-the-posh-policy-for-the-new-normal/",
+      "tested": "https://elearnposh.com/update-the-posh-policy-for-the-new-normal/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/ultimate-posh-guide-for-hr/",
+      "tested": "https://elearnposh.com/ultimate-posh-guide-for-hr/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/posh-awareness-training-the-what-why-and-how/",
+      "tested": "https://elearnposh.com/posh-awareness-training-the-what-why-and-how/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/sole-testimony-in-posh-departmental-enquiry/",
+      "tested": "https://elearnposh.com/sole-testimony-in-posh-departmental-enquiry/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/she-box-a-single-window-platform-for-posh-compliance/amp/",
+      "tested": "https://elearnposh.com/she-box-a-single-window-platform-for-posh-compliance/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/sexual-harassment-updates-jan-2026-posh-law-india/",
+      "tested": "https://elearnposh.com/sexual-harassment-updates-jan-2026-posh-law-india/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/appeals-and-appellate-authority-under-posh-act/",
+      "tested": "https://elearnposh.com/appeals-and-appellate-authority-under-posh-act/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/bns-section-75-sexual-harassment-law-india/",
+      "tested": "https://elearnposh.com/bns-section-75-sexual-harassment-law-india/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/the-ultimate-guide-to-posh-compliance/",
+      "tested": "https://elearnposh.com/the-ultimate-guide-to-posh-compliance/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/elearnposh-monthly-digest-december-edition-2025/amp/",
+      "tested": "https://elearnposh.com/elearnposh-monthly-digest-december-edition-2025/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/posh-act-updates-2026-india-shebox-changes/",
+      "tested": "https://elearnposh.com/posh-act-updates-2026-india-shebox-changes/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/newsletter-august-2025-edition/amp/",
+      "tested": "https://elearnposh.com/newsletter-august-2025-edition/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/beyond-posh-essential-laws-leaders-should-know/",
+      "tested": "https://elearnposh.com/beyond-posh-essential-laws-leaders-should-know/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/tackle-retaliation-prevent-sexual-harassment/",
+      "tested": "https://elearnposh.com/tackle-retaliation-prevent-sexual-harassment/amp/"
+    },
+    {
+      "url": "https://elearnposh.com/posh-annual-report-2025-updates-deadlines-checklist/amp/",
+      "tested": "https://elearnposh.com/posh-annual-report-2025-updates-deadlines-checklist/amp/"
+    }
+  ],
+  "issue_totals": {}
+}

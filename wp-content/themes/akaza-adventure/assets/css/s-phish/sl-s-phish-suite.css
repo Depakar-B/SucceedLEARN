@@ -1,0 +1,201 @@
+/* =========================================================
+   S-PHISH - SECURITY BEHAVIOUR & CULTURE SUITE
+   ========================================================= */
+
+   .sl-s-phish-suite {
+    padding: 80px 0;
+    background: #f5f5f5;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.sl-s-phish-suite__intro {
+    width: 100%;
+    margin-bottom: 48px;
+}
+
+.sl-s-phish-suite__intro .sl-home-sub-heading {
+    display: block;
+    margin-bottom: 14px;
+}
+
+.sl-s-phish-suite__intro h2 {
+    margin-bottom: 24px;
+}
+
+.sl-s-phish-suite__intro .sl-panel-title {
+    margin-bottom: 18px;
+}
+
+.sl-s-phish-suite__intro p {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   SOLUTION CARDS
+   ========================================================= */
+
+.sl-s-phish-suite__cards {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 20px;
+
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.sl-s-phish-suite__card {
+    grid-column: span 3;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 220px;
+    padding: 28px 26px;
+
+    background: #ffffff;
+    border: 1px solid rgba(22, 35, 78, 0.10);
+    border-radius: 14px;
+
+    box-sizing: border-box;
+}
+
+.sl-s-phish-suite__card:nth-child(5) {
+    grid-column: 3 / span 3;
+}
+
+.sl-s-phish-suite__card:nth-child(6) {
+    grid-column: 6 / span 3;
+}
+
+.sl-s-phish-suite__card:nth-child(7) {
+    grid-column: 9 / span 3;
+}
+
+.sl-s-phish-suite__number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    margin-bottom: 22px;
+
+    background: rgba(20, 114, 186, 0.08);
+    border: 1px solid rgba(20, 114, 186, 0.18);
+    border-radius: 8px;
+
+    color: var(--sl-page-primary, #1472ba);
+    font-weight: 700;
+    line-height: 1;
+}
+
+.sl-s-phish-suite__card .sl-panel-title {
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+
+.sl-s-phish-suite__card p {
+    margin: 0;
+}
+
+
+/* =========================================================
+   CLOSING MESSAGE
+   ========================================================= */
+
+.sl-s-phish-suite__closing {
+    max-width: 1180px;
+    margin: 35px auto 0;
+    padding: 24px 28px;
+
+    background: #ffffff;
+    border-left: 4px solid var(--sl-page-primary, #1472ba);
+    border-radius: 10px;
+
+    box-sizing: border-box;
+}
+
+.sl-s-phish-suite__closing p {
+    margin: 0;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+    .sl-s-phish-suite {
+        padding: 70px 0;
+    }
+
+    .sl-s-phish-suite__cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 900px;
+    }
+
+    .sl-s-phish-suite__card,
+    .sl-s-phish-suite__card:nth-child(5),
+    .sl-s-phish-suite__card:nth-child(6),
+    .sl-s-phish-suite__card:nth-child(7) {
+        grid-column: auto;
+    }
+
+    .sl-s-phish-suite__card:nth-child(7) {
+        grid-column: 1 / -1;
+        max-width: calc(50% - 10px);
+        justify-self: center;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .sl-s-phish-suite {
+        padding: 60px 0;
+    }
+
+    .sl-s-phish-suite__intro {
+        margin-bottom: 34px;
+    }
+
+    .sl-s-phish-suite__cards {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .sl-s-phish-suite__card,
+    .sl-s-phish-suite__card:nth-child(5),
+    .sl-s-phish-suite__card:nth-child(6),
+    .sl-s-phish-suite__card:nth-child(7) {
+        grid-column: auto;
+        max-width: none;
+    }
+
+    .sl-s-phish-suite__card {
+        min-height: 0;
+        padding: 24px 20px;
+    }
+
+    .sl-s-phish-suite__number {
+        margin-bottom: 18px;
+    }
+
+    .sl-s-phish-suite__closing {
+        margin-top: 28px;
+        padding: 20px;
+    }
+
+}

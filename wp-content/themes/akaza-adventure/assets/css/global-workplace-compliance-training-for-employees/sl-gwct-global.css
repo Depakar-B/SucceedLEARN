@@ -1,0 +1,18 @@
+/**
+ * GWCT page-only token aliases.
+ * Shared foundation: assets/css/sl-page-foundation.css (.sl-training-page)
+ */
+
+.sl-gwct-page.sl-training-page,
+.sl-gwct-page {
+	--gwct-primary: var(--sl-page-primary);
+	--gwct-primary-dark: var(--sl-page-primary-dark);
+	--gwct-primary-soft: rgba(109, 195, 235, 0.16);
+	--gwct-accent: var(--sl-page-cta);
+	--gwct-navy: var(--sl-page-navy);
+	--gwct-muted: var(--sl-page-muted);
+	--gwct-border: rgba(107, 124, 147, 0.18);
+	/* Match site global heading scale (main.css) */
+	--sl-fs-h1: clamp(34px, 3.4vw, 60px);
+	--sl-fs-h2: clamp(30px, 2.7vw, 48px);
+}

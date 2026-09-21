@@ -1,0 +1,167 @@
+/* =========================================================
+   Financial Crime Prevention — CPD Certification
+   Layout only — typography handled by fcp-global.css
+   ========================================================= */
+
+   .sl-fcp-cpd {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-white);
+}
+
+.sl-fcp-cpd .container {
+	width: 100%;
+}
+
+.sl-fcp-cpd__box {
+	position: relative;
+	background: var(--sl-page-white);
+	border: 1px solid rgba(107, 124, 147, 0.22);
+	border-radius: 24px;
+	padding: 52px 54px;
+	box-shadow: 0 24px 55px rgba(22, 35, 78, 0.10);
+}
+
+.sl-fcp-cpd__layout {
+	display: grid;
+	grid-template-columns: 200px minmax(0, 1fr);
+	gap: 42px;
+	align-items: center;
+}
+
+.sl-fcp-cpd__badge-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.sl-fcp-cpd__logo {
+	display: block;
+	width: 100%;
+	max-width: 180px;
+	height: auto;
+	object-fit: contain;
+}
+
+.sl-fcp-cpd__heading {
+	margin-bottom: 24px;
+}
+
+.sl-fcp-cpd__lead {
+	margin-bottom: 22px !important;
+}
+
+.sl-fcp-cpd__copy p {
+	margin-bottom: 18px;
+}
+
+.sl-fcp-cpd__copy p:last-child {
+	margin-bottom: 0;
+}
+
+.sl-fcp-cpd__features {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 12px;
+	margin-top: 24px;
+}
+
+.sl-fcp-cpd__feature {
+	min-height: 74px;
+	display: flex;
+	align-items: center;
+	padding: 16px 14px;
+	border: 1px solid rgba(107, 124, 147, 0.18);
+	border-radius: 10px;
+	background: rgba(245, 243, 239, 0.55);
+	color: var(--sl-page-navy);
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 1.45;
+}
+
+.sl-fcp-cpd p.sl-fcp-cpd__link {
+	margin-top: 28px;
+	margin-bottom: 0;
+}
+
+.sl-fcp-cpd__link-anchor {
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.sl-fcp-cpd__link-anchor:hover {
+	text-decoration: underline;
+}
+
+@media (max-width: 1199px) {
+
+	.sl-fcp-cpd {
+		padding: 80px 0;
+	}
+
+	.sl-fcp-cpd__box {
+		padding: 44px 42px;
+	}
+
+	.sl-fcp-cpd__layout {
+		grid-template-columns: 160px minmax(0, 1fr);
+		gap: 34px;
+	}
+
+	.sl-fcp-cpd__logo {
+		max-width: 150px;
+	}
+}
+
+@media (max-width: 991px) {
+
+	.sl-fcp-cpd__box {
+		padding: 38px 32px;
+	}
+
+	.sl-fcp-cpd__layout {
+		grid-template-columns: 1fr;
+		gap: 28px;
+	}
+
+	.sl-fcp-cpd__badge-wrap {
+		justify-content: flex-start;
+	}
+
+	.sl-fcp-cpd__features {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 767px) {
+
+	.sl-fcp-cpd {
+		padding: 60px 0;
+	}
+
+	.sl-fcp-cpd__box {
+		padding: 30px 22px;
+		border-radius: 18px;
+	}
+
+	.sl-fcp-cpd__features {
+		grid-template-columns: 1fr;
+	}
+
+	.sl-fcp-cpd__feature {
+		min-height: auto;
+	}
+}
+
+@media (max-width: 480px) {
+
+	.sl-fcp-cpd__box {
+		padding: 24px 18px;
+	}
+
+	.sl-fcp-cpd__logo {
+		max-width: 130px;
+	}
+}

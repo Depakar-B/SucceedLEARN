@@ -1,0 +1,205 @@
+/* =========================================================
+   SucceedLEARN GDPR Employee Awareness
+   Request a Preview / Contact
+   Aligned with FCP / DPDPA contact form UI.
+   ========================================================= */
+
+.sl-gdpr-request-preview {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+
+/* =========================================================
+   Main Layout
+   ========================================================= */
+
+.sl-gdpr-request-preview__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+	gap: 70px;
+	align-items: center;
+}
+
+.sl-gdpr-request-preview__content {
+	min-width: 0;
+}
+
+.sl-gdpr-request-preview__heading {
+	max-width: 760px;
+	margin: 0 0 34px;
+}
+
+.sl-gdpr-request-preview__heading p {
+	margin: 0;
+	color: var(--sl-page-text, #4A4A4A);
+	font-size: 17px;
+	line-height: 1.7;
+}
+
+
+/* =========================================================
+   Preview Benefits
+   ========================================================= */
+
+.sl-gdpr-request-preview__list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	max-width: 720px;
+}
+
+.sl-gdpr-request-preview__item {
+	display: flex;
+	align-items: center;
+	gap: 13px;
+	padding: 15px 18px;
+	border: 1px solid rgba(107, 124, 147, 0.22);
+	border-radius: 12px;
+	background: var(--sl-page-white, #ffffff);
+	color: var(--sl-page-text, #4A4A4A);
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.sl-gdpr-request-preview__icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
+	height: 30px;
+	flex: 0 0 30px;
+	color: var(--sl-page-primary, #1472ba);
+}
+
+
+/* =========================================================
+   Contact Form Card
+   ========================================================= */
+
+.sl-gdpr-request-preview__form {
+	width: 100%;
+	min-width: 0;
+}
+
+.sl-gdpr-request-preview__form-inner {
+	min-width: 0;
+	width: 100%;
+	padding: 38px;
+	border: 1px solid rgba(107, 124, 147, 0.22);
+	border-radius: 24px;
+	background: var(--sl-page-white, #ffffff);
+	box-shadow: 0 22px 55px rgba(22, 35, 78, 0.08);
+	box-sizing: border-box;
+}
+
+.sl-gdpr-request-preview__form-inner .sl-home-form-wrapper,
+.sl-gdpr-request-preview__form-inner .sl-home-form-wrapper--slim {
+	display: block;
+	width: 100%;
+	max-width: none;
+	margin: 0;
+	align-items: stretch;
+}
+
+.sl-gdpr-request-preview__form-inner .sl-home-form-wrapper--slim .scf-form-wrap,
+.sl-gdpr-request-preview__form-inner .sl-home-form-wrapper--slim .scf-form-wrap.scf-form-wrap-course {
+	width: 100%;
+	max-width: none;
+	margin: 0;
+}
+
+
+/* =========================================================
+   Large desktop
+   ========================================================= */
+
+@media (min-width: 1400px) {
+
+	.sl-gdpr-request-preview {
+		padding: 100px 0;
+	}
+
+	.sl-gdpr-request-preview__grid {
+		gap: 80px;
+	}
+
+	.sl-gdpr-request-preview__form-inner {
+		padding: 42px;
+	}
+}
+
+
+/* =========================================================
+   Tablet / laptop
+   ========================================================= */
+
+@media (max-width: 1199px) {
+
+	.sl-gdpr-request-preview {
+		padding: 80px 0;
+	}
+
+	.sl-gdpr-request-preview__grid {
+		gap: 50px;
+	}
+
+	.sl-gdpr-request-preview__form-inner {
+		padding: 32px;
+	}
+}
+
+@media (max-width: 991px) {
+
+	.sl-gdpr-request-preview__grid {
+		grid-template-columns: 1fr;
+		gap: 45px;
+	}
+
+	.sl-gdpr-request-preview__heading,
+	.sl-gdpr-request-preview__list {
+		max-width: 900px;
+	}
+
+	.sl-gdpr-request-preview__form {
+		max-width: 900px;
+	}
+}
+
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+	.sl-gdpr-request-preview {
+		padding: 60px 0;
+	}
+
+	.sl-gdpr-request-preview__heading {
+		margin-bottom: 26px;
+	}
+
+	.sl-gdpr-request-preview__heading p {
+		font-size: 16px;
+	}
+
+	.sl-gdpr-request-preview__item {
+		padding: 14px 15px;
+	}
+
+	.sl-gdpr-request-preview__form {
+		max-width: 100%;
+	}
+
+	.sl-gdpr-request-preview__form-inner {
+		padding: 26px 22px;
+		border-radius: 18px;
+	}
+}

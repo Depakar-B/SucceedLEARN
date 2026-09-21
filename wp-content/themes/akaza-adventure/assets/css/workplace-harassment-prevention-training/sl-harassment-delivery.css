@@ -1,0 +1,156 @@
+/*
+ * SucceedLEARN
+ * Workplace Harassment Prevention
+ * Flexible Delivery
+ */
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.sl-harassment-delivery {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.sl-harassment-delivery__heading {
+	margin-bottom: 45px;
+}
+
+.sl-harassment-delivery__heading h2 {
+	margin: 0 0 16px;
+}
+
+.sl-harassment-delivery__heading h2 span {
+	color: var(--sl-heading-accent, #1472ba);
+}
+
+.sl-harassment-delivery__heading p {
+	margin: 0;
+}
+
+
+/* =========================================
+   DELIVERY GRID
+========================================= */
+
+.sl-harassment-delivery__grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	border-top: 1px solid rgba(22, 35, 78, 0.12);
+}
+
+
+/* =========================================
+   DELIVERY ITEM
+========================================= */
+
+.sl-harassment-delivery__item {
+	display: grid;
+	grid-template-columns: 50px minmax(0, 1fr);
+	align-items: start;
+	gap: 20px;
+	padding: 30px 30px 30px 0;
+	border-bottom: 1px solid rgba(22, 35, 78, 0.12);
+}
+
+.sl-harassment-delivery__item:nth-child(even) {
+	padding-left: 30px;
+	border-left: 1px solid rgba(22, 35, 78, 0.12);
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.sl-harassment-delivery__number {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 42px;
+	height: 42px;
+	border-radius: 8px;
+	background: rgba(20, 114, 186, 0.08);
+	color: var(--sl-page-primary, #1472ba);
+	font-weight: 700;
+}
+
+
+/* =========================================
+   CONTENT
+   H3 size from .sl-panel-title; colour from page h3
+========================================= */
+
+.sl-harassment-delivery__content .sl-panel-title {
+	color: var(--sl-heading-accent, #1472ba);
+}
+
+.sl-harassment-delivery__content p {
+	margin: 10px 0 0;
+}
+
+
+/* =========================================
+   CTA
+   Layout only.
+   Button appearance comes from
+   sl-global-buttons.css
+========================================= */
+
+.sl-harassment-delivery > .container > .sl-content-actions {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	margin-top: 30px;
+}
+
+
+/* =========================================
+   TABLET / MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+	.sl-harassment-delivery {
+		padding: 60px 0;
+	}
+
+	.sl-harassment-delivery__heading {
+		margin-bottom: 32px;
+	}
+
+	.sl-harassment-delivery__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.sl-harassment-delivery__item,
+	.sl-harassment-delivery__item:nth-child(even) {
+		grid-template-columns: 44px minmax(0, 1fr);
+		gap: 16px;
+		padding: 24px 0;
+		border-left: 0;
+	}
+
+	.sl-harassment-delivery__item:first-child {
+		padding-top: 24px;
+	}
+
+	.sl-harassment-delivery__number {
+		width: 40px;
+		height: 40px;
+	}
+
+	.sl-harassment-delivery > .container > .sl-content-actions {
+		margin-top: 24px;
+	}
+
+}

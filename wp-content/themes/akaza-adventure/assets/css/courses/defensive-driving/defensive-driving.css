@@ -1,0 +1,48 @@
+/* SucceedLEARN Defensive Driving — course-only colour + layout */
+
+.sl-course-page--defensive-driving {
+	--sl-page-primary: #6b3df4;
+	--sl-page-primary-dark: #5529d4;
+	--sl-page-primary-soft: #f0ecff;
+	--course-primary: #6b3df4;
+	--course-secondary: #5529d4;
+	--course-accent-on-dark: #beafff;
+	--risk-accent: #6b3df4;
+	--learning-accent: #6b3df4;
+	--learning-accent-light: #5529d4;
+	--localisation-accent: #6b3df4;
+	--audience-accent: #6b3df4;
+	--delivery-accent: #6b3df4;
+	--faq-accent: #6b3df4;
+	--cta-accent: #6b3df4;
+	--cta-accent-hover: #5529d4;
+	--highlights-accent: #6b3df4;
+	--curriculum-accent: #beafff;
+	--curriculum-accent-light: #beafff;
+	--curriculum-muted: #beafff;
+	--course-hero-accent: #beafff;
+	--course-hero-accent-2: #9b78ff;
+}
+
+.sl-course-page--defensive-driving .sl-course-hero {
+	--course-hero-accent: #beafff;
+	--course-hero-accent-2: #9b78ff;
+}
+
+.sl-course-page--defensive-driving .sl-course-hero--defensive-driving .sl-course-hero__background {
+	background-position: center right;
+}
+
+.sl-course-page--defensive-driving .sl-course-hero__features b {
+	color: #6b3df4;
+}
+
+.sl-course-page--defensive-driving .sl-course-learning__title-highlight {
+	color: var(--course-primary);
+	-webkit-text-fill-color: var(--course-primary);
+	background: none;
+}
+
+.sl-course-page--defensive-driving .sl-course-localisation__callout {
+	background: linear-gradient(100deg, #f0ecff 0%, #edf5ff 100%);
+}

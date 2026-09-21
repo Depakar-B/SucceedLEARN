@@ -1,0 +1,113 @@
+/* SucceedLEARN — Code of Conduct Social Proof Stats */
+
+.sl-coc-stats {
+	padding: 90px 0;
+	background: var(--sl-page-white);
+}
+
+.sl-coc-stats__heading {
+	margin: 0 0 48px;
+	text-align: left;
+}
+
+.sl-coc-stats__grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 0;
+	align-items: stretch;
+}
+
+.sl-coc-stats__item {
+	position: relative;
+	padding: 8px 28px 8px 0;
+	text-align: left;
+}
+
+.sl-coc-stats__item:not(:last-child)::after {
+	content: "";
+	position: absolute;
+	top: 12%;
+	right: 0;
+	width: 1px;
+	height: 76%;
+	background: rgba(107, 124, 147, 0.22);
+}
+
+.sl-coc-stats__value {
+	margin: 0;
+	line-height: 1;
+}
+
+.sl-coc-stats__counter,
+.sl-coc-stats__value > span {
+	display: inline;
+	margin: 0;
+	color: var(--sl-page-primary);
+	font-size: clamp(2.25rem, 3.6vw, 3rem);
+	font-weight: 700;
+	line-height: 1;
+}
+
+.sl-coc-stats__label {
+	margin: 12px 0 0;
+	color: var(--sl-page-text);
+	font-size: 16px;
+	line-height: 1.45;
+}
+
+@media (max-width: 991px) {
+	.sl-coc-stats {
+		padding: 70px 0;
+	}
+
+	.sl-coc-stats__heading {
+		margin-bottom: 36px;
+	}
+
+	.sl-coc-stats__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 28px 16px;
+	}
+
+	.sl-coc-stats__item {
+		padding: 0 16px 0 0;
+	}
+
+	.sl-coc-stats__item:nth-child(odd)::after {
+		content: "";
+		position: absolute;
+		top: 12%;
+		right: 0;
+		width: 1px;
+		height: 76%;
+		background: rgba(107, 124, 147, 0.22);
+	}
+
+	.sl-coc-stats__item:nth-child(even)::after,
+	.sl-coc-stats__item:last-child::after {
+		content: none;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-coc-stats {
+		padding: 60px 0;
+	}
+
+	.sl-coc-stats__grid {
+		grid-template-columns: 1fr;
+		gap: 24px;
+	}
+
+	.sl-coc-stats__item {
+		padding: 0;
+	}
+
+	.sl-coc-stats__item::after {
+		content: none !important;
+	}
+
+	.sl-coc-stats__label {
+		font-size: 15px;
+	}
+}

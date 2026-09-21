@@ -1,0 +1,90 @@
+/**
+ * Page-specific SucceedLEARN contact form brand colours.
+ * Overrides plugin defaults (--scf-brand) per landing page.
+ */
+
+.sl-gwct-page .scf-form-wrap {
+	--scf-brand: #1472ba;
+	--scf-brand-hover: #1169ab;
+}
+
+.sl-gwct-page .scf-field input:not([type="checkbox"]):not([type="radio"]):focus,
+.sl-gwct-page .scf-field select:focus,
+.sl-gwct-page .scf-field textarea:focus {
+	border-color: var(--scf-border, #d7e3ef);
+	box-shadow: none;
+}
+
+.sl-gwct-page .scf-checkbox a {
+	color: #1472ba;
+}
+
+.sl-gwct-page .scf-submit {
+	box-shadow: 0 6px 16px rgba(26, 59, 135, 0.22);
+}
+
+.sl-inclusive-training-page .scf-form-wrap {
+	--scf-brand: #177e89;
+	--scf-brand-hover: #126b74;
+}
+
+.sl-inclusive-training-page .scf-field input:not([type="checkbox"]):not([type="radio"]):focus,
+.sl-inclusive-training-page .scf-field select:focus,
+.sl-inclusive-training-page .scf-field textarea:focus {
+	border-color: var(--scf-border, #d7e3ef);
+	box-shadow: none;
+}
+
+.sl-inclusive-training-page .scf-checkbox a {
+	color: #177e89;
+}
+
+.sl-inclusive-training-page .scf-submit {
+	box-shadow: 0 6px 16px rgba(26, 59, 135, 0.22);
+}
+
+.sl-fcp-page .scf-form-wrap {
+	--scf-brand: #1472ba;
+	--scf-brand-hover: #1169ab;
+}
+
+.sl-fcp-page .scf-field input:not([type="checkbox"]):not([type="radio"]):focus,
+.sl-fcp-page .scf-field select:focus,
+.sl-fcp-page .scf-field textarea:focus {
+	border-color: var(--scf-border, #d7e3ef);
+	box-shadow: none;
+}
+
+.sl-fcp-page .scf-checkbox a {
+	color: #1472ba;
+}
+
+.sl-fcp-page .scf-submit {
+	box-shadow: 0 6px 16px rgba(26, 59, 135, 0.22);
+}
+
+/* Scroll-to-top + reading progress — brand blue (#1472ba) */
+.sl-scroll-top-wrap .sl-scroll-top {
+	background: var(--sl-chrome-fill, #1472ba);
+	box-shadow: 0 6px 18px rgba(var(--sl-chrome-shadow-rgb, 20, 114, 186), 0.38);
+}
+
+.sl-scroll-top-wrap .sl-scroll-top:hover,
+.sl-scroll-top-wrap .sl-scroll-top:focus {
+	filter: brightness(1.06);
+}
+
+.sl-scroll-top-wrap .sl-scroll-top:focus-visible {
+	outline-color: rgba(var(--sl-chrome-shadow-rgb, 20, 114, 186), 0.45);
+}
+
+#read-progress-bar {
+	width: 100% !important;
+	transform: scaleX(var(--sl-read-progress, 0));
+	transform-origin: left center;
+	background: var(--sl-chrome-fill, #1472ba) !important;
+}
+
+.progress-square__rect {
+	stroke: var(--sl-chrome-accent, #1472ba) !important;
+}

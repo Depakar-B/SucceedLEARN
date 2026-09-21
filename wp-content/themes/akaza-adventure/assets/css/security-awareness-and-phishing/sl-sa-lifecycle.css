@@ -1,0 +1,100 @@
+/*
+ * Security Awareness — Employee Lifecycle
+ */
+
+.sl-sa-lifecycle {
+	position: relative;
+	z-index: 1;
+	background: var(--sl-page-white);
+	padding: 90px 0;
+}
+
+.sl-sa-lifecycle__layout {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+	gap: 70px;
+	align-items: center;
+}
+
+.sl-sa-lifecycle__content {
+	max-width: 760px;
+}
+
+.sl-sa-lifecycle__content p {
+	margin-bottom: 18px;
+}
+
+.sl-sa-lifecycle__content p:last-child {
+	margin-bottom: 0;
+}
+
+.sl-sa-lifecycle__media {
+	width: 100%;
+	min-width: 0;
+}
+
+.sl-sa-lifecycle__image {
+	overflow: hidden;
+	width: 100%;
+	line-height: 0;
+	border-radius: 24px;
+}
+
+.sl-sa-lifecycle__image img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+@media (min-width: 1400px) {
+
+	.sl-sa-lifecycle__layout {
+		gap: 90px;
+	}
+
+}
+
+@media (max-width: 1199px) {
+
+	.sl-sa-lifecycle__layout {
+		gap: 50px;
+	}
+
+}
+
+@media (max-width: 991px) {
+
+	.sl-sa-lifecycle__layout {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.sl-sa-lifecycle__content {
+		max-width: 100%;
+	}
+
+	.sl-sa-lifecycle__media {
+		max-width: 700px;
+	}
+
+}
+
+@media (max-width: 767px) {
+
+	.sl-sa-lifecycle__layout {
+		gap: 30px;
+	}
+
+	.sl-sa-lifecycle__image {
+		border-radius: 18px;
+	}
+
+}
+
+@media (max-width: 480px) {
+
+	.sl-sa-lifecycle__image {
+		border-radius: 16px;
+	}
+
+}

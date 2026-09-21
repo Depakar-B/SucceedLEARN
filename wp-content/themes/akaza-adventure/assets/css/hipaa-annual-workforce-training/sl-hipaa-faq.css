@@ -1,0 +1,403 @@
+/* =========================================================
+   HIPAA FREQUENTLY ASKED QUESTIONS
+   Native details/summary accordion — no JavaScript required.
+   ========================================================= */
+
+   .sl-hipaa-faq {
+	width: 100%;
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+
+/* =========================================================
+   INTRO
+   Full container width with no max-width restrictions.
+   ========================================================= */
+
+.sl-hipaa-faq__intro {
+	width: 100%;
+	margin-bottom: 42px;
+}
+
+.sl-hipaa-faq__intro .sl-home-sub-heading {
+	display: flex;
+	align-items: center;
+	margin-bottom: 16px;
+}
+
+.sl-hipaa-faq__intro h2 {
+	width: 100%;
+	margin-bottom: 18px;
+	text-wrap: balance;
+}
+
+.sl-hipaa-faq__intro p {
+	width: 100%;
+	margin: 0;
+	text-wrap: pretty;
+}
+
+
+/* =========================================================
+   FAQ LIST
+   Single full-width column — all items stacked.
+   ========================================================= */
+
+.sl-hipaa-faq__grid {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	width: 100%;
+	max-width: 100%;
+}
+
+
+/* =========================================================
+   FAQ ITEM
+   ========================================================= */
+
+.sl-hipaa-faq__item {
+	overflow: hidden;
+	background: var(--sl-page-white, #ffffff);
+	border: 1px solid rgba(107, 124, 147, 0.25);
+	border-radius: 12px;
+}
+
+.sl-hipaa-faq__item[open] {
+	border-color: rgba(20, 114, 186, 0.48);
+}
+
+
+/* =========================================================
+   QUESTION
+   ========================================================= */
+
+.sl-hipaa-faq__question {
+	display: grid;
+	grid-template-columns: 38px minmax(0, 1fr) 32px;
+	align-items: center;
+	gap: 14px;
+	min-height: 78px;
+	padding: 17px 20px;
+	color: var(--sl-page-navy, #16234e);
+	cursor: pointer;
+	list-style: none;
+	transition: background-color 0.45s ease;
+}
+
+.sl-hipaa-faq__question::-webkit-details-marker {
+	display: none;
+}
+
+.sl-hipaa-faq__question::marker {
+	display: none;
+	content: "";
+}
+
+.sl-hipaa-faq__question:hover {
+	background: #f7fbfe;
+}
+
+.sl-hipaa-faq__question:focus-visible {
+	outline: 3px solid var(--sl-page-primary, #1472ba);
+	outline-offset: -3px;
+}
+
+.sl-hipaa-faq__item[open]
+	.sl-hipaa-faq__question {
+	background: rgba(109, 195, 235, 0.12);
+}
+
+
+/* =========================================================
+   QUESTION NUMBER
+   ========================================================= */
+
+.sl-hipaa-faq__index {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	color: var(--sl-page-primary, #1472ba);
+	background: rgba(109, 195, 235, 0.16);
+	border-radius: 50%;
+	font-size: 11px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.sl-hipaa-faq__item[open]
+	.sl-hipaa-faq__index {
+	color: var(--sl-page-white, #ffffff);
+	background: var(--sl-page-primary, #1472ba);
+}
+
+.sl-hipaa-faq__question-text {
+	min-width: 0;
+	font-size: 17px;
+	font-weight: 700;
+	line-height: 1.45;
+	text-wrap: pretty;
+}
+
+
+/* =========================================================
+   PLUS / MINUS TOGGLE
+   Vertical bar scales out — horizontal stays as minus.
+   ========================================================= */
+
+.sl-hipaa-faq__toggle {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	width: 32px;
+	height: 32px;
+	color: var(--sl-page-primary, #1472ba);
+	background: rgba(109, 195, 235, 0.14);
+	border: 1px solid rgba(20, 114, 186, 0.28);
+	border-radius: 50%;
+	transition:
+		color 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+		background-color 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+		border-color 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sl-hipaa-faq__toggle-bar {
+	position: absolute;
+	display: block;
+	background: currentColor;
+	border-radius: 1px;
+	transform-origin: center center;
+	transition:
+		transform 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+		opacity 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sl-hipaa-faq__toggle-bar--h {
+	width: 12px;
+	height: 2px;
+}
+
+.sl-hipaa-faq__toggle-bar--v {
+	width: 2px;
+	height: 12px;
+	transform: scaleY(1);
+	opacity: 1;
+}
+
+.sl-hipaa-faq__item[open] .sl-hipaa-faq__toggle {
+	color: var(--sl-page-white, #ffffff);
+	background: var(--sl-page-primary, #1472ba);
+	border-color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-hipaa-faq__item[open] .sl-hipaa-faq__toggle-bar--v {
+	transform: scaleY(0);
+	opacity: 0;
+}
+
+.sl-hipaa-faq__question:hover .sl-hipaa-faq__toggle {
+	background: rgba(109, 195, 235, 0.24);
+	border-color: rgba(20, 114, 186, 0.45);
+}
+
+.sl-hipaa-faq__item[open] .sl-hipaa-faq__question:hover .sl-hipaa-faq__toggle {
+	color: var(--sl-page-white, #ffffff);
+	background: #125fa0;
+	border-color: #125fa0;
+}
+
+
+/* =========================================================
+   ANSWER PANEL — smooth open/close
+   ========================================================= */
+
+.sl-hipaa-faq__panel {
+	display: grid;
+	grid-template-rows: 0fr;
+	transition: grid-template-rows 0.55s ease;
+}
+
+.sl-hipaa-faq__item[open] .sl-hipaa-faq__panel {
+	grid-template-rows: 1fr;
+}
+
+.sl-hipaa-faq__answer {
+	overflow: hidden;
+	padding: 14px 20px 21px 72px;
+}
+
+.sl-hipaa-faq__answer p {
+	margin: 0;
+	color: var(--sl-page-text, #4a4a4a);
+	line-height: 1.75;
+	text-wrap: pretty;
+}
+
+
+/* =========================================================
+   FAQ FOOTER
+   ========================================================= */
+
+.sl-hipaa-faq__footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 30px;
+	margin-top: 30px;
+	padding: 25px 28px;
+	background: var(--sl-page-white, #ffffff);
+	border: 1px solid rgba(20, 114, 186, 0.26);
+	border-radius: 12px;
+}
+
+.sl-hipaa-faq__footer-content {
+	display: grid;
+	grid-template-columns: 42px minmax(0, 1fr);
+	align-items: center;
+	gap: 15px;
+	min-width: 0;
+}
+
+.sl-hipaa-faq__footer-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 42px;
+	height: 42px;
+}
+
+.sl-hipaa-faq__footer-icon svg {
+	display: block;
+	width: 32px;
+	height: 32px;
+}
+
+.sl-hipaa-faq__footer h3 {
+	margin: 0 0 5px;
+	color: var(--sl-page-navy, #16234e);
+	font-size: 20px;
+	line-height: 1.35;
+}
+
+.sl-hipaa-faq__footer p {
+	margin: 0;
+	color: var(--sl-page-text, #4a4a4a);
+	line-height: 1.6;
+}
+
+.sl-hipaa-faq__footer .sl-content-btn {
+	flex: 0 0 auto;
+}
+
+.sl-hipaa-faq__footer .sl-content-btn svg {
+	width: 18px;
+	height: 18px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+	.sl-hipaa-faq {
+		padding: 72px 0;
+	}
+
+	.sl-hipaa-faq__footer {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	.sl-hipaa-faq__footer .sl-content-btn {
+		margin-left: 57px;
+	}
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+	.sl-hipaa-faq {
+		padding: 60px 0;
+	}
+
+	.sl-hipaa-faq__intro {
+		margin-bottom: 32px;
+	}
+
+	.sl-hipaa-faq__intro h2 {
+		margin-bottom: 16px;
+		text-wrap: pretty;
+	}
+
+	.sl-hipaa-faq__question {
+		grid-template-columns: 34px minmax(0, 1fr) 30px;
+		gap: 11px;
+		min-height: 70px;
+		padding: 15px;
+	}
+
+	.sl-hipaa-faq__index {
+		width: 32px;
+		height: 32px;
+	}
+
+	.sl-hipaa-faq__question-text {
+		font-size: 16px;
+	}
+
+	.sl-hipaa-faq__toggle {
+		width: 30px;
+		height: 30px;
+	}
+
+	.sl-hipaa-faq__answer {
+		padding: 12px 15px 18px 60px;
+	}
+
+	.sl-hipaa-faq__footer {
+		margin-top: 24px;
+		padding: 22px 20px;
+	}
+
+	.sl-hipaa-faq__footer-content {
+		grid-template-columns: 36px minmax(0, 1fr);
+		gap: 12px;
+	}
+
+	.sl-hipaa-faq__footer-icon {
+		width: 36px;
+		height: 36px;
+	}
+
+	.sl-hipaa-faq__footer-icon svg {
+		width: 28px;
+		height: 28px;
+	}
+
+	.sl-hipaa-faq__footer h3 {
+		font-size: 18px;
+	}
+
+	.sl-hipaa-faq__footer .sl-content-btn {
+		width: 100%;
+		margin-left: 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.sl-hipaa-faq__panel,
+	.sl-hipaa-faq__question,
+	.sl-hipaa-faq__toggle,
+	.sl-hipaa-faq__toggle-bar {
+		transition: none;
+	}
+}

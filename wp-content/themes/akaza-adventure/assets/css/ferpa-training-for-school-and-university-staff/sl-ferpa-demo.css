@@ -1,0 +1,193 @@
+/**
+ * SucceedLEARN — FERPA Staff Awareness
+ *
+ * Section: Request a Demo
+ *
+ * @package Akaza_Adventure
+ */
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.sl-ferpa-demo {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+
+/* =========================================
+   TWO-COLUMN LAYOUT
+========================================= */
+
+.sl-ferpa-demo__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+	gap: 70px;
+	align-items: center;
+}
+
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.sl-ferpa-demo__content {
+	min-width: 0;
+}
+
+.sl-ferpa-demo__heading {
+	margin-bottom: 32px;
+}
+
+.sl-ferpa-demo__heading h2 {
+	margin: 0 0 18px;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-ferpa-demo__heading h2 span {
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-ferpa-demo__heading p {
+	margin: 0;
+	color: var(--sl-page-text, #425b70);
+}
+
+
+/* =========================================
+   DEMO POINTS
+========================================= */
+
+.sl-ferpa-demo__points {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-ferpa-demo__point {
+	display: grid;
+	grid-template-columns: 30px minmax(0, 1fr);
+	gap: 12px;
+	align-items: start;
+	padding: 17px 0;
+	border-bottom: 1px solid rgba(22, 35, 78, 0.10);
+}
+
+.sl-ferpa-demo__point:first-child {
+	border-top: 1px solid rgba(22, 35, 78, 0.10);
+}
+
+.sl-ferpa-demo__check {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 28px;
+	height: 28px;
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-ferpa-demo__check svg {
+	display: block;
+	width: 24px;
+	height: 24px;
+}
+
+.sl-ferpa-demo__point-text {
+	padding-top: 3px;
+	color: var(--sl-page-text, #425b70);
+}
+
+
+/* =========================================
+   FORM CARD
+========================================= */
+
+.sl-ferpa-demo__form-wrap {
+	min-width: 0;
+	width: 100%;
+	padding: 38px;
+	border: 1px solid rgba(107, 124, 147, 0.22);
+	border-radius: 24px;
+	background: var(--sl-page-white, #ffffff);
+	box-shadow: 0 22px 55px rgba(22, 35, 78, 0.08);
+	box-sizing: border-box;
+}
+
+.sl-ferpa-demo__form-wrap .sl-home-form-wrapper,
+.sl-ferpa-demo__form-wrap .sl-home-form-wrapper--slim {
+	display: block;
+	width: 100%;
+	max-width: none;
+	margin: 0;
+	align-items: stretch;
+}
+
+.sl-ferpa-demo__form-wrap .sl-home-form-wrapper--slim .scf-form-wrap,
+.sl-ferpa-demo__form-wrap .sl-home-form-wrapper--slim .scf-form-wrap.scf-form-wrap-course {
+	width: 100%;
+	max-width: none;
+	margin: 0;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1199px) {
+
+	.sl-ferpa-demo {
+		padding: 75px 0;
+	}
+
+	.sl-ferpa-demo__grid {
+		gap: 50px;
+	}
+
+	.sl-ferpa-demo__form-wrap {
+		padding: 32px;
+	}
+
+}
+
+@media (max-width: 991px) {
+
+	.sl-ferpa-demo__grid {
+		grid-template-columns: 1fr;
+		gap: 45px;
+	}
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+	.sl-ferpa-demo {
+		padding: 60px 0;
+	}
+
+	.sl-ferpa-demo__heading {
+		margin-bottom: 24px;
+	}
+
+	.sl-ferpa-demo__point {
+		padding: 15px 0;
+	}
+
+	.sl-ferpa-demo__form-wrap {
+		padding: 26px 22px;
+		border-radius: 18px;
+	}
+
+}

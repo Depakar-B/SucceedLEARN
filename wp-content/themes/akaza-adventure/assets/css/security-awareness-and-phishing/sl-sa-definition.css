@@ -1,0 +1,123 @@
+/*
+ * Security Awareness — What is Security Awareness & Behaviour Change.
+ */
+
+.sl-sa-definition {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-sa-definition__layout {
+	display: grid;
+	grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+	gap: 48px;
+	align-items: start;
+}
+
+.sl-sa-definition__heading {
+	margin-bottom: 24px;
+}
+
+.sl-sa-definition__content p {
+	margin-bottom: 22px;
+}
+
+.sl-sa-definition__lead {
+	margin-bottom: 30px !important;
+}
+
+.sl-sa-definition__callout {
+	position: relative;
+	margin-bottom: 30px;
+	padding: 30px 34px;
+	border-left: 6px solid var(--sl-page-primary, #1472ba);
+	border-radius: 18px;
+	background: rgba(109, 195, 235, 0.16);
+}
+
+.sl-sa-definition__callout h3 {
+	margin-bottom: 12px;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-sa-definition__callout p {
+	margin-bottom: 0;
+}
+
+.sl-sa-definition__content p:last-child {
+	margin-bottom: 0;
+}
+
+.sl-sa-definition__media {
+	position: sticky;
+	top: 120px;
+	min-width: 0;
+}
+
+.sl-sa-definition__image-placeholder {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	aspect-ratio: 640 / 720;
+	min-height: 420px;
+	padding: 30px;
+	border: 1px dashed rgba(20, 114, 186, 0.45);
+	border-radius: 18px;
+	background: rgba(20, 114, 186, 0.05);
+	text-align: center;
+}
+
+.sl-sa-definition__image-size {
+	margin-bottom: 10px;
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.sl-sa-definition__image-note {
+	color: var(--sl-page-navy, #16234e);
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.5;
+}
+
+@media (max-width: 991px) {
+	.sl-sa-definition__layout {
+		grid-template-columns: 1fr;
+		gap: 32px;
+	}
+
+	.sl-sa-definition__media {
+		position: static;
+		order: -1;
+		max-width: 520px;
+		margin: 0 auto;
+	}
+
+	.sl-sa-definition__image-placeholder {
+		min-height: 360px;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-sa-definition {
+		padding: 60px 0;
+	}
+
+	.sl-sa-definition__callout {
+		padding: 22px 20px;
+		border-left-width: 4px;
+		border-radius: 0 14px 14px 0;
+	}
+
+	.sl-sa-definition__image-placeholder {
+		min-height: 300px;
+		padding: 24px;
+		border-radius: 16px;
+	}
+}

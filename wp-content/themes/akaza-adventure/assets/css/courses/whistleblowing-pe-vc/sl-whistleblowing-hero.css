@@ -1,0 +1,225 @@
+﻿/**
+ * Whistleblowing Training — Hero.
+ *
+ * @package Akaza_Adventure
+ */
+
+ .sl-whistleblowing-hero {
+	padding: 120px 0 80px;
+	background: #ffffff;
+}
+
+.sl-whistleblowing-hero__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+	gap: 64px;
+	align-items: center;
+}
+
+/* ---------------------------------------------------------
+   Hero Content
+--------------------------------------------------------- */
+
+.sl-whistleblowing-hero__content {
+	min-width: 0;
+}
+
+.sl-whistleblowing-hero__content .sl-home-sub-heading {
+	display: block;
+	margin-bottom: 16px;
+}
+
+.sl-whistleblowing-hero__content h1 {
+	margin-top: 0;
+	margin-bottom: 24px;
+}
+
+.sl-whistleblowing-hero__content .sl-hero-h2 {
+	margin-top: 0;
+	margin-bottom: 22px;
+}
+
+.sl-whistleblowing-hero__lead {
+	max-width: 700px;
+}
+
+.sl-whistleblowing-hero__lead p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* ---------------------------------------------------------
+   Hero Actions
+--------------------------------------------------------- */
+
+.sl-whistleblowing-hero .sl-hero-actions {
+	margin-top: 30px;
+}
+
+/* ---------------------------------------------------------
+   Tags
+--------------------------------------------------------- */
+
+.sl-whistleblowing-hero__tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 28px;
+}
+
+.sl-whistleblowing-hero__tags span {
+	display: inline-flex;
+	align-items: center;
+	padding: 8px 12px;
+	background: #f5f5f5;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 8px;
+	color: var(--sl-page-navy, #16234e);
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.4;
+}
+
+/* ---------------------------------------------------------
+   Hero Image
+--------------------------------------------------------- */
+
+.sl-whistleblowing-hero__media {
+	position: relative;
+	align-self: stretch;
+}
+
+.sl-whistleblowing-hero__image {
+	position: relative;
+	width: 100%;
+	overflow: visible;
+	border-radius: 18px;
+}
+
+.sl-whistleblowing-hero__image-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 520px;
+	padding: 32px;
+	background: #f5f5f5;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 18px;
+	box-sizing: border-box;
+}
+
+.sl-whistleblowing-hero__image-placeholder span {
+	color: #6b7c93;
+}
+
+/* ---------------------------------------------------------
+   Floating Message
+--------------------------------------------------------- */
+
+.sl-whistleblowing-hero__message {
+	position: absolute;
+	right: -28px;
+	bottom: 28px;
+	width: min(360px, 78%);
+	padding: 24px 26px;
+	background: #ffffff;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 14px;
+	box-shadow: 0 16px 36px rgba(22, 35, 78, 0.12);
+	box-sizing: border-box;
+}
+
+.sl-whistleblowing-hero__message .sl-panel-title {
+	margin-top: 0;
+	margin-bottom: 8px;
+}
+
+.sl-whistleblowing-hero__message p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* ---------------------------------------------------------
+   Tablet
+--------------------------------------------------------- */
+
+@media (max-width: 1000px) {
+
+	.sl-whistleblowing-hero {
+		padding: 100px 0 72px;
+	}
+
+	.sl-whistleblowing-hero__grid {
+		grid-template-columns: 1fr;
+		gap: 48px;
+	}
+
+	.sl-whistleblowing-hero__media {
+		max-width: 760px;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.sl-whistleblowing-hero__image-placeholder {
+		min-height: 440px;
+	}
+
+	.sl-whistleblowing-hero__message {
+		right: 24px;
+		bottom: 24px;
+	}
+}
+
+/* ---------------------------------------------------------
+   Mobile
+--------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+	.sl-whistleblowing-hero {
+		padding: 80px 0 56px;
+	}
+
+	.sl-whistleblowing-hero__grid {
+		gap: 36px;
+	}
+
+	.sl-whistleblowing-hero__content .sl-home-sub-heading {
+		margin-bottom: 12px;
+	}
+
+	.sl-whistleblowing-hero__content h1 {
+		margin-bottom: 20px;
+	}
+
+	.sl-whistleblowing-hero__content .sl-hero-h2 {
+		margin-bottom: 18px;
+	}
+
+	.sl-whistleblowing-hero .sl-hero-actions {
+		margin-top: 24px;
+	}
+
+	.sl-whistleblowing-hero__tags {
+		margin-top: 22px;
+		gap: 8px;
+	}
+
+	.sl-whistleblowing-hero__tags span {
+		padding: 7px 10px;
+		font-size: 13px;
+	}
+
+	.sl-whistleblowing-hero__image-placeholder {
+		min-height: 320px;
+		border-radius: 14px;
+	}
+
+	.sl-whistleblowing-hero__message {
+		right: 14px;
+		bottom: 14px;
+		width: calc(100% - 28px);
+		padding: 20px;
+		border-radius: 12px;
+	}
+}

@@ -1,0 +1,33 @@
+/**
+ * FCP page-only utilities.
+ * Shared foundation: assets/css/sl-page-foundation.css (.sl-training-page)
+ */
+
+.sl-fcp-page.sl-training-page,
+.sl-fcp-page {
+	/* Fixed desktop typography — match CoC / SAP section scale */
+	--sl-fs-h1: 60px;
+	--sl-fs-h2: 48px;
+	--sl-fs-h3: 30px;
+	--sl-fs-body: 18px;
+}
+
+.sl-fcp-page a:not(.sl-hero-btn):not(.sl-content-btn):not(.sl-btn) {
+	color: var(--sl-page-primary);
+}
+
+.sl-fcp-page .sl-fcp-actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 14px;
+	margin-top: 36px;
+}
+
+.sl-fcp-page .sl-fcp-hero__lead {
+	font-size: var(--sl-fs-hero-h2, 32px);
+	font-weight: 600;
+	line-height: 1.35;
+	letter-spacing: -0.01em;
+	color: var(--sl-page-primary);
+}

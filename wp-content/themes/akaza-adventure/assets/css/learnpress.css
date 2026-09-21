@@ -1,0 +1,186 @@
+/* Akaza Adventure — LearnPress layout overrides */
+
+.slf-page-hero {
+  margin-bottom: 2.5rem;
+  max-width: 52rem;
+}
+
+.slf-page-content {
+  margin-top: 2rem;
+  max-width: 48rem;
+}
+
+.slf-marketing-grid {
+  margin-top: 1rem;
+}
+
+/* Course archive */
+.slf-lp-archive {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 900px;
+  padding-top: var(--slf-content-top-offset);
+}
+
+.learn-press-courses,
+.lp-list-courses-no-css {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.akaza-course-card {
+  list-style: none;
+  margin: 0;
+}
+
+.akaza-course-card__inner {
+  background: #fff;
+  border-radius: var(--slf-radius);
+  overflow: hidden;
+  box-shadow: var(--slf-shadow);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.akaza-course-card__thumb {
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--slf-cream);
+}
+
+.akaza-course-card__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.akaza-course-card__body {
+  padding: 1.25rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.75rem;
+}
+
+.akaza-course-card__title {
+  font-family: var(--slf-font-display);
+  font-size: 1.25rem;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.akaza-course-card__title a {
+  color: var(--slf-navy);
+}
+
+.akaza-course-card__title a:hover {
+  color: var(--slf-accent);
+}
+
+.akaza-course-card__excerpt {
+  margin: 0;
+  color: var(--slf-muted);
+  font-size: 0.95rem;
+}
+
+.akaza-course-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.875rem;
+  color: var(--slf-muted);
+}
+
+.akaza-course-card__footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.akaza-course-card__price {
+  font-weight: 700;
+  color: var(--slf-accent);
+  font-size: 1.1rem;
+}
+
+/* Single course */
+.slf-lp-single {
+  padding-top: var(--slf-content-top-offset);
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 1200px;
+}
+
+.slf-lp-single .course-summary,
+.slf-lp-single #learn-press-course {
+  max-width: var(--slf-max);
+  margin: 0 auto;
+  padding: 0 var(--slf-gutter) 4rem;
+}
+
+.slf-lp-single .course-summary-content,
+.slf-lp-single .lp-single-course {
+  background: #fff;
+  border-radius: var(--slf-radius);
+  box-shadow: var(--slf-shadow);
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.slf-lp-single .course-title,
+.slf-lp-single h1 {
+  font-family: var(--slf-font-display);
+  color: var(--slf-navy);
+}
+
+.slf-lp-single .lp-button,
+.slf-lp-single .button,
+.slf-lp-single button[type="submit"] {
+  border-radius: var(--slf-radius-sm) !important;
+  font-weight: 600;
+}
+
+.slf-lp-single .lp-breadcrumb,
+.slf-lp-single .learn-press-breadcrumb {
+  max-width: var(--slf-max);
+  margin: 0 auto;
+  padding: 0.75rem var(--slf-gutter) 0;
+  font-size: 0.875rem;
+}
+
+.lp-archive-courses {
+  background: transparent;
+}
+
+.lp-courses-bar,
+.courses-top-bar {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 1100px) {
+  .learn-press-courses,
+  .lp-list-courses-no-css {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .learn-press-courses,
+  .lp-list-courses-no-css {
+    grid-template-columns: 1fr;
+  }
+
+  .slf-lp-archive,
+  .slf-lp-single {
+    padding-top: var(--slf-content-top-offset);
+  }
+}

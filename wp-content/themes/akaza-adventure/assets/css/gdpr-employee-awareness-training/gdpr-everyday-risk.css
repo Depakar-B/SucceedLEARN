@@ -1,0 +1,199 @@
+/*
+ * SucceedLEARN — GDPR
+ * Why All Employee Training
+ */
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.sl-gdpr-risk {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-gdpr-risk__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(480px, 0.9fr);
+	align-items: center;
+	gap: 70px;
+}
+
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.sl-gdpr-risk__content {
+	min-width: 0;
+}
+
+.sl-gdpr-risk__heading {
+	margin-bottom: 34px;
+}
+
+.sl-gdpr-risk__heading h2 {
+	margin: 0;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-gdpr-risk__heading h2 span {
+	color: var(--sl-primary, #1472ba);
+}
+
+.sl-gdpr-risk__content-text {
+	max-width: 700px;
+}
+
+.sl-gdpr-risk__content-text p {
+	margin: 0 0 18px;
+	color: var(--sl-page-text, #425b70);
+}
+
+.sl-gdpr-risk__content-text p:last-child {
+	margin-bottom: 0;
+}
+
+
+/* =========================================
+   RIGHT CARD GRID
+========================================= */
+
+.sl-gdpr-risk__cards {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 18px;
+}
+
+.sl-gdpr-risk__card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-width: 0;
+	min-height: 170px;
+	padding: 24px;
+	border: 1px solid rgba(20, 114, 186, 0.14);
+	border-radius: 14px;
+	background: #ffffff;
+	box-shadow: 0 6px 20px rgba(22, 35, 78, 0.045);
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease,
+		border-color 0.2s ease;
+}
+
+.sl-gdpr-risk__card:hover {
+	transform: translateY(-3px);
+	border-color: rgba(20, 114, 186, 0.3);
+	box-shadow: 0 10px 26px rgba(22, 35, 78, 0.08);
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.sl-gdpr-risk__card-top {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 14px;
+	margin-bottom: 25px;
+}
+
+.sl-gdpr-risk__number {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 38px;
+	height: 38px;
+	flex: 0 0 38px;
+	border-radius: 9px;
+	background: rgba(20, 114, 186, 0.08);
+	color: #1472ba;
+	font-size: 12px;
+	font-weight: 800;
+}
+
+.sl-gdpr-risk__label {
+	color: #1472ba;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.07em;
+	text-transform: uppercase;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.sl-gdpr-risk__card-text {
+	margin: 0;
+	color: var(--sl-page-navy, #16234e);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1199px) {
+
+	.sl-gdpr-risk {
+		padding: 75px 0;
+	}
+
+	.sl-gdpr-risk__grid {
+		grid-template-columns: minmax(0, 1fr) minmax(400px, 0.9fr);
+		gap: 45px;
+	}
+
+	.sl-gdpr-risk__cards {
+		gap: 14px;
+	}
+
+	.sl-gdpr-risk__card {
+		padding: 20px;
+	}
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+	.sl-gdpr-risk {
+		padding: 60px 0;
+	}
+
+	.sl-gdpr-risk__grid {
+		grid-template-columns: 1fr;
+		gap: 38px;
+	}
+
+	.sl-gdpr-risk__heading {
+		margin-bottom: 28px;
+	}
+
+	.sl-gdpr-risk__cards {
+		grid-template-columns: 1fr;
+		gap: 14px;
+	}
+
+	.sl-gdpr-risk__card {
+		min-height: 145px;
+		padding: 20px;
+	}
+
+	.sl-gdpr-risk__card-top {
+		margin-bottom: 20px;
+	}
+
+}

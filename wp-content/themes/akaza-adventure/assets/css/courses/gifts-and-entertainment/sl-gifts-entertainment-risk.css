@@ -1,0 +1,116 @@
+/* SucceedLEARN — Gifts & Entertainment PE/VC compliance risk
+ * Section spacing / .container width from course-global.css.
+ */
+
+.sl-course-page .sl-gifts-entertainment-risk {
+	background: var(--course-white, #ffffff);
+}
+
+.sl-course-page .sl-gifts-entertainment-risk__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	gap: 72px;
+	align-items: start;
+}
+
+.sl-course-page .sl-gifts-entertainment-risk__intro {
+	min-width: 0;
+}
+
+.sl-course-page .sl-gifts-entertainment-risk__intro h2 {
+	margin-bottom: 24px;
+}
+
+.sl-course-page .sl-gifts-entertainment-risk__intro-body {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.sl-course-page .sl-gifts-entertainment-risk__intro-body p {
+	margin: 0;
+}
+
+.sl-course-page .sl-gifts-entertainment-risk__list {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+}
+
+.sl-course-page .sl-gifts-entertainment-risk__item {
+	display: grid;
+	grid-template-columns: 48px minmax(0, 1fr);
+	gap: 14px;
+	align-items: start;
+	padding: 0 0 28px;
+	border-bottom: 1px solid rgba(22, 35, 78, 0.14);
+}
+
+.sl-course-page .sl-gifts-entertainment-risk__item + .sl-gifts-entertainment-risk__item {
+	padding-top: 20px;
+}
+
+.sl-course-page .sl-gifts-entertainment-risk__item:last-child {
+	padding-bottom: 0;
+	border-bottom: 0;
+}
+
+.sl-course-page .sl-gifts-entertainment-risk__number {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	border-radius: 12px;
+	background: rgba(20, 114, 186, 0.09);
+	color: var(--course-primary, #1472ba);
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.sl-course-page .sl-gifts-entertainment-risk__item-content {
+	min-width: 0;
+}
+
+.sl-course-page .sl-gifts-entertainment-risk__item-content h3 {
+	margin: 0 0 8px;
+	color: var(--course-navy, #16234e);
+}
+
+.sl-course-page .sl-gifts-entertainment-risk__item-content p {
+	margin: 0;
+}
+
+@media (max-width: 1000px) {
+	.sl-course-page .sl-gifts-entertainment-risk__grid {
+		gap: 48px;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-course-page .sl-gifts-entertainment-risk__grid {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.sl-course-page .sl-gifts-entertainment-risk__intro h2 {
+		margin-bottom: 20px;
+	}
+
+	.sl-course-page .sl-gifts-entertainment-risk__item {
+		grid-template-columns: 42px minmax(0, 1fr);
+		gap: 12px;
+		padding-bottom: 22px;
+	}
+
+	.sl-course-page .sl-gifts-entertainment-risk__item + .sl-gifts-entertainment-risk__item {
+		padding-top: 18px;
+	}
+
+	.sl-course-page .sl-gifts-entertainment-risk__number {
+		width: 40px;
+		height: 40px;
+		border-radius: 10px;
+	}
+}

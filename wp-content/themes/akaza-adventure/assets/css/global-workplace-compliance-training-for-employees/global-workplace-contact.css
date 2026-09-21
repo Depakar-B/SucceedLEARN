@@ -1,0 +1,389 @@
+/**
+ * Global Workplace Compliance Training — Contact section & form UI.
+ */
+
+.sl-gwct-contact-section.sl-home-contact-section {
+	padding: clamp(56px, 8vw, 90px) 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-gwct-contact-section .container {
+	max-width: 1200px;
+}
+
+.sl-gwct-contact-section .row.sl-gwct-contact__grid {
+	align-items: stretch;
+}
+
+.sl-gwct-contact-content .sl-home-sub-heading {
+	margin: 0 0 18px;
+}
+
+.sl-gwct-contact-content h2 {
+	margin: 0 0 18px;
+	font-size: var(--sl-fs-h2);
+	font-weight: 700;
+	line-height: 1.2;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-gwct-contact-content h2 span {
+	color: var(--sl-heading-accent, var(--sl-page-primary, #1472ba));
+}
+
+.sl-home-contact-content.sl-gwct-contact-content > p,
+.sl-home-contact-content.sl-gwct-contact-content .sl-gwct-contact-direct__label {
+	margin-bottom: 12px;
+	color: var(--sl-page-muted, #6b7c93);
+	font-size: 17px;
+	line-height: 1.7;
+}
+
+.sl-gwct-contact-note {
+	margin: 0 0 22px;
+	padding: 18px 20px;
+	border-radius: 12px;
+	border: 1px solid rgba(20, 114, 186, 0.16);
+	border-left: 4px solid var(--sl-page-primary, #1472ba);
+	background: #ffffff;
+	color: var(--sl-page-muted, #6b7c93);
+	font-size: 1rem;
+	line-height: 1.65;
+	box-shadow: 0 8px 24px rgba(31, 44, 86, 0.05);
+}
+
+.sl-gwct-contact-note strong {
+	display: block;
+	margin-bottom: 4px;
+	color: var(--sl-page-navy, #16234e);
+	font-weight: 700;
+}
+
+.sl-gwct-contact-direct {
+	margin-top: 4px;
+}
+
+.sl-gwct-contact-direct__label {
+	margin: 0 0 12px;
+	color: var(--sl-page-muted, #6b7c93);
+	font-size: 0.95rem;
+	font-weight: 500;
+	line-height: 1.5;
+}
+
+.sl-gwct-contact-direct__grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 12px;
+}
+
+.sl-gwct-contact-direct__item {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	padding: 14px 16px;
+	border: 1px solid rgba(20, 114, 186, 0.16);
+	border-radius: 14px;
+	background: #ffffff;
+	color: inherit;
+	text-decoration: none;
+	box-shadow: 0 6px 18px rgba(31, 44, 86, 0.04);
+	transition:
+		border-color 0.25s ease,
+		box-shadow 0.25s ease,
+		transform 0.25s ease;
+}
+
+.sl-gwct-contact-direct__item:hover,
+.sl-gwct-contact-direct__item:focus {
+	border-color: rgba(20, 114, 186, 0.32);
+	box-shadow: 0 10px 24px rgba(20, 114, 186, 0.1);
+	transform: translateY(-2px);
+	text-decoration: none;
+}
+
+.sl-gwct-contact-direct__icon {
+	flex-shrink: 0;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 12px;
+	background: #ffffff;
+	border: 1px solid rgba(20, 114, 186, 0.12);
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 18px;
+}
+
+.sl-gwct-contact-direct__body {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	min-width: 0;
+}
+
+.sl-gwct-contact-direct__title {
+	color: var(--sl-page-navy, #16234e);
+	font-size: 0.82rem;
+	font-weight: 600;
+	line-height: 1.35;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+.sl-gwct-contact-direct__value {
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 0.95rem;
+	font-weight: 600;
+	line-height: 1.45;
+	word-break: break-word;
+}
+
+.sl-gwct-contact__whatsapp {
+	display: inline-flex;
+	align-items: center;
+	gap: 12px;
+	width: 100%;
+	min-height: 68px;
+	padding: 12px 16px;
+	border-radius: 14px;
+	background: #25d366;
+	color: #ffffff;
+	text-decoration: none;
+	box-sizing: border-box;
+	box-shadow: 0 12px 28px rgba(37, 211, 102, 0.28);
+	transition:
+		transform 0.2s ease,
+		background 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.sl-gwct-contact__whatsapp:hover,
+.sl-gwct-contact__whatsapp:focus {
+	transform: translateY(-2px);
+	background: #1ebe57;
+	color: #ffffff;
+	text-decoration: none;
+	box-shadow: 0 16px 32px rgba(37, 211, 102, 0.34);
+}
+
+.sl-gwct-contact__whatsapp-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 auto;
+	width: 28px;
+	height: 28px;
+	color: #ffffff;
+}
+
+.sl-gwct-contact__whatsapp-icon svg {
+	display: block;
+	width: 22px;
+	height: 22px;
+}
+
+.sl-gwct-contact__whatsapp-text {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 2px;
+	min-width: 0;
+	text-align: left;
+}
+
+.sl-gwct-contact__whatsapp-label {
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 1.2;
+	opacity: 0.92;
+}
+
+.sl-gwct-contact__whatsapp-number {
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1.25;
+	letter-spacing: 0.01em;
+}
+
+/* Form card */
+.sl-gwct-contact__form-wrap {
+	min-width: 0;
+	height: 100%;
+	padding: clamp(24px, 3vw, 36px);
+	border: 1px solid rgba(20, 114, 186, 0.16);
+	border-radius: 20px;
+	background: #ffffff;
+	box-shadow: 0 18px 48px rgba(31, 44, 86, 0.08);
+	box-sizing: border-box;
+}
+
+.sl-gwct-page .sl-gwct-contact__form-wrap .sl-home-form-wrapper,
+.sl-gwct-page .sl-gwct-contact__form-wrap .sl-home-form-wrapper--slim {
+	display: block;
+	width: 100%;
+	max-width: none;
+	align-items: stretch;
+	justify-content: flex-start;
+}
+
+.sl-gwct-page .sl-gwct-contact__form-wrap .scf-form-wrap,
+.sl-gwct-page .sl-gwct-contact__form-wrap .scf-form-wrap.scf-form-wrap-course {
+	width: 100%;
+	max-width: none;
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+.sl-gwct-page .sl-gwct-contact__form-wrap .scf-form-wrap {
+	--scf-brand: var(--sl-page-primary, #1472ba);
+	--scf-brand-hover: var(--sl-page-primary-dark, #283384);
+	--scf-text: var(--sl-page-navy, #16234e);
+	--scf-muted: var(--sl-page-muted, #6b7c93);
+	--scf-border: rgba(20, 114, 186, 0.18);
+}
+
+.sl-gwct-page .sl-gwct-contact__form-wrap .scf-form-wrap.scf-form-wrap-course .scf-form-title {
+	margin: 0 0 1.35rem;
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 1.35;
+	color: var(--sl-page-navy, #16234e);
+	text-align: left;
+}
+
+.sl-gwct-page .sl-gwct-contact__form-wrap .scf-field label {
+	color: var(--sl-page-navy, #16234e);
+	font-size: 0.875rem;
+}
+
+.sl-gwct-page .sl-gwct-contact__form-wrap .scf-field input:not([type="checkbox"]):not([type="radio"]),
+.sl-gwct-page .sl-gwct-contact__form-wrap .scf-field select,
+.sl-gwct-page .sl-gwct-contact__form-wrap .scf-field textarea {
+	width: 100%;
+	max-width: 100%;
+	border: 1px solid rgba(20, 114, 186, 0.2);
+	border-radius: 10px;
+	background: #ffffff;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sl-gwct-page .sl-gwct-contact__form-wrap .scf-field input:not([type="checkbox"]):not([type="radio"]):focus,
+.sl-gwct-page .sl-gwct-contact__form-wrap .scf-field select:focus,
+.sl-gwct-page .sl-gwct-contact__form-wrap .scf-field textarea:focus {
+	border-color: rgba(20, 114, 186, 0.45);
+	box-shadow: 0 0 0 3px rgba(20, 114, 186, 0.12);
+}
+
+.sl-gwct-page .sl-gwct-contact__form-wrap .scf-interest-group {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0.55rem 1rem;
+	margin-top: 0.15rem;
+}
+
+.sl-gwct-page .sl-gwct-contact__form-wrap .scf-interest-option label {
+	color: var(--sl-page-muted, #6b7c93);
+	font-size: 0.88rem;
+	line-height: 1.35;
+}
+
+.sl-gwct-page .sl-gwct-contact__form-wrap .scf-checkbox {
+	color: var(--sl-page-muted, #6b7c93);
+	font-size: 0.88rem;
+	line-height: 1.45;
+}
+
+.sl-gwct-page .sl-gwct-contact__form-wrap .scf-checkbox a {
+	color: var(--sl-page-primary, #1472ba);
+	font-weight: 600;
+}
+
+.sl-gwct-page .sl-gwct-contact__form-wrap .scf-checkbox a:hover,
+.sl-gwct-page .sl-gwct-contact__form-wrap .scf-checkbox a:focus {
+	color: var(--sl-page-primary-dark, #283384);
+}
+
+.sl-gwct-page .sl-gwct-contact__form-wrap .scf-submit {
+	width: fit-content;
+	min-width: 160px;
+	margin-top: 0.35rem;
+	border-radius: 8px;
+	background: var(--sl-page-primary, #1472ba);
+	background-color: var(--sl-page-primary, #1472ba);
+	box-shadow: 0 8px 20px rgba(20, 114, 186, 0.24);
+}
+
+.sl-gwct-page .sl-gwct-contact__form-wrap .scf-submit:hover,
+.sl-gwct-page .sl-gwct-contact__form-wrap .scf-submit:focus {
+	background: var(--sl-page-primary-dark, #283384);
+	background-color: var(--sl-page-primary-dark, #283384);
+	filter: none;
+}
+
+.sl-gwct-page .sl-gwct-contact__form-wrap .scf-response {
+	margin-top: 0.75rem;
+}
+
+@media (max-width: 991px) {
+	.sl-gwct-contact-section.sl-home-contact-section {
+		padding: 40px 0 70px;
+	}
+
+	.sl-gwct-contact-content {
+		text-align: left;
+	}
+
+	.sl-gwct-contact__form-wrap {
+		margin-top: 8px;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-gwct-contact-section.sl-home-contact-section {
+		padding: 32px 0 60px;
+	}
+
+	.sl-gwct-contact__form-wrap {
+		padding: 22px 18px;
+		border-radius: 16px;
+	}
+
+	.sl-gwct-page .sl-gwct-contact__form-wrap .scf-interest-group {
+		grid-template-columns: 1fr;
+	}
+
+	.sl-gwct-contact-direct__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.sl-gwct-contact-direct__item {
+		padding: 13px 14px;
+	}
+
+	.sl-gwct-contact-direct__icon {
+		width: 36px;
+		height: 36px;
+		font-size: 16px;
+	}
+
+	.sl-gwct-page .sl-gwct-contact__form-wrap .scf-submit {
+		width: 100%;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.sl-gwct-contact-direct__item,
+	.sl-gwct-contact-direct__item:hover,
+	.sl-gwct-contact-direct__item:focus,
+	.sl-gwct-contact__whatsapp,
+	.sl-gwct-contact__whatsapp:hover,
+	.sl-gwct-contact__whatsapp:focus {
+		transform: none;
+	}
+}

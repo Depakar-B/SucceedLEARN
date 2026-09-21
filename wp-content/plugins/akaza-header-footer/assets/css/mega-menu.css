@@ -1,0 +1,50 @@
+/**
+ * Mega Menu dropdown indicator — down arrow instead of missing icon box.
+ */
+#mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item-has-children > a.mega-menu-link > span.mega-indicator {
+	display: inline-block !important;
+	height: 0 !important;
+	width: 0 !important;
+	background: none !important;
+	position: relative !important;
+	pointer-events: auto !important;
+	left: auto !important;
+	min-width: auto !important;
+	line-height: 0 !important;
+	color: inherit !important;
+	font-size: 0 !important;
+	padding: 0 !important;
+}
+
+#mega-menu-wrap-primary .mega-indicator::before,
+#mega-menu-wrap-primary .mega-indicator::after {
+	content: none !important;
+	display: none !important;
+}
+
+#mega-menu-wrap-primary .mega-indicator {
+	display: inline-block !important;
+	width: 0 !important;
+	height: 0 !important;
+	margin-left: 6px;
+	vertical-align: middle;
+	font-size: 0;
+	line-height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 6px solid currentColor;
+	background: none !important;
+	padding: 0 !important;
+	min-width: auto !important;
+	left: auto !important;
+	position: relative !important;
+	pointer-events: auto !important;
+}
+
+#mega-menu-wrap-primary .mega-menu-item-has-children > a .mega-indicator {
+	transition: transform 0.2s ease;
+}
+
+#mega-menu-wrap-primary .mega-menu-item-has-children.mega-toggle-on > a .mega-indicator {
+	transform: rotate(180deg);
+}

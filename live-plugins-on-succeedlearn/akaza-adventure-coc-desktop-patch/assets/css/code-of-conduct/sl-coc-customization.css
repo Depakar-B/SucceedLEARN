@@ -1,0 +1,182 @@
+/**
+ * SucceedLEARN — Code of Conduct Customization.
+ */
+
+.sl-coc-customization {
+	padding: 90px 0;
+	background: var(--sl-page-white);
+}
+
+.sl-coc-customization__heading {
+	margin: 0 0 16px;
+	text-align: left;
+}
+
+.sl-coc-customization__heading p {
+	margin: 0;
+	color: var(--sl-page-muted);
+}
+
+.sl-coc-customization__intro {
+	margin: 0 0 26px;
+	text-align: left;
+}
+
+.sl-coc-customization__intro h3 {
+	margin: 0;
+}
+
+.sl-coc-customization__layout {
+	display: grid;
+	grid-template-columns: minmax(0, 0.45fr) minmax(0, 0.55fr);
+	gap: 40px;
+	align-items: start;
+	margin: 0 auto;
+}
+
+.sl-coc-customization__list-box {
+	width: 100%;
+	min-width: 0;
+	height: max-content;
+	padding: 8px;
+	border: 1px solid rgba(107, 124, 147, 0.14);
+	border-radius: 16px;
+	background: var(--sl-page-white);
+	box-shadow: 0 8px 24px rgba(22, 35, 78, 0.05);
+	box-sizing: border-box;
+}
+
+.sl-coc-customization__list {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-coc-customization__list-item {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	width: 100%;
+	padding: 14px 16px;
+	box-sizing: border-box;
+	transition: background 0.2s ease;
+}
+
+.sl-coc-customization__list-item + .sl-coc-customization__list-item {
+	border-top: 1px solid rgba(107, 124, 147, 0.12);
+}
+
+.sl-coc-customization__list-item:hover {
+	background: rgba(109, 195, 235, 0.08);
+}
+
+.sl-coc-customization__list-index {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 38px;
+	width: 38px;
+	height: 38px;
+	border-radius: 10px;
+	background: rgba(109, 195, 235, 0.22);
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: 0.02em;
+}
+
+.sl-coc-customization__list-label {
+	color: var(--sl-page-navy, #16234e);
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 1.5;
+}
+
+.sl-coc-customization__media {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 76px) + 24px);
+	align-self: start;
+	min-width: 0;
+	width: 100%;
+	max-height: min(560px, calc(100vh - var(--slf-header-clearance, 76px) - 48px));
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-radius: 18px;
+	background: transparent;
+	overflow: hidden;
+	line-height: 0;
+}
+
+.sl-coc-customization__media img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	max-width: 100%;
+	max-height: min(560px, calc(100vh - var(--slf-header-clearance, 76px) - 48px));
+	border-radius: 18px;
+	object-fit: cover;
+	object-position: top center;
+}
+
+/* Button look: site-wide .sl-content-btn from sl-global-ui-buttons.css */
+
+@media (max-width: 991px) {
+	.sl-coc-customization__layout {
+		grid-template-columns: 1fr;
+		gap: 28px;
+		align-items: start;
+	}
+
+	.sl-coc-customization__list-box {
+		height: auto;
+	}
+
+	.sl-coc-customization__media {
+		position: static;
+		top: auto;
+		max-width: 420px;
+		max-height: none;
+		overflow: visible;
+	}
+
+	.sl-coc-customization__media img {
+		height: auto;
+		max-height: none;
+		object-fit: initial;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-coc-customization {
+		padding: 60px 0;
+	}
+
+	.sl-coc-customization__list-box {
+		padding: 6px;
+	}
+
+	.sl-coc-customization__list-item {
+		align-items: flex-start;
+		padding: 14px;
+	}
+
+	.sl-coc-customization__list-index {
+		flex: 0 0 34px;
+		width: 34px;
+		height: 34px;
+		font-size: 11px;
+	}
+
+	.sl-coc-customization__list-label {
+		font-size: 14px;
+	}
+
+	.sl-coc-customization__media {
+		max-width: none;
+	}
+}

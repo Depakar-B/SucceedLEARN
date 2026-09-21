@@ -1,0 +1,123 @@
+/**
+ * SucceedLEARN — DPDPA Breach Scenario
+ *
+ * @package Akaza_Adventure
+ */
+
+ .sl-dpdpa-breach-scenario {
+	background: #ffffff;
+	padding: 80px 0;
+}
+
+.sl-dpdpa-breach-scenario__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	gap: 64px;
+	align-items: center;
+}
+
+/* ---------------------------------------------------------
+   Left content
+--------------------------------------------------------- */
+
+.sl-dpdpa-breach-scenario__content {
+	min-width: 0;
+}
+
+.sl-dpdpa-breach-scenario__content h2 {
+	margin-bottom: 18px;
+}
+
+.sl-dpdpa-breach-scenario__body {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+}
+
+.sl-dpdpa-breach-scenario__body p {
+	margin: 0;
+}
+
+.sl-dpdpa-breach-scenario__body .sl-highlight {
+	margin-top: 4px;
+}
+
+
+/* ---------------------------------------------------------
+   Right image
+--------------------------------------------------------- */
+
+.sl-dpdpa-breach-scenario__media {
+	min-width: 0;
+}
+
+.sl-dpdpa-breach-scenario__image {
+	width: 100%;
+	overflow: hidden;
+	border: 1px solid rgba(22, 35, 78, 0.12);
+	border-radius: 8px;
+	background: #ffffff;
+}
+
+.sl-dpdpa-breach-scenario__image img {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 720 / 520;
+	object-fit: cover;
+}
+
+.sl-dpdpa-breach-scenario__caption {
+	margin: 10px 0 0;
+	color: var(--sl-page-muted, #6B7C93);
+	font-size: 12px;
+	font-style: italic;
+	line-height: 1.5;
+}
+
+
+/* ---------------------------------------------------------
+   Tablet
+--------------------------------------------------------- */
+
+@media (max-width: 991px) {
+
+	.sl-dpdpa-breach-scenario {
+		padding: 68px 0;
+	}
+
+	.sl-dpdpa-breach-scenario__grid {
+		gap: 44px;
+	}
+
+}
+
+
+/* ---------------------------------------------------------
+   Mobile
+--------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+	.sl-dpdpa-breach-scenario {
+		padding: 56px 0;
+	}
+
+	.sl-dpdpa-breach-scenario__grid {
+		grid-template-columns: 1fr;
+		gap: 34px;
+	}
+
+	.sl-dpdpa-breach-scenario__body {
+		gap: 16px;
+	}
+
+	.sl-dpdpa-breach-scenario__media {
+		order: 2;
+	}
+
+	.sl-dpdpa-breach-scenario__caption {
+		margin-top: 8px;
+	}
+
+}

@@ -1,0 +1,198 @@
+/*
+ * SucceedLEARN
+ * Workplace Harassment Prevention
+ * Training by Region
+ */
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.sl-harassment-regions {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.sl-harassment-regions__heading {
+	margin-bottom: 42px;
+}
+
+.sl-harassment-regions__heading h2 {
+	margin: 0;
+}
+
+.sl-harassment-regions__heading h2 span {
+	color: var(--sl-primary, #1472ba);
+}
+
+
+/* =========================================
+   REGION GRID
+========================================= */
+
+.sl-harassment-regions__grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 20px;
+}
+
+
+/* =========================================
+   REGION CARD
+========================================= */
+
+.sl-harassment-regions__card {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	min-width: 0;
+	min-height: 190px;
+	padding: 28px 24px;
+	border: 1px solid rgba(20, 114, 186, 0.16);
+	border-radius: 16px;
+	background: var(--sl-page-white, #ffffff);
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease,
+		border-color 0.2s ease;
+}
+
+.sl-harassment-regions__card:hover {
+	transform: translateY(-4px);
+	border-color: rgba(20, 114, 186, 0.3);
+	box-shadow: 0 12px 28px rgba(22, 35, 78, 0.07);
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.sl-harassment-regions__number {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 42px;
+	height: 42px;
+	margin-bottom: 28px;
+	border-radius: 8px;
+	background: rgba(20, 114, 186, 0.08);
+	color: var(--sl-primary, #1472ba);
+	font-weight: 700;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.sl-harassment-regions__text {
+	margin: 0;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.sl-harassment-regions__footer {
+	display: flex;
+	align-items: center;
+	gap: 28px;
+	margin-top: 42px;
+}
+
+
+/* =========================================
+   GREEN MESSAGE
+========================================= */
+
+.sl-harassment-regions__message {
+	flex: 1;
+	min-width: 0;
+	padding: 24px 28px;
+	border: 1px solid rgba(14, 159, 74, 0.18);
+	border-radius: 12px;
+	background: rgba(14, 159, 74, 0.06);
+}
+
+.sl-harassment-regions__message p {
+	margin: 0;
+}
+
+
+/* =========================================
+   CTA — placement only; look from sl-global-ui-buttons.css
+========================================= */
+
+.sl-harassment-regions__cta {
+	flex: 0 0 auto;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1199px) {
+
+	.sl-harassment-regions {
+		padding: 75px 0;
+	}
+
+	.sl-harassment-regions__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+	.sl-harassment-regions {
+		padding: 60px 0;
+	}
+
+	.sl-harassment-regions__heading {
+		margin-bottom: 28px;
+	}
+
+	.sl-harassment-regions__grid {
+		grid-template-columns: 1fr;
+		gap: 14px;
+	}
+
+	.sl-harassment-regions__card {
+		min-height: 0;
+		padding: 22px 20px;
+	}
+
+	.sl-harassment-regions__number {
+		margin-bottom: 20px;
+	}
+
+	.sl-harassment-regions__footer {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 20px;
+		margin-top: 28px;
+	}
+
+	.sl-harassment-regions__message {
+		padding: 20px;
+	}
+
+}

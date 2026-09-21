@@ -1,0 +1,41 @@
+/**
+ * SucceedLEARN — S-Aware
+ * Section: Awareness Is Where Behaviour Change Begins
+ */
+
+.sl-saware-awareness {
+	padding: 76px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-saware-awareness__heading {
+	width: 100%;
+	margin-bottom: 18px;
+}
+
+.sl-saware-awareness__copy {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	width: 100%;
+}
+
+.sl-saware-awareness__copy p {
+	margin: 0;
+}
+
+@media (max-width: 991px) {
+	.sl-saware-awareness {
+		padding: 64px 0;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-saware-awareness {
+		padding: 52px 0;
+	}
+
+	.sl-saware-awareness__copy {
+		gap: 12px;
+	}
+}

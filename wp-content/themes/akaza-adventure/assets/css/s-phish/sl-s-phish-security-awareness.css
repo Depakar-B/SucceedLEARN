@@ -1,0 +1,133 @@
+/* =========================================================
+   S-PHISH - SECURITY AWARENESS & COMPLIANCE
+   ========================================================= */
+
+   .sl-s-phish-security-awareness {
+    padding: 80px 0;
+    background: #f5f5f5;
+}
+
+.sl-s-phish-security-awareness__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: 70px;
+    align-items: start;
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.sl-s-phish-security-awareness__media {
+    position: sticky;
+    top: calc(var(--slf-header-clearance, 110px) + 24px);
+    align-self: start;
+}
+
+.sl-s-phish-security-awareness__image {
+    width: 100%;
+    overflow: hidden;
+
+    border: 1px solid rgba(22, 35, 78, 0.10);
+    border-radius: 16px;
+
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+.sl-s-phish-security-awareness__image-placeholder {
+    width: 100%;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background: #ffffff;
+    color: #6b7c93;
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.sl-s-phish-security-awareness__content {
+    min-width: 0;
+}
+
+.sl-s-phish-security-awareness__content .sl-home-sub-heading {
+    display: block;
+    margin-bottom: 14px;
+}
+
+.sl-s-phish-security-awareness__content h2 {
+    margin-bottom: 24px;
+}
+
+.sl-s-phish-security-awareness__content p {
+    margin-bottom: 20px;
+}
+
+.sl-s-phish-security-awareness__content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+    .sl-s-phish-security-awareness {
+        padding: 70px 0;
+    }
+
+    .sl-s-phish-security-awareness__grid {
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        gap: 45px;
+    }
+
+    .sl-s-phish-security-awareness__media {
+        position: static;
+    }
+
+    .sl-s-phish-security-awareness__image-placeholder {
+        min-height: 420px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .sl-s-phish-security-awareness {
+        padding: 60px 0;
+    }
+
+    .sl-s-phish-security-awareness__grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .sl-s-phish-security-awareness__media {
+        position: static;
+    }
+
+    .sl-s-phish-security-awareness__image {
+        border-radius: 12px;
+    }
+
+    .sl-s-phish-security-awareness__image-placeholder {
+        min-height: 320px;
+    }
+
+}

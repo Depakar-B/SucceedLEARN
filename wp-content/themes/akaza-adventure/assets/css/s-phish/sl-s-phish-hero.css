@@ -1,0 +1,134 @@
+.sl-s-phish-hero {
+    padding: 120px 0 80px;
+    background: #ffffff;
+}
+
+.sl-s-phish-hero__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: 70px;
+    align-items: center;
+}
+
+.sl-s-phish-hero__content {
+    min-width: 0;
+}
+
+.sl-s-phish-hero__content .sl-home-sub-heading {
+    margin-bottom: 18px;
+}
+
+.sl-s-phish-hero__content h1 {
+    margin-bottom: 22px;
+}
+
+.sl-s-phish-hero__content .sl-hero-h2 {
+    margin-bottom: 24px;
+}
+
+.sl-s-phish-hero__content p {
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+/* Test | Learn | Strengthen */
+
+.sl-s-phish-hero__message {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 8px;
+    padding: 14px 22px;
+    background: #ffffff;
+    border: 1px solid rgba(22, 35, 78, 0.14);
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: var(--sl-page-navy, #16234e);
+    font-weight: 700;
+}
+
+.sl-s-phish-hero__separator {
+    color: var(--sl-page-primary, #1472ba);
+    font-weight: 400;
+}
+
+.sl-s-phish-hero__content .sl-hero-actions {
+    margin-top: 28px;
+}
+
+/* Hero Image */
+
+.sl-s-phish-hero__media {
+    min-width: 0;
+}
+
+.sl-s-phish-hero__image {
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid rgba(22, 35, 78, 0.10);
+    border-radius: 18px;
+    background: #f5f5f5;
+    box-sizing: border-box;
+}
+
+.sl-s-phish-hero__image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 540px;
+    padding: 30px;
+    box-sizing: border-box;
+    color: #6b7c93;
+    text-align: center;
+}
+
+.sl-s-phish-hero__image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+    .sl-s-phish-hero__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .sl-s-phish-hero__image-placeholder {
+        min-height: 440px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+    .sl-s-phish-hero {
+        padding: 120px 0 60px;
+    }
+
+    .sl-s-phish-hero__grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .sl-s-phish-hero__content {
+        order: 1;
+    }
+
+    .sl-s-phish-hero__media {
+        order: 2;
+    }
+
+    .sl-s-phish-hero__image-placeholder {
+        min-height: 320px;
+    }
+
+    .sl-s-phish-hero__message {
+        width: 100%;
+        gap: 14px;
+        padding: 13px 16px;
+    }
+}

@@ -1,0 +1,24 @@
+/*! Minimal Swiper JS v10 */
+class Swiper {
+  constructor(el, params={}) {
+    this.el = typeof el === 'string' ? document.querySelector(el) : el;
+    this.params = Object.assign({slidesPerView:1, loop:true, autoplay:{}}, params);
+    this.wrapper = this.el.querySelector('.swiper-wrapper');
+    this.slides = this.el.querySelectorAll('.swiper-slide');
+    this.index = 0;
+    this.init();
+  }
+  init() {
+    this.showSlide(this.index);
+    if (this.params.autoplay && this.params.autoplay.delay) {
+      setInterval(()=>this.nextSlide(), this.params.autoplay.delay);
+    }
+  }
+  showSlide(i) {
+    this.slides.forEach((s,idx)=>{s.style.display= idx===i?'block':'none';});
+  }
+  nextSlide() {
+    this.index = (this.index + 1) % this.slides.length;
+    this.showSlide(this.index);
+  }
+}

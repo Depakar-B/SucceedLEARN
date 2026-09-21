@@ -1,0 +1,23 @@
+/**
+ * Workplace Harassment Prevention — FAQ
+ *
+ * Accordion look/behaviour comes from global-faq.css + global-faq.js.
+ * This file is page layout / token tweaks only.
+ */
+
+.sl-whp-page > section.sl-faq-section.sl-workplace-harassment-faq {
+	--sl-faq-bg: var(--sl-page-white, #ffffff);
+	--sl-faq-surface: var(--sl-page-white, #ffffff);
+	--sl-faq-border: rgba(107, 124, 147, 0.18);
+	background-color: var(--sl-page-white, #ffffff);
+}
+
+.sl-workplace-harassment-faq.sl-faq-section .container {
+	max-width: var(--sl-home-content-max, 1400px);
+}
+
+.sl-workplace-harassment-faq.sl-faq-section .shead,
+.sl-workplace-harassment-faq.sl-faq-section .sl-home-section-heading {
+	max-width: none;
+	width: 100%;
+}

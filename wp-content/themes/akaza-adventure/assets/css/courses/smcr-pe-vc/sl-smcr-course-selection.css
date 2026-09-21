@@ -1,0 +1,198 @@
+/**
+ * SMCR Training — Course Selection.
+ *
+ * @package Akaza_Adventure
+ */
+
+/* ---------------------------------------------------------
+   Course Selection
+--------------------------------------------------------- */
+
+.sl-smcr-course-selection {
+	padding: 96px 0;
+	background: #f5f5f5;
+}
+
+.sl-smcr-course-selection .sl-section-intro {
+	margin-bottom: 48px;
+}
+
+.sl-smcr-course-selection .sl-section-intro p {
+	margin-bottom: 0;
+}
+
+/* ---------------------------------------------------------
+   Course Grid
+--------------------------------------------------------- */
+
+.sl-smcr-course-selection__grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 24px;
+}
+
+/* ---------------------------------------------------------
+   Course Card
+--------------------------------------------------------- */
+
+.sl-smcr-course-selection__card {
+	display: flex;
+	height: 100%;
+	padding: 36px;
+	background: #ffffff;
+	border: 1px solid rgba(22, 35, 78, 0.12);
+	border-radius: 16px;
+	box-sizing: border-box;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sl-smcr-course-selection__card:hover {
+	border-color: rgba(20, 114, 186, 0.35);
+	box-shadow: 0 12px 30px rgba(22, 35, 78, 0.07);
+}
+
+.sl-smcr-course-selection__card-content {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+/* ---------------------------------------------------------
+   Course Label
+--------------------------------------------------------- */
+
+.sl-smcr-course-selection__label {
+	display: inline-block;
+	margin-bottom: 14px;
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	line-height: 1.4;
+	text-transform: uppercase;
+}
+
+/* ---------------------------------------------------------
+   Course Title
+--------------------------------------------------------- */
+
+.sl-smcr-course-selection__card .sl-panel-title {
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+
+/* ---------------------------------------------------------
+   Course Description
+--------------------------------------------------------- */
+
+.sl-smcr-course-selection__card p {
+	margin-top: 0;
+	margin-bottom: 24px;
+}
+
+/* ---------------------------------------------------------
+   Focus Points
+--------------------------------------------------------- */
+
+.sl-smcr-course-selection__focus {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-bottom: 30px;
+}
+
+.sl-smcr-course-selection__focus span {
+	display: inline-flex;
+	align-items: center;
+	padding: 8px 12px;
+	background: rgba(20, 114, 186, 0.06);
+	border: 1px solid rgba(20, 114, 186, 0.14);
+	border-radius: 8px;
+	color: var(--sl-page-navy, #16234e);
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.4;
+}
+
+/* ---------------------------------------------------------
+   Course Link
+--------------------------------------------------------- */
+
+.sl-smcr-course-selection__link {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	margin-top: auto;
+	width: fit-content;
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1.5;
+	text-decoration: none;
+}
+
+.sl-smcr-course-selection__link span {
+	transition: transform 0.2s ease;
+}
+
+.sl-smcr-course-selection__link:hover span {
+	transform: translateX(4px);
+}
+
+.sl-smcr-course-selection__link:focus-visible {
+	outline: 2px solid var(--sl-page-primary, #1472ba);
+	outline-offset: 4px;
+	border-radius: 3px;
+}
+
+/* ---------------------------------------------------------
+   Tablet
+--------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+	.sl-smcr-course-selection {
+		padding: 80px 0;
+	}
+
+	.sl-smcr-course-selection__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.sl-smcr-course-selection__card {
+		padding: 30px;
+	}
+}
+
+/* ---------------------------------------------------------
+   Mobile
+--------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+	.sl-smcr-course-selection {
+		padding: 64px 0;
+	}
+
+	.sl-smcr-course-selection .sl-section-intro {
+		margin-bottom: 32px;
+	}
+
+	.sl-smcr-course-selection__grid {
+		gap: 16px;
+	}
+
+	.sl-smcr-course-selection__card {
+		padding: 24px;
+		border-radius: 12px;
+	}
+
+	.sl-smcr-course-selection__focus {
+		margin-bottom: 24px;
+	}
+
+	.sl-smcr-course-selection__focus span {
+		width: 100%;
+		box-sizing: border-box;
+	}
+}

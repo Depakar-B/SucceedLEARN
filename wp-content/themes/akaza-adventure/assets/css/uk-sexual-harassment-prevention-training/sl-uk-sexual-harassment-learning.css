@@ -1,0 +1,166 @@
+/**
+ * UK Sexual Harassment Prevention Training — Learning Experience
+ */
+
+ .sl-uk-sexual-harassment-learning {
+	padding: 80px 0;
+	background: #ffffff;
+}
+
+.sl-uk-sexual-harassment-learning__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+	gap: 70px;
+	align-items: start;
+}
+
+/* Image */
+
+.sl-uk-sexual-harassment-learning__media {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 110px) + 24px);
+	align-self: start;
+}
+
+.sl-uk-sexual-harassment-learning__image {
+	width: 100%;
+	overflow: hidden;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 16px;
+	background: #f5f5f5;
+	box-sizing: border-box;
+}
+
+.sl-uk-sexual-harassment-learning__image-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 520px;
+	padding: 30px;
+	box-sizing: border-box;
+	color: #6b7c93;
+	text-align: center;
+}
+
+/* Content */
+
+.sl-uk-sexual-harassment-learning__content {
+	min-width: 0;
+}
+
+.sl-uk-sexual-harassment-learning__intro {
+	display: block;
+	margin-bottom: 14px;
+	color: var(--sl-page-primary, #1472ba);
+	font-weight: 600;
+}
+
+.sl-uk-sexual-harassment-learning__content h2 {
+	margin-top: 0;
+	margin-bottom: 22px;
+}
+
+.sl-uk-sexual-harassment-learning__content > p {
+	margin-top: 0;
+	margin-bottom: 18px;
+}
+
+.sl-uk-sexual-harassment-learning__content .sl-panel-title {
+	margin-top: 30px;
+	margin-bottom: 16px!important;
+}	
+
+/* Learning points */
+
+.sl-uk-sexual-harassment-learning__list {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-uk-sexual-harassment-learning__item {
+	display: grid;
+	grid-template-columns: 42px minmax(0, 1fr);
+	gap: 14px;
+	align-items: start;
+	padding: 16px 18px;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 10px;
+	background: #f5f5f5;
+	box-sizing: border-box;
+}
+
+.sl-uk-sexual-harassment-learning__number {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 34px;
+	height: 34px;
+	border: 1px solid rgba(20, 114, 186, 0.18);
+	border-radius: 8px;
+	background: rgba(20, 114, 186, 0.08);
+	color: var(--sl-page-primary, #1472ba);
+	font-weight: 700;
+	line-height: 1;
+}
+
+.sl-uk-sexual-harassment-learning__text {
+	align-self: center;
+}
+
+@media (max-width: 900px) {
+	.sl-uk-sexual-harassment-learning {
+		padding: 64px 0;
+	}
+
+	.sl-uk-sexual-harassment-learning__grid {
+		grid-template-columns: 1fr;
+		gap: 44px;
+	}
+
+	.sl-uk-sexual-harassment-learning__media {
+		position: static;
+		order: 1;
+	}
+
+	.sl-uk-sexual-harassment-learning__content {
+		order: 2;
+	}
+
+	.sl-uk-sexual-harassment-learning__image-placeholder {
+		min-height: 420px;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-uk-sexual-harassment-learning {
+		padding: 52px 0;
+	}
+
+	.sl-uk-sexual-harassment-learning__grid {
+		gap: 32px;
+	}
+
+	.sl-uk-sexual-harassment-learning__image {
+		border-radius: 12px;
+	}
+
+	.sl-uk-sexual-harassment-learning__image-placeholder {
+		min-height: 320px;
+		padding: 24px;
+	}
+
+	.sl-uk-sexual-harassment-learning__item {
+		grid-template-columns: 36px minmax(0, 1fr);
+		gap: 12px;
+		padding: 15px 16px;
+	}
+
+	.sl-uk-sexual-harassment-learning__number {
+		width: 32px;
+		height: 32px;
+	}
+}

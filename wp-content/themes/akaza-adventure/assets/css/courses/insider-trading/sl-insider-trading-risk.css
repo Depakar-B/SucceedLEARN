@@ -1,0 +1,175 @@
+/* =========================================================
+   SucceedLEARN
+   Insider Trading eLearning
+   Understanding Insider Trading Risk
+
+   Container and section spacing come from course-global.css.
+   ========================================================= */
+
+   .sl-course-page .sl-insider-trading-risk {
+	background: var(--course-light-bg, #f5f5f5);
+}
+
+
+/* =========================================================
+   Main Layout
+   ========================================================= */
+
+.sl-insider-trading-risk__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+	gap: 64px;
+	align-items: center;
+}
+
+
+/* =========================================================
+   Image
+   ========================================================= */
+
+.sl-insider-trading-risk__media {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 0;
+}
+
+.sl-insider-trading-risk__image-placeholder {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	width: min(100%, 600px);
+	aspect-ratio: 1 / 1;
+
+	background: var(--course-white, #ffffff);
+	border: 1px dashed rgba(20, 114, 186, 0.35);
+	border-radius: 18px;
+
+	text-align: center;
+}
+
+.sl-insider-trading-risk__image-placeholder span {
+	color: var(--course-primary, #1472ba);
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1.4;
+}
+
+.sl-insider-trading-risk__image-placeholder small {
+	margin-top: 8px;
+	color: var(--course-muted, #6b7c93);
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+
+/* =========================================================
+   Content
+   ========================================================= */
+
+.sl-insider-trading-risk__content {
+	min-width: 0;
+}
+
+.sl-insider-trading-risk__content h2 {
+	margin-bottom: 22px;
+}
+
+.sl-insider-trading-risk__body {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.sl-insider-trading-risk__body p {
+	margin: 1rem 0;
+}
+
+
+/* =========================================================
+   Highlighted Decision Box
+   ========================================================= */
+
+.sl-insider-trading-risk__highlight {
+	margin-top: 28px;
+	padding: 24px 26px;
+
+	background: var(--course-white, #ffffff);
+	border-left: 4px solid var(--course-primary, #1472ba);
+	border-radius: 0 12px 12px 0;
+}
+
+.sl-insider-trading-risk__highlight h4 {
+	margin: 0 0 12px;
+	color: var(--course-navy, #16234e);
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 1.4;
+}
+
+.sl-insider-trading-risk__question {
+	margin: 0 0 12px;
+	color: var(--course-primary, #1472ba);
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 1.5;
+}
+
+.sl-insider-trading-risk__highlight-copy {
+	margin: 0;
+	color: var(--course-text, #4a4a4a);
+}
+
+
+/* =========================================================
+   Tablet
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+	.sl-insider-trading-risk__grid {
+		gap: 48px;
+	}
+}
+
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+	.sl-insider-trading-risk__grid {
+		grid-template-columns: 1fr;
+		gap: 36px;
+	}
+
+	.sl-insider-trading-risk__media {
+		order: 1;
+	}
+
+	.sl-insider-trading-risk__content {
+		order: 2;
+	}
+
+	.sl-insider-trading-risk__image-placeholder {
+		width: 100%;
+		max-width: 560px;
+		border-radius: 14px;
+	}
+
+	.sl-insider-trading-risk__content h2 {
+		margin-bottom: 18px;
+	}
+
+	.sl-insider-trading-risk__highlight {
+		margin-top: 24px;
+		padding: 20px;
+	}
+
+	.sl-insider-trading-risk__question {
+		font-size: 18px;
+	}
+}

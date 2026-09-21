@@ -1,0 +1,407 @@
+﻿/**
+ * Anti-Bribery and Anti-Corruption eLearning Hero.
+ *
+ * @package Akaza_Adventure
+ */
+
+.sl-course-page > section.sl-anti-bribery-hero {
+	padding-top: calc(
+		var(--slf-header-clearance, 76px) +
+		var(--course-section-space, 90px)
+	) !important;
+	padding-bottom: 100px !important;
+	background: var(--sl-page-white, #ffffff);
+	box-sizing: border-box;
+}
+
+.sl-anti-bribery-hero__container {
+	width: min(
+		calc(100% - 64px),
+		var(--course-container, 1240px)
+	);
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+}
+
+.sl-anti-bribery-hero__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(520px, 0.92fr);
+	align-items: center;
+	gap: clamp(50px, 6vw, 100px);
+}
+
+/* =========================================================
+   Hero Content
+========================================================= */
+
+.sl-anti-bribery-hero__content {
+	max-width: 680px;
+}
+
+.sl-anti-bribery-hero__content h1 {
+	max-width: 680px;
+	margin: 18px 0 22px;
+	color: var(--course-navy, #16234e);
+	font-size: clamp(42px, 5vw, 68px);
+	font-weight: 600;
+	line-height: 1.08;
+	letter-spacing: -0.035em;
+}
+
+.sl-anti-bribery-hero__description {
+	max-width: 650px;
+}
+
+.sl-anti-bribery-hero__description p {
+	margin: 0;
+	color: var(--course-text, #4a4a4a);
+	font-size: 18px;
+	line-height: 1.75;
+}
+
+/* =========================================================
+   Hero Buttons
+========================================================= */
+
+.sl-anti-bribery-hero__content .sl-hero-actions {
+	margin-top: 32px;
+}
+
+/* =========================================================
+   Highlights
+========================================================= */
+
+.sl-anti-bribery-hero__highlights {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 0;
+	margin: 38px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-anti-bribery-hero__highlight {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	padding: 0 24px;
+}
+
+.sl-anti-bribery-hero__highlight:first-child {
+	padding-left: 0;
+}
+
+.sl-anti-bribery-hero__highlight:last-child {
+	padding-right: 0;
+}
+
+.sl-anti-bribery-hero__highlight:not(:last-child)::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 1px;
+	height: 100%;
+	background: #dfe4ec;
+	content: "";
+}
+
+.sl-anti-bribery-hero__highlight-value {
+	color: var(--course-navy, #16234e);
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 1.4;
+}
+
+.sl-anti-bribery-hero__highlight-label {
+	color: var(--course-muted, #6b7c93);
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+/* =========================================================
+   Hero Visual
+========================================================= */
+
+.sl-anti-bribery-hero__visual {
+	position: relative;
+	min-height: 610px;
+}
+
+.sl-anti-bribery-hero__main-image {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 88%;
+	height: 560px;
+	overflow: hidden;
+	border-radius: 22px;
+}
+
+.sl-anti-bribery-hero__image-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	background: #edf1f5;
+	border: 1px solid #dce3eb;
+	box-sizing: border-box;
+}
+
+.sl-anti-bribery-hero__image-placeholder span {
+	padding: 12px 18px;
+	border-radius: 8px;
+	background: rgba(255, 255, 255, 0.9);
+	color: #6b7c93;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1.5;
+	text-align: center;
+}
+
+/* =========================================================
+   Circular Supporting Image
+========================================================= */
+
+.sl-anti-bribery-hero__circle-image {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+	width: 190px;
+	height: 190px;
+	padding: 8px;
+	border-radius: 50%;
+	background: #ffffff;
+	box-shadow: 0 15px 35px rgba(22, 35, 78, 0.16);
+	box-sizing: border-box;
+}
+
+.sl-anti-bribery-hero__circle-image-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	border-radius: 50%;
+	background: #e7edf4;
+	border: 1px solid #d7dfe9;
+	box-sizing: border-box;
+}
+
+.sl-anti-bribery-hero__circle-image-placeholder span {
+	color: #6b7c93;
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 1.4;
+	text-align: center;
+}
+
+/* =========================================================
+   Large Desktop
+========================================================= */
+
+@media (min-width: 1600px) {
+
+	.sl-course-page > section.sl-anti-bribery-hero {
+		padding-top: calc(
+			var(--slf-header-clearance, 76px) +
+			var(--course-section-space, 90px)
+		) !important;
+	}
+
+	.sl-anti-bribery-hero__container {
+		width: min(
+			calc(100% - 100px),
+			var(--course-container, 1380px)
+		);
+	}
+
+	.sl-anti-bribery-hero__grid {
+		grid-template-columns:
+			minmax(0, 1fr)
+			minmax(600px, 0.95fr);
+	}
+
+	.sl-anti-bribery-hero__visual {
+		min-height: 650px;
+	}
+
+	.sl-anti-bribery-hero__main-image {
+		height: 600px;
+	}
+
+	.sl-anti-bribery-hero__circle-image {
+		width: 210px;
+		height: 210px;
+	}
+}
+
+/* =========================================================
+   Tablet
+========================================================= */
+
+@media (max-width: 1100px) {
+
+	.sl-anti-bribery-hero__grid {
+		grid-template-columns:
+			minmax(0, 1fr)
+			minmax(430px, 0.9fr);
+		gap: 45px;
+	}
+
+	.sl-anti-bribery-hero__visual {
+		min-height: 520px;
+	}
+
+	.sl-anti-bribery-hero__main-image {
+		height: 480px;
+		width: 90%;
+	}
+
+	.sl-anti-bribery-hero__circle-image {
+		width: 155px;
+		height: 155px;
+	}
+
+	.sl-anti-bribery-hero__content h1 {
+		font-size: clamp(38px, 5vw, 54px);
+	}
+}
+
+/* =========================================================
+   Mobile
+========================================================= */
+
+@media (max-width: 900px) {
+
+	.sl-course-page > section.sl-anti-bribery-hero {
+		padding-top: calc(
+			var(--slf-header-clearance, 76px) +
+			var(--course-section-space-mobile, 60px)
+		) !important;
+		padding-bottom: 72px !important;
+	}
+
+	.sl-anti-bribery-hero__container {
+		width: min(
+			calc(100% - 48px),
+			var(--course-container, 1240px)
+		);
+	}
+
+	.sl-anti-bribery-hero__grid {
+		grid-template-columns: 1fr;
+		gap: 55px;
+	}
+
+	.sl-anti-bribery-hero__content {
+		max-width: none;
+	}
+
+	.sl-anti-bribery-hero__visual {
+		min-height: 500px;
+	}
+
+	.sl-anti-bribery-hero__main-image {
+		width: 88%;
+		height: 460px;
+	}
+}
+
+/* =========================================================
+   Small Mobile
+========================================================= */
+
+@media (max-width: 600px) {
+
+	.sl-anti-bribery-hero__container {
+		width: calc(100% - 36px);
+	}
+
+	.sl-anti-bribery-hero__content h1 {
+		margin-top: 14px;
+		font-size: 38px;
+		line-height: 1.1;
+	}
+
+	.sl-anti-bribery-hero__description p {
+		font-size: 16px;
+		line-height: 1.7;
+	}
+
+	.sl-anti-bribery-hero__highlights {
+		grid-template-columns: 1fr;
+		gap: 18px;
+		margin-top: 30px;
+	}
+
+	.sl-anti-bribery-hero__highlight,
+	.sl-anti-bribery-hero__highlight:first-child,
+	.sl-anti-bribery-hero__highlight:last-child {
+		padding: 0 0 18px;
+	}
+
+	.sl-anti-bribery-hero__highlight:not(:last-child)::after {
+		top: auto;
+		right: auto;
+		bottom: 0;
+		width: 100%;
+		height: 1px;
+	}
+
+	.sl-anti-bribery-hero__visual {
+		min-height: 390px;
+	}
+
+	.sl-anti-bribery-hero__main-image {
+		width: 90%;
+		height: 360px;
+		border-radius: 16px;
+	}
+
+	.sl-anti-bribery-hero__circle-image {
+		width: 125px;
+		height: 125px;
+		right: 0;
+	}
+
+	.sl-anti-bribery-hero__image-placeholder span {
+		font-size: 11px;
+	}
+
+	.sl-anti-bribery-hero__circle-image-placeholder span {
+		font-size: 9px;
+	}
+}
+
+/* =========================================================
+   Extra Small Mobile
+========================================================= */
+
+@media (max-width: 380px) {
+
+	.sl-anti-bribery-hero__container {
+		width: calc(100% - 28px);
+	}
+
+	.sl-anti-bribery-hero__content h1 {
+		font-size: 34px;
+	}
+
+	.sl-anti-bribery-hero__visual {
+		min-height: 340px;
+	}
+
+	.sl-anti-bribery-hero__main-image {
+		height: 310px;
+	}
+
+	.sl-anti-bribery-hero__circle-image {
+		width: 105px;
+		height: 105px;
+	}
+}

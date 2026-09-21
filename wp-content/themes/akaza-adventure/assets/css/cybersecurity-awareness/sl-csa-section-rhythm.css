@@ -1,0 +1,22 @@
+/**
+ * Cybersecurity Awareness — alternating section backgrounds.
+ *
+ * Only white and page bg (#f5f5f5). Starts white, then bg, white, bg…
+ * Uses nth-of-type so FAQ schema <script> siblings do not break the rhythm.
+ * Loaded last so it overrides per-section background declarations.
+ */
+
+.sl-csa-page > section:nth-of-type(odd) {
+	background: var(--sl-page-white, #ffffff) !important;
+	background-color: var(--sl-page-white, #ffffff) !important;
+}
+
+.sl-csa-page > section:nth-of-type(even) {
+	background: var(--sl-page-bg, #f5f5f5) !important;
+	background-color: var(--sl-page-bg, #f5f5f5) !important;
+}
+
+.sl-csa-page > section.sl-faq-section.sl-csa-faq {
+	--sl-faq-bg: var(--sl-page-white, #ffffff);
+	--sl-faq-surface: var(--sl-page-white, #ffffff);
+}

@@ -1,0 +1,195 @@
+/*
+ * SucceedLEARN
+ * Workplace Harassment Prevention Training
+ * Hero Section
+ */
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.sl-harassment-hero {
+	position: relative;
+	z-index: 1;
+	/* Extra top padding clears sticky header */
+	padding: 140px 0 90px;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.sl-harassment-hero__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.08fr) minmax(440px, 0.82fr);
+	align-items: center;
+	gap: 70px;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.sl-harassment-hero__content {
+	min-width: 0;
+}
+
+.sl-harassment-hero__heading {
+	margin-bottom: 28px;
+}
+
+.sl-harassment-hero__heading h1 {
+	margin: 0 0 18px;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-harassment-hero__heading h2 {
+	margin: 0;
+	font-size: var(--sl-fs-hero-h2, 32px);
+	line-height: 1.35;
+	color: var(--sl-primary, #1472ba);
+}
+
+.sl-harassment-hero__intro {
+	max-width: 760px;
+}
+
+.sl-harassment-hero__intro p {
+	margin: 0 0 16px;
+	color: var(--sl-page-text, #425b70);
+}
+
+.sl-harassment-hero__intro p:last-child {
+	margin-bottom: 0;
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.sl-harassment-hero__actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 14px;
+	margin-top: 30px;
+}
+
+/* Button look: site-wide .sl-hero-btn from sl-global-ui-buttons.css */
+
+
+/* =========================================
+   HERO VISUAL
+========================================= */
+
+.sl-harassment-hero__visual {
+	width: 100%;
+	min-width: 0;
+}
+
+.sl-harassment-hero__image-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 560px;
+	aspect-ratio: 720 / 760;
+	border: 1px dashed rgba(20, 114, 186, 0.28);
+	border-radius: 18px;
+	background: #ffffff;
+	color: var(--sl-primary, #1472ba);
+}
+
+.sl-harassment-hero__placeholder-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	padding: 30px;
+	text-align: center;
+}
+
+.sl-harassment-hero__placeholder-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 68px;
+	height: 68px;
+	border-radius: 16px;
+	background: rgba(20, 114, 186, 0.08);
+}
+
+.sl-harassment-hero__placeholder-icon svg {
+	width: 34px;
+	height: 34px;
+}
+
+.sl-harassment-hero__placeholder-title {
+	color: var(--sl-page-navy, #16234e);
+	font-weight: 700;
+}
+
+.sl-harassment-hero__placeholder-size {
+	color: var(--sl-page-text, #425b70);
+	font-size: 13px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1199px) {
+
+	.sl-harassment-hero {
+		padding: 125px 0 75px;
+	}
+
+	.sl-harassment-hero__grid {
+		grid-template-columns: minmax(0, 1fr) minmax(380px, 0.85fr);
+		gap: 45px;
+	}
+
+	.sl-harassment-hero__image-placeholder {
+		min-height: 500px;
+	}
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+	.sl-harassment-hero {
+		padding: 110px 0 60px;
+	}
+
+	.sl-harassment-hero__grid {
+		grid-template-columns: 1fr;
+		gap: 38px;
+	}
+
+	.sl-harassment-hero__heading {
+		margin-bottom: 24px;
+	}
+
+	.sl-harassment-hero__actions {
+		align-items: stretch;
+		flex-direction: column;
+	}
+
+	.sl-harassment-hero__image-placeholder {
+		min-height: 340px;
+		aspect-ratio: 4 / 3;
+	}
+
+}

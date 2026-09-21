@@ -1,0 +1,301 @@
+.smlf-marketing-form-wrapper {
+	max-width: 800px;
+	margin: 0.5rem auto;
+	background: #f9fafb;
+	border-radius: 12px;
+	padding: 1rem;
+}
+
+.smlf-form-title {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: #0f172a;
+	margin: 0 0 0.75rem 0;
+	text-align: center;
+}
+
+.smlf-form {
+	max-width: 100%;
+	margin: 0;
+	background: #ffffff;
+	border-radius: 8px;
+	padding: 1rem;
+}
+
+/* Hide honeypot field from users */
+.smlf-honeypot {
+	position: absolute;
+	left: -9999px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.smlf-form-row {
+	display: flex;
+	gap: 0.75rem;
+	margin-bottom: 0.5rem;
+}
+
+.smlf-form-col {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+@media (max-width: 768px) {
+	.smlf-form-row {
+		flex-direction: column;
+	}
+}
+
+.smlf-field {
+	margin-bottom: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.smlf-field label {
+	font-weight: 600;
+	color: #0f172a;
+	margin-bottom: 0.15rem;
+	font-size: 0.875rem;
+}
+
+.smlf-required {
+	color: #dc2626;
+	margin-left: 2px;
+}
+
+/* Exclude checkbox from general input styles */
+.smlf-field input:not([type="checkbox"]):not([type="radio"]),
+.smlf-field textarea,
+.smlf-field select {
+	border: 1px solid #cbd5f5;
+	border-radius: 6px;
+	font-size: 0.9rem;
+	width: 100%;
+	box-sizing: border-box;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+	padding: 0.5rem 0.75rem;
+}
+
+.smlf-field select {
+	background-color: #ffffff;
+	cursor: pointer;
+	appearance: none;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23334155' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 0.875rem center;
+	padding-right: 2.5rem;
+}
+
+.smlf-field input:not([type="checkbox"]):not([type="radio"]):focus,
+.smlf-field textarea:focus,
+.smlf-field select:focus {
+	outline: none;
+	border-color: #2563eb;
+	box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.smlf-field textarea {
+	resize: vertical;
+	min-height: 120px;
+}
+
+.smlf-checkbox {
+	flex-direction: row;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	margin-bottom: 0.5rem;
+}
+
+/* Specific checkbox styling with high specificity to override theme CSS */
+.smlf-checkbox input[type="checkbox"],
+.smlf-form .smlf-checkbox input[type="checkbox"],
+body .smlf-form .smlf-checkbox input[type="checkbox"] {
+	width: 1.2em !important;
+	height: 1.2em !important;
+	margin: 0.25rem 0.5rem 0 0 !important;
+	cursor: pointer !important;
+	pointer-events: auto !important;
+	position: relative;
+	z-index: 10;
+	appearance: checkbox;
+	-webkit-appearance: checkbox;
+	-moz-appearance: checkbox;
+	border: initial !important;
+	background: initial !important;
+	flex-shrink: 0;
+}
+
+/* Hide theme's ::before pseudo-element that creates inner box */
+.smlf-checkbox input[type="checkbox"]::before,
+.smlf-checkbox input[type="checkbox"]::after,
+.smlf-checkbox input[type="checkbox"]:checked::before,
+.smlf-checkbox input[type="checkbox"]:checked::after,
+.smlf-form .smlf-checkbox input[type="checkbox"]::before,
+.smlf-form .smlf-checkbox input[type="checkbox"]::after,
+body .smlf-form .smlf-checkbox input[type="checkbox"]::before,
+body .smlf-form .smlf-checkbox input[type="checkbox"]::after {
+	display: none !important;
+	content: "" !important;
+	width: 0 !important;
+	height: 0 !important;
+	visibility: hidden !important;
+	opacity: 0 !important;
+	float: none !important;
+}
+
+.smlf-checkbox label {
+	font-weight: normal;
+	cursor: pointer;
+	flex: 1;
+	line-height: 1.5;
+}
+
+.smlf-checkbox .smlf-error-message {
+	width: 100%;
+	margin-left: 0;
+}
+
+.smlf-checkbox a {
+	color: #2563eb;
+	text-decoration: underline;
+}
+
+.smlf-submit {
+	background-color: transparent;
+	background-image: linear-gradient(90deg, rgb(108, 63, 181) 0%, rgb(255, 77, 143) 100%);
+	color: rgb(255, 255, 255);
+	fill: rgb(255, 255, 255);
+	border: none;
+	border-radius: 8px;
+	font-size: 20px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: transform 0.1s ease, box-shadow 0.2s ease, background 0.4s ease, color 0.4s ease;
+	width: 100%;
+	display: block;
+	margin: 0.75rem 0 0 0;
+	position: relative;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.smlf-submit:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.smlf-submit:active {
+	transform: scale(0.98);
+}
+
+.smlf-submit:disabled {
+	cursor: not-allowed;
+}
+
+.smlf-submit.is-loading {
+	opacity: 0.6;
+	pointer-events: none;
+}
+
+.smlf-response {
+	margin-top: 0.5rem;
+	border-radius: 6px;
+	font-weight: 600;
+	display: block;
+	font-size: 0.875rem;
+	padding: 12px 16px;
+	box-sizing: border-box;
+}
+
+.smlf-response.smlf-error {
+	color: #dc2626;
+	background-color: #fee2e2;
+	border: 1px solid #fecaca;
+	padding: 12px 16px;
+}
+
+.smlf-response.smlf-success {
+	color: #15803d;
+	background-color: #d1fae5;
+	border: 1px solid #a7f3d0;
+	margin-top: 8px !important;
+	padding: 12px 16px;
+}
+
+.smlf-error-message {
+	color: #dc2626;
+	font-size: 12px;
+	font-weight: normal;
+	margin-top: 0.25rem;
+	display: block;
+	/**min-height: 20px;**/
+}
+
+.smlf-field input:not([type="checkbox"]):not([type="radio"]):invalid:not(:focus):not(:placeholder-shown),
+.smlf-field textarea:invalid:not(:focus):not(:placeholder-shown) {
+	border-color: #cbd5f5;
+}
+
+.smlf-spinner {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	border: 2px solid rgba(255, 255, 255, 0.3);
+	border-top-color: #fff;
+	border-radius: 50%;
+	animation: scf-spin 0.8s linear infinite;
+	margin-right: 8px;
+	vertical-align: middle;
+}
+.smlf-checkbox a{
+	color: #1472ba!important;
+    font-weight: 600;
+    text-decoration: none;
+}
+@keyframes scf-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.smlf-submit-loading {
+	display: inline-flex;
+	align-items: center;
+}
+
+.smlf-submit.is-loading .smlf-submit-text {
+	display: none;
+}
+
+.smlf-submit.is-loading .smlf-submit-loading {
+	display: inline-flex !important;
+}
+
+.smlf-form-footer {
+	margin-top: 0.75rem;
+	text-align: center;
+}
+
+.smlf-urgency-text {
+	color: #ff6b35;
+	font-weight: 600;
+	font-size: 0.875rem;
+	margin: 0.25rem 0;
+	line-height: 1.3;
+}
+
+.smlf-value-text {
+	color: #4b5563;
+	font-size: 0.8rem;
+	margin: 0.25rem 0 0 0;
+	line-height: 1.4;
+}
+

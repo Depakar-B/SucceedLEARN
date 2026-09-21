@@ -1,0 +1,234 @@
+/**
+ * Cybersecurity Awareness — custom single-page header.
+ * Container, spacing, and breakpoints aligned with sl-csa-footer.
+ */
+
+:root {
+	--sl-csa-header-height: 80px;
+	--sl-csa-top-bar-height: 52px;
+	--sl-csa-scroll-offset: calc(var(--sl-csa-header-height) + var(--sl-csa-top-bar-height));
+}
+
+body.sl-csa-landing {
+	--slf-header-clearance: 0;
+	padding-top: 0 !important;
+}
+
+/* Fallback: hide global AHF chrome if any hook still outputs on this landing page */
+body.sl-csa-landing .site-header,
+body.sl-csa-landing .genesis-header,
+body.sl-csa-landing .epsh-mobile-header-wrap,
+body.sl-csa-landing .epsh-mobile-only,
+body.sl-csa-landing .epsh-top-bar,
+body.sl-csa-landing #epsh-site-footer,
+body.sl-csa-landing .epsh-site-footer {
+	display: none !important;
+}
+
+body.sl-csa-landing main.sl-csa-page,
+body.sl-csa-landing #sl-csa-main {
+	/* Sticky CSA header + top bar clearance (heroes use normal section padding only) */
+	padding-top: var(--sl-csa-scroll-offset) !important;
+	margin-top: 0 !important;
+}
+
+body.sl-csa-landing .sl-csa-page [id] {
+	scroll-margin-top: var(--sl-csa-scroll-offset);
+}
+
+.sl-csa-header {
+	--sl-csa-header-bg: rgba(255, 255, 255, 0.96);
+	--sl-csa-header-border: rgba(107, 124, 147, 0.18);
+	--sl-csa-header-text: var(--sl-page-navy, #16234e);
+	--sl-csa-header-link: var(--sl-page-navy, #16234e);
+	--sl-csa-header-link-active: var(--sl-page-primary, #1472ba);
+
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 200;
+	min-height: var(--sl-csa-header-height);
+	background: var(--sl-csa-header-bg);
+	border-bottom: 1px solid var(--sl-csa-header-border);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	transform: translate3d(0, 0, 0);
+	transition: transform 0.28s ease;
+	will-change: transform;
+}
+
+.sl-csa-header.is-hidden {
+	transform: translate3d(0, -100%, 0);
+	pointer-events: none;
+}
+
+body.sl-csa-header-is-hidden .sl-csa-top-bar {
+	transform: translate3d(
+		0,
+		calc(-1 * (var(--sl-csa-header-height) + var(--sl-csa-top-bar-height))),
+		0
+	);
+	pointer-events: none;
+}
+
+.sl-csa-header .container {
+	width: 100%;
+	max-width: var(--sl-home-content-max, 1400px);
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: var(--slf-gutter, clamp(1.25rem, 3vw, 3rem));
+	padding-right: var(--slf-gutter, clamp(1.25rem, 3vw, 3rem));
+	box-sizing: border-box;
+}
+
+.sl-csa-header__inner {
+	display: grid;
+	grid-template-columns: minmax(0, auto) minmax(0, 1fr) auto;
+	align-items: center;
+	gap: 24px 40px;
+	min-height: var(--sl-csa-header-height);
+	padding: 14px 0;
+}
+
+.sl-csa-header__logo {
+	display: flex;
+	align-items: center;
+	justify-self: start;
+	min-width: 0;
+}
+
+.sl-csa-header__logo img {
+	display: block;
+	width: auto;
+	max-width: min(180px, 34vw);
+	height: auto;
+	max-height: 44px;
+}
+
+.sl-csa-header__nav {
+	justify-self: center;
+	min-width: 0;
+}
+
+.sl-csa-header__nav-list {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 12px 36px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-csa-header__nav-link {
+	color: var(--sl-csa-header-link);
+	font-family: var(--slf-font-body, "Space Grotesk", system-ui, sans-serif);
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 1.4;
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+.sl-csa-header__nav-link:hover,
+.sl-csa-header__nav-link:focus-visible {
+	color: var(--sl-csa-header-link-active);
+}
+
+.sl-csa-header__nav-link.is-active {
+	color: var(--sl-csa-header-link-active);
+}
+
+.sl-csa-header__cta,
+.sl-csa-header .sl-content-btn {
+	justify-self: end;
+}
+
+.sl-csa-header .sl-content-btn svg {
+	width: 18px;
+	height: 18px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.8;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+@media (max-width: 991px) {
+	:root {
+		--sl-csa-header-height: 76px;
+	}
+
+	.sl-csa-header__inner {
+		gap: 16px 24px;
+		padding: 12px 0;
+	}
+
+	.sl-csa-header__nav-list {
+		gap: 10px 24px;
+	}
+
+	.sl-csa-header__nav-link {
+		font-size: 14px;
+	}
+
+	.sl-csa-header .sl-content-btn {
+		padding-inline: 14px;
+		font-size: 13px;
+	}
+}
+
+@media (max-width: 767px) {
+	:root {
+		--sl-csa-header-height: 118px;
+		--sl-csa-top-bar-height: 72px;
+	}
+
+	.sl-csa-header__inner {
+		grid-template-columns: minmax(0, 1fr) auto;
+		grid-template-areas:
+			"logo cta"
+			"nav nav";
+		gap: 12px 16px;
+		padding: 12px 0 14px;
+	}
+
+	.sl-csa-header__logo {
+		grid-area: logo;
+	}
+
+	.sl-csa-header__nav {
+		grid-area: nav;
+		justify-self: stretch;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.sl-csa-header__nav-list {
+		justify-content: flex-start;
+		flex-wrap: nowrap;
+		gap: 18px;
+		padding-bottom: 2px;
+	}
+
+	.sl-csa-header__cta,
+	.sl-csa-header .sl-content-btn {
+		grid-area: cta;
+		justify-self: end;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.sl-csa-header {
+		backdrop-filter: none;
+		-webkit-backdrop-filter: none;
+		background: #ffffff;
+	}
+
+	.sl-csa-header__nav-link {
+		transition: none;
+	}
+}

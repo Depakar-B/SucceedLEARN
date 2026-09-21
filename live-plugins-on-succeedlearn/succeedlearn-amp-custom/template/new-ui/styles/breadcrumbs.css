@@ -1,0 +1,15 @@
+/* Shared AMP breadcrumbs — compact inline trail above hero eyebrow */
+.slf-breadcrumbs,.slf-breadcrumbs--inline{position:relative;z-index:2;margin:0 0 14px;padding:0;background:transparent;border:0}
+.slf-breadcrumbs__list{display:flex;flex-wrap:wrap;align-items:center;gap:0;margin:0;padding:0;list-style:none;font-size:12px;line-height:1.4;color:#6B7C93}
+.slf-breadcrumbs__item{display:inline-flex;align-items:center;max-width:100%;margin:0;padding:0;list-style:none}
+.slf-breadcrumbs__sep{display:inline-block;margin:0 .4rem;color:rgba(22,35,78,.32);font-weight:400}
+.slf-breadcrumbs__link{color:#16234e;text-decoration:none;font-weight:600;white-space:nowrap}
+.slf-breadcrumbs__link:hover,.slf-breadcrumbs__link:focus{color:#1472ba;text-decoration:none}
+.slf-breadcrumbs__current{display:inline-block;max-width:min(100%,18rem);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#6B7C93;font-weight:500}
+/* Dark AMP defensive-driving hero */
+.sl-dd-hero .slf-breadcrumbs__list{color:rgba(255,255,255,.68)}
+.sl-dd-hero .slf-breadcrumbs__sep{color:rgba(255,255,255,.35)}
+.sl-dd-hero .slf-breadcrumbs__link{color:#fff}
+.sl-dd-hero .slf-breadcrumbs__link:hover,.sl-dd-hero .slf-breadcrumbs__link:focus{color:#6dc3eb}
+.sl-dd-hero .slf-breadcrumbs__current{color:rgba(255,255,255,.72)}
+@media(max-width:767px){.slf-breadcrumbs--inline{margin-bottom:10px}.slf-breadcrumbs__list{font-size:11px}.slf-breadcrumbs__current{max-width:min(100%,14rem)}}

@@ -1,0 +1,324 @@
+/* =========================================
+   GLOBAL WORKPLACE COMPLIANCE HERO
+========================================= */
+
+.sl-global-hero {
+	position: relative;
+	overflow: hidden;
+	padding:
+		calc(var(--slf-header-clearance, 76px) + 70px)
+		0
+		80px;
+	background: #ffffff;
+	font-family: var(--slf-font-body, "Space Grotesk", system-ui, sans-serif);
+}
+
+.sl-global-hero .slf-hero-breadcrumbs,
+.sl-global-hero .breadcrumb,
+.sl-global-hero nav[aria-label="Breadcrumb"] {
+	margin-bottom: 24px;
+}
+
+.sl-global-hero .container {
+	width: 100%;
+	max-width: var(--sl-home-content-max, 1400px);
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.sl-global-hero-row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+.sl-global-hero-row > .col-lg-6 {
+	width: 100%;
+	padding-left: 15px;
+	padding-right: 15px;
+	box-sizing: border-box;
+}
+
+@media (min-width: 992px) {
+	.sl-global-hero-row > .col-lg-6 {
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+}
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.sl-global-hero-content {
+	max-width: 680px;
+}
+
+.sl-global-hero-content h1 {
+	margin: 0 0 18px;
+	font-size: var(--sl-fs-h1);
+	font-weight: 800;
+	letter-spacing: var(--sl-ls-h1, -0.02em);
+	line-height: 1.15;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-global-hero-content h2.sl-global-hero__tagline,
+.sl-global-hero-content .sl-global-hero__tagline {
+	margin: 0 0 20px;
+	color: var(--sl-page-primary, #1472ba);
+	font-size: var(--sl-fs-hero-h2, 32px);
+	font-weight: 600;
+	line-height: 1.35;
+}
+
+.sl-global-hero-content p {
+	max-width: 640px;
+	margin: 0 0 28px;
+	color: var(--sl-page-muted, #6b7c93);
+	font-size: 17px;
+	line-height: 1.75;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.sl-global-hero-buttons {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	flex-wrap: wrap;
+}
+
+/* Button look: site-wide .sl-hero-btn from sl-global-ui-buttons.css */
+
+/* =========================================
+   HERO IMAGE
+========================================= */
+
+.sl-global-hero-image {
+	position: relative;
+	width: 100%;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+}
+
+.sl-global-hero-image picture {
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	width: 100%;
+}
+
+.sl-global-hero-image img {
+	display: block;
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	object-fit: contain;
+	object-position: right bottom;
+}
+
+/* =========================================
+   DESKTOP — content left, image bottom-right
+========================================= */
+
+@media (min-width: 992px) {
+	.sl-global-hero-row > .col-lg-6:first-child {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.sl-global-hero-row > .col-lg-6:last-child {
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-end;
+		align-self: stretch;
+	}
+
+	.sl-global-hero-image {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		align-items: flex-end;
+		justify-content: flex-end;
+	}
+
+	.sl-global-hero-image picture {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-end;
+	}
+
+	.sl-global-hero-image img {
+		width: auto;
+		height: auto;
+		max-width: 100%;
+		max-height: 100%;
+		margin-left: auto;
+		object-fit: contain;
+		object-position: right bottom;
+	}
+}
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (min-width: 1200px) {
+	.sl-global-hero {
+		padding:
+			calc(var(--slf-header-clearance, 76px) + 70px)
+			0
+			90px;
+	}
+
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+	.sl-global-hero {
+		padding:
+			calc(var(--slf-header-clearance, 76px) + 65px)
+			0
+			70px;
+	}
+
+	.sl-global-hero-content {
+		max-width: 100%;
+	}
+
+
+
+	.sl-global-hero-content p {
+		font-size: 16px;
+	}
+
+	.sl-global-hero-image {
+		margin-top: 35px;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.sl-global-hero-image picture {
+		justify-content: center;
+	}
+
+	.sl-global-hero-image img {
+		width: 100%;
+		max-width: 650px;
+		object-position: center bottom;
+	}
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+	.sl-global-hero {
+		padding:
+			calc(var(--slf-header-clearance, 76px) + 50px)
+			0
+			55px;
+	}
+
+	.sl-global-hero-content {
+		text-align: left;
+	}
+
+	.sl-global-hero-content h1 {
+		line-height: 1.2;
+	}
+
+
+	.sl-global-hero-content p {
+		font-size: 16px;
+		line-height: 1.7;
+	}
+
+	.sl-global-hero-buttons {
+		gap: 10px;
+	}
+
+	.sl-global-hero-image {
+		margin-top: 30px;
+		height: 390px;
+		overflow: hidden;
+		border-radius: 16px;
+		align-items: stretch;
+		justify-content: flex-end;
+	}
+
+	.sl-global-hero-image picture {
+		height: 100%;
+		align-items: stretch;
+		justify-content: flex-end;
+	}
+
+	.sl-global-hero-image img {
+		width: 165%;
+		max-width: none;
+		height: 100%;
+		object-fit: cover;
+		object-position: 72% center;
+	}
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+	.sl-global-hero {
+		padding:
+			calc(var(--slf-header-clearance, 76px) + 40px)
+			0
+			45px;
+	}
+
+
+
+	.sl-global-hero-content p {
+		font-size: 15px;
+	}
+
+	.sl-global-hero-buttons {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.sl-global-hero-buttons .sl-hero-btn {
+		width: 100%;
+	}
+
+	.sl-global-hero-image {
+		height: 330px;
+		margin-top: 25px;
+	}
+
+	.sl-global-hero-image img {
+		width: 190%;
+		object-position: 72% center;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.sl-global-hero .sl-hero-btn,
+	.sl-global-hero .sl-hero-btn:hover,
+	.sl-global-hero .sl-hero-btn:focus {
+		transform: none;
+	}
+}

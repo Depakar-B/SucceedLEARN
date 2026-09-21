@@ -1,0 +1,22 @@
+/**
+ * Code of Conduct — alternating section backgrounds.
+ *
+ * Hero uses page bg (#f5f5f5), then white, bg, white…
+ * Uses nth-of-type so FAQ schema <script> siblings do not break the rhythm.
+ * Loaded last so it overrides per-section background declarations.
+ */
+
+.sl-coc-page > section:nth-of-type(odd) {
+	background: var(--sl-page-bg, #f5f5f5) !important;
+	background-color: var(--sl-page-bg, #f5f5f5) !important;
+}
+
+.sl-coc-page > section:nth-of-type(even) {
+	background: var(--sl-page-white, #ffffff) !important;
+	background-color: var(--sl-page-white, #ffffff) !important;
+}
+
+.sl-coc-page > section.sl-faq-section.sl-coc-faq {
+	--sl-faq-bg: var(--sl-page-white, #ffffff);
+	--sl-faq-surface: var(--sl-page-white, #ffffff);
+}

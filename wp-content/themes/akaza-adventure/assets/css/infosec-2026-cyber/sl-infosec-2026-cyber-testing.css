@@ -1,0 +1,168 @@
+/**
+ * SucceedLEARN
+ * Cybersecurity Awareness Month 2026
+ * Testing Section
+ */
+
+ .sl-infosec-2026-cyber-testing {
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-infosec-2026-cyber-testing__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	gap: 48px;
+	align-items: start;
+}
+
+.sl-infosec-2026-cyber-testing__content {
+	min-width: 0;
+}
+
+.sl-infosec-2026-cyber-testing__content h2 {
+	margin-bottom: 22px;
+}
+
+.sl-infosec-2026-cyber-testing__content h2 span {
+	color: var(
+		--sl-heading-accent,
+		var(--sl-page-primary, #1472ba)
+	);
+}
+
+.sl-infosec-2026-cyber-testing__content p {
+	margin-bottom: 16px;
+}
+
+/* --------------------------------
+   NUMBERED QUESTION LIST
+--------------------------------- */
+
+.sl-infosec-2026-cyber-testing__questions {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin: 26px 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-infosec-2026-cyber-testing__questions li {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	margin: 0;
+	padding: 10px 14px;
+	border: 1px solid #d8e2eb;
+	border-radius: 10px;
+	background: var(--sl-page-white, #fff);
+}
+
+.sl-infosec-2026-cyber-testing__questions li::before {
+	content: "";
+	flex: 0 0 8px;
+	width: 8px;
+	height: 8px;
+	margin-top: 0.55em;
+	border-radius: 50%;
+	background: var(--sl-page-primary, #1472ba);
+}
+
+.sl-infosec-2026-cyber-testing__question {
+	flex: 1;
+	min-width: 0;
+}
+
+/* --------------------------------
+   EMPHASIS
+--------------------------------- */
+
+.sl-infosec-2026-cyber-testing__emphasis {
+	margin: 22px 0 0;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	font-style: italic;
+	font-weight: 600;
+	line-height: 1.55;
+	color: var(--sl-page-navy, #16234e);
+}
+
+/* --------------------------------
+   IMAGE (sticky while content scrolls)
+--------------------------------- */
+
+.sl-infosec-2026-cyber-testing__visual {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 110px) + 24px);
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	min-width: 0;
+	align-self: start;
+}
+
+.sl-infosec-2026-cyber-testing__image {
+	overflow: hidden;
+	width: min(100%, 600px);
+	line-height: 0;
+	border-radius: 16px;
+}
+
+.sl-infosec-2026-cyber-testing__image img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+/* --------------------------------
+   DESKTOP
+--------------------------------- */
+
+@media (min-width: 1000px) {
+
+	.sl-infosec-2026-cyber-testing__grid {
+		grid-template-columns: minmax(420px, 0.85fr) minmax(0, 1fr);
+		gap: 70px;
+	}
+
+	.sl-infosec-2026-cyber-testing__visual {
+		order: -1;
+		padding-left: 0;
+		padding-right: 10px;
+	}
+
+	.sl-infosec-2026-cyber-testing__content {
+		max-width: 700px;
+	}
+}
+
+/* --------------------------------
+   MOBILE
+--------------------------------- */
+
+@media (max-width: 767px) {
+
+	.sl-infosec-2026-cyber-testing {
+		padding: 60px 0;
+	}
+
+	.sl-infosec-2026-cyber-testing__grid {
+		gap: 36px;
+	}
+
+	.sl-infosec-2026-cyber-testing__visual {
+		position: static;
+		top: auto;
+	}
+
+	.sl-infosec-2026-cyber-testing__questions {
+		margin: 22px 0;
+	}
+
+	.sl-infosec-2026-cyber-testing__questions li {
+		gap: 12px;
+		padding: 9px 12px;
+	}
+}

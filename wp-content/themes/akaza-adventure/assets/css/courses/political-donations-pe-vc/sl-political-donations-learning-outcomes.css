@@ -1,0 +1,109 @@
+/**
+ * Political Donations Training — Learning Outcomes.
+ */
+
+ .sl-political-donations-learning-outcomes {
+	padding: 80px 0;
+	background: #ffffff;
+}
+
+.sl-political-donations-learning-outcomes__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+	gap: 64px;
+	align-items: start;
+}
+
+.sl-political-donations-learning-outcomes__content {
+	min-width: 0;
+}
+
+.sl-political-donations-learning-outcomes__content h2 {
+	margin: 12px 0 18px;
+}
+
+.sl-political-donations-learning-outcomes__content h2 span {
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-political-donations-learning-outcomes__intro {
+	margin: 0 0 28px;
+}
+
+.sl-political-donations-learning-outcomes__media {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 110px) + 24px);
+	align-self: start;
+}
+
+.sl-political-donations-learning-outcomes__image {
+	width: 100%;
+	overflow: hidden;
+	background: #ffffff;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 16px;
+}
+
+.sl-political-donations-learning-outcomes__image-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 520px;
+	padding: 30px;
+	background: #f5f5f5;
+	color: var(--sl-page-muted, #6b7c93);
+	text-align: center;
+}
+
+.sl-political-donations-learning-outcomes .sl-list {
+	margin: 0;
+}
+
+.sl-political-donations-learning-outcomes .sl-list-item__text {
+	min-width: 0;
+}
+
+.sl-political-donations-learning-outcomes .sl-list-item__text .sl-panel-title {
+	margin: 0 0 6px;
+}
+
+.sl-political-donations-learning-outcomes .sl-list-item__text p {
+	margin: 0;
+}
+
+@media (max-width: 991px) {
+	.sl-political-donations-learning-outcomes {
+		padding: 64px 0;
+	}
+
+	.sl-political-donations-learning-outcomes__grid {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.sl-political-donations-learning-outcomes__media {
+		position: static;
+	}
+
+	.sl-political-donations-learning-outcomes__image-placeholder {
+		min-height: 420px;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-political-donations-learning-outcomes {
+		padding: 56px 0;
+	}
+
+	.sl-political-donations-learning-outcomes__grid {
+		gap: 32px;
+	}
+
+	.sl-political-donations-learning-outcomes__intro {
+		margin-bottom: 22px;
+	}
+
+	.sl-political-donations-learning-outcomes__image-placeholder {
+		min-height: 320px;
+	}
+}
