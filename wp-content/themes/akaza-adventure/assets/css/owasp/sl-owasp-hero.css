@@ -120,6 +120,11 @@
 		padding: 56px 0 48px;
 	}
 
+	.sl-owasp-hero__content {
+		position: relative;
+		z-index: 2;
+	}
+
 	.sl-owasp-hero__points {
 		grid-template-columns: 1fr;
 	}
@@ -127,5 +132,18 @@
 	.sl-owasp-hero__actions {
 		display: grid;
 		grid-template-columns: 1fr;
+	}
+
+	.sl-owasp-hero__visual {
+		overflow: hidden;
+		isolation: isolate;
+		margin-top: 8px;
+	}
+
+	.sl-owasp-hero__visual::before {
+		top: 0;
+		right: -48px;
+		width: 280px;
+		height: 280px;
 	}
 }
