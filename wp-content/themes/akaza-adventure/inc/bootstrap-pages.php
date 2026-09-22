@@ -129,6 +129,11 @@ function akaza_bootstrap_pages() {
 			'title'    => 'S-Phish',
 			'template' => 'page-templates/s-phish-phishing-simulation.php',
 		),
+		array(
+			'slug'     => 's-metrics',
+			'title'    => 'S-Metrics',
+			'template' => 'page-templates/s-metrics-tracking-reporting.php',
+		),
 	);
 
 	$created_page = false;
