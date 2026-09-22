@@ -1,0 +1,131 @@
+/**
+ * DEI&B — Learning experience.
+ */
+
+.sl-deib-experience {
+	padding: 90px 0;
+	background: #ffffff;
+	font-family: var(--slf-font-body, "Space Grotesk", system-ui, sans-serif);
+}
+
+.sl-deib-experience .container {
+	width: 100%;
+	max-width: var(--sl-home-content-max, 1400px);
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.sl-deib-experience__row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+.sl-deib-experience__row > [class*="col-"] {
+	width: 100%;
+	padding-left: 15px;
+	padding-right: 15px;
+	box-sizing: border-box;
+}
+
+@media (min-width: 992px) {
+	.sl-deib-experience__row > .col-lg-6 {
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+}
+
+.sl-deib-experience__media img,
+.sl-deib-experience__placeholder {
+	display: block;
+	width: 100%;
+	border-radius: 16px;
+}
+
+.sl-deib-experience__placeholder {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+	min-height: 380px;
+	padding: 32px;
+	background: linear-gradient(160deg, #f0f5fb 0%, #e7eef8 100%);
+	border: 1px dashed rgba(19, 93, 183, 0.28);
+	color: var(--sl-page-primary, #135db7);
+	text-align: center;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.sl-deib-experience__placeholder i {
+	font-size: 42px;
+}
+
+.sl-deib-experience__content h2 {
+	margin: 0 0 18px;
+	color: var(--sl-page-navy, #16234d);
+	font-size: var(--sl-fs-h2);
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.sl-deib-experience__content p,
+.sl-deib-experience__lead {
+	margin: 0 0 16px;
+	color: var(--sl-page-text, #000);
+	font-size: 17px;
+	line-height: 1.7;
+}
+
+.sl-deib-experience__lead {
+	margin-top: 8px;
+	font-weight: 600;
+	color: var(--sl-page-navy, #16234d);
+}
+
+.sl-deib-experience__elements {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin: 0 0 24px;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-deib-experience__elements li {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	color: var(--sl-page-text, #000);
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.sl-deib-experience__icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 36px;
+	width: 36px;
+	height: 36px;
+	border-radius: 10px;
+	border: 1.5px solid var(--sl-page-primary, #135db7);
+	color: var(--sl-page-primary, #135db7);
+	font-size: 16px;
+}
+
+.sl-deib-experience__actions {
+	margin-top: 8px;
+}
+
+@media (max-width: 991px) {
+	.sl-deib-experience__placeholder {
+		min-height: 240px;
+		margin-bottom: 8px;
+	}
+}

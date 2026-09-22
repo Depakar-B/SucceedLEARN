@@ -87,6 +87,11 @@ function akaza_get_page_brand( $page_template = '' ) {
 			'brand_hover' => '#1169ab',
 			'rgb'         => '20, 114, 186',
 		),
+		'page-templates/diversity-equality-inclusion-belonging-training.php' => array(
+			'brand'       => '#135db7',
+			'brand_hover' => '#0f4f9c',
+			'rgb'         => '19, 93, 183',
+		),
 		'page-templates/inclusive-workplace-training.php' => array(
 			'brand'       => '#177e89',
 			'brand_hover' => '#126b74',

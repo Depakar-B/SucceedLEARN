@@ -1,0 +1,77 @@
+/**
+ * DEI&B — Learning outcomes.
+ */
+
+.sl-deib-outcomes {
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+	font-family: var(--slf-font-body, "Space Grotesk", system-ui, sans-serif);
+}
+
+.sl-deib-outcomes .container {
+	width: 100%;
+	max-width: var(--sl-home-content-max, 1400px);
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.sl-deib-outcomes__intro {
+	max-width: 820px;
+	margin: 0 0 36px;
+}
+
+.sl-deib-outcomes__intro h2 {
+	margin: 0 0 16px;
+	color: var(--sl-page-navy, #16234d);
+	font-size: var(--sl-fs-h2);
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.sl-deib-outcomes__intro p,
+.sl-deib-outcomes__note {
+	margin: 0;
+	color: var(--sl-page-text, #000);
+	font-size: 17px;
+	line-height: 1.7;
+}
+
+.sl-deib-outcomes__list {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 16px 28px;
+	margin: 0 0 28px;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-deib-outcomes__list li {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	color: var(--sl-page-text, #000);
+	font-size: 16px;
+	line-height: 1.55;
+}
+
+.sl-deib-outcomes__check {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 26px;
+	width: 26px;
+	height: 26px;
+	margin-top: 1px;
+	border-radius: 50%;
+	background: rgba(19, 93, 183, 0.1);
+	color: var(--sl-page-primary, #135db7);
+	font-size: 15px;
+}
+
+@media (max-width: 767px) {
+	.sl-deib-outcomes__list {
+		grid-template-columns: 1fr;
+	}
+}

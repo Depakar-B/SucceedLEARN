@@ -129,6 +129,11 @@ function akaza_bootstrap_pages() {
 			'title'    => 'S-Phish',
 			'template' => 'page-templates/s-phish-phishing-simulation.php',
 		),
+		array(
+			'slug'     => 'diversity-equality-inclusion-belonging-training',
+			'title'    => 'Diversity, Equality, Inclusion and Belonging Training',
+			'template' => 'page-templates/diversity-equality-inclusion-belonging-training.php',
+		),
 	);
 
 	$created_page = false;

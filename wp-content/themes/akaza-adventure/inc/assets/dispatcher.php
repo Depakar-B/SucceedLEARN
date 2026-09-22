@@ -38,6 +38,7 @@ function akaza_get_page_asset_handlers() {
 		'page-templates/unconscious-bias-training.php'               => 'akaza_enqueue_iwc_course_assets',
 		'page-templates/bystander-intervention-training.php'       => 'akaza_enqueue_iwc_course_assets',
 		'page-templates/global-workplace-compliance-training-for-employees.php' => 'akaza_enqueue_gwct_assets',
+		'page-templates/diversity-equality-inclusion-belonging-training.php' => 'akaza_enqueue_deib_assets',
 		'page-templates/gdpr-employee-awareness-training.php'      => 'akaza_enqueue_gdpr_assets',
 		'page-templates/ferpa-training-for-school-and-university-staff.php' => 'akaza_enqueue_ferpa_assets',
 		'page-templates/workplace-harassment-prevention-training.php' => 'akaza_enqueue_whp_assets',
