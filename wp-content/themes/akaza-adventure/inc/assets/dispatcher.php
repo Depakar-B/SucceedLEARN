@@ -48,6 +48,7 @@ function akaza_get_page_asset_handlers() {
 		'page-templates/hipaa-annual-workforce-training.php'       => 'akaza_enqueue_hipaa_assets',
 		'page-templates/s-aware.php'                               => 'akaza_enqueue_s_aware_assets',
 		'page-templates/s-phish-phishing-simulation.php'           => 'akaza_enqueue_s_phish_assets',
+		'page-templates/s-sync-security-awareness.php'             => 'akaza_enqueue_s_sync_assets',
 		'page-templates/us-sexual-harassment-prevention-training.php' => 'akaza_enqueue_us_harassment_assets',
 		'page-templates/uk-sexual-harassment-prevention-training.php' => 'akaza_enqueue_uk_harassment_assets',
 		'page-templates/gifts-and-entertainment.php'                 => 'akaza_enqueue_gifts_entertainment_assets',
