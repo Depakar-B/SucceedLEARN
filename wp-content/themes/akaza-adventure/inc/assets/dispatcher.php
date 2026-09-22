@@ -51,6 +51,7 @@ function akaza_get_page_asset_handlers() {
 		'page-templates/us-sexual-harassment-prevention-training.php' => 'akaza_enqueue_us_harassment_assets',
 		'page-templates/uk-sexual-harassment-prevention-training.php' => 'akaza_enqueue_uk_harassment_assets',
 		'page-templates/gifts-and-entertainment.php'                 => 'akaza_enqueue_gifts_entertainment_assets',
+		'page-templates/aml-pe-vc.php'                               => 'akaza_enqueue_aml_pe_vc_assets',
 		'page-templates/insider-trading.php'                         => 'akaza_enqueue_insider_trading_assets',
 		'page-templates/tax-evasion-facilitation.php'                => 'akaza_enqueue_tax_evasion_assets',
 		'page-templates/anti-bribery-anti-corruption.php'            => 'akaza_enqueue_anti_bribery_assets',

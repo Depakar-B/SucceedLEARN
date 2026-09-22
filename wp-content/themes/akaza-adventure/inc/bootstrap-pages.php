@@ -60,6 +60,11 @@ function akaza_bootstrap_pages() {
 			'template' => 'page-templates/gifts-and-entertainment.php',
 		),
 		array(
+			'slug'     => 'aml-pe-vc',
+			'title'    => 'AML Training for Private Equity and Venture Capital',
+			'template' => 'page-templates/aml-pe-vc.php',
+		),
+		array(
 			'slug'     => 'insider-trading',
 			'title'    => 'Insider Trading eLearning',
 			'template' => 'page-templates/insider-trading.php',

@@ -53,6 +53,7 @@ require_once $akaza_inc . '/assets/enqueue-s-phish.php';
 require_once $akaza_inc . '/assets/enqueue-us-harassment.php';
 require_once $akaza_inc . '/assets/enqueue-uk-harassment.php';
 require_once $akaza_inc . '/assets/enqueue-gifts-entertainment.php';
+require_once $akaza_inc . '/assets/enqueue-aml-pe-vc.php';
 require_once $akaza_inc . '/assets/enqueue-insider-trading.php';
 require_once $akaza_inc . '/assets/enqueue-tax-evasion.php';
 require_once $akaza_inc . '/assets/enqueue-anti-bribery.php';
