@@ -49,6 +49,7 @@ function akaza_get_page_asset_handlers() {
 		'page-templates/s-aware.php'                               => 'akaza_enqueue_s_aware_assets',
 		'page-templates/s-bytes.php'                               => 'akaza_enqueue_s_bytes_assets',
 		'page-templates/s-phish-phishing-simulation.php'           => 'akaza_enqueue_s_phish_assets',
+		'page-templates/s-sync-security-awareness.php'             => 'akaza_enqueue_s_sync_assets',
 		'page-templates/s-signs-security-awareness.php'            => 'akaza_enqueue_s_signs_assets',
 		'page-templates/s-play-gamified-training.php'              => 'akaza_enqueue_s_play_assets',
 		'page-templates/s-metrics-tracking-reporting.php'          => 'akaza_enqueue_s_metrics_assets',
