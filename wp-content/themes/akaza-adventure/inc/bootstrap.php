@@ -52,6 +52,7 @@ require_once $akaza_inc . '/assets/enqueue-s-aware.php';
 require_once $akaza_inc . '/assets/enqueue-s-bytes.php';
 require_once $akaza_inc . '/assets/enqueue-s-phish.php';
 require_once $akaza_inc . '/assets/enqueue-s-sync.php';
+require_once $akaza_inc . '/assets/enqueue-s-signs.php';
 require_once $akaza_inc . '/assets/enqueue-s-play.php';
 require_once $akaza_inc . '/assets/enqueue-s-metrics.php';
 require_once $akaza_inc . '/assets/enqueue-us-harassment.php';
