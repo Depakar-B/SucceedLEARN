@@ -1,0 +1,53 @@
+/**
+ * Secure Coding — Proof strip
+ */
+
+.sl-sc-proof {
+	border-top: 1px solid rgba(221, 228, 238, 0.9);
+	border-bottom: 1px solid rgba(221, 228, 238, 0.9);
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-sc-proof__grid {
+	display: grid;
+	grid-template-columns: 1.2fr repeat(3, minmax(0, 1fr));
+	gap: 28px;
+	align-items: center;
+	padding: 25px 0;
+}
+
+.sl-sc-proof__label {
+	color: var(--sl-page-navy, #16234e);
+	font-weight: 700;
+}
+
+.sl-sc-proof__item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	color: #48556f;
+	font-size: 0.92rem;
+}
+
+.sl-sc-proof__dot {
+	flex: 0 0 auto;
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	background: var(--sl-page-primary, #1472ba);
+}
+
+@media (max-width: 991px) {
+	.sl-sc-proof__grid {
+		grid-template-columns: 1fr 1fr;
+		gap: 18px;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-sc-proof__grid {
+		grid-template-columns: 1fr;
+		gap: 14px;
+		padding: 22px 0;
+	}
+}

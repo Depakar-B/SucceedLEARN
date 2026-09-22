@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Secure coding illustration</title>
+  <desc id="desc">A stylised secure code editor with a shield and connected software components.</desc>
+  <defs>
+    <linearGradient id="screen" x1="145" y1="105" x2="725" y2="575" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#16234D"/>
+      <stop offset="1" stop-color="#0D1837"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="590" y1="140" x2="720" y2="350" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2E77D0"/>
+      <stop offset="1" stop-color="#135DB7"/>
+    </linearGradient>
+    <filter id="shadow" x="80" y="70" width="740" height="590" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="26" flood-color="#16234D" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+  <circle cx="715" cy="110" r="72" fill="#EAF2FC"/>
+  <circle cx="115" cy="555" r="85" fill="#FFF0ED"/>
+  <path d="M87 206C170 119 281 72 407 81" stroke="#D8E6F7" stroke-width="2" stroke-dasharray="9 11"/>
+  <path d="M756 442C708 534 622 593 521 610" stroke="#F6CEC5" stroke-width="2" stroke-dasharray="9 11"/>
+  <g filter="url(#shadow)">
+    <rect x="132" y="113" width="620" height="455" rx="28" fill="url(#screen)"/>
+    <rect x="157" y="142" width="570" height="46" rx="12" fill="#22315C"/>
+    <circle cx="183" cy="165" r="6" fill="#EA3F23"/>
+    <circle cx="204" cy="165" r="6" fill="#FFB74A"/>
+    <circle cx="225" cy="165" r="6" fill="#67C587"/>
+    <rect x="257" y="157" width="138" height="16" rx="8" fill="#3B4C79"/>
+    <rect x="172" y="222" width="235" height="18" rx="9" fill="#4B6D9D"/>
+    <rect x="172" y="258" width="342" height="14" rx="7" fill="#2E77D0" opacity="0.85"/>
+    <rect x="201" y="290" width="292" height="14" rx="7" fill="#8EB8EA" opacity="0.9"/>
+    <rect x="201" y="322" width="248" height="14" rx="7" fill="#6FA3DF" opacity="0.85"/>
+    <rect x="172" y="365" width="165" height="14" rx="7" fill="#EA3F23" opacity="0.9"/>
+    <rect x="201" y="397" width="325" height="14" rx="7" fill="#8EB8EA" opacity="0.9"/>
+    <rect x="201" y="429" width="220" height="14" rx="7" fill="#6FA3DF" opacity="0.85"/>
+    <rect x="172" y="478" width="402" height="48" rx="12" fill="#1A294E" stroke="#354975"/>
+    <circle cx="198" cy="502" r="8" fill="#67C587"/>
+    <rect x="218" y="494" width="190" height="15" rx="7.5" fill="#516895"/>
+  </g>
+  <g>
+    <path d="M645 143L728 172V247C728 308 693 356 645 380C597 356 562 308 562 247V172L645 143Z" fill="url(#shield)" stroke="#ffffff" stroke-width="8"/>
+    <path d="M610 258L635 282L684 222" stroke="#ffffff" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g>
+    <rect x="79" y="286" width="120" height="96" rx="18" fill="#ffffff" stroke="#DDE6F3" stroke-width="2"/>
+    <rect x="105" y="308" width="68" height="9" rx="4.5" fill="#135DB7"/>
+    <rect x="105" y="329" width="48" height="8" rx="4" fill="#95B7DE"/>
+    <rect x="105" y="350" width="58" height="8" rx="4" fill="#D0DDF0"/>
+    <circle cx="93" cy="313" r="5" fill="#EA3F23"/>
+  </g>
+  <g>
+    <rect x="677" y="420" width="143" height="110" rx="20" fill="#ffffff" stroke="#DDE6F3" stroke-width="2"/>
+    <path d="M714 474H782" stroke="#135DB7" stroke-width="9" stroke-linecap="round"/>
+    <path d="M724 451L709 474L724 497" stroke="#16234D" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M772 451L787 474L772 497" stroke="#16234D" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

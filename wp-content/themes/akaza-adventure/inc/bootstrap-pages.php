@@ -159,6 +159,11 @@ function akaza_bootstrap_pages() {
 			'title'    => 'S-Metrics',
 			'template' => 'page-templates/s-metrics-tracking-reporting.php',
 		),
+		array(
+			'slug'     => 'secure-coding-practices-training',
+			'title'    => 'Secure Coding Practices Training for Developers',
+			'template' => 'page-templates/secure-coding-practices-training.php',
+		),
 	);
 
 	$created_page = false;
