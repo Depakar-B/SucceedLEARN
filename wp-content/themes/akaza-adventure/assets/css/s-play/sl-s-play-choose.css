@@ -1,0 +1,80 @@
+/**
+ * S-Play — Why Organisations Choose S-Play
+ */
+
+.sl-s-play-choose {
+	padding: 90px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-s-play-choose__intro {
+	margin-bottom: 40px;
+}
+
+.sl-s-play-choose__intro h2 {
+	margin-bottom: 0;
+}
+
+.sl-s-play-choose__grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 24px;
+}
+
+.sl-s-play-choose__card {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	min-width: 0;
+	padding: 28px 24px;
+	border: 1px solid rgba(107, 124, 147, 0.18);
+	border-radius: 16px;
+	background: var(--sl-page-bg, #f5f5f5);
+	box-sizing: border-box;
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.sl-s-play-choose__card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 14px 32px rgba(22, 35, 78, 0.08);
+}
+
+.sl-s-play-choose__card .sl-panel-title {
+	margin: 0 0 12px;
+}
+
+.sl-s-play-choose__card p {
+	margin: 0;
+}
+
+.sl-s-play-choose__card:nth-child(4),
+.sl-s-play-choose__card:nth-child(5) {
+	grid-column: span 1;
+}
+
+@media (max-width: 1199px) {
+	.sl-s-play-choose__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-s-play-choose {
+		padding: 60px 0;
+	}
+
+	.sl-s-play-choose__intro {
+		margin-bottom: 28px;
+	}
+
+	.sl-s-play-choose__grid {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
+	.sl-s-play-choose__card {
+		padding: 22px 20px;
+	}
+}

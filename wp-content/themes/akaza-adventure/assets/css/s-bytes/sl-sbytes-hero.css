@@ -1,0 +1,247 @@
+/*
+ * S-Bytes — Hero section.
+ * Page tokens mirrored from SAP (.sl-sap-page) for this product shell.
+ */
+
+body.epsh-classic-header:not(.epsh-home-overlay) #main-content.sl-sbytes-page,
+body.epsh-classic-header:not(.epsh-home-overlay) main.sl-sbytes-page {
+	padding-top: var(--slf-header-clearance, 76px) !important;
+}
+
+.sl-sbytes-page {
+	--sl-page-navy: #16234e;
+	--sl-page-primary: #1472ba;
+	--sl-page-primary-dark: #283384;
+	--sl-page-primary-soft: #6dc3eb;
+	--sl-page-cta: #ea3e24;
+	--sl-page-text: #16234e;
+	--sl-page-muted: #6b7c93;
+	--sl-page-white: #ffffff;
+	--sl-page-bg: #f5f5f5;
+	--sl-fs-h1: 60px;
+	--sl-fs-h2: 48px;
+	--sl-fs-h3: 30px;
+	--sl-fs-body: 18px;
+	font-family: var(--slf-font-body, "Space Grotesk", system-ui, sans-serif);
+	color: var(--sl-page-text);
+	background: var(--sl-page-white);
+}
+
+.sl-sbytes-page .container {
+	width: 100%;
+	max-width: var(--sl-home-content-max, 1400px);
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: var(--slf-gutter);
+	padding-right: var(--slf-gutter);
+	box-sizing: border-box;
+}
+
+body.slf-body main.sl-sbytes-page,
+body.slf-body #main-content.sl-sbytes-page {
+	font-family: var(--slf-font-body, "Space Grotesk", system-ui, sans-serif);
+}
+
+body.slf-body main.sl-sbytes-page h1,
+body.slf-body main.sl-sbytes-page h2,
+body.slf-body #main-content.sl-sbytes-page h1,
+body.slf-body #main-content.sl-sbytes-page h2 {
+	font-family: var(--slf-font-display, "Space Grotesk", system-ui, sans-serif);
+	color: var(--sl-page-navy);
+}
+
+body.slf-body main.sl-sbytes-page h2 > span,
+body.slf-body #main-content.sl-sbytes-page h2 > span {
+	color: var(--sl-heading-accent, #1472ba);
+}
+
+body.slf-body main.sl-sbytes-page h1,
+body.slf-body #main-content.sl-sbytes-page h1 {
+	max-width: none;
+	margin-left: 0;
+	margin-right: 0;
+	font-size: var(--sl-fs-h1);
+	font-weight: 800;
+	letter-spacing: var(--sl-ls-h1, -0.02em);
+	line-height: 1.15;
+}
+
+body.slf-body main.sl-sbytes-page p,
+body.slf-body #main-content.sl-sbytes-page p {
+	font-size: var(--sl-fs-body);
+	font-weight: 400;
+	letter-spacing: var(--sl-ls-body);
+	line-height: 1.8;
+	color: var(--sl-page-text);
+}
+
+.sl-sbytes-page .sl-home-sub-heading {
+	color: var(--sl-heading-accent, #1472ba);
+}
+
+.sl-sbytes-page .sl-home-sub-heading::before {
+	background: var(--sl-heading-accent, #1472ba);
+}
+
+.sl-sbytes-hero {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	padding: 40px 0 90px;
+	background:
+		radial-gradient(
+			circle at 90% 20%,
+			rgba(37, 99, 235, 0.12),
+			transparent 34%
+		),
+		var(--sl-page-white);
+}
+
+.sl-sbytes-hero__top {
+	width: 100%;
+	max-width: none;
+	margin-bottom: 32px;
+}
+
+.sl-sbytes-hero__top .slf-breadcrumbs--inline {
+	margin-bottom: 1rem;
+}
+
+.sl-sbytes-hero__eyebrow {
+	display: inline-flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.sl-sbytes-hero__top h1,
+body.slf-body main.sl-sbytes-page .sl-sbytes-hero__top h1,
+body.slf-body #main-content.sl-sbytes-page .sl-sbytes-hero__top h1 {
+	width: 100%;
+	max-width: none;
+	margin: 0;
+	font-size: var(--sl-fs-h1);
+	font-weight: 800;
+	letter-spacing: var(--sl-ls-h1, -0.02em);
+	line-height: 1.15;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-sbytes-hero__top h1 > span,
+body.slf-body main.sl-sbytes-page .sl-sbytes-hero__top h1 > span,
+body.slf-body #main-content.sl-sbytes-page .sl-sbytes-hero__top h1 > span {
+	color: var(--sl-heading-accent, #1472ba);
+}
+
+.sl-sbytes-hero__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 0.6fr) minmax(0, 0.4fr);
+	gap: 40px;
+	align-items: start;
+}
+
+.sl-sbytes-hero__content {
+	max-width: none;
+}
+
+.sl-sbytes-hero__visual {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 76px) + 24px);
+	align-self: start;
+	min-width: 0;
+	width: 100%;
+}
+
+.sl-sbytes-hero__image-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 480px;
+	padding: 40px;
+	border: 1px dashed rgba(22, 35, 78, 0.20);
+	border-radius: 24px;
+	background: #f5f5f5;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.sl-sbytes-hero__image-placeholder span {
+	color: var(--sl-page-muted, #6B7C93);
+}
+
+.sl-sbytes-hero__subheading,
+body.slf-body main.sl-sbytes-page .sl-sbytes-hero__subheading,
+body.slf-body main.sl-sbytes-page .sl-hero-h2.sl-sbytes-hero__subheading,
+body.slf-body #main-content.sl-sbytes-page .sl-sbytes-hero__subheading,
+body.slf-body #main-content.sl-sbytes-page .sl-hero-h2.sl-sbytes-hero__subheading,
+body.slf-body #main-content.sl-sbytes-page section[class*="-hero"] .sl-sbytes-hero__subheading {
+	max-width: 680px;
+	margin: 0 0 16px;
+	font-size: 28px !important;
+	font-weight: 700;
+	line-height: 1.35;
+	color: var(--sl-heading-accent, #1472ba);
+}
+
+.sl-sbytes-hero__description {
+	max-width: 680px;
+	margin: 0 0 16px;
+}
+
+.sl-sbytes-hero__tagline {
+	max-width: 680px;
+	margin: 0 0 28px;
+	font-style: italic;
+	font-weight: 500;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-sbytes-hero__actions {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 14px;
+}
+
+@media (max-width: 991px) {
+	.sl-sbytes-hero {
+		padding: 36px 0 90px;
+	}
+
+	.sl-sbytes-hero__top {
+		margin-bottom: 28px;
+	}
+
+	.sl-sbytes-hero__grid {
+		grid-template-columns: 1fr;
+		gap: 32px;
+	}
+
+	.sl-sbytes-hero__visual {
+		position: static;
+		max-width: 480px;
+	}
+
+	.sl-sbytes-hero__image-placeholder {
+		min-height: 400px;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-sbytes-hero {
+		padding: 28px 0 60px;
+	}
+
+	.sl-sbytes-hero__top {
+		margin-bottom: 22px;
+	}
+
+	.sl-sbytes-hero__visual {
+		max-width: none;
+	}
+
+	.sl-sbytes-hero__image-placeholder {
+		min-height: 280px;
+		border-radius: 18px;
+	}
+}
