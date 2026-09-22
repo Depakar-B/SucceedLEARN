@@ -135,6 +135,11 @@ function akaza_bootstrap_pages() {
 			'template' => 'page-templates/s-phish-phishing-simulation.php',
 		),
 		array(
+			'slug'     => 's-play',
+			'title'    => 'S-Play',
+			'template' => 'page-templates/s-play-gamified-training.php',
+		),
+		array(
 			'slug'     => 's-byte',
 			'title'    => 'S-Bytes',
 			'template' => 'page-templates/s-bytes.php',
