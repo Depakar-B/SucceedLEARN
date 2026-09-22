@@ -104,8 +104,8 @@ $features = array(
 					<a class="sl-content-btn sl-content-btn-primary" href="#buy">
 						<?php esc_html_e( 'Buy Now @ $20', 'akaza-adventure' ); ?>
 					</a>
-					<a class="sl-content-btn sl-content-btn-secondary" href="#overview">
-						<?php esc_html_e( 'Explore More', 'akaza-adventure' ); ?>
+					<a class="sl-content-btn sl-content-btn-secondary" href="#contact">
+						<?php esc_html_e( 'Request Demo', 'akaza-adventure' ); ?>
 					</a>
 				</div>
 			</div>

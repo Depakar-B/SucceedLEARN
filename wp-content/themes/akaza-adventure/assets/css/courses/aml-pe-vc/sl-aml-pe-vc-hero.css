@@ -51,9 +51,24 @@
 .sl-aml-pe-vc-hero .sl-hero-actions {
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
+	align-items: flex-end;
 	gap: 14px;
 	margin-top: 30px;
+}
+
+.sl-aml-pe-vc-hero__cta-item {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 8px;
+}
+
+.sl-aml-pe-vc-hero__cta-label {
+	color: #6b7280;
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
 }
 
 .sl-aml-pe-vc-hero__media {

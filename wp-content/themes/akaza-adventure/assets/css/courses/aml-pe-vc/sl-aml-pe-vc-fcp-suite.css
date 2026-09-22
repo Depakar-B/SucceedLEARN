@@ -57,13 +57,32 @@
 	border-radius: 16px;
 }
 
-.sl-aml-pe-vc-fcp-suite__card::before {
-	content: "";
+.sl-aml-pe-vc-fcp-suite__chrome {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	margin-bottom: 18px;
+}
+
+.sl-aml-pe-vc-fcp-suite__dash {
 	display: block;
 	width: 38px;
 	height: 4px;
-	margin-bottom: 18px;
+	border-radius: 2px;
 	background: #135db7;
+}
+
+.sl-aml-pe-vc-fcp-suite__num {
+	width: 39px;
+	height: 39px;
+	display: grid;
+	place-items: center;
+	margin-left: auto;
+	border-radius: 10px;
+	background: #edf5fd;
+	color: var(--sl-page-primary, #135db7);
+	font-weight: 700;
 }
 
 .sl-aml-pe-vc-fcp-suite__card.is-active {
@@ -71,12 +90,18 @@
 	border: 2px solid #ea3f23;
 }
 
-.sl-aml-pe-vc-fcp-suite__card.is-active::before {
+.sl-aml-pe-vc-fcp-suite__card.is-active .sl-aml-pe-vc-fcp-suite__dash {
 	background: #ea3f23;
+}
+
+.sl-aml-pe-vc-fcp-suite__card.is-active .sl-aml-pe-vc-fcp-suite__num {
+	background: #ea3f23;
+	color: #ffffff;
 }
 
 .sl-aml-pe-vc-fcp-suite__card h3 {
 	margin-bottom: 10px;
+	color: #202a47;
 	font-size: 1.1rem;
 }
 
