@@ -1,0 +1,76 @@
+.sl-pci-laws {
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-pci-laws__intro { margin-bottom: 40px; }
+.sl-pci-laws__intro h2 { margin: 0; }
+
+.sl-pci-laws__table-wrap {
+	width: 100%;
+	overflow-x: auto;
+	border: 1px solid rgba(107, 124, 147, 0.18);
+	border-radius: 16px;
+	background: var(--sl-page-white, #ffffff);
+	box-shadow: 0 10px 30px rgba(22, 35, 78, 0.06);
+}
+
+.sl-pci-laws__table {
+	width: 100%;
+	min-width: 640px;
+	border-collapse: separate;
+	border-spacing: 0;
+	table-layout: fixed;
+}
+
+.sl-pci-laws__table th,
+.sl-pci-laws__table td {
+	padding: 20px 28px;
+	vertical-align: top;
+}
+
+.sl-pci-laws__table thead th {
+	background: var(--sl-page-navy, #16234e);
+	color: #fff;
+	font-size: 16px;
+	font-weight: 700;
+	text-align: left;
+}
+
+.sl-pci-laws__table thead th:first-child {
+	width: 34%;
+	border-radius: 15px 0 0 0;
+	border-right: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.sl-pci-laws__table thead th:last-child {
+	border-radius: 0 15px 0 0;
+	background: var(--sl-page-primary, #1472ba);
+}
+
+.sl-pci-laws__table tbody td {
+	border-bottom: 1px solid rgba(107, 124, 147, 0.14);
+}
+
+.sl-pci-laws__table tbody td:first-child {
+	border-right: 1px solid rgba(107, 124, 147, 0.14);
+	background: rgba(245, 243, 239, 0.55);
+}
+
+.sl-pci-laws__cell {
+	display: block;
+	color: var(--sl-page-text, #16234e);
+	font-size: 16px;
+	line-height: 1.55;
+}
+
+.sl-pci-laws__cell--highlight {
+	color: var(--sl-page-navy, #16234e);
+	font-weight: 700;
+}
+
+@media (max-width: 767px) {
+	.sl-pci-laws { padding: 60px 0; }
+	.sl-pci-laws__table th,
+	.sl-pci-laws__table td { padding: 16px 18px; }
+}

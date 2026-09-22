@@ -129,6 +129,11 @@ function akaza_bootstrap_pages() {
 			'title'    => 'S-Phish',
 			'template' => 'page-templates/s-phish-phishing-simulation.php',
 		),
+		array(
+			'slug'     => 'pci-dss',
+			'title'    => 'PCI DSS Compliance Training for Cashiers & Payment Handlers',
+			'template' => 'page-templates/pci-dss.php',
+		),
 	);
 
 	$created_page = false;
