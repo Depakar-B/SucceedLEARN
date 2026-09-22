@@ -130,12 +130,12 @@ $courses = array(
 
 		<div class="sl-aml-pe-vc-pevc-suite__pricing">
 			<span class="sl-aml-pe-vc-pevc-suite__note">
-				<?php esc_html_e( 'Individual AML course:', 'akaza-adventure' ); ?>
-				<strong>$20</strong>
-			</span>
-			<span class="sl-aml-pe-vc-pevc-suite__note">
 				<?php esc_html_e( 'PE/VC Suite:', 'akaza-adventure' ); ?>
 				<strong><?php esc_html_e( '$2/user/month for organisations with 10+ users', 'akaza-adventure' ); ?></strong>
+			</span>
+			<span class="sl-aml-pe-vc-pevc-suite__note">
+				<?php esc_html_e( 'Equivalent to:', 'akaza-adventure' ); ?>
+				<strong>$24/user/year</strong>
 			</span>
 		</div>
 

@@ -102,10 +102,6 @@ $courses = array(
 
 		<div class="sl-aml-pe-vc-fcp-suite__pricing">
 			<span class="sl-aml-pe-vc-fcp-suite__note">
-				<?php esc_html_e( 'Individual AML course:', 'akaza-adventure' ); ?>
-				<strong>$20</strong>
-			</span>
-			<span class="sl-aml-pe-vc-fcp-suite__note">
 				<?php esc_html_e( 'FCP Suite:', 'akaza-adventure' ); ?>
 				<strong><?php esc_html_e( '$1.50/user/month for organisations with 10+ users', 'akaza-adventure' ); ?></strong>
 			</span>
