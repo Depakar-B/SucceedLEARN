@@ -11,7 +11,7 @@
 	display: grid;
 	grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
 	gap: 64px;
-	align-items: center;
+	align-items: start;
 }
 
 .sl-s-play-experience__content {
@@ -34,8 +34,11 @@
 }
 
 .sl-s-play-experience__media {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 110px) + 24px);
 	width: 100%;
 	min-width: 0;
+	align-self: start;
 }
 
 .sl-s-play-experience__image-placeholder {
@@ -64,6 +67,7 @@
 	}
 
 	.sl-s-play-experience__media {
+		position: static;
 		max-width: 520px;
 		margin: 0 auto;
 	}
