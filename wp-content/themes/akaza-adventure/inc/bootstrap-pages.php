@@ -129,6 +129,11 @@ function akaza_bootstrap_pages() {
 			'title'    => 'S-Phish',
 			'template' => 'page-templates/s-phish-phishing-simulation.php',
 		),
+		array(
+			'slug'     => 's-play',
+			'title'    => 'S-Play',
+			'template' => 'page-templates/s-play-gamified-training.php',
+		),
 	);
 
 	$created_page = false;
