@@ -51,7 +51,6 @@ require_once $akaza_inc . '/assets/enqueue-hipaa.php';
 require_once $akaza_inc . '/assets/enqueue-s-aware.php';
 require_once $akaza_inc . '/assets/enqueue-s-bytes.php';
 require_once $akaza_inc . '/assets/enqueue-s-phish.php';
-require_once $akaza_inc . '/assets/enqueue-s-metrics.php';
 require_once $akaza_inc . '/assets/enqueue-us-harassment.php';
 require_once $akaza_inc . '/assets/enqueue-uk-harassment.php';
 require_once $akaza_inc . '/assets/enqueue-gifts-entertainment.php';

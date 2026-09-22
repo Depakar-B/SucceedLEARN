@@ -49,7 +49,6 @@ function akaza_get_page_asset_handlers() {
 		'page-templates/s-aware.php'                               => 'akaza_enqueue_s_aware_assets',
 		'page-templates/s-bytes.php'                               => 'akaza_enqueue_s_bytes_assets',
 		'page-templates/s-phish-phishing-simulation.php'           => 'akaza_enqueue_s_phish_assets',
-		'page-templates/s-metrics-tracking-reporting.php'          => 'akaza_enqueue_s_metrics_assets',
 		'page-templates/us-sexual-harassment-prevention-training.php' => 'akaza_enqueue_us_harassment_assets',
 		'page-templates/uk-sexual-harassment-prevention-training.php' => 'akaza_enqueue_uk_harassment_assets',
 		'page-templates/gifts-and-entertainment.php'                 => 'akaza_enqueue_gifts_entertainment_assets',

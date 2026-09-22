@@ -134,11 +134,6 @@ function akaza_bootstrap_pages() {
 			'title'    => 'S-Bytes',
 			'template' => 'page-templates/s-bytes.php',
 		),
-		array(
-			'slug'     => 's-metrics',
-			'title'    => 'S-Metrics',
-			'template' => 'page-templates/s-metrics-tracking-reporting.php',
-		),
 	);
 
 	$created_page = false;
