@@ -1,0 +1,68 @@
+/**
+ * OWASP — Culture callout
+ */
+
+.sl-owasp-culture {
+	padding: 90px 0;
+	background: var(--sl-page-navy, #16234e);
+	color: #ffffff;
+}
+
+.sl-owasp-culture__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+	gap: 70px;
+	align-items: center;
+}
+
+.sl-owasp-culture .sl-home-sub-heading {
+	color: #bfd7ff;
+}
+
+.sl-owasp-culture .sl-home-sub-heading::before {
+	background: #bfd7ff;
+}
+
+.sl-owasp-culture h2,
+.sl-owasp-culture p {
+	color: #ffffff;
+}
+
+.sl-owasp-culture h2 span {
+	color: #8dc2ff;
+}
+
+.sl-owasp-culture__flow {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+
+.sl-owasp-culture__flow span {
+	width: min(100%, 320px);
+	padding: 15px 18px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	border-radius: 12px;
+	background: rgba(255, 255, 255, 0.09);
+	text-align: center;
+	font-weight: 700;
+}
+
+.sl-owasp-culture__flow b {
+	color: #ff8f76;
+	transform: rotate(90deg);
+}
+
+@media (max-width: 991px) {
+	.sl-owasp-culture__grid {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-owasp-culture {
+		padding: 60px 0;
+	}
+}

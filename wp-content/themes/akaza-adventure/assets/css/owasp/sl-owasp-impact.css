@@ -1,0 +1,87 @@
+/**
+ * OWASP — Impact / why it matters
+ */
+
+.sl-owasp-impact {
+	padding: 90px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-owasp-impact__heading {
+	max-width: 720px;
+	margin: 0 auto 0;
+	text-align: center;
+}
+
+.sl-owasp-impact__heading .sl-home-sub-heading {
+	justify-content: center;
+}
+
+.sl-owasp-impact__heading p {
+	margin: 0;
+}
+
+.sl-owasp-impact__bands {
+	margin-top: 48px;
+	border-top: 1px solid #dce2ed;
+}
+
+.sl-owasp-impact__bands > div {
+	display: grid;
+	grid-template-columns: 260px minmax(0, 1fr);
+	gap: 38px;
+	padding: 20px 0;
+	border-bottom: 1px solid #dce2ed;
+}
+
+.sl-owasp-impact__bands strong {
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-owasp-impact__bands p {
+	margin: 0;
+}
+
+.sl-owasp-impact__shift {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 18px;
+	margin-top: 50px;
+	padding: 28px 32px;
+	border: 1px solid #dce4f1;
+	border-radius: 20px;
+	background: #f8fafd;
+}
+
+.sl-owasp-impact__shift span {
+	color: #666666;
+}
+
+.sl-owasp-impact__shift b {
+	color: var(--sl-page-cta, #ea3e24);
+	font-size: 1.25rem;
+}
+
+.sl-owasp-impact__accent {
+	color: var(--sl-page-primary, #1472ba);
+}
+
+@media (max-width: 767px) {
+	.sl-owasp-impact {
+		padding: 60px 0;
+	}
+
+	.sl-owasp-impact__heading {
+		text-align: left;
+	}
+
+	.sl-owasp-impact__bands > div {
+		grid-template-columns: 1fr;
+		gap: 6px;
+	}
+
+	.sl-owasp-impact__shift {
+		padding: 22px;
+	}
+}

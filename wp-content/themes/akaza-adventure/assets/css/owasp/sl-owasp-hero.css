@@ -1,0 +1,131 @@
+/**
+ * OWASP — Hero
+ */
+
+.sl-owasp-hero {
+	padding: 90px 0 80px;
+	overflow: hidden;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-owasp-hero__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+	gap: 64px;
+	align-items: center;
+}
+
+.sl-owasp-hero__breadcrumb {
+	margin-bottom: 14px;
+}
+
+.sl-owasp-hero__breadcrumb span {
+	color: var(--sl-page-muted, #6b7c93);
+	font-size: 0.9rem;
+	font-weight: 600;
+}
+
+.sl-owasp-hero .sl-home-sub-heading {
+	margin-bottom: 18px;
+}
+
+.sl-owasp-hero__content h1 {
+	margin: 0 0 22px;
+	max-width: 680px;
+}
+
+.sl-owasp-hero__lead {
+	margin: 0 0 16px;
+	color: #1a2445;
+	font-size: clamp(1.08rem, 1.45vw, 1.3rem);
+	line-height: 1.6;
+}
+
+.sl-owasp-hero__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin: 28px 0;
+}
+
+.sl-owasp-hero__points {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 14px 20px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-owasp-hero__points li {
+	position: relative;
+	padding-left: 27px;
+	color: var(--sl-page-navy, #16234e);
+	font-weight: 600;
+}
+
+.sl-owasp-hero__points li::before {
+	content: "✓";
+	position: absolute;
+	left: 0;
+	top: 0;
+	color: var(--sl-page-primary, #1472ba);
+	font-weight: 700;
+}
+
+.sl-owasp-hero__visual {
+	position: relative;
+	min-width: 0;
+}
+
+.sl-owasp-hero__visual::before {
+	content: "";
+	position: absolute;
+	width: 440px;
+	height: 440px;
+	border-radius: 50%;
+	background: #eef4fd;
+	right: -90px;
+	top: -70px;
+	z-index: 0;
+}
+
+.sl-owasp-hero__visual img {
+	position: relative;
+	z-index: 1;
+	display: block;
+	width: 100%;
+	height: auto;
+	filter: drop-shadow(0 24px 30px rgba(22, 35, 77, 0.12));
+}
+
+@media (max-width: 991px) {
+	.sl-owasp-hero {
+		padding: 72px 0 64px;
+	}
+
+	.sl-owasp-hero__grid {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.sl-owasp-hero__visual {
+		max-width: 660px;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-owasp-hero {
+		padding: 56px 0 48px;
+	}
+
+	.sl-owasp-hero__points {
+		grid-template-columns: 1fr;
+	}
+
+	.sl-owasp-hero__actions {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+}

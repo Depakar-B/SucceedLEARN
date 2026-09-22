@@ -1,0 +1,204 @@
+/**
+ * OWASP — Curriculum
+ */
+
+.sl-owasp-curriculum {
+	--sl-owasp-curr-head-top: calc(var(--slf-header-clearance, 110px) + 20px);
+	--sl-owasp-curr-head-h: 168px;
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-owasp-curriculum__heading {
+	position: sticky;
+	top: var(--sl-owasp-curr-head-top);
+	z-index: 8;
+	width: 100%;
+	max-width: none;
+	margin: 0 0 40px;
+	padding: 18px 0 18px;
+	text-align: center;
+	background: var(--sl-page-bg, #f5f5f5);
+	border-bottom: 1px solid rgba(214, 220, 231, 0.9);
+	box-sizing: border-box;
+}
+
+.sl-owasp-curriculum__heading .sl-home-sub-heading {
+	justify-content: center;
+	max-width: 720px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sl-owasp-curriculum__heading h2,
+.sl-owasp-curriculum__heading p {
+	max-width: 720px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sl-owasp-curriculum__heading p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.sl-owasp-curriculum__layout {
+	display: grid;
+	grid-template-columns: 320px minmax(0, 1fr);
+	gap: 52px;
+	align-items: start;
+}
+
+.sl-owasp-curriculum__nav {
+	position: sticky;
+	top: calc(var(--sl-owasp-curr-head-top) + var(--sl-owasp-curr-head-h) + 12px);
+	max-height: calc(100vh - var(--sl-owasp-curr-head-top) - var(--sl-owasp-curr-head-h) - 36px);
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	border-left: 1px solid #d6dce7;
+}
+
+.sl-owasp-curriculum__nav a {
+	display: flex;
+	gap: 10px;
+	margin-left: -2px;
+	padding: 9px 0 9px 18px;
+	border-left: 3px solid transparent;
+	color: #4a536d;
+	font-size: 0.9rem;
+	text-decoration: none;
+}
+
+.sl-owasp-curriculum__nav a span {
+	min-width: 34px;
+	color: var(--sl-page-primary, #1472ba);
+	font-weight: 700;
+}
+
+.sl-owasp-curriculum__nav a:hover,
+.sl-owasp-curriculum__nav a.is-active {
+	border-left-color: var(--sl-page-cta, #ea3e24);
+	color: var(--sl-page-navy, #16234e);
+	font-weight: 600;
+}
+
+.sl-owasp-curriculum__module {
+	display: grid;
+	grid-template-columns: 72px minmax(0, 1fr);
+	gap: 24px;
+	padding: 38px 0;
+	border-top: 1px solid #d9dfe8;
+}
+
+.sl-owasp-curriculum__module:first-child {
+	border-top: 0;
+	padding-top: 0;
+}
+
+.sl-owasp-curriculum__code {
+	display: grid;
+	place-items: center;
+	width: 62px;
+	height: 62px;
+	border-radius: 16px;
+	background: var(--sl-page-navy, #16234e);
+	color: #ffffff;
+	font-weight: 700;
+	box-shadow: 0 18px 44px rgba(22, 35, 77, 0.10);
+}
+
+.sl-owasp-curriculum__module h3 {
+	margin: 0 0 12px;
+	font-size: clamp(1.35rem, 2vw, 1.85rem);
+}
+
+.sl-owasp-curriculum__takeaway {
+	margin: 20px 0 0;
+	padding: 16px 18px;
+	border-left: 4px solid var(--sl-page-primary, #1472ba);
+	border-radius: 0 12px 12px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-owasp-curriculum__flow {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 10px;
+	margin: 18px 0;
+}
+
+.sl-owasp-curriculum__flow span {
+	padding: 8px 12px;
+	border-radius: 9px;
+	background: #eaf2fb;
+	color: var(--sl-page-navy, #16234e);
+	font-weight: 700;
+}
+
+.sl-owasp-curriculum__flow b {
+	color: var(--sl-page-cta, #ea3e24);
+}
+
+@media (max-width: 991px) {
+	.sl-owasp-curriculum {
+		--sl-owasp-curr-head-h: 148px;
+	}
+
+	.sl-owasp-curriculum__heading {
+		position: static;
+		margin-bottom: 32px;
+		padding: 0;
+		border-bottom: 0;
+	}
+
+	.sl-owasp-curriculum__layout {
+		grid-template-columns: 1fr;
+		gap: 32px;
+	}
+
+	.sl-owasp-curriculum__nav {
+		position: static;
+		max-height: none;
+		overflow: visible;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 8px;
+		border-left: 0;
+	}
+
+	.sl-owasp-curriculum__nav a {
+		margin: 0;
+		padding: 10px 12px;
+		border: 1px solid #dbe1ea;
+		border-radius: 10px;
+		background: var(--sl-page-white, #ffffff);
+	}
+
+	.sl-owasp-curriculum__nav a.is-active {
+		border-color: var(--sl-page-cta, #ea3e24);
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-owasp-curriculum {
+		padding: 60px 0;
+	}
+
+	.sl-owasp-curriculum__heading {
+		margin-bottom: 36px;
+		text-align: left;
+	}
+
+	.sl-owasp-curriculum__nav {
+		grid-template-columns: 1fr;
+		max-height: 320px;
+		overflow: auto;
+	}
+
+	.sl-owasp-curriculum__module {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+}
