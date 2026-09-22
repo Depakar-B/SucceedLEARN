@@ -11,12 +11,15 @@
 	display: grid;
 	grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
 	gap: 60px;
-	align-items: center;
+	align-items: start;
 }
 
 .sl-s-metrics-dashboard__media {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 110px) + 24px);
 	width: 100%;
 	min-width: 0;
+	align-self: start;
 }
 
 .sl-s-metrics-dashboard__image-placeholder {
@@ -64,6 +67,7 @@
 	}
 
 	.sl-s-metrics-dashboard__media {
+		position: static;
 		order: -1;
 		max-width: 520px;
 		margin: 0 auto;

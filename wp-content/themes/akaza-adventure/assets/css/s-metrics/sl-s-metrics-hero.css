@@ -62,6 +62,9 @@
 }
 
 .sl-s-metrics-hero__media {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 110px) + 24px);
+	width: 100%;
 	min-width: 0;
 }
 
@@ -87,6 +90,10 @@
 
 	.sl-s-metrics-hero__grid {
 		gap: 48px;
+	}
+
+	.sl-s-metrics-hero__media {
+		position: static;
 	}
 
 	.sl-s-metrics-hero__image-placeholder {
