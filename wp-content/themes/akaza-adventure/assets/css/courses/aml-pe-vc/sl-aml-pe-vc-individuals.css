@@ -1,0 +1,103 @@
+/* SucceedLEARN — AML PE/VC individuals */
+
+.sl-course-page .sl-aml-pe-vc-individuals {
+	background: var(--course-light-bg, #f5f5f5);
+}
+
+.sl-aml-pe-vc-individuals__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 70px;
+	align-items: center;
+}
+
+.sl-aml-pe-vc-individuals__content h2 > span {
+	color: var(--sl-page-primary, #135db7);
+}
+
+.sl-aml-pe-vc-individuals__lead {
+	max-width: 760px;
+	font-size: 1.15rem;
+}
+
+.sl-aml-pe-vc-individuals__features {
+	display: grid;
+	gap: 17px;
+	margin: 30px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-aml-pe-vc-individuals__feature {
+	display: grid;
+	grid-template-columns: 46px 1fr;
+	gap: 15px;
+	align-items: start;
+}
+
+.sl-aml-pe-vc-individuals__feature-num {
+	width: 42px;
+	height: 42px;
+	display: grid;
+	place-items: center;
+	border-radius: 11px;
+	background: #edf5fd;
+	color: var(--sl-page-primary, #135db7);
+	font-weight: 700;
+}
+
+.sl-aml-pe-vc-individuals__feature strong {
+	display: block;
+	margin-bottom: 3px;
+	color: var(--sl-page-navy, #16234d);
+}
+
+.sl-aml-pe-vc-individuals__feature span {
+	color: #555e70;
+}
+
+.sl-aml-pe-vc-individuals__media {
+	text-align: center;
+}
+
+.sl-aml-pe-vc-individuals__image-placeholder {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 320px;
+	padding: 35px;
+	border: 2px dashed rgba(19, 93, 183, 0.35);
+	border-radius: 24px;
+	background: linear-gradient(135deg, #f3f8fe, #ffffff);
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.sl-aml-pe-vc-individuals__image-placeholder span {
+	margin-bottom: 8px;
+	color: var(--sl-page-navy, #16234d);
+	font-size: 1.1rem;
+	font-weight: 700;
+}
+
+.sl-aml-pe-vc-individuals__image-placeholder small {
+	max-width: 430px;
+	color: #555e70;
+	font-size: 0.9rem;
+}
+
+.sl-aml-pe-vc-individuals__actions {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin-top: 22px;
+}
+
+@media (max-width: 1000px) {
+	.sl-aml-pe-vc-individuals__grid {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+}

@@ -60,6 +60,11 @@ function akaza_bootstrap_pages() {
 			'template' => 'page-templates/gifts-and-entertainment.php',
 		),
 		array(
+			'slug'     => 'aml-pe-vc',
+			'title'    => 'AML Training for Private Equity and Venture Capital',
+			'template' => 'page-templates/aml-pe-vc.php',
+		),
+		array(
 			'slug'     => 'insider-trading',
 			'title'    => 'Insider Trading eLearning',
 			'template' => 'page-templates/insider-trading.php',
@@ -133,6 +138,21 @@ function akaza_bootstrap_pages() {
 			'slug'     => 's-sync',
 			'title'    => 'S-Sync',
 			'template' => 'page-templates/s-sync-security-awareness.php',
+		),
+		array(
+			'slug'     => 's-play',
+			'title'    => 'S-Play',
+			'template' => 'page-templates/s-play-gamified-training.php',
+		),
+		array(
+			'slug'     => 's-byte',
+			'title'    => 'S-Bytes',
+			'template' => 'page-templates/s-bytes.php',
+		),
+		array(
+			'slug'     => 's-metrics',
+			'title'    => 'S-Metrics',
+			'template' => 'page-templates/s-metrics-tracking-reporting.php',
 		),
 	);
 

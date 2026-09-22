@@ -1,0 +1,142 @@
+/* SucceedLEARN — AML PE/VC control map */
+
+.sl-course-page .sl-aml-pe-vc-control-map {
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-aml-pe-vc-control-map h2 > span {
+	color: var(--sl-page-primary, #135db7);
+}
+
+.sl-aml-pe-vc-control-map__intro {
+	max-width: 810px;
+	margin-bottom: 42px;
+	font-size: 1.05rem;
+}
+
+.sl-aml-pe-vc-control-map__panel {
+	position: relative;
+	margin-top: 40px;
+	padding: 42px;
+	border-radius: 28px;
+	background: linear-gradient(135deg, #f9fbfe, #ecf4fd);
+}
+
+.sl-aml-pe-vc-control-map__panel::before {
+	content: "";
+	position: absolute;
+	top: 105px;
+	bottom: 105px;
+	left: 50%;
+	width: 4px;
+	transform: translateX(-50%);
+	background: linear-gradient(#135db7, #8ab7eb);
+}
+
+.sl-aml-pe-vc-control-map__panel-title {
+	position: relative;
+	z-index: 2;
+	width: max-content;
+	max-width: 100%;
+	margin: 0 auto 34px;
+	padding: 18px 28px;
+	border-radius: 13px;
+	background: var(--sl-page-navy, #16234d);
+	color: #ffffff;
+	font-weight: 700;
+	text-align: center;
+	box-shadow: 0 15px 38px rgba(22, 35, 77, 0.08);
+}
+
+.sl-aml-pe-vc-control-map__row {
+	position: relative;
+	z-index: 2;
+	display: grid;
+	grid-template-columns: 1fr 105px 1fr;
+	gap: 22px;
+	align-items: center;
+	margin: 22px 0;
+}
+
+.sl-aml-pe-vc-control-map__node {
+	min-height: 130px;
+	padding: 22px;
+	background: #ffffff;
+	border: 1px solid #dde3eb;
+	border-radius: 18px;
+	box-shadow: 0 10px 28px rgba(22, 35, 77, 0.05);
+}
+
+.sl-aml-pe-vc-control-map__node--left {
+	border-left: 5px solid #135db7;
+}
+
+.sl-aml-pe-vc-control-map__node--right {
+	border-right: 5px solid #ea3f23;
+}
+
+.sl-aml-pe-vc-control-map__node strong {
+	display: block;
+	margin-bottom: 7px;
+	color: var(--sl-page-navy, #16234d);
+}
+
+.sl-aml-pe-vc-control-map__node p {
+	margin: 0;
+	color: #555e70;
+	font-size: 0.91rem;
+}
+
+.sl-aml-pe-vc-control-map__step {
+	width: 65px;
+	height: 65px;
+	display: grid;
+	place-items: center;
+	justify-self: center;
+	border: 5px solid #ffffff;
+	border-radius: 14px;
+	background: #135db7;
+	color: #ffffff;
+	font-weight: 700;
+	transform: rotate(45deg);
+	box-shadow: 0 9px 20px rgba(19, 93, 183, 0.2);
+}
+
+.sl-aml-pe-vc-control-map__step span {
+	transform: rotate(-45deg);
+}
+
+.sl-aml-pe-vc-control-map__summary {
+	position: relative;
+	z-index: 2;
+	max-width: 760px;
+	margin: 35px auto 0;
+	padding: 24px 30px;
+	border-radius: 17px;
+	background: var(--sl-page-navy, #16234d);
+	color: #ffffff;
+	text-align: center;
+}
+
+.sl-aml-pe-vc-control-map__summary strong {
+	display: block;
+	margin-bottom: 6px;
+}
+
+@media (max-width: 720px) {
+	.sl-aml-pe-vc-control-map__panel {
+		padding: 25px;
+	}
+
+	.sl-aml-pe-vc-control-map__panel::before {
+		display: none;
+	}
+
+	.sl-aml-pe-vc-control-map__row {
+		grid-template-columns: 1fr;
+	}
+
+	.sl-aml-pe-vc-control-map__step {
+		order: -1;
+	}
+}
