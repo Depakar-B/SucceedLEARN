@@ -30,7 +30,7 @@
 	display: grid;
 	grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
 	gap: 64px;
-	align-items: start;
+	align-items: center;
 }
 
 .sl-s-metrics-hero__content {
@@ -66,7 +66,6 @@
 	top: calc(var(--slf-header-clearance, 110px) + 24px);
 	width: 100%;
 	min-width: 0;
-	align-self: start;
 }
 
 .sl-s-metrics-hero__image-placeholder {
