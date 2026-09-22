@@ -1,0 +1,137 @@
+/**
+ * S-Metrics — From Learning to Measurable Behaviour Change
+ */
+
+.sl-s-metrics-suite {
+	padding: 80px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-s-metrics-suite__intro {
+	width: 100%;
+	margin-bottom: 48px;
+}
+
+.sl-s-metrics-suite__intro .sl-home-sub-heading {
+	display: block;
+	margin-bottom: 14px;
+}
+
+.sl-s-metrics-suite__intro h2 {
+	margin-bottom: 24px;
+}
+
+.sl-s-metrics-suite__intro p {
+	margin-bottom: 0;
+}
+
+.sl-s-metrics-suite__cards {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 20px;
+	max-width: 1180px;
+	margin: 0 auto;
+}
+
+.sl-s-metrics-suite__card {
+	display: flex;
+	flex-direction: column;
+	min-height: 200px;
+	padding: 28px 26px;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 14px;
+	background: var(--sl-page-white, #ffffff);
+	box-sizing: border-box;
+}
+
+.sl-s-metrics-suite__number {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	margin-bottom: 18px;
+	border: 1px solid rgba(20, 114, 186, 0.18);
+	border-radius: 8px;
+	background: rgba(20, 114, 186, 0.08);
+	color: var(--sl-page-primary, #1472ba);
+	font-weight: 700;
+	line-height: 1;
+}
+
+.sl-s-metrics-suite__card-heading {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px 14px;
+	margin-bottom: 12px;
+}
+
+.sl-s-metrics-suite__card-heading .sl-panel-title {
+	margin: 0;
+}
+
+.sl-s-metrics-suite__role {
+	display: inline-flex;
+	align-items: center;
+	padding: 5px 10px;
+	border-radius: 999px;
+	background: rgba(20, 114, 186, 0.08);
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.sl-s-metrics-suite__card p {
+	margin: 0;
+}
+
+.sl-s-metrics-suite__closing {
+	max-width: 1180px;
+	margin: 35px auto 0;
+	padding: 24px 28px;
+	border-left: 4px solid var(--sl-page-primary, #1472ba);
+	border-radius: 10px;
+	background: var(--sl-page-white, #ffffff);
+	box-sizing: border-box;
+}
+
+.sl-s-metrics-suite__closing p {
+	margin: 0;
+}
+
+@media (max-width: 1024px) {
+	.sl-s-metrics-suite {
+		padding: 70px 0;
+	}
+
+	.sl-s-metrics-suite__cards {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-s-metrics-suite {
+		padding: 60px 0;
+	}
+
+	.sl-s-metrics-suite__intro {
+		margin-bottom: 34px;
+	}
+
+	.sl-s-metrics-suite__cards {
+		grid-template-columns: 1fr;
+		gap: 14px;
+	}
+
+	.sl-s-metrics-suite__card {
+		min-height: 0;
+		padding: 24px 20px;
+	}
+
+	.sl-s-metrics-suite__closing {
+		margin-top: 28px;
+		padding: 20px;
+	}
+}
