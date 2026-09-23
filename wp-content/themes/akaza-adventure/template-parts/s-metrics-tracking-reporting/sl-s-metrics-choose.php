@@ -1,6 +1,6 @@
 <?php
 /**
- * S-Metrics — Why Organisations Choose S-Metrics.
+ * S-Metrics — How Security Analytics & Reporting Dashboard is beneficial.
  *
  * @package Akaza_Adventure
  */
@@ -15,16 +15,16 @@ $reasons = array(
 		'text'  => __( 'Consolidate reporting across learning, phishing simulations, gamification, microlearning, and awareness reinforcement.', 'akaza-adventure' ),
 	),
 	array(
-		'title' => __( 'Better Decision-Making', 'akaza-adventure' ),
-		'text'  => __( 'Transform awareness data into meaningful insights that support security, compliance, and risk management initiatives.', 'akaza-adventure' ),
+		'title' => __( 'Informed Decisions', 'akaza-adventure' ),
+		'text'  => __( 'Use awareness data to identify trends, engagement gaps and areas where additional reinforcement may be useful.', 'akaza-adventure' ),
 	),
 	array(
 		'title' => __( 'Simplified Audit Readiness', 'akaza-adventure' ),
 		'text'  => __( 'Maintain accurate training records, completion reports, assessment data, certificates, and campaign history to demonstrate due diligence during audits and regulatory reviews.', 'akaza-adventure' ),
 	),
 	array(
-		'title' => __( 'Advanced Reporting & Filtering', 'akaza-adventure' ),
-		'text'  => __( 'Quickly generate meaningful reports using flexible filters that provide visibility across users, departments, campaigns, locations, and business units.', 'akaza-adventure' ),
+		'title' => __( 'Flexible Reporting', 'akaza-adventure' ),
+		'text'  => __( 'Filter data according to users, organisational groups, campaigns, courses and other relevant dimensions.', 'akaza-adventure' ),
 	),
 	array(
 		'title' => __( 'Executive-Level Reporting', 'akaza-adventure' ),
@@ -46,12 +46,12 @@ $reasons = array(
 		<div class="sl-s-metrics-choose__intro">
 
 			<span class="sl-home-sub-heading">
-				<?php esc_html_e( 'Why Choose S-Metrics', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'Programme Benefits', 'akaza-adventure' ); ?>
 			</span>
 
 			<h2 id="sl-s-metrics-choose-title">
-				<?php esc_html_e( 'Why Organisations Choose', 'akaza-adventure' ); ?>
-				<span><?php esc_html_e( 'S-Metrics', 'akaza-adventure' ); ?></span>
+				<?php esc_html_e( 'How Security Analytics & Reporting', 'akaza-adventure' ); ?>
+				<span><?php esc_html_e( 'Dashboard is beneficial', 'akaza-adventure' ); ?></span>
 			</h2>
 
 		</div>

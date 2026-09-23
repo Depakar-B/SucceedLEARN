@@ -33,6 +33,15 @@
 	margin: 0;
 }
 
+.sl-s-metrics-measure__list {
+	margin: 0;
+	padding-left: 1.15em;
+}
+
+.sl-s-metrics-measure__list li + li {
+	margin-top: 6px;
+}
+
 .sl-s-metrics-measure__media {
 	position: sticky;
 	top: calc(var(--slf-header-clearance, 110px) + 24px);

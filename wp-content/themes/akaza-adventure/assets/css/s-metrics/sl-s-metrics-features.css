@@ -15,6 +15,11 @@
 	margin-bottom: 0;
 }
 
+.sl-s-metrics-features__lead {
+	margin: 16px 0 0;
+	max-width: 720px;
+}
+
 .sl-s-metrics-features__grid {
 	display: grid;
 	grid-template-columns: repeat(3, minmax(0, 1fr));

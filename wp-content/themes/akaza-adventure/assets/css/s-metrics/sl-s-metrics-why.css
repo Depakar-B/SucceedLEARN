@@ -22,6 +22,14 @@
 	margin-bottom: 18px;
 }
 
+.sl-s-metrics-why__subtitle {
+	margin: 0 0 16px;
+	font-size: 1.15rem;
+	font-weight: 600;
+	line-height: 1.4;
+	color: var(--sl-page-text, #16234e);
+}
+
 .sl-s-metrics-why__copy {
 	display: flex;
 	flex-direction: column;

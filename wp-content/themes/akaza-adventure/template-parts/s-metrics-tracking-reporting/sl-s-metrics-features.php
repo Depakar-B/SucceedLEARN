@@ -1,6 +1,6 @@
 <?php
 /**
- * S-Metrics — Powerful Reporting Features.
+ * S-Metrics — Designed for the Teams Driving Security Culture.
  *
  * @package Akaza_Adventure
  */
@@ -9,30 +9,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$features = array(
+$team_groups = array(
 	array(
-		'title' => __( 'Unified Dashboard', 'akaza-adventure' ),
-		'text'  => __( 'Access all security awareness reporting through one centralised dashboard instead of managing multiple reporting systems.', 'akaza-adventure' ),
+		'title' => __( 'Information Security & Cybersecurity Teams', 'akaza-adventure' ),
+		'text'  => __( 'Monitor employee awareness, phishing behaviour and campaign performance while identifying areas requiring additional reinforcement.', 'akaza-adventure' ),
 	),
 	array(
-		'title' => __( 'Advanced Filtering', 'akaza-adventure' ),
-		'text'  => __( 'Quickly filter reports by business unit, department, location, user group, campaign, awareness product, course, or reporting period to identify trends and investigate specific areas of organisational risk.', 'akaza-adventure' ),
+		'title' => __( 'Compliance & Risk Teams', 'akaza-adventure' ),
+		'text'  => __( 'Maintain visibility into training records, campaign history and awareness activity that may support governance and audit requirements.', 'akaza-adventure' ),
 	),
 	array(
-		'title' => __( 'User-Level Reporting', 'akaza-adventure' ),
-		'text'  => __( 'View detailed learner activity, including assigned learning, completions, phishing interactions, assessment performance, reminders, certificates, and behavioural improvements over time.', 'akaza-adventure' ),
+		'title' => __( 'Learning & Development Teams', 'akaza-adventure' ),
+		'text'  => __( 'Track participation, completion and assessment performance across security learning initiatives.', 'akaza-adventure' ),
 	),
 	array(
-		'title' => __( 'Campaign Performance Analytics', 'akaza-adventure' ),
-		'text'  => __( 'Evaluate the effectiveness of phishing simulations, microlearning campaigns, gamified learning, and awareness initiatives through comprehensive campaign reporting.', 'akaza-adventure' ),
+		'title' => __( 'HR & People Teams', 'akaza-adventure' ),
+		'text'  => __( 'Monitor assigned awareness activity across employee populations and support follow-up where required.', 'akaza-adventure' ),
 	),
 	array(
-		'title' => __( 'Exportable Reports', 'akaza-adventure' ),
-		'text'  => __( 'Generate downloadable reports that can be shared with senior management, auditors, compliance teams, or regulators, supporting governance, audit readiness, and executive reporting requirements.', 'akaza-adventure' ),
-	),
-	array(
-		'title' => __( 'Automated Reminders & Follow-ups', 'akaza-adventure' ),
-		'text'  => __( 'Track reminders, overdue assignments, and pending completions to improve programme participation and ensure awareness campaigns continue progressing without manual administration.', 'akaza-adventure' ),
+		'title' => __( 'Leadership', 'akaza-adventure' ),
+		'text'  => __( 'Access clearer programme-level reporting that helps communicate security awareness activity and progress across the organisation.', 'akaza-adventure' ),
 	),
 );
 ?>
@@ -46,26 +42,35 @@ $features = array(
 		<div class="sl-s-metrics-features__intro">
 
 			<span class="sl-home-sub-heading">
-				<?php esc_html_e( 'Reporting Capabilities', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'Security Culture Across the Organisation', 'akaza-adventure' ); ?>
 			</span>
 
 			<h2 id="sl-s-metrics-features-title">
-				<?php esc_html_e( 'Powerful Reporting', 'akaza-adventure' ); ?>
-				<span><?php esc_html_e( 'Features', 'akaza-adventure' ); ?></span>
+				<?php esc_html_e( 'Designed for the Teams Driving', 'akaza-adventure' ); ?>
+				<span><?php esc_html_e( 'Security Culture', 'akaza-adventure' ); ?></span>
 			</h2>
+
+			<p class="sl-s-metrics-features__lead">
+				<?php
+				esc_html_e(
+					'S-Metrics gives different organisational teams a shared view of security-awareness activity and programme performance.',
+					'akaza-adventure'
+				);
+				?>
+			</p>
 
 		</div>
 
 		<div class="sl-s-metrics-features__grid">
 
-			<?php foreach ( $features as $feature ) : ?>
+			<?php foreach ( $team_groups as $team_group ) : ?>
 
 				<article class="sl-s-metrics-features__card">
 					<h3 class="sl-panel-title">
-						<?php echo esc_html( $feature['title'] ); ?>
+						<?php echo esc_html( $team_group['title'] ); ?>
 					</h3>
 					<p>
-						<?php echo esc_html( $feature['text'] ); ?>
+						<?php echo esc_html( $team_group['text'] ); ?>
 					</p>
 				</article>
 

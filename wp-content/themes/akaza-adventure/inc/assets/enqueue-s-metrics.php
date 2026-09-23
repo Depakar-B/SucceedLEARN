@@ -33,6 +33,7 @@ function akaza_enqueue_s_metrics_assets() {
 		'sl-s-metrics-choose',
 		'sl-s-metrics-suite',
 		'sl-s-metrics-measure',
+		'sl-s-metrics-comparison',
 		'sl-s-metrics-contact',
 	);
 
@@ -43,4 +44,7 @@ function akaza_enqueue_s_metrics_assets() {
 			$deps
 		);
 	}
+
+	wp_enqueue_style( 'akaza-global-faq' );
+	wp_enqueue_script( 'akaza-global-faq' );
 }
