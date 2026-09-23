@@ -39,6 +39,8 @@ function akaza_get_page_asset_handlers() {
 		'page-templates/bystander-intervention-training.php'       => 'akaza_enqueue_iwc_course_assets',
 		'page-templates/global-workplace-compliance-training-for-employees.php' => 'akaza_enqueue_gwct_assets',
 		'page-templates/gdpr-employee-awareness-training.php'      => 'akaza_enqueue_gdpr_assets',
+		'page-templates/information-security-awareness-training-for-soc-2-compliance.php' => 'akaza_enqueue_soc2_assets',
+		'page-templates/information-security-awareness-training-for-uk-cyber-essentials.php' => 'akaza_enqueue_ukce_assets',
 		'page-templates/ferpa-training-for-school-and-university-staff.php' => 'akaza_enqueue_ferpa_assets',
 		'page-templates/workplace-harassment-prevention-training.php' => 'akaza_enqueue_whp_assets',
 		'page-templates/infosec-2026-cyber.php'                   => 'akaza_enqueue_infosec_2026_cyber_assets',
