@@ -11,6 +11,7 @@ defined( 'ABSPATH' ) || exit;
 ?>
 
 <section
+	id="overview"
 	class="sl-gifts-entertainment-overview"
 	aria-labelledby="sl-gifts-entertainment-overview-title"
 >

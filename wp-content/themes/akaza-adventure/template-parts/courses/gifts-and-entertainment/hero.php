@@ -74,17 +74,17 @@ defined( 'ABSPATH' ) || exit;
 
 					<a
 						class="sl-hero-btn sl-hero-btn-primary"
-						href="#contact"
+						href="#individuals"
 					>
-						<?php esc_html_e( 'Request a Demo', 'akaza-adventure' ); ?>
+						<?php esc_html_e( 'Buy Now @ $20', 'akaza-adventure' ); ?>
 						<span aria-hidden="true">→</span>
 					</a>
 
 					<a
 						class="sl-hero-btn sl-hero-btn-secondary"
-						href="#"
+						href="#organisations"
 					>
-						<?php esc_html_e( 'Buy the Course', 'akaza-adventure' ); ?>
+						<?php esc_html_e( 'Explore More', 'akaza-adventure' ); ?>
 					</a>
 
 				</div>
