@@ -21,8 +21,7 @@ $overview_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/Image-2_g
 
 		<div class="sl-gifts-entertainment-overview__grid">
 
-			<!-- Content -->
-			<div class="sl-gifts-entertainment-overview__content">
+			<div class="sl-gifts-entertainment-overview__heading">
 
 				<span class="sl-home-sub-heading">
 					<?php
@@ -44,51 +43,50 @@ $overview_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/Image-2_g
 					?>
 				</h2>
 
-				<div class="sl-gifts-entertainment-overview__body">
+			</div>
 
-					<p>
-						<?php
-						esc_html_e(
-							'Gifts and Entertainment Compliance Training helps employees assess business gifts, meals, hospitality, event invitations and other benefits, and understand when they should be accepted, declined, approved, recorded or escalated.',
-							'akaza-adventure'
-						);
-						?>
-					</p>
+			<div class="sl-gifts-entertainment-overview__body">
 
-					<p>
-						<?php
-						esc_html_e(
-							'A gift may include merchandise, gift cards, services, personal favours, loans or discounts. Entertainment can include meals, event tickets, cultural outings, travel and hospitality.',
-							'akaza-adventure'
-						);
-						?>
-					</p>
+				<p class="sl-gifts-entertainment-overview__lead">
+					<?php
+					esc_html_e(
+						'Gifts and Entertainment Compliance Training helps employees assess business gifts, meals, hospitality, event invitations and other benefits, and understand when they should be accepted, declined, approved, recorded or escalated.',
+						'akaza-adventure'
+					);
+					?>
+				</p>
 
-					<p>
-						<?php
-						esc_html_e(
-							'For PE/VC professionals, these decisions may involve investors, advisers, vendors, portfolio company contacts, government officials and other third parties across UK and US business environments.',
-							'akaza-adventure'
-						);
-						?>
-					</p>
+				<p>
+					<?php
+					esc_html_e(
+						'A gift may include merchandise, gift cards, services, personal favours, loans or discounts. Entertainment can include meals, event tickets, cultural outings, travel and hospitality.',
+						'akaza-adventure'
+					);
+					?>
+				</p>
 
-				</div>
+				<p>
+					<?php
+					esc_html_e(
+						'For PE/VC professionals, these decisions may involve investors, advisers, vendors, portfolio company contacts, government officials and other third parties across UK and US business environments.',
+						'akaza-adventure'
+					);
+					?>
+				</p>
 
 			</div>
 
-			<!-- Image -->
-			<div class="sl-gifts-entertainment-overview__media">
-				<figure class="sl-gifts-entertainment-overview__image">
-					<img
-						src="<?php echo esc_url( $overview_image ); ?>"
-						alt="<?php esc_attr_e( 'What counts as a gift or entertainment', 'akaza-adventure' ); ?>"
-						loading="lazy"
-						decoding="async"
-					>
-				</figure>
-			</div>
+		</div>
 
+		<div class="sl-gifts-entertainment-overview__media">
+			<figure class="sl-gifts-entertainment-overview__image">
+				<img
+					src="<?php echo esc_url( $overview_image ); ?>"
+					alt="<?php esc_attr_e( 'What counts as a gift or entertainment', 'akaza-adventure' ); ?>"
+					loading="lazy"
+					decoding="async"
+				>
+			</figure>
 		</div>
 
 	</div>
