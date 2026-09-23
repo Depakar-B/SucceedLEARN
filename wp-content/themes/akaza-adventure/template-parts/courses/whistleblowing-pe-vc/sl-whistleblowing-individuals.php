@@ -1,7 +1,7 @@
 <?php
 /**
  * SucceedLEARN
- * AML Training for PE/VC — For Individuals
+ * Whistleblowing Training for PE/VC — For Individuals
  *
  * @package Akaza_Adventure
  */
@@ -12,12 +12,12 @@ $features = array(
 	array(
 		'num'   => '01',
 		'title' => __( 'Interactive eLearning', 'akaza-adventure' ),
-		'text'  => __( 'Practical digital learning supported by AML scenarios and knowledge checks.', 'akaza-adventure' ),
+		'text'  => __( 'Practical digital learning supported by whistleblowing scenarios and knowledge checks.', 'akaza-adventure' ),
 	),
 	array(
 		'num'   => '02',
 		'title' => __( '30-minute duration', 'akaza-adventure' ),
-		'text'  => __( 'Complete the core AML learning in approximately half an hour.', 'akaza-adventure' ),
+		'text'  => __( 'Complete the core whistleblowing learning in approximately half an hour.', 'akaza-adventure' ),
 	),
 	array(
 		'num'   => '03',
@@ -34,43 +34,43 @@ $features = array(
 
 <section
 	id="individuals"
-	class="sl-aml-pe-vc-individuals"
-	aria-labelledby="sl-aml-pe-vc-individuals-title"
+	class="sl-whistleblowing-individuals"
+	aria-labelledby="sl-whistleblowing-individuals-title"
 >
 	<div class="container">
 
-		<div class="sl-aml-pe-vc-individuals__grid">
+		<div class="sl-whistleblowing-individuals__grid">
 
-			<div class="sl-aml-pe-vc-individuals__content">
+			<div class="sl-whistleblowing-individuals__content">
 
 				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'Individual AML eLearning', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Individual Whistleblowing Learning', 'akaza-adventure' ); ?>
 				</span>
 
-				<h2 id="sl-aml-pe-vc-individuals-title">
+				<h2 id="sl-whistleblowing-individuals-title">
 					<?php
 					echo wp_kses_post(
 						__(
-							'AML Training <span>For Individuals</span> - Start Immediately',
+							'Whistleblowing Training <span>For Individuals</span> - Start Immediately',
 							'akaza-adventure'
 						)
 					);
 					?>
 				</h2>
 
-				<p class="sl-aml-pe-vc-individuals__lead">
+				<p class="sl-whistleblowing-individuals__lead">
 					<?php
 					esc_html_e(
-						'A focused learning experience for professionals who want practical anti-money laundering awareness without a lengthy training commitment.',
+						'A focused learning experience for professionals who want practical speaking-up and whistleblowing awareness without a lengthy training commitment.',
 						'akaza-adventure'
 					);
 					?>
 				</p>
 
-				<ul class="sl-aml-pe-vc-individuals__features">
+				<ul class="sl-whistleblowing-individuals__features">
 					<?php foreach ( $features as $feature ) : ?>
-						<li class="sl-aml-pe-vc-individuals__feature">
-							<span class="sl-aml-pe-vc-individuals__feature-num" aria-hidden="true">
+						<li class="sl-whistleblowing-individuals__feature">
+							<span class="sl-whistleblowing-individuals__feature-num" aria-hidden="true">
 								<?php echo esc_html( $feature['num'] ); ?>
 							</span>
 							<div>
@@ -83,17 +83,17 @@ $features = array(
 
 			</div>
 
-			<div class="sl-aml-pe-vc-individuals__media">
-				<figure class="sl-aml-pe-vc-individuals__image">
+			<div class="sl-whistleblowing-individuals__media">
+				<figure class="sl-whistleblowing-individuals__image">
 					<img
 						src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/Image-1-AML.webp' ); ?>"
-						alt="<?php esc_attr_e( 'Individual AML Course Preview', 'akaza-adventure' ); ?>"
+						alt="<?php esc_attr_e( 'Individual Whistleblowing Course Preview', 'akaza-adventure' ); ?>"
 						loading="lazy"
 						decoding="async"
 					>
 				</figure>
 
-				<div class="sl-aml-pe-vc-individuals__actions">
+				<div class="sl-whistleblowing-individuals__actions">
 					<a class="sl-content-btn sl-content-btn-primary" href="#buy">
 						<?php esc_html_e( 'Buy Now @ $20', 'akaza-adventure' ); ?>
 					</a>

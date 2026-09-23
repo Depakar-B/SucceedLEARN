@@ -8,6 +8,13 @@
  */
 
 defined( 'ABSPATH' ) || exit;
+
+$high_risk_images = array(
+	'government'    => 'https://succeedlearn.com/wp-content/uploads/2026/09/Image-4_gifts.webp',
+	'vendors'       => 'https://succeedlearn.com/wp-content/uploads/2026/09/Image-5_gifts.webp',
+	'travel'        => 'https://succeedlearn.com/wp-content/uploads/2026/09/Image-6_gifts.webp',
+	'cross_cultural'=> 'https://succeedlearn.com/wp-content/uploads/2026/09/Image-7_gifts.webp',
+);
 ?>
 
 <section
@@ -55,31 +62,14 @@ defined( 'ABSPATH' ) || exit;
 			<article class="sl-gifts-entertainment-high-risk__card">
 
 				<div class="sl-gifts-entertainment-high-risk__media">
-
-					<div
-						class="sl-gifts-entertainment-high-risk__image-placeholder"
-						role="img"
-						aria-label="<?php esc_attr_e( 'Government official or public-sector interaction image placeholder', 'akaza-adventure' ); ?>"
-					>
-						<span>
-							<?php
-							esc_html_e(
-								'IMAGE PLACEHOLDER',
-								'akaza-adventure'
-							);
-							?>
-						</span>
-
-						<small>
-							<?php
-							esc_html_e(
-								'Government official or public-sector interaction',
-								'akaza-adventure'
-							);
-							?>
-						</small>
-					</div>
-
+					<figure class="sl-gifts-entertainment-high-risk__image">
+						<img
+							src="<?php echo esc_url( $high_risk_images['government'] ); ?>"
+							alt="<?php esc_attr_e( 'Government official or public-sector interaction', 'akaza-adventure' ); ?>"
+							loading="lazy"
+							decoding="async"
+						>
+					</figure>
 				</div>
 
 				<div class="sl-gifts-entertainment-high-risk__content">
@@ -110,31 +100,14 @@ defined( 'ABSPATH' ) || exit;
 			<article class="sl-gifts-entertainment-high-risk__card">
 
 				<div class="sl-gifts-entertainment-high-risk__media">
-
-					<div
-						class="sl-gifts-entertainment-high-risk__image-placeholder"
-						role="img"
-						aria-label="<?php esc_attr_e( 'Vendor, adviser or third-party meeting image placeholder', 'akaza-adventure' ); ?>"
-					>
-						<span>
-							<?php
-							esc_html_e(
-								'IMAGE PLACEHOLDER',
-								'akaza-adventure'
-							);
-							?>
-						</span>
-
-						<small>
-							<?php
-							esc_html_e(
-								'Vendor, adviser or third-party meeting',
-								'akaza-adventure'
-							);
-							?>
-						</small>
-					</div>
-
+					<figure class="sl-gifts-entertainment-high-risk__image">
+						<img
+							src="<?php echo esc_url( $high_risk_images['vendors'] ); ?>"
+							alt="<?php esc_attr_e( 'Vendor, adviser or third-party meeting', 'akaza-adventure' ); ?>"
+							loading="lazy"
+							decoding="async"
+						>
+					</figure>
 				</div>
 
 				<div class="sl-gifts-entertainment-high-risk__content">
@@ -165,31 +138,14 @@ defined( 'ABSPATH' ) || exit;
 			<article class="sl-gifts-entertainment-high-risk__card">
 
 				<div class="sl-gifts-entertainment-high-risk__media">
-
-					<div
-						class="sl-gifts-entertainment-high-risk__image-placeholder"
-						role="img"
-						aria-label="<?php esc_attr_e( 'Business travel or accommodation scenario image placeholder', 'akaza-adventure' ); ?>"
-					>
-						<span>
-							<?php
-							esc_html_e(
-								'IMAGE PLACEHOLDER',
-								'akaza-adventure'
-							);
-							?>
-						</span>
-
-						<small>
-							<?php
-							esc_html_e(
-								'Business travel or accommodation scenario',
-								'akaza-adventure'
-							);
-							?>
-						</small>
-					</div>
-
+					<figure class="sl-gifts-entertainment-high-risk__image">
+						<img
+							src="<?php echo esc_url( $high_risk_images['travel'] ); ?>"
+							alt="<?php esc_attr_e( 'Business travel or accommodation scenario', 'akaza-adventure' ); ?>"
+							loading="lazy"
+							decoding="async"
+						>
+					</figure>
 				</div>
 
 				<div class="sl-gifts-entertainment-high-risk__content">
@@ -220,31 +176,14 @@ defined( 'ABSPATH' ) || exit;
 			<article class="sl-gifts-entertainment-high-risk__card">
 
 				<div class="sl-gifts-entertainment-high-risk__media">
-
-					<div
-						class="sl-gifts-entertainment-high-risk__image-placeholder"
-						role="img"
-						aria-label="<?php esc_attr_e( 'International or cross-cultural gift-giving image placeholder', 'akaza-adventure' ); ?>"
-					>
-						<span>
-							<?php
-							esc_html_e(
-								'IMAGE PLACEHOLDER',
-								'akaza-adventure'
-							);
-							?>
-						</span>
-
-						<small>
-							<?php
-							esc_html_e(
-								'International or cross-cultural gift-giving',
-								'akaza-adventure'
-							);
-							?>
-						</small>
-					</div>
-
+					<figure class="sl-gifts-entertainment-high-risk__image">
+						<img
+							src="<?php echo esc_url( $high_risk_images['cross_cultural'] ); ?>"
+							alt="<?php esc_attr_e( 'International or cross-cultural gift-giving', 'akaza-adventure' ); ?>"
+							loading="lazy"
+							decoding="async"
+						>
+					</figure>
 				</div>
 
 				<div class="sl-gifts-entertainment-high-risk__content">

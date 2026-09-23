@@ -13,6 +13,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <main id="main-content" class="sl-course-page sl-course-page--whistleblowing-pe-vc">
 	<?php get_template_part( 'template-parts/courses/whistleblowing-pe-vc/sl-whistleblowing-hero' ); ?>
+	<?php get_template_part( 'template-parts/courses/whistleblowing-pe-vc/sl-whistleblowing-individuals' ); ?>
+	<?php get_template_part( 'template-parts/courses/whistleblowing-pe-vc/sl-whistleblowing-organisations' ); ?>
+	<?php get_template_part( 'template-parts/courses/whistleblowing-pe-vc/sl-whistleblowing-pevc-suite' ); ?>
 	<?php get_template_part( 'template-parts/courses/whistleblowing-pe-vc/sl-whistleblowing-outcomes' ); ?>
 	<?php get_template_part( 'template-parts/courses/whistleblowing-pe-vc/sl-whistleblowing-overview' ); ?>
 	<?php get_template_part( 'template-parts/courses/whistleblowing-pe-vc/sl-whistleblowing-designed' ); ?>

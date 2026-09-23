@@ -1,7 +1,7 @@
 <?php
 /**
  * SucceedLEARN
- * AML Training for PE/VC — For Individuals
+ * Political Donations Training for PE/VC — For Individuals
  *
  * @package Akaza_Adventure
  */
@@ -12,12 +12,12 @@ $features = array(
 	array(
 		'num'   => '01',
 		'title' => __( 'Interactive eLearning', 'akaza-adventure' ),
-		'text'  => __( 'Practical digital learning supported by AML scenarios and knowledge checks.', 'akaza-adventure' ),
+		'text'  => __( 'Practical digital learning supported by political donations scenarios and knowledge checks.', 'akaza-adventure' ),
 	),
 	array(
 		'num'   => '02',
 		'title' => __( '30-minute duration', 'akaza-adventure' ),
-		'text'  => __( 'Complete the core AML learning in approximately half an hour.', 'akaza-adventure' ),
+		'text'  => __( 'Complete the core political donations learning in approximately half an hour.', 'akaza-adventure' ),
 	),
 	array(
 		'num'   => '03',
@@ -34,43 +34,43 @@ $features = array(
 
 <section
 	id="individuals"
-	class="sl-aml-pe-vc-individuals"
-	aria-labelledby="sl-aml-pe-vc-individuals-title"
+	class="sl-political-donations-individuals"
+	aria-labelledby="sl-political-donations-individuals-title"
 >
 	<div class="container">
 
-		<div class="sl-aml-pe-vc-individuals__grid">
+		<div class="sl-political-donations-individuals__grid">
 
-			<div class="sl-aml-pe-vc-individuals__content">
+			<div class="sl-political-donations-individuals__content">
 
 				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'Individual AML eLearning', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Individual Political Donations Learning', 'akaza-adventure' ); ?>
 				</span>
 
-				<h2 id="sl-aml-pe-vc-individuals-title">
+				<h2 id="sl-political-donations-individuals-title">
 					<?php
 					echo wp_kses_post(
 						__(
-							'AML Training <span>For Individuals</span> - Start Immediately',
+							'Political Donations Training <span>For Individuals</span> - Start Immediately',
 							'akaza-adventure'
 						)
 					);
 					?>
 				</h2>
 
-				<p class="sl-aml-pe-vc-individuals__lead">
+				<p class="sl-political-donations-individuals__lead">
 					<?php
 					esc_html_e(
-						'A focused learning experience for professionals who want practical anti-money laundering awareness without a lengthy training commitment.',
+						'A focused learning experience for professionals who want practical political donations awareness without a lengthy training commitment.',
 						'akaza-adventure'
 					);
 					?>
 				</p>
 
-				<ul class="sl-aml-pe-vc-individuals__features">
+				<ul class="sl-political-donations-individuals__features">
 					<?php foreach ( $features as $feature ) : ?>
-						<li class="sl-aml-pe-vc-individuals__feature">
-							<span class="sl-aml-pe-vc-individuals__feature-num" aria-hidden="true">
+						<li class="sl-political-donations-individuals__feature">
+							<span class="sl-political-donations-individuals__feature-num" aria-hidden="true">
 								<?php echo esc_html( $feature['num'] ); ?>
 							</span>
 							<div>
@@ -83,18 +83,18 @@ $features = array(
 
 			</div>
 
-			<div class="sl-aml-pe-vc-individuals__media">
-				<figure class="sl-aml-pe-vc-individuals__image">
+			<div class="sl-political-donations-individuals__media">
+				<figure class="sl-political-donations-individuals__image">
 					<img
 						src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/Image-1-AML.webp' ); ?>"
-						alt="<?php esc_attr_e( 'Individual AML Course Preview', 'akaza-adventure' ); ?>"
+						alt="<?php esc_attr_e( 'Individual Political Donations Course Preview', 'akaza-adventure' ); ?>"
 						loading="lazy"
 						decoding="async"
 					>
 				</figure>
 
-				<div class="sl-aml-pe-vc-individuals__actions">
-					<a class="sl-content-btn sl-content-btn-primary" href="#buy">
+				<div class="sl-political-donations-individuals__actions">
+					<a class="sl-content-btn sl-content-btn-primary" href="#contact">
 						<?php esc_html_e( 'Buy Now @ $20', 'akaza-adventure' ); ?>
 					</a>
 					<a class="sl-content-btn sl-content-btn-secondary" href="#contact">

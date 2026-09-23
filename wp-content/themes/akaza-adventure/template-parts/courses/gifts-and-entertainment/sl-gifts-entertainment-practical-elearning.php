@@ -8,6 +8,8 @@
  */
 
 defined( 'ABSPATH' ) || exit;
+
+$assessment_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/Image-8_gifts.webp';
 ?>
 
 <section
@@ -72,33 +74,14 @@ defined( 'ABSPATH' ) || exit;
 
 			<!-- Right: Assessment Image -->
 			<div class="sl-gifts-entertainment-practical-elearning__media">
-
-				<div
-					class="sl-gifts-entertainment-practical-elearning__image-placeholder"
-					role="img"
-					aria-label="<?php esc_attr_e( 'Course assessment image placeholder', 'akaza-adventure' ); ?>"
-				>
-
-					<strong>
-						<?php
-						esc_html_e(
-							'Course Assessment Image Holder',
-							'akaza-adventure'
-						);
-						?>
-					</strong>
-
-					<span>
-						<?php
-						esc_html_e(
-							'Insert one of the supplied Gifts and Entertainment assessment screenshots here.',
-							'akaza-adventure'
-						);
-						?>
-					</span>
-
-				</div>
-
+				<figure class="sl-gifts-entertainment-practical-elearning__image">
+					<img
+						src="<?php echo esc_url( $assessment_image ); ?>"
+						alt="<?php esc_attr_e( 'Gifts and Entertainment course assessment screenshot', 'akaza-adventure' ); ?>"
+						loading="lazy"
+						decoding="async"
+					>
+				</figure>
 			</div>
 
 		</div>

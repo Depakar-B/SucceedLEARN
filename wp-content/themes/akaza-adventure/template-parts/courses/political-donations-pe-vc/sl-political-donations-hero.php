@@ -43,19 +43,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<div class="sl-hero-actions sl-political-donations-hero__actions">
 
 					<a
-						class="sl-hero-btn sl-hero-btn-secondary"
-						href="#course-preview"
+						class="sl-hero-btn sl-hero-btn-primary"
+						href="#individuals"
 					>
-						<?php esc_html_e( 'Explore the Course', 'akaza-adventure' ); ?>
+						<?php esc_html_e( 'Buy Now @ $20', 'akaza-adventure' ); ?>
 						<span aria-hidden="true">→</span>
 					</a>
 
 					<a
-						class="sl-hero-btn sl-hero-btn-primary"
-						href="#buy-course"
+						class="sl-hero-btn sl-hero-btn-secondary"
+						href="#organisations"
 					>
-						<?php esc_html_e( 'Buy the Course', 'akaza-adventure' ); ?>
-						<span aria-hidden="true">→</span>
+						<?php esc_html_e( 'Explore More', 'akaza-adventure' ); ?>
 					</a>
 
 				</div>

@@ -28,6 +28,9 @@ function akaza_enqueue_gifts_entertainment_assets() {
 
 	$sections = array(
 		'sl-gifts-entertainment-hero',
+		'sl-gifts-entertainment-individuals',
+		'sl-gifts-entertainment-organisations',
+		'sl-gifts-entertainment-pevc-suite',
 		'sl-gifts-entertainment-overview',
 		'sl-gifts-entertainment-risk',
 		'sl-gifts-entertainment-decisions',

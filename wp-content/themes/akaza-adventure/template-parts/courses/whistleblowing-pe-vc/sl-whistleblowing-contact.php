@@ -53,7 +53,7 @@ $form_shortcode = sprintf(
 
 					<a
 						class="sl-contact-btn sl-contact-btn--email"
-						href="mailto:info@succeedtech.com"
+						href="mailto:connect@succeedtech.com"
 					>
 						<span class="sl-contact-btn__stack">
 							<span class="sl-contact-btn__label">
@@ -61,7 +61,7 @@ $form_shortcode = sprintf(
 							</span>
 
 							<span class="sl-contact-btn__value">
-								info@succeedtech.com
+								connect@succeedtech.com
 							</span>
 						</span>
 					</a>

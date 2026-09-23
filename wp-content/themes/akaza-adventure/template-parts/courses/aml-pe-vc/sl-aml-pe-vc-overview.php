@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) || exit;
 			<div class="sl-aml-pe-vc-overview__content">
 
 				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'Course Overview', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Definition of AML', 'akaza-adventure' ); ?>
 				</span>
 
 				<h2 id="sl-aml-pe-vc-overview-title">
@@ -70,7 +70,7 @@ defined( 'ABSPATH' ) || exit;
 			<div class="sl-aml-pe-vc-overview__media">
 				<figure class="sl-aml-pe-vc-overview__image">
 					<img
-						src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/Image-3.webp' ); ?>"
+						src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/AML_organisations-image.webp' ); ?>"
 						alt="<?php esc_attr_e( 'AML Course Introduction Visual', 'akaza-adventure' ); ?>"
 						loading="lazy"
 						decoding="async"

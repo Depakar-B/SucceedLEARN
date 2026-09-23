@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <section
-	id="whistleblowing-cta"
+	id="buy"
 	class="sl-whistleblowing-cta"
 	aria-labelledby="sl-whistleblowing-cta-title"
 >

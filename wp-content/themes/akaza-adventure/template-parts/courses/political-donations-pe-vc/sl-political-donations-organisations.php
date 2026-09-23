@@ -1,7 +1,7 @@
 <?php
 /**
  * SucceedLEARN
- * AML Training for PE/VC — For Organisations
+ * Political Donations Training for PE/VC — For Organisations
  *
  * @package Akaza_Adventure
  */
@@ -27,7 +27,7 @@ $features = array(
 	array(
 		'num'   => '04',
 		'title' => __( 'Group assignment', 'akaza-adventure' ),
-		'text'  => __( 'Assign AML training to selected teams or learner groups.', 'akaza-adventure' ),
+		'text'  => __( 'Assign political donations training to selected teams or learner groups.', 'akaza-adventure' ),
 	),
 	array(
 		'num'   => '05',
@@ -39,15 +39,15 @@ $features = array(
 
 <section
 	id="organisations"
-	class="sl-aml-pe-vc-organisations"
-	aria-labelledby="sl-aml-pe-vc-organisations-title"
+	class="sl-political-donations-organisations"
+	aria-labelledby="sl-political-donations-organisations-title"
 >
 	<div class="container">
 
-		<div class="sl-aml-pe-vc-organisations__grid">
+		<div class="sl-political-donations-organisations__grid">
 
-			<div class="sl-aml-pe-vc-organisations__media">
-				<figure class="sl-aml-pe-vc-organisations__image">
+			<div class="sl-political-donations-organisations__media">
+				<figure class="sl-political-donations-organisations__image">
 					<img
 						src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/Image-2.webp' ); ?>"
 						alt="<?php esc_attr_e( 'Organisational Training Dashboard', 'akaza-adventure' ); ?>"
@@ -56,7 +56,7 @@ $features = array(
 					>
 				</figure>
 
-				<div class="sl-aml-pe-vc-organisations__actions">
+				<div class="sl-political-donations-organisations__actions">
 					<a class="sl-content-btn sl-content-btn-primary" href="#contact">
 						<?php esc_html_e( 'Request Demo', 'akaza-adventure' ); ?>
 					</a>
@@ -66,17 +66,17 @@ $features = array(
 				</div>
 			</div>
 
-			<div class="sl-aml-pe-vc-organisations__content">
+			<div class="sl-political-donations-organisations__content">
 
 				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'Enterprise AML eLearning', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Enterprise Political Donations Learning', 'akaza-adventure' ); ?>
 				</span>
 
-				<h2 id="sl-aml-pe-vc-organisations-title">
+				<h2 id="sl-political-donations-organisations-title">
 					<?php
 					echo wp_kses_post(
 						__(
-							'AML Training <span>For Organisations</span> - Built for Scale',
+							'Political Donations Training <span>For Organisations</span> - Built for Scale',
 							'akaza-adventure'
 						)
 					);
@@ -86,16 +86,16 @@ $features = array(
 				<p>
 					<?php
 					esc_html_e(
-						'Deliver AML awareness across teams while giving administrators the controls needed to assign training, monitor completion and manage recurring compliance activity.',
+						'Deliver political donations awareness across teams while giving administrators the controls needed to assign training, monitor completion and manage recurring compliance activity.',
 						'akaza-adventure'
 					);
 					?>
 				</p>
 
-				<ul class="sl-aml-pe-vc-organisations__features">
+				<ul class="sl-political-donations-organisations__features">
 					<?php foreach ( $features as $feature ) : ?>
-						<li class="sl-aml-pe-vc-organisations__feature">
-							<span class="sl-aml-pe-vc-organisations__feature-num" aria-hidden="true">
+						<li class="sl-political-donations-organisations__feature">
+							<span class="sl-political-donations-organisations__feature-num" aria-hidden="true">
 								<?php echo esc_html( $feature['num'] ); ?>
 							</span>
 							<div>
