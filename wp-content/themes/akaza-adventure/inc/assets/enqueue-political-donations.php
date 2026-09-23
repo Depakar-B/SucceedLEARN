@@ -27,6 +27,9 @@ function akaza_enqueue_political_donations_assets() {
 
 	$sections = array(
 		'sl-political-donations-hero',
+		'sl-political-donations-individuals',
+		'sl-political-donations-organisations',
+		'sl-political-donations-pevc-suite',
 		'sl-political-donations-context',
 		'sl-political-donations-overview',
 		'sl-political-donations-regulatory-context',
