@@ -1,18 +1,32 @@
 /* SucceedLEARN — AML PE/VC hero */
 
 .sl-course-page .sl-aml-pe-vc-hero {
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
 	padding-top: calc(var(--slf-header-clearance, 76px) + var(--course-section-space, 90px));
+	padding-bottom: var(--course-section-space, 90px);
 	background: var(--sl-page-white, #ffffff);
 }
 
-.sl-aml-pe-vc-hero__grid {
-	display: grid;
-	grid-template-columns: 1.04fr 0.96fr;
-	gap: 62px;
-	align-items: center;
+.sl-aml-pe-vc-hero__bg-image {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: right center;
+	pointer-events: none;
+}
+
+.sl-aml-pe-vc-hero > .container {
+	position: relative;
+	z-index: 1;
 }
 
 .sl-aml-pe-vc-hero__content {
+	max-width: 560px;
 	min-width: 0;
 }
 
@@ -71,54 +85,20 @@
 	text-transform: uppercase;
 }
 
-.sl-aml-pe-vc-hero__media {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-width: 0;
-}
-
-.sl-aml-pe-vc-hero__image-placeholder {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	min-height: 390px;
-	padding: 35px;
-	border: 2px dashed rgba(19, 93, 183, 0.35);
-	border-radius: 24px;
-	background: linear-gradient(135deg, #f3f8fe, #ffffff);
-	text-align: center;
-	box-sizing: border-box;
-}
-
-.sl-aml-pe-vc-hero__image-placeholder span {
-	margin-bottom: 8px;
-	color: var(--sl-page-navy, #16234d);
-	font-size: 1.1rem;
-	font-weight: 700;
-}
-
-.sl-aml-pe-vc-hero__image-placeholder small {
-	max-width: 430px;
-	color: #555e70;
-	font-size: 0.9rem;
-}
-
 @media (max-width: 1000px) {
-	.sl-aml-pe-vc-hero__grid {
-		grid-template-columns: 1fr;
-		gap: 40px;
+	.sl-aml-pe-vc-hero__content {
+		max-width: 100%;
+	}
+
+	.sl-aml-pe-vc-hero__bg-image {
+		opacity: 0.28;
+		object-position: center center;
 	}
 }
 
 @media (max-width: 767px) {
 	.sl-course-page .sl-aml-pe-vc-hero {
 		padding-top: calc(var(--slf-header-clearance, 76px) + var(--course-section-space-mobile, 60px));
-	}
-
-	.sl-aml-pe-vc-hero__image-placeholder {
-		min-height: 280px;
+		padding-bottom: var(--course-section-space-mobile, 60px);
 	}
 }
