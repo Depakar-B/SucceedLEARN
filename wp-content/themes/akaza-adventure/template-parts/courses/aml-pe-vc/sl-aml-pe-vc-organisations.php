@@ -83,7 +83,7 @@ $features = array(
 					<?php
 					echo wp_kses_post(
 						__(
-							'AML Training <span>For Organisations</span> — Built for Scale',
+							'AML Training <span>For Organisations</span> - Built for Scale',
 							'akaza-adventure'
 						)
 					);
