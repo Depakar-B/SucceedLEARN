@@ -53,14 +53,14 @@ $form_shortcode = sprintf(
 
 					<a
 						class="sl-contact-btn sl-contact-btn--email"
-						href="mailto:info@succeedtech.com"
+						href="mailto:connect@succeedtech.com"
 					>
 						<span class="sl-contact-btn__stack">
 							<span class="sl-contact-btn__label">
 								<?php esc_html_e( 'Email us', 'akaza-adventure' ); ?>
 							</span>
 							<span class="sl-contact-btn__value">
-								<?php esc_html_e( 'info@succeedtech.com', 'akaza-adventure' ); ?>
+								<?php esc_html_e( 'connect@succeedtech.com', 'akaza-adventure' ); ?>
 							</span>
 						</span>
 					</a>
