@@ -58,6 +58,13 @@ $courses = array(
 		'href'   => '#contact',
 		'active' => false,
 	),
+	array(
+		'num'    => '08',
+		'title'  => __( 'Responsible Use of Gen AI', 'akaza-adventure' ),
+		'text'   => __( 'A practical course on using Generative AI responsibly in the workplace while understanding its benefits, risks, limitations, and legal requirements.', 'akaza-adventure' ),
+		'href'   => '#contact',
+		'active' => false,
+	),
 );
 ?>
 

@@ -44,51 +44,22 @@ defined( 'ABSPATH' ) || exit;
 					?>
 				</p>
 
-				<div
-					class="sl-aml-pe-vc-cta__image-placeholder"
-					role="img"
-					aria-label="<?php esc_attr_e( 'SucceedLEARN AML Course Preview placeholder', 'akaza-adventure' ); ?>"
-				>
-					<span><?php esc_html_e( 'SucceedLEARN AML Course Preview', 'akaza-adventure' ); ?></span>
-					<small>
-						<?php
-						esc_html_e(
-							'Replace with an approved screenshot showing the AML learner experience.',
-							'akaza-adventure'
-						);
-						?>
-					</small>
-				</div>
-
 			</div>
 
-			<div class="sl-aml-pe-vc-cta__panel">
-
-				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'Course Enquiry', 'akaza-adventure' ); ?>
-				</span>
-
-				<h3><?php esc_html_e( 'Start Your SucceedLEARN Learning Journey', 'akaza-adventure' ); ?></h3>
-
-				<p>
+			<div
+				class="sl-aml-pe-vc-cta__image-placeholder"
+				role="img"
+				aria-label="<?php esc_attr_e( 'SucceedLEARN AML Course Preview placeholder', 'akaza-adventure' ); ?>"
+			>
+				<span><?php esc_html_e( 'SucceedLEARN AML Course Preview', 'akaza-adventure' ); ?></span>
+				<small>
 					<?php
 					esc_html_e(
-						'Tell us whether you are purchasing the individual course or exploring training for your organisation.',
+						'Replace with an approved screenshot showing the AML learner experience.',
 						'akaza-adventure'
 					);
 					?>
-				</p>
-
-				<div class="sl-content-actions">
-					<a class="sl-content-btn sl-content-btn-primary" href="#contact">
-						<?php esc_html_e( 'Buy Now @ $20', 'akaza-adventure' ); ?>
-						<span aria-hidden="true">→</span>
-					</a>
-					<a class="sl-content-btn sl-content-btn-secondary" href="#contact">
-						<?php esc_html_e( 'Request Org Demo', 'akaza-adventure' ); ?>
-					</a>
-				</div>
-
+				</small>
 			</div>
 
 		</div>
