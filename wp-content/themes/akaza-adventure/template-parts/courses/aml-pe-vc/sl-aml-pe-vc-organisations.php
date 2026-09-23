@@ -69,7 +69,7 @@ $features = array(
 			<div class="sl-aml-pe-vc-organisations__content">
 
 				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'Enterprise AML Learning', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Enterprise AML eLearning', 'akaza-adventure' ); ?>
 				</span>
 
 				<h2 id="sl-aml-pe-vc-organisations-title">

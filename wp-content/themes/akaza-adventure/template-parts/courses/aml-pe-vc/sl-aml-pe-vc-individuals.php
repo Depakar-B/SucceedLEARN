@@ -44,7 +44,7 @@ $features = array(
 			<div class="sl-aml-pe-vc-individuals__content">
 
 				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'Individual AML Learning', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Individual AML eLearning', 'akaza-adventure' ); ?>
 				</span>
 
 				<h2 id="sl-aml-pe-vc-individuals-title">

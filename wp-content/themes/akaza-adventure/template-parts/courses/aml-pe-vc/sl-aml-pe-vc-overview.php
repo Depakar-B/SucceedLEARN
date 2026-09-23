@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) || exit;
 			<div class="sl-aml-pe-vc-overview__content">
 
 				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'Course Overview', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Definition of AML', 'akaza-adventure' ); ?>
 				</span>
 
 				<h2 id="sl-aml-pe-vc-overview-title">
