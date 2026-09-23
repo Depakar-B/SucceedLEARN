@@ -12,11 +12,19 @@
 }
 
 .sl-s-sync-integrations__intro h2 {
-	margin-bottom: 16px;
+	margin-bottom: 0;
+}
+
+.sl-s-sync-integrations__subtitle {
+	margin: 16px 0 0;
+	font-size: 1.15rem;
+	font-weight: 600;
+	line-height: 1.4;
+	color: var(--sl-page-text, #16234e);
 }
 
 .sl-s-sync-integrations__intro p {
-	margin: 0;
+	margin: 16px 0 0;
 	max-width: 820px;
 }
 

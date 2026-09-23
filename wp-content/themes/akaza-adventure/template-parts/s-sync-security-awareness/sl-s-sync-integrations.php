@@ -1,6 +1,6 @@
 <?php
 /**
- * S-Sync — Seamless Integration Across Your Existing Technology Stack.
+ * S-Sync — Enterprise Integration Capabilities.
  *
  * @package Akaza_Adventure
  */
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $integrations = array(
 	array(
 		'title' => __( 'Single Sign-On (SSO)', 'akaza-adventure' ),
-		'text'  => __( 'Provide employees with secure, seamless access using their existing organisational credentials. By eliminating the need for separate usernames and passwords, SSO improves the learner experience while reducing password-related support requests.', 'akaza-adventure' ),
+		'text'  => __( 'Provide employees with secure, seamless access using their existing organisational credentials. By eliminating the need for separate usernames and passwords, Single Sign-On can help create a more familiar learner experience while reducing unnecessary credential management.', 'akaza-adventure' ),
 	),
 	array(
 		'title' => __( 'Automated User Provisioning', 'akaza-adventure' ),
@@ -46,13 +46,17 @@ $integrations = array(
 		<div class="sl-s-sync-integrations__intro">
 
 			<span class="sl-home-sub-heading">
-				<?php esc_html_e( 'Technology Stack', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'Enterprise Integrations', 'akaza-adventure' ); ?>
 			</span>
 
 			<h2 id="sl-s-sync-integrations-title">
-				<?php esc_html_e( 'Seamless Integration Across Your', 'akaza-adventure' ); ?>
-				<span><?php esc_html_e( 'Existing Technology Stack', 'akaza-adventure' ); ?></span>
+				<?php esc_html_e( 'Enterprise Integration', 'akaza-adventure' ); ?>
+				<span><?php esc_html_e( 'capabilities', 'akaza-adventure' ); ?></span>
 			</h2>
+
+			<h3 class="sl-s-sync-integrations__subtitle">
+				<?php esc_html_e( 'Connect Security Awareness With Your Existing Technology Environment', 'akaza-adventure' ); ?>
+			</h3>
 
 			<p>
 				<?php
