@@ -84,21 +84,14 @@ $features = array(
 			</div>
 
 			<div class="sl-aml-pe-vc-individuals__media">
-				<div
-					class="sl-aml-pe-vc-individuals__image-placeholder"
-					role="img"
-					aria-label="<?php esc_attr_e( 'Individual AML Course Preview placeholder', 'akaza-adventure' ); ?>"
-				>
-					<span><?php esc_html_e( 'Individual AML Course Preview', 'akaza-adventure' ); ?></span>
-					<small>
-						<?php
-						esc_html_e(
-							'Replace with an approved SucceedLEARN AML lesson or knowledge-check screenshot.',
-							'akaza-adventure'
-						);
-						?>
-					</small>
-				</div>
+				<figure class="sl-aml-pe-vc-individuals__image">
+					<img
+						src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/Image-1-AML.webp' ); ?>"
+						alt="<?php esc_attr_e( 'Individual AML Course Preview', 'akaza-adventure' ); ?>"
+						loading="lazy"
+						decoding="async"
+					>
+				</figure>
 
 				<div class="sl-aml-pe-vc-individuals__actions">
 					<a class="sl-content-btn sl-content-btn-primary" href="#buy">

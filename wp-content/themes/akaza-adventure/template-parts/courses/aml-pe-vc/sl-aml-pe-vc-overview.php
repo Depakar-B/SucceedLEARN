@@ -68,21 +68,14 @@ defined( 'ABSPATH' ) || exit;
 			</div>
 
 			<div class="sl-aml-pe-vc-overview__media">
-				<div
-					class="sl-aml-pe-vc-overview__image-placeholder"
-					role="img"
-					aria-label="<?php esc_attr_e( 'AML Course Introduction Visual placeholder', 'akaza-adventure' ); ?>"
-				>
-					<span><?php esc_html_e( 'AML Course Introduction Visual', 'akaza-adventure' ); ?></span>
-					<small>
-						<?php
-						esc_html_e(
-							'Replace with an approved money laundering or investor onboarding scenario from the course.',
-							'akaza-adventure'
-						);
-						?>
-					</small>
-				</div>
+				<figure class="sl-aml-pe-vc-overview__image">
+					<img
+						src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/Image-3.webp' ); ?>"
+						alt="<?php esc_attr_e( 'AML Course Introduction Visual', 'akaza-adventure' ); ?>"
+						loading="lazy"
+						decoding="async"
+					>
+				</figure>
 			</div>
 
 		</div>
