@@ -76,7 +76,7 @@ $features = array(
 					<?php
 					echo wp_kses_post(
 						__(
-							'Gifts and Entertainment Training <span>For Organisations</span> - Built for Scale',
+							'Gifts and Entertainment Training <span>For Organisations</span>',
 							'akaza-adventure'
 						)
 					);

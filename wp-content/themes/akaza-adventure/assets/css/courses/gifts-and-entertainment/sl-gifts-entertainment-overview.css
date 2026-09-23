@@ -50,7 +50,9 @@
 .sl-course-page .sl-gifts-entertainment-overview__image img {
 	display: block;
 	width: 100%;
-	height: auto;
+	height: 300px;
+	object-fit: cover;
+	object-position: center center;
 }
 
 @media (max-width: 767px) {
@@ -60,6 +62,10 @@
 
 	.sl-course-page .sl-gifts-entertainment-overview__image {
 		border-radius: 16px;
+	}
+
+	.sl-course-page .sl-gifts-entertainment-overview__image img {
+		height: 220px;
 	}
 
 	.sl-course-page .sl-gifts-entertainment-overview__content h2 {

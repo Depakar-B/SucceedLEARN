@@ -31,7 +31,7 @@ defined( 'ABSPATH' ) || exit;
 				<?php
 				echo wp_kses_post(
 					__(
-						'Gifts and Entertainment Decision-Making <span>for PE/VC Professionals</span>',
+						'Gifts and Entertainment Decision-Making',
 						'akaza-adventure'
 					)
 				);

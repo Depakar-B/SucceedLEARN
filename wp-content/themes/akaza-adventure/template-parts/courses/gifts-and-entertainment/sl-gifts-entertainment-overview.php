@@ -27,7 +27,7 @@ $overview_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/Image-2_g
 				<span class="sl-home-sub-heading">
 					<?php
 					esc_html_e(
-						'Course overview',
+						'Definition of Gifts and Entertainment',
 						'akaza-adventure'
 					);
 					?>
