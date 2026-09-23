@@ -41,4 +41,7 @@ function akaza_enqueue_s_sync_assets() {
 			$deps
 		);
 	}
+
+	wp_enqueue_style( 'akaza-global-faq' );
+	wp_enqueue_script( 'akaza-global-faq' );
 }

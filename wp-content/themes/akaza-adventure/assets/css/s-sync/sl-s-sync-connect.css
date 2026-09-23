@@ -9,7 +9,7 @@
 
 .sl-s-sync-connect__grid {
 	display: grid;
-	grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+	grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
 	gap: 64px;
 	align-items: start;
 }
@@ -31,6 +31,15 @@
 
 .sl-s-sync-connect__copy p {
 	margin: 0;
+}
+
+.sl-s-sync-connect__list {
+	margin: 0;
+	padding-left: 1.15em;
+}
+
+.sl-s-sync-connect__list li + li {
+	margin-top: 6px;
 }
 
 .sl-s-sync-connect__media {
