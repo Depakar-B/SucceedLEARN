@@ -1,6 +1,6 @@
 <?php
 /**
- * S-Signs — Smart Filtering for Faster Awareness Campaigns.
+ * S-Signs — Meet S-Signs / The Visual Reinforcement Layer.
  *
  * @package Akaza_Adventure
  */
@@ -18,32 +18,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<div class="sl-s-signs-filtering__grid">
 
-			<div class="sl-s-signs-filtering__media">
-				<div class="sl-s-signs-filtering__image-placeholder">
-					<span><?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?></span>
-				</div>
-			</div>
-
 			<div class="sl-s-signs-filtering__content">
 
 				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'Faster Campaign Setup', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Meet S-Signs', 'akaza-adventure' ); ?>
 				</span>
 
 				<h2 id="sl-s-signs-filtering-title">
-					<?php esc_html_e( 'Smart Filtering for Faster', 'akaza-adventure' ); ?>
-					<span><?php esc_html_e( 'Awareness Campaigns', 'akaza-adventure' ); ?></span>
+					<?php esc_html_e( 'The Visual Reinforcement Layer of', 'akaza-adventure' ); ?>
+					<span><?php esc_html_e( 'SucceedLEARN SBCS', 'akaza-adventure' ); ?></span>
 				</h2>
 
 				<div class="sl-s-signs-filtering__copy">
 					<p>
-						<?php esc_html_e( 'Finding the right awareness material should be simple.', 'akaza-adventure' ); ?>
-					</p>
-
-					<p>
 						<?php
 						esc_html_e(
-							'S-Signs allows administrators to quickly filter posters by tone of content, type of content, size etc, making it easier to build focused awareness initiatives throughout the year.',
+							'S-Signs brings visual cybersecurity awareness into the everyday employee environment.',
 							'akaza-adventure'
 						);
 						?>
@@ -52,13 +42,46 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<p>
 						<?php
 						esc_html_e(
-							'Whether planning a Cybersecurity Awareness Month campaign, reinforcing phishing awareness after a phishing simulation, or supporting organisation-wide security initiatives, administrators can quickly locate and distribute relevant visual content without spending time searching through extensive libraries.',
+							'Through professionally designed security-awareness posters and digital nudges, organisations can reinforce important security messages between formal training sessions, phishing campaigns, microlearning activities and other awareness interventions.',
+							'akaza-adventure'
+						);
+						?>
+					</p>
+
+					<p>
+						<?php
+						esc_html_e(
+							'Instead of asking employees to repeatedly complete learning, S-Signs provides short visual prompts that keep key cybersecurity concepts present throughout the year.',
+							'akaza-adventure'
+						);
+						?>
+					</p>
+
+					<p>
+						<?php
+						esc_html_e(
+							'Administrators can browse and filter available content, select relevant posters and distribute visual awareness across physical and digital communication channels.',
+							'akaza-adventure'
+						);
+						?>
+					</p>
+
+					<p>
+						<?php
+						esc_html_e(
+							'Short message. Clear behaviour. Continuous awareness.',
 							'akaza-adventure'
 						);
 						?>
 					</p>
 				</div>
 
+			</div>
+
+			<div class="sl-s-signs-filtering__media">
+				<div class="sl-s-signs-filtering__image-placeholder">
+					<span><?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?></span>
+				</div>
 			</div>
 
 		</div>
