@@ -1,6 +1,6 @@
 <?php
 /**
- * S-Play — Why Gamified Learning Matters.
+ * S-Play — Why Gamified Security Awareness Matters.
  *
  * @package Akaza_Adventure
  */
@@ -8,6 +8,15 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+$why_items = array(
+	__( 'Apply previously learned security concepts.', 'akaza-adventure' ),
+	__( 'Practise decision-making in a low-risk environment.', 'akaza-adventure' ),
+	__( 'Receive immediate feedback.', 'akaza-adventure' ),
+	__( 'Revisit important cybersecurity topics.', 'akaza-adventure' ),
+	__( 'Increase participation in awareness initiatives.', 'akaza-adventure' ),
+	__( 'Reinforce knowledge through active learning.', 'akaza-adventure' ),
+);
 ?>
 
 <section
@@ -31,15 +40,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</span>
 
 				<h2 id="sl-s-play-why-title">
-					<?php esc_html_e( 'Why Gamified', 'akaza-adventure' ); ?>
-					<span><?php esc_html_e( 'Learning Matters', 'akaza-adventure' ); ?></span>
+					<?php esc_html_e( 'Why Gamified Security', 'akaza-adventure' ); ?>
+					<span><?php esc_html_e( 'Awareness Matters', 'akaza-adventure' ); ?></span>
 				</h2>
+
+				<h3 class="sl-s-play-why__subtitle">
+					<?php esc_html_e( 'Move Employees From Passive Learning to Active Participation', 'akaza-adventure' ); ?>
+				</h3>
 
 				<div class="sl-s-play-why__copy">
 					<p>
 						<?php
 						esc_html_e(
-							'Creating security awareness is only the beginning; sustaining it is the real challenge. Employees are expected to recognise phishing attempts, protect sensitive information, report suspicious activity, and make secure decisions every day. However, traditional training methods often rely on lengthy modules that can become repetitive and difficult to retain over time.',
+							'Creating security awareness is only the beginning. Employees also need opportunities to apply what they know.',
 							'akaza-adventure'
 						);
 						?>
@@ -48,7 +61,44 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<p>
 						<?php
 						esc_html_e(
-							'Gamified learning addresses this challenge by encouraging active participation instead of passive content consumption. Through interactive activities, employees apply their knowledge, receive immediate feedback, and reinforce secure behaviours in an enjoyable and memorable way. This approach not only improves learner engagement but also strengthens knowledge retention, helping organisations build a workforce that is better prepared to identify and respond to everyday cybersecurity risks.',
+							"They are expected to recognise suspicious communications, protect information, make secure decisions and respond appropriately when something doesn't look right. When awareness relies entirely on passive learning, important concepts can become easier to forget.",
+							'akaza-adventure'
+						);
+						?>
+					</p>
+
+					<p>
+						<?php
+						esc_html_e(
+							'Gamified cybersecurity training introduces a more active learning experience.',
+							'akaza-adventure'
+						);
+						?>
+					</p>
+
+					<p>
+						<?php
+						esc_html_e(
+							'Instead of only reading or watching security content, employees interact with challenges, answer questions, solve problems and make decisions based on cybersecurity scenarios.',
+							'akaza-adventure'
+						);
+						?>
+					</p>
+
+					<p>
+						<?php esc_html_e( 'This creates opportunities to:', 'akaza-adventure' ); ?>
+					</p>
+
+					<ul class="sl-s-play-why__list">
+						<?php foreach ( $why_items as $item ) : ?>
+							<li><?php echo esc_html( $item ); ?></li>
+						<?php endforeach; ?>
+					</ul>
+
+					<p>
+						<?php
+						esc_html_e(
+							"The objective isn't to turn cybersecurity into entertainment. It is to use game-based learning to make security awareness more participative, memorable and practical.",
 							'akaza-adventure'
 						);
 						?>

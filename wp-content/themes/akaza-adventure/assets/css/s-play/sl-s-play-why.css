@@ -19,7 +19,15 @@
 }
 
 .sl-s-play-why__content h2 {
-	margin-bottom: 18px;
+	margin-bottom: 0;
+}
+
+.sl-s-play-why__subtitle {
+	margin: 16px 0 18px;
+	font-size: 1.15rem;
+	font-weight: 600;
+	line-height: 1.4;
+	color: var(--sl-page-text, #16234e);
 }
 
 .sl-s-play-why__copy {
@@ -30,6 +38,15 @@
 
 .sl-s-play-why__copy p {
 	margin: 0;
+}
+
+.sl-s-play-why__list {
+	margin: 0;
+	padding-left: 1.15em;
+}
+
+.sl-s-play-why__list li + li {
+	margin-top: 6px;
 }
 
 .sl-s-play-why__media {
