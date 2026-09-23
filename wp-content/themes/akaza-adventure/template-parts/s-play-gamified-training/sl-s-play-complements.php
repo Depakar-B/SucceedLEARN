@@ -1,6 +1,6 @@
 <?php
 /**
- * S-Play — Learning That Complements Your Security Awareness Programme.
+ * S-Play — Meet S-Play / The Gamified Learning Layer.
  *
  * @package Akaza_Adventure
  */
@@ -21,19 +21,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="sl-s-play-complements__content">
 
 				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'Connected Awareness Ecosystem', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Meet S-Play', 'akaza-adventure' ); ?>
 				</span>
 
 				<h2 id="sl-s-play-complements-title">
-					<?php esc_html_e( 'Learning That Complements Your', 'akaza-adventure' ); ?>
-					<span><?php esc_html_e( 'Security Awareness Programme', 'akaza-adventure' ); ?></span>
+					<?php esc_html_e( 'The Gamified Learning Layer of', 'akaza-adventure' ); ?>
+					<span><?php esc_html_e( 'SucceedLEARN SBCS', 'akaza-adventure' ); ?></span>
 				</h2>
 
 				<div class="sl-s-play-complements__copy">
 					<p>
 						<?php
 						esc_html_e(
-							'Security awareness is most effective when employees have multiple opportunities to learn, apply, and reinforce secure behaviours. While formal awareness training establishes foundational knowledge, gamified learning helps employees revisit important cybersecurity concepts in an engaging format that encourages participation and continuous learning.',
+							'S-Play brings gamification into cybersecurity awareness training, giving organisations another way to reinforce important security concepts throughout the employee learning journey.',
 							'akaza-adventure'
 						);
 						?>
@@ -42,7 +42,34 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<p>
 						<?php
 						esc_html_e(
-							'S-Play complements existing awareness initiatives by providing organisations with an interactive way to reinforce learning, increase employee engagement, and maintain cybersecurity awareness throughout the year. Together with the SucceedLEARN Security Behaviour & Culture Suite, organisations can educate employees, reinforce secure behaviours, assess real-world readiness, and measure programme effectiveness through a connected awareness ecosystem.',
+							'Through interactive security games and challenges, employees can revisit cybersecurity concepts in a format that encourages active participation rather than passive content consumption.',
+							'akaza-adventure'
+						);
+						?>
+					</p>
+
+					<p>
+						<?php
+						esc_html_e(
+							'S-Play can be used alongside foundational security awareness training, phishing simulations, microlearning and other awareness activities to introduce additional engagement and reinforcement throughout the year.',
+							'akaza-adventure'
+						);
+						?>
+					</p>
+
+					<p>
+						<?php
+						esc_html_e(
+							"For administrators, campaigns can be targeted to relevant employee groups, scheduled according to the organisation's awareness calendar and monitored after launch.",
+							'akaza-adventure'
+						);
+						?>
+					</p>
+
+					<p>
+						<?php
+						esc_html_e(
+							'Learn the concept. Play the challenge. Reinforce the behaviour.',
 							'akaza-adventure'
 						);
 						?>

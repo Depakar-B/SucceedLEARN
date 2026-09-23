@@ -13,12 +13,12 @@ $steps = array(
 	array(
 		'number' => '01',
 		'title'  => __( 'Select S-Play', 'akaza-adventure' ),
-		'text'   => __( 'Choose from an expanding library of interactive security awareness games designed to reinforce different cybersecurity concepts. Whether you want to strengthen phishing awareness, improve password security, or reinforce general cyber hygiene, administrators can select the game that best aligns with their learning objectives.', 'akaza-adventure' ),
+		'text'   => __( 'Choose from the available library of interactive security awareness games based on the cybersecurity concepts and behaviours you want to reinforce. Different game formats provide different ways for employees to apply, revisit and test their security knowledge.', 'akaza-adventure' ),
 	),
 	array(
 		'number' => '02',
 		'title'  => __( 'Select Users', 'akaza-adventure' ),
-		'text'   => __( 'Assign games across the entire organisation or target specific departments, locations, teams, or custom employee groups. This flexibility enables organisations to tailor learning experiences based on business functions, user roles, or areas requiring additional awareness.', 'akaza-adventure' ),
+		'text'   => __( 'Deploy campaigns across the organisation or target specific departments, locations or custom user groups. This allows organisations to align gamified learning with different workforce populations and awareness initiatives.', 'akaza-adventure' ),
 	),
 	array(
 		'number' => '03',
@@ -28,7 +28,7 @@ $steps = array(
 	array(
 		'number' => '04',
 		'title'  => __( 'Review & Launch', 'akaza-adventure' ),
-		'text'   => __( 'Before publishing, review the selected game, assigned users, and campaign schedule to ensure everything is configured as intended. Once confirmed, launch the campaign with a single click, allowing employees to participate in engaging security awareness games while administrators monitor campaign progress.', 'akaza-adventure' ),
+		'text'   => __( 'Review the selected game, assigned users and campaign configuration before launch. Once confirmed, launch the campaign and monitor employee participation and campaign progress.', 'akaza-adventure' ),
 	),
 );
 ?>
@@ -42,18 +42,18 @@ $steps = array(
 		<div class="sl-s-play-works__intro">
 
 			<span class="sl-home-sub-heading">
-				<?php esc_html_e( 'Simple Campaign Setup', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'How S-Play Works', 'akaza-adventure' ); ?>
 			</span>
 
 			<h2 id="sl-s-play-works-title">
-				<?php esc_html_e( 'How', 'akaza-adventure' ); ?>
-				<span><?php esc_html_e( 'S-Play Works', 'akaza-adventure' ); ?></span>
+				<?php esc_html_e( 'Launch Gamified Security Awareness', 'akaza-adventure' ); ?>
+				<span><?php esc_html_e( 'in Four Steps', 'akaza-adventure' ); ?></span>
 			</h2>
 
 			<p>
 				<?php
 				esc_html_e(
-					"Launching a gamified security awareness campaign with S-Play is simple, structured, and designed to fit seamlessly into your organisation's awareness programme.",
+					"S-Play makes it straightforward to incorporate cybersecurity games for employees into an organisation's wider security awareness programme.",
 					'akaza-adventure'
 				);
 				?>

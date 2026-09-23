@@ -12,11 +12,19 @@
 }
 
 .sl-s-play-games__intro h2 {
-	margin-bottom: 16px;
+	margin-bottom: 0;
+}
+
+.sl-s-play-games__subtitle {
+	margin: 16px 0 0;
+	font-size: 1.15rem;
+	font-weight: 600;
+	line-height: 1.4;
+	color: var(--sl-page-text, #16234e);
 }
 
 .sl-s-play-games__intro p {
-	margin: 0;
+	margin: 16px 0 0;
 	max-width: 820px;
 }
 
@@ -63,11 +71,26 @@
 }
 
 .sl-s-play-games__card .sl-panel-title {
-	margin: 0 0 12px;
+	margin: 0 0 8px;
+}
+
+.sl-s-play-games__tagline {
+	margin: 0 0 12px !important;
+	font-weight: 600;
+	color: var(--sl-page-primary, #1472ba);
 }
 
 .sl-s-play-games__card p {
-	margin: 0;
+	margin: 0 0 12px;
+}
+
+.sl-s-play-games__card p:last-child {
+	margin-bottom: 0;
+}
+
+.sl-s-play-games__meta {
+	margin-top: 4px !important;
+	font-size: 0.95rem;
 }
 
 @media (max-width: 991px) {
