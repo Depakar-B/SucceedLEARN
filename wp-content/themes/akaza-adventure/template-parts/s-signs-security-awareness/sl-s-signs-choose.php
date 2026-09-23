@@ -11,28 +11,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $reasons = array(
 	array(
-		'title' => __( 'Continuous Awareness Reinforcement', 'akaza-adventure' ),
-		'text'  => __( 'Keep important cybersecurity messages visible throughout the year rather than limiting awareness to formal training sessions.', 'akaza-adventure' ),
+		'title' => __( 'Continuous Visual Reinforcement', 'akaza-adventure' ),
+		'text'  => __( 'Keep important cybersecurity messages visible between formal training and awareness activities.', 'akaza-adventure' ),
 	),
 	array(
-		'title' => __( 'Professionally Designed Visual Content', 'akaza-adventure' ),
-		'text'  => __( 'Access high-quality awareness posters created to communicate security concepts clearly, consistently, and effectively.', 'akaza-adventure' ),
+		'title' => __( 'Multiple Communication Styles', 'akaza-adventure' ),
+		'text'  => __( 'Combine instructional posters with behavioural nudges depending on the awareness objective.', 'akaza-adventure' ),
 	),
 	array(
-		'title' => __( 'Directive & Nudge-Based Communication', 'akaza-adventure' ),
-		'text'  => __( 'Reinforce both organisational security requirements and everyday secure behaviours using a combination of instructional posters and behavioural nudges.', 'akaza-adventure' ),
-	),
-	array(
-		'title' => __( 'Easy Content Discovery', 'akaza-adventure' ),
-		'text'  => __( 'Search and filter poster libraries by awareness topic, making it quick and simple to identify relevant content for specific campaigns.', 'akaza-adventure' ),
+		'title' => __( 'Broad Cybersecurity Coverage', 'akaza-adventure' ),
+		'text'  => __( 'Reinforce awareness across phishing, passwords, remote working, AI security, mobile devices, data protection and other relevant cyber risks.', 'akaza-adventure' ),
 	),
 	array(
 		'title' => __( 'Flexible Distribution', 'akaza-adventure' ),
-		'text'  => __( 'Display posters physically within the workplace or distribute them digitally through email, collaboration tools, and internal communication channels.', 'akaza-adventure' ),
+		'text'  => __( 'Use visual content across office environments, digital signage, employee communications and collaboration platforms.', 'akaza-adventure' ),
 	),
 	array(
-		'title' => __( 'Supports Security Culture', 'akaza-adventure' ),
-		'text'  => __( 'Help create an environment where cybersecurity remains visible, relevant, and part of employees\' everyday decision-making.', 'akaza-adventure' ),
+		'title' => __( 'Part of a Wider Awareness Programme', 'akaza-adventure' ),
+		'text'  => __( 'Connect visual reinforcement with S-Aware, S-Bytes, S-Phish, S-Play and S-Metrics as part of the wider SBCS ecosystem.', 'akaza-adventure' ),
 	),
 );
 ?>

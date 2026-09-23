@@ -31,8 +31,11 @@ function akaza_enqueue_s_signs_assets() {
 		'sl-s-signs-filtering',
 		'sl-s-signs-nudges',
 		'sl-s-signs-distribution',
+		'sl-s-signs-employees',
+		'sl-s-signs-teams',
 		'sl-s-signs-choose',
 		'sl-s-signs-suite',
+		'sl-s-signs-comparison',
 		'sl-s-signs-reinforce',
 		'sl-s-signs-contact',
 	);
@@ -44,4 +47,7 @@ function akaza_enqueue_s_signs_assets() {
 			$deps
 		);
 	}
+
+	wp_enqueue_style( 'akaza-global-faq' );
+	wp_enqueue_script( 'akaza-global-faq' );
 }

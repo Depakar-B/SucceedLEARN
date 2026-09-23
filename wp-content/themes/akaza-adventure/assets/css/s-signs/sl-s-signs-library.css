@@ -19,7 +19,15 @@
 }
 
 .sl-s-signs-library__content h2 {
-	margin-bottom: 18px;
+	margin-bottom: 0;
+}
+
+.sl-s-signs-library__subtitle {
+	margin: 16px 0 18px;
+	font-size: 1.15rem;
+	font-weight: 600;
+	line-height: 1.4;
+	color: var(--sl-page-text, #16234e);
 }
 
 .sl-s-signs-library__copy {
