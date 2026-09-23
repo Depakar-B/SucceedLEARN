@@ -32,11 +32,9 @@ defined( 'ABSPATH' ) || exit;
 
 				<h2 id="sl-gifts-entertainment-cta-title">
 					<?php
-					echo wp_kses_post(
-						__(
-							'Gifts and Entertainment Training for Your <span>PE/VC Compliance Programme</span>',
-							'akaza-adventure'
-						)
+					esc_html_e(
+						'Gifts and Entertainment Training for Your PE/VC Compliance Programme',
+						'akaza-adventure'
 					);
 					?>
 				</h2>
@@ -50,51 +48,24 @@ defined( 'ABSPATH' ) || exit;
 					?>
 				</p>
 
-				<div class="sl-content-actions">
-
-					<a
-						class="sl-content-btn sl-content-btn-primary"
-						href="#contact"
-					>
-						<?php
-						esc_html_e(
-							'Request a Demo',
-							'akaza-adventure'
-						);
-						?>
-						<span aria-hidden="true">→</span>
-					</a>
-
-					<a
-						class="sl-content-btn sl-content-btn-secondary"
-						href="#"
-					>
-						<?php
-						esc_html_e(
-							'Buy the Course',
-							'akaza-adventure'
-						);
-						?>
-					</a>
-
-				</div>
-
 			</div>
 
-			<div
-				class="sl-gifts-entertainment-cta__visual"
-				aria-hidden="true"
-			>
-				<div class="sl-gifts-entertainment-cta__visual-ring"></div>
+			<div class="sl-gifts-entertainment-cta__actions">
 
-				<div class="sl-gifts-entertainment-cta__visual-core">
-					<span>PE/VC</span>
-					<small>Compliance</small>
-				</div>
+				<a
+					class="sl-content-btn sl-content-btn-primary"
+					href="#contact"
+				>
+					<?php esc_html_e( 'Request a Demo', 'akaza-adventure' ); ?>
+				</a>
 
-				<div class="sl-gifts-entertainment-cta__visual-line sl-gifts-entertainment-cta__visual-line--one"></div>
-				<div class="sl-gifts-entertainment-cta__visual-line sl-gifts-entertainment-cta__visual-line--two"></div>
-				<div class="sl-gifts-entertainment-cta__visual-line sl-gifts-entertainment-cta__visual-line--three"></div>
+				<a
+					class="sl-content-btn sl-content-btn-secondary"
+					href="#"
+				>
+					<?php esc_html_e( 'Buy the Course', 'akaza-adventure' ); ?>
+				</a>
+
 			</div>
 
 		</div>

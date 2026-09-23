@@ -3,70 +3,70 @@
    Gifts & Entertainment Training for PE/VC Professionals
    UK and US Legal Context
 
+   Matches preview .law-grid / .law-card / .legal-note UI.
    Container and section spacing come from course-global.css.
    ========================================================= */
 
-   .sl-course-page .sl-gifts-entertainment-legal-context {
+.sl-course-page .sl-gifts-entertainment-legal-context {
 	background: var(--course-light-bg, #f5f5f5);
 }
 
 
 /* =========================================================
-   Full Width Introduction
+   Introduction
    ========================================================= */
 
 .sl-gifts-entertainment-legal-context__intro {
-	width: 100%;
-	margin-bottom: 40px;
+	max-width: 800px;
+	margin-bottom: 31px;
 }
 
 .sl-gifts-entertainment-legal-context__intro h2 {
-	margin-bottom: 18px;
+	margin-bottom: 22px;
+}
+
+.sl-gifts-entertainment-legal-context__intro h2 > span {
+	color: var(--course-primary, #135db7);
 }
 
 .sl-gifts-entertainment-legal-context__intro p {
-	max-width: 900px;
 	margin: 0;
+	font-size: 1.17rem;
+	line-height: 1.65;
 }
 
 
 /* =========================================================
-   Legal Context Cards
+   Law cards — preview .law-grid / .law-card
    ========================================================= */
 
 .sl-gifts-entertainment-legal-context__grid {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: 20px;
+	gap: 24px;
 }
 
-
-/* =========================================================
-   Card
-   ========================================================= */
-
 .sl-gifts-entertainment-legal-context__card {
-	padding: 28px 30px;
-
-	background: var(--course-light-bg, #f5f5f5);
-	border: 1px solid rgba(20, 114, 186, 0.14);
-	border-radius: 14px;
+	padding: 28px;
+	border: 1px solid var(--course-border, #dce3ed);
+	border-radius: 16px;
+	background: var(--course-white, #ffffff);
 	box-sizing: border-box;
 }
 
 .sl-gifts-entertainment-legal-context__card-label {
-	display: block;
-	margin-bottom: 10px;
-
-	color: var(--course-primary, #1472ba);
-	font-size: 14px;
+	display: inline-block;
+	margin-bottom: 9px;
+	color: var(--course-primary, #135db7);
+	font-size: 0.77rem;
 	font-weight: 700;
+	text-transform: uppercase;
 	line-height: 1.4;
 }
 
 .sl-gifts-entertainment-legal-context__card h3 {
-	margin: 0 0 10px;
-	color: var(--course-navy, #16234e);
+	margin: 0 0 9px;
+	color: var(--course-navy, #16234d);
 }
 
 .sl-gifts-entertainment-legal-context__card p {
@@ -75,17 +75,21 @@
 
 
 /* =========================================================
-   Highlighted Statement
+   Highlight — preview .legal-note
    ========================================================= */
 
 .sl-gifts-entertainment-legal-context__highlight {
 	margin-top: 28px;
-	padding: 24px 28px;
-
-	background: rgba(14, 159, 74, 0.06);
-	border-left: 4px solid var(--course-accent, #0e9f4a);
-	border-radius: 0 12px 12px 0;
+	padding: 22px 24px;
+	border-left: 4px solid var(--course-primary, #135db7);
+	border-radius: 0 11px 11px 0;
+	background: #eef5fc;
 	box-sizing: border-box;
+}
+
+.sl-gifts-entertainment-legal-context__highlight strong {
+	display: block;
+	color: var(--course-navy, #16234d);
 }
 
 .sl-gifts-entertainment-legal-context__highlight p {
@@ -93,46 +97,31 @@
 }
 
 .sl-gifts-entertainment-legal-context__highlight p + p {
-	margin-top: 6px;
-}
-
-.sl-gifts-entertainment-legal-context__highlight strong {
-	color: var(--course-navy, #16234e);
+	margin-top: 8px;
 }
 
 
 /* =========================================================
-   Tablet
+   Responsive
    ========================================================= */
 
-@media (max-width: 800px) {
-
-	.sl-gifts-entertainment-legal-context__intro {
-		margin-bottom: 32px;
-	}
-
-	.sl-gifts-entertainment-legal-context__grid {
-		gap: 16px;
-	}
-
-	.sl-gifts-entertainment-legal-context__card {
-		padding: 24px;
-	}
-}
-
-
-/* =========================================================
-   Mobile
-   ========================================================= */
-
-@media (max-width: 767px) {
-
+@media (max-width: 980px) {
 	.sl-gifts-entertainment-legal-context__grid {
 		grid-template-columns: 1fr;
 	}
+}
+
+@media (max-width: 767px) {
+	.sl-gifts-entertainment-legal-context__intro {
+		margin-bottom: 24px;
+	}
+
+	.sl-gifts-entertainment-legal-context__intro p {
+		font-size: 1rem;
+	}
 
 	.sl-gifts-entertainment-legal-context__intro h2 {
-		margin-bottom: 16px;
+		margin-bottom: 18px;
 	}
 
 	.sl-gifts-entertainment-legal-context__card {
@@ -142,6 +131,6 @@
 
 	.sl-gifts-entertainment-legal-context__highlight {
 		margin-top: 20px;
-		padding: 20px;
+		padding: 18px 20px;
 	}
 }

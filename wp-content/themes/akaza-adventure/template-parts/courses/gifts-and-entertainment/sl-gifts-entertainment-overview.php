@@ -8,6 +8,8 @@
  */
 
 defined( 'ABSPATH' ) || exit;
+
+$overview_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/Image-2_gifts.webp';
 ?>
 
 <section
@@ -18,35 +20,6 @@ defined( 'ABSPATH' ) || exit;
 	<div class="container">
 
 		<div class="sl-gifts-entertainment-overview__grid">
-
-			<!-- Image -->
-			<div class="sl-gifts-entertainment-overview__media">
-
-				<div
-					class="sl-gifts-entertainment-overview__image-placeholder"
-					role="img"
-					aria-label="<?php esc_attr_e( 'Gifts and entertainment compliance training visual', 'akaza-adventure' ); ?>"
-				>
-					<span>
-						<?php
-						esc_html_e(
-							'IMAGE PLACEHOLDER',
-							'akaza-adventure'
-						);
-						?>
-					</span>
-
-					<small>
-						<?php
-						esc_html_e(
-							'Recommended: 600 × 600 px',
-							'akaza-adventure'
-						);
-						?>
-					</small>
-				</div>
-
-			</div>
 
 			<!-- Content -->
 			<div class="sl-gifts-entertainment-overview__content">
@@ -102,6 +75,18 @@ defined( 'ABSPATH' ) || exit;
 
 				</div>
 
+			</div>
+
+			<!-- Image -->
+			<div class="sl-gifts-entertainment-overview__media">
+				<figure class="sl-gifts-entertainment-overview__image">
+					<img
+						src="<?php echo esc_url( $overview_image ); ?>"
+						alt="<?php esc_attr_e( 'What counts as a gift or entertainment', 'akaza-adventure' ); ?>"
+						loading="lazy"
+						decoding="async"
+					>
+				</figure>
 			</div>
 
 		</div>
