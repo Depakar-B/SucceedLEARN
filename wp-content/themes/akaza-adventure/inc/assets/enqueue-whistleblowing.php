@@ -27,6 +27,9 @@ function akaza_enqueue_whistleblowing_assets() {
 
 	$sections = array(
 		'sl-whistleblowing-hero',
+		'sl-whistleblowing-individuals',
+		'sl-whistleblowing-organisations',
+		'sl-whistleblowing-pevc-suite',
 		'sl-whistleblowing-outcomes',
 		'sl-whistleblowing-overview',
 		'sl-whistleblowing-designed',
