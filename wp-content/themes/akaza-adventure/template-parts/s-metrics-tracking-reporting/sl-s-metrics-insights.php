@@ -1,6 +1,6 @@
 <?php
 /**
- * S-Metrics — Turn Data into Actionable Insights.
+ * S-Metrics — Turn Security Awareness Data Into Actionable Insight.
  *
  * @package Akaza_Adventure
  */
@@ -31,15 +31,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</span>
 
 				<h2 id="sl-s-metrics-insights-title">
-					<?php esc_html_e( 'Turn Data into', 'akaza-adventure' ); ?>
-					<span><?php esc_html_e( 'Actionable Insights', 'akaza-adventure' ); ?></span>
+					<?php esc_html_e( 'Turn Security Awareness Data', 'akaza-adventure' ); ?>
+					<span><?php esc_html_e( 'Into Actionable Insight.', 'akaza-adventure' ); ?></span>
 				</h2>
 
 				<div class="sl-s-metrics-insights__copy">
 					<p>
 						<?php
 						esc_html_e(
-							'Security awareness reporting should do more than present numbers.',
+							'Security awareness reporting and analytics should do more than present numbers.',
 							'akaza-adventure'
 						);
 						?>

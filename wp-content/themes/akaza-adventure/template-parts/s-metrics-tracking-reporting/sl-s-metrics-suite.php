@@ -1,6 +1,6 @@
 <?php
 /**
- * S-Metrics — From Learning to Measurable Behaviour Change.
+ * S-Metrics — From Awareness to Measurable Behaviour Change.
  *
  * @package Akaza_Adventure
  */
@@ -13,32 +13,37 @@ $suite_products = array(
 	array(
 		'name' => __( 'S-Aware', 'akaza-adventure' ),
 		'role' => __( 'Learn', 'akaza-adventure' ),
-		'text' => __( 'Delivers foundational cybersecurity knowledge.', 'akaza-adventure' ),
+		'text' => __( 'Build foundational cybersecurity and privacy knowledge.', 'akaza-adventure' ),
 	),
 	array(
 		'name' => __( 'S-Bytes', 'akaza-adventure' ),
 		'role' => __( 'Reinforce', 'akaza-adventure' ),
-		'text' => __( 'Reinforces learning through continuous microlearning.', 'akaza-adventure' ),
-	),
-	array(
-		'name' => __( 'S-Play', 'akaza-adventure' ),
-		'role' => __( 'Engage', 'akaza-adventure' ),
-		'text' => __( 'Increases engagement through gamified learning.', 'akaza-adventure' ),
+		'text' => __( 'Keep important security concepts fresh through short, continuous microlearning.', 'akaza-adventure' ),
 	),
 	array(
 		'name' => __( 'S-Phish', 'akaza-adventure' ),
 		'role' => __( 'Test', 'akaza-adventure' ),
-		'text' => __( 'Tests employees against realistic phishing attacks.', 'akaza-adventure' ),
+		'text' => __( 'Give employees practical experience recognising realistic phishing threats.', 'akaza-adventure' ),
+	),
+	array(
+		'name' => __( 'S-Play', 'akaza-adventure' ),
+		'role' => __( 'Engage', 'akaza-adventure' ),
+		'text' => __( 'Reinforce security concepts through interactive and gamified learning.', 'akaza-adventure' ),
 	),
 	array(
 		'name' => __( 'S-Signs', 'akaza-adventure' ),
 		'role' => __( 'Remind', 'akaza-adventure' ),
-		'text' => __( 'Reinforces awareness through visual reminders.', 'akaza-adventure' ),
+		'text' => __( 'Keep security visible through ongoing awareness campaigns and visual nudges.', 'akaza-adventure' ),
 	),
 	array(
 		'name' => __( 'S-Metrics', 'akaza-adventure' ),
 		'role' => __( 'Measure', 'akaza-adventure' ),
-		'text' => __( 'Measures the effectiveness of every awareness initiative through powerful analytics and reporting.', 'akaza-adventure' ),
+		'text' => __( 'Bring awareness and behavioural data together to understand programme performance.', 'akaza-adventure' ),
+	),
+	array(
+		'name' => __( 'S-Sync', 'akaza-adventure' ),
+		'role' => __( 'Connect', 'akaza-adventure' ),
+		'text' => __( 'Integrate security awareness with the organisation\'s wider learning and technology ecosystem.', 'akaza-adventure' ),
 	),
 );
 ?>
@@ -52,18 +57,18 @@ $suite_products = array(
 		<div class="sl-s-metrics-suite__intro">
 
 			<span class="sl-home-sub-heading">
-				<?php esc_html_e( 'Security Behaviour & Culture Suite', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'S-Metrics Measures What the SBCS Ecosystem Delivers', 'akaza-adventure' ); ?>
 			</span>
 
 			<h2 id="sl-s-metrics-suite-title">
-				<?php esc_html_e( 'From Learning to', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'From Awareness to', 'akaza-adventure' ); ?>
 				<span><?php esc_html_e( 'Measurable Behaviour Change', 'akaza-adventure' ); ?></span>
 			</h2>
 
 			<p>
 				<?php
 				esc_html_e(
-					'S-Metrics brings together every component of the SucceedLEARN Security Behaviour & Culture Suite into one comprehensive reporting platform.',
+					'S-Metrics forms the Measure layer of the SucceedLEARN Security Behaviour & Culture Suite.',
 					'akaza-adventure'
 				);
 				?>
@@ -94,17 +99,6 @@ $suite_products = array(
 
 			<?php endforeach; ?>
 
-		</div>
-
-		<div class="sl-s-metrics-suite__closing">
-			<p>
-				<?php
-				esc_html_e(
-					'Together, it enables organisations to move beyond training completion and towards measurable improvements in security behaviour and organisational resilience.',
-					'akaza-adventure'
-				);
-				?>
-			</p>
 		</div>
 
 	</div>
