@@ -16,6 +16,8 @@ $concepts = array(
 		'text'        => __( 'KYC is the process of understanding who the customer or investor is and verifying relevant identity information. In a PE/VC environment, this can include investors, co-investors, intermediaries, portfolio companies and Ultimate Beneficial Owners.', 'akaza-adventure' ),
 		'image_label' => __( 'Image Space — KYC', 'akaza-adventure' ),
 		'image_hint'  => __( 'Suggested visual: investor or customer identity verification, onboarding or beneficial ownership checks.', 'akaza-adventure' ),
+		'image_url'   => 'https://succeedlearn.com/wp-content/uploads/2026/09/KYC_image.webp',
+		'image_alt'   => __( 'Know Your Customer identity verification', 'akaza-adventure' ),
 		'accent'      => 'blue',
 	),
 	array(
@@ -25,6 +27,8 @@ $concepts = array(
 		'text'        => __( 'CDD goes beyond identity checks to understand ownership, business purpose, source of funds and the nature of the relationship. It helps determine whether the customer or investment presents standard or higher financial crime risk.', 'akaza-adventure' ),
 		'image_label' => __( 'Image Space — CDD', 'akaza-adventure' ),
 		'image_hint'  => __( 'Suggested visual: due diligence checklist, investor profile or ownership and source-of-funds review.', 'akaza-adventure' ),
+		'image_url'   => 'https://succeedlearn.com/wp-content/uploads/2026/09/CDD_image.webp',
+		'image_alt'   => __( 'Customer Due Diligence checklist and investor review', 'akaza-adventure' ),
 		'accent'      => 'blue',
 	),
 	array(
@@ -34,6 +38,8 @@ $concepts = array(
 		'text'        => __( 'EDD applies deeper scrutiny where higher risks are identified, such as PEP exposure, opaque ownership structures or connections to high-risk jurisdictions. Reviews can include source of wealth, source of funds, UBO transparency and additional supporting evidence.', 'akaza-adventure' ),
 		'image_label' => __( 'Image Space — EDD', 'akaza-adventure' ),
 		'image_hint'  => __( 'Suggested visual: enhanced verification, complex ownership structure or high-risk investor review.', 'akaza-adventure' ),
+		'image_url'   => 'https://succeedlearn.com/wp-content/uploads/2026/09/EDD_image.webp',
+		'image_alt'   => __( 'Enhanced Due Diligence high-risk investor review', 'akaza-adventure' ),
 		'accent'      => 'blue',
 	),
 	array(
@@ -43,6 +49,8 @@ $concepts = array(
 		'text'        => __( 'CFT focuses on identifying and preventing funds or financial services from being used to support terrorist activity. Learners consider why unusual transactions, counterparties and fund flows may require further scrutiny and escalation.', 'akaza-adventure' ),
 		'image_label' => __( 'Image Space — CFT', 'akaza-adventure' ),
 		'image_hint'  => __( 'Suggested visual: suspicious fund flows, transaction monitoring or terrorist-financing prevention.', 'akaza-adventure' ),
+		'image_url'   => 'https://succeedlearn.com/wp-content/uploads/2026/09/CFT_image.webp',
+		'image_alt'   => __( 'Combating the Financing of Terrorism monitoring and prevention', 'akaza-adventure' ),
 		'accent'      => 'blue',
 	),
 	array(
@@ -52,6 +60,8 @@ $concepts = array(
 		'text'        => __( 'CPF focuses on preventing financing connected to the proliferation of weapons of mass destruction. In investment contexts, relevant risks can involve sanctioned parties, high-risk jurisdictions or businesses connected to dual-use technologies.', 'akaza-adventure' ),
 		'image_label' => __( 'Image Space — CPF', 'akaza-adventure' ),
 		'image_hint'  => __( 'Suggested visual: global sanctions, dual-use technology or proliferation-financing risk.', 'akaza-adventure' ),
+		'image_url'   => 'https://succeedlearn.com/wp-content/uploads/2026/09/CPF_image.webp',
+		'image_alt'   => __( 'Counter Proliferation Financing risk awareness', 'akaza-adventure' ),
 		'accent'      => 'blue',
 	),
 );
@@ -98,13 +108,24 @@ $concepts = array(
 				?>
 				<article class="sl-aml-pe-vc-due-diligence__card<?php echo esc_attr( $card_mod ); ?>">
 
-					<div class="sl-aml-pe-vc-due-diligence__media<?php echo esc_attr( $media_mod ); ?>">
-						<span class="sl-aml-pe-vc-due-diligence__icon" aria-hidden="true">
-							<?php echo esc_html( $concept['code'] ); ?>
-						</span>
-						<strong><?php echo esc_html( $concept['image_label'] ); ?></strong>
-						<span><?php echo esc_html( $concept['image_hint'] ); ?></span>
-					</div>
+					<?php if ( ! empty( $concept['image_url'] ) ) : ?>
+						<div class="sl-aml-pe-vc-due-diligence__media sl-aml-pe-vc-due-diligence__media--photo<?php echo esc_attr( $media_mod ); ?>">
+							<img
+								src="<?php echo esc_url( $concept['image_url'] ); ?>"
+								alt="<?php echo esc_attr( $concept['image_alt'] ? $concept['image_alt'] : $concept['title'] ); ?>"
+								loading="lazy"
+								decoding="async"
+							>
+						</div>
+					<?php else : ?>
+						<div class="sl-aml-pe-vc-due-diligence__media<?php echo esc_attr( $media_mod ); ?>">
+							<span class="sl-aml-pe-vc-due-diligence__icon" aria-hidden="true">
+								<?php echo esc_html( $concept['code'] ); ?>
+							</span>
+							<strong><?php echo esc_html( $concept['image_label'] ); ?></strong>
+							<span><?php echo esc_html( $concept['image_hint'] ); ?></span>
+						</div>
+					<?php endif; ?>
 
 					<div class="sl-aml-pe-vc-due-diligence__content">
 						<span class="sl-aml-pe-vc-due-diligence__code<?php echo esc_attr( $code_mod ); ?>">
@@ -112,7 +133,8 @@ $concepts = array(
 						</span>
 						<h3><?php echo esc_html( $concept['title'] ); ?></h3>
 						<span class="sl-aml-pe-vc-due-diligence__fullname<?php echo esc_attr( $name_mod ); ?>">
-							<?php echo esc_html( $concept['subtitle'] ); ?></span>
+							<?php echo esc_html( $concept['subtitle'] ); ?>
+						</span>
 						<p><?php echo esc_html( $concept['text'] ); ?></p>
 					</div>
 

@@ -46,21 +46,14 @@ defined( 'ABSPATH' ) || exit;
 
 			</div>
 
-			<div
-				class="sl-aml-pe-vc-cta__image-placeholder"
-				role="img"
-				aria-label="<?php esc_attr_e( 'SucceedLEARN AML Course Preview placeholder', 'akaza-adventure' ); ?>"
-			>
-				<span><?php esc_html_e( 'SucceedLEARN AML Course Preview', 'akaza-adventure' ); ?></span>
-				<small>
-					<?php
-					esc_html_e(
-						'Replace with an approved screenshot showing the AML learner experience.',
-						'akaza-adventure'
-					);
-					?>
-				</small>
-			</div>
+			<figure class="sl-aml-pe-vc-cta__image">
+				<img
+					src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/last-image_AML.webp' ); ?>"
+					alt="<?php esc_attr_e( 'SucceedLEARN AML Course Preview', 'akaza-adventure' ); ?>"
+					loading="lazy"
+					decoding="async"
+				>
+			</figure>
 
 		</div>
 

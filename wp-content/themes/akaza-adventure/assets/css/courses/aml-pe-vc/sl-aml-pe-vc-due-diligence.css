@@ -54,6 +54,20 @@
 	background: linear-gradient(135deg, #eaf3fd 0%, #f7fafe 100%);
 }
 
+.sl-aml-pe-vc-due-diligence__media--photo {
+	padding: 0;
+	overflow: hidden;
+	background: #edf5fd;
+}
+
+.sl-aml-pe-vc-due-diligence__media--photo img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	min-height: 315px;
+	object-fit: cover;
+}
+
 .sl-aml-pe-vc-due-diligence__media--orange {
 	background: linear-gradient(135deg, #fff0eb 0%, #fff9f7 100%);
 }
