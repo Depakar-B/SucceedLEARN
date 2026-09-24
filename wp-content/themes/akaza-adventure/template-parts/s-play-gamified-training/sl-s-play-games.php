@@ -77,12 +77,9 @@ $games = array(
 
 		<div class="sl-s-play-games__grid">
 
-			<?php foreach ( $games as $index => $game ) : ?>
+			<?php foreach ( $games as $game ) : ?>
 
 				<article class="sl-s-play-games__card">
-					<span class="sl-s-play-games__number" aria-hidden="true">
-						<?php echo esc_html( str_pad( (string) ( $index + 1 ), 2, '0', STR_PAD_LEFT ) ); ?>
-					</span>
 					<h3 class="sl-panel-title">
 						<?php echo esc_html( $game['title'] ); ?>
 					</h3>
