@@ -35,7 +35,12 @@
 
 .sl-s-metrics-measure__list {
 	margin: 0;
-	padding-left: 1.15em;
+	padding-left: 1.35em;
+	list-style: disc;
+}
+
+.sl-s-metrics-measure__list li {
+	list-style: disc;
 }
 
 .sl-s-metrics-measure__list li + li {

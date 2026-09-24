@@ -68,14 +68,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 					</p>
 
 					<p>
-						<?php
-						esc_html_e(
-							'One platform. Multiple awareness signals. One clearer view of human cyber risk.',
-							'akaza-adventure'
-						);
-						?>
+						<strong>
+							<?php
+							esc_html_e(
+								'One platform. Multiple awareness signals. One clearer view of human cyber risk.',
+								'akaza-adventure'
+							);
+							?>
+						</strong>
 					</p>
 				</div>
+
+				<a
+					class="sl-content-btn sl-content-btn-primary"
+					href="#request-demo"
+				>
+					<?php esc_html_e( 'Book A Platform Walkthrough', 'akaza-adventure' ); ?>
+				</a>
 
 			</div>
 

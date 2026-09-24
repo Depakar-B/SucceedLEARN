@@ -78,12 +78,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</p>
 
 				<p>
-					<?php
-					esc_html_e(
-						'Measure. Analyse. Improve.',
-						'akaza-adventure'
-					);
-					?>
+					<strong>
+						<?php
+						esc_html_e(
+							'Measure. Analyse. Improve.',
+							'akaza-adventure'
+						);
+						?>
+					</strong>
 				</p>
 
 				<div class="sl-hero-actions sl-s-metrics-hero__actions">

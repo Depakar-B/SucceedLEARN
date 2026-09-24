@@ -15,12 +15,16 @@
 	margin-bottom: 0;
 }
 
-.sl-s-metrics-suite-reporting__subtitle {
+/* Section subtitle under h2 — same scale as SAP annual-training / why. */
+body.slf-body main.sl-s-metrics-page .sl-s-metrics-suite-reporting__subtitle,
+body.slf-body #main-content.sl-s-metrics-page .sl-s-metrics-suite-reporting__subtitle,
+.sl-s-metrics-page .sl-s-metrics-suite-reporting__subtitle {
 	margin: 16px 0 0;
-	font-size: 1.15rem;
+	font-family: var(--slf-font-display, "Space Grotesk", system-ui, sans-serif);
+	font-size: 22px;
 	font-weight: 600;
 	line-height: 1.4;
-	color: var(--sl-page-text, #16234e);
+	color: var(--sl-page-primary, #1472ba);
 }
 
 .sl-s-metrics-suite-reporting__grid {
@@ -51,21 +55,6 @@
 	box-shadow: 0 14px 32px rgba(22, 35, 78, 0.1);
 }
 
-.sl-s-metrics-suite-reporting__number {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: 36px;
-	height: 36px;
-	margin-bottom: 18px;
-	border: 1px solid rgba(20, 114, 186, 0.18);
-	border-radius: 8px;
-	background: rgba(20, 114, 186, 0.08);
-	color: var(--sl-page-primary, #1472ba);
-	font-weight: 700;
-	line-height: 1;
-}
-
 .sl-s-metrics-suite-reporting__card .sl-panel-title {
 	margin: 0 0 12px;
 }
@@ -82,7 +71,12 @@
 
 .sl-s-metrics-suite-reporting__list {
 	margin: 0;
-	padding-left: 1.15em;
+	padding-left: 1.35em;
+	list-style: disc;
+}
+
+.sl-s-metrics-suite-reporting__list li {
+	list-style: disc;
 }
 
 .sl-s-metrics-suite-reporting__list li + li {
