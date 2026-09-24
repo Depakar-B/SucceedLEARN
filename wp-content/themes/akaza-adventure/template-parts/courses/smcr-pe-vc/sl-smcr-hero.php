@@ -28,7 +28,7 @@ $hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/SMCR_Hero-sec
 		<div class="sl-smcr-hero__content">
 
 			<span class="sl-home-sub-heading">
-				<?php esc_html_e( 'UK PE & VC Compliance Training', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'SMCR Compliance Training', 'akaza-adventure' ); ?>
 			</span>
 
 			<h1 id="sl-smcr-hero-title">

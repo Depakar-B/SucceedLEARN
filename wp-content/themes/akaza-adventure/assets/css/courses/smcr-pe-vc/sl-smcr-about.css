@@ -2,40 +2,14 @@
    SMCR Training for PE & VC Firms — About Training
    ========================================================= */
 
-   .sl-smcr-about {
+.sl-smcr-about {
 	padding: 88px 0;
 	background: #f5f5f5;
 }
 
-.sl-smcr-about__grid {
-	display: grid;
-	grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-	gap: 72px;
-	align-items: start;
-}
-
-.sl-smcr-about__media {
-	align-self: center;
-}
-
-.sl-smcr-about__image {
-	width: 100%;
-	overflow: hidden;
-	border: 1px solid rgba(22, 35, 78, 0.10);
-	border-radius: 16px;
-	background: #ffffff;
-}
-
-.sl-smcr-about__image img {
-	display: block;
-	width: 100%;
-	height: auto;
-	object-fit: cover;
-}
-
 .sl-smcr-about__content {
 	min-width: 0;
-	padding-top: 8px;
+	max-width: 1100px;
 }
 
 .sl-smcr-about__content h2 {
@@ -43,8 +17,14 @@
 	margin-bottom: 24px;
 }
 
-.sl-smcr-about__content h2 span {
-	color: var(--sl-heading-accent, #1472ba);
+@media (min-width: 1200px) {
+	.sl-smcr-about__content {
+		max-width: none;
+	}
+
+	.sl-smcr-about__content h2 {
+		white-space: nowrap;
+	}
 }
 
 .sl-smcr-about__content p {
@@ -61,37 +41,15 @@
 	border-left: 3px solid #1472ba;
 }
 
-/* ---------------------------------------------------------
-   Tablet
-   --------------------------------------------------------- */
-
 @media (max-width: 991px) {
 	.sl-smcr-about {
 		padding: 72px 0;
 	}
-
-	.sl-smcr-about__grid {
-		grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-		gap: 44px;
-	}
 }
-
-/* ---------------------------------------------------------
-   Mobile
-   --------------------------------------------------------- */
 
 @media (max-width: 767px) {
 	.sl-smcr-about {
 		padding: 56px 0;
-	}
-
-	.sl-smcr-about__grid {
-		grid-template-columns: 1fr;
-		gap: 32px;
-	}
-
-	.sl-smcr-about__content {
-		padding-top: 0;
 	}
 
 	.sl-smcr-about__content h2 {

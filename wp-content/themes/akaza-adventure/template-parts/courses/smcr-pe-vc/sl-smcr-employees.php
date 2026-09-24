@@ -78,8 +78,8 @@ $learning_areas = array(
 			<div class="sl-smcr-employees__media">
 				<div class="sl-smcr-employees__image">
 					<img
-						src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/SMCR_Employees.webp' ); ?>"
-						alt="<?php esc_attr_e( 'SMCR training for employees', 'akaza-adventure' ); ?>"
+						src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/Common-page_SMCR.webp' ); ?>"
+						alt="<?php esc_attr_e( 'SMCR training for UK private equity and venture capital firms', 'akaza-adventure' ); ?>"
 						loading="lazy"
 						decoding="async"
 					>

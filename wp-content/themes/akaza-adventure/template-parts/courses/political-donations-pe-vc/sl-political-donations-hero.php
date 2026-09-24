@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="sl-political-donations-hero__content">
 
 				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'PE/VC Compliance Learning', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Political Donations Compliance Learning', 'akaza-adventure' ); ?>
 				</span>
 
 				<h1 id="sl-political-donations-hero-title">
