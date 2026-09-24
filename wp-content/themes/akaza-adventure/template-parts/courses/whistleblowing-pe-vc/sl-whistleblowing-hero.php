@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="sl-whistleblowing-hero__content">
 
 				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'Private Equity & Venture Capital Training', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Whistleblowing compliance', 'akaza-adventure' ); ?>
 				</span>
 
 				<h1 id="sl-whistleblowing-hero-title">
