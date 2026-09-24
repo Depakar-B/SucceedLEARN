@@ -69,12 +69,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</p>
 
 				<p>
-					<?php
-					esc_html_e(
-						'Connect your systems. Automate administration. Scale security awareness.',
-						'akaza-adventure'
-					);
-					?>
+					<strong>
+						<?php
+						esc_html_e(
+							'Connect your systems. Automate administration. Scale security awareness.',
+							'akaza-adventure'
+						);
+						?>
+					</strong>
 				</p>
 
 				<div class="sl-hero-actions sl-s-sync-hero__actions">

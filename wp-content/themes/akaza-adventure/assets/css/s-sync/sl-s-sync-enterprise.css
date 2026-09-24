@@ -15,12 +15,16 @@
 	margin-bottom: 0;
 }
 
-.sl-s-sync-enterprise__subtitle {
+/* Section subtitle under h2 — same scale as SAP / S-Metrics. */
+body.slf-body main.sl-s-sync-page .sl-s-sync-enterprise__subtitle,
+body.slf-body #main-content.sl-s-sync-page .sl-s-sync-enterprise__subtitle,
+.sl-s-sync-page .sl-s-sync-enterprise__subtitle {
 	margin: 16px 0 0;
-	font-size: 1.15rem;
+	font-family: var(--slf-font-display, "Space Grotesk", system-ui, sans-serif);
+	font-size: 22px;
 	font-weight: 600;
 	line-height: 1.4;
-	color: var(--sl-page-text, #16234e);
+	color: var(--sl-page-primary, #1472ba);
 }
 
 .sl-s-sync-enterprise__cards {
