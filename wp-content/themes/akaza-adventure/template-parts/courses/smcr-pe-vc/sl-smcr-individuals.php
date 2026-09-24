@@ -21,11 +21,6 @@ $features = array(
 	),
 	array(
 		'num'   => '03',
-		'title' => __( 'CPD Certificate on Completion', 'akaza-adventure' ),
-		'text'  => __( 'Receive a completion certificate after successfully finishing the learning.', 'akaza-adventure' ),
-	),
-	array(
-		'num'   => '04',
 		'title' => __( 'Instant access', 'akaza-adventure' ),
 		'text'  => __( 'Start learning immediately after purchase.', 'akaza-adventure' ),
 	),

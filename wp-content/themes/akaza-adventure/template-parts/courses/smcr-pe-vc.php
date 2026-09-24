@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php get_template_part( 'template-parts/courses/smcr-pe-vc/sl-smcr-individuals' ); ?>
 	<?php get_template_part( 'template-parts/courses/smcr-pe-vc/sl-smcr-organisations' ); ?>
 	<?php get_template_part( 'template-parts/courses/smcr-pe-vc/sl-smcr-pevc-suite' ); ?>
-	<?php get_template_part( 'template-parts/courses/smcr-pe-vc/sl-smcr-highlights' ); ?>
+	<?php get_template_part( 'template-parts/courses/smcr-pe-vc/sl-smcr-cpd' ); ?>
 	<?php get_template_part( 'template-parts/courses/smcr-pe-vc/sl-smcr-about' ); ?>
 	<?php get_template_part( 'template-parts/courses/smcr-pe-vc/sl-smcr-courses' ); ?>	
 	<?php get_template_part( 'template-parts/courses/smcr-pe-vc/sl-smcr-employees' ); ?>

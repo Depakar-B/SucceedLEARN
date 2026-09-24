@@ -30,7 +30,7 @@ function akaza_enqueue_smcr_assets() {
 		'sl-smcr-individuals',
 		'sl-smcr-organisations',
 		'sl-smcr-pevc-suite',
-		'sl-smcr-highlights',
+		'sl-smcr-cpd',
 		'sl-smcr-about',
 		'sl-smcr-courses',
 		'sl-smcr-employees',
