@@ -55,8 +55,8 @@
 }
 
 .sl-s-signs-hero__media {
-	position: sticky;
-	top: calc(var(--slf-header-clearance, 110px) + 24px);
+	position: static;
+	align-self: center;
 	width: 100%;
 	min-width: 0;
 }

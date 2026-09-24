@@ -34,6 +34,7 @@
 
 .sl-s-signs-filtering__media {
 	position: static;
+	align-self: center;
 	width: 100%;
 	min-width: 0;
 }
