@@ -11,7 +11,7 @@
 	display: grid;
 	grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
 	gap: 64px;
-	align-items: start;
+	align-items: center;
 }
 
 .sl-s-signs-filtering__content {
@@ -33,11 +33,9 @@
 }
 
 .sl-s-signs-filtering__media {
-	position: sticky;
-	top: calc(var(--slf-header-clearance, 110px) + 24px);
+	position: static;
 	width: 100%;
 	min-width: 0;
-	align-self: start;
 }
 
 .sl-s-signs-filtering__image-placeholder {

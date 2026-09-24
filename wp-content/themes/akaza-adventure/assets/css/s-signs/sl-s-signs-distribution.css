@@ -58,9 +58,22 @@
 	margin: 0;
 }
 
+/* Center the last card in the middle column of a 3-col row. */
+@media (min-width: 1200px) {
+	.sl-s-signs-distribution__cards > .sl-s-signs-distribution__card:last-child:nth-child(odd) {
+		grid-column: 2;
+	}
+}
+
 @media (max-width: 1199px) {
 	.sl-s-signs-distribution__cards {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.sl-s-signs-distribution__cards > .sl-s-signs-distribution__card:last-child:nth-child(odd) {
+		grid-column: 1 / -1;
+		max-width: calc(50% - 12px);
+		justify-self: center;
 	}
 }
 
@@ -76,6 +89,11 @@
 	.sl-s-signs-distribution__cards {
 		grid-template-columns: 1fr;
 		gap: 16px;
+	}
+
+	.sl-s-signs-distribution__cards > .sl-s-signs-distribution__card:last-child:nth-child(odd) {
+		grid-column: auto;
+		max-width: none;
 	}
 
 	.sl-s-signs-distribution__card {

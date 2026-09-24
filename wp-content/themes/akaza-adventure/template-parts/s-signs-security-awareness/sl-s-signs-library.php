@@ -8,15 +8,6 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
-$topics = array(
-	__( 'Phishing awareness', 'akaza-adventure' ),
-	__( 'Remote working security', 'akaza-adventure' ),
-	__( 'Password hygiene', 'akaza-adventure' ),
-	__( 'AI Security', 'akaza-adventure' ),
-	__( 'Mobile Device Security', 'akaza-adventure' ),
-	__( 'And more', 'akaza-adventure' ),
-);
 ?>
 
 <section
@@ -62,22 +53,14 @@ $topics = array(
 					</p>
 
 					<p>
-						<?php esc_html_e( 'The growing poster library includes topics such as:', 'akaza-adventure' ); ?>
+						<?php
+						esc_html_e(
+							'The growing poster library includes topics such as phishing awareness, remote working security, password hygiene, AI security, mobile device security, and more.',
+							'akaza-adventure'
+						);
+						?>
 					</p>
 				</div>
-
-				<ul class="sl-list sl-s-signs-library__topics">
-					<?php foreach ( $topics as $index => $topic ) : ?>
-						<li class="sl-list-item">
-							<span class="sl-list-item__label" aria-hidden="true">
-								<?php echo esc_html( str_pad( (string) ( $index + 1 ), 2, '0', STR_PAD_LEFT ) ); ?>
-							</span>
-							<span class="sl-list-item__text">
-								<?php echo esc_html( $topic ); ?>
-							</span>
-						</li>
-					<?php endforeach; ?>
-				</ul>
 
 			</div>
 
