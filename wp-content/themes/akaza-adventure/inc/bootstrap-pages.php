@@ -110,6 +110,16 @@ function akaza_bootstrap_pages() {
 			'template' => 'page-templates/gdpr-employee-awareness-training.php',
 		),
 		array(
+			'slug'     => 'information-security-awareness-training-for-soc-2-compliance',
+			'title'    => 'Information Security Awareness Training for SOC 2 Compliance',
+			'template' => 'page-templates/information-security-awareness-training-for-soc-2-compliance.php',
+		),
+		array(
+			'slug'     => 'information-security-awareness-training-for-uk-cyber-essentials',
+			'title'    => 'Information Security Awareness Training for UK Cyber Essentials',
+			'template' => 'page-templates/information-security-awareness-training-for-uk-cyber-essentials.php',
+		),
+		array(
 			'slug'     => 'ferpa-training-for-school-and-university-staff',
 			'title'    => 'FERPA Training for School and University Staff',
 			'template' => 'page-templates/ferpa-training-for-school-and-university-staff.php',

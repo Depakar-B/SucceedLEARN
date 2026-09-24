@@ -1,0 +1,77 @@
+/*
+ * UK Cyber Essentials Security Awareness — How modules relate.
+ */
+
+.sl-ukce-requires {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-ukce-requires__panel {
+	max-width: 960px;
+	padding: 40px 36px;
+	border: 1px solid rgba(107, 124, 147, 0.18);
+	border-radius: 18px;
+	background: var(--sl-page-white, #ffffff);
+	box-shadow: 0 10px 30px rgba(22, 35, 78, 0.05);
+}
+
+.sl-ukce-requires__panel h2 {
+	margin: 0 0 20px;
+}
+
+.sl-ukce-requires__panel p {
+	max-width: 860px;
+	margin: 0 0 16px;
+	color: var(--sl-page-text, #16234e);
+}
+
+.sl-ukce-requires__panel p:last-child {
+	margin-bottom: 0;
+}
+
+.sl-ukce-requires__compare {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 20px;
+	margin: 8px 0 20px;
+}
+
+.sl-ukce-requires__compare-card {
+	padding: 22px 20px;
+	border: 1px solid rgba(20, 114, 186, 0.2);
+	border-radius: 14px;
+	background: rgba(20, 114, 186, 0.06);
+}
+
+.sl-ukce-requires__compare-card h3 {
+	margin: 0 0 10px;
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 17px !important;
+	font-weight: 700;
+	line-height: 1.35;
+}
+
+.sl-ukce-requires__compare-card p {
+	margin: 0 !important;
+	color: var(--sl-page-navy, #16234e);
+	font-weight: 500;
+}
+
+@media (max-width: 767px) {
+	.sl-ukce-requires {
+		padding: 60px 0;
+	}
+
+	.sl-ukce-requires__panel {
+		padding: 28px 20px;
+		border-radius: 14px;
+	}
+
+	.sl-ukce-requires__compare {
+		grid-template-columns: 1fr;
+		gap: 14px;
+	}
+}
