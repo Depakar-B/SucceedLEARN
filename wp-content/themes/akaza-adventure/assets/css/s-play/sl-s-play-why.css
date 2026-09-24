@@ -11,7 +11,7 @@
 	display: grid;
 	grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
 	gap: 64px;
-	align-items: start;
+	align-items: center;
 }
 
 .sl-s-play-why__content {
@@ -42,7 +42,12 @@
 
 .sl-s-play-why__list {
 	margin: 0;
-	padding-left: 1.15em;
+	padding-left: 1.35em;
+	list-style: disc;
+}
+
+.sl-s-play-why__list li {
+	list-style: disc;
 }
 
 .sl-s-play-why__list li + li {
@@ -50,11 +55,9 @@
 }
 
 .sl-s-play-why__media {
-	position: sticky;
-	top: calc(var(--slf-header-clearance, 110px) + 24px);
+	position: static;
 	width: 100%;
 	min-width: 0;
-	align-self: start;
 }
 
 .sl-s-play-why__image-placeholder {
