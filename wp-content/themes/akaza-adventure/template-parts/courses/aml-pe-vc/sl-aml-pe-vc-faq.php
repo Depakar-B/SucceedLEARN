@@ -60,7 +60,7 @@ get_template_part(
 	null,
 	array(
 		'id'            => 'faq',
-		'section_class' => 'sl-aml-pe-vc-faq',
+		'section_class' => 'sl-aml-pe-vc-faq sl-faq-section--alt',
 		'eyebrow'       => __( 'Frequently Asked Questions', 'akaza-adventure' ),
 		'title_html'    => __( 'Anti-Money Laundering Awareness Training <span>FAQs</span>', 'akaza-adventure' ),
 		'description'   => __( 'Concise answers to common questions about AML training for PE/VC professionals.', 'akaza-adventure' ),
