@@ -5,7 +5,7 @@
 
 .sl-s-play-comparison {
 	padding: 90px 0;
-	background: var(--sl-page-white, #ffffff);
+	background: var(--sl-page-bg, #f5f5f5);
 }
 
 .sl-s-play-comparison__heading {
