@@ -1,13 +1,18 @@
-/* =========================================================
-   SMCR Training for PE & VC Firms — Role-Based Courses
-   ========================================================= */
+/**
+ * SMCR Training for PE & VC Firms — Role-Based Courses.
+ *
+ * Two-card layout matching SMCR.html course-grid UI.
+ *
+ * @package Akaza_Adventure
+ */
 
-   .sl-smcr-courses {
+.sl-smcr-courses {
 	padding: 88px 0;
 	background: #ffffff;
 }
 
 .sl-smcr-courses__intro {
+	max-width: 850px;
 	margin-bottom: 42px;
 }
 
@@ -16,72 +21,64 @@
 	margin-bottom: 18px;
 }
 
-.sl-smcr-courses__intro h2 span {
-	color: var(--sl-heading-accent, #1472ba);
-}
-
 .sl-smcr-courses__intro p {
 	margin-bottom: 0;
+	font-size: 1.06rem;
 }
 
-/* ---------------------------------------------------------
-   Comparison table
-   --------------------------------------------------------- */
+.sl-smcr-courses__grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 28px;
+}
 
-.sl-smcr-courses__table-wrap {
-	overflow-x: auto;
+.sl-smcr-courses__card {
+	padding: 34px;
+	border: 1px solid #dce3ec;
+	border-radius: 20px;
 	background: #ffffff;
-	border: 1px solid rgba(22, 35, 78, 0.10);
-	border-radius: 16px;
+	box-shadow: 0 14px 40px rgba(22, 35, 77, 0.10);
+	box-sizing: border-box;
 }
 
-.sl-smcr-courses__table {
-	width: 100%;
-	border-collapse: collapse;
-	table-layout: fixed;
+.sl-smcr-courses__card--employee {
+	border-top: 5px solid #135db7;
 }
 
-.sl-smcr-courses__table th {
-	width: 50%;
-	padding: 20px 28px;
-	background: rgba(20, 114, 186, 0.05);
-	border-bottom: 1px solid rgba(22, 35, 78, 0.10);
-	color: var(--sl-page-navy, #16234e);
-	text-align: left;
+.sl-smcr-courses__card--manager {
+	border-top: 5px solid #ea3f23;
 }
 
-.sl-smcr-courses__table th + th {
-	border-left: 1px solid rgba(22, 35, 78, 0.10);
+.sl-smcr-courses__eyebrow {
+	display: block;
+	margin-bottom: 12px;
+	color: #135db7;
+	font-size: 0.82rem;
+	font-weight: 700;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
 }
 
-.sl-smcr-courses__table td {
-	width: 50%;
-	padding: 32px 28px;
-	vertical-align: top;
+.sl-smcr-courses__card--manager .sl-smcr-courses__eyebrow {
+	color: #ea3f23;
 }
 
-.sl-smcr-courses__table td + td {
-	border-left: 1px solid rgba(22, 35, 78, 0.10);
-}
-
-.sl-smcr-courses__table .sl-panel-title {
+body.slf-body #main-content .sl-smcr-courses__card h3.sl-panel-title,
+.sl-smcr-courses__card .sl-panel-title {
 	margin-top: 0;
-	margin-bottom: 16px;
+	margin-bottom: 14px;
+	color: #212b48;
+	font-size: 1.3rem;
 }
 
-.sl-smcr-courses__table td p {
-	margin-top: 0;
-	margin-bottom: 24px;
+.sl-smcr-courses__card > p {
+	margin: 0 0 22px;
+	color: #000000;
+	font-size: 1rem;
+	line-height: 1.65;
 }
-
-/* ---------------------------------------------------------
-   Course points
-   --------------------------------------------------------- */
 
 .sl-smcr-courses__list {
-	display: flex;
-	flex-direction: column;
-	gap: 0;
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -89,40 +86,42 @@
 
 .sl-smcr-courses__list li {
 	position: relative;
-	padding: 13px 0 13px 24px;
-	border-top: 1px solid rgba(22, 35, 78, 0.10);
+	margin-bottom: 12px;
+	padding-left: 27px;
+	color: #000000;
+	line-height: 1.55;
+}
+
+.sl-smcr-courses__list li:last-child {
+	margin-bottom: 0;
 }
 
 .sl-smcr-courses__list li::before {
-	content: "";
 	position: absolute;
-	top: 21px;
-	left: 2px;
-	width: 7px;
-	height: 7px;
-	border-radius: 50%;
-	background: #1472ba;
+	left: 0;
+	color: #135db7;
+	content: "✓";
+	font-weight: 700;
 }
 
-/* ---------------------------------------------------------
-   Mobile
-   --------------------------------------------------------- */
+.sl-smcr-courses__card--manager .sl-smcr-courses__list li::before {
+	color: #ea3f23;
+}
 
-@media (max-width: 767px) {
+@media (max-width: 720px) {
 	.sl-smcr-courses {
-		padding: 60px 0;
+		padding: 62px 0;
 	}
 
 	.sl-smcr-courses__intro {
 		margin-bottom: 30px;
 	}
 
-	.sl-smcr-courses__table {
-		min-width: 680px;
+	.sl-smcr-courses__grid {
+		grid-template-columns: 1fr;
 	}
 
-	.sl-smcr-courses__table th,
-	.sl-smcr-courses__table td {
-		padding: 22px 20px;
+	.sl-smcr-courses__card {
+		padding: 28px 24px;
 	}
 }

@@ -2,12 +2,44 @@
 /**
  * SMCR Training — UK Regulatory Context.
  *
+ * Card UI mirrors AML PE/VC due-diligence stack.
+ *
  * @package Akaza_Adventure
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+$regulators = array(
+	array(
+		'code'        => 'FCA',
+		'title'       => __( 'Financial Conduct Authority', 'akaza-adventure' ),
+		'subtitle'    => __( 'Regulator', 'akaza-adventure' ),
+		'text'        => __( 'The Employees course explains that SMCR was introduced by the FCA to strengthen conduct standards and individual accountability.', 'akaza-adventure' ),
+		'image_label' => __( 'Image Space — FCA', 'akaza-adventure' ),
+		'image_hint'  => __( 'Suggested visual: FCA regulatory oversight and SMCR accountability.', 'akaza-adventure' ),
+		'reverse'     => false,
+	),
+	array(
+		'code'        => 'COCON',
+		'title'       => __( 'Code of Conduct Sourcebook — COCON', 'akaza-adventure' ),
+		'subtitle'    => __( 'Sourcebook', 'akaza-adventure' ),
+		'text'        => __( 'The Employees course identifies COCON as the sourcebook containing the Conduct Rules covered in the training.', 'akaza-adventure' ),
+		'image_label' => __( 'Image Space — COCON', 'akaza-adventure' ),
+		'image_hint'  => __( 'Suggested visual: Conduct Rules sourcebook and workplace standards.', 'akaza-adventure' ),
+		'reverse'     => true,
+	),
+	array(
+		'code'        => 'PRA',
+		'title'       => __( 'Prudential Regulation Authority', 'akaza-adventure' ),
+		'subtitle'    => __( 'Prudential Regulation', 'akaza-adventure' ),
+		'text'        => __( 'The Senior Managers course also refers to PRA responsibilities in the context of Senior Manager regulatory obligations.', 'akaza-adventure' ),
+		'image_label' => __( 'Image Space — PRA', 'akaza-adventure' ),
+		'image_hint'  => __( 'Suggested visual: PRA responsibilities for Senior Managers.', 'akaza-adventure' ),
+		'reverse'     => false,
+	),
+);
 ?>
 
 <section
@@ -17,73 +49,54 @@ if ( ! defined( 'ABSPATH' ) ) {
 >
 	<div class="container">
 
-		<div class="sl-smcr-regulatory-context__grid">
+		<div class="sl-smcr-regulatory-context__intro">
+			<span class="sl-home-sub-heading">
+				<?php esc_html_e( 'UK Regulatory Context', 'akaza-adventure' ); ?>
+			</span>
 
-			<div class="sl-smcr-regulatory-context__intro">
-				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'UK Regulatory Context', 'akaza-adventure' ); ?>
-				</span>
+			<h2 id="sl-smcr-regulatory-context-title">
+				<?php esc_html_e( 'UK SMCR Training: FCA Conduct Rules, COCON and PRA', 'akaza-adventure' ); ?>
+				<span><?php esc_html_e( 'Responsibilities', 'akaza-adventure' ); ?></span>
+			</h2>
+		</div>
 
-				<h2 id="sl-smcr-regulatory-context-title">
-					<?php esc_html_e( 'UK SMCR Training: FCA Conduct Rules, COCON and PRA', 'akaza-adventure' ); ?>
-					<span><?php esc_html_e( 'Responsibilities', 'akaza-adventure' ); ?></span>
-				</h2>
+		<div class="sl-smcr-regulatory-context__stack">
+			<?php foreach ( $regulators as $regulator ) : ?>
+				<?php
+				$card_mod = ! empty( $regulator['reverse'] )
+					? ' sl-smcr-regulatory-context__card--reverse'
+					: '';
+				?>
+				<article class="sl-smcr-regulatory-context__card<?php echo esc_attr( $card_mod ); ?>">
 
-				<p>
-					<?php esc_html_e( 'The supplied course materials position SMCR within the UK financial services regulatory framework and refer learners to FCA Conduct Rules and relevant regulatory responsibilities.', 'akaza-adventure' ); ?>
-				</p>
+					<div
+						class="sl-smcr-regulatory-context__media"
+						role="img"
+						aria-label="<?php echo esc_attr( $regulator['image_label'] ); ?>"
+					>
+						<span class="sl-smcr-regulatory-context__icon" aria-hidden="true">
+							<?php echo esc_html( $regulator['code'] ); ?>
+						</span>
+						<strong><?php echo esc_html( $regulator['image_label'] ); ?></strong>
+						<span><?php echo esc_html( $regulator['image_hint'] ); ?></span>
+					</div>
 
-				<p>
-					<?php esc_html_e( 'The Senior Managers module also references PRA responsibilities where relevant to the learner’s role.', 'akaza-adventure' ); ?>
-				</p>
-			</div>
+					<div class="sl-smcr-regulatory-context__content">
+						<span class="sl-smcr-regulatory-context__code">
+							<?php echo esc_html( $regulator['code'] ); ?>
+						</span>
 
-			<div class="sl-smcr-regulatory-context__cards">
+						<h3><?php echo esc_html( $regulator['title'] ); ?></h3>
 
-				<article class="sl-smcr-regulatory-context__card">
-					<span class="sl-smcr-regulatory-context__label">
-						<?php esc_html_e( 'Regulator', 'akaza-adventure' ); ?>
-					</span>
+						<span class="sl-smcr-regulatory-context__name">
+							<?php echo esc_html( $regulator['subtitle'] ); ?>
+						</span>
 
-					<h3 class="sl-panel-title">
-						<?php esc_html_e( 'Financial Conduct Authority', 'akaza-adventure' ); ?>
-					</h3>
+						<p><?php echo esc_html( $regulator['text'] ); ?></p>
+					</div>
 
-					<p>
-						<?php esc_html_e( 'The Employees course explains that SMCR was introduced by the FCA to strengthen conduct standards and individual accountability.', 'akaza-adventure' ); ?>
-					</p>
 				</article>
-
-				<article class="sl-smcr-regulatory-context__card">
-					<span class="sl-smcr-regulatory-context__label">
-						<?php esc_html_e( 'Sourcebook', 'akaza-adventure' ); ?>
-					</span>
-
-					<h3 class="sl-panel-title">
-						<?php esc_html_e( 'Code of Conduct Sourcebook — COCON', 'akaza-adventure' ); ?>
-					</h3>
-
-					<p>
-						<?php esc_html_e( 'The Employees course identifies COCON as the sourcebook containing the Conduct Rules covered in the training.', 'akaza-adventure' ); ?>
-					</p>
-				</article>
-
-				<article class="sl-smcr-regulatory-context__card">
-					<span class="sl-smcr-regulatory-context__label">
-						<?php esc_html_e( 'Prudential Regulation', 'akaza-adventure' ); ?>
-					</span>
-
-					<h3 class="sl-panel-title">
-						<?php esc_html_e( 'Prudential Regulation Authority', 'akaza-adventure' ); ?>
-					</h3>
-
-					<p>
-						<?php esc_html_e( 'The Senior Managers course also refers to PRA responsibilities in the context of Senior Manager regulatory obligations.', 'akaza-adventure' ); ?>
-					</p>
-				</article>
-
-			</div>
-
+			<?php endforeach; ?>
 		</div>
 
 	</div>

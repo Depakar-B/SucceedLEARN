@@ -90,6 +90,7 @@
 	position: sticky;
 	top: calc(var(--slf-header-clearance, 110px) + 24px);
 	align-self: start;
+	margin-top: 48px;
 }
 
 .sl-smcr-employees__image {
