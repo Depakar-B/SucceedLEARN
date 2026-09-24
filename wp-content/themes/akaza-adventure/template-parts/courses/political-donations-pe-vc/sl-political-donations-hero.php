@@ -89,114 +89,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 
 			<div class="sl-political-donations-hero__visual">
-
-				<div class="sl-political-donations-hero__panel">
-
-					<div class="sl-political-donations-hero__panel-head">
-						<h2>
-							<?php esc_html_e( 'Think Before You Act', 'akaza-adventure' ); ?>
-						</h2>
+				<figure class="sl-political-donations-hero__media">
+					<div
+						class="sl-political-donations-hero__image-placeholder"
+						role="img"
+						aria-label="<?php esc_attr_e( 'Political donations course hero image placeholder', 'akaza-adventure' ); ?>"
+					>
+						<span><?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?></span>
 					</div>
-
-					<div class="sl-political-donations-hero__steps">
-
-						<div class="sl-political-donations-hero__step">
-
-							<span class="sl-political-donations-hero__step-number">
-								01
-							</span>
-
-							<div class="sl-political-donations-hero__step-content">
-								<h3 class="sl-panel-title">
-									<?php esc_html_e( 'Donate, attend, sponsor or endorse?', 'akaza-adventure' ); ?>
-								</h3>
-
-								<p>
-									<?php esc_html_e( 'Identify the political activity.', 'akaza-adventure' ); ?>
-								</p>
-							</div>
-
-						</div>
-
-						<div
-							class="sl-political-donations-hero__connector"
-							aria-hidden="true"
-						>
-							↓
-						</div>
-
-						<div class="sl-political-donations-hero__step">
-
-							<span class="sl-political-donations-hero__step-number">
-								02
-							</span>
-
-							<div class="sl-political-donations-hero__step-content">
-								<h3 class="sl-panel-title">
-									<?php esc_html_e( 'Is your professional identity visible?', 'akaza-adventure' ); ?>
-								</h3>
-
-								<p>
-									<?php esc_html_e( 'Consider your title, organisation or resources.', 'akaza-adventure' ); ?>
-								</p>
-							</div>
-
-						</div>
-
-						<div
-							class="sl-political-donations-hero__connector"
-							aria-hidden="true"
-						>
-							↓
-						</div>
-
-						<div class="sl-political-donations-hero__step">
-
-							<span class="sl-political-donations-hero__step-number">
-								03
-							</span>
-
-							<div class="sl-political-donations-hero__step-content">
-								<h3 class="sl-panel-title">
-									<?php esc_html_e( 'Could the firm appear connected?', 'akaza-adventure' ); ?>
-								</h3>
-
-								<p>
-									<?php esc_html_e( 'Consider endorsement, influence and conflicts.', 'akaza-adventure' ); ?>
-								</p>
-							</div>
-
-						</div>
-
-						<div
-							class="sl-political-donations-hero__connector"
-							aria-hidden="true"
-						>
-							↓
-						</div>
-
-						<div class="sl-political-donations-hero__step sl-political-donations-hero__step--final">
-
-							<span class="sl-political-donations-hero__step-number">
-								✓
-							</span>
-
-							<div class="sl-political-donations-hero__step-content">
-								<h3 class="sl-panel-title">
-									<?php esc_html_e( 'Check before proceeding', 'akaza-adventure' ); ?>
-								</h3>
-
-								<p>
-									<?php esc_html_e( 'Follow internal policy and approval procedures.', 'akaza-adventure' ); ?>
-								</p>
-							</div>
-
-						</div>
-
-					</div>
-
-				</div>
-
+				</figure>
 			</div>
 
 		</div>

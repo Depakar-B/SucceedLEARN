@@ -30,6 +30,7 @@ function akaza_enqueue_political_donations_assets() {
 		'sl-political-donations-individuals',
 		'sl-political-donations-organisations',
 		'sl-political-donations-pevc-suite',
+		'sl-political-donations-cpd',
 		'sl-political-donations-context',
 		'sl-political-donations-overview',
 		'sl-political-donations-regulatory-context',
