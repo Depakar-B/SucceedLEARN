@@ -37,6 +37,13 @@
 	text-align: center;
 }
 
+.sl-s-metrics-dashboard__image {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 24px;
+}
+
 .sl-s-metrics-dashboard__content {
 	min-width: 0;
 }

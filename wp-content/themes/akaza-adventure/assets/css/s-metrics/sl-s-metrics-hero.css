@@ -117,6 +117,13 @@ body.slf-body #main-content.sl-s-metrics-page h3.sl-panel-title,
 	text-align: center;
 }
 
+.sl-s-metrics-hero__image {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 16px;
+}
+
 @media (max-width: 991px) {
 	.sl-s-metrics-hero {
 		padding: 76px 0 68px;

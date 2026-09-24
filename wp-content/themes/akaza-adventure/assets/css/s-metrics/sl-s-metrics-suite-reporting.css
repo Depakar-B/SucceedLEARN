@@ -102,6 +102,13 @@ body.slf-body #main-content.sl-s-metrics-page .sl-s-metrics-suite-reporting__sub
 	text-align: center;
 }
 
+.sl-s-metrics-suite-reporting__image {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 16px;
+}
+
 @media (max-width: 767px) {
 	.sl-s-metrics-suite-reporting {
 		padding: 60px 0;

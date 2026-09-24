@@ -119,9 +119,15 @@ $suite_reports = array(
 		</div>
 
 		<div class="sl-s-metrics-suite-reporting__media">
-			<div class="sl-s-metrics-suite-reporting__image-placeholder">
-				<span><?php esc_html_e( 'Image Placeholder — Dashboard of all the S-Series Reporting', 'akaza-adventure' ); ?></span>
-			</div>
+			<img
+				class="sl-s-metrics-suite-reporting__image"
+				src="<?php echo esc_url( akaza_upload_url( '2026/09/S-Series-Reports-S-Metrics.webp' ) ); ?>"
+				alt="<?php esc_attr_e( 'S-Series reporting dashboard across the Security Behaviour & Culture Suite', 'akaza-adventure' ); ?>"
+				width="1200"
+				height="680"
+				loading="lazy"
+				decoding="async"
+			>
 		</div>
 
 	</div>
