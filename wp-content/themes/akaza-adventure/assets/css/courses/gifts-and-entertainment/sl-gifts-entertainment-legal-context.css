@@ -37,40 +37,141 @@
 
 
 /* =========================================================
-   Law cards — preview .law-grid / .law-card
+   Law cards — alternating image / content rows
    ========================================================= */
 
-.sl-gifts-entertainment-legal-context__grid {
+.sl-gifts-entertainment-legal-context__stack {
 	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
 	gap: 24px;
 }
 
 .sl-gifts-entertainment-legal-context__card {
-	padding: 28px;
-	border: 1px solid var(--course-border, #dce3ed);
-	border-radius: 16px;
-	background: var(--course-white, #ffffff);
-	box-sizing: border-box;
+	display: grid;
+	grid-template-columns: minmax(290px, 0.85fr) minmax(0, 1.15fr);
+	min-height: 315px;
+	overflow: hidden;
+	border: 1px solid #dde3eb;
+	border-radius: 24px;
+	background: #ffffff;
+	box-shadow: 0 14px 36px rgba(22, 35, 77, 0.07);
 }
 
-.sl-gifts-entertainment-legal-context__card-label {
-	display: inline-block;
-	margin-bottom: 9px;
+.sl-gifts-entertainment-legal-context__card:nth-child(even) {
+	grid-template-columns: minmax(0, 1.15fr) minmax(290px, 0.85fr);
+}
+
+.sl-gifts-entertainment-legal-context__card:nth-child(even) .sl-gifts-entertainment-legal-context__media {
+	order: 2;
+}
+
+.sl-gifts-entertainment-legal-context__card:nth-child(even) .sl-gifts-entertainment-legal-context__content {
+	order: 1;
+}
+
+.sl-gifts-entertainment-legal-context__media {
+	position: relative;
+	min-height: 315px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 32px;
+	text-align: center;
+	background: linear-gradient(135deg, #eaf3fd 0%, #f7fafe 100%);
+}
+
+.sl-gifts-entertainment-legal-context__media::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 5px;
+	background: var(--course-primary, #135db7);
+}
+
+.sl-gifts-entertainment-legal-context__media--photo {
+	padding: 0;
+	overflow: hidden;
+	background: #edf5fd;
+}
+
+.sl-gifts-entertainment-legal-context__media--photo img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	min-height: 315px;
+	object-fit: cover;
+}
+
+.sl-gifts-entertainment-legal-context__icon {
+	width: 74px;
+	height: 74px;
+	display: grid;
+	place-items: center;
+	margin-bottom: 16px;
+	border-radius: 20px;
+	background: #ffffff;
 	color: var(--course-primary, #135db7);
-	font-size: 0.77rem;
+	font-size: 1.3rem;
 	font-weight: 700;
-	text-transform: uppercase;
-	line-height: 1.4;
+	box-shadow: 0 10px 28px rgba(22, 35, 77, 0.1);
 }
 
-.sl-gifts-entertainment-legal-context__card h3 {
-	margin: 0 0 9px;
+.sl-gifts-entertainment-legal-context__media strong {
+	display: block;
+	margin-bottom: 6px;
 	color: var(--course-navy, #16234d);
+	font-size: 1rem;
 }
 
-.sl-gifts-entertainment-legal-context__card p {
+.sl-gifts-entertainment-legal-context__media span:not(.sl-gifts-entertainment-legal-context__icon) {
+	max-width: 290px;
+	color: #596274;
+	font-size: 0.88rem;
+	line-height: 1.5;
+}
+
+.sl-gifts-entertainment-legal-context__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: clamp(32px, 5vw, 58px);
+}
+
+.sl-gifts-entertainment-legal-context__code {
+	display: inline-flex;
+	width: max-content;
+	margin-bottom: 15px;
+	padding: 7px 11px;
+	border-radius: 8px;
+	background: #edf5fd;
+	color: var(--course-primary, #135db7);
+	font-size: 0.84rem;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+}
+
+.sl-gifts-entertainment-legal-context__content h3 {
+	margin: 0 0 8px;
+	color: #0a3d7a;
+	font-size: 1.35rem;
+}
+
+.sl-gifts-entertainment-legal-context__fullname {
+	display: block;
+	margin-bottom: 17px;
+	color: var(--course-primary, #135db7);
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+.sl-gifts-entertainment-legal-context__content p {
+	max-width: 660px;
 	margin: 0;
+	font-size: 1rem;
+	line-height: 1.75;
+	color: #555e70;
 }
 
 
@@ -105,9 +206,20 @@
    Responsive
    ========================================================= */
 
-@media (max-width: 980px) {
-	.sl-gifts-entertainment-legal-context__grid {
+@media (max-width: 850px) {
+	.sl-gifts-entertainment-legal-context__card,
+	.sl-gifts-entertainment-legal-context__card:nth-child(even) {
 		grid-template-columns: 1fr;
+	}
+
+	.sl-gifts-entertainment-legal-context__card:nth-child(even) .sl-gifts-entertainment-legal-context__media,
+	.sl-gifts-entertainment-legal-context__card:nth-child(even) .sl-gifts-entertainment-legal-context__content {
+		order: initial;
+	}
+
+	.sl-gifts-entertainment-legal-context__media,
+	.sl-gifts-entertainment-legal-context__media--photo img {
+		min-height: 250px;
 	}
 }
 
@@ -124,9 +236,8 @@
 		margin-bottom: 18px;
 	}
 
-	.sl-gifts-entertainment-legal-context__card {
-		padding: 22px;
-		border-radius: 12px;
+	.sl-gifts-entertainment-legal-context__content {
+		padding: 28px 24px 32px;
 	}
 
 	.sl-gifts-entertainment-legal-context__highlight {
