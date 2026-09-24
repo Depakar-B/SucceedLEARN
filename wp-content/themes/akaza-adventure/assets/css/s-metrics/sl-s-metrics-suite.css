@@ -90,11 +90,6 @@
 .sl-s-metrics-suite__closing {
 	max-width: 1180px;
 	margin: 35px auto 0;
-	padding: 24px 28px;
-	border-left: 4px solid var(--sl-page-primary, #1472ba);
-	border-radius: 10px;
-	background: var(--sl-page-white, #ffffff);
-	box-sizing: border-box;
 }
 
 .sl-s-metrics-suite__closing p {
@@ -132,6 +127,5 @@
 
 	.sl-s-metrics-suite__closing {
 		margin-top: 28px;
-		padding: 20px;
 	}
 }

@@ -92,12 +92,9 @@ $suite_reports = array(
 
 		<div class="sl-s-metrics-suite-reporting__grid">
 
-			<?php foreach ( $suite_reports as $index => $report ) : ?>
+			<?php foreach ( $suite_reports as $report ) : ?>
 
 				<article class="sl-s-metrics-suite-reporting__card">
-					<span class="sl-s-metrics-suite-reporting__number" aria-hidden="true">
-						<?php echo esc_html( str_pad( (string) ( $index + 1 ), 2, '0', STR_PAD_LEFT ) ); ?>
-					</span>
 					<h3 class="sl-panel-title">
 						<?php echo esc_html( $report['title'] ); ?>
 					</h3>
@@ -122,9 +119,15 @@ $suite_reports = array(
 		</div>
 
 		<div class="sl-s-metrics-suite-reporting__media">
-			<div class="sl-s-metrics-suite-reporting__image-placeholder">
-				<span><?php esc_html_e( 'Image Placeholder — Dashboard of all the S-Series Reporting', 'akaza-adventure' ); ?></span>
-			</div>
+			<img
+				class="sl-s-metrics-suite-reporting__image"
+				src="<?php echo esc_url( akaza_upload_url( '2026/09/S-Series-Reports-S-Metrics.webp' ) ); ?>"
+				alt="<?php esc_attr_e( 'S-Series reporting dashboard across the Security Behaviour & Culture Suite', 'akaza-adventure' ); ?>"
+				width="1200"
+				height="680"
+				loading="lazy"
+				decoding="async"
+			>
 		</div>
 
 	</div>

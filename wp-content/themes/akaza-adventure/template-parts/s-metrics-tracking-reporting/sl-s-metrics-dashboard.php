@@ -68,21 +68,36 @@ if ( ! defined( 'ABSPATH' ) ) {
 					</p>
 
 					<p>
-						<?php
-						esc_html_e(
-							'One platform. Multiple awareness signals. One clearer view of human cyber risk.',
-							'akaza-adventure'
-						);
-						?>
+						<strong>
+							<?php
+							esc_html_e(
+								'One platform. Multiple awareness signals. One clearer view of human cyber risk.',
+								'akaza-adventure'
+							);
+							?>
+						</strong>
 					</p>
 				</div>
+
+				<a
+					class="sl-content-btn sl-content-btn-primary"
+					href="#request-demo"
+				>
+					<?php esc_html_e( 'Book A Platform Walkthrough', 'akaza-adventure' ); ?>
+				</a>
 
 			</div>
 
 			<div class="sl-s-metrics-dashboard__media">
-				<div class="sl-s-metrics-dashboard__image-placeholder">
-					<span><?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?></span>
-				</div>
+				<img
+					class="sl-s-metrics-dashboard__image"
+					src="<?php echo esc_url( akaza_upload_url( '2026/09/Security-Awareness-Reporting-Dashboard-S-Metrics.webp' ) ); ?>"
+					alt="<?php esc_attr_e( 'Security Awareness Analytics & Reporting Dashboard', 'akaza-adventure' ); ?>"
+					width="800"
+					height="600"
+					loading="lazy"
+					decoding="async"
+				>
 			</div>
 
 		</div>
