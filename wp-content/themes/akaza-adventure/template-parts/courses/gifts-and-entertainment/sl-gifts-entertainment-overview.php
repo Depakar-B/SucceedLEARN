@@ -19,31 +19,26 @@ $overview_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/Image-2_g
 >
 	<div class="container">
 
-		<div class="sl-gifts-entertainment-overview__grid">
+		<div class="sl-gifts-entertainment-overview__heading">
 
-			<div class="sl-gifts-entertainment-overview__heading">
+			<span class="sl-home-sub-heading">
+				<?php esc_html_e( 'Definition of Gifts and Entertainment', 'akaza-adventure' ); ?>
+			</span>
 
-				<span class="sl-home-sub-heading">
-					<?php
-					esc_html_e(
-						'Definition of Gifts and Entertainment',
+			<h2 id="sl-gifts-entertainment-overview-title">
+				<?php
+				echo wp_kses_post(
+					__(
+						'What Is Gifts and Entertainment <span>Compliance Training?</span>',
 						'akaza-adventure'
-					);
-					?>
-				</span>
+					)
+				);
+				?>
+			</h2>
 
-				<h2 id="sl-gifts-entertainment-overview-title">
-					<?php
-					echo wp_kses_post(
-						__(
-							'What Is Gifts and Entertainment <span>Compliance Training?</span>',
-							'akaza-adventure'
-						)
-					);
-					?>
-				</h2>
+		</div>
 
-			</div>
+		<div class="sl-gifts-entertainment-overview__grid">
 
 			<div class="sl-gifts-entertainment-overview__body">
 
@@ -76,17 +71,17 @@ $overview_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/Image-2_g
 
 			</div>
 
-		</div>
+			<div class="sl-gifts-entertainment-overview__media">
+				<figure class="sl-gifts-entertainment-overview__image">
+					<img
+						src="<?php echo esc_url( $overview_image ); ?>"
+						alt="<?php esc_attr_e( 'What counts as a gift or entertainment', 'akaza-adventure' ); ?>"
+						loading="lazy"
+						decoding="async"
+					>
+				</figure>
+			</div>
 
-		<div class="sl-gifts-entertainment-overview__media">
-			<figure class="sl-gifts-entertainment-overview__image">
-				<img
-					src="<?php echo esc_url( $overview_image ); ?>"
-					alt="<?php esc_attr_e( 'What counts as a gift or entertainment', 'akaza-adventure' ); ?>"
-					loading="lazy"
-					decoding="async"
-				>
-			</figure>
 		</div>
 
 	</div>
