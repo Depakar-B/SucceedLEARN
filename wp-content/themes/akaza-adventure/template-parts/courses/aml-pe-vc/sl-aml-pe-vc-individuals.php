@@ -16,7 +16,7 @@ $features = array(
 	),
 	array(
 		'num'   => '02',
-		'title' => __( '30-minute duration', 'akaza-adventure' ),
+		'title' => __( '40-minute duration', 'akaza-adventure' ),
 		'text'  => __( 'Complete the core AML learning in approximately half an hour.', 'akaza-adventure' ),
 	),
 	array(

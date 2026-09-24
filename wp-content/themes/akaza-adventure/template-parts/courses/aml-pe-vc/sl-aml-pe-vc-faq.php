@@ -23,7 +23,7 @@ $faq_items = array(
 	),
 	array(
 		'question' => __( 'How long does the AML course take?', 'akaza-adventure' ),
-		'answer'   => __( 'The individual course is designed as approximately 30 minutes of focused eLearning.', 'akaza-adventure' ),
+		'answer'   => __( 'The individual course is designed as approximately 40 minutes of focused eLearning.', 'akaza-adventure' ),
 	),
 	array(
 		'question' => __( 'Does the AML course cover UK anti-money laundering laws?', 'akaza-adventure' ),
@@ -34,7 +34,7 @@ $faq_items = array(
 		'answer'   => __( 'Yes. The course introduces the Bank Secrecy Act, USA PATRIOT Act and Anti-Money Laundering Act of 2020.', 'akaza-adventure' ),
 	),
 	array(
-		'question' => __( 'Does the course cover KYC, CDD and EDD?', 'akaza-adventure' ),
+		'question' => __( 'Does the course cover CDD and EDD?', 'akaza-adventure' ),
 		'answer'   => __( 'Yes. The course covers customer identification, Customer Due Diligence and Enhanced Due Diligence within a risk-based AML approach.', 'akaza-adventure' ),
 	),
 	array(

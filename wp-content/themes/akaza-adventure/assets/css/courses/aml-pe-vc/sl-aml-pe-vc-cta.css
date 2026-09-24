@@ -21,6 +21,13 @@
 	font-size: 1.15rem;
 }
 
+.sl-aml-pe-vc-cta__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 14px;
+	margin-top: 28px;
+}
+
 .sl-aml-pe-vc-cta__image {
 	margin: 0;
 	overflow: hidden;

@@ -52,14 +52,14 @@ $hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/AML-Hero-Sect
 			<p>
 				<?php
 				esc_html_e(
-					'Build awareness of KYC, CDD, EDD, beneficial ownership, MLRO responsibilities, CFT, CPF and important UK and US anti-money laundering frameworks.',
+					'Build awareness of CDD, EDD, beneficial ownership, MLRO responsibilities, CFT, CPF and important UK and US anti-money laundering frameworks.',
 					'akaza-adventure'
 				);
 				?>
 			</p>
 
 			<ul class="sl-aml-pe-vc-hero__tags">
-				<li><?php esc_html_e( 'AML & KYC', 'akaza-adventure' ); ?></li>
+				<li><?php esc_html_e( 'AML', 'akaza-adventure' ); ?></li>
 				<li><?php esc_html_e( 'CDD & EDD', 'akaza-adventure' ); ?></li>
 				<li><?php esc_html_e( 'CFT & CPF', 'akaza-adventure' ); ?></li>
 				<li><?php esc_html_e( 'FCA & MLRO', 'akaza-adventure' ); ?></li>

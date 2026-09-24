@@ -10,17 +10,6 @@ defined( 'ABSPATH' ) || exit;
 
 $concepts = array(
 	array(
-		'code'        => 'KYC',
-		'title'       => __( 'Know Your Customer', 'akaza-adventure' ),
-		'subtitle'    => __( 'Customer identification and verification', 'akaza-adventure' ),
-		'text'        => __( 'KYC is the process of understanding who the customer or investor is and verifying relevant identity information. In a PE/VC environment, this can include investors, co-investors, intermediaries, portfolio companies and Ultimate Beneficial Owners.', 'akaza-adventure' ),
-		'image_label' => __( 'Image Space — KYC', 'akaza-adventure' ),
-		'image_hint'  => __( 'Suggested visual: investor or customer identity verification, onboarding or beneficial ownership checks.', 'akaza-adventure' ),
-		'image_url'   => 'https://succeedlearn.com/wp-content/uploads/2026/09/KYC_image.webp',
-		'image_alt'   => __( 'Know Your Customer identity verification', 'akaza-adventure' ),
-		'accent'      => 'blue',
-	),
-	array(
 		'code'        => 'CDD',
 		'title'       => __( 'Customer Due Diligence', 'akaza-adventure' ),
 		'subtitle'    => __( 'Understanding the relationship and its risk', 'akaza-adventure' ),

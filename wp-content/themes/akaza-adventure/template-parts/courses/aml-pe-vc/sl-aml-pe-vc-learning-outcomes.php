@@ -18,7 +18,7 @@ $outcomes = array(
 		'text'  => __( 'Identify unusual ownership, funds, jurisdictions and transactions.', 'akaza-adventure' ),
 	),
 	array(
-		'title' => __( 'Understand KYC and due diligence', 'akaza-adventure' ),
+		'title' => __( 'Understand due diligence', 'akaza-adventure' ),
 		'text'  => __( 'Learn how identification, CDD and EDD support AML controls.', 'akaza-adventure' ),
 	),
 	array(
