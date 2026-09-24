@@ -40,22 +40,29 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</div>
 
 				<div class="sl-hero-actions">
-
-					<a
-						class="sl-hero-btn sl-hero-btn-primary"
-						href="#individuals"
-					>
-						<?php esc_html_e( 'Buy Now @ $20', 'akaza-adventure' ); ?>
-						<span aria-hidden="true">→</span>
-					</a>
-
-					<a
-						class="sl-hero-btn sl-hero-btn-secondary"
-						href="#organisations"
-					>
-						<?php esc_html_e( 'Explore More', 'akaza-adventure' ); ?>
-					</a>
-
+					<div class="sl-whistleblowing-hero__cta-item">
+						<span class="sl-whistleblowing-hero__cta-label">
+							<?php esc_html_e( 'Individual', 'akaza-adventure' ); ?>
+						</span>
+						<a
+							class="sl-hero-btn sl-hero-btn-primary"
+							href="#individuals"
+						>
+							<?php esc_html_e( 'Buy Now @ $20', 'akaza-adventure' ); ?>
+							<span aria-hidden="true">→</span>
+						</a>
+					</div>
+					<div class="sl-whistleblowing-hero__cta-item">
+						<span class="sl-whistleblowing-hero__cta-label">
+							<?php esc_html_e( 'Organisation', 'akaza-adventure' ); ?>
+						</span>
+						<a
+							class="sl-hero-btn sl-hero-btn-secondary"
+							href="#organisations"
+						>
+							<?php esc_html_e( 'Explore More', 'akaza-adventure' ); ?>
+						</a>
+					</div>
 				</div>
 
 				<div class="sl-whistleblowing-hero__tags">

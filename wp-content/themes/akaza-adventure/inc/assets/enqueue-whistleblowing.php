@@ -30,7 +30,6 @@ function akaza_enqueue_whistleblowing_assets() {
 		'sl-whistleblowing-individuals',
 		'sl-whistleblowing-organisations',
 		'sl-whistleblowing-pevc-suite',
-		'sl-whistleblowing-outcomes',
 		'sl-whistleblowing-overview',
 		'sl-whistleblowing-designed',
 		'sl-whistleblowing-audience',
@@ -38,7 +37,6 @@ function akaza_enqueue_whistleblowing_assets() {
 		'sl-whistleblowing-course',
 		'sl-whistleblowing-regulatory',
 		'sl-whistleblowing-outcomes-section',
-		'sl-whistleblowing-content',
 		'sl-whistleblowing-cta',
 	);
 

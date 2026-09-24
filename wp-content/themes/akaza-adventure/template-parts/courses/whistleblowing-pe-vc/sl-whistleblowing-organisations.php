@@ -69,14 +69,14 @@ $features = array(
 			<div class="sl-whistleblowing-organisations__content">
 
 				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'Enterprise Whistleblowing Learning', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Enterprise Whistleblowing eLearning', 'akaza-adventure' ); ?>
 				</span>
 
 				<h2 id="sl-whistleblowing-organisations-title">
 					<?php
 					echo wp_kses_post(
 						__(
-							'Whistleblowing Training <span>For Organisations</span> - Built for Scale',
+							'Whistleblowing Training <span>For Organisations</span>',
 							'akaza-adventure'
 						)
 					);

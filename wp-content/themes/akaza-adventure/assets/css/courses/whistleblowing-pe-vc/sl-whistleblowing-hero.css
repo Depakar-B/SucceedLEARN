@@ -53,7 +53,26 @@
 --------------------------------------------------------- */
 
 .sl-whistleblowing-hero .sl-hero-actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	gap: 14px;
 	margin-top: 30px;
+}
+
+.sl-whistleblowing-hero__cta-item {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 8px;
+}
+
+.sl-whistleblowing-hero__cta-label {
+	color: #374151;
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
 }
 
 /* ---------------------------------------------------------
