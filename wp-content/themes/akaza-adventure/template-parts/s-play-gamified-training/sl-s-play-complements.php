@@ -67,12 +67,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 					</p>
 
 					<p>
-						<?php
-						esc_html_e(
-							'Learn the concept. Play the challenge. Reinforce the behaviour.',
-							'akaza-adventure'
-						);
-						?>
+						<strong>
+							<?php
+							esc_html_e(
+								'Learn the concept. Play the challenge. Reinforce the behaviour.',
+								'akaza-adventure'
+							);
+							?>
+						</strong>
 					</p>
 				</div>
 

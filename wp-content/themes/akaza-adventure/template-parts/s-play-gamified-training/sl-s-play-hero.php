@@ -69,12 +69,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</p>
 
 				<p>
-					<?php
-					esc_html_e(
-						'Play. Learn. Reinforce Secure Behaviour.',
-						'akaza-adventure'
-					);
-					?>
+					<strong>
+						<?php
+						esc_html_e(
+							'Play. Learn. Reinforce Secure Behaviour.',
+							'akaza-adventure'
+						);
+						?>
+					</strong>
 				</p>
 
 				<div class="sl-hero-actions sl-s-play-hero__actions">
