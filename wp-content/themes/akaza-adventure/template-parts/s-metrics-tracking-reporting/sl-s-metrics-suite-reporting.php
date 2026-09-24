@@ -90,44 +90,50 @@ $suite_reports = array(
 
 		</div>
 
-		<div class="sl-s-metrics-suite-reporting__grid">
+		<div class="sl-s-metrics-suite-reporting__layout">
 
-			<?php foreach ( $suite_reports as $report ) : ?>
+			<div class="sl-s-metrics-suite-reporting__content">
+				<div class="sl-s-metrics-suite-reporting__grid">
 
-				<article class="sl-s-metrics-suite-reporting__card">
-					<h3 class="sl-panel-title">
-						<?php echo esc_html( $report['title'] ); ?>
-					</h3>
-					<p>
-						<?php echo esc_html( $report['lead'] ); ?>
-					</p>
-					<p>
-						<?php echo esc_html( $report['intro'] ); ?>
-					</p>
-					<ul class="sl-s-metrics-suite-reporting__list">
-						<?php foreach ( $report['items'] as $item ) : ?>
-							<li><?php echo esc_html( $item ); ?></li>
-						<?php endforeach; ?>
-					</ul>
-					<p>
-						<?php echo esc_html( $report['closing'] ); ?>
-					</p>
-				</article>
+					<?php foreach ( $suite_reports as $report ) : ?>
 
-			<?php endforeach; ?>
+						<article class="sl-s-metrics-suite-reporting__card">
+							<h3 class="sl-panel-title">
+								<?php echo esc_html( $report['title'] ); ?>
+							</h3>
+							<p>
+								<?php echo esc_html( $report['lead'] ); ?>
+							</p>
+							<p>
+								<?php echo esc_html( $report['intro'] ); ?>
+							</p>
+							<ul class="sl-s-metrics-suite-reporting__list">
+								<?php foreach ( $report['items'] as $item ) : ?>
+									<li><?php echo esc_html( $item ); ?></li>
+								<?php endforeach; ?>
+							</ul>
+							<p>
+								<?php echo esc_html( $report['closing'] ); ?>
+							</p>
+						</article>
 
-		</div>
+					<?php endforeach; ?>
 
-		<div class="sl-s-metrics-suite-reporting__media">
-			<img
-				class="sl-s-metrics-suite-reporting__image"
-				src="<?php echo esc_url( akaza_upload_url( '2026/09/S-Series-Reports-S-Metrics.webp' ) ); ?>"
-				alt="<?php esc_attr_e( 'S-Series reporting dashboard across the Security Behaviour & Culture Suite', 'akaza-adventure' ); ?>"
-				width="1200"
-				height="680"
-				loading="lazy"
-				decoding="async"
-			>
+				</div>
+			</div>
+
+			<div class="sl-s-metrics-suite-reporting__media">
+				<img
+					class="sl-s-metrics-suite-reporting__image"
+					src="<?php echo esc_url( akaza_upload_url( '2026/09/S-Series-Reports-S-Metrics.webp' ) ); ?>"
+					alt="<?php esc_attr_e( 'S-Series reporting dashboard across the Security Behaviour & Culture Suite', 'akaza-adventure' ); ?>"
+					width="1200"
+					height="680"
+					loading="lazy"
+					decoding="async"
+				>
+			</div>
+
 		</div>
 
 	</div>
