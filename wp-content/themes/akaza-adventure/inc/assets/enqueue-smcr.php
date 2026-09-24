@@ -27,6 +27,9 @@ function akaza_enqueue_smcr_assets() {
 
 	$sections = array(
 		'sl-smcr-hero',
+		'sl-smcr-individuals',
+		'sl-smcr-organisations',
+		'sl-smcr-pevc-suite',
 		'sl-smcr-highlights',
 		'sl-smcr-about',
 		'sl-smcr-courses',
@@ -48,6 +51,13 @@ function akaza_enqueue_smcr_assets() {
 			$deps
 		);
 	}
+
+	// Opt-in bordered pill eyebrow (sl-global-sub-heading.css).
+	akaza_enqueue_theme_style(
+		'akaza-global-sub-heading',
+		'sl-global-sub-heading.css',
+		array( 'akaza-main', 'akaza-global-title-accent' )
+	);
 
 	// Global FAQ accordion (CSS + JS). Registered in enqueue-core.php.
 	wp_enqueue_style( 'akaza-global-faq' );

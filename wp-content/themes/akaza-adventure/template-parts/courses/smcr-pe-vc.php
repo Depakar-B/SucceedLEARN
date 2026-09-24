@@ -13,6 +13,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <main id="main-content" class="sl-course-page sl-course-page--smcr-pe-vc">
 	<?php get_template_part( 'template-parts/courses/smcr-pe-vc/sl-smcr-hero' ); ?>
+	<?php get_template_part( 'template-parts/courses/smcr-pe-vc/sl-smcr-individuals' ); ?>
+	<?php get_template_part( 'template-parts/courses/smcr-pe-vc/sl-smcr-organisations' ); ?>
+	<?php get_template_part( 'template-parts/courses/smcr-pe-vc/sl-smcr-pevc-suite' ); ?>
 	<?php get_template_part( 'template-parts/courses/smcr-pe-vc/sl-smcr-highlights' ); ?>
 	<?php get_template_part( 'template-parts/courses/smcr-pe-vc/sl-smcr-about' ); ?>
 	<?php get_template_part( 'template-parts/courses/smcr-pe-vc/sl-smcr-courses' ); ?>	

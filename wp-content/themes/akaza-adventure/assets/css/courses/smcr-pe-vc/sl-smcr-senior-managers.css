@@ -4,7 +4,7 @@
 
    .sl-smcr-senior-managers {
 	padding: 88px 0;
-	background: #ffffff;
+	background: #f5f5f5;
 }
 
 .sl-smcr-senior-managers__grid {
@@ -103,14 +103,11 @@
 	background: #ffffff;
 }
 
-.sl-smcr-senior-managers__image-placeholder {
-	min-height: 520px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 32px;
-	background: #f5f5f5;
-	text-align: center;
+.sl-smcr-senior-managers__image img {
+	display: block;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
 }
 
 /* ---------------------------------------------------------
@@ -130,10 +127,6 @@
 	.sl-smcr-senior-managers__media {
 		position: static;
 	}
-
-	.sl-smcr-senior-managers__image-placeholder {
-		min-height: 420px;
-	}
 }
 
 /* ---------------------------------------------------------
@@ -152,10 +145,6 @@
 
 	.sl-smcr-senior-managers__media {
 		order: -1;
-	}
-
-	.sl-smcr-senior-managers__image-placeholder {
-		min-height: 320px;
 	}
 
 	.sl-smcr-senior-managers__content h2 {

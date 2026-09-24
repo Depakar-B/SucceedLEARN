@@ -80,9 +80,12 @@ $learning_areas = array(
 			<div class="sl-smcr-senior-managers__media">
 
 				<div class="sl-smcr-senior-managers__image">
-					<div class="sl-smcr-senior-managers__image-placeholder">
-						<?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?>
-					</div>
+					<img
+						src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/SMCR_Manager.webp' ); ?>"
+						alt="<?php esc_attr_e( 'SMCR senior managers training', 'akaza-adventure' ); ?>"
+						loading="lazy"
+						decoding="async"
+					>
 				</div>
 
 			</div>

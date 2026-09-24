@@ -21,9 +21,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<div class="sl-smcr-about__media">
 				<div class="sl-smcr-about__image">
-					<div class="sl-smcr-about__image-placeholder">
-						<?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?>
-					</div>
+					<img
+						src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/Common-page_SMCR.webp' ); ?>"
+						alt="<?php esc_attr_e( 'SMCR training for UK private equity and venture capital firms', 'akaza-adventure' ); ?>"
+						loading="lazy"
+						decoding="async"
+					>
 				</div>
 			</div>
 
