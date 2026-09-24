@@ -2,6 +2,8 @@
 /**
  * Whistleblowing Training — Legal & Regulatory Context.
  *
+ * Layout mirrors AML PE/VC due-diligence cards.
+ *
  * @package Akaza_Adventure
  */
 
@@ -9,17 +11,36 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$uk_frameworks = array(
-	__( 'Employment Rights Act 1996 protected-disclosure framework', 'akaza-adventure' ),
-	__( 'Public Interest Disclosure Act 1998 (PIDA)', 'akaza-adventure' ),
-	__( 'FCA SYSC 18 whistleblowing framework', 'akaza-adventure' ),
-	__( 'FCA and PRA as relevant external regulatory channels in the course material', 'akaza-adventure' ),
-);
-
-$us_frameworks = array(
-	__( 'Sarbanes-Oxley Act', 'akaza-adventure' ),
-	__( 'Dodd-Frank Act', 'akaza-adventure' ),
-	__( 'False Claims Act', 'akaza-adventure' ),
+$frameworks = array(
+	array(
+		'code'        => 'UK',
+		'title'       => __( 'UK whistleblowing framework', 'akaza-adventure' ),
+		'subtitle'    => __( 'Key UK laws and regulatory channels introduced in the course', 'akaza-adventure' ),
+		'items'       => array(
+			__( 'Employment Rights Act 1996 protected-disclosure framework', 'akaza-adventure' ),
+			__( 'Public Interest Disclosure Act 1998 (PIDA)', 'akaza-adventure' ),
+			__( 'FCA SYSC 18 whistleblowing framework', 'akaza-adventure' ),
+			__( 'FCA and PRA as relevant external regulatory channels in the course material', 'akaza-adventure' ),
+		),
+		'image_label' => __( 'Image Space — UK', 'akaza-adventure' ),
+		'image_hint'  => __( 'Suggested visual: UK legal and regulatory whistleblowing framework.', 'akaza-adventure' ),
+		'image_alt'   => __( 'UK whistleblowing framework image placeholder', 'akaza-adventure' ),
+		'reverse'     => true,
+	),
+	array(
+		'code'        => 'US',
+		'title'       => __( 'US whistleblower protections introduced', 'akaza-adventure' ),
+		'subtitle'    => __( 'Selected US legislation referenced in the learning material', 'akaza-adventure' ),
+		'items'       => array(
+			__( 'Sarbanes-Oxley Act', 'akaza-adventure' ),
+			__( 'Dodd-Frank Act', 'akaza-adventure' ),
+			__( 'False Claims Act', 'akaza-adventure' ),
+		),
+		'image_label' => __( 'Image Space — US', 'akaza-adventure' ),
+		'image_hint'  => __( 'Suggested visual: US whistleblower protection legislation.', 'akaza-adventure' ),
+		'image_alt'   => __( 'US whistleblower protections image placeholder', 'akaza-adventure' ),
+		'reverse'     => false,
+	),
 );
 ?>
 
@@ -45,45 +66,51 @@ $us_frameworks = array(
 			</p>
 		</div>
 
-		<div class="sl-whistleblowing-regulatory__table-wrap">
-			<table class="sl-whistleblowing-regulatory__table">
-				<thead>
-					<tr>
-						<th scope="col">
-							<?php esc_html_e( 'UK whistleblowing framework', 'akaza-adventure' ); ?>
-						</th>
-						<th scope="col">
-							<?php esc_html_e( 'US whistleblower protections introduced', 'akaza-adventure' ); ?>
-						</th>
-					</tr>
-				</thead>
+		<div class="sl-whistleblowing-regulatory__stack">
+			<?php foreach ( $frameworks as $framework ) : ?>
+				<?php
+				$card_mod = ! empty( $framework['reverse'] )
+					? ' sl-whistleblowing-regulatory__card--reverse'
+					: '';
+				?>
+				<article class="sl-whistleblowing-regulatory__card<?php echo esc_attr( $card_mod ); ?>">
 
-				<tbody>
-					<?php
-					$max_rows = max( count( $uk_frameworks ), count( $us_frameworks ) );
+					<div
+						class="sl-whistleblowing-regulatory__media"
+						role="img"
+						aria-label="<?php echo esc_attr( $framework['image_alt'] ); ?>"
+					>
+						<span class="sl-whistleblowing-regulatory__icon" aria-hidden="true">
+							<?php echo esc_html( $framework['code'] ); ?>
+						</span>
+						<strong><?php echo esc_html( $framework['image_label'] ); ?></strong>
+						<span><?php echo esc_html( $framework['image_hint'] ); ?></span>
+					</div>
 
-					for ( $index = 0; $index < $max_rows; $index++ ) :
-						?>
-						<tr>
-							<td>
-								<?php if ( isset( $uk_frameworks[ $index ] ) ) : ?>
+					<div class="sl-whistleblowing-regulatory__content">
+						<span class="sl-whistleblowing-regulatory__code">
+							<?php echo esc_html( $framework['code'] ); ?>
+						</span>
+
+						<h3><?php echo esc_html( $framework['title'] ); ?></h3>
+
+						<span class="sl-whistleblowing-regulatory__name">
+							<?php echo esc_html( $framework['subtitle'] ); ?>
+						</span>
+
+						<ul class="sl-whistleblowing-regulatory__list">
+							<?php foreach ( $framework['items'] as $item ) : ?>
+								<li>
 									<span class="sl-whistleblowing-regulatory__item">
-										<?php echo esc_html( $uk_frameworks[ $index ] ); ?>
+										<?php echo esc_html( $item ); ?>
 									</span>
-								<?php endif; ?>
-							</td>
+								</li>
+							<?php endforeach; ?>
+						</ul>
+					</div>
 
-							<td>
-								<?php if ( isset( $us_frameworks[ $index ] ) ) : ?>
-									<span class="sl-whistleblowing-regulatory__item">
-										<?php echo esc_html( $us_frameworks[ $index ] ); ?>
-									</span>
-								<?php endif; ?>
-							</td>
-						</tr>
-					<?php endfor; ?>
-				</tbody>
-			</table>
+				</article>
+			<?php endforeach; ?>
 		</div>
 
 		<div class="sl-whistleblowing-regulatory__notice">

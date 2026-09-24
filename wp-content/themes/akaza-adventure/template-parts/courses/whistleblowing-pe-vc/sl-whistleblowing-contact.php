@@ -21,7 +21,7 @@ $form_shortcode = sprintf(
 
 <section
 	id="contact"
-	class="sl-contact sl-contact--on-soft sl-whistleblowing-contact"
+	class="sl-contact sl-contact--on-white sl-whistleblowing-contact"
 	aria-labelledby="sl-whistleblowing-contact-title"
 >
 	<div class="container">

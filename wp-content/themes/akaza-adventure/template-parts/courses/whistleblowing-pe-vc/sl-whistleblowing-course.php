@@ -30,8 +30,7 @@ $course_images = array(
 	),
 );
 
-$main_image  = $course_images[0];
-$side_images = array_slice( $course_images, 1 );
+$total_slides = count( $course_images );
 ?>
 
 <section
@@ -62,46 +61,62 @@ $side_images = array_slice( $course_images, 1 );
 			</p>
 		</div>
 
-		<div class="sl-whistleblowing-course__gallery">
+		<div
+			class="sl-whistleblowing-course__gallery"
+			data-course-carousel
+		>
+			<button
+				type="button"
+				class="sl-whistleblowing-course__arrow sl-whistleblowing-course__arrow--prev"
+				data-course-prev
+				aria-label="<?php esc_attr_e( 'Previous course preview', 'akaza-adventure' ); ?>"
+			>
+				<span aria-hidden="true">←</span>
+			</button>
 
-			<figure class="sl-whistleblowing-course__card sl-whistleblowing-course__card--main">
-				<span class="sl-whistleblowing-course__num" aria-hidden="true">01</span>
-				<div class="sl-whistleblowing-course__frame">
-					<img
-						src="<?php echo esc_url( $main_image['image'] ); ?>"
-						alt="<?php echo esc_attr( $main_image['alt'] ); ?>"
-						loading="lazy"
-						decoding="async"
-					>
+			<div class="sl-whistleblowing-course__viewport">
+				<div
+					class="sl-whistleblowing-course__track"
+					data-course-track
+				>
+					<?php foreach ( $course_images as $index => $course_image ) : ?>
+						<figure class="sl-whistleblowing-course__card">
+							<span class="sl-whistleblowing-course__num" aria-hidden="true">
+								<?php echo esc_html( str_pad( (string) ( $index + 1 ), 2, '0', STR_PAD_LEFT ) ); ?>
+							</span>
+							<div class="sl-whistleblowing-course__frame">
+								<img
+									src="<?php echo esc_url( $course_image['image'] ); ?>"
+									alt="<?php echo esc_attr( $course_image['alt'] ); ?>"
+									loading="<?php echo 0 === $index ? 'eager' : 'lazy'; ?>"
+									decoding="async"
+								>
+							</div>
+							<figcaption class="sl-whistleblowing-course__caption">
+								<strong><?php echo esc_html( $course_image['label'] ); ?></strong>
+								<span><?php echo esc_html( $course_image['caption'] ); ?></span>
+							</figcaption>
+						</figure>
+					<?php endforeach; ?>
 				</div>
-				<figcaption class="sl-whistleblowing-course__caption">
-					<strong><?php echo esc_html( $main_image['label'] ); ?></strong>
-					<span><?php echo esc_html( $main_image['caption'] ); ?></span>
-				</figcaption>
-			</figure>
-
-			<div class="sl-whistleblowing-course__stack">
-				<?php foreach ( $side_images as $index => $course_image ) : ?>
-					<figure class="sl-whistleblowing-course__card">
-						<span class="sl-whistleblowing-course__num" aria-hidden="true">
-							<?php echo esc_html( str_pad( (string) ( $index + 2 ), 2, '0', STR_PAD_LEFT ) ); ?>
-						</span>
-						<div class="sl-whistleblowing-course__frame">
-							<img
-								src="<?php echo esc_url( $course_image['image'] ); ?>"
-								alt="<?php echo esc_attr( $course_image['alt'] ); ?>"
-								loading="lazy"
-								decoding="async"
-							>
-						</div>
-						<figcaption class="sl-whistleblowing-course__caption">
-							<strong><?php echo esc_html( $course_image['label'] ); ?></strong>
-							<span><?php echo esc_html( $course_image['caption'] ); ?></span>
-						</figcaption>
-					</figure>
-				<?php endforeach; ?>
 			</div>
 
+			<button
+				type="button"
+				class="sl-whistleblowing-course__arrow sl-whistleblowing-course__arrow--next"
+				data-course-next
+				aria-label="<?php esc_attr_e( 'Next course preview', 'akaza-adventure' ); ?>"
+			>
+				<span aria-hidden="true">→</span>
+			</button>
+
+			<span
+				class="sl-whistleblowing-course__counter"
+				data-course-counter
+				aria-live="polite"
+			>
+				<?php echo esc_html( '1 / ' . $total_slides ); ?>
+			</span>
 		</div>
 
 	</div>
