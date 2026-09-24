@@ -69,7 +69,7 @@ $features = array(
 			<div class="sl-gifts-entertainment-organisations__content">
 
 				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'Enterprise Gifts & Entertainment Learning', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Enterprise Gifts & Entertainment eLearning', 'akaza-adventure' ); ?>
 				</span>
 
 				<h2 id="sl-gifts-entertainment-organisations-title">

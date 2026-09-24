@@ -28,7 +28,7 @@ $high_risk_images = array(
 			<span class="sl-home-sub-heading">
 				<?php
 				esc_html_e(
-					'Higher-Risk Situations',
+					'Course Scenarios',
 					'akaza-adventure'
 				);
 				?>
