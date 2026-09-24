@@ -4,7 +4,7 @@
 
 .sl-s-metrics-measure {
 	padding: 80px 0;
-	background: var(--sl-page-white, #ffffff);
+	background: var(--sl-page-bg, #f5f5f5);
 }
 
 .sl-s-metrics-measure__grid {
@@ -64,7 +64,7 @@
 	padding: 40px;
 	border: 1px solid rgba(22, 35, 78, 0.10);
 	border-radius: 16px;
-	background: var(--sl-page-bg, #f5f5f5);
+	background: var(--sl-page-white, #ffffff);
 	box-sizing: border-box;
 	color: var(--sl-page-muted, #6b7c93);
 	text-align: center;
