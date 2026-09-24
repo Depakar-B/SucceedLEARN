@@ -83,12 +83,14 @@ $support_items = array(
 					</p>
 
 					<p>
-						<?php
-						esc_html_e(
-							'One security-awareness ecosystem. Connected to the systems you already use.',
-							'akaza-adventure'
-						);
-						?>
+						<strong>
+							<?php
+							esc_html_e(
+								'One security-awareness ecosystem. Connected to the systems you already use.',
+								'akaza-adventure'
+							);
+							?>
+						</strong>
 					</p>
 				</div>
 
