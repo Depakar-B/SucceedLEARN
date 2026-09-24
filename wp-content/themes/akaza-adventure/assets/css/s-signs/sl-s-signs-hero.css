@@ -14,13 +14,7 @@
 
 .sl-s-signs-hero {
 	padding: 96px 0 88px;
-	background:
-		radial-gradient(
-			circle at 90% 20%,
-			rgba(37, 99, 235, 0.12),
-			transparent 34%
-		),
-		var(--sl-page-white, #ffffff);
+	background: var(--sl-page-white, #ffffff);
 }
 
 .sl-s-signs-hero__grid {
@@ -55,8 +49,8 @@
 }
 
 .sl-s-signs-hero__media {
-	position: sticky;
-	top: calc(var(--slf-header-clearance, 110px) + 24px);
+	position: static;
+	align-self: center;
 	width: 100%;
 	min-width: 0;
 }
