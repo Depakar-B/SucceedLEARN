@@ -4,7 +4,7 @@
 
 .sl-s-sync-suite {
 	padding: 80px 0;
-	background: var(--sl-page-bg, #f5f5f5);
+	background: var(--sl-page-white, #ffffff);
 }
 
 .sl-s-sync-suite__intro {
@@ -35,7 +35,7 @@
 	padding: 28px 26px;
 	border: 1px solid rgba(22, 35, 78, 0.10);
 	border-radius: 14px;
-	background: var(--sl-page-white, #ffffff);
+	background: var(--sl-page-bg, #f5f5f5);
 	box-sizing: border-box;
 }
 

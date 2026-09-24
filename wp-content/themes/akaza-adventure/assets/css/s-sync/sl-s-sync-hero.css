@@ -49,13 +49,7 @@ body.slf-body #main-content.sl-s-sync-page h3.sl-panel-title,
 
 .sl-s-sync-hero {
 	padding: 96px 0 88px;
-	background:
-		radial-gradient(
-			circle at 90% 20%,
-			rgba(37, 99, 235, 0.12),
-			transparent 34%
-		),
-		var(--sl-page-white, #ffffff);
+	background: var(--sl-page-white, #ffffff);
 }
 
 .sl-s-sync-hero__grid {
