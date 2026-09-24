@@ -1,6 +1,6 @@
 <?php
 /**
- * S-Sync — Why Organisations Choose S-Sync.
+ * S-Sync — Benefits of S-Sync.
  *
  * @package Akaza_Adventure
  */
@@ -46,7 +46,7 @@ $reasons = array(
 			</span>
 
 			<h2 id="sl-s-sync-choose-title">
-				<?php esc_html_e( 'Why Organisations Choose', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'Benefits of', 'akaza-adventure' ); ?>
 				<span><?php esc_html_e( 'S-Sync', 'akaza-adventure' ); ?></span>
 			</h2>
 
