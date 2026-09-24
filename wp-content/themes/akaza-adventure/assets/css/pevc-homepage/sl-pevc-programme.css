@@ -1,0 +1,63 @@
+/* PE/VC Homepage — Programme */
+
+.sl-pevc-programme {
+	padding: 92px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-pevc-programme__lead {
+	max-width: 850px;
+	margin-bottom: 0;
+	font-size: 1.12rem;
+}
+
+.sl-pevc-programme__grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+	margin-top: 38px;
+}
+
+.sl-pevc-programme__card {
+	padding: 27px;
+	background: var(--sl-page-white, #ffffff);
+	border: 1px solid #dfe3ea;
+	border-radius: 16px;
+}
+
+.sl-pevc-programme__card span {
+	display: grid;
+	place-items: center;
+	width: 40px;
+	height: 40px;
+	margin-bottom: 16px;
+	color: #ffffff;
+	background: var(--sl-page-navy, #16234e);
+	border-radius: 50%;
+	font-weight: 700;
+}
+
+.sl-pevc-programme__card h3 {
+	margin-bottom: 10px;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-pevc-programme__card p {
+	margin: 0;
+}
+
+@media (max-width: 1050px) {
+	.sl-pevc-programme__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 680px) {
+	.sl-pevc-programme {
+		padding: 65px 0;
+	}
+
+	.sl-pevc-programme__grid {
+		grid-template-columns: 1fr;
+	}
+}

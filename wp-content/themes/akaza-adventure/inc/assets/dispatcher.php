@@ -58,6 +58,7 @@ function akaza_get_page_asset_handlers() {
 		'page-templates/whistleblowing-pe-vc.php'                    => 'akaza_enqueue_whistleblowing_assets',
 		'page-templates/political-donations-pe-vc.php'               => 'akaza_enqueue_political_donations_assets',
 		'page-templates/smcr-pe-vc.php'                              => 'akaza_enqueue_smcr_assets',
+		'page-templates/pevc-compliance-training-programs.php'      => 'akaza_enqueue_pevc_homepage_assets',
 	);
 }
 

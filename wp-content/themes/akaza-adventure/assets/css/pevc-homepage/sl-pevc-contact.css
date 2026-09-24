@@ -1,0 +1,69 @@
+/* PE/VC Homepage — Contact / Request a Demo */
+
+.sl-pevc-contact {
+	padding: 92px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-pevc-contact__layout {
+	display: grid;
+	grid-template-columns: 0.8fr 1.2fr;
+	gap: 60px;
+	align-items: start;
+}
+
+.sl-pevc-contact__lead {
+	max-width: 520px;
+	font-size: 1.12rem;
+}
+
+.sl-pevc-contact__benefits {
+	margin: 28px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-pevc-contact__benefits li {
+	position: relative;
+	padding: 10px 0 10px 34px;
+	color: var(--sl-page-text, #4a4a4a);
+}
+
+.sl-pevc-contact__benefits li::before {
+	position: absolute;
+	left: 0;
+	top: 10px;
+	display: grid;
+	place-items: center;
+	width: 24px;
+	height: 24px;
+	color: #ffffff;
+	background: var(--sl-page-cta, #ea3e24);
+	border-radius: 50%;
+	content: "✓";
+	font-size: 0.75rem;
+}
+
+.sl-pevc-contact__form-wrap {
+	padding: 34px;
+	background: var(--sl-page-white, #ffffff);
+	border: 1px solid #dfe3ea;
+	border-radius: 26px;
+	box-shadow: 0 18px 48px rgba(22, 35, 77, 0.09);
+}
+
+@media (max-width: 1050px) {
+	.sl-pevc-contact__layout {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 680px) {
+	.sl-pevc-contact {
+		padding: 65px 0;
+	}
+
+	.sl-pevc-contact__form-wrap {
+		padding: 26px;
+	}
+}

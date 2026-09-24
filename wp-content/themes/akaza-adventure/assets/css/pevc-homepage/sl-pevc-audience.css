@@ -1,0 +1,76 @@
+/* PE/VC Homepage — Audience */
+
+.sl-pevc-audience {
+	padding: 92px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-pevc-audience__lead {
+	max-width: 850px;
+	margin-bottom: 0;
+	font-size: 1.12rem;
+}
+
+.sl-pevc-audience__grid {
+	display: grid;
+	grid-template-columns: repeat(6, minmax(0, 1fr));
+	margin-top: 40px;
+}
+
+.sl-pevc-audience__item {
+	padding: 18px;
+	text-align: center;
+	border-right: 1px solid #dfe3ea;
+}
+
+.sl-pevc-audience__item:last-child {
+	border-right: 0;
+}
+
+.sl-pevc-audience__icon {
+	display: grid;
+	place-items: center;
+	width: 48px;
+	height: 48px;
+	margin: 0 auto 14px;
+	color: var(--sl-page-primary, #1472ba);
+	background: #eef5fd;
+	border-radius: 50%;
+	font-weight: 700;
+}
+
+.sl-pevc-audience__item strong {
+	display: block;
+	color: var(--sl-page-navy, #16234e);
+	font-size: 0.95rem;
+	line-height: 1.35;
+}
+
+@media (max-width: 1050px) {
+	.sl-pevc-audience__grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.sl-pevc-audience__item:nth-child(3n) {
+		border-right: 0;
+	}
+}
+
+@media (max-width: 680px) {
+	.sl-pevc-audience {
+		padding: 65px 0;
+	}
+
+	.sl-pevc-audience__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.sl-pevc-audience__item {
+		border-right: 0;
+		border-bottom: 1px solid #dfe3ea;
+	}
+
+	.sl-pevc-audience__item:last-child {
+		border-bottom: 0;
+	}
+}

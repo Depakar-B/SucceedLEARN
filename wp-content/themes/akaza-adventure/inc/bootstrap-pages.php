@@ -134,6 +134,11 @@ function akaza_bootstrap_pages() {
 			'title'    => 'S-Phish',
 			'template' => 'page-templates/s-phish-phishing-simulation.php',
 		),
+		array(
+			'slug'     => 'private-equity-venture-capital-compliance-training',
+			'title'    => 'Private Equity and Venture Capital Compliance Training',
+			'template' => 'page-templates/pevc-compliance-training-programs.php',
+		),
 	);
 
 	$created_page = false;
