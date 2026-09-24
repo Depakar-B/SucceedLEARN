@@ -3,8 +3,13 @@
 	background: var(--sl-page-bg, #f5f5f5);
 }
 
-.sl-pci-laws__intro { margin-bottom: 40px; }
-.sl-pci-laws__intro h2 { margin: 0; }
+.sl-pci-laws__intro {
+	margin-bottom: 40px;
+}
+
+.sl-pci-laws__intro h2 {
+	margin: 0;
+}
 
 .sl-pci-laws__table-wrap {
 	width: 100%;
@@ -17,7 +22,7 @@
 
 .sl-pci-laws__table {
 	width: 100%;
-	min-width: 640px;
+	min-width: 720px;
 	border-collapse: separate;
 	border-spacing: 0;
 	table-layout: fixed;
@@ -25,22 +30,27 @@
 
 .sl-pci-laws__table th,
 .sl-pci-laws__table td {
-	padding: 20px 28px;
-	vertical-align: top;
+	padding: 18px 22px;
+	vertical-align: middle;
 }
 
 .sl-pci-laws__table thead th {
 	background: var(--sl-page-navy, #16234e);
 	color: #fff;
-	font-size: 16px;
+	font-size: 15px;
 	font-weight: 700;
 	text-align: left;
 }
 
 .sl-pci-laws__table thead th:first-child {
-	width: 34%;
+	width: 42%;
 	border-radius: 15px 0 0 0;
 	border-right: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.sl-pci-laws__table thead th:nth-child(2) {
+	border-right: 1px solid rgba(255, 255, 255, 0.14);
+	background: var(--sl-page-primary, #1472ba);
 }
 
 .sl-pci-laws__table thead th:last-child {
@@ -57,11 +67,21 @@
 	background: rgba(245, 243, 239, 0.55);
 }
 
+.sl-pci-laws__table tbody td:nth-child(2),
+.sl-pci-laws__table tbody td:nth-child(3) {
+	text-align: center;
+	border-right: 1px solid rgba(107, 124, 147, 0.14);
+}
+
+.sl-pci-laws__table tbody td:last-child {
+	border-right: 0;
+}
+
 .sl-pci-laws__cell {
 	display: block;
 	color: var(--sl-page-text, #16234e);
-	font-size: 16px;
-	line-height: 1.55;
+	font-size: 15px;
+	line-height: 1.5;
 }
 
 .sl-pci-laws__cell--highlight {
@@ -69,8 +89,23 @@
 	font-weight: 700;
 }
 
+.sl-pci-laws__mark {
+	font-size: 18px;
+	font-weight: 700;
+	color: var(--sl-page-muted, #6b7c93);
+}
+
+.sl-pci-laws__mark.is-yes {
+	color: var(--sl-page-primary, #1472ba);
+}
+
 @media (max-width: 767px) {
-	.sl-pci-laws { padding: 60px 0; }
+	.sl-pci-laws {
+		padding: 60px 0;
+	}
+
 	.sl-pci-laws__table th,
-	.sl-pci-laws__table td { padding: 16px 18px; }
+	.sl-pci-laws__table td {
+		padding: 14px 16px;
+	}
 }

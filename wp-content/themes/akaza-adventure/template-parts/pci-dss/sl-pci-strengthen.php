@@ -1,6 +1,6 @@
 <?php
 /**
- * PCI DSS — Strengthen Payment Security Through Employee Awareness.
+ * PCI DSS — How the Training Supports PCI DSS Security Awareness.
  *
  * @package Akaza_Adventure
  */
@@ -19,19 +19,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="sl-pci-strengthen__inner">
 
 			<span class="sl-home-sub-heading">
-				<?php esc_html_e( 'Build Payment Resilience', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'Requirement 12.6 Alignment', 'akaza-adventure' ); ?>
 			</span>
 
 			<h2 id="sl-pci-strengthen-title">
-				<?php esc_html_e( 'Strengthen Payment Security Through', 'akaza-adventure' ); ?>
-				<span><?php esc_html_e( 'Employee Awareness', 'akaza-adventure' ); ?></span>
+				<?php esc_html_e( 'How the Training Supports', 'akaza-adventure' ); ?>
+				<span><?php esc_html_e( 'PCI DSS Security Awareness', 'akaza-adventure' ); ?></span>
 			</h2>
 
 			<div class="sl-pci-strengthen__copy">
 				<p>
 					<?php
 					esc_html_e(
-						'Secure payment processing depends on both technology and the people handling cardholder information.',
+						'PCI DSS Requirement 12.6 treats security-awareness education as an ongoing activity. A formal security-awareness programme should help personnel understand relevant information-security policies and procedures and their role in protecting cardholder data.',
 						'akaza-adventure'
 					);
 					?>
@@ -40,7 +40,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<p>
 					<?php
 					esc_html_e(
-						'Employees need to understand the information they are responsible for protecting, recognise suspicious payment activity, follow secure card-handling practices, and know how to respond when something doesn\'t look right.',
+						'PCI DSS v4.x also explicitly includes awareness of phishing, related attacks and social engineering within security-awareness training.',
 						'akaza-adventure'
 					);
 					?>
@@ -49,20 +49,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<p>
 					<?php
 					esc_html_e(
-						"SucceedLEARN's PCI DSS Cashier and Payments Handler Compliance eLearning Training gives frontline employees practical awareness of the security responsibilities associated with payment card transactions.",
+						"SucceedLEARN's two-module approach helps organisations provide awareness appropriate to different employee responsibilities, from foundational PCI DSS knowledge to practical payment-handler security.",
 						'akaza-adventure'
 					);
 					?>
-				</p>
-
-				<p class="sl-pci-strengthen__tagline">
-					<?php esc_html_e( 'Protect cardholder data. Strengthen payment-handling practices. Support PCI DSS compliance.', 'akaza-adventure' ); ?>
 				</p>
 			</div>
-
-			<a class="sl-content-btn sl-content-btn-primary" href="#request-demo">
-				<?php esc_html_e( 'Request a Demo', 'akaza-adventure' ); ?>
-			</a>
 
 		</div>
 

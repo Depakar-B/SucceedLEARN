@@ -1,6 +1,6 @@
 <?php
 /**
- * PCI DSS — Who Should Take PCI DSS Compliance Training?
+ * PCI DSS — Who Should Take PCI DSS Training?
  *
  * @package Akaza_Adventure
  */
@@ -11,28 +11,30 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $audiences = array(
 	array(
-		'title' => __( 'Cashiers & Frontline Employees', 'akaza-adventure' ),
-		'text'  => __( 'Employees responsible for processing card-present transactions and interacting directly with customers at the point of payment.', 'akaza-adventure' ),
+		'title'  => __( 'PCI DSS Employee Awareness Training', 'akaza-adventure' ),
+		'lead'   => __( 'Suitable for employees who require foundational awareness of PCI DSS and payment-data security, including relevant:', 'akaza-adventure' ),
+		'people' => array(
+			__( 'Employees working within PCI DSS-scoped environments', 'akaza-adventure' ),
+			__( 'Operational teams', 'akaza-adventure' ),
+			__( 'Customer-support teams', 'akaza-adventure' ),
+			__( 'Administrative employees', 'akaza-adventure' ),
+			__( 'Managers and supervisors', 'akaza-adventure' ),
+			__( 'Employees who may encounter payment or cardholder information', 'akaza-adventure' ),
+		),
 	),
 	array(
-		'title' => __( 'Card-Not-Present Payment Handlers', 'akaza-adventure' ),
-		'text'  => __( 'Employees processing payments through phone, email, online, or other card-not-present channels.', 'akaza-adventure' ),
-	),
-	array(
-		'title' => __( 'Retail, Hospitality & Service Employees', 'akaza-adventure' ),
-		'text'  => __( 'Employees with access to PoS systems or responsibilities involving customer payment processing.', 'akaza-adventure' ),
-	),
-	array(
-		'title' => __( 'Payment Handlers', 'akaza-adventure' ),
-		'text'  => __( 'Employees responsible for verifying payment cards, processing transactions, recognizing suspicious activity, and following payment-security procedures.', 'akaza-adventure' ),
-	),
-	array(
-		'title' => __( 'Employees with Access to Cardholder Data', 'akaza-adventure' ),
-		'text'  => __( 'Employees authorized to store, access, manage, or otherwise handle cardholder information and transaction receipts.', 'akaza-adventure' ),
-	),
-	array(
-		'title' => __( 'Supervisors & Managers', 'akaza-adventure' ),
-		'text'  => __( 'Employees responsible for overseeing payment operations, supporting frontline payment handlers, and managing escalation procedures such as Code-10 calls.', 'akaza-adventure' ),
+		'title'  => __( 'Cashier & Payment Handler Training', 'akaza-adventure' ),
+		'lead'   => __( 'Suitable for employees directly involved in accepting, processing or handling card payments, including:', 'akaza-adventure' ),
+		'people' => array(
+			__( 'Cashiers', 'akaza-adventure' ),
+			__( 'Retail employees', 'akaza-adventure' ),
+			__( 'Front-desk employees', 'akaza-adventure' ),
+			__( 'Customer-service representatives processing payments', 'akaza-adventure' ),
+			__( 'Telephone payment handlers', 'akaza-adventure' ),
+			__( 'Hospitality employees', 'akaza-adventure' ),
+			__( 'Payment operations teams', 'akaza-adventure' ),
+			__( 'Supervisors responsible for payment-handling teams', 'akaza-adventure' ),
+		),
 	),
 );
 ?>
@@ -50,18 +52,13 @@ $audiences = array(
 			</span>
 
 			<h2 id="sl-pci-audience-title">
-				<?php esc_html_e( 'Who Should Take PCI DSS', 'akaza-adventure' ); ?>
-				<span><?php esc_html_e( 'Compliance Training?', 'akaza-adventure' ); ?></span>
+				<?php esc_html_e( 'Who Should Take', 'akaza-adventure' ); ?>
+				<span><?php esc_html_e( 'PCI DSS Training?', 'akaza-adventure' ); ?></span>
 			</h2>
 
-			<p>
-				<?php
-				esc_html_e(
-					'The course is designed for employees who handle card payments, cardholder information, payment systems, or related transaction data as part of their role.',
-					'akaza-adventure'
-				);
-				?>
-			</p>
+			<h3 class="sl-pci-audience__subtitle">
+				<?php esc_html_e( 'Assign Awareness Based on Employee Responsibilities', 'akaza-adventure' ); ?>
+			</h3>
 
 		</div>
 
@@ -74,8 +71,13 @@ $audiences = array(
 						<?php echo esc_html( $audience['title'] ); ?>
 					</h3>
 					<p>
-						<?php echo esc_html( $audience['text'] ); ?>
+						<?php echo esc_html( $audience['lead'] ); ?>
 					</p>
+					<ul class="sl-pci-audience__list">
+						<?php foreach ( $audience['people'] as $person ) : ?>
+							<li><?php echo esc_html( $person ); ?></li>
+						<?php endforeach; ?>
+					</ul>
 				</article>
 
 			<?php endforeach; ?>

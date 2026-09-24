@@ -131,7 +131,7 @@ function akaza_bootstrap_pages() {
 		),
 		array(
 			'slug'     => 'pci-dss',
-			'title'    => 'PCI DSS Compliance Training for Cashiers & Payment Handlers',
+			'title'    => 'PCI DSS Awareness Training for Employees & Payment Handlers',
 			'template' => 'page-templates/pci-dss.php',
 		),
 	);

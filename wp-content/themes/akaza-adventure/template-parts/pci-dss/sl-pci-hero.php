@@ -25,17 +25,37 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</span>
 
 				<h1 id="sl-pci-hero-title">
-					<?php esc_html_e( 'PCI DSS Compliance Training for Cashiers & Payment Handlers', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'PCI DSS Awareness Training for Employees & Payment Handlers', 'akaza-adventure' ); ?>
 				</h1>
 
 				<h2 class="sl-hero-h2">
-					<?php esc_html_e( 'Build Secure Payment-Handling Practices. Protect Cardholder Data.', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Build Employee Awareness. Strengthen Payment Card Data Security.', 'akaza-adventure' ); ?>
 				</h2>
 
 				<p>
 					<?php
 					esc_html_e(
-						'Help employees who handle payment card information understand their responsibilities under the Payment Card Industry Data Security Standard (PCI DSS) and apply secure payment practices during everyday transactions.',
+						"SucceedLEARN's PCI DSS Awareness Training provides role-relevant learning through two dedicated training modules:",
+						'akaza-adventure'
+					);
+					?>
+				</p>
+
+				<p>
+					<strong><?php esc_html_e( 'PCI DSS Employee Awareness Training', 'akaza-adventure' ); ?></strong>
+					<?php
+					esc_html_e(
+						' — foundational awareness for employees who need to understand PCI DSS, cardholder data and their responsibilities.',
+						'akaza-adventure'
+					);
+					?>
+				</p>
+
+				<p>
+					<strong><?php esc_html_e( 'PCI DSS Training for Cashiers & Payment Handlers', 'akaza-adventure' ); ?></strong>
+					<?php
+					esc_html_e(
+						' — practical, role-focused training for employees directly involved in processing or handling card payments.',
 						'akaza-adventure'
 					);
 					?>
@@ -44,16 +64,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<p>
 					<?php
 					esc_html_e(
-						"SucceedLEARN's PCI DSS Cashier and Payments Handler Compliance eLearning Training provides practical, role-specific learning for employees who process, access, store, or handle cardholder information.",
-						'akaza-adventure'
-					);
-					?>
-				</p>
-
-				<p>
-					<?php
-					esc_html_e(
-						'Through payment scenarios and interactive learning, employees develop awareness of PCI DSS requirements, secure cardholder-data handling, payment fraud, social engineering, Code-10 authorisation calls, and the practices required when handling card-present and card-not-present transactions.',
+						'Together, the modules help organisations deliver PCI DSS security awareness training appropriate to different employee responsibilities.',
 						'akaza-adventure'
 					);
 					?>

@@ -1,6 +1,6 @@
 <?php
 /**
- * PCI DSS — Why PCI DSS Awareness Matters for Payment Handlers.
+ * PCI DSS — Why PCI DSS Security Awareness Matters.
  *
  * @package Akaza_Adventure
  */
@@ -31,15 +31,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</span>
 
 				<h2 id="sl-pci-why-title">
-					<?php esc_html_e( 'Why PCI DSS Awareness Matters for', 'akaza-adventure' ); ?>
-					<span><?php esc_html_e( 'Payment Handlers', 'akaza-adventure' ); ?></span>
+					<?php esc_html_e( 'Why PCI DSS Security Awareness', 'akaza-adventure' ); ?>
+					<span><?php esc_html_e( 'Matters', 'akaza-adventure' ); ?></span>
 				</h2>
 
 				<div class="sl-pci-why__copy">
 					<p>
 						<?php
 						esc_html_e(
-							'Employees handling payment cards operate at one of the most important points in the payment-security process.',
+							'PCI DSS is designed to help organizations protect payment account data through technical, operational and organizational security requirements.',
 							'akaza-adventure'
 						);
 						?>
@@ -48,7 +48,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<p>
 						<?php
 						esc_html_e(
-							'Whether a transaction takes place at a physical PoS terminal, over the phone, or through another card-not-present process, employees may encounter cardholder information, suspicious transactions, fraudulent activity, and social-engineering attempts.',
+							'Technology and security controls are important, but employees also need to understand their responsibilities.',
 							'akaza-adventure'
 						);
 						?>
@@ -57,7 +57,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<p>
 						<?php
 						esc_html_e(
-							'PCI DSS establishes security requirements for organisations that store, process, or transmit cardholder data. However, effective payment security also depends on employees understanding how those requirements affect their everyday responsibilities.',
+							'PCI DSS Requirement 12.6 establishes security-awareness education as an ongoing activity and requires a formal awareness programme to make personnel aware of relevant information-security policies, procedures and their role in protecting cardholder data. Current requirements also specifically include awareness of phishing, related attacks and social engineering.',
 							'akaza-adventure'
 						);
 						?>
@@ -66,7 +66,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<p>
 						<?php
 						esc_html_e(
-							'PCI DSS awareness training helps payment handlers recognise sensitive cardholder information, follow secure payment practices, identify potential fraud, and respond appropriately when suspicious activity occurs.',
+							'Different employees, however, interact with payment data differently.',
+							'akaza-adventure'
+						);
+						?>
+					</p>
+
+					<p>
+						<?php
+						esc_html_e(
+							'A general employee may need to understand what PCI DSS is, what cardholder data is and how it should be protected.',
+							'akaza-adventure'
+						);
+						?>
+					</p>
+
+					<p>
+						<?php
+						esc_html_e(
+							'A cashier or payment handler needs more practical awareness of card-present and card-not-present transactions, payment fraud, social engineering and suspicious payment activity.',
 							'akaza-adventure'
 						);
 						?>
