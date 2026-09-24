@@ -1,0 +1,59 @@
+/*
+ * SucceedLEARN — Bordered pill eyebrow / sub-heading (opt-in)
+ *
+ * NOT loaded site-wide. Enqueue only on pages that need this look:
+ *
+ *   akaza_enqueue_theme_style(
+ *     'akaza-global-sub-heading',
+ *     'sl-global-sub-heading.css',
+ *     array( 'akaza-main', 'akaza-global-title-accent' )
+ *   );
+ *
+ * Markup (unchanged):
+ *   <span class="sl-home-sub-heading">PE/VC Compliance Learning</span>
+ */
+
+:root {
+	--sl-sub-heading-size: 14px;
+	--sl-sub-heading-weight: 600;
+	--sl-sub-heading-line: 1.4;
+	--sl-sub-heading-padding-y: 8px;
+	--sl-sub-heading-padding-x: 16px;
+	--sl-sub-heading-radius: 50px;
+	--sl-sub-heading-border: 1px solid rgba(20, 114, 186, 0.28);
+	--sl-sub-heading-bg: var(--sl-page-white, #ffffff);
+	--sl-sub-heading-color: var(--sl-heading-accent, var(--sl-page-primary, #1472ba));
+	--sl-sub-heading-shadow: 0 8px 20px rgba(22, 35, 78, 0.04);
+}
+
+.sl-home-sub-heading,
+body.slf-body .sl-home-sub-heading,
+body.slf-body main .sl-home-sub-heading,
+body.slf-body #main-content .sl-home-sub-heading {
+	display: inline-flex;
+	align-items: center;
+	gap: 0;
+	width: fit-content;
+	margin: 0;
+	padding: var(--sl-sub-heading-padding-y) var(--sl-sub-heading-padding-x);
+	border: var(--sl-sub-heading-border);
+	border-radius: var(--sl-sub-heading-radius);
+	background: var(--sl-sub-heading-bg);
+	box-shadow: var(--sl-sub-heading-shadow);
+	font-family: var(--slf-font-body, "Space Grotesk", system-ui, sans-serif);
+	font-size: var(--sl-sub-heading-size);
+	font-weight: var(--sl-sub-heading-weight);
+	line-height: var(--sl-sub-heading-line);
+	letter-spacing: normal;
+	color: var(--sl-sub-heading-color);
+	box-sizing: border-box;
+}
+
+/* No left accent line — bordered pill is the visual treatment */
+.sl-home-sub-heading::before,
+body.slf-body .sl-home-sub-heading::before,
+body.slf-body main .sl-home-sub-heading::before,
+body.slf-body #main-content .sl-home-sub-heading::before {
+	content: none;
+	display: none;
+}
