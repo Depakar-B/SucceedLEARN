@@ -16,6 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php get_template_part( 'template-parts/courses/gifts-and-entertainment/sl-gifts-entertainment-individuals' ); ?>
 	<?php get_template_part( 'template-parts/courses/gifts-and-entertainment/sl-gifts-entertainment-organisations' ); ?>
 	<?php get_template_part( 'template-parts/courses/gifts-and-entertainment/sl-gifts-entertainment-pevc-suite' ); ?>
+	<?php get_template_part( 'template-parts/courses/gifts-and-entertainment/sl-gifts-entertainment-cpd' ); ?>
 	<?php get_template_part( 'template-parts/courses/gifts-and-entertainment/sl-gifts-entertainment-overview' ); ?>
 	<?php get_template_part( 'template-parts/courses/gifts-and-entertainment/sl-gifts-entertainment-risk' ); ?>
 	<?php get_template_part( 'template-parts/courses/gifts-and-entertainment/sl-gifts-entertainment-decisions' ); ?>

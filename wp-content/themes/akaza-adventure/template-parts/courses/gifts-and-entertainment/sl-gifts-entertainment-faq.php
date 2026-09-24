@@ -48,7 +48,7 @@ get_template_part(
 	null,
 	array(
 		'id'            => 'frequently-asked-questions',
-		'section_class' => 'sl-gifts-entertainment-faq sl-faq-section--alt',
+		'section_class' => 'sl-gifts-entertainment-faq',
 		'eyebrow'       => __( 'Frequently Asked Questions', 'akaza-adventure' ),
 		'title_html'    => __( 'Gifts and Entertainment Training <span>FAQs for PE/VC Firms</span>', 'akaza-adventure' ),
 		'description'   => __( 'Concise answers to common questions about gifts, hospitality, entertainment and compliance.', 'akaza-adventure' ),

@@ -3,7 +3,7 @@
  */
 
 .sl-course-page .sl-gifts-entertainment-risk {
-	background: var(--course-light-bg, #f5f5f5);
+	background: var(--course-white, #ffffff);
 }
 
 .sl-course-page .sl-gifts-entertainment-risk__grid {
