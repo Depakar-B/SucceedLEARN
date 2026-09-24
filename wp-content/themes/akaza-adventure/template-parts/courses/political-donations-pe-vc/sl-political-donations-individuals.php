@@ -16,8 +16,8 @@ $features = array(
 	),
 	array(
 		'num'   => '02',
-		'title' => __( '30-minute duration', 'akaza-adventure' ),
-		'text'  => __( 'Complete the core political donations learning in approximately half an hour.', 'akaza-adventure' ),
+		'title' => __( '8-minute duration', 'akaza-adventure' ),
+		'text'  => __( 'Complete the core political donations learning in approximately 8 minutes.', 'akaza-adventure' ),
 	),
 	array(
 		'num'   => '03',
@@ -44,14 +44,14 @@ $features = array(
 			<div class="sl-political-donations-individuals__content">
 
 				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'Individual Political Donations Learning', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Individual Political Donations eLearning', 'akaza-adventure' ); ?>
 				</span>
 
 				<h2 id="sl-political-donations-individuals-title">
 					<?php
 					echo wp_kses_post(
 						__(
-							'Political Donations Training <span>For Individuals</span> - Start Immediately',
+							'Political Donations Training <span>For Individuals</span>',
 							'akaza-adventure'
 						)
 					);

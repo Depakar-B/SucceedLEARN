@@ -134,8 +134,7 @@ $courses = array(
 				<strong><?php esc_html_e( '$2/user/month for organisations with 10+ users', 'akaza-adventure' ); ?></strong>
 			</span>
 			<span class="sl-political-donations-pevc-suite__note">
-				<?php esc_html_e( 'Equivalent to:', 'akaza-adventure' ); ?>
-				<strong>$24/user/year</strong>
+				<?php esc_html_e( 'Billed annually at $24 per user', 'akaza-adventure' ); ?>
 			</span>
 		</div>
 

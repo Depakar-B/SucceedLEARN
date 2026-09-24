@@ -44,6 +44,12 @@ defined( 'ABSPATH' ) || exit;
 					?>
 				</p>
 
+				<div class="sl-aml-pe-vc-cta__actions">
+					<a class="sl-content-btn sl-content-btn-primary" href="#contact">
+						<?php esc_html_e( 'Request Demo', 'akaza-adventure' ); ?>
+					</a>
+				</div>
+
 			</div>
 
 			<figure class="sl-aml-pe-vc-cta__image">

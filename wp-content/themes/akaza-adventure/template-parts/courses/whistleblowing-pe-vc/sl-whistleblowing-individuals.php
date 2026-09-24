@@ -16,8 +16,8 @@ $features = array(
 	),
 	array(
 		'num'   => '02',
-		'title' => __( '30-minute duration', 'akaza-adventure' ),
-		'text'  => __( 'Complete the core whistleblowing learning in approximately half an hour.', 'akaza-adventure' ),
+		'title' => __( '12-minute duration', 'akaza-adventure' ),
+		'text'  => __( 'Complete the core whistleblowing learning in approximately 12 minutes.', 'akaza-adventure' ),
 	),
 	array(
 		'num'   => '03',
@@ -44,14 +44,14 @@ $features = array(
 			<div class="sl-whistleblowing-individuals__content">
 
 				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'Individual Whistleblowing Learning', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Individual Whistleblowing eLearning', 'akaza-adventure' ); ?>
 				</span>
 
 				<h2 id="sl-whistleblowing-individuals-title">
 					<?php
 					echo wp_kses_post(
 						__(
-							'Whistleblowing Training <span>For Individuals</span> - Start Immediately',
+							'Whistleblowing Training <span>For Individuals</span>',
 							'akaza-adventure'
 						)
 					);

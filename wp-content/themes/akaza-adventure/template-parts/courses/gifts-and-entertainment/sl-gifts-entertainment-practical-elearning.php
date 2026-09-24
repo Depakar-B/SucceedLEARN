@@ -26,7 +26,7 @@ $assessment_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/Image-8
 				<span class="sl-home-sub-heading">
 					<?php
 					esc_html_e(
-						'Practical E-Learning',
+						'Practical eLearning',
 						'akaza-adventure'
 					);
 					?>
@@ -36,7 +36,7 @@ $assessment_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/Image-8
 					<?php
 					echo wp_kses_post(
 						__(
-							'Scenario-Based Gifts and Entertainment <span>E-Learning for PE/VC</span>',
+							'Scenario-Based Gifts and Entertainment <span>eLearning for PE/VC</span>',
 							'akaza-adventure'
 						)
 					);

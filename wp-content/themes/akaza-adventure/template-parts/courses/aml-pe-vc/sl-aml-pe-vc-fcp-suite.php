@@ -12,7 +12,7 @@ $courses = array(
 	array(
 		'num'    => '01',
 		'title'  => __( 'AML Training', 'akaza-adventure' ),
-		'text'   => __( 'Build awareness of KYC, CDD, EDD, MLRO responsibilities, CFT, CPF and key financial crime risks.', 'akaza-adventure' ),
+		'text'   => __( 'Build awareness of CDD, EDD, MLRO responsibilities, CFT, CPF and key financial crime risks.', 'akaza-adventure' ),
 		'href'   => '#overview',
 		'active' => true,
 	),
@@ -113,8 +113,7 @@ $courses = array(
 				<strong><?php esc_html_e( '$1.50/user/month for organisations with 10+ users', 'akaza-adventure' ); ?></strong>
 			</span>
 			<span class="sl-aml-pe-vc-fcp-suite__note">
-				<?php esc_html_e( 'Equivalent to:', 'akaza-adventure' ); ?>
-				<strong>$18/user/year</strong>
+				<?php esc_html_e( 'Billed annually at $18 per user', 'akaza-adventure' ); ?>
 			</span>
 		</div>
 

@@ -69,14 +69,14 @@ $features = array(
 			<div class="sl-political-donations-organisations__content">
 
 				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'Enterprise Political Donations Learning', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Enterprise Political Donations eLearning', 'akaza-adventure' ); ?>
 				</span>
 
 				<h2 id="sl-political-donations-organisations-title">
 					<?php
 					echo wp_kses_post(
 						__(
-							'Political Donations Training <span>For Organisations</span> - Built for Scale',
+							'Political Donations Training <span>For Organisations</span>',
 							'akaza-adventure'
 						)
 					);

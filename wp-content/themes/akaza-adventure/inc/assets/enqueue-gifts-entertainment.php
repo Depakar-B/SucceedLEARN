@@ -35,7 +35,6 @@ function akaza_enqueue_gifts_entertainment_assets() {
 		'sl-gifts-entertainment-risk',
 		'sl-gifts-entertainment-decisions',
 		'sl-gifts-entertainment-learning-outcomes',
-		'sl-gifts-entertainment-course-content',
 		'sl-gifts-entertainment-target-audience',
 		'sl-gifts-entertainment-high-risk',
 		'sl-gifts-entertainment-legal-context',
