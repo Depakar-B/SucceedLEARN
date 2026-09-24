@@ -28,11 +28,13 @@ function akaza_enqueue_gifts_entertainment_assets() {
 
 	$sections = array(
 		'sl-gifts-entertainment-hero',
+		'sl-gifts-entertainment-individuals',
+		'sl-gifts-entertainment-organisations',
+		'sl-gifts-entertainment-pevc-suite',
 		'sl-gifts-entertainment-overview',
 		'sl-gifts-entertainment-risk',
 		'sl-gifts-entertainment-decisions',
 		'sl-gifts-entertainment-learning-outcomes',
-		'sl-gifts-entertainment-course-content',
 		'sl-gifts-entertainment-target-audience',
 		'sl-gifts-entertainment-high-risk',
 		'sl-gifts-entertainment-legal-context',
@@ -47,6 +49,13 @@ function akaza_enqueue_gifts_entertainment_assets() {
 			$deps
 		);
 	}
+
+	// Opt-in bordered pill eyebrow (sl-global-sub-heading.css).
+	akaza_enqueue_theme_style(
+		'akaza-global-sub-heading',
+		'sl-global-sub-heading.css',
+		array( 'akaza-main', 'akaza-global-title-accent' )
+	);
 
 	// Global FAQ accordion (CSS + JS). Registered in enqueue-core.php.
 	wp_enqueue_style( 'akaza-global-faq' );

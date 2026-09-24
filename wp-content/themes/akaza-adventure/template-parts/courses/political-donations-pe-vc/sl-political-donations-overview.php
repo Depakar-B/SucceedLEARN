@@ -11,6 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <section
+	id="overview"
 	class="sl-political-donations-overview"
 	aria-labelledby="sl-political-donations-overview-title"
 >

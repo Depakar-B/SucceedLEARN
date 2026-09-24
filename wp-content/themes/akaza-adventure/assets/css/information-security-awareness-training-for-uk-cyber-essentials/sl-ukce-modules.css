@@ -1,0 +1,163 @@
+/*
+ * UK Cyber Essentials Security Awareness — Module cards.
+ */
+
+.sl-ukce-modules {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-ukce-modules__heading {
+	margin: 0 0 40px;
+}
+
+.sl-ukce-modules__heading h2 {
+	margin: 0;
+}
+
+.sl-ukce-modules__grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 24px;
+}
+
+.sl-ukce-modules__card {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	padding: 28px 24px;
+	border: 1px solid rgba(107, 124, 147, 0.18);
+	border-radius: 16px;
+	background: var(--sl-page-white, #ffffff);
+	box-shadow: 0 8px 24px rgba(22, 35, 78, 0.04);
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.sl-ukce-modules__card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 14px 32px rgba(22, 35, 78, 0.1);
+}
+
+.sl-ukce-modules__number {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 38px;
+	height: 38px;
+	margin-bottom: 16px;
+	border-radius: 9px;
+	background: rgba(109, 195, 235, 0.22);
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.sl-ukce-modules__content {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
+
+.sl-ukce-modules__content .sl-panel-title {
+	margin: 0 0 8px;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-ukce-modules__tagline {
+	margin: 0 0 12px !important;
+	color: var(--sl-page-primary, #1472ba) !important;
+	font-size: 16px !important;
+	font-weight: 600 !important;
+	line-height: 1.4 !important;
+}
+
+.sl-ukce-modules__lead {
+	margin: 0 0 12px !important;
+	color: var(--sl-page-navy, #16234e) !important;
+	font-size: 15px !important;
+	font-weight: 600 !important;
+	line-height: 1.55 !important;
+}
+
+.sl-ukce-modules__content > p {
+	margin: 0 0 14px;
+	color: var(--sl-page-muted, #6b7c93);
+	font-size: 15px;
+	line-height: 1.6;
+}
+
+.sl-ukce-modules__topics {
+	margin-top: 4px !important;
+	margin-bottom: 14px !important;
+	padding-top: 12px;
+	border-top: 1px solid rgba(107, 124, 147, 0.14);
+	color: var(--sl-page-navy, #16234e) !important;
+	font-size: 14px !important;
+	line-height: 1.55 !important;
+}
+
+.sl-ukce-modules__topics strong {
+	display: block;
+	margin-bottom: 4px;
+	color: var(--sl-page-primary, #1472ba);
+	font-weight: 700;
+}
+
+.sl-ukce-modules__note {
+	margin: 0 0 18px !important;
+	padding: 12px 14px;
+	border-radius: 10px;
+	background: rgba(109, 195, 235, 0.14);
+	color: var(--sl-page-navy, #16234e) !important;
+	font-size: 14px !important;
+	line-height: 1.55 !important;
+}
+
+.sl-ukce-modules__link {
+	display: inline-flex;
+	align-items: center;
+	align-self: flex-start;
+	margin-top: auto;
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 1.4;
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+.sl-ukce-modules__link:hover,
+.sl-ukce-modules__link:focus {
+	color: var(--sl-page-navy, #16234e);
+	text-decoration: underline;
+}
+
+@media (max-width: 1199px) {
+	.sl-ukce-modules__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-ukce-modules {
+		padding: 60px 0;
+	}
+
+	.sl-ukce-modules__heading {
+		margin-bottom: 28px;
+	}
+
+	.sl-ukce-modules__grid {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
+	.sl-ukce-modules__card {
+		padding: 22px 20px;
+	}
+}

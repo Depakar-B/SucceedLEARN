@@ -1,0 +1,68 @@
+/* SucceedLEARN — AML PE/VC assessment */
+
+.sl-course-page .sl-aml-pe-vc-assessment {
+	background: var(--course-light-bg, #f5f5f5);
+}
+
+.sl-aml-pe-vc-assessment__panel {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: center;
+	gap: 40px;
+	padding: 45px;
+	border-radius: 24px;
+	background: var(--sl-page-navy, #16234d);
+}
+
+.sl-aml-pe-vc-assessment__eyebrow {
+	display: block;
+	margin-bottom: 13px;
+	color: #a9ccfa;
+	font-size: 0.78rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+}
+
+.sl-aml-pe-vc-assessment__content h2,
+.sl-aml-pe-vc-assessment__content p {
+	color: #ffffff;
+}
+
+.sl-aml-pe-vc-assessment__content h2 {
+	margin-bottom: 16px;
+}
+
+.sl-aml-pe-vc-assessment__content p {
+	margin: 0;
+	max-width: 640px;
+}
+
+.sl-aml-pe-vc-assessment__score {
+	min-width: 165px;
+	color: #ffffff;
+	text-align: center;
+}
+
+.sl-aml-pe-vc-assessment__score strong {
+	display: block;
+	font-size: 4rem;
+	line-height: 1;
+}
+
+.sl-aml-pe-vc-assessment__score span {
+	display: block;
+	margin-top: 8px;
+	font-weight: 600;
+}
+
+@media (max-width: 720px) {
+	.sl-aml-pe-vc-assessment__panel {
+		grid-template-columns: 1fr;
+		padding: 32px;
+	}
+
+	.sl-aml-pe-vc-assessment__score {
+		text-align: left;
+	}
+}

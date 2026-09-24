@@ -39,6 +39,8 @@ function akaza_get_page_asset_handlers() {
 		'page-templates/bystander-intervention-training.php'       => 'akaza_enqueue_iwc_course_assets',
 		'page-templates/global-workplace-compliance-training-for-employees.php' => 'akaza_enqueue_gwct_assets',
 		'page-templates/gdpr-employee-awareness-training.php'      => 'akaza_enqueue_gdpr_assets',
+		'page-templates/information-security-awareness-training-for-soc-2-compliance.php' => 'akaza_enqueue_soc2_assets',
+		'page-templates/information-security-awareness-training-for-uk-cyber-essentials.php' => 'akaza_enqueue_ukce_assets',
 		'page-templates/ferpa-training-for-school-and-university-staff.php' => 'akaza_enqueue_ferpa_assets',
 		'page-templates/workplace-harassment-prevention-training.php' => 'akaza_enqueue_whp_assets',
 		'page-templates/infosec-2026-cyber.php'                   => 'akaza_enqueue_infosec_2026_cyber_assets',
@@ -47,11 +49,17 @@ function akaza_get_page_asset_handlers() {
 		'page-templates/dpdpa-readiness.php'                       => 'akaza_enqueue_dpdpa_readiness_assets',
 		'page-templates/hipaa-annual-workforce-training.php'       => 'akaza_enqueue_hipaa_assets',
 		'page-templates/s-aware.php'                               => 'akaza_enqueue_s_aware_assets',
+		'page-templates/s-bytes.php'                               => 'akaza_enqueue_s_bytes_assets',
 		'page-templates/s-phish-phishing-simulation.php'           => 'akaza_enqueue_s_phish_assets',
+		'page-templates/s-sync-security-awareness.php'             => 'akaza_enqueue_s_sync_assets',
+		'page-templates/s-signs-security-awareness.php'            => 'akaza_enqueue_s_signs_assets',
+		'page-templates/s-play-gamified-training.php'              => 'akaza_enqueue_s_play_assets',
+		'page-templates/s-metrics-tracking-reporting.php'          => 'akaza_enqueue_s_metrics_assets',
 		'page-templates/pci-dss.php'                               => 'akaza_enqueue_pci_dss_assets',
 		'page-templates/us-sexual-harassment-prevention-training.php' => 'akaza_enqueue_us_harassment_assets',
 		'page-templates/uk-sexual-harassment-prevention-training.php' => 'akaza_enqueue_uk_harassment_assets',
 		'page-templates/gifts-and-entertainment.php'                 => 'akaza_enqueue_gifts_entertainment_assets',
+		'page-templates/aml-pe-vc.php'                               => 'akaza_enqueue_aml_pe_vc_assets',
 		'page-templates/insider-trading.php'                         => 'akaza_enqueue_insider_trading_assets',
 		'page-templates/tax-evasion-facilitation.php'                => 'akaza_enqueue_tax_evasion_assets',
 		'page-templates/anti-bribery-anti-corruption.php'            => 'akaza_enqueue_anti_bribery_assets',
@@ -96,6 +104,11 @@ function akaza_enqueue_page_assets() {
 
 	if ( function_exists( 'akaza_is_csa_landing_page' ) && akaza_is_csa_landing_page() ) {
 		akaza_enqueue_csa_assets();
+		return;
+	}
+
+	if ( is_page( 's-byte' ) || is_page( 's-bytes' ) ) {
+		akaza_enqueue_s_bytes_assets();
 		return;
 	}
 

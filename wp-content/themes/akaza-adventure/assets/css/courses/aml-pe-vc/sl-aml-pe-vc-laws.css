@@ -1,0 +1,127 @@
+/* SucceedLEARN — AML PE/VC laws */
+
+.sl-course-page .sl-aml-pe-vc-laws {
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-aml-pe-vc-laws h2 > span {
+	color: var(--sl-page-primary, #135db7);
+}
+
+.sl-aml-pe-vc-laws__intro {
+	max-width: 810px;
+	margin-bottom: 42px;
+	font-size: 1.05rem;
+}
+
+.sl-aml-pe-vc-laws__stage {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 28px;
+	margin-top: 40px;
+}
+
+.sl-aml-pe-vc-laws__track {
+	position: relative;
+	padding: 32px;
+	background: #ffffff;
+	border: 1px solid #dde3eb;
+	border-radius: 24px;
+	box-shadow: 0 12px 32px rgba(22, 35, 77, 0.06);
+}
+
+.sl-aml-pe-vc-laws__track::before {
+	content: "";
+	position: absolute;
+	top: 104px;
+	bottom: 45px;
+	left: 58px;
+	width: 3px;
+	background: linear-gradient(#135db7, rgba(19, 93, 183, 0.15));
+}
+
+.sl-aml-pe-vc-laws__track--us::before {
+	background: linear-gradient(#ea3f23, rgba(234, 63, 35, 0.15));
+}
+
+.sl-aml-pe-vc-laws__track-head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	margin-bottom: 30px;
+}
+
+.sl-aml-pe-vc-laws__label {
+	padding: 8px 13px;
+	border-radius: 999px;
+	background: #edf5fd;
+	color: #135db7;
+	font-size: 0.8rem;
+	font-weight: 700;
+}
+
+.sl-aml-pe-vc-laws__track--us .sl-aml-pe-vc-laws__label {
+	background: #fff3ef;
+	color: #ea3f23;
+}
+
+.sl-aml-pe-vc-laws__country {
+	color: var(--sl-page-navy, #16234d);
+	font-size: 1.45rem;
+	font-weight: 700;
+}
+
+.sl-aml-pe-vc-laws__event {
+	position: relative;
+	display: grid;
+	grid-template-columns: 56px 1fr;
+	gap: 18px;
+	margin-bottom: 27px;
+}
+
+.sl-aml-pe-vc-laws__event:last-child {
+	margin-bottom: 0;
+}
+
+.sl-aml-pe-vc-laws__year {
+	position: relative;
+	z-index: 2;
+	width: 52px;
+	height: 52px;
+	display: grid;
+	place-items: center;
+	border-radius: 13px;
+	background: #135db7;
+	color: #ffffff;
+	font-size: 0.78rem;
+	font-weight: 700;
+}
+
+.sl-aml-pe-vc-laws__track--us .sl-aml-pe-vc-laws__year {
+	background: #ea3f23;
+}
+
+.sl-aml-pe-vc-laws__event h3 {
+	margin-bottom: 6px;
+	font-size: 1.05rem;
+	color: #171f3c;
+}
+
+.sl-aml-pe-vc-laws__event p {
+	margin: 0;
+	font-size: 0.93rem;
+	color: #555e70;
+}
+
+@media (max-width: 1000px) {
+	.sl-aml-pe-vc-laws__stage {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 720px) {
+	.sl-aml-pe-vc-laws__track::before {
+		display: none;
+	}
+}

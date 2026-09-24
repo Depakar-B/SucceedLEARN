@@ -1,0 +1,53 @@
+/* SucceedLEARN — AML PE/VC overview */
+
+.sl-course-page .sl-aml-pe-vc-overview {
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-aml-pe-vc-overview__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 65px;
+	align-items: center;
+}
+
+.sl-aml-pe-vc-overview__content h2 > span {
+	color: var(--sl-page-primary, #135db7);
+}
+
+.sl-aml-pe-vc-overview__definition {
+	margin-top: 25px;
+	padding: 23px 25px;
+	border-left: 5px solid #135db7;
+	background: #ffffff;
+	box-shadow: 0 8px 24px rgba(22, 35, 77, 0.05);
+}
+
+.sl-aml-pe-vc-overview__definition strong {
+	color: var(--sl-page-navy, #16234d);
+}
+
+.sl-aml-pe-vc-overview__definition p {
+	margin: 8px 0 0;
+	color: #555e70;
+}
+
+.sl-aml-pe-vc-overview__image {
+	margin: 0;
+	overflow: hidden;
+	border-radius: 24px;
+}
+
+.sl-aml-pe-vc-overview__image img {
+	display: block;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+@media (max-width: 1000px) {
+	.sl-aml-pe-vc-overview__grid {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+}

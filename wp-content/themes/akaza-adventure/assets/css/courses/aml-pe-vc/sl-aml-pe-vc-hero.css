@@ -1,0 +1,104 @@
+/* SucceedLEARN — AML PE/VC hero */
+
+.sl-course-page .sl-aml-pe-vc-hero {
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
+	padding-top: calc(var(--slf-header-clearance, 76px) + var(--course-section-space, 90px));
+	padding-bottom: var(--course-section-space, 90px);
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-aml-pe-vc-hero__bg-image {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: right center;
+	pointer-events: none;
+}
+
+.sl-aml-pe-vc-hero > .container {
+	position: relative;
+	z-index: 1;
+}
+
+.sl-aml-pe-vc-hero__content {
+	max-width: 560px;
+	min-width: 0;
+}
+
+.sl-aml-pe-vc-hero__content h1 {
+	margin-bottom: 24px;
+}
+
+.sl-aml-pe-vc-hero__content h1 > span {
+	color: var(--sl-page-primary, #135db7);
+}
+
+.sl-aml-pe-vc-hero__lead {
+	max-width: 760px;
+	margin-bottom: 18px;
+	font-size: 1.15rem;
+}
+
+.sl-aml-pe-vc-hero__tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 9px;
+	margin: 25px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-aml-pe-vc-hero__tags li {
+	padding: 8px 13px;
+	border-radius: 999px;
+	background: #edf5fd;
+	color: var(--sl-page-navy, #16234d);
+	font-size: 0.86rem;
+	font-weight: 600;
+}
+
+.sl-aml-pe-vc-hero .sl-hero-actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	gap: 14px;
+	margin-top: 30px;
+}
+
+.sl-aml-pe-vc-hero__cta-item {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 8px;
+}
+
+.sl-aml-pe-vc-hero__cta-label {
+	color: #374151;
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+@media (max-width: 1000px) {
+	.sl-aml-pe-vc-hero__content {
+		max-width: 100%;
+	}
+
+	.sl-aml-pe-vc-hero__bg-image {
+		opacity: 0.28;
+		object-position: center center;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-course-page .sl-aml-pe-vc-hero {
+		padding-top: calc(var(--slf-header-clearance, 76px) + var(--course-section-space-mobile, 60px));
+		padding-bottom: var(--course-section-space-mobile, 60px);
+	}
+}
