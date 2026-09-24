@@ -177,6 +177,20 @@
 	font-weight: 600;
 }
 
+@media (min-width: 1400px) {
+	.sl-whistleblowing-course__gallery {
+		max-width: 1100px;
+	}
+
+	.sl-whistleblowing-course__frame img {
+		max-height: 520px;
+	}
+
+	.sl-whistleblowing-course__arrow {
+		top: 272px;
+	}
+}
+
 @media (max-width: 980px) {
 	.sl-whistleblowing-course {
 		padding: 72px 0;
