@@ -1,7 +1,7 @@
 /* SucceedLEARN — AML PE/VC laws */
 
 .sl-course-page .sl-aml-pe-vc-laws {
-	background: var(--course-light-bg, #f5f5f5);
+	background: var(--sl-page-white, #ffffff);
 }
 
 .sl-aml-pe-vc-laws h2 > span {

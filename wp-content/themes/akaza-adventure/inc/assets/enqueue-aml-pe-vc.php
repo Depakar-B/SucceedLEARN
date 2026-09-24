@@ -31,6 +31,7 @@ function akaza_enqueue_aml_pe_vc_assets() {
 		'sl-aml-pe-vc-individuals',
 		'sl-aml-pe-vc-organisations',
 		'sl-aml-pe-vc-pevc-suite',
+		'sl-aml-pe-vc-cpd',
 		'sl-aml-pe-vc-fcp-suite',
 		'sl-aml-pe-vc-overview',
 		'sl-aml-pe-vc-learning-outcomes',

@@ -14,6 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php get_template_part( 'template-parts/courses/aml-pe-vc/sl-aml-pe-vc-individuals' ); ?>
 	<?php get_template_part( 'template-parts/courses/aml-pe-vc/sl-aml-pe-vc-organisations' ); ?>
 	<?php get_template_part( 'template-parts/courses/aml-pe-vc/sl-aml-pe-vc-pevc-suite' ); ?>
+	<?php get_template_part( 'template-parts/courses/aml-pe-vc/sl-aml-pe-vc-cpd' ); ?>
 	<?php get_template_part( 'template-parts/courses/aml-pe-vc/sl-aml-pe-vc-fcp-suite' ); ?>
 	<?php get_template_part( 'template-parts/courses/aml-pe-vc/sl-aml-pe-vc-overview' ); ?>
 	<?php get_template_part( 'template-parts/courses/aml-pe-vc/sl-aml-pe-vc-learning-outcomes' ); ?>
