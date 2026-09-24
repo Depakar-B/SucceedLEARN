@@ -15,15 +15,14 @@
 	box-sizing: border-box;
 }
 
+/* Alternating section rhythm: white / grey — FAQ lands on white. */
+.sl-s-play-page .sl-s-play-faq.sl-faq-section {
+	background: var(--sl-page-white, #ffffff);
+}
+
 .sl-s-play-hero {
 	padding: 96px 0 88px;
-	background:
-		radial-gradient(
-			circle at 90% 20%,
-			rgba(37, 99, 235, 0.12),
-			transparent 34%
-		),
-		var(--sl-page-white, #ffffff);
+	background: var(--sl-page-white, #ffffff);
 }
 
 .sl-s-play-hero__grid {
