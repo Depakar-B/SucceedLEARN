@@ -17,6 +17,19 @@
 	margin: 0;
 }
 
+body.slf-body main.sl-soc2-page .sl-soc2-modules__subtitle,
+body.slf-body #main-content.sl-soc2-page .sl-soc2-modules__subtitle,
+.sl-soc2-page .sl-soc2-modules__subtitle {
+	margin: 16px 0 0;
+	font-family: var(--slf-font-display, "Space Grotesk", system-ui, sans-serif);
+	font-size: 22px;
+	font-weight: 600;
+	line-height: 1.4;
+	letter-spacing: 0;
+	text-transform: none;
+	color: var(--sl-page-primary, #1472ba);
+}
+
 .sl-soc2-modules__grid {
 	display: grid;
 	grid-template-columns: repeat(3, minmax(0, 1fr));

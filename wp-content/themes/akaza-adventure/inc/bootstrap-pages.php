@@ -148,6 +148,8 @@ function akaza_bootstrap_pages() {
 			'slug'     => 'private-equity-venture-capital-compliance-training',
 			'title'    => 'Private Equity and Venture Capital Compliance Training',
 			'template' => 'page-templates/pevc-compliance-training-programs.php',
+		),
+		array(
 			'slug'     => 's-sync',
 			'title'    => 'S-Sync',
 			'template' => 'page-templates/s-sync-security-awareness.php',
