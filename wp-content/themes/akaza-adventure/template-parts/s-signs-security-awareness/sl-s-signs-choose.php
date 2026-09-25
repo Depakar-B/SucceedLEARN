@@ -1,6 +1,6 @@
 <?php
 /**
- * S-Signs — Why Organisations Choose S-Signs.
+ * S-Signs — Why choose Visual Security Awareness Reinforcements.
  *
  * @package Akaza_Adventure
  */
@@ -46,8 +46,8 @@ $reasons = array(
 			</span>
 
 			<h2 id="sl-s-signs-choose-title">
-				<?php esc_html_e( 'Why Organisations Choose', 'akaza-adventure' ); ?>
-				<span><?php esc_html_e( 'S-Signs', 'akaza-adventure' ); ?></span>
+				<?php esc_html_e( 'Why choose', 'akaza-adventure' ); ?>
+				<span><?php esc_html_e( 'Visual Security Awareness Reinforcements', 'akaza-adventure' ); ?></span>
 			</h2>
 
 		</div>
