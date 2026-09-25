@@ -1,173 +1,162 @@
-﻿/* =========================================================
-   SMCR Training for PE & VC Firms — Hero
-   ========================================================= */
+﻿/* SucceedLEARN — SMCR hero
+ * Full-bleed background image pattern (matches whistleblowing / gifts hero).
+ * Colour tokens / .container width from course-global.css.
+ */
 
-   .sl-smcr-hero {
-	padding-top: 120px;
-	padding-bottom: 72px;
-	background: #ffffff;
+.sl-course-page .sl-smcr-hero {
+	position: relative;
+	isolation: isolate;
 	overflow: hidden;
+	padding-top: calc(var(--slf-header-clearance, 76px) + var(--course-section-space, 90px));
+	padding-bottom: var(--course-section-space, 90px);
+	background: var(--sl-page-white, #ffffff);
 }
 
-.sl-smcr-hero__grid {
-	display: grid;
-	grid-template-columns: minmax(0, 1.05fr) minmax(460px, 0.95fr);
-	gap: 72px;
-	align-items: center;
+.sl-smcr-hero__bg-image {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: right center;
+	pointer-events: none;
+}
+
+.sl-smcr-hero > .container {
+	position: relative;
+	z-index: 1;
 }
 
 .sl-smcr-hero__content {
+	max-width: 650px;
 	min-width: 0;
 }
 
 .sl-smcr-hero__content h1 {
-	margin-top: 18px;
-	margin-bottom: 24px;
+	margin-bottom: 18px;
 }
 
 .sl-smcr-hero__content h1 span {
 	color: var(--sl-heading-accent, #1472ba);
 }
 
-.sl-smcr-hero__lead {
-	margin-bottom: 16px;
+.sl-smcr-hero__description {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
 }
 
-.sl-smcr-hero__content > p:last-of-type {
-	margin-bottom: 0;
+.sl-smcr-hero__description p {
+	margin: 0;
 }
-
-/* ---------------------------------------------------------
-   CTA
-   --------------------------------------------------------- */
 
 .sl-smcr-hero .sl-hero-actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	gap: 14px;
 	margin-top: 30px;
 }
 
-/* ---------------------------------------------------------
-   Course tags
-   --------------------------------------------------------- */
-
-.sl-smcr-hero__tags {
+.sl-smcr-hero__cta-item {
 	display: flex;
-	flex-wrap: wrap;
-	gap: 10px;
-	margin-top: 26px;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 8px;
 }
 
-.sl-smcr-hero__tags span {
-	display: inline-flex;
-	align-items: center;
-	padding: 9px 14px;
-	border: 1px solid rgba(20, 114, 186, 0.16);
-	border-radius: 999px;
-	background: rgba(20, 114, 186, 0.05);
-	color: var(--sl-page-navy, #16234e);
+.sl-smcr-hero__cta-label {
+	color: #374151;
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
 }
 
-/* ---------------------------------------------------------
-   Hero visual
-   --------------------------------------------------------- */
-
-.sl-smcr-hero__visual {
-	position: relative;
-	padding-bottom: 76px;
+.sl-smcr-hero__highlights {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	margin: 34px 0 0;
+	padding: 0;
+	list-style: none;
+	border-top: 1px solid rgba(22, 35, 78, 0.12);
 }
 
-.sl-smcr-hero__image {
-	width: 100%;
-	overflow: hidden;
-	border: 1px solid rgba(22, 35, 78, 0.10);
-	border-radius: 18px;
-	background: #ffffff;
+.sl-smcr-hero__highlight {
+	min-width: 0;
+	padding: 18px 16px 0 0;
 }
 
-.sl-smcr-hero__image-placeholder {
-	min-height: 500px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 32px;
-	background: #f5f5f5;
-	text-align: center;
+.sl-smcr-hero__highlight + .sl-smcr-hero__highlight {
+	padding-left: 16px;
+	border-left: 1px solid rgba(22, 35, 78, 0.12);
 }
 
-.sl-smcr-hero__message {
-	position: absolute;
-	right: 28px;
-	bottom: 0;
-	width: min(390px, calc(100% - 56px));
-	padding: 24px 26px;
-	background: #ffffff;
-	border: 1px solid rgba(22, 35, 78, 0.12);
-	border-left: 4px solid #1472ba;
-	border-radius: 14px;
-	box-shadow: 0 14px 35px rgba(22, 35, 78, 0.08);
+.sl-smcr-hero__highlight-title {
+	display: block;
+	color: var(--sl-page-primary, #1472ba);
+	font-weight: 700;
+	line-height: 1.4;
 }
-
-.sl-smcr-hero__message .sl-panel-title {
-	margin-top: 0;
-	margin-bottom: 8px;
-}
-
-.sl-smcr-hero__message p {
-	margin-bottom: 0;
-}
-
-/* ---------------------------------------------------------
-   Tablet
-   --------------------------------------------------------- */
 
 @media (max-width: 1100px) {
-	.sl-smcr-hero__grid {
-		grid-template-columns: minmax(0, 1fr) minmax(380px, 0.85fr);
-		gap: 48px;
+	.sl-smcr-hero__highlights {
+		grid-template-columns: 1fr 1fr;
 	}
 
-	.sl-smcr-hero__image-placeholder {
-		min-height: 440px;
+	.sl-smcr-hero__highlight {
+		padding: 14px 12px 0 0;
+	}
+
+	.sl-smcr-hero__highlight:nth-child(odd) {
+		border-left: 0;
+		padding-left: 0;
+	}
+
+	.sl-smcr-hero__highlight:nth-child(n + 3) {
+		padding-top: 14px;
+		border-top: 1px solid rgba(22, 35, 78, 0.12);
 	}
 }
 
-/* ---------------------------------------------------------
-   Mobile
-   --------------------------------------------------------- */
+@media (max-width: 1000px) {
+	.sl-smcr-hero__content {
+		max-width: 100%;
+	}
+
+	.sl-smcr-hero__bg-image {
+		opacity: 0.28;
+		object-position: center center;
+	}
+}
 
 @media (max-width: 767px) {
-	.sl-smcr-hero {
-		padding-top: 120px;
-		padding-bottom: 56px;
-	}
-
-	.sl-smcr-hero__grid {
-		grid-template-columns: 1fr;
-		gap: 40px;
-	}
-
-	.sl-smcr-hero__content h1 {
-		margin-bottom: 20px;
+	.sl-course-page .sl-smcr-hero {
+		padding-top: calc(var(--slf-header-clearance, 76px) + var(--course-section-space-mobile, 60px));
+		padding-bottom: var(--course-section-space-mobile, 60px);
 	}
 
 	.sl-smcr-hero .sl-hero-actions {
 		margin-top: 24px;
 	}
 
-	.sl-smcr-hero__tags {
-		margin-top: 22px;
+	.sl-smcr-hero__highlights {
+		grid-template-columns: 1fr;
+		margin-top: 28px;
 	}
 
-	.sl-smcr-hero__visual {
-		padding-bottom: 70px;
+	.sl-smcr-hero__highlight {
+		padding: 14px 0;
 	}
 
-	.sl-smcr-hero__image-placeholder {
-		min-height: 320px;
+	.sl-smcr-hero__highlight:first-child {
+		padding-top: 18px;
 	}
 
-	.sl-smcr-hero__message {
-		right: 16px;
-		width: calc(100% - 32px);
-		padding: 20px;
+	.sl-smcr-hero__highlight + .sl-smcr-hero__highlight {
+		padding-left: 0;
+		border-top: 1px solid rgba(22, 35, 78, 0.12);
+		border-left: 0;
 	}
 }

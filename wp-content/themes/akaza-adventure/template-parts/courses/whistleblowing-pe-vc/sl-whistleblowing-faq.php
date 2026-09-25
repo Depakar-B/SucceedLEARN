@@ -13,8 +13,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $faq_items = array(
 	array(
-		'question' => __( 'Is this course designed for UK investment firms?', 'akaza-adventure' ),
-		'answer'   => __( 'Yes. The course is positioned for UK investment environments and uses scenarios relevant to deal, investment and compliance teams.', 'akaza-adventure' ),
+		'question' => __( 'What is whistleblowing?', 'akaza-adventure' ),
+		'answer'   => __( 'Whistleblowing is the act of raising a concern about potential wrongdoing in the workplace, typically in the public interest, through appropriate reporting channels.', 'akaza-adventure' ),
 	),
 	array(
 		'question' => __( 'Does the course include both UK and US whistleblowing laws?', 'akaza-adventure' ),
@@ -60,7 +60,7 @@ get_template_part(
 	array(
 		'id'            => 'frequently-asked-questions',
 		'section_class' => 'sl-faq-section--alt sl-whistleblowing-faq',
-		'eyebrow'       => __( 'Course FAQs', 'akaza-adventure' ),
+		'eyebrow'       => __( 'FAQs', 'akaza-adventure' ),
 		'title_html'    => __( 'What Do Buyers Commonly Ask About Whistleblowing <span>Training?</span>', 'akaza-adventure' ),
 		'intro'         => __( 'Quick answers for organisations considering the course.', 'akaza-adventure' ),
 		'numbered'      => true,

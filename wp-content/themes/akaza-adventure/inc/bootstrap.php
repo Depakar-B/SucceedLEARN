@@ -68,6 +68,7 @@ require_once $akaza_inc . '/assets/enqueue-anti-bribery.php';
 require_once $akaza_inc . '/assets/enqueue-whistleblowing.php';
 require_once $akaza_inc . '/assets/enqueue-political-donations.php';
 require_once $akaza_inc . '/assets/enqueue-smcr.php';
+require_once $akaza_inc . '/assets/enqueue-pevc-homepage.php';
 require_once $akaza_inc . '/assets/enqueue-defensive-driving.php';
 require_once $akaza_inc . '/assets/dispatcher.php';
 

@@ -77,7 +77,7 @@ $hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/Whistle-blowi
 			<ul class="sl-whistleblowing-hero__highlights">
 				<li class="sl-whistleblowing-hero__highlight">
 					<span class="sl-whistleblowing-hero__highlight-title">
-						<?php esc_html_e( 'UK-focused learning', 'akaza-adventure' ); ?>
+						<?php esc_html_e( 'US & UK-focused learning', 'akaza-adventure' ); ?>
 					</span>
 				</li>
 				<li class="sl-whistleblowing-hero__highlight">

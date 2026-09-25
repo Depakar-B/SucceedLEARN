@@ -2,9 +2,9 @@
    SMCR Training for PE & VC Firms — Senior Managers
    ========================================================= */
 
-   .sl-smcr-senior-managers {
+.sl-smcr-senior-managers {
 	padding: 88px 0;
-	background: #ffffff;
+	background: #f5f5f5;
 }
 
 .sl-smcr-senior-managers__grid {
@@ -33,12 +33,40 @@
 }
 
 .sl-smcr-senior-managers__content > p:last-of-type {
-	margin-bottom: 32px;
+	margin-bottom: 28px;
 }
 
 /* ---------------------------------------------------------
-   Learning areas
+   Image (under intro copy)
    --------------------------------------------------------- */
+
+.sl-smcr-senior-managers__media {
+	margin-top: 0;
+}
+
+.sl-smcr-senior-managers__image {
+	width: 100%;
+	overflow: hidden;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 16px;
+	background: #ffffff;
+}
+
+.sl-smcr-senior-managers__image img {
+	display: block;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+/* ---------------------------------------------------------
+   Learning areas (right column)
+   --------------------------------------------------------- */
+
+.sl-smcr-senior-managers__learning {
+	align-self: center;
+	min-width: 0;
+}
 
 .sl-smcr-senior-managers__learning .sl-panel-title {
 	margin-top: 0;
@@ -86,32 +114,8 @@
 }
 
 /* ---------------------------------------------------------
-   Image
+   Image styles moved above with learning column
    --------------------------------------------------------- */
-
-.sl-smcr-senior-managers__media {
-	position: sticky;
-	top: calc(var(--slf-header-clearance, 110px) + 24px);
-	align-self: start;
-}
-
-.sl-smcr-senior-managers__image {
-	width: 100%;
-	overflow: hidden;
-	border: 1px solid rgba(22, 35, 78, 0.10);
-	border-radius: 16px;
-	background: #ffffff;
-}
-
-.sl-smcr-senior-managers__image-placeholder {
-	min-height: 520px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 32px;
-	background: #f5f5f5;
-	text-align: center;
-}
 
 /* ---------------------------------------------------------
    Tablet
@@ -125,14 +129,6 @@
 	.sl-smcr-senior-managers__grid {
 		grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
 		gap: 44px;
-	}
-
-	.sl-smcr-senior-managers__media {
-		position: static;
-	}
-
-	.sl-smcr-senior-managers__image-placeholder {
-		min-height: 420px;
 	}
 }
 
@@ -148,14 +144,6 @@
 	.sl-smcr-senior-managers__grid {
 		grid-template-columns: 1fr;
 		gap: 32px;
-	}
-
-	.sl-smcr-senior-managers__media {
-		order: -1;
-	}
-
-	.sl-smcr-senior-managers__image-placeholder {
-		min-height: 320px;
 	}
 
 	.sl-smcr-senior-managers__content h2 {

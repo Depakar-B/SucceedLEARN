@@ -30,6 +30,7 @@ function akaza_enqueue_whistleblowing_assets() {
 		'sl-whistleblowing-individuals',
 		'sl-whistleblowing-organisations',
 		'sl-whistleblowing-pevc-suite',
+		'sl-whistleblowing-cpd',
 		'sl-whistleblowing-overview',
 		'sl-whistleblowing-designed',
 		'sl-whistleblowing-audience',
@@ -53,6 +54,11 @@ function akaza_enqueue_whistleblowing_assets() {
 		'akaza-global-sub-heading',
 		'sl-global-sub-heading.css',
 		array( 'akaza-main', 'akaza-global-title-accent' )
+	);
+
+	akaza_enqueue_theme_script(
+		'akaza-sl-whistleblowing-course',
+		'courses/whistleblowing-pe-vc/sl-whistleblowing-course.js'
 	);
 
 	// Global FAQ accordion (CSS + JS). Registered in enqueue-core.php.

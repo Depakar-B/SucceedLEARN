@@ -9,7 +9,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$overview_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/Image-2_gifts.webp';
+$overview_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/Gifts-and-entertainemnt.webp';
 ?>
 
 <section

@@ -31,6 +31,7 @@ function akaza_enqueue_gifts_entertainment_assets() {
 		'sl-gifts-entertainment-individuals',
 		'sl-gifts-entertainment-organisations',
 		'sl-gifts-entertainment-pevc-suite',
+		'sl-gifts-entertainment-cpd',
 		'sl-gifts-entertainment-overview',
 		'sl-gifts-entertainment-risk',
 		'sl-gifts-entertainment-decisions',

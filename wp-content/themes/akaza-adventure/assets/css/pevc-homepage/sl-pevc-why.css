@@ -1,0 +1,57 @@
+/* PE/VC Homepage — Why it matters */
+
+.sl-pevc-why {
+	padding: 92px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-pevc-why__layout {
+	display: grid;
+	grid-template-columns: 0.9fr 1.1fr;
+	gap: 64px;
+	align-items: center;
+}
+
+.sl-pevc-why__lead {
+	max-width: 850px;
+	font-size: 1.12rem;
+}
+
+.sl-pevc-why__panel {
+	padding: 38px;
+	color: #ffffff;
+	background: linear-gradient(145deg, #16234d, #135db7);
+	border-radius: 26px;
+}
+
+.sl-pevc-why__panel h3,
+.sl-pevc-why__panel p,
+.sl-pevc-why__panel li {
+	color: #ffffff;
+}
+
+.sl-pevc-why__panel h3 {
+	margin-bottom: 8px;
+	font-size: 1.25rem;
+}
+
+.sl-pevc-why__panel ul {
+	margin: 20px 0 0;
+	padding-left: 20px;
+}
+
+.sl-pevc-why__panel li {
+	margin-bottom: 11px;
+}
+
+@media (max-width: 1050px) {
+	.sl-pevc-why__layout {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 680px) {
+	.sl-pevc-why {
+		padding: 65px 0;
+	}
+}

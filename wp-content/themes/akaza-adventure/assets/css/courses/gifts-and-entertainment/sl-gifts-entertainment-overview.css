@@ -4,7 +4,7 @@
  */
 
 .sl-course-page .sl-gifts-entertainment-overview {
-	background: var(--course-white, #ffffff);
+	background: var(--course-light-bg, #f5f5f5);
 }
 
 
@@ -34,7 +34,7 @@
 	display: grid;
 	grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
 	gap: 56px;
-	align-items: center;
+	align-items: start;
 }
 
 .sl-course-page .sl-gifts-entertainment-overview__body {
@@ -42,6 +42,7 @@
 	flex-direction: column;
 	gap: 18px;
 	min-width: 0;
+	padding-top: 8px;
 }
 
 .sl-course-page .sl-gifts-entertainment-overview__body p {
@@ -55,20 +56,23 @@
 
 .sl-course-page .sl-gifts-entertainment-overview__media {
 	min-width: 0;
+	margin-top: -120px;
 }
 
 .sl-course-page .sl-gifts-entertainment-overview__image {
 	margin: 0;
 	overflow: hidden;
 	border-radius: 24px;
+	background: transparent;
 }
 
 .sl-course-page .sl-gifts-entertainment-overview__image img {
 	display: block;
 	width: 100%;
-	height: 380px;
-	object-fit: cover;
-	object-position: center center;
+	height: auto;
+	max-height: 480px;
+	object-fit: contain;
+	object-position: center top;
 }
 
 
@@ -83,7 +87,8 @@
 	}
 
 	.sl-course-page .sl-gifts-entertainment-overview__image img {
-		height: 300px;
+		height: auto;
+		max-height: 400px;
 	}
 }
 
@@ -96,8 +101,13 @@
 		border-radius: 16px;
 	}
 
+	.sl-course-page .sl-gifts-entertainment-overview__media {
+		margin-top: 0;
+	}
+
 	.sl-course-page .sl-gifts-entertainment-overview__image img {
-		height: 220px;
+		height: auto;
+		max-height: 360px;
 	}
 
 	.sl-course-page .sl-gifts-entertainment-overview__lead {
