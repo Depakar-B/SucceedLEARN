@@ -24,6 +24,7 @@ function akaza_enqueue_pevc_homepage_assets() {
 		'sl-pevc-suite',
 		'sl-pevc-why',
 		'sl-pevc-decision',
+		'sl-pevc-image',
 		'sl-pevc-audience',
 		'sl-pevc-programme',
 		'sl-pevc-delivery',

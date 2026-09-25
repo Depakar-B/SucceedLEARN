@@ -64,7 +64,7 @@ get_template_part(
 	null,
 	array(
 		'id'            => 'faqs',
-		'section_class' => 'sl-pevc-faq',
+		'section_class' => 'sl-faq-section--alt sl-pevc-faq',
 		'eyebrow'       => __( 'Frequently asked questions', 'akaza-adventure' ),
 		'title'         => __( 'PE/VC Compliance Training FAQs', 'akaza-adventure' ),
 		'description'   => '',

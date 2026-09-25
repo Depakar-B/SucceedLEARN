@@ -2,7 +2,7 @@
 
 .sl-pevc-contact {
 	padding: 92px 0;
-	background: var(--sl-page-white, #ffffff);
+	background: var(--sl-page-bg, #f5f5f5);
 }
 
 .sl-pevc-contact__layout {

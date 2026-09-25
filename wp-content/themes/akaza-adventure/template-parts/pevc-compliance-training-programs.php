@@ -15,6 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php get_template_part( 'template-parts/pevc-compliance-training-programs/suite' ); ?>
 	<?php get_template_part( 'template-parts/pevc-compliance-training-programs/why-it-matters' ); ?>
 	<?php get_template_part( 'template-parts/pevc-compliance-training-programs/decision-journey' ); ?>
+	<?php get_template_part( 'template-parts/pevc-compliance-training-programs/image' ); ?>
 	<?php get_template_part( 'template-parts/pevc-compliance-training-programs/audience' ); ?>
 	<?php get_template_part( 'template-parts/pevc-compliance-training-programs/programme' ); ?>
 	<?php get_template_part( 'template-parts/pevc-compliance-training-programs/delivery' ); ?>
