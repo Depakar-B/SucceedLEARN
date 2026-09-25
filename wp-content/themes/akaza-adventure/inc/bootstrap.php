@@ -41,10 +41,10 @@ require_once $akaza_inc . '/assets/enqueue-clients.php';
 require_once $akaza_inc . '/assets/enqueue-inclusive.php';
 require_once $akaza_inc . '/assets/enqueue-iwc.php';
 require_once $akaza_inc . '/assets/enqueue-gwct.php';
-	require_once $akaza_inc . '/assets/enqueue-gdpr.php';
-	require_once $akaza_inc . '/assets/enqueue-soc2.php';
-	require_once $akaza_inc . '/assets/enqueue-ukce.php';
-	require_once $akaza_inc . '/assets/enqueue-ferpa.php';
+require_once $akaza_inc . '/assets/enqueue-gdpr.php';
+require_once $akaza_inc . '/assets/enqueue-soc2.php';
+require_once $akaza_inc . '/assets/enqueue-ukce.php';
+require_once $akaza_inc . '/assets/enqueue-ferpa.php';
 require_once $akaza_inc . '/assets/enqueue-whp.php';
 require_once $akaza_inc . '/assets/enqueue-infosec-2026-cyber.php';
 require_once $akaza_inc . '/assets/enqueue-dpdpa.php';
@@ -57,11 +57,7 @@ require_once $akaza_inc . '/assets/enqueue-s-sync.php';
 require_once $akaza_inc . '/assets/enqueue-s-signs.php';
 require_once $akaza_inc . '/assets/enqueue-s-play.php';
 require_once $akaza_inc . '/assets/enqueue-s-metrics.php';
-<<<<<<< HEAD
-require_once $akaza_inc . '/assets/enqueue-soc2.php';
-=======
 require_once $akaza_inc . '/assets/enqueue-pci-dss.php';
->>>>>>> origin/master
 require_once $akaza_inc . '/assets/enqueue-us-harassment.php';
 require_once $akaza_inc . '/assets/enqueue-uk-harassment.php';
 require_once $akaza_inc . '/assets/enqueue-gifts-entertainment.php';

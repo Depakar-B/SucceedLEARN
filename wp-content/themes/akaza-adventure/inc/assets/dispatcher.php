@@ -55,11 +55,7 @@ function akaza_get_page_asset_handlers() {
 		'page-templates/s-signs-security-awareness.php'            => 'akaza_enqueue_s_signs_assets',
 		'page-templates/s-play-gamified-training.php'              => 'akaza_enqueue_s_play_assets',
 		'page-templates/s-metrics-tracking-reporting.php'          => 'akaza_enqueue_s_metrics_assets',
-<<<<<<< HEAD
-		'page-templates/information-security-awareness-training-for-soc-2-compliance.php' => 'akaza_enqueue_soc2_assets',
-=======
 		'page-templates/pci-dss.php'                               => 'akaza_enqueue_pci_dss_assets',
->>>>>>> origin/master
 		'page-templates/us-sexual-harassment-prevention-training.php' => 'akaza_enqueue_us_harassment_assets',
 		'page-templates/uk-sexual-harassment-prevention-training.php' => 'akaza_enqueue_uk_harassment_assets',
 		'page-templates/gifts-and-entertainment.php'                 => 'akaza_enqueue_gifts_entertainment_assets',
