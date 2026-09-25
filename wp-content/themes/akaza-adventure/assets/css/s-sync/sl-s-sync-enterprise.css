@@ -1,0 +1,87 @@
+/**
+ * S-Sync — Designed for Enterprise IT & Security Teams
+ */
+
+.sl-s-sync-enterprise {
+	padding: 90px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-s-sync-enterprise__intro {
+	margin-bottom: 40px;
+}
+
+.sl-s-sync-enterprise__intro h2 {
+	margin-bottom: 0;
+}
+
+/* Section subtitle under h2 — same scale as SAP / S-Metrics. */
+body.slf-body main.sl-s-sync-page .sl-s-sync-enterprise__subtitle,
+body.slf-body #main-content.sl-s-sync-page .sl-s-sync-enterprise__subtitle,
+.sl-s-sync-page .sl-s-sync-enterprise__subtitle {
+	margin: 16px 0 0;
+	font-family: var(--slf-font-display, "Space Grotesk", system-ui, sans-serif);
+	font-size: 22px;
+	font-weight: 600;
+	line-height: 1.4;
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-s-sync-enterprise__cards {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 24px;
+}
+
+.sl-s-sync-enterprise__card {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	min-width: 0;
+	padding: 28px 24px;
+	border: 1px solid rgba(107, 124, 147, 0.18);
+	border-radius: 16px;
+	background: var(--sl-page-bg, #f5f5f5);
+	box-sizing: border-box;
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.sl-s-sync-enterprise__card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 14px 32px rgba(22, 35, 78, 0.08);
+}
+
+.sl-s-sync-enterprise__card .sl-panel-title {
+	margin: 0 0 12px;
+}
+
+.sl-s-sync-enterprise__card p {
+	margin: 0;
+}
+
+@media (max-width: 1199px) {
+	.sl-s-sync-enterprise__cards {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-s-sync-enterprise {
+		padding: 60px 0;
+	}
+
+	.sl-s-sync-enterprise__intro {
+		margin-bottom: 28px;
+	}
+
+	.sl-s-sync-enterprise__cards {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
+	.sl-s-sync-enterprise__card {
+		padding: 22px 20px;
+	}
+}

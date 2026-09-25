@@ -1,0 +1,136 @@
+/**
+ * S-Play — How S-Play Works
+ * Sticky left media + scrollable right step cards (S-Phish reference pattern).
+ */
+
+.sl-s-play-works {
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+	overflow: visible;
+}
+
+.sl-s-play-works__intro {
+	margin-bottom: 40px;
+}
+
+.sl-s-play-works__intro .sl-home-sub-heading {
+	display: block;
+	margin-bottom: 14px;
+}
+
+.sl-s-play-works__intro h2 {
+	margin-bottom: 0;
+}
+
+.sl-s-play-works__intro p {
+	margin: 16px 0 0;
+	max-width: 820px;
+}
+
+.sl-s-play-works__layout {
+	display: grid;
+	grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+	gap: 48px;
+	align-items: start;
+}
+
+.sl-s-play-works__media {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 110px) + 24px);
+	align-self: start;
+	width: 100%;
+	min-width: 0;
+}
+
+.sl-s-play-works__image-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 480px;
+	padding: 40px;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 16px;
+	background: var(--sl-page-white, #ffffff);
+	box-sizing: border-box;
+	color: var(--sl-page-muted, #6b7c93);
+	text-align: center;
+}
+
+.sl-s-play-works__media img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 16px;
+}
+
+.sl-s-play-works__cards {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	min-width: 0;
+}
+
+.sl-s-play-works__card {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	padding: 28px 24px;
+	border: 1px solid rgba(107, 124, 147, 0.18);
+	border-radius: 16px;
+	background: var(--sl-page-white, #ffffff);
+	box-sizing: border-box;
+}
+
+.sl-s-play-works__card .sl-panel-title {
+	margin: 0 0 12px;
+}
+
+.sl-s-play-works__card p {
+	margin: 0;
+}
+
+@media (max-width: 991px) {
+	.sl-s-play-works {
+		padding: 70px 0;
+	}
+
+	.sl-s-play-works__layout {
+		grid-template-columns: 1fr;
+		gap: 32px;
+	}
+
+	.sl-s-play-works__media {
+		position: static;
+		max-width: 560px;
+		margin: 0 auto;
+	}
+
+	.sl-s-play-works__image-placeholder {
+		min-height: 360px;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-s-play-works {
+		padding: 60px 0;
+	}
+
+	.sl-s-play-works__intro {
+		margin-bottom: 28px;
+	}
+
+	.sl-s-play-works__cards {
+		gap: 16px;
+	}
+
+	.sl-s-play-works__card {
+		padding: 22px 20px;
+	}
+
+	.sl-s-play-works__image-placeholder {
+		min-height: 280px;
+		padding: 28px;
+		border-radius: 12px;
+	}
+}

@@ -1,0 +1,91 @@
+/**
+ * S-Signs — Why Organisations Choose S-Signs
+ */
+
+.sl-s-signs-choose {
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-s-signs-choose__intro {
+	margin-bottom: 40px;
+}
+
+.sl-s-signs-choose__intro h2 {
+	margin-bottom: 0;
+}
+
+.sl-s-signs-choose__grid {
+	display: grid;
+	grid-template-columns: repeat(6, minmax(0, 1fr));
+	gap: 24px;
+}
+
+.sl-s-signs-choose__card {
+	display: flex;
+	flex-direction: column;
+	grid-column: span 2;
+	height: 100%;
+	min-width: 0;
+	padding: 28px 24px;
+	border: 1px solid rgba(107, 124, 147, 0.18);
+	border-radius: 16px;
+	background: var(--sl-page-white, #ffffff);
+	box-sizing: border-box;
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+/* Center the incomplete last row (cards 4–5). */
+.sl-s-signs-choose__card:nth-child(4):nth-last-child(2) {
+	grid-column: 2 / 4;
+}
+
+.sl-s-signs-choose__card:nth-child(5):last-child {
+	grid-column: 4 / 6;
+}
+
+.sl-s-signs-choose__card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 14px 32px rgba(22, 35, 78, 0.08);
+}
+
+.sl-s-signs-choose__card .sl-panel-title {
+	margin: 0 0 12px;
+}
+
+.sl-s-signs-choose__card p {
+	margin: 0;
+}
+
+@media (max-width: 1199px) {
+	.sl-s-signs-choose__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.sl-s-signs-choose__card,
+	.sl-s-signs-choose__card:nth-child(4):nth-last-child(2),
+	.sl-s-signs-choose__card:nth-child(5):last-child {
+		grid-column: auto;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-s-signs-choose {
+		padding: 60px 0;
+	}
+
+	.sl-s-signs-choose__intro {
+		margin-bottom: 28px;
+	}
+
+	.sl-s-signs-choose__grid {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
+	.sl-s-signs-choose__card {
+		padding: 22px 20px;
+	}
+}

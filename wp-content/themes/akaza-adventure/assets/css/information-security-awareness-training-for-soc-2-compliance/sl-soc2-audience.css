@@ -1,0 +1,100 @@
+/*
+ * SOC 2 Security Awareness — Audience.
+ */
+
+.sl-soc2-audience {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-soc2-audience__heading {
+	margin-bottom: 40px;
+}
+
+.sl-soc2-audience__heading h2 {
+	margin-bottom: 16px;
+}
+
+.sl-soc2-audience__heading p {
+	max-width: 860px;
+	margin: 0;
+}
+
+.sl-soc2-audience__grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 24px;
+}
+
+.sl-soc2-audience__card {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 28px 24px;
+	border: 1px solid rgba(107, 124, 147, 0.18);
+	border-radius: 16px;
+	background: var(--sl-page-bg, #f5f5f5);
+	box-shadow: 0 8px 24px rgba(22, 35, 78, 0.04);
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.sl-soc2-audience__card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 14px 32px rgba(22, 35, 78, 0.1);
+}
+
+.sl-soc2-audience__card h3 {
+	margin: 0 0 12px;
+	color: var(--sl-page-navy, #16234e);
+	font-size: 18px !important;
+	font-weight: 700;
+	line-height: 1.35;
+}
+
+.sl-soc2-audience__card p {
+	margin: 0;
+	color: var(--sl-page-muted, #6b7c93);
+	font-size: 15px;
+	line-height: 1.6;
+}
+
+@media (max-width: 1199px) {
+	.sl-soc2-audience__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.sl-soc2-audience__grid > .sl-soc2-audience__card:last-child:nth-child(odd) {
+		grid-column: 1 / -1;
+		width: 100%;
+		max-width: calc((100% - 24px) / 2);
+		justify-self: center;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-soc2-audience {
+		padding: 60px 0;
+	}
+
+	.sl-soc2-audience__heading {
+		margin-bottom: 28px;
+	}
+
+	.sl-soc2-audience__grid {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
+	.sl-soc2-audience__grid > .sl-soc2-audience__card:last-child:nth-child(odd) {
+		grid-column: auto;
+		max-width: none;
+	}
+
+	.sl-soc2-audience__card {
+		padding: 22px 20px;
+	}
+}

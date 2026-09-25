@@ -1,0 +1,120 @@
+/**
+ * S-Play — Why Gamified Learning Matters
+ */
+
+.sl-s-play-why {
+	padding: 76px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-s-play-why__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+	gap: 64px;
+	align-items: start;
+}
+
+.sl-s-play-why__content {
+	min-width: 0;
+}
+
+.sl-s-play-why__content .sl-home-sub-heading {
+	display: block;
+	margin-bottom: 14px;
+}
+
+.sl-s-play-why__content h2 {
+	margin-bottom: 0;
+}
+
+/* Section subtitle under h2 — same scale as SAP annual-training. */
+body.slf-body main.sl-s-play-page .sl-s-play-why__subtitle,
+body.slf-body #main-content.sl-s-play-page .sl-s-play-why__subtitle,
+.sl-s-play-page .sl-s-play-why__subtitle {
+	margin: 16px 0 14px;
+	font-family: var(--slf-font-display, "Space Grotesk", system-ui, sans-serif);
+	font-size: 22px;
+	font-weight: 600;
+	line-height: 1.4;
+	letter-spacing: 0;
+	text-transform: none;
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-s-play-why__copy {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.sl-s-play-why__copy p {
+	margin: 0;
+}
+
+.sl-s-play-why__list {
+	margin: 0;
+	padding-left: 1.35em;
+	list-style: disc;
+}
+
+.sl-s-play-why__list li {
+	list-style: disc;
+}
+
+.sl-s-play-why__list li + li {
+	margin-top: 6px;
+}
+
+.sl-s-play-why__media {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 110px) + 24px);
+	width: 100%;
+	min-width: 0;
+	align-self: start;
+}
+
+.sl-s-play-why__image-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 480px;
+	padding: 40px;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 16px;
+	background: var(--sl-page-white, #ffffff);
+	box-sizing: border-box;
+	color: var(--sl-page-muted, #6b7c93);
+	text-align: center;
+}
+
+@media (max-width: 991px) {
+	.sl-s-play-why {
+		padding: 64px 0;
+	}
+
+	.sl-s-play-why__grid {
+		grid-template-columns: 1fr;
+		gap: 42px;
+	}
+
+	.sl-s-play-why__media {
+		position: static;
+	}
+
+	.sl-s-play-why__image-placeholder {
+		min-height: 360px;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-s-play-why {
+		padding: 52px 0;
+	}
+
+	.sl-s-play-why__image-placeholder {
+		min-height: 280px;
+		padding: 28px;
+		border-radius: 12px;
+	}
+}
