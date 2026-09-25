@@ -21,7 +21,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php get_template_part( 'template-parts/courses/political-donations-pe-vc/sl-political-donations-overview' ); ?>
 	<?php get_template_part( 'template-parts/courses/political-donations-pe-vc/sl-political-donations-regulatory-context' ); ?>
 	<?php get_template_part( 'template-parts/courses/political-donations-pe-vc/sl-political-donations-learning-outcomes' ); ?>
-	<?php get_template_part( 'template-parts/courses/political-donations-pe-vc/sl-political-donations-activity' ); ?>
 	<?php get_template_part( 'template-parts/courses/political-donations-pe-vc/sl-political-donations-inside' ); ?>
 	<?php get_template_part( 'template-parts/courses/political-donations-pe-vc/sl-political-donations-practical' ); ?>
 	<?php get_template_part( 'template-parts/courses/political-donations-pe-vc/sl-political-donations-audience' ); ?>

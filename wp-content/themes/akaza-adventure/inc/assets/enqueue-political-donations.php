@@ -35,7 +35,6 @@ function akaza_enqueue_political_donations_assets() {
 		'sl-political-donations-overview',
 		'sl-political-donations-regulatory-context',
 		'sl-political-donations-learning-outcomes',
-		'sl-political-donations-activity',
 		'sl-political-donations-inside',
 		'sl-political-donations-practical',
 		'sl-political-donations-audience',

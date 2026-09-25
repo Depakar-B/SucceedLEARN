@@ -59,7 +59,7 @@ get_template_part(
 	null,
 	array(
 		'id'            => 'frequently-asked-questions',
-		'section_class' => 'sl-faq-section--alt sl-political-donations-faq',
+		'section_class' => 'sl-political-donations-faq',
 		'eyebrow'       => __( 'Frequently Asked Questions', 'akaza-adventure' ),
 		'title_html'    => __( 'Political Contributions, Pay-to-Play and <span>Compliance Training FAQs</span>', 'akaza-adventure' ),
 		'numbered'      => true,
