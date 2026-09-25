@@ -11,6 +11,11 @@
 	margin-bottom: 40px;
 }
 
+.sl-s-play-benefits__intro .sl-home-sub-heading {
+	display: block;
+	margin-bottom: 14px;
+}
+
 .sl-s-play-benefits__intro h2 {
 	margin-bottom: 0;
 }

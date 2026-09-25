@@ -11,17 +11,18 @@
 	margin-bottom: 40px;
 }
 
+.sl-s-play-employees__intro .sl-home-sub-heading {
+	display: block;
+	margin-bottom: 14px;
+}
+
 .sl-s-play-employees__intro h2 {
-	margin-bottom: 16px;
+	margin-bottom: 0;
 }
 
 .sl-s-play-employees__intro p {
-	margin: 0 0 14px;
+	margin: 16px 0 0;
 	max-width: 820px;
-}
-
-.sl-s-play-employees__intro p:last-child {
-	margin-bottom: 0;
 }
 
 .sl-s-play-employees__grid {
