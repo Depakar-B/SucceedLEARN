@@ -41,6 +41,7 @@ function akaza_enqueue_s_aware_assets() {
 		"{$folder}/sl-saware-library.css",
 		array( $global, 'akaza-global-ui-buttons', 'akaza-global-buttons', 'akaza-global-title-accent', 'akaza-global-panel-title', 'akaza-global-highlight' )
 	);
+	akaza_enqueue_theme_script( 'akaza-sl-saware-library', "{$folder}/sl-saware-library.js" );
 	akaza_enqueue_theme_style(
 		'akaza-sl-saware-customisation',
 		"{$folder}/sl-saware-customisation.css",
@@ -67,11 +68,6 @@ function akaza_enqueue_s_aware_assets() {
 		array( $global, 'akaza-global-ui-buttons', 'akaza-global-buttons', 'akaza-global-title-accent', 'akaza-global-panel-title', 'akaza-global-highlight', 'akaza-global-list-item' )
 	);
 	akaza_enqueue_theme_style(
-		'akaza-sl-saware-behaviour-change',
-		"{$folder}/sl-saware-behaviour-change.css",
-		array( $global, 'akaza-global-ui-buttons', 'akaza-global-buttons', 'akaza-global-title-accent', 'akaza-global-panel-title', 'akaza-global-highlight', 'akaza-global-list-item' )
-	);
-	akaza_enqueue_theme_style(
 		'akaza-sl-saware-comparison',
 		"{$folder}/sl-saware-comparison.css",
 		array( $global, 'akaza-global-ui-buttons', 'akaza-global-buttons', 'akaza-global-title-accent', 'akaza-global-panel-title', 'akaza-global-highlight', 'akaza-global-list-item' )
@@ -80,5 +76,16 @@ function akaza_enqueue_s_aware_assets() {
 		'akaza-sl-saware-contact',
 		"{$folder}/sl-saware-contact.css",
 		array( $global, 'akaza-global-ui-buttons', 'akaza-global-buttons', 'akaza-global-title-accent', 'akaza-global-panel-title', 'akaza-global-highlight', 'akaza-global-list-item' )
+	);
+
+	// Global FAQ component (registered in enqueue-core.php).
+	wp_enqueue_style( 'akaza-global-faq' );
+	wp_enqueue_script( 'akaza-global-faq' );
+
+	// Load after page foundation so SBCS beats .sl-training-page p / panel-title.
+	akaza_enqueue_theme_style(
+		'akaza-global-sbcs',
+		'sl-global-sbcs.css',
+		array( $global, 'akaza-global-panel-title', 'akaza-global-title-accent' )
 	);
 }

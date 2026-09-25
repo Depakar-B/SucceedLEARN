@@ -37,7 +37,6 @@ function akaza_enqueue_s_bytes_assets() {
 	akaza_enqueue_theme_style( 'akaza-sl-sbytes-delivered', "{$folder}/sl-sbytes-delivered.css", $panel );
 	akaza_enqueue_theme_style( 'akaza-sl-sbytes-visibility', "{$folder}/sl-sbytes-visibility.css", $accent );
 	akaza_enqueue_theme_style( 'akaza-sl-sbytes-employees', "{$folder}/sl-sbytes-employees.css", $panel );
-	akaza_enqueue_theme_style( 'akaza-sl-sbytes-suite', "{$folder}/sl-sbytes-suite.css", array( 'akaza-sl-sbytes-employees' ) );
 	akaza_enqueue_theme_style( 'akaza-sl-sbytes-funfosec', "{$folder}/sl-sbytes-funfosec.css", $btns );
 
 	akaza_enqueue_theme_style( 'akaza-contact-form', 'contact-from.css', $base );
@@ -45,5 +44,12 @@ function akaza_enqueue_s_bytes_assets() {
 		'akaza-sl-sbytes-contact',
 		"{$folder}/sl-sbytes-contact.css",
 		array_merge( $base, array( 'akaza-sl-sbytes-hero', 'akaza-contact-form', 'akaza-global-title-accent' ) )
+	);
+
+	$foundation = akaza_enqueue_page_foundation();
+	akaza_enqueue_theme_style(
+		'akaza-global-sbcs',
+		'sl-global-sbcs.css',
+		array( $foundation, 'akaza-global-panel-title', 'akaza-global-title-accent' )
 	);
 }
