@@ -27,19 +27,29 @@ body.slf-body #main-content.sl-s-metrics-page .sl-s-metrics-suite-reporting__sub
 	color: var(--sl-page-primary, #1472ba);
 }
 
+.sl-s-metrics-suite-reporting__layout {
+	display: grid;
+	grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+	gap: 48px;
+	align-items: start;
+}
+
+.sl-s-metrics-suite-reporting__content {
+	min-width: 0;
+}
+
 .sl-s-metrics-suite-reporting__grid {
 	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: 24px;
+	grid-template-columns: 1fr;
+	gap: 20px;
 }
 
 .sl-s-metrics-suite-reporting__card {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	height: 100%;
 	min-width: 0;
-	padding: 28px 24px;
+	padding: 24px 22px;
 	border: 1px solid rgba(107, 124, 147, 0.18);
 	border-radius: 16px;
 	background: var(--sl-page-white, #ffffff);
@@ -84,7 +94,11 @@ body.slf-body #main-content.sl-s-metrics-page .sl-s-metrics-suite-reporting__sub
 }
 
 .sl-s-metrics-suite-reporting__media {
-	margin-top: 40px;
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 110px) + 24px);
+	width: 100%;
+	min-width: 0;
+	align-self: start;
 }
 
 .sl-s-metrics-suite-reporting__image-placeholder {
@@ -109,26 +123,39 @@ body.slf-body #main-content.sl-s-metrics-page .sl-s-metrics-suite-reporting__sub
 	border-radius: 16px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
 	.sl-s-metrics-suite-reporting {
-		padding: 60px 0;
+		padding: 64px 0;
 	}
 
 	.sl-s-metrics-suite-reporting__intro {
 		margin-bottom: 28px;
 	}
 
-	.sl-s-metrics-suite-reporting__grid {
+	.sl-s-metrics-suite-reporting__layout {
 		grid-template-columns: 1fr;
+		gap: 32px;
+	}
+
+	.sl-s-metrics-suite-reporting__media {
+		position: static;
+		order: -1;
+		max-width: 640px;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-s-metrics-suite-reporting {
+		padding: 60px 0;
+	}
+
+	.sl-s-metrics-suite-reporting__grid {
 		gap: 16px;
 	}
 
 	.sl-s-metrics-suite-reporting__card {
 		padding: 22px 20px;
-	}
-
-	.sl-s-metrics-suite-reporting__media {
-		margin-top: 28px;
 	}
 
 	.sl-s-metrics-suite-reporting__image-placeholder {
