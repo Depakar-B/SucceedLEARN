@@ -11,19 +11,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $course_images = array(
 	array(
-		'image'   => 'https://succeedlearn.com/wp-content/uploads/2026/09/whistleblowing_course_look_in_practice_2.webp',
+		'image'   => 'https://succeedlearn.com/wp-content/uploads/2026/09/Whistleblowing-image-1.webp',
 		'alt'     => __( 'Whistleblowing concern compared with personal grievances', 'akaza-adventure' ),
 		'label'   => __( 'Concern vs grievance', 'akaza-adventure' ),
 		'caption' => __( 'See the difference between whistleblowing concerns and personal grievances.', 'akaza-adventure' ),
 	),
 	array(
-		'image'   => 'https://succeedlearn.com/wp-content/uploads/2026/09/whistleblowing_course_look_in_practice_3.webp',
+		'image'   => 'https://succeedlearn.com/wp-content/uploads/2026/09/Whistleblowing-image-2.webp',
 		'alt'     => __( 'Confidentiality, fiduciary responsibility and investment ethics in whistleblowing training', 'akaza-adventure' ),
 		'label'   => __( 'PE/VC principles', 'akaza-adventure' ),
 		'caption' => __( 'Connect speaking up with confidentiality, fiduciary duty and investment ethics.', 'akaza-adventure' ),
 	),
 	array(
-		'image'   => 'https://succeedlearn.com/wp-content/uploads/2026/09/whistleblowing_course_look_in_practice_4.webp',
+		'image'   => 'https://succeedlearn.com/wp-content/uploads/2026/09/Whistleblowing-image-3.webp',
 		'alt'     => __( 'Interactive scenario asking which situations should be reported as a whistleblowing concern', 'akaza-adventure' ),
 		'label'   => __( 'Practice scenario', 'akaza-adventure' ),
 		'caption' => __( 'Work through scenarios to decide what should be reported.', 'akaza-adventure' ),

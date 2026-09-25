@@ -22,9 +22,10 @@ $frameworks = array(
 			__( 'FCA SYSC 18 whistleblowing framework', 'akaza-adventure' ),
 			__( 'FCA and PRA as relevant external regulatory channels in the course material', 'akaza-adventure' ),
 		),
+		'image_url'   => 'https://succeedlearn.com/wp-content/uploads/2026/09/uk_whistleblowing_law-1.webp',
 		'image_label' => __( 'Image Space — UK', 'akaza-adventure' ),
 		'image_hint'  => __( 'Suggested visual: UK legal and regulatory whistleblowing framework.', 'akaza-adventure' ),
-		'image_alt'   => __( 'UK whistleblowing framework image placeholder', 'akaza-adventure' ),
+		'image_alt'   => __( 'UK whistleblowing legal and regulatory framework', 'akaza-adventure' ),
 		'reverse'     => true,
 	),
 	array(
@@ -36,9 +37,10 @@ $frameworks = array(
 			__( 'Dodd-Frank Act', 'akaza-adventure' ),
 			__( 'False Claims Act', 'akaza-adventure' ),
 		),
+		'image_url'   => 'https://succeedlearn.com/wp-content/uploads/2026/09/us_whistleblower_protection.webp',
 		'image_label' => __( 'Image Space — US', 'akaza-adventure' ),
 		'image_hint'  => __( 'Suggested visual: US whistleblower protection legislation.', 'akaza-adventure' ),
-		'image_alt'   => __( 'US whistleblower protections image placeholder', 'akaza-adventure' ),
+		'image_alt'   => __( 'US whistleblower protection legislation', 'akaza-adventure' ),
 		'reverse'     => false,
 	),
 );
@@ -72,20 +74,32 @@ $frameworks = array(
 				$card_mod = ! empty( $framework['reverse'] )
 					? ' sl-whistleblowing-regulatory__card--reverse'
 					: '';
+				$has_image = ! empty( $framework['image_url'] );
 				?>
 				<article class="sl-whistleblowing-regulatory__card<?php echo esc_attr( $card_mod ); ?>">
 
-					<div
-						class="sl-whistleblowing-regulatory__media"
-						role="img"
-						aria-label="<?php echo esc_attr( $framework['image_alt'] ); ?>"
-					>
-						<span class="sl-whistleblowing-regulatory__icon" aria-hidden="true">
-							<?php echo esc_html( $framework['code'] ); ?>
-						</span>
-						<strong><?php echo esc_html( $framework['image_label'] ); ?></strong>
-						<span><?php echo esc_html( $framework['image_hint'] ); ?></span>
-					</div>
+					<?php if ( $has_image ) : ?>
+						<div class="sl-whistleblowing-regulatory__media sl-whistleblowing-regulatory__media--photo">
+							<img
+								src="<?php echo esc_url( $framework['image_url'] ); ?>"
+								alt="<?php echo esc_attr( $framework['image_alt'] ); ?>"
+								loading="lazy"
+								decoding="async"
+							>
+						</div>
+					<?php else : ?>
+						<div
+							class="sl-whistleblowing-regulatory__media"
+							role="img"
+							aria-label="<?php echo esc_attr( $framework['image_alt'] ); ?>"
+						>
+							<span class="sl-whistleblowing-regulatory__icon" aria-hidden="true">
+								<?php echo esc_html( $framework['code'] ); ?>
+							</span>
+							<strong><?php echo esc_html( $framework['image_label'] ); ?></strong>
+							<span><?php echo esc_html( $framework['image_hint'] ); ?></span>
+						</div>
+					<?php endif; ?>
 
 					<div class="sl-whistleblowing-regulatory__content">
 						<span class="sl-whistleblowing-regulatory__code">
