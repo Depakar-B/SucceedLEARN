@@ -43,7 +43,7 @@ $steps = array(
 		</span>
 
 		<h2 id="sl-pevc-programme-title">
-			<?php esc_html_e( 'Build the programme around your people', 'akaza-adventure' ); ?>
+			<?php esc_html_e( 'Building an Effective PE and VC Compliance Training Programme', 'akaza-adventure' ); ?>
 		</h2>
 
 		<p class="sl-pevc-programme__lead">

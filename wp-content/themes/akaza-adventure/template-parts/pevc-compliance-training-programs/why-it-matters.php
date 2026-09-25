@@ -32,7 +32,7 @@ $panel_items = array(
 				</span>
 
 				<h2 id="sl-pevc-why-title">
-					<?php esc_html_e( 'Compliance is everyone’s business.', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Why Compliance Training Matters for Private Equity and Venture Capital Firms', 'akaza-adventure' ); ?>
 				</h2>
 
 				<p class="sl-pevc-why__lead">

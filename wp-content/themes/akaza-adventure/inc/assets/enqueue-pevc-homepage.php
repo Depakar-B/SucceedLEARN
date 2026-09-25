@@ -33,6 +33,12 @@ function akaza_enqueue_pevc_homepage_assets() {
 		akaza_enqueue_theme_style( "akaza-{$slug}", "{$folder}/{$slug}.css", array( $foundation ) );
 	}
 
+	akaza_enqueue_theme_style(
+		'akaza-global-sub-heading',
+		'sl-global-sub-heading.css',
+		array( 'akaza-main', 'akaza-global-title-accent' )
+	);
+
 	akaza_enqueue_theme_style( 'akaza-contact-form', 'contact-from.css', array( 'akaza-main' ) );
 
 	$contact_form_brand = AKAZA_DIR . '/assets/css/contact-form-brand.css';

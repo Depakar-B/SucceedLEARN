@@ -47,8 +47,7 @@ $steps = array(
 		</span>
 
 		<h2 id="sl-pevc-decision-title">
-			<?php esc_html_e( 'Help people know', 'akaza-adventure' ); ?>
-			<span><?php esc_html_e( 'what to do next', 'akaza-adventure' ); ?></span>
+			<?php esc_html_e( 'Turning PE and VC Compliance Training into Better Decisions', 'akaza-adventure' ); ?>
 		</h2>
 
 		<p class="sl-pevc-decision__lead">

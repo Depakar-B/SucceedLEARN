@@ -46,7 +46,7 @@ $roles = array(
 		</span>
 
 		<h2 id="sl-pevc-audience-title">
-			<?php esc_html_e( 'Relevant learning across your firm', 'akaza-adventure' ); ?>
+			<?php esc_html_e( 'Role-Based Compliance Training for Private Equity and Venture Capital Firms', 'akaza-adventure' ); ?>
 		</h2>
 
 		<p class="sl-pevc-audience__lead">

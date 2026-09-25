@@ -2,12 +2,16 @@
 /**
  * PE/VC Homepage — Hero section.
  *
+ * Full-bleed background image pattern (matches gifts / political donations hero).
+ *
  * @package Akaza_Adventure
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+$hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/PEVC-Hero-section-image.webp';
 
 $hero_values = array(
 	__( 'Reduce risk', 'akaza-adventure' ),
@@ -16,19 +20,26 @@ $hero_values = array(
 );
 ?>
 <section class="sl-pevc-hero" aria-labelledby="sl-pevc-hero-title">
+	<img
+		class="sl-pevc-hero__bg-image"
+		src="<?php echo esc_url( $hero_image ); ?>"
+		alt="<?php esc_attr_e( 'Private Equity and Venture Capital compliance training', 'akaza-adventure' ); ?>"
+		decoding="async"
+	>
+
 	<div class="container">
-		<div class="sl-pevc-hero__grid">
+		<div class="sl-pevc-hero__content">
+
+			<span class="sl-home-sub-heading">
+				<?php esc_html_e( 'Private Equity & Venture Capital', 'akaza-adventure' ); ?>
+			</span>
+
+			<h1 id="sl-pevc-hero-title">
+				<?php esc_html_e( 'Compliance learning', 'akaza-adventure' ); ?>
+				<span><?php esc_html_e( 'for what’s next.', 'akaza-adventure' ); ?></span>
+			</h1>
 
 			<div class="sl-pevc-hero__copy">
-				<span class="sl-pevc-hero__eyebrow">
-					<?php esc_html_e( 'Private Equity & Venture Capital', 'akaza-adventure' ); ?>
-				</span>
-
-				<h1 id="sl-pevc-hero-title">
-					<?php esc_html_e( 'Compliance learning', 'akaza-adventure' ); ?>
-					<span><?php esc_html_e( 'for what’s next.', 'akaza-adventure' ); ?></span>
-				</h1>
-
 				<p class="sl-pevc-hero__lead">
 					<?php
 					esc_html_e(
@@ -46,33 +57,26 @@ $hero_values = array(
 					);
 					?>
 				</p>
-
-				<div class="sl-pevc-hero__actions sl-training-actions">
-					<a class="sl-hero-btn sl-hero-btn-primary" href="#contact">
-						<?php esc_html_e( 'Request a Demo', 'akaza-adventure' ); ?>
-					</a>
-					<a class="sl-hero-btn sl-hero-btn-secondary" href="#courses">
-						<?php esc_html_e( 'Explore the PE/VC Suite', 'akaza-adventure' ); ?>
-					</a>
-				</div>
-
-				<div class="sl-pevc-hero__values">
-					<?php foreach ( $hero_values as $value ) : ?>
-						<span><?php echo esc_html( $value ); ?></span>
-					<?php endforeach; ?>
-				</div>
 			</div>
 
-			<div
-				class="sl-pevc-hero__visual"
-				role="img"
-				aria-label="<?php esc_attr_e( 'Private Equity and Venture Capital compliance training visual placeholder', 'akaza-adventure' ); ?>"
-			>
-				<div class="sl-pevc-hero__visual-inner">
-					<strong><?php esc_html_e( 'PE/VC homepage video or approved image', 'akaza-adventure' ); ?></strong>
-					<p><?php esc_html_e( 'Replace with the approved investment committee visual.', 'akaza-adventure' ); ?></p>
-				</div>
+			<div class="sl-pevc-hero__actions sl-training-actions">
+				<a class="sl-hero-btn sl-hero-btn-primary" href="#contact">
+					<?php esc_html_e( 'Request a Demo', 'akaza-adventure' ); ?>
+				</a>
+				<a class="sl-hero-btn sl-hero-btn-secondary" href="#courses">
+					<?php esc_html_e( 'Explore the PE/VC Suite', 'akaza-adventure' ); ?>
+				</a>
 			</div>
+
+			<ul class="sl-pevc-hero__highlights">
+				<?php foreach ( $hero_values as $value ) : ?>
+					<li class="sl-pevc-hero__highlight">
+						<span class="sl-pevc-hero__highlight-title">
+							<?php echo esc_html( $value ); ?>
+						</span>
+					</li>
+				<?php endforeach; ?>
+			</ul>
 
 		</div>
 	</div>
