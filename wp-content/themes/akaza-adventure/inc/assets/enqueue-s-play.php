@@ -33,8 +33,10 @@ function akaza_enqueue_s_play_assets() {
 		'sl-s-play-complements',
 		'sl-s-play-comparison',
 		'sl-s-play-benefits',
-		'sl-s-play-experience',
 		'sl-s-play-delivery',
+		'sl-s-play-employees',
+		'sl-s-play-teams',
+		'sl-s-play-experience',
 		'sl-s-play-contact',
 	);
 
@@ -45,4 +47,13 @@ function akaza_enqueue_s_play_assets() {
 			$deps
 		);
 	}
+
+	wp_enqueue_style( 'akaza-global-faq' );
+	wp_enqueue_script( 'akaza-global-faq' );
+
+	akaza_enqueue_theme_style(
+		'akaza-global-sbcs',
+		'sl-global-sbcs.css',
+		array( $foundation, 'akaza-global-panel-title', 'akaza-global-title-accent' )
+	);
 }

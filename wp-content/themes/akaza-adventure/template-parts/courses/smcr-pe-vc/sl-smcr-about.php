@@ -17,44 +17,35 @@ if ( ! defined( 'ABSPATH' ) ) {
 >
 	<div class="container">
 
-		<div class="sl-smcr-about__grid">
+		<div class="sl-smcr-about__content">
 
-			<div class="sl-smcr-about__media">
-				<div class="sl-smcr-about__image">
-					<div class="sl-smcr-about__image-placeholder">
-						<?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?>
-					</div>
-				</div>
-			</div>
+			<span class="sl-home-sub-heading">
+				<?php esc_html_e( 'About the Training', 'akaza-adventure' ); ?>
+			</span>
 
-			<div class="sl-smcr-about__content">
+			<h2 id="sl-smcr-about-title">
+				<?php esc_html_e( 'What Is SMCR Training for UK Private Equity and Venture Capital Firms?', 'akaza-adventure' ); ?>
+			</h2>
 
-				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'About the Training', 'akaza-adventure' ); ?>
-				</span>
-
-				<h2 id="sl-smcr-about-title">
-					<?php esc_html_e( 'What Is SMCR Training for UK Private Equity and Venture Capital Firms?', 'akaza-adventure' ); ?>
-					<span><?php esc_html_e( 'PE & VC Firms?', 'akaza-adventure' ); ?></span>
-				</h2>
-
-				<p class="sl-smcr-about__intro">
-					<strong>
-						<?php esc_html_e(
-							'SMCR training helps relevant employees and Senior Managers understand their responsibilities under the Senior Managers and Certification Regime.',
-							'akaza-adventure'
-						); ?>
-					</strong>
-				</p>
-
-				<p>
-					<?php esc_html_e(
-						'SucceedLEARN places the subject in a private equity and venture capital context, using situations involving investment decisions, reporting, due diligence, fund operations and oversight.',
+			<p class="sl-smcr-about__intro">
+				<strong>
+					<?php
+					esc_html_e(
+						'SMCR training helps relevant employees and Senior Managers understand their responsibilities under the Senior Managers and Certification Regime.',
 						'akaza-adventure'
-					); ?>
-				</p>
+					);
+					?>
+				</strong>
+			</p>
 
-			</div>
+			<p>
+				<?php
+				esc_html_e(
+					'SucceedLEARN places the subject in a private equity and venture capital context, using situations involving investment decisions, reporting, due diligence, fund operations and oversight.',
+					'akaza-adventure'
+				);
+				?>
+			</p>
 
 		</div>
 

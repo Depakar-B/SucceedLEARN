@@ -25,30 +25,34 @@
 --------------------------------------------------------- */
 
 .sl-smcr-practical-learning__media {
-	align-self: start;
-}
-
-.sl-smcr-practical-learning__image {
-	width: 100%;
-	overflow: hidden;
-	border: 1px solid rgba(22, 35, 78, 0.10);
-	border-radius: 16px;
-	background: #ffffff;
-	box-sizing: border-box;
-}
-
-.sl-smcr-practical-learning__image-placeholder {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	min-height: 520px;
-	padding: 32px;
-	background: #ffffff;
+	align-self: center;
+}
+
+.sl-smcr-practical-learning__image {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: auto;
+	max-width: 100%;
+	max-height: 360px;
+	overflow: hidden;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 16px;
+	background: transparent;
 	box-sizing: border-box;
 }
 
-.sl-smcr-practical-learning__image-placeholder span {
-	color: #6b7c93;
+.sl-smcr-practical-learning__image img {
+	display: block;
+	width: auto;
+	max-width: 100%;
+	max-height: 360px;
+	height: auto;
+	margin: 0;
+	object-fit: contain;
 }
 
 /* ---------------------------------------------------------
@@ -108,10 +112,6 @@
 	.sl-smcr-practical-learning__grid {
 		gap: 44px;
 	}
-
-	.sl-smcr-practical-learning__image-placeholder {
-		min-height: 420px;
-	}
 }
 
 /* ---------------------------------------------------------
@@ -127,10 +127,6 @@
 	.sl-smcr-practical-learning__grid {
 		grid-template-columns: 1fr;
 		gap: 32px;
-	}
-
-	.sl-smcr-practical-learning__image-placeholder {
-		min-height: 320px;
 	}
 
 	.sl-smcr-practical-learning__image {

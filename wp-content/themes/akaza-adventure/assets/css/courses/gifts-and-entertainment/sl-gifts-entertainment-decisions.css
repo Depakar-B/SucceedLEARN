@@ -3,11 +3,12 @@
    Gifts & Entertainment Training for PE/VC Professionals
    Practical Compliance Decisions
 
+   Matches Gifts and Entertainment preview decision-grid UI.
    Container and section spacing come from course-global.css.
    ========================================================= */
 
-   .sl-course-page .sl-gifts-entertainment-decisions {
-	background: var(--course-bg, #f5f5f5);
+.sl-course-page .sl-gifts-entertainment-decisions {
+	background: var(--course-light-bg, #f5f5f5);
 }
 
 
@@ -16,141 +17,118 @@
    ========================================================= */
 
 .sl-gifts-entertainment-decisions__intro {
-	max-width: 820px;
-	margin-bottom: 42px;
+	max-width: none;
+	margin-bottom: 34px;
 }
 
 .sl-gifts-entertainment-decisions__intro h2 {
-	margin-bottom: 20px;
+	margin-bottom: 22px;
+	max-width: none;
+}
+
+@media (min-width: 981px) {
+	.sl-gifts-entertainment-decisions__intro h2 {
+		white-space: nowrap;
+	}
+}
+
+.sl-gifts-entertainment-decisions__intro h2 > span {
+	color: var(--course-primary, #135db7);
 }
 
 .sl-gifts-entertainment-decisions__intro p {
+	max-width: 800px;
 	margin: 0;
+	font-size: 1.17rem;
+	line-height: 1.65;
 }
 
 
 /* =========================================================
-   Cards
+   Cards — preview .decision-grid / .decision-box
    ========================================================= */
 
 .sl-gifts-entertainment-decisions__grid {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: 28px;
+	gap: 26px;
 	align-items: stretch;
 }
 
 .sl-gifts-entertainment-decisions__card {
-	padding: 32px;
+	padding: 30px;
+	border: 1px solid var(--course-border, #dce3ed);
 	border-radius: 16px;
+	background: var(--course-white, #ffffff);
 	box-sizing: border-box;
 }
 
 .sl-gifts-entertainment-decisions__card--consider {
-	background: rgba(14, 159, 74, 0.06);
-	border: 1px solid rgba(14, 159, 74, 0.16);
+	border-top: 4px solid var(--course-primary, #135db7);
 }
 
 .sl-gifts-entertainment-decisions__card--avoid {
-	background: rgba(234, 62, 36, 0.05);
-	border: 1px solid rgba(234, 62, 36, 0.15);
+	border-top: 4px solid var(--course-cta, #ea3f23);
 }
-
-
-/* =========================================================
-   Card Titles
-   ========================================================= */
 
 .sl-gifts-entertainment-decisions__card h3 {
-	margin: 0 0 24px;
-	color: var(--course-text, #4a4a4a);
+	margin: 0 0 9px;
+	color: var(--course-navy, #16234d);
 }
 
 
 /* =========================================================
-   List
+   List — preview .check-list
    ========================================================= */
 
 .sl-gifts-entertainment-decisions__list {
-	display: flex;
-	flex-direction: column;
-	margin: 0;
+	margin: 18px 0 0;
 	padding: 0;
 	list-style: none;
 }
 
 .sl-gifts-entertainment-decisions__list li {
-	display: grid;
-	grid-template-columns: 28px minmax(0, 1fr);
-	gap: 12px;
-	align-items: start;
-	padding: 14px 0;
-	border-bottom: 1px solid rgba(22, 35, 78, 0.10);
-	line-height: 1.6;
-	color: var(--course-text, #4a4a4a);
-}
-
-.sl-gifts-entertainment-decisions__list li:first-child {
-	padding-top: 0;
+	position: relative;
+	margin-bottom: 13px;
+	padding-left: 29px;
+	line-height: 1.65;
+	color: var(--course-text, #000000);
 }
 
 .sl-gifts-entertainment-decisions__list li:last-child {
-	padding-bottom: 0;
-	border-bottom: 0;
+	margin-bottom: 0;
 }
 
-
-/* =========================================================
-   List Icons
-   ========================================================= */
-
-.sl-gifts-entertainment-decisions__list-icon {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 24px;
-	height: 24px;
-	border-radius: 50%;
-	font-size: 14px;
-	font-weight: 700;
-	line-height: 1;
-}
-
-.sl-gifts-entertainment-decisions__card--consider
-	.sl-gifts-entertainment-decisions__list-icon {
-	background: rgba(14, 159, 74, 0.12);
-	color: var(--course-accent, #0e9f4a);
+.sl-gifts-entertainment-decisions__list li::before {
+	position: absolute;
+	left: 0;
+	font-weight: 800;
+	content: "✓";
+	color: var(--course-primary, #135db7);
 }
 
 .sl-gifts-entertainment-decisions__card--avoid
-	.sl-gifts-entertainment-decisions__list-icon {
-	background: rgba(234, 62, 36, 0.10);
-	color: var(--course-cta, #ea3e24);
+	.sl-gifts-entertainment-decisions__list li::before {
+	content: "!";
+	color: var(--course-cta, #ea3f23);
 }
 
 
 /* =========================================================
-   Tablet
+   Responsive
    ========================================================= */
 
-@media (max-width: 900px) {
-
+@media (max-width: 980px) {
 	.sl-gifts-entertainment-decisions__grid {
 		grid-template-columns: 1fr;
 	}
 
 	.sl-gifts-entertainment-decisions__intro {
-		margin-bottom: 36px;
+		margin-bottom: 28px;
 	}
 }
 
-
-/* =========================================================
-   Mobile
-   ========================================================= */
-
 @media (max-width: 767px) {
-
 	.sl-gifts-entertainment-decisions__grid {
 		gap: 20px;
 	}
@@ -160,19 +138,7 @@
 		border-radius: 12px;
 	}
 
-	.sl-gifts-entertainment-decisions__card h3 {
-		margin-bottom: 20px;
-	}
-
-	.sl-gifts-entertainment-decisions__list li {
-		grid-template-columns: 26px minmax(0, 1fr);
-		gap: 10px;
-		padding: 12px 0;
-	}
-
-	.sl-gifts-entertainment-decisions__list-icon {
-		width: 23px;
-		height: 23px;
-		font-size: 13px;
+	.sl-gifts-entertainment-decisions__intro p {
+		font-size: 1rem;
 	}
 }

@@ -1,0 +1,79 @@
+/**
+ * S-Play — Built for Every Employee
+ */
+
+.sl-s-play-employees {
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-s-play-employees__intro {
+	margin-bottom: 40px;
+}
+
+.sl-s-play-employees__intro .sl-home-sub-heading {
+	display: block;
+	margin-bottom: 14px;
+}
+
+.sl-s-play-employees__intro h2 {
+	margin-bottom: 0;
+}
+
+.sl-s-play-employees__intro p {
+	margin: 16px 0 0;
+	max-width: 820px;
+}
+
+.sl-s-play-employees__grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 24px;
+}
+
+.sl-s-play-employees__card {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	min-width: 0;
+	padding: 28px 24px;
+	border: 1px solid rgba(107, 124, 147, 0.18);
+	border-radius: 16px;
+	background: var(--sl-page-white, #ffffff);
+	box-sizing: border-box;
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.sl-s-play-employees__card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 14px 32px rgba(22, 35, 78, 0.08);
+}
+
+.sl-s-play-employees__card .sl-panel-title {
+	margin: 0 0 12px;
+}
+
+.sl-s-play-employees__card p {
+	margin: 0;
+}
+
+@media (max-width: 767px) {
+	.sl-s-play-employees {
+		padding: 60px 0;
+	}
+
+	.sl-s-play-employees__intro {
+		margin-bottom: 28px;
+	}
+
+	.sl-s-play-employees__grid {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
+	.sl-s-play-employees__card {
+		padding: 22px 20px;
+	}
+}

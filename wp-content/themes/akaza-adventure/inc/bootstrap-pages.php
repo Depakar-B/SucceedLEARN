@@ -110,6 +110,16 @@ function akaza_bootstrap_pages() {
 			'template' => 'page-templates/gdpr-employee-awareness-training.php',
 		),
 		array(
+			'slug'     => 'information-security-awareness-training-for-soc-2-compliance',
+			'title'    => 'Information Security Awareness Training for SOC 2 Compliance',
+			'template' => 'page-templates/information-security-awareness-training-for-soc-2-compliance.php',
+		),
+		array(
+			'slug'     => 'information-security-awareness-training-for-uk-cyber-essentials',
+			'title'    => 'Information Security Awareness Training for UK Cyber Essentials',
+			'template' => 'page-templates/information-security-awareness-training-for-uk-cyber-essentials.php',
+		),
+		array(
 			'slug'     => 'ferpa-training-for-school-and-university-staff',
 			'title'    => 'FERPA Training for School and University Staff',
 			'template' => 'page-templates/ferpa-training-for-school-and-university-staff.php',
@@ -135,6 +145,9 @@ function akaza_bootstrap_pages() {
 			'template' => 'page-templates/s-phish-phishing-simulation.php',
 		),
 		array(
+			'slug'     => 'private-equity-venture-capital-compliance-training',
+			'title'    => 'Private Equity and Venture Capital Compliance Training',
+			'template' => 'page-templates/pevc-compliance-training-programs.php',
 			'slug'     => 's-sync',
 			'title'    => 'S-Sync',
 			'template' => 'page-templates/s-sync-security-awareness.php',
@@ -160,9 +173,15 @@ function akaza_bootstrap_pages() {
 			'template' => 'page-templates/s-metrics-tracking-reporting.php',
 		),
 		array(
+<<<<<<< HEAD
 			'slug'     => 'information-security-awareness-training-for-soc-2-compliance',
 			'title'    => 'Information Security Awareness Training for SOC 2 Compliance',
 			'template' => 'page-templates/information-security-awareness-training-for-soc-2-compliance.php',
+=======
+			'slug'     => 'pci-dss',
+			'title'    => 'PCI DSS Awareness Training for Employees & Payment Handlers',
+			'template' => 'page-templates/pci-dss.php',
+>>>>>>> origin/master
 		),
 	);
 

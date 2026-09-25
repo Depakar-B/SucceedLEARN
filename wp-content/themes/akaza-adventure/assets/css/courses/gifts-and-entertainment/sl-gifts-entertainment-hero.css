@@ -3,18 +3,32 @@
  */
 
 .sl-course-page .sl-gifts-entertainment-hero {
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
 	padding-top: calc(var(--slf-header-clearance, 76px) + var(--course-section-space, 90px));
+	padding-bottom: var(--course-section-space, 90px);
 	background: var(--sl-page-white, #ffffff);
 }
 
-.sl-gifts-entertainment-hero__grid {
-	display: grid;
-	grid-template-columns: minmax(0, 1fr) minmax(420px, 0.9fr);
-	gap: 72px;
-	align-items: center;
+.sl-gifts-entertainment-hero__bg-image {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: right center;
+	pointer-events: none;
+}
+
+.sl-gifts-entertainment-hero > .container {
+	position: relative;
+	z-index: 1;
 }
 
 .sl-gifts-entertainment-hero__content {
+	max-width: 650px;
 	min-width: 0;
 }
 
@@ -35,6 +49,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 14px;
+	max-width: 520px;
 }
 
 .sl-gifts-entertainment-hero__description p {
@@ -44,9 +59,24 @@
 .sl-gifts-entertainment-hero .sl-hero-actions {
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
+	align-items: flex-end;
 	gap: 14px;
 	margin-top: 30px;
+}
+
+.sl-gifts-entertainment-hero__cta-item {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 8px;
+}
+
+.sl-gifts-entertainment-hero__cta-label {
+	color: #374151;
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
 }
 
 .sl-gifts-entertainment-hero__highlights {
@@ -75,43 +105,7 @@
 	line-height: 1.4;
 }
 
-.sl-gifts-entertainment-hero__media {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-width: 0;
-}
-
-.sl-gifts-entertainment-hero__image-placeholder {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	width: min(100%, 600px);
-	aspect-ratio: 1 / 1;
-	border: 1px dashed rgba(20, 114, 186, 0.35);
-	border-radius: 16px;
-	background: #f5f5f5;
-	text-align: center;
-}
-
-.sl-gifts-entertainment-hero__image-placeholder span {
-	color: var(--sl-page-primary, #1472ba);
-	font-weight: 700;
-	letter-spacing: 0.04em;
-}
-
-.sl-gifts-entertainment-hero__image-placeholder small {
-	margin-top: 8px;
-	color: var(--sl-page-muted, #6b7c93);
-}
-
 @media (max-width: 1100px) {
-	.sl-gifts-entertainment-hero__grid {
-		grid-template-columns: minmax(0, 1fr) minmax(340px, 0.8fr);
-		gap: 48px;
-	}
-
 	.sl-gifts-entertainment-hero__highlights {
 		grid-template-columns: 1fr;
 	}
@@ -131,14 +125,21 @@
 	}
 }
 
+@media (max-width: 1000px) {
+	.sl-gifts-entertainment-hero__content {
+		max-width: 100%;
+	}
+
+	.sl-gifts-entertainment-hero__bg-image {
+		opacity: 0.28;
+		object-position: center center;
+	}
+}
+
 @media (max-width: 767px) {
 	.sl-course-page .sl-gifts-entertainment-hero {
 		padding-top: calc(var(--slf-header-clearance, 76px) + var(--course-section-space-mobile, 60px));
-	}
-
-	.sl-gifts-entertainment-hero__grid {
-		grid-template-columns: 1fr;
-		gap: 40px;
+		padding-bottom: var(--course-section-space-mobile, 60px);
 	}
 
 	.sl-gifts-entertainment-hero__content h2 {
@@ -151,15 +152,5 @@
 
 	.sl-gifts-entertainment-hero__highlights {
 		margin-top: 28px;
-	}
-
-	.sl-gifts-entertainment-hero__media {
-		order: 2;
-	}
-
-	.sl-gifts-entertainment-hero__image-placeholder {
-		width: 100%;
-		max-width: 560px;
-		border-radius: 12px;
 	}
 }

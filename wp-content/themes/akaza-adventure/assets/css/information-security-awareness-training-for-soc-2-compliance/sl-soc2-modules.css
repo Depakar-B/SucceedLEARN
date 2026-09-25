@@ -17,6 +17,7 @@
 	margin: 0;
 }
 
+<<<<<<< HEAD
 body.slf-body main.sl-soc2-page .sl-soc2-modules__subtitle,
 body.slf-body #main-content.sl-soc2-page .sl-soc2-modules__subtitle,
 .sl-soc2-page .sl-soc2-modules__subtitle {
@@ -30,6 +31,8 @@ body.slf-body #main-content.sl-soc2-page .sl-soc2-modules__subtitle,
 	color: var(--sl-page-primary, #1472ba);
 }
 
+=======
+>>>>>>> origin/master
 .sl-soc2-modules__grid {
 	display: grid;
 	grid-template-columns: repeat(3, minmax(0, 1fr));

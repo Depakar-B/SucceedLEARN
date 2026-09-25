@@ -63,9 +63,11 @@
 	letter-spacing: 0.04em;
 }
 
+body.slf-body #main-content .sl-smcr-evc-learning__card h3.sl-panel-title,
 .sl-smcr-evc-learning__card .sl-panel-title {
 	margin-top: 0;
 	margin-bottom: 14px;
+	color: #212b48;
 }
 
 .sl-smcr-evc-learning__card p {

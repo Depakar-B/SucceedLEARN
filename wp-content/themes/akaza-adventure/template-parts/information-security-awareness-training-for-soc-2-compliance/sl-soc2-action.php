@@ -8,6 +8,16 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+<<<<<<< HEAD
+=======
+
+$soc2_action_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/One-Platform.-Continuous-Security-Behaviour-Change-e1789024641243.webp';
+$soc2_action_local = WP_CONTENT_DIR . '/uploads/2026/09/One-Platform.-Continuous-Security-Behaviour-Change-e1789024641243.webp';
+
+if ( function_exists( 'akaza_upload_url' ) && file_exists( $soc2_action_local ) ) {
+	$soc2_action_image = akaza_upload_url( '2026/09/One-Platform.-Continuous-Security-Behaviour-Change-e1789024641243.webp' );
+}
+>>>>>>> origin/master
 ?>
 
 <section
@@ -22,6 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="sl-soc2-action__content">
 
 				<span class="sl-home-sub-heading">
+<<<<<<< HEAD
 					<?php esc_html_e( 'Course Screenshots', 'akaza-adventure' ); ?>
 				</span>
 
@@ -34,6 +45,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<?php esc_html_e( 'Practical Security Awareness for Everyday Workplace Risks', 'akaza-adventure' ); ?>
 				</h3>
 
+=======
+					<?php esc_html_e( 'See the Training in Action', 'akaza-adventure' ); ?>
+				</span>
+
+				<h2 id="sl-soc2-action-title">
+					<?php esc_html_e( 'Practical Security Awareness for', 'akaza-adventure' ); ?>
+					<span><?php esc_html_e( 'Everyday Workplace Risks', 'akaza-adventure' ); ?></span>
+				</h2>
+
+>>>>>>> origin/master
 				<p class="sl-soc2-action__lead">
 					<?php esc_html_e( 'Information security becomes easier to understand when employees can see how threats and secure behaviors appear in realistic situations.', 'akaza-adventure' ); ?>
 				</p>
@@ -53,8 +74,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 
 			<div class="sl-soc2-action__media">
+<<<<<<< HEAD
 				<div class="sl-soc2-action__image-placeholder">
 					<span><?php esc_html_e( 'Image Placeholder — Course Screenshots', 'akaza-adventure' ); ?></span>
+=======
+				<div class="sl-soc2-action__image">
+					<img
+						src="<?php echo esc_url( $soc2_action_image ); ?>"
+						alt="<?php esc_attr_e( 'SOC 2 security awareness course screenshots', 'akaza-adventure' ); ?>"
+						width="720"
+						height="760"
+						loading="lazy"
+						decoding="async"
+					/>
+>>>>>>> origin/master
 				</div>
 			</div>
 

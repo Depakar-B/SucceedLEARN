@@ -11,14 +11,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $accountability_points = array(
 	array(
+		'num'         => '01',
 		'title'       => __( 'Clear Responsibilities', 'akaza-adventure' ),
 		'description' => __( 'Establish clear reporting lines, responsibilities and oversight arrangements.', 'akaza-adventure' ),
 	),
 	array(
+		'num'         => '02',
 		'title'       => __( 'Active Oversight', 'akaza-adventure' ),
 		'description' => __( 'Monitor delegated work, challenge weaknesses and respond to emerging risks or red flags.', 'akaza-adventure' ),
 	),
 	array(
+		'num'         => '03',
 		'title'       => __( 'Documented Actions', 'akaza-adventure' ),
 		'description' => __( 'Maintain records, audit trails and evidence of important decisions and oversight actions.', 'akaza-adventure' ),
 	),
@@ -57,6 +60,10 @@ $accountability_points = array(
 			<?php foreach ( $accountability_points as $point ) : ?>
 
 				<article class="sl-smcr-accountability__card">
+
+					<span class="sl-smcr-accountability__number" aria-hidden="true">
+						<?php echo esc_html( $point['num'] ); ?>
+					</span>
 
 					<h3 class="sl-panel-title">
 						<?php echo esc_html( $point['title'] ); ?>

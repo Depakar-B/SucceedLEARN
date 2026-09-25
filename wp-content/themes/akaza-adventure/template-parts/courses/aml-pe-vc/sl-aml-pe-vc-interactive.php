@@ -64,21 +64,14 @@ $cards = array(
 		</div>
 
 		<div class="sl-aml-pe-vc-interactive__media">
-			<div
-				class="sl-aml-pe-vc-interactive__image-placeholder"
-				role="img"
-				aria-label="<?php esc_attr_e( 'Interactive AML Knowledge Check placeholder', 'akaza-adventure' ); ?>"
-			>
-				<span><?php esc_html_e( 'Interactive AML Knowledge Check', 'akaza-adventure' ); ?></span>
-				<small>
-					<?php
-					esc_html_e(
-						'Replace with an approved CDD, EDD or AML red-flag activity screenshot.',
-						'akaza-adventure'
-					);
-					?>
-				</small>
-			</div>
+			<figure class="sl-aml-pe-vc-interactive__image">
+				<img
+					src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/Assessment-section-image.webp' ); ?>"
+					alt="<?php esc_attr_e( 'Interactive AML Knowledge Check', 'akaza-adventure' ); ?>"
+					loading="lazy"
+					decoding="async"
+				>
+			</figure>
 		</div>
 
 	</div>

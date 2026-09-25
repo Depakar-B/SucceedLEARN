@@ -35,6 +35,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<span><?php esc_html_e( 'Reporting Matters', 'akaza-adventure' ); ?></span>
 				</h2>
 
+				<h3 class="sl-s-metrics-why__subtitle">
+					<?php esc_html_e( 'Awareness Programmes Need More Than Completion Data', 'akaza-adventure' ); ?>
+				</h3>
+
 				<div class="sl-s-metrics-why__copy">
 					<p>
 						<?php
@@ -48,7 +52,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<p>
 						<?php
 						esc_html_e(
-							'Without meaningful reporting, awareness programmes become difficult to evaluate, compliance evidence becomes harder to demonstrate, and identifying high-risk users or departments becomes a manual and time-consuming process.',
+							'Without meaningful reporting, security-awareness programmes can become difficult to evaluate and time-consuming to manage.',
 							'akaza-adventure'
 						);
 						?>
@@ -57,7 +61,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<p>
 						<?php
 						esc_html_e(
-							'S-Metrics transforms awareness data into meaningful insights by providing administrators with a single platform to monitor learner engagement, campaign performance, completion trends, behavioural improvements, and organisational risk across every component of the Security Behaviour & Culture Suite.',
+							'S-Metrics helps organisations move beyond isolated completion records by bringing awareness activity and behavioural indicators into a single reporting environment.',
+							'akaza-adventure'
+						);
+						?>
+					</p>
+
+					<p>
+						<?php
+						esc_html_e(
+							'This provides teams with greater visibility into participation, campaign performance, employee behaviour and programme progress.',
 							'akaza-adventure'
 						);
 						?>

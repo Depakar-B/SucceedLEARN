@@ -1,6 +1,6 @@
 <?php
 /**
- * S-Sync — Why Organisations Choose S-Sync.
+ * S-Sync — Benefits of S-Sync.
  *
  * @package Akaza_Adventure
  */
@@ -17,10 +17,6 @@ $reasons = array(
 	array(
 		'title' => __( 'Faster Programme Deployment', 'akaza-adventure' ),
 		'text'  => __( 'Accelerate onboarding and training assignments through automated provisioning and integrated workflows.', 'akaza-adventure' ),
-	),
-	array(
-		'title' => __( 'Improved Learner Experience', 'akaza-adventure' ),
-		'text'  => __( 'Allow employees to access training using familiar organisational credentials through Single Sign-On.', 'akaza-adventure' ),
 	),
 	array(
 		'title' => __( 'Accurate Data Synchronisation', 'akaza-adventure' ),
@@ -50,7 +46,7 @@ $reasons = array(
 			</span>
 
 			<h2 id="sl-s-sync-choose-title">
-				<?php esc_html_e( 'Why Organisations Choose', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'Benefits of', 'akaza-adventure' ); ?>
 				<span><?php esc_html_e( 'S-Sync', 'akaza-adventure' ); ?></span>
 			</h2>
 

@@ -28,10 +28,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<?php esc_html_e( 'Visual Security Awareness Posters & Digital Nudges', 'akaza-adventure' ); ?>
 				</h1>
 
+				<h2 class="sl-hero-h2">
+					<?php esc_html_e( 'Keep Cybersecurity Visible. Reinforce Secure Behaviour Every Day', 'akaza-adventure' ); ?>
+				</h2>
+
 				<p>
 					<?php
 					esc_html_e(
-						'Awareness training is most effective when security messages remain visible beyond the training session. Employees make hundreds of security-related decisions every day, and timely visual reminders play an important role in reinforcing secure behaviours, encouraging vigilance, and keeping cybersecurity top of mind.',
+						'Security awareness is most effective when important messages remain visible long after formal training ends.',
 						'akaza-adventure'
 					);
 					?>
@@ -40,7 +44,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<p>
 					<?php
 					esc_html_e(
-						"S-Signs is SucceedLEARN's visual security awareness solution that provides organisations with a comprehensive library of professionally designed cybersecurity awareness posters and digital nudges. Covering a wide range of information security topics, S-Signs enables organisations to reinforce awareness across offices, hybrid workplaces, and remote teams through engaging visual communication that is simple, memorable, and easy to deploy.",
+						'Employees make security-related decisions throughout their working day — opening emails, handling information, using devices, working remotely, interacting with systems and responding to suspicious activity.',
 						'akaza-adventure'
 					);
 					?>
@@ -49,15 +53,35 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<p>
 					<?php
 					esc_html_e(
-						'Whether displayed across workplace notice boards, digital signage or shared through email campaigns, S-Signs helps organisations continuously reinforce security awareness and strengthen everyday cyber-safe behaviours.',
+						'S-Signs is the visual reinforcement solution within the SucceedLEARN Security Behaviour & Culture Suite, providing organisations with a growing library of professionally designed cybersecurity awareness posters, digital security reminders and behavioural nudges.',
 						'akaza-adventure'
 					);
 					?>
+				</p>
+
+				<p>
+					<?php
+					esc_html_e(
+						'From phishing and password security to remote working, AI security and mobile-device safety, S-Signs helps organisations keep cybersecurity visible across offices, hybrid workplaces and remote teams through clear, memorable visual communication.',
+						'akaza-adventure'
+					);
+					?>
+				</p>
+
+				<p>
+					<strong>
+						<?php
+						esc_html_e(
+							'See It. Remember It. Act Securely.',
+							'akaza-adventure'
+						);
+						?>
+					</strong>
 				</p>
 
 				<div class="sl-hero-actions sl-s-signs-hero__actions">
 					<a class="sl-hero-btn sl-hero-btn-primary" href="#request-demo">
-						<?php esc_html_e( 'Request a Demo', 'akaza-adventure' ); ?>
+						<?php esc_html_e( 'Request Demo', 'akaza-adventure' ); ?>
 						<span aria-hidden="true">→</span>
 					</a>
 				</div>

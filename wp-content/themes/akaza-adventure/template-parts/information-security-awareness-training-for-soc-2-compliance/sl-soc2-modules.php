@@ -15,7 +15,11 @@ $modules = array(
 		'title'   => __( 'Account Security', 'akaza-adventure' ),
 		'tagline' => __( 'Protect Accounts and Strengthen Access Security', 'akaza-adventure' ),
 		'text'    => __( 'Employees learn why account security matters and how secure authentication practices help reduce the risk of unauthorised access.', 'akaza-adventure' ),
+<<<<<<< HEAD
 		'topics'  => __( 'Strong Password Creation · Password Security · NIST Guidance · 2FA · MFA Fatigue Attacks', 'akaza-adventure' ),
+=======
+		'topics'  => __( 'Password Security · MFA · Authentication · Credential Protection · Account Access', 'akaza-adventure' ),
+>>>>>>> origin/master
 		'cta'     => __( 'Explore Account Security Training', 'akaza-adventure' ),
 	),
 	array(
@@ -94,6 +98,7 @@ $modules = array(
 
 		<div class="sl-soc2-modules__heading">
 			<span class="sl-home-sub-heading">
+<<<<<<< HEAD
 				<?php esc_html_e( 'S-Aware Modules', 'akaza-adventure' ); ?>
 			</span>
 
@@ -105,6 +110,15 @@ $modules = array(
 			<h3 class="sl-soc2-modules__subtitle">
 				<?php esc_html_e( 'Practical Training Across Key Employee Security Risks', 'akaza-adventure' ); ?>
 			</h3>
+=======
+				<?php esc_html_e( 'Security Awareness Modules Relevant to SOC 2', 'akaza-adventure' ); ?>
+			</span>
+
+			<h2 id="sl-soc2-modules-title">
+				<?php esc_html_e( 'Practical Training Across', 'akaza-adventure' ); ?>
+				<span><?php esc_html_e( 'Key Employee Security Risks', 'akaza-adventure' ); ?></span>
+			</h2>
+>>>>>>> origin/master
 		</div>
 
 		<div class="sl-soc2-modules__grid">

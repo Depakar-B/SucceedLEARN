@@ -8,6 +8,8 @@
  */
 
 defined( 'ABSPATH' ) || exit;
+
+$learning_outcomes_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/Image-3_gifts.webp';
 ?>
 
 <section
@@ -42,31 +44,14 @@ defined( 'ABSPATH' ) || exit;
 				</h2>
 
 				<div class="sl-gifts-entertainment-learning-outcomes__media">
-
-					<div
-						class="sl-gifts-entertainment-learning-outcomes__image-placeholder"
-						role="img"
-						aria-label="<?php esc_attr_e( 'Gifts and entertainment training learning outcomes visual', 'akaza-adventure' ); ?>"
-					>
-						<span>
-							<?php
-							esc_html_e(
-								'IMAGE PLACEHOLDER',
-								'akaza-adventure'
-							);
-							?>
-						</span>
-
-						<small>
-							<?php
-							esc_html_e(
-								'Recommended: 600 × 600 px',
-								'akaza-adventure'
-							);
-							?>
-						</small>
-					</div>
-
+					<figure class="sl-gifts-entertainment-learning-outcomes__image">
+						<img
+							src="<?php echo esc_url( $learning_outcomes_image ); ?>"
+							alt="<?php esc_attr_e( 'Gifts and entertainment training learning outcomes visual', 'akaza-adventure' ); ?>"
+							loading="lazy"
+							decoding="async"
+						>
+					</figure>
 				</div>
 
 			</div>

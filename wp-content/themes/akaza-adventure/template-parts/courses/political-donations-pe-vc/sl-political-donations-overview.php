@@ -11,6 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <section
+	id="overview"
 	class="sl-political-donations-overview"
 	aria-labelledby="sl-political-donations-overview-title"
 >
@@ -19,9 +20,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<div class="sl-political-donations-overview__media">
 				<div class="sl-political-donations-overview__image">
-					<div class="sl-political-donations-overview__image-placeholder">
-						<?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?>
-					</div>
+					<img
+						src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/What-is-Political-Donations_Image.webp' ); ?>"
+						alt="<?php esc_attr_e( 'What is political donations and political contributions compliance training', 'akaza-adventure' ); ?>"
+						loading="lazy"
+						decoding="async"
+					>
 				</div>
 			</div>
 

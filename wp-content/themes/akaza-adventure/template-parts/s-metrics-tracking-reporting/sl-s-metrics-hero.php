@@ -35,7 +35,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<p>
 					<?php
 					esc_html_e(
-						'Security awareness programmes generate valuable data - but without meaningful reporting, organisations struggle to understand employee behaviour, measure programme effectiveness, or demonstrate compliance during audits.',
+						'Security awareness programmes generate valuable data across training, phishing simulations, microlearning, gamified learning and reinforcement activities.',
 						'akaza-adventure'
 					);
 					?>
@@ -44,7 +44,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<p>
 					<?php
 					esc_html_e(
-						'S-Metrics is the central analytics and reporting platform within the SucceedLEARN Security Behaviour & Culture Suite, bringing together learning progress, phishing simulation results, microlearning engagement, gamified learning participation, and awareness reinforcement into one unified dashboard.',
+						'But data alone is not enough.',
 						'akaza-adventure'
 					);
 					?>
@@ -53,15 +53,44 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<p>
 					<?php
 					esc_html_e(
-						'With powerful reporting, intelligent filtering, exportable reports, and organisation-wide visibility, S-Metrics enables administrators to measure awareness performance, identify areas of risk, demonstrate due diligence, and continuously strengthen their cybersecurity awareness programme.',
+						'Organisations need a clear way to understand whether employees are completing assigned learning, how they respond to simulated threats, where engagement is improving, and which areas may require additional attention.',
 						'akaza-adventure'
 					);
 					?>
+				</p>
+
+				<p>
+					<?php
+					esc_html_e(
+						'S-Metrics is the central analytics and reporting layer of the SucceedLEARN Security Behaviour & Culture Suite (SBCS), bringing security awareness data together in one unified reporting environment.',
+						'akaza-adventure'
+					);
+					?>
+				</p>
+
+				<p>
+					<?php
+					esc_html_e(
+						'From learner progress and campaign performance to phishing behaviour and employee engagement, S-Metrics helps security, compliance and learning teams turn programme activity into measurable insight.',
+						'akaza-adventure'
+					);
+					?>
+				</p>
+
+				<p>
+					<strong>
+						<?php
+						esc_html_e(
+							'Measure. Analyse. Improve.',
+							'akaza-adventure'
+						);
+						?>
+					</strong>
 				</p>
 
 				<div class="sl-hero-actions sl-s-metrics-hero__actions">
 					<a class="sl-hero-btn sl-hero-btn-primary" href="#request-demo">
-						<?php esc_html_e( 'Request a Demo', 'akaza-adventure' ); ?>
+						<?php esc_html_e( 'Request Demo', 'akaza-adventure' ); ?>
 						<span aria-hidden="true">→</span>
 					</a>
 				</div>
@@ -69,9 +98,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 
 			<div class="sl-s-metrics-hero__media">
-				<div class="sl-s-metrics-hero__image-placeholder">
-					<span><?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?></span>
-				</div>
+				<img
+					class="sl-s-metrics-hero__image"
+					src="<?php echo esc_url( akaza_upload_url( '2026/09/Security-Awareness-Analytics-S-Metrics.webp' ) ); ?>"
+					alt="<?php esc_attr_e( 'Security Awareness Analytics, Reporting & Compliance Dashboard', 'akaza-adventure' ); ?>"
+					width="800"
+					height="600"
+					loading="eager"
+					decoding="async"
+				>
 			</div>
 
 		</div>

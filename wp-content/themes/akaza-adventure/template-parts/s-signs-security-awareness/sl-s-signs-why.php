@@ -62,6 +62,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 						);
 						?>
 					</p>
+
+					<p>
+						<?php
+						esc_html_e(
+							'The objective is simple: keep important security behaviours visible at the moments employees may need them most.',
+							'akaza-adventure'
+						);
+						?>
+					</p>
 				</div>
 
 			</div>

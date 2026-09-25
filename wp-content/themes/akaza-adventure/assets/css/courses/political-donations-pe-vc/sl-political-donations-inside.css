@@ -5,7 +5,7 @@
  */
 
  .sl-political-donations-inside {
-	background: var(--sl-page-white, #ffffff);
+	background: var(--sl-page-bg, #f5f5f5);
 	padding: 88px 0;
 }
 
@@ -44,16 +44,12 @@
 	background: #f5f5f5;
 }
 
-.sl-political-donations-inside__image-placeholder {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.sl-political-donations-inside__image img {
+	display: block;
+	width: 100%;
+	height: auto;
 	min-height: 250px;
-	padding: 24px;
-	box-sizing: border-box;
-	background: #f5f5f5;
-	color: var(--sl-page-muted, #6b7c93);
-	text-align: center;
+	object-fit: cover;
 }
 
 .sl-political-donations-inside__content {

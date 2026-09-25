@@ -12,28 +12,42 @@
 }
 
 .sl-s-signs-nudges__intro h2 {
-	margin-bottom: 16px;
+	margin-bottom: 0;
+}
+
+.sl-s-signs-nudges__subtitle {
+	margin: 16px 0 0;
+	font-size: 1.15rem;
+	font-weight: 600;
+	line-height: 1.4;
+	color: var(--sl-page-text, #16234e);
 }
 
 .sl-s-signs-nudges__intro p {
-	margin: 0 0 14px;
+	margin: 14px 0 0;
 	max-width: 820px;
 }
 
-.sl-s-signs-nudges__intro p:last-child {
-	margin-bottom: 0;
+.sl-s-signs-nudges__layout {
+	display: grid;
+	grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+	gap: 48px;
+	align-items: start;
+}
+
+.sl-s-signs-nudges__content {
+	min-width: 0;
 }
 
 .sl-s-signs-nudges__grid {
 	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: 24px;
+	grid-template-columns: 1fr;
+	gap: 20px;
 }
 
 .sl-s-signs-nudges__card {
 	display: flex;
 	flex-direction: column;
-	height: 100%;
 	min-width: 0;
 	padding: 28px 24px;
 	border: 1px solid rgba(107, 124, 147, 0.18);
@@ -69,21 +83,76 @@
 	margin-bottom: 0;
 }
 
-@media (max-width: 767px) {
+.sl-s-signs-nudges__closing {
+	margin: 24px 0 0;
+	max-width: none;
+}
+
+.sl-s-signs-nudges__media {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 110px) + 24px);
+	width: 100%;
+	min-width: 0;
+	align-self: start;
+}
+
+.sl-s-signs-nudges__image-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 420px;
+	padding: 40px;
+	border: 1px solid rgba(22, 35, 78, 0.10);
+	border-radius: 16px;
+	background: var(--sl-page-bg, #f5f5f5);
+	box-sizing: border-box;
+	color: var(--sl-page-muted, #6b7c93);
+	text-align: center;
+}
+
+@media (max-width: 991px) {
 	.sl-s-signs-nudges {
-		padding: 60px 0;
+		padding: 64px 0;
 	}
 
 	.sl-s-signs-nudges__intro {
 		margin-bottom: 28px;
 	}
 
-	.sl-s-signs-nudges__grid {
+	.sl-s-signs-nudges__layout {
 		grid-template-columns: 1fr;
+		gap: 32px;
+	}
+
+	.sl-s-signs-nudges__media {
+		position: static;
+		order: -1;
+		max-width: 640px;
+		margin: 0 auto;
+	}
+
+	.sl-s-signs-nudges__image-placeholder {
+		min-height: 320px;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-s-signs-nudges {
+		padding: 60px 0;
+	}
+
+	.sl-s-signs-nudges__grid {
 		gap: 16px;
 	}
 
 	.sl-s-signs-nudges__card {
 		padding: 22px 20px;
+	}
+
+	.sl-s-signs-nudges__image-placeholder {
+		min-height: 220px;
+		padding: 28px;
+		border-radius: 12px;
 	}
 }

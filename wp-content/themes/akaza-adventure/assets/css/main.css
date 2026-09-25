@@ -434,7 +434,7 @@ body.slf-body #main-content.sl-sap-page p {
   width: min(100% - (var(--slf-gutter) * 2), var(--sl-home-content-max));
 }
 
-/* Global section eyebrow / span label (page primary; orange fallback) */
+/* Global section eyebrow / span label (default: accent line) */
 .sl-home-sub-heading {
   display: inline-flex;
   align-items: center;
