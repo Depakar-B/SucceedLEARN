@@ -19,9 +19,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="sl-s-metrics-why__grid">
 
 			<div class="sl-s-metrics-why__media">
-				<div class="sl-s-metrics-why__image-placeholder">
-					<span><?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?></span>
-				</div>
+				<img
+					class="sl-s-metrics-why__image"
+					src="<?php echo esc_url( akaza_upload_url( '2026/09/Why-Security-Awareness-Reporting-Matters.webp' ) ); ?>"
+					alt="<?php esc_attr_e( 'Why Security Awareness Reporting Matters', 'akaza-adventure' ); ?>"
+					width="800"
+					height="600"
+					loading="lazy"
+					decoding="async"
+				>
 			</div>
 
 			<div class="sl-s-metrics-why__content">

@@ -55,6 +55,13 @@
 	text-align: center;
 }
 
+.sl-s-metrics-insights__image {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 16px;
+}
+
 @media (max-width: 991px) {
 	.sl-s-metrics-insights {
 		padding: 64px 0;
