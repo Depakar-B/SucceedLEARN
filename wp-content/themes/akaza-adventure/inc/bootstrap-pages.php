@@ -159,6 +159,11 @@ function akaza_bootstrap_pages() {
 			'title'    => 'S-Metrics',
 			'template' => 'page-templates/s-metrics-tracking-reporting.php',
 		),
+		array(
+			'slug'     => 'information-security-awareness-training-for-soc-2-compliance',
+			'title'    => 'Information Security Awareness Training for SOC 2 Compliance',
+			'template' => 'page-templates/information-security-awareness-training-for-soc-2-compliance.php',
+		),
 	);
 
 	$created_page = false;
