@@ -49,7 +49,7 @@ $features = array(
 			<div class="sl-aml-pe-vc-organisations__media">
 				<figure class="sl-aml-pe-vc-organisations__image">
 					<img
-						src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/organisation-image-2.webp' ); ?>"
+						src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/organisation-image-1.webp' ); ?>"
 						alt="<?php esc_attr_e( 'Organisational Training Dashboard', 'akaza-adventure' ); ?>"
 						loading="lazy"
 						decoding="async"
