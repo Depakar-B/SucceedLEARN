@@ -97,12 +97,7 @@
 
 .sl-s-play-suite__closing {
 	max-width: 1180px;
-	margin: 35px auto 0;
-	padding: 24px 28px;
-	border-left: 4px solid var(--sl-page-primary, #1472ba);
-	border-radius: 10px;
-	background: var(--sl-page-white, #ffffff);
-	box-sizing: border-box;
+	margin: 28px auto 0;
 }
 
 .sl-s-play-suite__closing p {
@@ -166,8 +161,7 @@
 	}
 
 	.sl-s-play-suite__closing {
-		margin-top: 28px;
-		padding: 20px;
+		margin-top: 24px;
 	}
 
 	.sl-s-play-suite__media {
