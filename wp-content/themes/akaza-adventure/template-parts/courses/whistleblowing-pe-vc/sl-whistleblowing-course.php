@@ -42,7 +42,7 @@ $total_slides = count( $course_images );
 
 		<div class="sl-whistleblowing-course__intro">
 			<span class="sl-home-sub-heading">
-				<?php esc_html_e( 'Inside the Course', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'Course View', 'akaza-adventure' ); ?>
 			</span>
 
 			<h2 id="sl-whistleblowing-course-title">
