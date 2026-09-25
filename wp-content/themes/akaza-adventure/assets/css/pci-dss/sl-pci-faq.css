@@ -1,0 +1,16 @@
+.sl-pci-faq {
+	/* Uses global FAQ styles; page-scoped spacing only. */
+}
+
+.sl-pci-page .sl-pci-faq.sl-faq-section {
+	padding-top: 90px;
+	padding-bottom: 90px;
+	background: var(--sl-page-white, #ffffff);
+}
+
+@media (max-width: 767px) {
+	.sl-pci-page .sl-pci-faq.sl-faq-section {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+}

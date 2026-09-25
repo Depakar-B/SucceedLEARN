@@ -169,6 +169,11 @@ function akaza_bootstrap_pages() {
 			'title'    => 'S-Metrics',
 			'template' => 'page-templates/s-metrics-tracking-reporting.php',
 		),
+		array(
+			'slug'     => 'pci-dss',
+			'title'    => 'PCI DSS Awareness Training for Employees & Payment Handlers',
+			'template' => 'page-templates/pci-dss.php',
+		),
 	);
 
 	$created_page = false;
