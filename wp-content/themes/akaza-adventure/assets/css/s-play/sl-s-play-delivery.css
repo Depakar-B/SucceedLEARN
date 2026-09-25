@@ -4,7 +4,7 @@
 
 .sl-s-play-delivery {
 	padding: 76px 0;
-	background: var(--sl-page-bg, #f5f5f5);
+	background: var(--sl-page-white, #ffffff);
 }
 
 .sl-s-play-delivery__grid {
@@ -18,16 +18,27 @@
 	min-width: 0;
 }
 
+.sl-s-play-delivery__content .sl-home-sub-heading {
+	display: block;
+	margin-bottom: 14px;
+}
+
 .sl-s-play-delivery__content h2 {
 	margin-bottom: 0;
 }
 
-.sl-s-play-delivery__subtitle {
-	margin: 16px 0 18px;
-	font-size: 1.15rem;
+/* Section subtitle under h2 — same scale as SAP annual-training. */
+body.slf-body main.sl-s-play-page .sl-s-play-delivery__subtitle,
+body.slf-body #main-content.sl-s-play-page .sl-s-play-delivery__subtitle,
+.sl-s-play-page .sl-s-play-delivery__subtitle {
+	margin: 16px 0 14px;
+	font-family: var(--slf-font-display, "Space Grotesk", system-ui, sans-serif);
+	font-size: 22px;
 	font-weight: 600;
 	line-height: 1.4;
-	color: var(--sl-page-text, #16234e);
+	letter-spacing: 0;
+	text-transform: none;
+	color: var(--sl-page-primary, #1472ba);
 }
 
 .sl-s-play-delivery__copy {
@@ -57,7 +68,7 @@
 	padding: 40px;
 	border: 1px solid rgba(22, 35, 78, 0.10);
 	border-radius: 16px;
-	background: var(--sl-page-white, #ffffff);
+	background: var(--sl-page-bg, #f5f5f5);
 	box-sizing: border-box;
 	color: var(--sl-page-muted, #6b7c93);
 	text-align: center;

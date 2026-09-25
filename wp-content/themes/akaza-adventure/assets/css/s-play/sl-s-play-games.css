@@ -11,16 +11,27 @@
 	margin-bottom: 40px;
 }
 
+.sl-s-play-games__intro .sl-home-sub-heading {
+	display: block;
+	margin-bottom: 14px;
+}
+
 .sl-s-play-games__intro h2 {
 	margin-bottom: 0;
 }
 
-.sl-s-play-games__subtitle {
+/* Section subtitle under h2 — same scale as SAP annual-training. */
+body.slf-body main.sl-s-play-page .sl-s-play-games__subtitle,
+body.slf-body #main-content.sl-s-play-page .sl-s-play-games__subtitle,
+.sl-s-play-page .sl-s-play-games__subtitle {
 	margin: 16px 0 0;
-	font-size: 1.15rem;
+	font-family: var(--slf-font-display, "Space Grotesk", system-ui, sans-serif);
+	font-size: 22px;
 	font-weight: 600;
 	line-height: 1.4;
-	color: var(--sl-page-text, #16234e);
+	letter-spacing: 0;
+	text-transform: none;
+	color: var(--sl-page-primary, #1472ba);
 }
 
 .sl-s-play-games__intro p {

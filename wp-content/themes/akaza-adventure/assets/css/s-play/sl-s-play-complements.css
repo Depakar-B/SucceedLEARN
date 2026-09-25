@@ -18,6 +18,11 @@
 	min-width: 0;
 }
 
+.sl-s-play-complements__content .sl-home-sub-heading {
+	display: block;
+	margin-bottom: 14px;
+}
+
 .sl-s-play-complements__content h2 {
 	margin-bottom: 18px;
 }

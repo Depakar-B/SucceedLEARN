@@ -11,23 +11,34 @@
 	display: grid;
 	grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
 	gap: 64px;
-	align-items: center;
+	align-items: start;
 }
 
 .sl-s-play-why__content {
 	min-width: 0;
 }
 
+.sl-s-play-why__content .sl-home-sub-heading {
+	display: block;
+	margin-bottom: 14px;
+}
+
 .sl-s-play-why__content h2 {
 	margin-bottom: 0;
 }
 
-.sl-s-play-why__subtitle {
-	margin: 16px 0 18px;
-	font-size: 1.15rem;
+/* Section subtitle under h2 — same scale as SAP annual-training. */
+body.slf-body main.sl-s-play-page .sl-s-play-why__subtitle,
+body.slf-body #main-content.sl-s-play-page .sl-s-play-why__subtitle,
+.sl-s-play-page .sl-s-play-why__subtitle {
+	margin: 16px 0 14px;
+	font-family: var(--slf-font-display, "Space Grotesk", system-ui, sans-serif);
+	font-size: 22px;
 	font-weight: 600;
 	line-height: 1.4;
-	color: var(--sl-page-text, #16234e);
+	letter-spacing: 0;
+	text-transform: none;
+	color: var(--sl-page-primary, #1472ba);
 }
 
 .sl-s-play-why__copy {
@@ -55,9 +66,11 @@
 }
 
 .sl-s-play-why__media {
-	position: static;
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 110px) + 24px);
 	width: 100%;
 	min-width: 0;
+	align-self: start;
 }
 
 .sl-s-play-why__image-placeholder {
