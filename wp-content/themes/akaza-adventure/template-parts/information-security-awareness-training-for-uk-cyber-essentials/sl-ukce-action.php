@@ -8,13 +8,6 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
-$ukce_action_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/One-Platform.-Continuous-Security-Behaviour-Change-e1789024641243.webp';
-$ukce_action_local = WP_CONTENT_DIR . '/uploads/2026/09/One-Platform.-Continuous-Security-Behaviour-Change-e1789024641243.webp';
-
-if ( function_exists( 'akaza_upload_url' ) && file_exists( $ukce_action_local ) ) {
-	$ukce_action_image = akaza_upload_url( '2026/09/One-Platform.-Continuous-Security-Behaviour-Change-e1789024641243.webp' );
-}
 ?>
 
 <section
@@ -29,13 +22,17 @@ if ( function_exists( 'akaza_upload_url' ) && file_exists( $ukce_action_local ) 
 			<div class="sl-ukce-action__content">
 
 				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'See the Training in Action', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Course Screenshots', 'akaza-adventure' ); ?>
 				</span>
 
 				<h2 id="sl-ukce-action-title">
-					<?php esc_html_e( 'Practical Cybersecurity Awareness for', 'akaza-adventure' ); ?>
-					<span><?php esc_html_e( 'Everyday Technology Use', 'akaza-adventure' ); ?></span>
+					<?php esc_html_e( 'See the Training', 'akaza-adventure' ); ?>
+					<span><?php esc_html_e( 'in Action', 'akaza-adventure' ); ?></span>
 				</h2>
+
+				<h3 class="sl-ukce-action__subtitle">
+					<?php esc_html_e( 'Practical Cybersecurity Awareness for Everyday Technology Use', 'akaza-adventure' ); ?>
+				</h3>
 
 				<p class="sl-ukce-action__lead">
 					<?php esc_html_e( 'Cyber Essentials focuses on fundamental technical security controls. Employee awareness helps reinforce how those controls are supported through everyday use of accounts, devices, applications and remote-working environments.', 'akaza-adventure' ); ?>
@@ -56,15 +53,8 @@ if ( function_exists( 'akaza_upload_url' ) && file_exists( $ukce_action_local ) 
 			</div>
 
 			<div class="sl-ukce-action__media">
-				<div class="sl-ukce-action__image">
-					<img
-						src="<?php echo esc_url( $ukce_action_image ); ?>"
-						alt="<?php esc_attr_e( 'UK Cyber Essentials security awareness course screenshots', 'akaza-adventure' ); ?>"
-						width="720"
-						height="760"
-						loading="lazy"
-						decoding="async"
-					/>
+				<div class="sl-ukce-action__image-placeholder">
+					<span><?php esc_html_e( 'Image Placeholder — Course Screenshots', 'akaza-adventure' ); ?></span>
 				</div>
 			</div>
 

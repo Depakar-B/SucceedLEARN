@@ -52,13 +52,17 @@ $modules = array(
 
 		<div class="sl-ukce-modules__heading">
 			<span class="sl-home-sub-heading">
-				<?php esc_html_e( 'Security Awareness Modules Relevant to Cyber Essentials', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'S-Aware Modules', 'akaza-adventure' ); ?>
 			</span>
 
 			<h2 id="sl-ukce-modules-title">
-				<?php esc_html_e( 'Focused Employee Awareness Around', 'akaza-adventure' ); ?>
-				<span><?php esc_html_e( 'Key Cyber Essentials Controls', 'akaza-adventure' ); ?></span>
+				<?php esc_html_e( 'Security Awareness Modules Relevant to', 'akaza-adventure' ); ?>
+				<span><?php esc_html_e( 'Cyber Essentials', 'akaza-adventure' ); ?></span>
 			</h2>
+
+			<h3 class="sl-ukce-modules__subtitle">
+				<?php esc_html_e( 'Focused Employee Awareness Around Key Cyber Essentials Controls', 'akaza-adventure' ); ?>
+			</h3>
 		</div>
 
 		<div class="sl-ukce-modules__grid">
