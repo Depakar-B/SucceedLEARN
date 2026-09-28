@@ -19,28 +19,28 @@ $overview_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/Gifts-and
 >
 	<div class="container">
 
-		<div class="sl-gifts-entertainment-overview__heading">
-
-			<span class="sl-home-sub-heading">
-				<?php esc_html_e( 'Definition of Gifts and Entertainment', 'akaza-adventure' ); ?>
-			</span>
-
-			<h2 id="sl-gifts-entertainment-overview-title">
-				<?php
-				echo wp_kses_post(
-					__(
-						'What Is Gifts and Entertainment <span>Compliance Training?</span>',
-						'akaza-adventure'
-					)
-				);
-				?>
-			</h2>
-
-		</div>
-
 		<div class="sl-gifts-entertainment-overview__grid">
 
 			<div class="sl-gifts-entertainment-overview__body">
+
+				<div class="sl-gifts-entertainment-overview__heading">
+
+					<span class="sl-home-sub-heading">
+						<?php esc_html_e( 'Definition of Gifts and Entertainment', 'akaza-adventure' ); ?>
+					</span>
+
+					<h2 id="sl-gifts-entertainment-overview-title">
+						<?php
+						echo wp_kses_post(
+							__(
+								'What Is Gifts and Entertainment <span>Compliance Training?</span>',
+								'akaza-adventure'
+							)
+						);
+						?>
+					</h2>
+
+				</div>
 
 				<p class="sl-gifts-entertainment-overview__lead">
 					<?php

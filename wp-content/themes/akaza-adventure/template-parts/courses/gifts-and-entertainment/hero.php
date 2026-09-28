@@ -66,7 +66,7 @@ $hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/Hero-section-
 				<p>
 					<?php
 					esc_html_e(
-						'Designed for private equity and venture capital professionals, this scenario-led e-learning course uses situations relevant to both the UK and the US, including interactions with investors, advisers, vendors, portfolio company contacts and government officials.',
+						'Designed for private equity and venture capital professionals, this scenario-led eLearning course uses situations relevant to both the UK and the US, including interactions with investors, advisers, vendors, portfolio company contacts and government officials.',
 						'akaza-adventure'
 					);
 					?>
@@ -81,7 +81,7 @@ $hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/Hero-section-
 					</span>
 					<a
 						class="sl-hero-btn sl-hero-btn-primary"
-						href="#individuals"
+						href="#contact"
 					>
 						<?php esc_html_e( 'Buy Now @ $20', 'akaza-adventure' ); ?>
 						<span aria-hidden="true">→</span>
