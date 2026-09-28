@@ -13,37 +13,37 @@ $suite_products = array(
 	array(
 		'name' => __( 'S-Aware', 'akaza-adventure' ),
 		'role' => __( 'Learn', 'akaza-adventure' ),
-		'text' => __( 'Deliver foundational security awareness training.', 'akaza-adventure' ),
+		'text' => __( 'Build foundational cybersecurity and privacy knowledge.', 'akaza-adventure' ),
 	),
 	array(
 		'name' => __( 'S-Bytes', 'akaza-adventure' ),
 		'role' => __( 'Reinforce', 'akaza-adventure' ),
-		'text' => __( 'Reinforce learning through continuous microlearning.', 'akaza-adventure' ),
-	),
-	array(
-		'name' => __( 'S-Play', 'akaza-adventure' ),
-		'role' => __( 'Engage', 'akaza-adventure' ),
-		'text' => __( 'Engage employees with gamified security awareness.', 'akaza-adventure' ),
+		'text' => __( 'Keep important security concepts fresh through short, continuous microlearning.', 'akaza-adventure' ),
 	),
 	array(
 		'name' => __( 'S-Phish', 'akaza-adventure' ),
 		'role' => __( 'Test', 'akaza-adventure' ),
-		'text' => __( 'Test real-world phishing resilience.', 'akaza-adventure' ),
+		'text' => __( 'Give employees practical experience recognising realistic phishing threats.', 'akaza-adventure' ),
+	),
+	array(
+		'name' => __( 'S-Play', 'akaza-adventure' ),
+		'role' => __( 'Engage', 'akaza-adventure' ),
+		'text' => __( 'Reinforce security concepts through interactive and gamified learning.', 'akaza-adventure' ),
 	),
 	array(
 		'name' => __( 'S-Signs', 'akaza-adventure' ),
 		'role' => __( 'Remind', 'akaza-adventure' ),
-		'text' => __( 'Reinforce awareness with visual reminders and digital nudges.', 'akaza-adventure' ),
+		'text' => __( 'Keep security visible through ongoing visual awareness campaigns and nudges.', 'akaza-adventure' ),
 	),
 	array(
 		'name' => __( 'S-Metrics', 'akaza-adventure' ),
 		'role' => __( 'Measure', 'akaza-adventure' ),
-		'text' => __( 'Measure programme effectiveness through analytics and reporting.', 'akaza-adventure' ),
+		'text' => __( 'Bring awareness and behavioural data together to understand programme performance.', 'akaza-adventure' ),
 	),
 	array(
 		'name' => __( 'S-Sync', 'akaza-adventure' ),
 		'role' => __( 'Connect', 'akaza-adventure' ),
-		'text' => __( 'Connect and automate the entire ecosystem.', 'akaza-adventure' ),
+		'text' => __( "Integrate security awareness with the organisation's wider learning and technology ecosystem.", 'akaza-adventure' ),
 	),
 );
 ?>
@@ -61,18 +61,9 @@ $suite_products = array(
 			</span>
 
 			<h2 id="sl-s-sync-suite-title">
-				<?php esc_html_e( 'Integrating the Entire Security Behaviour', 'akaza-adventure' ); ?>
-				<span><?php esc_html_e( '& Culture Suite', 'akaza-adventure' ); ?></span>
+				<?php esc_html_e( 'From Awareness to a', 'akaza-adventure' ); ?>
+				<span><?php esc_html_e( 'Connected Security Ecosystem', 'akaza-adventure' ); ?></span>
 			</h2>
-
-			<p>
-				<?php
-				esc_html_e(
-					'S-Sync connects every component of the SucceedLEARN Security Behaviour & Culture Suite, ensuring a consistent and streamlined user experience across learning, reinforcement, phishing simulations, gamification, visual awareness, and reporting.',
-					'akaza-adventure'
-				);
-				?>
-			</p>
 
 		</div>
 
@@ -105,7 +96,7 @@ $suite_products = array(
 			<p>
 				<?php
 				esc_html_e(
-					'Together, these solutions provide organisations with a connected, scalable, and enterprise-ready security awareness platform.',
+					'Together, these solutions create a continuous security-awareness ecosystem that can learn, reinforce, test, engage, remind, measure and connect.',
 					'akaza-adventure'
 				);
 				?>
