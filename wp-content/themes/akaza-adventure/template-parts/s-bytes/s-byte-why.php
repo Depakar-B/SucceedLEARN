@@ -47,12 +47,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 						?>
 					</p>
 
-					<div class="sl-sbytes-why__key-message">
-						<p>
-							<?php esc_html_e( 'Knowledge naturally fades when it isn\'t revisited.', 'akaza-adventure' ); ?>
-						</p>
-					</div>
-
 					<p>
 						<?php
 						esc_html_e(

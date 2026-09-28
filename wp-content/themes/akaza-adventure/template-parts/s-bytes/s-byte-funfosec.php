@@ -65,12 +65,12 @@ $sbytes_funfosec_benefits = array(
 			<div class="sl-sbytes-funfosec__intro">
 
 				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'Why FunFoSec?', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Why S-Bytes', 'akaza-adventure' ); ?>
 				</span>
 
 				<h2 id="sl-sbytes-funfosec-title">
-					<?php esc_html_e( 'Why', 'akaza-adventure' ); ?>
-					<span><?php esc_html_e( 'FunFoSec?', 'akaza-adventure' ); ?></span>
+					<?php esc_html_e( 'Why organisations choose', 'akaza-adventure' ); ?>
+					<span><?php esc_html_e( 'Security Awareness microlearning', 'akaza-adventure' ); ?></span>
 				</h2>
 
 				<p>

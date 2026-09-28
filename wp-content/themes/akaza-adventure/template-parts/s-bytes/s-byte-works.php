@@ -71,8 +71,8 @@ $sbytes_works_steps = array(
 			</span>
 
 			<h2 id="sl-sbytes-works-title">
-				<?php esc_html_e( 'How', 'akaza-adventure' ); ?>
-				<span><?php esc_html_e( 'S-Bytes Works', 'akaza-adventure' ); ?></span>
+				<?php esc_html_e( 'Easy steps to launch a', 'akaza-adventure' ); ?>
+				<span><?php esc_html_e( 'security awareness microlearning campaign', 'akaza-adventure' ); ?></span>
 			</h2>
 
 			<h3 class="sl-panel-title">

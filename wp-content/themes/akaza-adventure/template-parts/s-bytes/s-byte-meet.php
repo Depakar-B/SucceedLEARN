@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				<h2 id="sl-sbytes-meet-title">
 					<?php esc_html_e( 'Meet', 'akaza-adventure' ); ?>
-					<span><?php esc_html_e( 'S-Bytes', 'akaza-adventure' ); ?></span>
+					<span><?php esc_html_e( 'Information Security Awareness Microlearning Series', 'akaza-adventure' ); ?></span>
 				</h2>
 
 				<h3 class="sl-panel-title">

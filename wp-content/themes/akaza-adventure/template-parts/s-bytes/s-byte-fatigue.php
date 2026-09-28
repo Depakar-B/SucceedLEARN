@@ -59,11 +59,9 @@ $sbytes_fatigue_points = array(
 				</div>
 
 				<ul class="sl-list sl-sbytes-fatigue__list">
-					<?php foreach ( $sbytes_fatigue_points as $index => $point ) : ?>
+					<?php foreach ( $sbytes_fatigue_points as $point ) : ?>
 						<li class="sl-list-item">
-							<span class="sl-list-item__label" aria-hidden="true">
-								<?php echo esc_html( sprintf( '%02d', (int) $index + 1 ) ); ?>
-							</span>
+							<span class="sl-sbytes-fatigue__bullet" aria-hidden="true"></span>
 							<span class="sl-list-item__text">
 								<?php echo esc_html( $point ); ?>
 							</span>

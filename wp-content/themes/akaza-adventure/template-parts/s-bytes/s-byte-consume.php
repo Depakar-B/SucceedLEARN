@@ -74,13 +74,9 @@ $sbytes_consume_features = array(
 			</h2>
 
 			<p>
-				<?php esc_html_e( 'Employees already have busy working days.', 'akaza-adventure' ); ?>
-			</p>
-
-			<p>
 				<?php
 				esc_html_e(
-					'Continuous awareness only works when learning is easy to access, quick to complete and relevant enough to hold attention.',
+					'Employees already have busy working days. Continuous awareness only works when learning is easy to access, quick to complete and relevant enough to hold attention.',
 					'akaza-adventure'
 				);
 				?>
