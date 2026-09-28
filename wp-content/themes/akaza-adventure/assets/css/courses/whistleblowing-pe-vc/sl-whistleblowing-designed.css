@@ -5,7 +5,7 @@
  */
 
  .sl-whistleblowing-designed {
-	background: #f5f5f5;
+	background: #ffffff;
 	padding: 90px 0;
 }
 
@@ -38,18 +38,25 @@
 }
 
 .sl-whistleblowing-designed__number {
-	display: block;
-	margin-bottom: 22px;
-	color: var(--sl-page-primary, #1472ba);
+	display: grid;
+	place-items: center;
+	width: 39px;
+	height: 39px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	background: #edf5fd;
+	color: var(--sl-page-primary, #135db7);
 	font-size: 14px;
 	font-weight: 700;
-	line-height: 1.4;
-	letter-spacing: 0.05em;
+	line-height: 1;
 }
 
+body.slf-body #main-content .sl-whistleblowing-designed__card h3.sl-panel-title,
+body.slf-body .sl-whistleblowing-designed__card h3.sl-panel-title,
 .sl-whistleblowing-designed__card .sl-panel-title {
 	margin-top: 0;
 	margin-bottom: 10px;
+	color: #212b48;
 }
 
 .sl-whistleblowing-designed__card p {

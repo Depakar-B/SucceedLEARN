@@ -19,9 +19,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="sl-s-metrics-why__grid">
 
 			<div class="sl-s-metrics-why__media">
-				<div class="sl-s-metrics-why__image-placeholder">
-					<span><?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?></span>
-				</div>
+				<img
+					class="sl-s-metrics-why__image"
+					src="<?php echo esc_url( akaza_upload_url( '2026/09/Why-Security-Awareness-Reporting-Matters.webp' ) ); ?>"
+					alt="<?php esc_attr_e( 'Why Security Awareness Reporting Matters', 'akaza-adventure' ); ?>"
+					width="800"
+					height="600"
+					loading="lazy"
+					decoding="async"
+				>
 			</div>
 
 			<div class="sl-s-metrics-why__content">
@@ -34,6 +40,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<?php esc_html_e( 'Why Security Awareness', 'akaza-adventure' ); ?>
 					<span><?php esc_html_e( 'Reporting Matters', 'akaza-adventure' ); ?></span>
 				</h2>
+
+				<h3 class="sl-s-metrics-why__subtitle">
+					<?php esc_html_e( 'Awareness Programmes Need More Than Completion Data', 'akaza-adventure' ); ?>
+				</h3>
 
 				<div class="sl-s-metrics-why__copy">
 					<p>
@@ -48,7 +58,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<p>
 						<?php
 						esc_html_e(
-							'Without meaningful reporting, awareness programmes become difficult to evaluate, compliance evidence becomes harder to demonstrate, and identifying high-risk users or departments becomes a manual and time-consuming process.',
+							'Without meaningful reporting, security-awareness programmes can become difficult to evaluate and time-consuming to manage.',
 							'akaza-adventure'
 						);
 						?>
@@ -57,7 +67,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<p>
 						<?php
 						esc_html_e(
-							'S-Metrics transforms awareness data into meaningful insights by providing administrators with a single platform to monitor learner engagement, campaign performance, completion trends, behavioural improvements, and organisational risk across every component of the Security Behaviour & Culture Suite.',
+							'S-Metrics helps organisations move beyond isolated completion records by bringing awareness activity and behavioural indicators into a single reporting environment.',
+							'akaza-adventure'
+						);
+						?>
+					</p>
+
+					<p>
+						<?php
+						esc_html_e(
+							'This provides teams with greater visibility into participation, campaign performance, employee behaviour and programme progress.',
 							'akaza-adventure'
 						);
 						?>

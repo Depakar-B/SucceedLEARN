@@ -1,0 +1,88 @@
+/* SucceedLEARN — SMCR organisations */
+
+.sl-course-page .sl-smcr-organisations {
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-smcr-organisations__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 70px;
+	align-items: center;
+}
+
+.sl-smcr-organisations__content h2 > span {
+	color: var(--sl-page-primary, #135db7);
+}
+
+.sl-smcr-organisations__features {
+	display: grid;
+	gap: 17px;
+	margin: 30px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-smcr-organisations__feature {
+	display: grid;
+	grid-template-columns: 46px 1fr;
+	gap: 15px;
+	align-items: start;
+}
+
+.sl-smcr-organisations__feature-num {
+	width: 42px;
+	height: 42px;
+	display: grid;
+	place-items: center;
+	border-radius: 11px;
+	background: #edf5fd;
+	color: var(--sl-page-primary, #135db7);
+	font-weight: 700;
+}
+
+.sl-smcr-organisations__feature strong {
+	display: block;
+	margin-bottom: 3px;
+	color: var(--sl-page-navy, #16234d);
+}
+
+.sl-smcr-organisations__feature span {
+	color: #555e70;
+}
+
+.sl-smcr-organisations__media {
+	text-align: center;
+}
+
+.sl-smcr-organisations__image {
+	margin: 0;
+	overflow: hidden;
+	border-radius: 24px;
+}
+
+.sl-smcr-organisations__image img {
+	display: block;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.sl-smcr-organisations__actions {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin-top: 22px;
+}
+
+@media (max-width: 1000px) {
+	.sl-smcr-organisations__grid {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.sl-smcr-organisations__media {
+		order: -1;
+	}
+}

@@ -39,6 +39,8 @@ function akaza_get_page_asset_handlers() {
 		'page-templates/bystander-intervention-training.php'       => 'akaza_enqueue_iwc_course_assets',
 		'page-templates/global-workplace-compliance-training-for-employees.php' => 'akaza_enqueue_gwct_assets',
 		'page-templates/gdpr-employee-awareness-training.php'      => 'akaza_enqueue_gdpr_assets',
+		'page-templates/information-security-awareness-training-for-soc-2-compliance.php' => 'akaza_enqueue_soc2_assets',
+		'page-templates/information-security-awareness-training-for-uk-cyber-essentials.php' => 'akaza_enqueue_ukce_assets',
 		'page-templates/ferpa-training-for-school-and-university-staff.php' => 'akaza_enqueue_ferpa_assets',
 		'page-templates/workplace-harassment-prevention-training.php' => 'akaza_enqueue_whp_assets',
 		'page-templates/infosec-2026-cyber.php'                   => 'akaza_enqueue_infosec_2026_cyber_assets',
@@ -49,8 +51,11 @@ function akaza_get_page_asset_handlers() {
 		'page-templates/s-aware.php'                               => 'akaza_enqueue_s_aware_assets',
 		'page-templates/s-bytes.php'                               => 'akaza_enqueue_s_bytes_assets',
 		'page-templates/s-phish-phishing-simulation.php'           => 'akaza_enqueue_s_phish_assets',
+		'page-templates/s-sync-security-awareness.php'             => 'akaza_enqueue_s_sync_assets',
+		'page-templates/s-signs-security-awareness.php'            => 'akaza_enqueue_s_signs_assets',
 		'page-templates/s-play-gamified-training.php'              => 'akaza_enqueue_s_play_assets',
 		'page-templates/s-metrics-tracking-reporting.php'          => 'akaza_enqueue_s_metrics_assets',
+		'page-templates/pci-dss.php'                               => 'akaza_enqueue_pci_dss_assets',
 		'page-templates/us-sexual-harassment-prevention-training.php' => 'akaza_enqueue_us_harassment_assets',
 		'page-templates/uk-sexual-harassment-prevention-training.php' => 'akaza_enqueue_uk_harassment_assets',
 		'page-templates/gifts-and-entertainment.php'                 => 'akaza_enqueue_gifts_entertainment_assets',
@@ -61,6 +66,7 @@ function akaza_get_page_asset_handlers() {
 		'page-templates/whistleblowing-pe-vc.php'                    => 'akaza_enqueue_whistleblowing_assets',
 		'page-templates/political-donations-pe-vc.php'               => 'akaza_enqueue_political_donations_assets',
 		'page-templates/smcr-pe-vc.php'                              => 'akaza_enqueue_smcr_assets',
+		'page-templates/pevc-compliance-training-programs.php'      => 'akaza_enqueue_pevc_homepage_assets',
 	);
 }
 

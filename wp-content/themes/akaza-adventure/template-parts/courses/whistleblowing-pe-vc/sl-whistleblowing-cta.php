@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <section
-	id="whistleblowing-cta"
+	id="buy"
 	class="sl-whistleblowing-cta"
 	aria-labelledby="sl-whistleblowing-cta-title"
 >
@@ -19,13 +19,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="sl-whistleblowing-cta__inner">
 
 			<div class="sl-whistleblowing-cta__content">
-				<span class="sl-home-sub-heading">
+				<span class="sl-whistleblowing-cta__eyebrow">
 					<?php esc_html_e( 'SucceedLEARN Whistleblowing Training', 'akaza-adventure' ); ?>
 				</span>
 
 				<h2 id="sl-whistleblowing-cta-title">
-					<?php esc_html_e( 'Are You Ready to Strengthen', 'akaza-adventure' ); ?>
-					<span><?php esc_html_e( 'Speak-Up Awareness?', 'akaza-adventure' ); ?></span>
+					<?php esc_html_e( 'Are You Ready to Strengthen Speak-Up Awareness?', 'akaza-adventure' ); ?>
 				</h2>
 
 				<p>
@@ -34,14 +33,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 
 			<div class="sl-whistleblowing-cta__actions">
-				<a
-					class="sl-hero-btn sl-hero-btn-primary"
-					href="#overview"
-				>
-					<?php esc_html_e( 'Explore the Course', 'akaza-adventure' ); ?>
-					<span aria-hidden="true">→</span>
-				</a>
-
 				<a
 					class="sl-hero-btn sl-hero-btn-secondary"
 					href="#contact"

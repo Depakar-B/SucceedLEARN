@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'AKAZA_VERSION', '1.2.25' );
+define( 'AKAZA_VERSION', '1.2.27' );
 define( 'AKAZA_DIR', get_template_directory() );
 define( 'AKAZA_URI', get_template_directory_uri() );
 

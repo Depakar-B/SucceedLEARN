@@ -47,21 +47,14 @@ $features = array(
 		<div class="sl-aml-pe-vc-organisations__grid">
 
 			<div class="sl-aml-pe-vc-organisations__media">
-				<div
-					class="sl-aml-pe-vc-organisations__image-placeholder"
-					role="img"
-					aria-label="<?php esc_attr_e( 'Organisational Training Dashboard placeholder', 'akaza-adventure' ); ?>"
-				>
-					<span><?php esc_html_e( 'Organisational Training Dashboard', 'akaza-adventure' ); ?></span>
-					<small>
-						<?php
-						esc_html_e(
-							'Replace with an approved reporting, learner-progress or enterprise administration screenshot.',
-							'akaza-adventure'
-						);
-						?>
-					</small>
-				</div>
+				<figure class="sl-aml-pe-vc-organisations__image">
+					<img
+						src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/organisation-image-1.webp' ); ?>"
+						alt="<?php esc_attr_e( 'Organisational Training Dashboard', 'akaza-adventure' ); ?>"
+						loading="lazy"
+						decoding="async"
+					>
+				</figure>
 
 				<div class="sl-aml-pe-vc-organisations__actions">
 					<a class="sl-content-btn sl-content-btn-primary" href="#contact">
@@ -76,14 +69,14 @@ $features = array(
 			<div class="sl-aml-pe-vc-organisations__content">
 
 				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'Enterprise AML Learning', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Enterprise AML eLearning', 'akaza-adventure' ); ?>
 				</span>
 
 				<h2 id="sl-aml-pe-vc-organisations-title">
 					<?php
 					echo wp_kses_post(
 						__(
-							'AML Training <span>For Organisations</span> — Built for Scale',
+							'AML Training <span>For Organisations</span> - Built for Scale',
 							'akaza-adventure'
 						)
 					);

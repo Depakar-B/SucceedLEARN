@@ -60,31 +60,17 @@
 	text-align: center;
 }
 
-.sl-aml-pe-vc-individuals__image-placeholder {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	min-height: 320px;
-	padding: 35px;
-	border: 2px dashed rgba(19, 93, 183, 0.35);
+.sl-aml-pe-vc-individuals__image {
+	margin: 0;
+	overflow: hidden;
 	border-radius: 24px;
-	background: linear-gradient(135deg, #f3f8fe, #ffffff);
-	text-align: center;
-	box-sizing: border-box;
 }
 
-.sl-aml-pe-vc-individuals__image-placeholder span {
-	margin-bottom: 8px;
-	color: var(--sl-page-navy, #16234d);
-	font-size: 1.1rem;
-	font-weight: 700;
-}
-
-.sl-aml-pe-vc-individuals__image-placeholder small {
-	max-width: 430px;
-	color: #555e70;
-	font-size: 0.9rem;
+.sl-aml-pe-vc-individuals__image img {
+	display: block;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
 }
 
 .sl-aml-pe-vc-individuals__actions {

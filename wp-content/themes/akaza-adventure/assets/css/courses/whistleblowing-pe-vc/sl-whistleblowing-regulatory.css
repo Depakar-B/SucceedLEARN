@@ -1,16 +1,18 @@
 /**
  * Whistleblowing Training — Legal & Regulatory Context.
  *
+ * Card UI mirrors AML PE/VC due-diligence stack.
+ *
  * @package Akaza_Adventure
  */
 
- .sl-whistleblowing-regulatory {
-	background: #f5f5f5;
+.sl-whistleblowing-regulatory {
+	background: #ffffff;
 	padding: 90px 0;
 }
 
 .sl-whistleblowing-regulatory__intro {
-	margin-bottom: 42px;
+	margin-bottom: 46px;
 }
 
 .sl-whistleblowing-regulatory__intro h2 {
@@ -18,51 +20,166 @@
 	margin-bottom: 18px;
 }
 
+.sl-whistleblowing-regulatory__intro h2 > span {
+	color: var(--sl-page-primary, #135db7);
+}
+
 .sl-whistleblowing-regulatory__intro > p {
 	margin-top: 0;
 	margin-bottom: 0;
 	max-width: 850px;
+	font-size: 1.06rem;
 }
 
-.sl-whistleblowing-regulatory__table-wrap {
-	width: 100%;
-	overflow-x: auto;
+.sl-whistleblowing-regulatory__stack {
+	display: grid;
+	gap: 24px;
 }
 
-.sl-whistleblowing-regulatory__table {
-	width: 100%;
-	border-collapse: collapse;
-	background: #ffffff;
-	border: 1px solid rgba(22, 35, 78, 0.12);
-	border-radius: 14px;
+.sl-whistleblowing-regulatory__card {
+	display: grid;
+	grid-template-columns: minmax(290px, 0.85fr) minmax(0, 1.15fr);
+	min-height: 315px;
 	overflow: hidden;
+	border: 1px solid #dde3eb;
+	border-radius: 24px;
+	background: #ffffff;
+	box-shadow: 0 14px 36px rgba(22, 35, 77, 0.07);
 }
 
-.sl-whistleblowing-regulatory__table th {
-	padding: 20px 24px;
-	background: #16234e;
-	color: #ffffff;
-	text-align: left;
-	font-size: 17px;
+.sl-whistleblowing-regulatory__card--reverse {
+	grid-template-columns: minmax(0, 1.15fr) minmax(290px, 0.85fr);
+}
+
+.sl-whistleblowing-regulatory__card--reverse .sl-whistleblowing-regulatory__media {
+	order: 2;
+}
+
+.sl-whistleblowing-regulatory__card--reverse .sl-whistleblowing-regulatory__content {
+	order: 1;
+}
+
+.sl-whistleblowing-regulatory__media {
+	position: relative;
+	min-height: 315px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 32px;
+	text-align: center;
+	background: linear-gradient(135deg, #eaf3fd 0%, #f7fafe 100%);
+}
+
+.sl-whistleblowing-regulatory__media--photo {
+	padding: 0;
+	overflow: hidden;
+	background: #edf5fd;
+}
+
+.sl-whistleblowing-regulatory__media--photo::before {
+	display: none;
+}
+
+.sl-whistleblowing-regulatory__media--photo img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	min-height: 315px;
+	object-fit: cover;
+}
+
+.sl-whistleblowing-regulatory__media::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 5px;
+	background: var(--sl-page-primary, #135db7);
+}
+
+.sl-whistleblowing-regulatory__icon {
+	width: 74px;
+	height: 74px;
+	display: grid;
+	place-items: center;
+	margin-bottom: 16px;
+	border-radius: 20px;
+	background: #ffffff;
+	color: var(--sl-page-primary, #135db7);
+	font-size: 1.3rem;
 	font-weight: 700;
-	line-height: 1.4;
+	box-shadow: 0 10px 28px rgba(22, 35, 77, 0.1);
 }
 
-.sl-whistleblowing-regulatory__table td {
-	width: 50%;
-	padding: 20px 24px;
-	border-top: 1px solid rgba(22, 35, 78, 0.10);
-	vertical-align: top;
+.sl-whistleblowing-regulatory__media strong {
+	display: block;
+	margin-bottom: 6px;
+	color: var(--sl-page-navy, #16234d);
+	font-size: 1rem;
 }
 
-.sl-whistleblowing-regulatory__table td + td {
-	border-left: 1px solid rgba(22, 35, 78, 0.10);
+.sl-whistleblowing-regulatory__media > span:not(.sl-whistleblowing-regulatory__icon) {
+	max-width: 290px;
+	color: #596274;
+	font-size: 0.88rem;
+	line-height: 1.5;
+}
+
+.sl-whistleblowing-regulatory__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: clamp(32px, 5vw, 58px);
+}
+
+.sl-whistleblowing-regulatory__code {
+	display: inline-flex;
+	width: max-content;
+	margin-bottom: 15px;
+	padding: 7px 11px;
+	border-radius: 8px;
+	background: #edf5fd;
+	color: var(--sl-page-primary, #135db7);
+	font-size: 0.84rem;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+}
+
+.sl-whistleblowing-regulatory__content h3 {
+	margin: 0 0 8px;
+	color: #0a3d7a;
+	font-size: 1.35rem;
+	font-weight: 700;
+	line-height: 1.3;
+}
+
+.sl-whistleblowing-regulatory__name {
+	display: block;
+	margin-bottom: 17px;
+	color: var(--sl-page-primary, #135db7);
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+.sl-whistleblowing-regulatory__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-whistleblowing-regulatory__list li + li {
+	margin-top: 12px;
 }
 
 .sl-whistleblowing-regulatory__item {
 	display: block;
 	position: relative;
 	padding-left: 20px;
+	color: #555e70;
+	font-size: 1rem;
+	line-height: 1.65;
 }
 
 .sl-whistleblowing-regulatory__item::before {
@@ -104,15 +221,23 @@
 	margin: 0;
 }
 
-/* Tablet */
-@media (max-width: 900px) {
+@media (max-width: 850px) {
 	.sl-whistleblowing-regulatory {
 		padding: 72px 0;
 	}
 
-	.sl-whistleblowing-regulatory__table th,
-	.sl-whistleblowing-regulatory__table td {
-		padding: 18px 20px;
+	.sl-whistleblowing-regulatory__card,
+	.sl-whistleblowing-regulatory__card--reverse {
+		grid-template-columns: 1fr;
+	}
+
+	.sl-whistleblowing-regulatory__card--reverse .sl-whistleblowing-regulatory__media,
+	.sl-whistleblowing-regulatory__card--reverse .sl-whistleblowing-regulatory__content {
+		order: initial;
+	}
+
+	.sl-whistleblowing-regulatory__media {
+		min-height: 250px;
 	}
 
 	.sl-whistleblowing-regulatory__notice {
@@ -120,8 +245,7 @@
 	}
 }
 
-/* Mobile */
-@media (max-width: 767px) {
+@media (max-width: 520px) {
 	.sl-whistleblowing-regulatory {
 		padding: 60px 0;
 	}
@@ -130,13 +254,13 @@
 		margin-bottom: 30px;
 	}
 
-	.sl-whistleblowing-regulatory__table {
-		min-width: 620px;
+	.sl-whistleblowing-regulatory__content {
+		padding: 28px 24px 32px;
 	}
 
-	.sl-whistleblowing-regulatory__table th,
-	.sl-whistleblowing-regulatory__table td {
-		padding: 16px;
+	.sl-whistleblowing-regulatory__media {
+		min-height: 220px;
+		padding: 26px;
 	}
 
 	.sl-whistleblowing-regulatory__notice {

@@ -34,53 +34,43 @@ $outcomes = array(
 	aria-labelledby="sl-political-donations-learning-outcomes-title"
 >
 	<div class="container">
-		<div class="sl-political-donations-learning-outcomes__grid">
 
-			<div class="sl-political-donations-learning-outcomes__content">
+		<div class="sl-political-donations-learning-outcomes__header">
 
-				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'Learning outcomes', 'akaza-adventure' ); ?>
-				</span>
+			<span class="sl-home-sub-heading">
+				<?php esc_html_e( 'Learning outcomes', 'akaza-adventure' ); ?>
+			</span>
 
-				<h2 id="sl-political-donations-learning-outcomes-title">
-					<?php esc_html_e( 'Compliance Training Outcomes for', 'akaza-adventure' ); ?>
-					<span><?php esc_html_e( 'Investment Management Teams', 'akaza-adventure' ); ?></span>
-				</h2>
+			<h2 id="sl-political-donations-learning-outcomes-title">
+				<?php esc_html_e( 'Compliance Training Outcomes for', 'akaza-adventure' ); ?>
+				<span><?php esc_html_e( 'Investment Management Teams', 'akaza-adventure' ); ?></span>
+			</h2>
 
-				<p class="sl-political-donations-learning-outcomes__intro">
-					<?php esc_html_e( 'The course helps learners move from basic awareness to practical decision-making around political activity and professional identity.', 'akaza-adventure' ); ?>
-				</p>
-
-				<ul class="sl-list">
-					<?php foreach ( $outcomes as $index => $outcome ) : ?>
-						<li class="sl-list-item">
-							<span class="sl-list-item__label" aria-hidden="true">
-								<?php echo esc_html( str_pad( (string) ( $index + 1 ), 2, '0', STR_PAD_LEFT ) ); ?>
-							</span>
-
-							<div class="sl-list-item__text">
-								<h3 class="sl-panel-title">
-									<?php echo esc_html( $outcome['title'] ); ?>
-								</h3>
-
-								<p>
-									<?php echo esc_html( $outcome['text'] ); ?>
-								</p>
-							</div>
-						</li>
-					<?php endforeach; ?>
-				</ul>
-
-			</div>
-
-			<div class="sl-political-donations-learning-outcomes__media">
-				<div class="sl-political-donations-learning-outcomes__image">
-					<div class="sl-political-donations-learning-outcomes__image-placeholder">
-						<?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?>
-					</div>
-				</div>
-			</div>
+			<p class="sl-political-donations-learning-outcomes__intro">
+				<?php esc_html_e( 'The course helps learners move from basic awareness to practical decision-making around political activity and professional identity.', 'akaza-adventure' ); ?>
+			</p>
 
 		</div>
+
+		<ul class="sl-list sl-list--2up">
+			<?php foreach ( $outcomes as $index => $outcome ) : ?>
+				<li class="sl-list-item">
+					<span class="sl-list-item__label" aria-hidden="true">
+						<?php echo esc_html( str_pad( (string) ( $index + 1 ), 2, '0', STR_PAD_LEFT ) ); ?>
+					</span>
+
+					<div class="sl-list-item__text">
+						<h3 class="sl-panel-title">
+							<?php echo esc_html( $outcome['title'] ); ?>
+						</h3>
+
+						<p>
+							<?php echo esc_html( $outcome['text'] ); ?>
+						</p>
+					</div>
+				</li>
+			<?php endforeach; ?>
+		</ul>
+
 	</div>
 </section>
