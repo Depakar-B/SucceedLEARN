@@ -51,11 +51,9 @@ $learn_items = array(
 			<?php endforeach; ?>
 		</ul>
 
-		<div class="sl-soc2-learn__note">
-			<p>
-				<?php esc_html_e( 'The objective is not to make employees SOC 2 specialists. It is to help them understand the security behaviours that can support the organisation’s information security controls and SOC 2 readiness.', 'akaza-adventure' ); ?>
-			</p>
-		</div>
+		<p class="sl-soc2-learn__note">
+			<?php esc_html_e( 'The objective is not to make employees SOC 2 specialists. It is to help them understand the security behaviours that can support the organisation’s information security controls and SOC 2 readiness.', 'akaza-adventure' ); ?>
+		</p>
 
 	</div>
 </section>
