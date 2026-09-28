@@ -179,6 +179,11 @@ function akaza_bootstrap_pages() {
 			'title'    => 'PCI DSS Awareness Training for Employees & Payment Handlers',
 			'template' => 'page-templates/pci-dss.php',
 		),
+		array(
+			'slug'     => 'security-awareness-training-bfsi-pe-vc',
+			'title'    => 'Cybersecurity Awareness Training for BFSI & PE/VC',
+			'template' => 'page-templates/security-awareness-training-bfsi-pe-vc.php',
+		),
 	);
 
 	$created_page = false;
