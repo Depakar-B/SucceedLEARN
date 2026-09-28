@@ -6,7 +6,7 @@
 	position: relative;
 	z-index: 1;
 	padding: 90px 0;
-	background: var(--sl-page-white, #ffffff);
+	background: var(--sl-page-bg, #f5f5f5);
 }
 
 .sl-soc2-audience__heading {
@@ -28,6 +28,10 @@
 	gap: 24px;
 }
 
+.sl-soc2-audience__grid > .sl-soc2-audience__card:last-child:nth-child(odd) {
+	grid-column: 2;
+}
+
 .sl-soc2-audience__card {
 	display: flex;
 	flex-direction: column;
@@ -35,7 +39,7 @@
 	padding: 28px 24px;
 	border: 1px solid rgba(107, 124, 147, 0.18);
 	border-radius: 16px;
-	background: var(--sl-page-bg, #f5f5f5);
+	background: var(--sl-page-white, #ffffff);
 	box-shadow: 0 8px 24px rgba(22, 35, 78, 0.04);
 	transition:
 		transform 0.2s ease,
