@@ -18,12 +18,8 @@
 	margin: 0;
 }
 
-.sl-ukce-designed__subhead {
+.sl-ukce-designed__detail--label {
 	margin: 0 0 24px;
-	color: var(--sl-page-primary, #1472ba);
-	font-size: 22px !important;
-	font-weight: 600;
-	line-height: 1.4;
 }
 
 .sl-ukce-designed__grid {
