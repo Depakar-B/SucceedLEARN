@@ -19,9 +19,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="sl-s-metrics-insights__grid">
 
 			<div class="sl-s-metrics-insights__media">
-				<div class="sl-s-metrics-insights__image-placeholder">
-					<span><?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?></span>
-				</div>
+				<img
+					class="sl-s-metrics-insights__image"
+					src="<?php echo esc_url( akaza_upload_url( '2026/09/Security-Awareness-Data-to-Action.webp' ) ); ?>"
+					alt="<?php esc_attr_e( 'Security Awareness Data to Action', 'akaza-adventure' ); ?>"
+					width="800"
+					height="600"
+					loading="lazy"
+					decoding="async"
+				>
 			</div>
 
 			<div class="sl-s-metrics-insights__content">

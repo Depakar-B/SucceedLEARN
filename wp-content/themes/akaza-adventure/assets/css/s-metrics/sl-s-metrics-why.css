@@ -67,6 +67,13 @@ body.slf-body #main-content.sl-s-metrics-page .sl-s-metrics-why__subtitle,
 	text-align: center;
 }
 
+.sl-s-metrics-why__image {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 16px;
+}
+
 @media (max-width: 991px) {
 	.sl-s-metrics-why {
 		padding: 64px 0;
