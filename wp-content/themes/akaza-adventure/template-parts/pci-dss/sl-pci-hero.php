@@ -72,10 +72,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				<div class="sl-pci-hero__meta" aria-label="<?php esc_attr_e( 'Course details', 'akaza-adventure' ); ?>">
 					<span class="sl-pci-hero__meta-item">
-						<strong><?php esc_html_e( 'Course Duration:', 'akaza-adventure' ); ?></strong>
-						<?php esc_html_e( '45 Minutes', 'akaza-adventure' ); ?>
-					</span>
-					<span class="sl-pci-hero__meta-item">
 						<strong><?php esc_html_e( 'Course Category:', 'akaza-adventure' ); ?></strong>
 						<?php esc_html_e( 'Security Awareness', 'akaza-adventure' ); ?>
 					</span>
