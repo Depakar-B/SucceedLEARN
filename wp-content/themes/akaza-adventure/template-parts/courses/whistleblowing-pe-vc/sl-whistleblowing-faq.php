@@ -59,7 +59,7 @@ get_template_part(
 	null,
 	array(
 		'id'            => 'frequently-asked-questions',
-		'section_class' => 'sl-faq-section--alt sl-whistleblowing-faq',
+		'section_class' => 'sl-whistleblowing-faq',
 		'eyebrow'       => __( 'FAQs', 'akaza-adventure' ),
 		'title_html'    => __( 'What Do Buyers Commonly Ask About Whistleblowing <span>Training?</span>', 'akaza-adventure' ),
 		'intro'         => __( 'Quick answers for organisations considering the course.', 'akaza-adventure' ),

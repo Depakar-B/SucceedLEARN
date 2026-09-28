@@ -45,7 +45,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<figure class="sl-whistleblowing-overview__media">
 				<img
-					src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/whistleblowing_course_look_in_practice_1.webp' ); ?>"
+					src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/Whistleblowing.webp' ); ?>"
 					alt="<?php esc_attr_e( 'Whistleblowing training explained for investment professionals', 'akaza-adventure' ); ?>"
 					loading="lazy"
 					decoding="async"
