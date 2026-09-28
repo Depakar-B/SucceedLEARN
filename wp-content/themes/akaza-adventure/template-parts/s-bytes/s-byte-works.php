@@ -1,6 +1,6 @@
 <?php
 /**
- * S-Bytes — How S-Bytes Works (center timeline).
+ * S-Bytes — How S-Bytes Works (sticky visual + step cards).
  *
  * @package Akaza_Adventure
  */
@@ -90,49 +90,26 @@ $sbytes_works_steps = array(
 
 		</div>
 
-		<div class="sl-sbytes-works__timeline">
+		<div class="sl-sbytes-works__layout">
 
-			<?php foreach ( $sbytes_works_steps as $index => $step ) : ?>
-				<?php
-				$step_num  = (int) ( $index + 1 );
-				$placement = ( 0 === $index % 2 ) ? 'below' : 'above';
-				?>
-				<article
-					class="sl-sbytes-works__step sl-sbytes-works__step--<?php echo esc_attr( $placement ); ?> sl-sbytes-works__step--col-<?php echo esc_attr( (string) $step_num ); ?>"
-				>
+			<div class="sl-sbytes-works__visual">
+				<div class="sl-sbytes-works__image-placeholder">
+					<span><?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?></span>
+				</div>
+			</div>
 
-					<div class="sl-sbytes-works__slot sl-sbytes-works__slot--top">
-						<?php if ( 'above' === $placement ) : ?>
-							<div class="sl-sbytes-works__copy">
-								<?php foreach ( $step['body'] as $paragraph ) : ?>
-									<p><?php echo esc_html( $paragraph ); ?></p>
-								<?php endforeach; ?>
-							</div>
-							<span class="sl-sbytes-works__stem" aria-hidden="true"></span>
-						<?php endif; ?>
-					</div>
-
-					<div class="sl-sbytes-works__label">
+			<div class="sl-sbytes-works__steps">
+				<?php foreach ( $sbytes_works_steps as $step ) : ?>
+					<article class="sl-sbytes-works__card">
 						<h3 class="sl-panel-title">
 							<?php echo esc_html( $step['title'] ); ?>
 						</h3>
-					</div>
-
-					<div class="sl-sbytes-works__slot sl-sbytes-works__slot--bottom">
-						<?php if ( 'below' === $placement ) : ?>
-							<span class="sl-sbytes-works__stem" aria-hidden="true"></span>
-							<div class="sl-sbytes-works__copy">
-								<?php foreach ( $step['body'] as $paragraph ) : ?>
-									<p><?php echo esc_html( $paragraph ); ?></p>
-								<?php endforeach; ?>
-							</div>
-						<?php endif; ?>
-					</div>
-
-				</article>
-			<?php endforeach; ?>
-
-			<span class="sl-sbytes-works__spine" aria-hidden="true"></span>
+						<?php foreach ( $step['body'] as $paragraph ) : ?>
+							<p><?php echo esc_html( $paragraph ); ?></p>
+						<?php endforeach; ?>
+					</article>
+				<?php endforeach; ?>
+			</div>
 
 		</div>
 
