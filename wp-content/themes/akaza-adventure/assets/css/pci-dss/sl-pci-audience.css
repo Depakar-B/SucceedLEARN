@@ -44,11 +44,13 @@
 
 .sl-pci-audience__list {
 	margin: 0;
-	padding-left: 1.2rem;
+	padding-left: 1.35em;
+	list-style: disc;
 }
 
 .sl-pci-audience__list li {
 	margin-bottom: 6px;
+	list-style: disc;
 }
 
 @media (max-width: 991px) {
