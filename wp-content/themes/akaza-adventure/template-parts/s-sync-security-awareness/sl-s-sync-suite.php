@@ -1,9 +1,6 @@
 <?php
 /**
- * S-Sync — Security Behaviour & Culture Suite.
- *
- * Thin wrapper around the global SBCS component.
- * Background: white (previous section `choose` uses soft grey).
+ * S-Sync — Integrating the Entire Security Behaviour & Culture Suite.
  *
  * @package Akaza_Adventure
  */
@@ -12,14 +9,108 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-get_template_part(
-	'template-parts/global/security-behaviour-culture-suite',
-	null,
+$suite_products = array(
 	array(
-		'id'         => 'security-behaviour-culture-suite',
-		'media_side' => 'left',
-		'background' => 'white',
-		'image'      => 'https://succeedlearn.com/wp-content/uploads/2026/09/From-Awareness-to-Real-World-Readiness.webp',
-		'image_alt'  => __( 'From Awareness to Real-World Readiness', 'akaza-adventure' ),
-	)
+		'name' => __( 'S-Aware', 'akaza-adventure' ),
+		'role' => __( 'Learn', 'akaza-adventure' ),
+		'text' => __( 'Deliver foundational security awareness training.', 'akaza-adventure' ),
+	),
+	array(
+		'name' => __( 'S-Bytes', 'akaza-adventure' ),
+		'role' => __( 'Reinforce', 'akaza-adventure' ),
+		'text' => __( 'Reinforce learning through continuous microlearning.', 'akaza-adventure' ),
+	),
+	array(
+		'name' => __( 'S-Play', 'akaza-adventure' ),
+		'role' => __( 'Engage', 'akaza-adventure' ),
+		'text' => __( 'Engage employees with gamified security awareness.', 'akaza-adventure' ),
+	),
+	array(
+		'name' => __( 'S-Phish', 'akaza-adventure' ),
+		'role' => __( 'Test', 'akaza-adventure' ),
+		'text' => __( 'Test real-world phishing resilience.', 'akaza-adventure' ),
+	),
+	array(
+		'name' => __( 'S-Signs', 'akaza-adventure' ),
+		'role' => __( 'Remind', 'akaza-adventure' ),
+		'text' => __( 'Reinforce awareness with visual reminders and digital nudges.', 'akaza-adventure' ),
+	),
+	array(
+		'name' => __( 'S-Metrics', 'akaza-adventure' ),
+		'role' => __( 'Measure', 'akaza-adventure' ),
+		'text' => __( 'Measure programme effectiveness through analytics and reporting.', 'akaza-adventure' ),
+	),
+	array(
+		'name' => __( 'S-Sync', 'akaza-adventure' ),
+		'role' => __( 'Connect', 'akaza-adventure' ),
+		'text' => __( 'Connect and automate the entire ecosystem.', 'akaza-adventure' ),
+	),
 );
+?>
+
+<section
+	class="sl-s-sync-suite"
+	aria-labelledby="sl-s-sync-suite-title"
+>
+	<div class="container">
+
+		<div class="sl-s-sync-suite__intro">
+
+			<span class="sl-home-sub-heading">
+				<?php esc_html_e( 'S-Sync Connects the Entire SBCS Journey', 'akaza-adventure' ); ?>
+			</span>
+
+			<h2 id="sl-s-sync-suite-title">
+				<?php esc_html_e( 'Integrating the Entire Security Behaviour', 'akaza-adventure' ); ?>
+				<span><?php esc_html_e( '& Culture Suite', 'akaza-adventure' ); ?></span>
+			</h2>
+
+			<p>
+				<?php
+				esc_html_e(
+					'S-Sync connects every component of the SucceedLEARN Security Behaviour & Culture Suite, ensuring a consistent and streamlined user experience across learning, reinforcement, phishing simulations, gamification, visual awareness, and reporting.',
+					'akaza-adventure'
+				);
+				?>
+			</p>
+
+		</div>
+
+		<div class="sl-s-sync-suite__cards">
+
+			<?php foreach ( $suite_products as $index => $product ) : ?>
+
+				<article class="sl-s-sync-suite__card">
+					<span class="sl-s-sync-suite__number" aria-hidden="true">
+						<?php echo esc_html( str_pad( (string) ( $index + 1 ), 2, '0', STR_PAD_LEFT ) ); ?>
+					</span>
+					<div class="sl-s-sync-suite__card-heading">
+						<h3 class="sl-panel-title">
+							<?php echo esc_html( $product['name'] ); ?>
+						</h3>
+						<span class="sl-s-sync-suite__role">
+							<?php echo esc_html( $product['role'] ); ?>
+						</span>
+					</div>
+					<p>
+						<?php echo esc_html( $product['text'] ); ?>
+					</p>
+				</article>
+
+			<?php endforeach; ?>
+
+		</div>
+
+		<div class="sl-s-sync-suite__closing">
+			<p>
+				<?php
+				esc_html_e(
+					'Together, these solutions provide organisations with a connected, scalable, and enterprise-ready security awareness platform.',
+					'akaza-adventure'
+				);
+				?>
+			</p>
+		</div>
+
+	</div>
+</section>
