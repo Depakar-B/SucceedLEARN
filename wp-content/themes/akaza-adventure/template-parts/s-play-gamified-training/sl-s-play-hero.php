@@ -8,6 +8,10 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+$s_play_hero_image = function_exists( 'akaza_upload_url' )
+	? akaza_upload_url( '2026/09/Gamified-Security-Awareness-Training.webp' )
+	: 'https://succeedlearn.com/wp-content/uploads/2026/09/Gamified-Security-Awareness-Training.webp';
 ?>
 
 <section
@@ -89,8 +93,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 
 			<div class="sl-s-play-hero__media">
-				<div class="sl-s-play-hero__image-placeholder">
-					<span><?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?></span>
+				<div class="sl-s-play-hero__image">
+					<img
+						src="<?php echo esc_url( $s_play_hero_image ); ?>"
+						alt="<?php esc_attr_e( 'Gamified Security Awareness Training', 'akaza-adventure' ); ?>"
+						width="720"
+						height="720"
+						loading="eager"
+						decoding="async"
+					/>
 				</div>
 			</div>
 

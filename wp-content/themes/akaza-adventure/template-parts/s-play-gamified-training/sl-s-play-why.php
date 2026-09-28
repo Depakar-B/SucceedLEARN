@@ -9,6 +9,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+$s_play_why_image = function_exists( 'akaza_upload_url' )
+	? akaza_upload_url( '2026/09/Why-Gamified-Security-Awareness-Matters.webp' )
+	: 'https://succeedlearn.com/wp-content/uploads/2026/09/Why-Gamified-Security-Awareness-Matters.webp';
+
 $why_items = array(
 	__( 'Apply previously learned security concepts.', 'akaza-adventure' ),
 	__( 'Practise decision-making in a low-risk environment.', 'akaza-adventure' ),
@@ -28,8 +32,15 @@ $why_items = array(
 		<div class="sl-s-play-why__grid">
 
 			<div class="sl-s-play-why__media">
-				<div class="sl-s-play-why__image-placeholder">
-					<span><?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?></span>
+				<div class="sl-s-play-why__image">
+					<img
+						src="<?php echo esc_url( $s_play_why_image ); ?>"
+						alt="<?php esc_attr_e( 'Why gamified security awareness matters', 'akaza-adventure' ); ?>"
+						width="720"
+						height="720"
+						loading="lazy"
+						decoding="async"
+					/>
 				</div>
 			</div>
 
