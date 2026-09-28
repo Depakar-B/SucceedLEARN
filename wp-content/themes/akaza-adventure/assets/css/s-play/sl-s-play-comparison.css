@@ -1,0 +1,144 @@
+/**
+ * S-Play — Traditional vs Gamified comparison
+ * Pattern mirrors SAP sl-sa-comparison.css, scoped to this page.
+ */
+
+.sl-s-play-comparison {
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-s-play-comparison__heading {
+	margin: 0 0 40px;
+	text-align: left;
+}
+
+.sl-s-play-comparison__heading .sl-home-sub-heading {
+	display: block;
+	margin-bottom: 14px;
+}
+
+.sl-s-play-comparison__heading h2 {
+	margin: 0;
+}
+
+.sl-s-play-comparison__table-wrap {
+	width: 100%;
+	max-width: 1050px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow-x: auto;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	overscroll-behavior-x: contain;
+	border: 1px solid rgba(107, 124, 147, 0.18);
+	border-radius: 16px;
+	background: var(--sl-page-white, #ffffff);
+	box-shadow: 0 10px 30px rgba(22, 35, 78, 0.06);
+}
+
+.sl-s-play-comparison__table {
+	width: 100%;
+	min-width: 0;
+	border-collapse: separate;
+	border-spacing: 0;
+	table-layout: fixed;
+}
+
+.sl-s-play-comparison__table th,
+.sl-s-play-comparison__table td {
+	width: 50%;
+	padding: 20px 28px;
+	vertical-align: middle;
+}
+
+.sl-s-play-comparison__table thead th {
+	background: var(--sl-page-navy, #16234e);
+	color: var(--sl-page-white, #ffffff);
+	font-family: var(--slf-font-display, "Space Grotesk", system-ui, sans-serif);
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1.35;
+	text-align: center;
+	letter-spacing: 0.01em;
+}
+
+.sl-s-play-comparison__table thead th:first-child {
+	border-radius: 15px 0 0 0;
+	border-right: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.sl-s-play-comparison__table thead th:last-child {
+	border-radius: 0 15px 0 0;
+	background: var(--sl-page-primary, #1472ba);
+}
+
+.sl-s-play-comparison__table tbody td {
+	text-align: left;
+	border-bottom: 1px solid rgba(107, 124, 147, 0.14);
+}
+
+.sl-s-play-comparison__table tbody td:first-child {
+	border-right: 1px solid rgba(107, 124, 147, 0.14);
+	background: rgba(245, 243, 239, 0.55);
+}
+
+.sl-s-play-comparison__table tbody tr:last-child td {
+	border-bottom: 0;
+}
+
+.sl-s-play-comparison__table tbody tr:hover td {
+	background: rgba(109, 195, 235, 0.1);
+}
+
+.sl-s-play-comparison__table tbody tr:hover td:first-child {
+	background: rgba(109, 195, 235, 0.14);
+}
+
+.sl-s-play-comparison__cell {
+	display: block;
+	color: var(--sl-page-text, #16234e);
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.55;
+	text-align: left;
+}
+
+.sl-s-play-comparison__cell--highlight {
+	color: var(--sl-page-navy, #16234e);
+	font-weight: 700;
+}
+
+@media (max-width: 767px) {
+	.sl-s-play-comparison {
+		padding: 60px 0;
+	}
+
+	.sl-s-play-comparison__heading {
+		margin-bottom: 28px;
+	}
+
+	.sl-s-play-comparison__table-wrap {
+		border-radius: 14px;
+		max-width: 100%;
+	}
+
+	.sl-s-play-comparison__table {
+		min-width: 560px;
+		table-layout: auto;
+		width: 560px;
+	}
+
+	.sl-s-play-comparison__table th,
+	.sl-s-play-comparison__table td {
+		padding: 16px 18px;
+	}
+
+	.sl-s-play-comparison__table thead th {
+		font-size: 14px;
+	}
+
+	.sl-s-play-comparison__cell {
+		font-size: 15px;
+	}
+}

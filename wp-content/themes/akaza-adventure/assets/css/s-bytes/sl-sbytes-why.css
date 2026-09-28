@@ -1,0 +1,125 @@
+/*
+ * S-Bytes — Why Continuous Reinforcement Matters.
+ */
+
+.sl-sbytes-why {
+	padding: 80px 0;
+	background: #f5f5f5;
+}
+
+.sl-sbytes-why__layout {
+	display: grid;
+	grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+	gap: 40px;
+	align-items: start;
+}
+
+.sl-sbytes-why__content {
+	min-width: 0;
+	width: 100%;
+}
+
+.sl-sbytes-why__content .sl-home-sub-heading {
+	margin-bottom: 18px;
+}
+
+.sl-sbytes-why__content h2 {
+	margin-bottom: 28px;
+}
+
+.sl-sbytes-why__content h2 > span {
+	color: var(--sl-heading-accent, #1472ba);
+}
+
+.sl-sbytes-why__body {
+	width: 100%;
+}
+
+.sl-sbytes-why__body > p {
+	margin-top: 0;
+	margin-bottom: 22px;
+}
+
+.sl-sbytes-why__key-message {
+	margin: 30px 0;
+	padding: 24px 28px;
+	background: #ffffff;
+	border-left: 4px solid var(--sl-page-primary, #1472ba);
+	border-radius: 10px;
+	box-sizing: border-box;
+}
+
+.sl-sbytes-why__key-message p {
+	margin: 0;
+	color: var(--sl-page-navy, #16234e);
+	font-weight: 600;
+}
+
+.sl-sbytes-why__tagline {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-style: italic;
+	font-weight: 500;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-sbytes-why__visual {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 76px) + 24px);
+	min-width: 0;
+	width: 100%;
+}
+
+.sl-sbytes-why__image-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 480px;
+	padding: 40px;
+	border: 1px dashed rgba(22, 35, 78, 0.20);
+	border-radius: 24px;
+	background: var(--sl-page-white, #ffffff);
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.sl-sbytes-why__image-placeholder span {
+	color: var(--sl-page-muted, #6b7c93);
+}
+
+@media (max-width: 991px) {
+	.sl-sbytes-why__layout {
+		grid-template-columns: 1fr;
+		gap: 32px;
+	}
+
+	.sl-sbytes-why__visual {
+		position: static;
+	}
+
+	.sl-sbytes-why__image-placeholder {
+		min-height: 280px;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-sbytes-why {
+		padding: 60px 0;
+	}
+
+	.sl-sbytes-why__content h2 {
+		margin-bottom: 22px;
+	}
+
+	.sl-sbytes-why__key-message {
+		margin: 26px 0;
+		padding: 20px;
+	}
+
+	.sl-sbytes-why__image-placeholder {
+		min-height: 220px;
+		border-radius: 18px;
+		padding: 28px;
+	}
+}

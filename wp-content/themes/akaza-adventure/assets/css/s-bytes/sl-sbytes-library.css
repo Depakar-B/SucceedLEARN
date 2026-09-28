@@ -1,0 +1,53 @@
+/*
+ * S-Bytes — Growing Library.
+ */
+
+.sl-sbytes-library {
+	padding: 80px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-sbytes-library__content .sl-home-sub-heading {
+	margin-bottom: 18px;
+}
+
+.sl-sbytes-library__content h2 {
+	margin: 0 0 16px;
+}
+
+.sl-sbytes-library__content .sl-panel-title {
+	margin: 0 0 28px;
+}
+
+.sl-sbytes-library__body > p {
+	margin: 0 0 22px;
+}
+
+.sl-sbytes-library__actions {
+	margin: 8px 0 28px;
+}
+
+.sl-sbytes-library__placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 220px;
+	padding: 32px;
+	border: 1px dashed rgba(22, 35, 78, 0.2);
+	border-radius: 18px;
+	background: var(--sl-page-white, #ffffff);
+	box-sizing: border-box;
+	text-align: center;
+	color: var(--sl-page-muted, #6b7c93);
+}
+
+@media (max-width: 767px) {
+	.sl-sbytes-library {
+		padding: 60px 0;
+	}
+
+	.sl-sbytes-library__placeholder {
+		min-height: 160px;
+		border-radius: 14px;
+	}
+}

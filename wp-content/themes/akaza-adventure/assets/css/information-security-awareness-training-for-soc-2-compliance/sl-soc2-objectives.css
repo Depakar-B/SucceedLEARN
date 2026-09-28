@@ -1,0 +1,139 @@
+/*
+ * SOC 2 Security Awareness — Objectives table.
+ * Visual pattern mirrored from SAP comparison table.
+ */
+
+.sl-soc2-objectives {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-soc2-objectives__heading {
+	margin: 0 0 40px;
+}
+
+.sl-soc2-objectives__heading h2 {
+	margin: 0;
+}
+
+.sl-soc2-objectives__table-wrap {
+	width: 100%;
+	overflow-x: auto;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	overscroll-behavior-x: contain;
+	border: 1px solid rgba(107, 124, 147, 0.18);
+	border-radius: 16px;
+	background: var(--sl-page-white, #ffffff);
+	box-shadow: 0 10px 30px rgba(22, 35, 78, 0.06);
+}
+
+.sl-soc2-objectives__table {
+	width: 100%;
+	min-width: 720px;
+	border-collapse: separate;
+	border-spacing: 0;
+	table-layout: fixed;
+}
+
+.sl-soc2-objectives__table th,
+.sl-soc2-objectives__table td {
+	padding: 18px 22px;
+	vertical-align: top;
+	text-align: left;
+}
+
+.sl-soc2-objectives__table thead th {
+	background: var(--sl-page-navy, #16234e);
+	color: var(--sl-page-white, #ffffff);
+	font-family: var(--slf-font-display, "Space Grotesk", system-ui, sans-serif);
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 1.35;
+	letter-spacing: 0.01em;
+}
+
+.sl-soc2-objectives__table thead th:first-child {
+	border-radius: 15px 0 0 0;
+	width: 28%;
+}
+
+.sl-soc2-objectives__table thead th:nth-child(2) {
+	width: 28%;
+	border-left: 1px solid rgba(255, 255, 255, 0.14);
+	border-right: 1px solid rgba(255, 255, 255, 0.14);
+	background: #1c2d63;
+}
+
+.sl-soc2-objectives__table thead th:last-child {
+	border-radius: 0 15px 0 0;
+	width: 44%;
+	background: var(--sl-page-primary, #1472ba);
+}
+
+.sl-soc2-objectives__table tbody td {
+	border-bottom: 1px solid rgba(107, 124, 147, 0.14);
+}
+
+.sl-soc2-objectives__table tbody td:first-child {
+	background: rgba(245, 243, 239, 0.55);
+	border-right: 1px solid rgba(107, 124, 147, 0.14);
+}
+
+.sl-soc2-objectives__table tbody td:nth-child(2) {
+	border-right: 1px solid rgba(107, 124, 147, 0.14);
+}
+
+.sl-soc2-objectives__table tbody tr:last-child td {
+	border-bottom: 0;
+}
+
+.sl-soc2-objectives__table tbody tr:hover td {
+	background: rgba(109, 195, 235, 0.1);
+}
+
+.sl-soc2-objectives__table tbody tr:hover td:first-child {
+	background: rgba(109, 195, 235, 0.14);
+}
+
+.sl-soc2-objectives__cell {
+	display: block;
+	color: var(--sl-page-text, #16234e);
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 1.55;
+}
+
+.sl-soc2-objectives__cell--strong {
+	color: var(--sl-page-navy, #16234e);
+	font-weight: 700;
+}
+
+@media (max-width: 767px) {
+	.sl-soc2-objectives {
+		padding: 60px 0;
+	}
+
+	.sl-soc2-objectives__heading {
+		margin-bottom: 28px;
+	}
+
+	.sl-soc2-objectives__table-wrap {
+		border-radius: 14px;
+	}
+
+	.sl-soc2-objectives__table th,
+	.sl-soc2-objectives__table td {
+		padding: 14px 16px;
+	}
+
+	.sl-soc2-objectives__table thead th {
+		font-size: 13px;
+	}
+
+	.sl-soc2-objectives__cell {
+		font-size: 14px;
+	}
+}
