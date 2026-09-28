@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$image_url = 'https://succeedlearn.com/wp-content/uploads/2026/09/PEVC-Image.webp';
+$image_url = 'https://succeedlearn.com/wp-content/uploads/2026/09/compliance_process_blocks_woman.webp';
 ?>
 
 <section
@@ -20,7 +20,7 @@ $image_url = 'https://succeedlearn.com/wp-content/uploads/2026/09/PEVC-Image.web
 		<figure class="sl-pevc-image__figure">
 			<img
 				src="<?php echo esc_url( $image_url ); ?>"
-				alt="<?php esc_attr_e( 'Global PE and VC compliance and financial transactions illustration', 'akaza-adventure' ); ?>"
+				alt="<?php esc_attr_e( 'PE and VC professional reviewing a step-by-step compliance process', 'akaza-adventure' ); ?>"
 				loading="lazy"
 				decoding="async"
 			>
