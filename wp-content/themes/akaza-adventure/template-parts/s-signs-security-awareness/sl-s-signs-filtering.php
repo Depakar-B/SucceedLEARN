@@ -81,9 +81,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 
 			<div class="sl-s-signs-filtering__media">
-				<div class="sl-s-signs-filtering__image-placeholder">
-					<span><?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?></span>
-				</div>
+				<img
+					class="sl-s-signs-filtering__image"
+					src="<?php echo esc_url( akaza_upload_url( '2026/09/The-Visual-Reinforcement-Layer-of-SBCS.webp' ) ); ?>"
+					alt="<?php esc_attr_e( 'The Visual Reinforcement Layer of SucceedLEARN SBCS', 'akaza-adventure' ); ?>"
+					width="800"
+					height="600"
+					loading="lazy"
+					decoding="async"
+				>
 			</div>
 
 		</div>

@@ -89,9 +89,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 
 			<div class="sl-s-signs-hero__media">
-				<div class="sl-s-signs-hero__image-placeholder">
-					<span><?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?></span>
-				</div>
+				<img
+					class="sl-s-signs-hero__image"
+					src="<?php echo esc_url( akaza_upload_url( '2026/09/S-Signs-Posters-Digital-Reminders.webp' ) ); ?>"
+					alt="<?php esc_attr_e( 'S-Signs posters and digital reminders', 'akaza-adventure' ); ?>"
+					width="800"
+					height="600"
+					loading="eager"
+					decoding="async"
+				>
 			</div>
 
 		</div>
