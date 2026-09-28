@@ -18,7 +18,7 @@
 .sl-gifts-entertainment-practical-elearning__grid {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-	gap: 72px;
+	gap: 64px;
 	align-items: center;
 }
 
@@ -54,7 +54,7 @@
 
 .sl-gifts-entertainment-practical-elearning__image {
 	margin: 0;
-	max-width: 560px;
+	max-width: 580px;
 	overflow: hidden;
 	border-radius: 16px;
 }

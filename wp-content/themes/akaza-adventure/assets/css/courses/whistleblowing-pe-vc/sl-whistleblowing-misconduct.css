@@ -42,11 +42,34 @@
 	box-sizing: border-box;
 }
 
+.sl-whistleblowing-misconduct__card-head {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	margin-bottom: 12px;
+}
+
+.sl-whistleblowing-misconduct__check {
+	display: inline-flex;
+	flex: 0 0 30px;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
+	height: 30px;
+	background: rgba(20, 114, 186, 0.08);
+	border: 1px solid rgba(20, 114, 186, 0.16);
+	border-radius: 50%;
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1;
+}
+
 body.slf-body #main-content .sl-whistleblowing-misconduct__card h3.sl-panel-title,
 body.slf-body .sl-whistleblowing-misconduct__card h3.sl-panel-title,
 .sl-whistleblowing-misconduct__card .sl-panel-title {
 	margin-top: 0;
-	margin-bottom: 12px;
+	margin-bottom: 0;
 	color: #212b48;
 }
 

@@ -44,9 +44,10 @@
 	margin-top: 48px;
 }
 
+body.slf-body #main-content .sl-smcr-employees__learning h3.sl-panel-title,
 .sl-smcr-employees__learning .sl-panel-title {
 	margin-top: 0;
-	margin-bottom: 18px;
+	margin-bottom: 28px;
 }
 
 .sl-smcr-employees__learning .sl-list {

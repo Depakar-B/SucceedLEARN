@@ -47,7 +47,6 @@
 	display: block;
 	width: 100%;
 	height: auto;
-	min-height: 260px;
 	object-fit: cover;
 }
 
@@ -72,7 +71,6 @@
 	}
 
 	.sl-political-donations-regulatory-context__grid {
-		grid-template-columns: 1fr;
 		gap: 20px;
 	}
 }
@@ -80,6 +78,10 @@
 @media (max-width: 767px) {
 	.sl-political-donations-regulatory-context {
 		padding: 56px 0;
+	}
+
+	.sl-political-donations-regulatory-context__grid {
+		grid-template-columns: 1fr;
 	}
 
 	.sl-political-donations-regulatory-context__intro {

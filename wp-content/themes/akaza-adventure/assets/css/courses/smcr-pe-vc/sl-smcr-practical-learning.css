@@ -15,8 +15,8 @@
 
 .sl-smcr-practical-learning__grid {
 	display: grid;
-	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-	gap: 72px;
+	grid-template-columns: minmax(0, 400px) minmax(0, 1fr);
+	gap: 64px;
 	align-items: center;
 }
 
@@ -25,19 +25,10 @@
 --------------------------------------------------------- */
 
 .sl-smcr-practical-learning__media {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	align-self: center;
+	min-width: 0;
 }
 
 .sl-smcr-practical-learning__image {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: auto;
-	max-width: 100%;
-	max-height: 360px;
 	overflow: hidden;
 	border: 1px solid rgba(22, 35, 78, 0.10);
 	border-radius: 16px;
@@ -47,12 +38,9 @@
 
 .sl-smcr-practical-learning__image img {
 	display: block;
-	width: auto;
-	max-width: 100%;
-	max-height: 360px;
+	width: 100%;
 	height: auto;
 	margin: 0;
-	object-fit: contain;
 }
 
 /* ---------------------------------------------------------
@@ -103,6 +91,14 @@
    Tablet
 --------------------------------------------------------- */
 
+@media (max-width: 1000px) {
+
+	.sl-smcr-practical-learning__grid {
+		grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+		gap: 40px;
+	}
+}
+
 @media (max-width: 900px) {
 
 	.sl-smcr-practical-learning {
@@ -110,7 +106,7 @@
 	}
 
 	.sl-smcr-practical-learning__grid {
-		gap: 44px;
+		gap: 36px;
 	}
 }
 
@@ -127,6 +123,12 @@
 	.sl-smcr-practical-learning__grid {
 		grid-template-columns: 1fr;
 		gap: 32px;
+	}
+
+	.sl-smcr-practical-learning__media {
+		width: 100%;
+		max-width: 460px;
+		margin: 0 auto;
 	}
 
 	.sl-smcr-practical-learning__image {

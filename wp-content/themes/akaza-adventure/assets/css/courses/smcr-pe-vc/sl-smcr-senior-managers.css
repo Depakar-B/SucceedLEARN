@@ -68,9 +68,10 @@
 	min-width: 0;
 }
 
+body.slf-body #main-content .sl-smcr-senior-managers__learning h3.sl-panel-title,
 .sl-smcr-senior-managers__learning .sl-panel-title {
 	margin-top: 0;
-	margin-bottom: 18px;
+	margin-bottom: 28px;
 }
 
 .sl-smcr-senior-managers__learning .sl-list {

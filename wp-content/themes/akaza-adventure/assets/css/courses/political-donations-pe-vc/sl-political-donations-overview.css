@@ -9,8 +9,8 @@
 
 .sl-political-donations-overview__grid {
 	display: grid;
-	grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-	gap: 64px;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	gap: 56px;
 	align-items: center;
 }
 
@@ -93,7 +93,7 @@
 
 	.sl-political-donations-overview__media {
 		width: 100%;
-		max-width: 560px;
+		max-width: 680px;
 		margin: 0 auto;
 	}
 }

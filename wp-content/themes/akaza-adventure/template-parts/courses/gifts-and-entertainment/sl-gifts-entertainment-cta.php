@@ -53,13 +53,6 @@ defined( 'ABSPATH' ) || exit;
 			<div class="sl-gifts-entertainment-cta__actions">
 
 				<a
-					class="sl-content-btn sl-content-btn-primary"
-					href="#contact"
-				>
-					<?php esc_html_e( 'Request a Demo', 'akaza-adventure' ); ?>
-				</a>
-
-				<a
 					class="sl-content-btn sl-content-btn-secondary"
 					href="#contact"
 				>

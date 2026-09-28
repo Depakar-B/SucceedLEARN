@@ -43,7 +43,7 @@ $why_items = array(
 			</span>
 
 			<h2 id="sl-political-donations-why-title">
-				<?php esc_html_e( 'Why Choose Investment Compliance E-Learning for', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'Why Choose Investment Compliance eLearning for', 'akaza-adventure' ); ?>
 				<span><?php esc_html_e( 'Political Activity Risk?', 'akaza-adventure' ); ?></span>
 			</h2>
 
