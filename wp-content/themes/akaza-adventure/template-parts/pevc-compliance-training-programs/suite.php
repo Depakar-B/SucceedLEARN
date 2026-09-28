@@ -112,8 +112,8 @@ $fcp_course = array(
 				</span>
 
 				<h2 id="sl-pevc-suite-title">
-					<?php esc_html_e( 'Essential learning.', 'akaza-adventure' ); ?>
-					<span><?php esc_html_e( 'Real-world relevance.', 'akaza-adventure' ); ?></span>
+					<?php esc_html_e( 'Online PE and VC Compliance', 'akaza-adventure' ); ?>
+					<span><?php esc_html_e( 'Training for Employees', 'akaza-adventure' ); ?></span>
 				</h2>
 
 				<p class="sl-pevc-suite__lead">

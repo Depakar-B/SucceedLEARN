@@ -56,11 +56,11 @@ $panel_items = array(
 
 			<aside class="sl-pevc-why__panel">
 				<h3><?php esc_html_e( 'Effective training helps people:', 'akaza-adventure' ); ?></h3>
-				<ul>
+				<ol>
 					<?php foreach ( $panel_items as $item ) : ?>
 						<li><?php echo esc_html( $item ); ?></li>
 					<?php endforeach; ?>
-				</ul>
+				</ol>
 			</aside>
 
 		</div>
