@@ -31,8 +31,8 @@ function akaza_enqueue_s_metrics_assets() {
 		'sl-s-metrics-features',
 		'sl-s-metrics-insights',
 		'sl-s-metrics-choose',
-		'sl-s-metrics-suite',
 		'sl-s-metrics-measure',
+		'sl-s-metrics-comparison',
 		'sl-s-metrics-contact',
 	);
 
@@ -43,4 +43,13 @@ function akaza_enqueue_s_metrics_assets() {
 			$deps
 		);
 	}
+
+	wp_enqueue_style( 'akaza-global-faq' );
+	wp_enqueue_script( 'akaza-global-faq' );
+
+	akaza_enqueue_theme_style(
+		'akaza-global-sbcs',
+		'sl-global-sbcs.css',
+		array( $foundation, 'akaza-global-panel-title', 'akaza-global-title-accent' )
+	);
 }

@@ -12,9 +12,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$whatsapp_url = 'https://wa.me/916362021778';
-$phone_label  = '+91 63620 21778';
-
 $form_title = __( 'Course Enquiry', 'akaza-adventure' );
 
 $form_shortcode = sprintf(
@@ -108,28 +105,6 @@ $form_shortcode = sprintf(
 
 							<span class="sl-contact-btn__value">
 								info@succeedtech.com
-							</span>
-						</span>
-					</a>
-
-					<a
-						class="sl-contact-btn sl-contact-btn--whatsapp"
-						href="<?php echo esc_url( $whatsapp_url ); ?>"
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label="<?php echo esc_attr( sprintf( __( 'Chat on WhatsApp at %s', 'akaza-adventure' ), $phone_label ) ); ?>"
-					>
-						<span class="sl-contact-btn__icon" aria-hidden="true">
-							<!-- Existing global WhatsApp SVG -->
-						</span>
-
-						<span class="sl-contact-btn__stack">
-							<span class="sl-contact-btn__label">
-								<?php esc_html_e( 'WhatsApp us', 'akaza-adventure' ); ?>
-							</span>
-
-							<span class="sl-contact-btn__value">
-								<?php echo esc_html( $phone_label ); ?>
 							</span>
 						</span>
 					</a>

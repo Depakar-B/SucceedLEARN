@@ -22,6 +22,18 @@
 	margin-bottom: 18px;
 }
 
+/* Section subtitle under h2 — same scale as SAP annual-training. */
+body.slf-body main.sl-s-metrics-page .sl-s-metrics-why__subtitle,
+body.slf-body #main-content.sl-s-metrics-page .sl-s-metrics-why__subtitle,
+.sl-s-metrics-page .sl-s-metrics-why__subtitle {
+	margin: 0 0 14px;
+	font-family: var(--slf-font-display, "Space Grotesk", system-ui, sans-serif);
+	font-size: 22px;
+	font-weight: 600;
+	line-height: 1.4;
+	color: var(--sl-page-primary, #1472ba);
+}
+
 .sl-s-metrics-why__copy {
 	display: flex;
 	flex-direction: column;

@@ -27,10 +27,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<span><?php esc_html_e( 'Behavioural Nudges', 'akaza-adventure' ); ?></span>
 			</h2>
 
+			<h3 class="sl-s-signs-nudges__subtitle">
+				<?php esc_html_e( 'Different Messages for Different Awareness Objectives', 'akaza-adventure' ); ?>
+			</h3>
+
 			<p>
 				<?php
 				esc_html_e(
-					'Different awareness objectives require different styles of communication.',
+					'Not every security message needs to be communicated in the same way.',
 					'akaza-adventure'
 				);
 				?>
@@ -39,7 +43,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<p>
 				<?php
 				esc_html_e(
-					'S-Signs includes both directive security posters and behavioural nudges, allowing organisations to reinforce security awareness using a variety of visual approaches.',
+					'S-Signs supports different types of visual reinforcement depending on what the organisation wants employees to understand or do.',
 					'akaza-adventure'
 				);
 				?>
@@ -47,53 +51,76 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		</div>
 
-		<div class="sl-s-signs-nudges__grid">
+		<div class="sl-s-signs-nudges__layout">
 
-			<article class="sl-s-signs-nudges__card">
-				<span class="sl-s-signs-nudges__number" aria-hidden="true">01</span>
-				<h3 class="sl-panel-title">
-					<?php esc_html_e( 'Directive Posters', 'akaza-adventure' ); ?>
-				</h3>
-				<p>
-					<?php
-					esc_html_e(
-						'Clear instructional posters that communicate expected employee behaviours, security responsibilities, and organisational best practices in a simple, easy-to-understand format.',
-						'akaza-adventure'
-					);
-					?>
-				</p>
-			</article>
+			<div class="sl-s-signs-nudges__content">
 
-			<article class="sl-s-signs-nudges__card">
-				<span class="sl-s-signs-nudges__number" aria-hidden="true">02</span>
-				<h3 class="sl-panel-title">
-					<?php esc_html_e( 'Behavioural Nudges', 'akaza-adventure' ); ?>
-				</h3>
-				<p>
+				<div class="sl-s-signs-nudges__grid">
+
+					<article class="sl-s-signs-nudges__card">
+						<span class="sl-s-signs-nudges__number" aria-hidden="true">01</span>
+						<h3 class="sl-panel-title">
+							<?php esc_html_e( 'Directive Security Posters', 'akaza-adventure' ); ?>
+						</h3>
+						<p>
+							<?php
+							esc_html_e(
+								'Clear, instructional visual content that communicates expected employee behaviours, security responsibilities or organisational best practices.',
+								'akaza-adventure'
+							);
+							?>
+						</p>
+						<p>
+							<?php
+							esc_html_e(
+								'Directive posters are useful when the message needs to be explicit.',
+								'akaza-adventure'
+							);
+							?>
+						</p>
+					</article>
+
+					<article class="sl-s-signs-nudges__card">
+						<span class="sl-s-signs-nudges__number" aria-hidden="true">02</span>
+						<h3 class="sl-panel-title">
+							<?php esc_html_e( 'Behavioural Nudges', 'akaza-adventure' ); ?>
+						</h3>
+						<p>
+							<?php
+							esc_html_e(
+								'Short visual prompts designed to encourage employees to pause and consider their behaviour before taking an action.',
+								'akaza-adventure'
+							);
+							?>
+						</p>
+						<p>
+							<?php
+							esc_html_e(
+								'Rather than explaining an entire policy, nudges keep a relevant security concept visible and encourage employees to make a more deliberate decision.',
+								'akaza-adventure'
+							);
+							?>
+						</p>
+					</article>
+
+				</div>
+
+				<p class="sl-s-signs-nudges__closing">
 					<?php
 					esc_html_e(
-						'Subtle visual reminders designed to influence everyday employee behaviour without disrupting productivity.',
+						'Together, directive posters and behavioural nudges give organisations flexibility to combine instruction with reinforcement.',
 						'akaza-adventure'
 					);
 					?>
 				</p>
-				<p>
-					<?php
-					esc_html_e(
-						'These posters encourage employees to pause, think, and make secure decisions before performing routine workplace activities.',
-						'akaza-adventure'
-					);
-					?>
-				</p>
-				<p>
-					<?php
-					esc_html_e(
-						'Behavioural nudges help reinforce positive security habits through regular visual exposure rather than lengthy instructional content.',
-						'akaza-adventure'
-					);
-					?>
-				</p>
-			</article>
+
+			</div>
+
+			<div class="sl-s-signs-nudges__media">
+				<div class="sl-s-signs-nudges__image-placeholder">
+					<span><?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?></span>
+				</div>
+			</div>
 
 		</div>
 

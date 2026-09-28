@@ -7,14 +7,14 @@
    ========================================================= */
 
    .sl-course-page .sl-gifts-entertainment-learning-outcomes {
-	background: var(--course-light-white, #ffffff);
+	background: var(--course-white, #ffffff);
 }
 
 .sl-gifts-entertainment-learning-outcomes__grid {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 	gap: 72px;
-	align-items: start;
+	align-items: stretch;
 }
 
 
@@ -32,42 +32,26 @@
 
 
 /* =========================================================
-   Image
+   Image — sticky while scrolling outcomes list
    ========================================================= */
 
 .sl-gifts-entertainment-learning-outcomes__media {
-	display: flex;
-	align-items: flex-start;
-	justify-content: flex-start;
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 76px) + 24px);
 	min-width: 0;
 }
 
-.sl-gifts-entertainment-learning-outcomes__image-placeholder {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-
-	width: min(100%, 520px);
-	aspect-ratio: 1 / 1;
-
-	background: var(--course-white, #ffffff);
-	border: 1px dashed rgba(20, 114, 186, 0.35);
+.sl-gifts-entertainment-learning-outcomes__image {
+	margin: 0;
+	max-width: 520px;
+	overflow: hidden;
 	border-radius: 16px;
-
-	text-align: center;
-	box-sizing: border-box;
 }
 
-.sl-gifts-entertainment-learning-outcomes__image-placeholder span {
-	color: var(--course-primary, #1472ba);
-	font-weight: 700;
-	letter-spacing: 0.04em;
-}
-
-.sl-gifts-entertainment-learning-outcomes__image-placeholder small {
-	margin-top: 8px;
-	color: var(--course-muted, #6b7c93);
+.sl-gifts-entertainment-learning-outcomes__image img {
+	display: block;
+	width: 100%;
+	height: auto;
 }
 
 
@@ -170,9 +154,13 @@
 		margin-bottom: 24px;
 	}
 
-	.sl-gifts-entertainment-learning-outcomes__image-placeholder {
-		width: 100%;
-		max-width: 560px;
+	.sl-gifts-entertainment-learning-outcomes__media {
+		position: static;
+		top: auto;
+	}
+
+	.sl-gifts-entertainment-learning-outcomes__image {
+		max-width: 100%;
 		border-radius: 12px;
 	}
 

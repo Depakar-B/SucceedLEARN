@@ -54,9 +54,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<div class="sl-political-donations-practical__media">
 				<div class="sl-political-donations-practical__image">
-					<div class="sl-political-donations-practical__image-placeholder">
-						<?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?>
-					</div>
+					<img
+						src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/Assessment-image.webp' ); ?>"
+						alt="<?php esc_attr_e( 'Scenario assessment: whether hosting a political discussion constitutes a political donation', 'akaza-adventure' ); ?>"
+						loading="lazy"
+						decoding="async"
+					>
 				</div>
 			</div>
 

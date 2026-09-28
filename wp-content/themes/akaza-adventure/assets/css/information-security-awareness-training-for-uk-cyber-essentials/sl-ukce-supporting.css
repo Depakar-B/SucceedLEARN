@@ -1,0 +1,91 @@
+/*
+ * UK Cyber Essentials — Additional supporting awareness.
+ */
+
+.sl-ukce-supporting {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-ukce-supporting__heading {
+	margin: 0 0 40px;
+}
+
+.sl-ukce-supporting__heading h2 {
+	margin: 0;
+}
+
+.sl-ukce-supporting__grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 24px;
+}
+
+.sl-ukce-supporting__card {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 28px 24px;
+	border: 1px solid rgba(107, 124, 147, 0.18);
+	border-radius: 16px;
+	background: var(--sl-page-bg, #f5f5f5);
+	box-shadow: 0 8px 24px rgba(22, 35, 78, 0.04);
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.sl-ukce-supporting__card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 14px 32px rgba(22, 35, 78, 0.1);
+}
+
+.sl-ukce-supporting__card h3 {
+	margin: 0 0 12px;
+	color: var(--sl-page-navy, #16234e);
+	font-size: 18px !important;
+	font-weight: 700;
+	line-height: 1.35;
+}
+
+.sl-ukce-supporting__card p {
+	margin: 0;
+	color: var(--sl-page-muted, #6b7c93);
+	font-size: 15px;
+	line-height: 1.6;
+}
+
+@media (max-width: 1199px) {
+	.sl-ukce-supporting__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.sl-ukce-supporting__grid > .sl-ukce-supporting__card:last-child:nth-child(odd) {
+		grid-column: 1 / -1;
+		width: 100%;
+		max-width: calc((100% - 24px) / 2);
+		justify-self: center;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-ukce-supporting {
+		padding: 60px 0;
+	}
+
+	.sl-ukce-supporting__heading {
+		margin-bottom: 28px;
+	}
+
+	.sl-ukce-supporting__grid {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
+	.sl-ukce-supporting__grid > .sl-ukce-supporting__card:last-child:nth-child(odd) {
+		grid-column: auto;
+		max-width: none;
+	}
+}

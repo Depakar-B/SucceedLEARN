@@ -59,7 +59,7 @@ get_template_part(
 	null,
 	array(
 		'id'            => 'frequently-asked-questions',
-		'section_class' => 'sl-faq-section--alt sl-smcr-faq',
+		'section_class' => 'sl-smcr-faq',
 		'eyebrow'       => __( 'Frequently Asked Questions', 'akaza-adventure' ),
 		'title_html'    => __( 'SMCR Training FAQs for UK Private Equity and Venture Capital <span>Firms</span>', 'akaza-adventure' ),
 		'intro'         => __( 'Concise answers to additional questions buyers and learners may have when considering SucceedLEARN SMCR training.', 'akaza-adventure' ),

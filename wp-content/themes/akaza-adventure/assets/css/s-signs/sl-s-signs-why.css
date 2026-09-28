@@ -11,7 +11,7 @@
 	display: grid;
 	grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
 	gap: 64px;
-	align-items: start;
+	align-items: center;
 }
 
 .sl-s-signs-why__content {
@@ -33,11 +33,10 @@
 }
 
 .sl-s-signs-why__media {
-	position: sticky;
-	top: calc(var(--slf-header-clearance, 110px) + 24px);
+	position: static;
+	align-self: center;
 	width: 100%;
 	min-width: 0;
-	align-self: start;
 }
 
 .sl-s-signs-why__image-placeholder {

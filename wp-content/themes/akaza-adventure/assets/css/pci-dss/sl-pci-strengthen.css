@@ -1,0 +1,25 @@
+.sl-pci-strengthen {
+	padding: 80px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-pci-strengthen__inner { max-width: 860px; }
+.sl-pci-strengthen__inner h2 { margin-bottom: 18px; }
+
+.sl-pci-strengthen__copy {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	margin-bottom: 28px;
+}
+
+.sl-pci-strengthen__copy p { margin: 0; }
+
+.sl-pci-strengthen__tagline {
+	color: var(--sl-page-navy, #16234e) !important;
+	font-weight: 700;
+}
+
+@media (max-width: 767px) {
+	.sl-pci-strengthen { padding: 60px 0; }
+}

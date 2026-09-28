@@ -1,6 +1,6 @@
 <?php
 /**
- * S-Metrics — Measure What Matters.
+ * S-Metrics — Reporting for Audit & Compliance Readiness.
  *
  * @package Akaza_Adventure
  */
@@ -8,6 +8,16 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+$audit_items = array(
+	__( 'Training assignments', 'akaza-adventure' ),
+	__( 'Completion records', 'akaza-adventure' ),
+	__( 'Assessment outcomes', 'akaza-adventure' ),
+	__( 'Certificates', 'akaza-adventure' ),
+	__( 'Campaign history', 'akaza-adventure' ),
+	__( 'Awareness participation', 'akaza-adventure' ),
+	__( 'Relevant reporting activity', 'akaza-adventure' ),
+);
 ?>
 
 <section
@@ -21,19 +31,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="sl-s-metrics-measure__content">
 
 				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'Measure What Matters', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Audit & Compliance', 'akaza-adventure' ); ?>
 				</span>
 
 				<h2 id="sl-s-metrics-measure-title">
-					<?php esc_html_e( 'Turn Awareness into a', 'akaza-adventure' ); ?>
-					<span><?php esc_html_e( 'Measurable Business Capability', 'akaza-adventure' ); ?></span>
+					<?php esc_html_e( 'Reporting for Audit', 'akaza-adventure' ); ?>
+					<span><?php esc_html_e( '& Compliance Readiness', 'akaza-adventure' ); ?></span>
 				</h2>
 
 				<div class="sl-s-metrics-measure__copy">
 					<p>
 						<?php
 						esc_html_e(
-							'Effective security awareness programmes are built on more than training - they rely on continuous measurement, meaningful insights, and data-driven improvement.',
+							'Security awareness programmes often need to demonstrate that learning and awareness activities have taken place.',
 							'akaza-adventure'
 						);
 						?>
@@ -42,25 +52,27 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<p>
 						<?php
 						esc_html_e(
-							'With S-Metrics, organisations gain complete visibility into awareness performance, employee engagement, behavioural trends, and compliance progress, helping transform security awareness into a measurable business capability.',
+							'S-Metrics can help organisations maintain visibility into information such as:',
 							'akaza-adventure'
 						);
 						?>
 					</p>
 
+					<ul class="sl-s-metrics-measure__list">
+						<?php foreach ( $audit_items as $item ) : ?>
+							<li><?php echo esc_html( $item ); ?></li>
+						<?php endforeach; ?>
+					</ul>
+
 					<p>
 						<?php
 						esc_html_e(
-							"Discover how S-Metrics can help you measure awareness, demonstrate compliance, and continuously strengthen your organisation's security culture.",
+							'Exportable reports can support internal governance, audit preparation and compliance reviews.',
 							'akaza-adventure'
 						);
 						?>
 					</p>
 				</div>
-
-				<a class="sl-content-btn sl-content-btn-primary" href="#request-demo">
-					<?php esc_html_e( 'Request a Demo', 'akaza-adventure' ); ?>
-				</a>
 
 			</div>
 

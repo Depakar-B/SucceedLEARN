@@ -27,11 +27,14 @@ function akaza_enqueue_political_donations_assets() {
 
 	$sections = array(
 		'sl-political-donations-hero',
+		'sl-political-donations-individuals',
+		'sl-political-donations-organisations',
+		'sl-political-donations-pevc-suite',
+		'sl-political-donations-cpd',
 		'sl-political-donations-context',
 		'sl-political-donations-overview',
 		'sl-political-donations-regulatory-context',
 		'sl-political-donations-learning-outcomes',
-		'sl-political-donations-activity',
 		'sl-political-donations-inside',
 		'sl-political-donations-practical',
 		'sl-political-donations-audience',
@@ -45,6 +48,13 @@ function akaza_enqueue_political_donations_assets() {
 			$deps
 		);
 	}
+
+	// Opt-in bordered pill eyebrow (sl-global-sub-heading.css).
+	akaza_enqueue_theme_style(
+		'akaza-global-sub-heading',
+		'sl-global-sub-heading.css',
+		array( 'akaza-main', 'akaza-global-title-accent' )
+	);
 
 	// Global FAQ accordion (CSS + JS). Registered in enqueue-core.php.
 	wp_enqueue_style( 'akaza-global-faq' );

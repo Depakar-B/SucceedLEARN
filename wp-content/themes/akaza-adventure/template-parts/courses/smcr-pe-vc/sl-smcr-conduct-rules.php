@@ -36,9 +36,12 @@ $conduct_rule_scenarios = array(
 
 			<div class="sl-smcr-conduct-rules__media">
 				<div class="sl-smcr-conduct-rules__image">
-					<div class="sl-smcr-conduct-rules__image-placeholder">
-						<?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?>
-					</div>
+					<img
+						src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/SMCR_Employees.webp' ); ?>"
+						alt="<?php esc_attr_e( 'SMCR training for employees', 'akaza-adventure' ); ?>"
+						loading="lazy"
+						decoding="async"
+					>
 				</div>
 			</div>
 

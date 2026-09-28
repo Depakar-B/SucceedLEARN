@@ -4,19 +4,38 @@
 
 .sl-s-play-games {
 	padding: 90px 0;
-	background: var(--sl-page-bg, #f5f5f5);
+	background: var(--sl-page-white, #ffffff);
 }
 
 .sl-s-play-games__intro {
 	margin-bottom: 40px;
 }
 
+.sl-s-play-games__intro .sl-home-sub-heading {
+	display: block;
+	margin-bottom: 14px;
+}
+
 .sl-s-play-games__intro h2 {
-	margin-bottom: 16px;
+	margin-bottom: 0;
+}
+
+/* Section subtitle under h2 — same scale as SAP annual-training. */
+body.slf-body main.sl-s-play-page .sl-s-play-games__subtitle,
+body.slf-body #main-content.sl-s-play-page .sl-s-play-games__subtitle,
+.sl-s-play-page .sl-s-play-games__subtitle {
+	margin: 16px 0 0;
+	font-family: var(--slf-font-display, "Space Grotesk", system-ui, sans-serif);
+	font-size: 22px;
+	font-weight: 600;
+	line-height: 1.4;
+	letter-spacing: 0;
+	text-transform: none;
+	color: var(--sl-page-primary, #1472ba);
 }
 
 .sl-s-play-games__intro p {
-	margin: 0;
+	margin: 16px 0 0;
 	max-width: 820px;
 }
 
@@ -34,7 +53,7 @@
 	padding: 28px 24px;
 	border: 1px solid rgba(107, 124, 147, 0.18);
 	border-radius: 16px;
-	background: var(--sl-page-white, #ffffff);
+	background: var(--sl-page-bg, #f5f5f5);
 	box-shadow: 0 8px 24px rgba(22, 35, 78, 0.04);
 	box-sizing: border-box;
 	transition:
@@ -47,27 +66,27 @@
 	box-shadow: 0 14px 32px rgba(22, 35, 78, 0.1);
 }
 
-.sl-s-play-games__number {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: 36px;
-	height: 36px;
-	margin-bottom: 18px;
-	border: 1px solid rgba(20, 114, 186, 0.18);
-	border-radius: 8px;
-	background: rgba(20, 114, 186, 0.08);
-	color: var(--sl-page-primary, #1472ba);
-	font-weight: 700;
-	line-height: 1;
+.sl-s-play-games__card .sl-panel-title {
+	margin: 0 0 8px;
 }
 
-.sl-s-play-games__card .sl-panel-title {
-	margin: 0 0 12px;
+.sl-s-play-games__tagline {
+	margin: 0 0 12px !important;
+	font-weight: 600;
+	color: var(--sl-page-primary, #1472ba);
 }
 
 .sl-s-play-games__card p {
-	margin: 0;
+	margin: 0 0 12px;
+}
+
+.sl-s-play-games__card p:last-child {
+	margin-bottom: 0;
+}
+
+.sl-s-play-games__meta {
+	margin-top: 4px !important;
+	font-size: 0.95rem;
 }
 
 @media (max-width: 991px) {

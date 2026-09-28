@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: PE/VC Compliance Programs
- * Description: Desktop shell for PE/VC Compliance Programs page.
+ * Description: Private Equity and Venture Capital compliance training homepage.
  *
  * @package Akaza_Adventure
  */

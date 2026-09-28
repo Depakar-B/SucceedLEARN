@@ -40,50 +40,55 @@ $learning_areas = array(
 				</h2>
 
 				<p>
-					<?php esc_html_e(
+					<?php
+					esc_html_e(
 						'Senior Managers have additional responsibilities beyond the employee-level Conduct Rules. This course focuses on how those responsibilities translate into leadership and oversight.',
 						'akaza-adventure'
-					); ?>
+					);
+					?>
 				</p>
 
 				<p>
-					<?php esc_html_e(
+					<?php
+					esc_html_e(
 						'Learners work through practical PE/VC situations involving controls, delegation, reporting, documentation and regulatory interaction.',
 						'akaza-adventure'
-					); ?>
+					);
+					?>
 				</p>
 
-				<div class="sl-smcr-senior-managers__learning">
-
-					<h3 class="sl-panel-title">
-						<?php esc_html_e( 'Key Learning Areas', 'akaza-adventure' ); ?>
-					</h3>
-
-					<ul class="sl-list">
-						<?php foreach ( $learning_areas as $index => $learning_area ) : ?>
-							<li class="sl-list-item">
-								<span class="sl-list-item__label" aria-hidden="true">
-									<?php echo esc_html( str_pad( (string) ( $index + 1 ), 2, '0', STR_PAD_LEFT ) ); ?>
-								</span>
-
-								<span class="sl-list-item__text">
-									<?php echo esc_html( $learning_area ); ?>
-								</span>
-							</li>
-						<?php endforeach; ?>
-					</ul>
-
+				<div class="sl-smcr-senior-managers__media">
+					<div class="sl-smcr-senior-managers__image">
+						<img
+							src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/SMCR_Manager.webp' ); ?>"
+							alt="<?php esc_attr_e( 'SMCR senior managers training', 'akaza-adventure' ); ?>"
+							loading="lazy"
+							decoding="async"
+						>
+					</div>
 				</div>
 
 			</div>
 
-			<div class="sl-smcr-senior-managers__media">
+			<div class="sl-smcr-senior-managers__learning">
 
-				<div class="sl-smcr-senior-managers__image">
-					<div class="sl-smcr-senior-managers__image-placeholder">
-						<?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?>
-					</div>
-				</div>
+				<h3 class="sl-panel-title">
+					<?php esc_html_e( 'Key Learning Areas', 'akaza-adventure' ); ?>
+				</h3>
+
+				<ul class="sl-list">
+					<?php foreach ( $learning_areas as $index => $learning_area ) : ?>
+						<li class="sl-list-item">
+							<span class="sl-list-item__label" aria-hidden="true">
+								<?php echo esc_html( str_pad( (string) ( $index + 1 ), 2, '0', STR_PAD_LEFT ) ); ?>
+							</span>
+
+							<span class="sl-list-item__text">
+								<?php echo esc_html( $learning_area ); ?>
+							</span>
+						</li>
+					<?php endforeach; ?>
+				</ul>
 
 			</div>
 
