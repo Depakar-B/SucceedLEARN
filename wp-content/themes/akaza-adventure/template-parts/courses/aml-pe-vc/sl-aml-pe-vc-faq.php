@@ -10,8 +10,8 @@ defined( 'ABSPATH' ) || exit;
 
 $faq_items = array(
 	array(
-		'question' => __( 'What is AML training for Private Equity and Venture Capital?', 'akaza-adventure' ),
-		'answer'   => __( 'It is anti-money laundering awareness training tailored to financial crime risks encountered in investment environments, including investor onboarding, ownership structures and due diligence.', 'akaza-adventure' ),
+		'question' => __( 'What is Anti-money Laundering?', 'akaza-adventure' ),
+		'answer'   => __( 'Anti-Money Laundering (AML) refers to the laws, processes and controls used to detect, prevent and report attempts to disguise illegally obtained funds as legitimate.', 'akaza-adventure' ),
 	),
 	array(
 		'question' => __( 'Who should take this AML course?', 'akaza-adventure' ),

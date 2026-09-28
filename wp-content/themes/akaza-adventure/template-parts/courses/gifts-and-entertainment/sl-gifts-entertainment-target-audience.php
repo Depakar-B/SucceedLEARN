@@ -61,7 +61,7 @@ defined( 'ABSPATH' ) || exit;
 						class="sl-gifts-entertainment-target-audience__number"
 						aria-hidden="true"
 					>
-						PE
+						1
 					</span>
 
 					<div class="sl-gifts-entertainment-target-audience__item-content">
@@ -94,7 +94,7 @@ defined( 'ABSPATH' ) || exit;
 						class="sl-gifts-entertainment-target-audience__number"
 						aria-hidden="true"
 					>
-						IR
+						2
 					</span>
 
 					<div class="sl-gifts-entertainment-target-audience__item-content">
@@ -127,7 +127,7 @@ defined( 'ABSPATH' ) || exit;
 						class="sl-gifts-entertainment-target-audience__number"
 						aria-hidden="true"
 					>
-						CO
+						3
 					</span>
 
 					<div class="sl-gifts-entertainment-target-audience__item-content">
@@ -160,7 +160,7 @@ defined( 'ABSPATH' ) || exit;
 						class="sl-gifts-entertainment-target-audience__number"
 						aria-hidden="true"
 					>
-						OP
+						4
 					</span>
 
 					<div class="sl-gifts-entertainment-target-audience__item-content">

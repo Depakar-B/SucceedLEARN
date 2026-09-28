@@ -70,7 +70,7 @@ defined( 'ABSPATH' ) || exit;
 			<div class="sl-aml-pe-vc-overview__media">
 				<figure class="sl-aml-pe-vc-overview__image">
 					<img
-						src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/AML_organisations-image.webp' ); ?>"
+						src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/aml_compliance_office_illustration.webp' ); ?>"
 						alt="<?php esc_attr_e( 'AML Course Introduction Visual', 'akaza-adventure' ); ?>"
 						loading="lazy"
 						decoding="async"

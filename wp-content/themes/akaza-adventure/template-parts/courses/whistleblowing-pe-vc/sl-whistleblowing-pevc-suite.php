@@ -121,7 +121,7 @@ $courses = array(
 				<p>
 					<?php
 					esc_html_e(
-						'Extend whistleblowing awareness into a broader compliance programme covering cyber security, conduct, financial crime and regulated-firm responsibilities.',
+						'Extend whistleblowing awareness into a broader compliance programme covering cyber security, code of conduct, financial crime and regulated-firm responsibilities.',
 						'akaza-adventure'
 					);
 					?>
