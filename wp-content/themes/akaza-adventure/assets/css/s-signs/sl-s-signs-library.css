@@ -22,12 +22,16 @@
 	margin-bottom: 0;
 }
 
-.sl-s-signs-library__subtitle {
+/* Section subtitle under h2 — same scale as SAP annual-training. */
+body.slf-body main.sl-s-signs-page .sl-s-signs-library__subtitle,
+body.slf-body #main-content.sl-s-signs-page .sl-s-signs-library__subtitle,
+.sl-s-signs-page .sl-s-signs-library__subtitle {
 	margin: 16px 0 18px;
-	font-size: 1.15rem;
+	font-family: var(--slf-font-display, "Space Grotesk", system-ui, sans-serif);
+	font-size: 22px;
 	font-weight: 600;
 	line-height: 1.4;
-	color: var(--sl-page-text, #16234e);
+	color: var(--sl-page-primary, #1472ba);
 }
 
 .sl-s-signs-library__copy {
@@ -60,6 +64,13 @@
 	box-sizing: border-box;
 	color: var(--sl-page-muted, #6b7c93);
 	text-align: center;
+}
+
+.sl-s-signs-library__image {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 16px;
 }
 
 @media (max-width: 991px) {

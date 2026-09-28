@@ -65,9 +65,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 
 			<div class="sl-s-signs-library__media">
-				<div class="sl-s-signs-library__image-placeholder">
-					<span><?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?></span>
-				</div>
+				<img
+					class="sl-s-signs-library__image"
+					src="<?php echo esc_url( akaza_upload_url( '2026/09/A-growing-library-of-posters.webp' ) ); ?>"
+					alt="<?php esc_attr_e( 'A growing library of cybersecurity awareness posters', 'akaza-adventure' ); ?>"
+					width="800"
+					height="600"
+					loading="lazy"
+					decoding="async"
+				>
 			</div>
 
 		</div>
