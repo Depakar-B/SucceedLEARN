@@ -11,7 +11,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $modules = array(
 	array(
-		'number'  => '01',
 		'title'   => __( 'Account Security', 'akaza-adventure' ),
 		'tagline' => __( 'Support Secure User Access', 'akaza-adventure' ),
 		'lead'    => __( 'User Access Control is one of the five Cyber Essentials technical controls.', 'akaza-adventure' ),
@@ -21,7 +20,6 @@ $modules = array(
 		'cta'     => __( 'Explore Account Security Training', 'akaza-adventure' ),
 	),
 	array(
-		'number'  => '02',
 		'title'   => __( 'Malware', 'akaza-adventure' ),
 		'tagline' => __( 'Strengthen Employee Malware Awareness', 'akaza-adventure' ),
 		'lead'    => __( 'Malware Protection is another of the five Cyber Essentials technical controls.', 'akaza-adventure' ),
@@ -31,7 +29,6 @@ $modules = array(
 		'cta'     => __( 'Explore Malware Awareness Training', 'akaza-adventure' ),
 	),
 	array(
-		'number'  => '03',
 		'title'   => __( 'Remote Work Security', 'akaza-adventure' ),
 		'tagline' => __( 'Reinforce Secure Working Beyond the Office', 'akaza-adventure' ),
 		'lead'    => __( 'Cyber Essentials requirements apply to relevant devices and services within scope, including environments involving home working and cloud services.', 'akaza-adventure' ),
@@ -68,10 +65,6 @@ $modules = array(
 		<div class="sl-ukce-modules__grid">
 			<?php foreach ( $modules as $module ) : ?>
 				<article class="sl-ukce-modules__card">
-					<div class="sl-ukce-modules__number">
-						<?php echo esc_html( $module['number'] ); ?>
-					</div>
-
 					<div class="sl-ukce-modules__content">
 						<h3 class="sl-panel-title">
 							<?php echo esc_html( $module['title'] ); ?>

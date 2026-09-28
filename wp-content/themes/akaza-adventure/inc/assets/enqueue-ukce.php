@@ -44,6 +44,11 @@ function akaza_enqueue_ukce_assets() {
 		akaza_enqueue_theme_style( "akaza-{$section}", "{$folder}/{$section}.css", array( $global ) );
 	}
 
+	akaza_enqueue_theme_script(
+		'akaza-sl-ukce-action',
+		"{$folder}/sl-ukce-action.js"
+	);
+
 	akaza_enqueue_theme_style( 'akaza-contact-form', 'contact-from.css', array( 'akaza-main' ) );
 
 	$contact_form_brand = AKAZA_DIR . '/assets/css/contact-form-brand.css';
