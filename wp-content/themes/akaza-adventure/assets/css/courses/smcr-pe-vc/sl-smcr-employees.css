@@ -11,7 +11,7 @@
 	display: grid;
 	grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
 	gap: 72px;
-	align-items: start;
+	align-items: center;
 }
 
 .sl-smcr-employees__content {
@@ -33,12 +33,16 @@
 }
 
 .sl-smcr-employees__content > p:last-of-type {
-	margin-bottom: 32px;
+	margin-bottom: 0;
 }
 
 /* ---------------------------------------------------------
    Learning areas
    --------------------------------------------------------- */
+
+.sl-smcr-employees__learning {
+	margin-top: 48px;
+}
 
 .sl-smcr-employees__learning .sl-panel-title {
 	margin-top: 0;
@@ -46,7 +50,12 @@
 }
 
 .sl-smcr-employees__learning .sl-list {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 16px 20px;
 	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
 /* Use the page's established numbered list UI */
@@ -87,10 +96,7 @@
    --------------------------------------------------------- */
 
 .sl-smcr-employees__media {
-	position: sticky;
-	top: calc(var(--slf-header-clearance, 110px) + 24px);
-	align-self: start;
-	margin-top: 48px;
+	min-width: 0;
 }
 
 .sl-smcr-employees__image {
@@ -122,8 +128,8 @@
 		gap: 44px;
 	}
 
-	.sl-smcr-employees__media {
-		position: static;
+	.sl-smcr-employees__learning {
+		margin-top: 40px;
 	}
 }
 
@@ -145,12 +151,17 @@
 		margin-bottom: 20px;
 	}
 
-	.sl-smcr-employees__content > p:last-of-type {
-		margin-bottom: 26px;
-	}
-
 	.sl-smcr-employees__media {
 		order: -1;
+	}
+
+	.sl-smcr-employees__learning {
+		margin-top: 32px;
+	}
+
+	.sl-smcr-employees__learning .sl-list {
+		grid-template-columns: 1fr;
+		gap: 12px;
 	}
 
 	.sl-smcr-employees__learning .sl-list-item {
