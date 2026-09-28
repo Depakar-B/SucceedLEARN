@@ -67,7 +67,7 @@
 	display: block;
 	width: 100%;
 	height: auto;
-	max-height: 480px;
+	max-height: 500px;
 	object-fit: contain;
 	object-position: center;
 }
