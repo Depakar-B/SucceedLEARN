@@ -13,19 +13,43 @@ $module_carousels = array(
 	'employee' => array(
 		'label'  => __( 'Employee Awareness', 'akaza-adventure' ),
 		'slides' => array(
-			__( 'Employee Awareness screenshot 1', 'akaza-adventure' ),
-			__( 'Employee Awareness screenshot 2', 'akaza-adventure' ),
-			__( 'Employee Awareness screenshot 3', 'akaza-adventure' ),
-			__( 'Employee Awareness screenshot 4', 'akaza-adventure' ),
+			array(
+				'file' => '2026/09/PCI-DSS-Empoyee-Course-Screenshots.webp',
+				'alt'  => __( 'PCI DSS Employee Awareness training screenshot 1', 'akaza-adventure' ),
+			),
+			array(
+				'file' => '2026/09/PCI-DSS-Empoyee-Course-Screenshots-2.webp',
+				'alt'  => __( 'PCI DSS Employee Awareness training screenshot 2', 'akaza-adventure' ),
+			),
+			array(
+				'file' => '2026/09/PCI-DSS-Empoyee-Course-Screenshots-3.webp',
+				'alt'  => __( 'PCI DSS Employee Awareness training screenshot 3', 'akaza-adventure' ),
+			),
+			array(
+				'file' => '2026/09/PCI-DSS-Empoyee-Course-Screenshots-4.webp',
+				'alt'  => __( 'PCI DSS Employee Awareness training screenshot 4', 'akaza-adventure' ),
+			),
 		),
 	),
 	'cashier'  => array(
 		'label'  => __( 'Cashier & Payment Handler', 'akaza-adventure' ),
 		'slides' => array(
-			__( 'Cashier & Payment Handler screenshot 1', 'akaza-adventure' ),
-			__( 'Cashier & Payment Handler screenshot 2', 'akaza-adventure' ),
-			__( 'Cashier & Payment Handler screenshot 3', 'akaza-adventure' ),
-			__( 'Cashier & Payment Handler screenshot 4', 'akaza-adventure' ),
+			array(
+				'file' => '2026/09/PCI-DSS-Cashier-Payment-handler-Course-Screenshot.webp',
+				'alt'  => __( 'PCI DSS Cashier and Payment Handler training screenshot 1', 'akaza-adventure' ),
+			),
+			array(
+				'file' => '2026/09/PCI-DSS-Cashier-Payment-handler-Course-Screenshot-2.webp',
+				'alt'  => __( 'PCI DSS Cashier and Payment Handler training screenshot 2', 'akaza-adventure' ),
+			),
+			array(
+				'file' => '2026/09/PCI-DSS-Cashier-Payment-handler-Course-Screenshot-3.webp',
+				'alt'  => __( 'PCI DSS Cashier and Payment Handler training screenshot 3', 'akaza-adventure' ),
+			),
+			array(
+				'file' => '2026/09/PCI-DSS-Cashier-Payment-handler-Course-Screenshot-4.webp',
+				'alt'  => __( 'PCI DSS Cashier and Payment Handler training screenshot 4', 'akaza-adventure' ),
+			),
 		),
 	),
 );
@@ -121,17 +145,29 @@ $module_carousels = array(
 							aria-label="<?php echo esc_attr( $module['label'] ); ?>"
 						>
 							<div class="sl-pci-screenshots__track" data-pci-carousel-track>
-								<?php foreach ( $module['slides'] as $index => $label ) : ?>
+								<?php foreach ( $module['slides'] as $index => $slide ) : ?>
+									<?php
+									$screenshot_src = function_exists( 'akaza_upload_url' )
+										? akaza_upload_url( $slide['file'] )
+										: 'https://succeedlearn.com/wp-content/uploads/' . $slide['file'];
+									?>
 									<figure
 										class="sl-pci-screenshots__slide<?php echo 0 === $index ? ' is-active' : ''; ?>"
 										data-pci-carousel-slide
 										<?php echo 0 === $index ? '' : ' hidden'; ?>
 									>
-										<div class="sl-pci-screenshots__image-placeholder">
-											<span><?php echo esc_html( $label ); ?></span>
+										<div class="sl-pci-screenshots__image">
+											<img
+												src="<?php echo esc_url( $screenshot_src ); ?>"
+												alt="<?php echo esc_attr( $slide['alt'] ); ?>"
+												width="720"
+												height="520"
+												loading="<?php echo ( 0 === $panel_index && 0 === $index ) ? 'eager' : 'lazy'; ?>"
+												decoding="async"
+											/>
 										</div>
 										<figcaption class="screen-reader-text">
-											<?php echo esc_html( $label ); ?>
+											<?php echo esc_html( $slide['alt'] ); ?>
 										</figcaption>
 									</figure>
 								<?php endforeach; ?>

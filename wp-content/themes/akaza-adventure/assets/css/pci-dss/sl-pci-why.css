@@ -26,29 +26,27 @@
 	align-self: start;
 }
 
-.sl-pci-why__image-placeholder {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.sl-pci-why__image {
+	overflow: hidden;
 	width: 100%;
-	min-height: 480px;
-	padding: 40px;
-	border: 1px solid rgba(22, 35, 78, 0.10);
+	line-height: 0;
 	border-radius: 16px;
 	background: var(--sl-page-white, #ffffff);
-	box-sizing: border-box;
-	color: var(--sl-page-muted, #6b7c93);
-	text-align: center;
+}
+
+.sl-pci-why__image img {
+	display: block;
+	width: 100%;
+	height: auto;
 }
 
 @media (max-width: 991px) {
 	.sl-pci-why { padding: 64px 0; }
 	.sl-pci-why__grid { grid-template-columns: 1fr; gap: 42px; }
 	.sl-pci-why__media { position: static; }
-	.sl-pci-why__image-placeholder { min-height: 360px; }
 }
 
 @media (max-width: 767px) {
 	.sl-pci-why { padding: 52px 0; }
-	.sl-pci-why__image-placeholder { min-height: 280px; padding: 28px; border-radius: 12px; }
+	.sl-pci-why__image { border-radius: 12px; }
 }

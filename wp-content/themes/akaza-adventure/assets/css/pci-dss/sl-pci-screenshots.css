@@ -88,14 +88,17 @@
 	display: none;
 }
 
-.sl-pci-screenshots__image-placeholder {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-height: 420px;
-	padding: 40px;
-	color: var(--sl-page-muted, #6b7c93);
-	text-align: center;
+.sl-pci-screenshots__image {
+	overflow: hidden;
+	width: 100%;
+	line-height: 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-pci-screenshots__image img {
+	display: block;
+	width: 100%;
+	height: auto;
 }
 
 .sl-pci-screenshots__controls {
@@ -152,9 +155,5 @@
 @media (max-width: 767px) {
 	.sl-pci-screenshots {
 		padding: 60px 0;
-	}
-
-	.sl-pci-screenshots__image-placeholder {
-		min-height: 280px;
 	}
 }
