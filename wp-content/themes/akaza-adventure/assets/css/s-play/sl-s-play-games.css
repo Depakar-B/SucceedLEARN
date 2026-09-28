@@ -42,18 +42,20 @@ body.slf-body #main-content.sl-s-play-page .sl-s-play-games__subtitle,
 .sl-s-play-games__grid {
 	display: grid;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: 24px;
+	column-gap: 24px;
+	row-gap: 0;
 }
 
 .sl-s-play-games__card {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
+	display: grid;
+	grid-template-rows: subgrid;
+	grid-row: span 6;
 	min-width: 0;
-	padding: 28px 24px;
+	padding: 0;
+	overflow: hidden;
 	border: 1px solid rgba(107, 124, 147, 0.18);
 	border-radius: 16px;
-	background: var(--sl-page-bg, #f5f5f5);
+	background: var(--sl-page-white, #ffffff);
 	box-shadow: 0 8px 24px rgba(22, 35, 78, 0.04);
 	box-sizing: border-box;
 	transition:
@@ -66,6 +68,29 @@ body.slf-body #main-content.sl-s-play-page .sl-s-play-games__subtitle,
 	box-shadow: 0 14px 32px rgba(22, 35, 78, 0.1);
 }
 
+.sl-s-play-games__media {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	aspect-ratio: 16 / 10;
+	line-height: 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-s-play-games__media img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.sl-s-play-games__body {
+	display: grid;
+	grid-template-rows: subgrid;
+	grid-row: span 5;
+	padding: 22px 24px 24px;
+}
+
 .sl-s-play-games__card .sl-panel-title {
 	margin: 0 0 8px;
 }
@@ -76,22 +101,34 @@ body.slf-body #main-content.sl-s-play-page .sl-s-play-games__subtitle,
 	color: var(--sl-page-primary, #1472ba);
 }
 
-.sl-s-play-games__card p {
+.sl-s-play-games__copy p {
 	margin: 0 0 12px;
 }
 
-.sl-s-play-games__card p:last-child {
+.sl-s-play-games__copy p:last-child {
 	margin-bottom: 0;
 }
 
 .sl-s-play-games__meta {
-	margin-top: 4px !important;
+	margin: 12px 0 0;
 	font-size: 0.95rem;
+}
+
+.sl-s-play-games__meta + .sl-s-play-games__meta {
+	margin-top: 8px;
 }
 
 @media (max-width: 991px) {
 	.sl-s-play-games__grid {
 		grid-template-columns: 1fr;
+	}
+
+	.sl-s-play-games__card {
+		margin-bottom: 24px;
+	}
+
+	.sl-s-play-games__card:last-child {
+		margin-bottom: 0;
 	}
 }
 
@@ -105,6 +142,10 @@ body.slf-body #main-content.sl-s-play-page .sl-s-play-games__subtitle,
 	}
 
 	.sl-s-play-games__card {
-		padding: 22px 20px;
+		padding: 0;
+	}
+
+	.sl-s-play-games__body {
+		padding: 20px;
 	}
 }

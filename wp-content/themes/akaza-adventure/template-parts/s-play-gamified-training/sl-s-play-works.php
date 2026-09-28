@@ -10,6 +10,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+$s_play_works_image = function_exists( 'akaza_upload_url' )
+	? akaza_upload_url( '2026/09/S-Play-Launch-in-Four-Steps.webp' )
+	: 'https://succeedlearn.com/wp-content/uploads/2026/09/S-Play-Launch-in-Four-Steps.webp';
+
 $steps = array(
 	array(
 		'title' => __( 'Select S-Play', 'akaza-adventure' ),
@@ -61,8 +65,15 @@ $steps = array(
 		<div class="sl-s-play-works__layout">
 
 			<div class="sl-s-play-works__media">
-				<div class="sl-s-play-works__image-placeholder">
-					<span><?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?></span>
+				<div class="sl-s-play-works__image">
+					<img
+						src="<?php echo esc_url( $s_play_works_image ); ?>"
+						alt="<?php esc_attr_e( 'Launch gamified security awareness in four steps', 'akaza-adventure' ); ?>"
+						width="720"
+						height="720"
+						loading="lazy"
+						decoding="async"
+					/>
 				</div>
 			</div>
 

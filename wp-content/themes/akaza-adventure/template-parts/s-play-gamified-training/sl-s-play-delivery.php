@@ -8,6 +8,10 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+$s_play_delivery_image = function_exists( 'akaza_upload_url' )
+	? akaza_upload_url( '2026/09/Visibility-into-Gamified-eLearning.webp' )
+	: 'https://succeedlearn.com/wp-content/uploads/2026/09/Visibility-into-Gamified-eLearning.webp';
 ?>
 
 <section
@@ -74,8 +78,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 
 			<div class="sl-s-play-delivery__media">
-				<div class="sl-s-play-delivery__image-placeholder">
-					<span><?php esc_html_e( 'Image Placeholder — S-Play Metrics', 'akaza-adventure' ); ?></span>
+				<div class="sl-s-play-delivery__image">
+					<img
+						src="<?php echo esc_url( $s_play_delivery_image ); ?>"
+						alt="<?php esc_attr_e( 'Visibility into gamified eLearning', 'akaza-adventure' ); ?>"
+						width="720"
+						height="720"
+						loading="lazy"
+						decoding="async"
+					/>
 				</div>
 			</div>
 
