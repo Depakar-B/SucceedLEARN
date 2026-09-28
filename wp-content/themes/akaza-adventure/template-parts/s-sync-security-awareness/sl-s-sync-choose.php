@@ -19,6 +19,10 @@ $reasons = array(
 		'text'  => __( 'Accelerate onboarding and training assignments through automated provisioning and integrated workflows.', 'akaza-adventure' ),
 	),
 	array(
+		'title' => __( 'Improved Learner Experience', 'akaza-adventure' ),
+		'text'  => __( 'Allow employees to access training using familiar organisational credentials through Single Sign-On.', 'akaza-adventure' ),
+	),
+	array(
 		'title' => __( 'Accurate Data Synchronisation', 'akaza-adventure' ),
 		'text'  => __( 'Ensure learner information remains consistent across organisational systems, reducing errors caused by manual updates.', 'akaza-adventure' ),
 	),

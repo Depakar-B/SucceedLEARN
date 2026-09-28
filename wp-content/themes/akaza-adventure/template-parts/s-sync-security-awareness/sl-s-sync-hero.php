@@ -29,13 +29,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</h1>
 
 				<h2 class="sl-hero-h2">
-					<?php esc_html_e( 'Connect. Automate. Simplify your security awareness programme', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Connect. Automate. Simplify.', 'akaza-adventure' ); ?>
 				</h2>
 
 				<p>
 					<?php
 					esc_html_e(
-						'Security awareness programmes become harder to manage as organisations grow.',
+						'Deploying a security awareness programme should not require manual user management or disconnected systems. As organisations grow, managing employees, synchronising user data, and integrating learning platforms with existing IT infrastructure becomes increasingly important for maintaining efficiency and ensuring a seamless learner experience.',
 						'akaza-adventure'
 					);
 					?>
@@ -44,39 +44,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<p>
 					<?php
 					esc_html_e(
-						'New employees join. Existing employees change roles or locations. Others leave the organisation. Learning assignments need to remain accurate, access needs to be managed securely, and security awareness must fit within the technology environment employees already use.',
+						'S-Sync is the integration layer of the SucceedLEARN Security Behaviour & Culture Suite, enabling organisations to connect their existing identity providers, HR systems, Learning Management Systems (LMS), and productivity platforms with ease. By automating user provisioning, authentication, and data synchronisation, S-Sync helps organisations reduce administrative effort, improve data accuracy, and deliver a connected security awareness experience.',
 						'akaza-adventure'
 					);
 					?>
-				</p>
-
-				<p>
-					<?php
-					esc_html_e(
-						'S-Sync is the enterprise integration layer of the SucceedLEARN Security Behaviour & Culture Suite (SBCS), helping organisations connect security awareness with their existing identity, HR, learning and workplace technology ecosystem.',
-						'akaza-adventure'
-					);
-					?>
-				</p>
-
-				<p>
-					<?php
-					esc_html_e(
-						'Through capabilities such as Single Sign-On, automated user provisioning, HR-system synchronisation, LMS compatibility and API-based connectivity, S-Sync helps reduce manual administration and create a more connected learner experience.',
-						'akaza-adventure'
-					);
-					?>
-				</p>
-
-				<p>
-					<strong>
-						<?php
-						esc_html_e(
-							'Connect your systems. Automate administration. Scale security awareness.',
-							'akaza-adventure'
-						);
-						?>
-					</strong>
 				</p>
 
 				<div class="sl-hero-actions sl-s-sync-hero__actions">
@@ -89,9 +60,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 
 			<div class="sl-s-sync-hero__media">
-				<div class="sl-s-sync-hero__image-placeholder">
-					<span><?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?></span>
-				</div>
+				<img
+					class="sl-s-sync-hero__image"
+					src="<?php echo esc_url( akaza_upload_url( '2026/09/Enterpise-Integrations-for-Security-Awareness.webp' ) ); ?>"
+					alt="<?php esc_attr_e( 'Enterprise Integrations for Security Awareness', 'akaza-adventure' ); ?>"
+					width="800"
+					height="600"
+					loading="eager"
+					decoding="async"
+				>
 			</div>
 
 		</div>

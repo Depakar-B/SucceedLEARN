@@ -1,6 +1,6 @@
 <?php
 /**
- * S-Sync — Why Security Awareness Integrations Matter.
+ * S-Sync — Why Integrations Matter.
  *
  * @package Akaza_Adventure
  */
@@ -19,19 +19,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="sl-s-sync-why__grid">
 
 			<div class="sl-s-sync-why__media">
-				<div class="sl-s-sync-why__image-placeholder">
-					<span><?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?></span>
-				</div>
+				<img
+					class="sl-s-sync-why__image"
+					src="<?php echo esc_url( akaza_upload_url( '2026/09/Why-Security-Awareness-Integrations-Matter.webp' ) ); ?>"
+					alt="<?php esc_attr_e( 'Why Security Awareness Integrations Matter', 'akaza-adventure' ); ?>"
+					width="800"
+					height="600"
+					loading="lazy"
+					decoding="async"
+				>
 			</div>
 
 			<div class="sl-s-sync-why__content">
 
 				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'Connected Operations', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Why Integrations Matter', 'akaza-adventure' ); ?>
 				</span>
 
 				<h2 id="sl-s-sync-why-title">
-					<?php esc_html_e( 'Why Security Awareness', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Why', 'akaza-adventure' ); ?>
 					<span><?php esc_html_e( 'Integrations Matter', 'akaza-adventure' ); ?></span>
 				</h2>
 
@@ -48,7 +54,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<p>
 						<?php
 						esc_html_e(
-							'S-Sync helps organisations connect SucceedLEARN with existing enterprise systems so that identity, learner information and security-awareness administration can work more efficiently together.',
+							'S-Sync simplifies these processes by enabling seamless connectivity between the SucceedLEARN platform and your existing technology ecosystem. Automated synchronisation ensures that user information remains up to date, new employees are onboarded efficiently, and learners can access training using their existing organisational credentials.',
 							'akaza-adventure'
 						);
 						?>
@@ -57,7 +63,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<p>
 						<?php
 						esc_html_e(
-							'The result is less time spent managing disconnected systems and more time focused on the security-awareness programme itself.',
+							'By reducing manual administration and improving operational efficiency, organisations can focus on strengthening security awareness rather than managing technology.',
 							'akaza-adventure'
 						);
 						?>

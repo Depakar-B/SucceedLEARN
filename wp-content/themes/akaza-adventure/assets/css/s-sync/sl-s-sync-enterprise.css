@@ -15,6 +15,18 @@
 	margin-bottom: 0;
 }
 
+.sl-s-sync-enterprise__copy {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	margin-top: 22px;
+	max-width: 900px;
+}
+
+.sl-s-sync-enterprise__copy p {
+	margin: 0;
+}
+
 /* Section subtitle under h2 — same scale as SAP / S-Metrics. */
 body.slf-body main.sl-s-sync-page .sl-s-sync-enterprise__subtitle,
 body.slf-body #main-content.sl-s-sync-page .sl-s-sync-enterprise__subtitle,
