@@ -51,9 +51,9 @@ $learning_elements = array(
 			</h2>
 		</div>
 
-		<h3 class="sl-ukce-designed__subhead">
-			<?php esc_html_e( 'Learning elements', 'akaza-adventure' ); ?>
-		</h3>
+		<div class="sl-ukce-designed__detail sl-ukce-designed__detail--label">
+			<h3><?php esc_html_e( 'Learning elements', 'akaza-adventure' ); ?></h3>
+		</div>
 
 		<div class="sl-ukce-designed__grid">
 			<?php foreach ( $learning_elements as $element ) : ?>
