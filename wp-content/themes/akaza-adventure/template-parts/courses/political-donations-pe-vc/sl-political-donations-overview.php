@@ -47,22 +47,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				</div>
 
-				<div class="sl-political-donations-overview__emphasis">
-
-					<span class="sl-home-sub-heading">
-						<?php esc_html_e( 'Practical compliance', 'akaza-adventure' ); ?>
-					</span>
-
-					<h3 class="sl-panel-title">
-						<?php esc_html_e( 'Personal activity can still create organisational risk.', 'akaza-adventure' ); ?>
-					</h3>
-
-					<p>
-						<?php esc_html_e( 'A professional title, organisation name, company facility or business relationship can change how political activity is perceived.', 'akaza-adventure' ); ?>
-					</p>
-
-				</div>
-
 			</div>
 
 			<div class="sl-political-donations-overview__media">
