@@ -11,7 +11,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $modules = array(
 	array(
-		'number'  => '01',
 		'title'   => __( 'Account Security', 'akaza-adventure' ),
 		'tagline' => __( 'Protect Accounts and Strengthen Access Security', 'akaza-adventure' ),
 		'text'    => __( 'Employees learn why account security matters and how secure authentication practices help reduce the risk of unauthorised access.', 'akaza-adventure' ),
@@ -19,7 +18,6 @@ $modules = array(
 		'cta'     => __( 'Explore Account Security Training', 'akaza-adventure' ),
 	),
 	array(
-		'number'  => '02',
 		'title'   => __( 'Data Classification', 'akaza-adventure' ),
 		'tagline' => __( 'Handle Sensitive Information Appropriately', 'akaza-adventure' ),
 		'text'    => __( 'Help employees understand how information is classified and why different types of data require different levels of protection.', 'akaza-adventure' ),
@@ -27,7 +25,6 @@ $modules = array(
 		'cta'     => __( 'Explore Data Classification Training', 'akaza-adventure' ),
 	),
 	array(
-		'number'  => '03',
 		'title'   => __( 'Malware', 'akaza-adventure' ),
 		'tagline' => __( 'Recognise Malicious Activity Before It Causes Harm', 'akaza-adventure' ),
 		'text'    => __( 'Employees learn how malware can enter organisational environments and the behaviours that can reduce exposure.', 'akaza-adventure' ),
@@ -35,7 +32,6 @@ $modules = array(
 		'cta'     => __( 'Explore Malware Awareness Training', 'akaza-adventure' ),
 	),
 	array(
-		'number'  => '04',
 		'title'   => __( 'Physical Security', 'akaza-adventure' ),
 		'tagline' => __( 'Protect Information Beyond Digital Systems', 'akaza-adventure' ),
 		'text'    => __( 'Information security also depends on controlling physical access to devices, documents, workspaces and facilities.', 'akaza-adventure' ),
@@ -43,7 +39,6 @@ $modules = array(
 		'cta'     => __( 'Explore Physical Security Training', 'akaza-adventure' ),
 	),
 	array(
-		'number'  => '05',
 		'title'   => __( 'Remote Work Security', 'akaza-adventure' ),
 		'tagline' => __( 'Stay Security-Aware Outside the Office', 'akaza-adventure' ),
 		'text'    => __( 'Employees learn safer behaviours for accessing organisational systems and information from remote and hybrid working environments.', 'akaza-adventure' ),
@@ -51,7 +46,6 @@ $modules = array(
 		'cta'     => __( 'Explore Remote Work Security Training', 'akaza-adventure' ),
 	),
 	array(
-		'number'  => '06',
 		'title'   => __( 'Social Engineering', 'akaza-adventure' ),
 		'tagline' => __( 'Recognise When Attackers Target People', 'akaza-adventure' ),
 		'text'    => __( 'Help employees identify manipulation, urgency, impersonation and phishing techniques used to influence employee behaviour.', 'akaza-adventure' ),
@@ -59,7 +53,6 @@ $modules = array(
 		'cta'     => __( 'Explore Social Engineering Training', 'akaza-adventure' ),
 	),
 	array(
-		'number'  => '07',
 		'title'   => __( 'Vendor & Third-Party Risk Management', 'akaza-adventure' ),
 		'tagline' => __( 'Understand Security Risks Beyond Your Organisation', 'akaza-adventure' ),
 		'text'    => __( 'Employees learn why third-party relationships can introduce risk and how approved processes, secure information sharing and appropriate escalation help protect organisational information.', 'akaza-adventure' ),
@@ -67,7 +60,6 @@ $modules = array(
 		'cta'     => __( 'Explore Third-Party Risk Training', 'akaza-adventure' ),
 	),
 	array(
-		'number'  => '08',
 		'title'   => __( 'Incident Reporting', 'akaza-adventure' ),
 		'tagline' => __( 'Recognise It. Report It. Respond Faster.', 'akaza-adventure' ),
 		'text'    => __( 'Employees learn how to identify suspicious activity and why timely reporting through approved organisational channels matters.', 'akaza-adventure' ),
@@ -75,7 +67,6 @@ $modules = array(
 		'cta'     => __( 'Explore Incident Reporting Training', 'akaza-adventure' ),
 	),
 	array(
-		'number'  => '09',
 		'title'   => __( 'Insider Threat', 'akaza-adventure' ),
 		'tagline' => __( 'Recognise Security Risks From Within', 'akaza-adventure' ),
 		'text'    => __( 'Help employees understand how malicious actions, negligence and compromised accounts can create insider risk.', 'akaza-adventure' ),
@@ -110,10 +101,6 @@ $modules = array(
 		<div class="sl-soc2-modules__grid">
 			<?php foreach ( $modules as $module ) : ?>
 				<article class="sl-soc2-modules__card">
-					<div class="sl-soc2-modules__number">
-						<?php echo esc_html( $module['number'] ); ?>
-					</div>
-
 					<div class="sl-soc2-modules__content">
 						<h3 class="sl-panel-title">
 							<?php echo esc_html( $module['title'] ); ?>

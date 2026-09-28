@@ -17,41 +17,28 @@
 	margin: 0;
 }
 
-.sl-soc2-emerging__card {
-	max-width: 920px;
-	padding: 34px 32px;
-	border: 1px solid rgba(20, 114, 186, 0.28);
-	border-top: 4px solid var(--sl-page-primary, #1472ba);
-	border-radius: 18px;
-	background: rgba(20, 114, 186, 0.06);
-	box-shadow: 0 10px 30px rgba(22, 35, 78, 0.05);
+.sl-soc2-emerging__body {
+	max-width: 820px;
 }
 
-.sl-soc2-emerging__badge {
-	display: inline-flex;
-	align-items: center;
-	margin-bottom: 14px;
-	padding: 5px 10px;
-	border-radius: 6px;
-	background: rgba(20, 114, 186, 0.14);
-	color: var(--sl-page-primary-dark, #283384);
-	font-size: 13px;
+.sl-soc2-emerging__body .sl-soc2-emerging__label {
+	margin: 0 0 8px;
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 14px;
 	font-weight: 700;
-	letter-spacing: 0.02em;
 }
 
-.sl-soc2-emerging__card .sl-panel-title {
+.sl-soc2-emerging__body .sl-panel-title {
 	margin: 0 0 14px;
 	color: var(--sl-page-navy, #16234e);
 }
 
-.sl-soc2-emerging__card p {
-	max-width: 820px;
+.sl-soc2-emerging__body p {
 	margin: 0 0 14px;
 	color: var(--sl-page-text, #16234e);
 }
 
-.sl-soc2-emerging__card p:last-of-type {
+.sl-soc2-emerging__body p:last-of-type {
 	margin-bottom: 22px;
 }
 
@@ -62,10 +49,5 @@
 
 	.sl-soc2-emerging__heading {
 		margin-bottom: 24px;
-	}
-
-	.sl-soc2-emerging__card {
-		padding: 26px 20px;
-		border-radius: 14px;
 	}
 }

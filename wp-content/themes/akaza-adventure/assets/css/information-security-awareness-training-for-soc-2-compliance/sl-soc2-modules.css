@@ -55,21 +55,6 @@ body.slf-body #main-content.sl-soc2-page .sl-soc2-modules__subtitle,
 	box-shadow: 0 14px 32px rgba(22, 35, 78, 0.1);
 }
 
-.sl-soc2-modules__number {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: 38px;
-	height: 38px;
-	margin-bottom: 16px;
-	border-radius: 9px;
-	background: rgba(109, 195, 235, 0.22);
-	color: var(--sl-page-primary, #1472ba);
-	font-size: 14px;
-	font-weight: 700;
-	line-height: 1;
-}
-
 .sl-soc2-modules__content {
 	display: flex;
 	flex: 1;

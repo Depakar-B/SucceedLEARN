@@ -11,7 +11,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <main id="main-content" class="sl-training-page sl-soc2-page">
 	<?php get_template_part( 'template-parts/information-security-awareness-training-for-soc-2-compliance/sl-soc2-hero' ); ?>
-	<?php get_template_part( 'template-parts/information-security-awareness-training-for-soc-2-compliance/sl-soc2-why' ); ?>
 	<?php get_template_part( 'template-parts/information-security-awareness-training-for-soc-2-compliance/sl-soc2-learn' ); ?>
 	<?php get_template_part( 'template-parts/information-security-awareness-training-for-soc-2-compliance/sl-soc2-modules' ); ?>
 	<?php get_template_part( 'template-parts/information-security-awareness-training-for-soc-2-compliance/sl-soc2-emerging' ); ?>
