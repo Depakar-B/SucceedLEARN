@@ -37,7 +37,6 @@ function akaza_enqueue_s_play_assets() {
 		'sl-s-play-employees',
 		'sl-s-play-teams',
 		'sl-s-play-suite',
-		'sl-s-play-experience',
 		'sl-s-play-contact',
 	);
 
