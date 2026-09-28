@@ -19,10 +19,6 @@ $reasons = array(
 		'text'  => __( 'Accelerate onboarding and training assignments through automated provisioning and integrated workflows.', 'akaza-adventure' ),
 	),
 	array(
-		'title' => __( 'Improved Learner Experience', 'akaza-adventure' ),
-		'text'  => __( 'Allow employees to access training using familiar organisational credentials through Single Sign-On.', 'akaza-adventure' ),
-	),
-	array(
 		'title' => __( 'Accurate Data Synchronisation', 'akaza-adventure' ),
 		'text'  => __( 'Ensure learner information remains consistent across organisational systems, reducing errors caused by manual updates.', 'akaza-adventure' ),
 	),
@@ -50,7 +46,7 @@ $reasons = array(
 			</span>
 
 			<h2 id="sl-s-sync-choose-title">
-				<?php esc_html_e( 'Benefits of', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'Why Organisations Choose', 'akaza-adventure' ); ?>
 				<span><?php esc_html_e( 'S-Sync', 'akaza-adventure' ); ?></span>
 			</h2>
 
