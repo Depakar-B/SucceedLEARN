@@ -16,7 +16,6 @@ $hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/PEVC-Hero-sec
 $hero_values = array(
 	__( 'Reduce risk', 'akaza-adventure' ),
 	__( 'Build trust', 'akaza-adventure' ),
-	__( 'Create lasting value', 'akaza-adventure' ),
 );
 ?>
 <section class="sl-pevc-hero" aria-labelledby="sl-pevc-hero-title">
@@ -31,7 +30,7 @@ $hero_values = array(
 		<div class="sl-pevc-hero__content">
 
 			<span class="sl-home-sub-heading">
-				<?php esc_html_e( 'Private Equity & Venture Capital', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'Private Equity and Venture Capital | Compliance eLearning', 'akaza-adventure' ); ?>
 			</span>
 
 			<h1 id="sl-pevc-hero-title">
@@ -52,7 +51,7 @@ $hero_values = array(
 				<p>
 					<?php
 					esc_html_e(
-						'Practical compliance eLearning designed around the realities of UK Private Equity and Venture Capital firms.',
+						'Practical compliance eLearning designed around the realities of Private Equity and Venture Capital firms.',
 						'akaza-adventure'
 					);
 					?>
@@ -62,9 +61,6 @@ $hero_values = array(
 			<div class="sl-pevc-hero__actions sl-training-actions">
 				<a class="sl-hero-btn sl-hero-btn-primary" href="#contact">
 					<?php esc_html_e( 'Request a Demo', 'akaza-adventure' ); ?>
-				</a>
-				<a class="sl-hero-btn sl-hero-btn-secondary" href="#courses">
-					<?php esc_html_e( 'Explore the PE/VC Suite', 'akaza-adventure' ); ?>
 				</a>
 			</div>
 
