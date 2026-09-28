@@ -21,13 +21,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<div class="sl-smcr-course-cta__content">
 
-				<span class="sl-home-sub-heading">
+				<span class="sl-smcr-course-cta__eyebrow">
 					<?php esc_html_e( 'SucceedLEARN SMCR Training', 'akaza-adventure' ); ?>
 				</span>
 
 				<h2 id="sl-smcr-course-cta-title">
-					<?php esc_html_e( 'Buy SMCR Training for Your UK Private Equity or Venture Capital', 'akaza-adventure' ); ?>
-					<span><?php esc_html_e( 'Team', 'akaza-adventure' ); ?></span>
+					<?php esc_html_e( 'Buy SMCR Training for Your UK Private Equity or Venture Capital Team', 'akaza-adventure' ); ?>
 				</h2>
 
 				<p>
@@ -39,16 +38,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="sl-smcr-course-cta__actions">
 
 				<a
-					class="sl-smcr-course-cta__button sl-smcr-course-cta__button--primary"
-					href="#courses"
-				>
-					<?php esc_html_e( 'Explore the Course', 'akaza-adventure' ); ?>
-					<span aria-hidden="true">→</span>
-				</a>
-
-				<a
-					class="sl-smcr-course-cta__button sl-smcr-course-cta__button--secondary"
-					href="#enquiry"
+					class="sl-content-btn sl-content-btn-primary"
+					href="#contact"
 				>
 					<?php esc_html_e( 'Buy the Course', 'akaza-adventure' ); ?>
 					<span aria-hidden="true">→</span>

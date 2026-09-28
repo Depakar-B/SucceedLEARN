@@ -32,6 +32,17 @@ $conduct_rule_scenarios = array(
 >
 	<div class="container">
 
+		<div class="sl-smcr-conduct-rules__header">
+			<span class="sl-home-sub-heading">
+				<?php esc_html_e( 'FCA Conduct Rules Training', 'akaza-adventure' ); ?>
+			</span>
+
+			<h2 id="sl-smcr-conduct-rules-title">
+				<?php esc_html_e( 'How Do FCA Conduct Rules Apply to PE and VC', 'akaza-adventure' ); ?>
+				<span><?php esc_html_e( 'Employees?', 'akaza-adventure' ); ?></span>
+			</h2>
+		</div>
+
 		<div class="sl-smcr-conduct-rules__grid">
 
 			<div class="sl-smcr-conduct-rules__media">
@@ -46,15 +57,6 @@ $conduct_rule_scenarios = array(
 			</div>
 
 			<div class="sl-smcr-conduct-rules__content">
-
-				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'FCA Conduct Rules Training', 'akaza-adventure' ); ?>
-				</span>
-
-				<h2 id="sl-smcr-conduct-rules-title">
-					<?php esc_html_e( 'How Do FCA Conduct Rules Apply to PE and VC', 'akaza-adventure' ); ?>
-					<span><?php esc_html_e( 'Employees?', 'akaza-adventure' ); ?></span>
-				</h2>
 
 				<p class="sl-smcr-conduct-rules__intro">
 					<?php esc_html_e(

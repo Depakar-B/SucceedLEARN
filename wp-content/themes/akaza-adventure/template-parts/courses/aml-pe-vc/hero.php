@@ -71,7 +71,7 @@ $hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/AML-Hero-Sect
 					<span class="sl-aml-pe-vc-hero__cta-label">
 						<?php esc_html_e( 'Individual', 'akaza-adventure' ); ?>
 					</span>
-					<a class="sl-hero-btn sl-hero-btn-primary" href="#buy">
+					<a class="sl-hero-btn sl-hero-btn-primary" href="#contact">
 						<?php esc_html_e( 'Buy Now @ $20', 'akaza-adventure' ); ?>
 						<span aria-hidden="true">→</span>
 					</a>

@@ -24,8 +24,8 @@ $cpd_logo = 'https://succeedlearn.com/wp-content/uploads/2026/09/CPD.webp';
 					class="sl-whistleblowing-cpd__logo"
 					src="<?php echo esc_url( $cpd_logo ); ?>"
 					alt="<?php esc_attr_e( 'The CPD Certification Service', 'akaza-adventure' ); ?>"
-					width="140"
-					height="140"
+					width="170"
+					height="170"
 					loading="lazy"
 					decoding="async"
 				>

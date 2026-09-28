@@ -23,6 +23,8 @@
    ========================================================= */
 
 .sl-gifts-entertainment-learning-outcomes__intro {
+	display: flex;
+	flex-direction: column;
 	min-width: 0;
 }
 
@@ -32,12 +34,13 @@
 
 
 /* =========================================================
-   Image — sticky while scrolling outcomes list
+   Image — static, vertically centred beside the outcomes list
    ========================================================= */
 
 .sl-gifts-entertainment-learning-outcomes__media {
-	position: sticky;
-	top: calc(var(--slf-header-clearance, 76px) + 24px);
+	display: flex;
+	flex: 1;
+	align-items: center;
 	min-width: 0;
 }
 
@@ -155,8 +158,7 @@
 	}
 
 	.sl-gifts-entertainment-learning-outcomes__media {
-		position: static;
-		top: auto;
+		display: block;
 	}
 
 	.sl-gifts-entertainment-learning-outcomes__image {

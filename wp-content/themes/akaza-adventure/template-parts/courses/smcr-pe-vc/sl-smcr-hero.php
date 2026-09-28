@@ -62,7 +62,7 @@ $hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/SMCR_Hero-sec
 					</span>
 					<a
 						class="sl-hero-btn sl-hero-btn-primary"
-						href="#individuals"
+						href="#contact"
 					>
 						<?php esc_html_e( 'Buy Now @ $20', 'akaza-adventure' ); ?>
 						<span aria-hidden="true">→</span>

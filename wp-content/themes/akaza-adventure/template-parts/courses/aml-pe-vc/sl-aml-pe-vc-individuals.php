@@ -94,7 +94,7 @@ $features = array(
 				</figure>
 
 				<div class="sl-aml-pe-vc-individuals__actions">
-					<a class="sl-content-btn sl-content-btn-primary" href="#buy">
+					<a class="sl-content-btn sl-content-btn-primary" href="#contact">
 						<?php esc_html_e( 'Buy Now @ $20', 'akaza-adventure' ); ?>
 					</a>
 					<a class="sl-content-btn sl-content-btn-secondary" href="#contact">

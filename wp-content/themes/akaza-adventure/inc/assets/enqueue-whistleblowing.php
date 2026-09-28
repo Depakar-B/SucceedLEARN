@@ -37,7 +37,6 @@ function akaza_enqueue_whistleblowing_assets() {
 		'sl-whistleblowing-misconduct',
 		'sl-whistleblowing-course',
 		'sl-whistleblowing-regulatory',
-		'sl-whistleblowing-outcomes-section',
 		'sl-whistleblowing-cta',
 	);
 

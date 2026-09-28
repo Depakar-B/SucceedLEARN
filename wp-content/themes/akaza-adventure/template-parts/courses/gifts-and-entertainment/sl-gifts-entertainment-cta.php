@@ -61,7 +61,7 @@ defined( 'ABSPATH' ) || exit;
 
 				<a
 					class="sl-content-btn sl-content-btn-secondary"
-					href="#"
+					href="#contact"
 				>
 					<?php esc_html_e( 'Buy the Course', 'akaza-adventure' ); ?>
 				</a>

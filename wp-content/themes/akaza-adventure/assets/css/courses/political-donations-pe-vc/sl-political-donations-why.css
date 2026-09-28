@@ -5,7 +5,7 @@
  */
 
  .sl-political-donations-why {
-	background: var(--sl-page-white, #ffffff);
+	background: var(--sl-page-bg, #f5f5f5);
 	padding: 88px 0;
 }
 

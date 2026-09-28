@@ -7,11 +7,25 @@
 	background: #ffffff;
 }
 
+.sl-smcr-conduct-rules__header {
+	margin-bottom: 40px;
+	text-align: left;
+}
+
+.sl-smcr-conduct-rules__header h2 {
+	margin-top: 14px;
+	margin-bottom: 0;
+}
+
+.sl-smcr-conduct-rules__header h2 span {
+	color: var(--sl-heading-accent, #1472ba);
+}
+
 .sl-smcr-conduct-rules__grid {
 	display: grid;
 	grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
 	gap: 72px;
-	align-items: start;
+	align-items: center;
 }
 
 /* ---------------------------------------------------------
@@ -19,9 +33,7 @@
    --------------------------------------------------------- */
 
 .sl-smcr-conduct-rules__media {
-	position: sticky;
-	top: calc(var(--slf-header-clearance, 110px) + 24px);
-	align-self: start;
+	min-width: 0;
 }
 
 .sl-smcr-conduct-rules__image {
@@ -45,16 +57,6 @@
 
 .sl-smcr-conduct-rules__content {
 	min-width: 0;
-	padding-top: 8px;
-}
-
-.sl-smcr-conduct-rules__content h2 {
-	margin-top: 14px;
-	margin-bottom: 22px;
-}
-
-.sl-smcr-conduct-rules__content h2 span {
-	color: var(--sl-heading-accent, #1472ba);
 }
 
 .sl-smcr-conduct-rules__intro {
@@ -104,10 +106,6 @@
 	.sl-smcr-conduct-rules__cards {
 		grid-template-columns: 1fr;
 	}
-
-	.sl-smcr-conduct-rules__media {
-		position: static;
-	}
 }
 
 /* ---------------------------------------------------------
@@ -128,12 +126,8 @@
 		order: -1;
 	}
 
-	.sl-smcr-conduct-rules__content {
-		padding-top: 0;
-	}
-
-	.sl-smcr-conduct-rules__content h2 {
-		margin-bottom: 20px;
+	.sl-smcr-conduct-rules__header {
+		margin-bottom: 28px;
 	}
 
 	.sl-smcr-conduct-rules__cards {

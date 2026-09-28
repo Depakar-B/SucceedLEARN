@@ -11,7 +11,7 @@
 
 .sl-smcr-cpd__main {
 	display: grid;
-	grid-template-columns: 150px minmax(0, 1fr);
+	grid-template-columns: 180px minmax(0, 1fr);
 	gap: 42px;
 	align-items: center;
 	padding: 42px 48px;
@@ -25,8 +25,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 140px;
-	height: 140px;
+	width: 170px;
+	height: 170px;
 }
 
 .sl-smcr-cpd__logo {
@@ -102,7 +102,7 @@
 	}
 
 	.sl-smcr-cpd__mark {
-		width: 105px;
-		height: 105px;
+		width: 125px;
+		height: 125px;
 	}
 }
