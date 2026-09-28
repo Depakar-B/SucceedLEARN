@@ -16,29 +16,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 	aria-labelledby="sl-political-donations-overview-title"
 >
 	<div class="container">
+		<div class="sl-political-donations-overview__header">
+			<span class="sl-home-sub-heading">
+				<?php esc_html_e( 'Course overview', 'akaza-adventure' ); ?>
+			</span>
+
+			<h2 id="sl-political-donations-overview-title">
+				<?php esc_html_e( 'What Is Political Donations and Political Contributions', 'akaza-adventure' ); ?>
+				<span><?php esc_html_e( 'Compliance Training?', 'akaza-adventure' ); ?></span>
+			</h2>
+		</div>
+
 		<div class="sl-political-donations-overview__grid">
 
-			<div class="sl-political-donations-overview__media">
-				<div class="sl-political-donations-overview__image">
-					<img
-						src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/What-is-Political-Donations_Image.webp' ); ?>"
-						alt="<?php esc_attr_e( 'What is political donations and political contributions compliance training', 'akaza-adventure' ); ?>"
-						loading="lazy"
-						decoding="async"
-					>
-				</div>
-			</div>
-
 			<div class="sl-political-donations-overview__content">
-
-				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'Course overview', 'akaza-adventure' ); ?>
-				</span>
-
-				<h2 id="sl-political-donations-overview-title">
-					<?php esc_html_e( 'What Is Political Donations and Political Contributions', 'akaza-adventure' ); ?>
-					<span><?php esc_html_e( 'Compliance Training?', 'akaza-adventure' ); ?></span>
-				</h2>
 
 				<div class="sl-political-donations-overview__copy">
 
@@ -72,6 +63,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				</div>
 
+			</div>
+
+			<div class="sl-political-donations-overview__media">
+				<div class="sl-political-donations-overview__image">
+					<img
+						src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/What-is-Political-Donations_Image.webp' ); ?>"
+						alt="<?php esc_attr_e( 'What is political donations and political contributions compliance training', 'akaza-adventure' ); ?>"
+						loading="lazy"
+						decoding="async"
+					>
+				</div>
 			</div>
 
 		</div>
