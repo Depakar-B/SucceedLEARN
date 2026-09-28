@@ -40,7 +40,8 @@
 }
 
 .sl-whistleblowing-overview__media {
-	margin: 48px 0 0;
+	align-self: center;
+	margin: 0;
 	overflow: hidden;
 	border: 1px solid rgba(22, 35, 78, 0.10);
 	border-radius: 14px;

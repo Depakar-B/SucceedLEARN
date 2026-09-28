@@ -2,8 +2,7 @@
 /**
  * SMCR Training — Course Enquiry / Contact.
  *
- * Uses the global `.sl-contact` layout and adds
- * course-specific information cards on the left.
+ * Uses the global `.sl-contact` layout.
  *
  * @package Akaza_Adventure
  */
@@ -46,57 +45,11 @@ $form_shortcode = sprintf(
 					</p>
 				</div>
 
-				<div class="sl-smcr-contact__courses">
-
-					<article class="sl-smcr-contact__course-card">
-						<span class="sl-smcr-contact__course-label">
-							<?php esc_html_e( 'Employees Course', 'akaza-adventure' ); ?>
-						</span>
-
-						<h3 class="sl-panel-title">
-							<?php esc_html_e( 'Employees Course', 'akaza-adventure' ); ?>
-						</h3>
-
-						<p>
-							<?php esc_html_e( 'Conduct Rules, PE/VC scenarios, attestation and escalation.', 'akaza-adventure' ); ?>
-						</p>
-					</article>
-
-					<article class="sl-smcr-contact__course-card">
-						<span class="sl-smcr-contact__course-label">
-							<?php esc_html_e( 'Senior Managers Course', 'akaza-adventure' ); ?>
-						</span>
-
-						<h3 class="sl-panel-title">
-							<?php esc_html_e( 'Senior Managers Course', 'akaza-adventure' ); ?>
-						</h3>
-
-						<p>
-							<?php esc_html_e( 'Reasonable steps, responsibility, delegation and oversight.', 'akaza-adventure' ); ?>
-						</p>
-					</article>
-
-					<article class="sl-smcr-contact__course-card">
-						<span class="sl-smcr-contact__course-label">
-							<?php esc_html_e( 'Combined Learning', 'akaza-adventure' ); ?>
-						</span>
-
-						<h3 class="sl-panel-title">
-							<?php esc_html_e( 'Both Courses', 'akaza-adventure' ); ?>
-						</h3>
-
-						<p>
-							<?php esc_html_e( 'Build a connected learning pathway across different levels of responsibility.', 'akaza-adventure' ); ?>
-						</p>
-					</article>
-
-				</div>
-
 				<div class="sl-contact__actions">
 
 					<a
 						class="sl-contact-btn sl-contact-btn--email"
-						href="mailto:info@succeedtech.com"
+						href="mailto:connect@succeedtech.com"
 					>
 						<span class="sl-contact-btn__stack">
 							<span class="sl-contact-btn__label">
@@ -104,7 +57,7 @@ $form_shortcode = sprintf(
 							</span>
 
 							<span class="sl-contact-btn__value">
-								info@succeedtech.com
+								connect@succeedtech.com
 							</span>
 						</span>
 					</a>
