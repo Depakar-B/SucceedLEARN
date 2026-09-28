@@ -61,4 +61,10 @@
 		column-gap: 20px;
 		row-gap: 12px;
 	}
+
+	/* Fills column by column; set --sl-list-rows to ceil(item count / 2). */
+	.sl-list--2up-vertical {
+		grid-auto-flow: column;
+		grid-template-rows: repeat(var(--sl-list-rows, 4), auto);
+	}
 }

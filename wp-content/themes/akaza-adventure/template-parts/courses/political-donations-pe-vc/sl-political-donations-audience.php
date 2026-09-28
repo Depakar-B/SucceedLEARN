@@ -11,12 +11,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $audience_items = array(
 	__( 'Private equity investment teams', 'akaza-adventure' ),
-	__( 'Venture capital professionals', 'akaza-adventure' ),
 	__( 'Deal teams', 'akaza-adventure' ),
-	__( 'Senior managers', 'akaza-adventure' ),
 	__( 'Portfolio-facing professionals', 'akaza-adventure' ),
-	__( 'Compliance and Risk teams', 'akaza-adventure' ),
 	__( 'Legal and Governance teams', 'akaza-adventure' ),
+	__( 'Venture capital professionals', 'akaza-adventure' ),
+	__( 'Senior managers', 'akaza-adventure' ),
+	__( 'Compliance and Risk teams', 'akaza-adventure' ),
 );
 ?>
 
@@ -44,7 +44,10 @@ $audience_items = array(
 
 		</div>
 
-		<ul class="sl-list sl-list--2up">
+		<ul
+			class="sl-list sl-list--2up sl-list--2up-vertical"
+			style="--sl-list-rows: <?php echo (int) ceil( count( $audience_items ) / 2 ); ?>;"
+		>
 			<?php foreach ( $audience_items as $index => $item ) : ?>
 				<li class="sl-list-item">
 					<span class="sl-list-item__label" aria-hidden="true">
