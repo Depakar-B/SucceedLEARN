@@ -113,10 +113,9 @@
 
 .sl-ukce-controls__note {
 	margin-top: 30px;
-	padding: 24px 28px;
-	border-left: 5px solid var(--sl-page-primary, #1472ba);
-	border-radius: 0 14px 14px 0;
-	background: rgba(109, 195, 235, 0.16);
+	padding: 0;
+	border: 0;
+	background: none;
 }
 
 .sl-ukce-controls__note strong {

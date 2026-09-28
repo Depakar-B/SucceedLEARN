@@ -44,21 +44,16 @@ $learn_items = array(
 				<?php esc_html_e( 'Through the training, employees can build practical awareness around security behaviours relevant to the Cyber Essentials environment.', 'akaza-adventure' ); ?>
 			</p>
 
-			<p>
-				<?php esc_html_e( 'Learners will be better equipped to:', 'akaza-adventure' ); ?>
+			<p class="sl-ukce-learn__lead">
+				<?php esc_html_e( 'Learners will be equipped to:', 'akaza-adventure' ); ?>
 			</p>
 		</div>
 
-		<div class="sl-ukce-learn__grid">
-			<?php foreach ( $learn_items as $index => $item ) : ?>
-				<article class="sl-ukce-learn__card">
-					<span class="sl-ukce-learn__number" aria-hidden="true">
-						<?php echo esc_html( str_pad( (string) ( $index + 1 ), 2, '0', STR_PAD_LEFT ) ); ?>
-					</span>
-					<p><?php echo esc_html( $item ); ?></p>
-				</article>
+		<ul class="sl-ukce-learn__list">
+			<?php foreach ( $learn_items as $item ) : ?>
+				<li><?php echo esc_html( $item ); ?></li>
 			<?php endforeach; ?>
-		</div>
+		</ul>
 
 		<div class="sl-ukce-learn__note">
 			<p>
