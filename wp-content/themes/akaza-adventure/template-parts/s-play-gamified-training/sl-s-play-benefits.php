@@ -30,10 +30,6 @@ $participation_items = array(
 		'title' => __( 'Short, Focused Experiences', 'akaza-adventure' ),
 		'text'  => __( 'Individual activities provide another way to reinforce awareness without requiring employees to repeatedly complete lengthy courses.', 'akaza-adventure' ),
 	),
-	array(
-		'title' => __( 'Repeated Engagement', 'akaza-adventure' ),
-		'text'  => __( 'Games can be incorporated into ongoing awareness campaigns, creating additional security touchpoints throughout the year.', 'akaza-adventure' ),
-	),
 );
 ?>
 
