@@ -1,6 +1,6 @@
 <?php
 /**
- * S-Play — Interactive Security Awareness Games.
+ * S-Play — Security Awareness Games That Put Knowledge Into Practice.
  *
  * @package Akaza_Adventure
  */
@@ -43,6 +43,17 @@ $games = array(
 		'learning_style' => __( 'Knowledge Challenge', 'akaza-adventure' ),
 		'focus'          => __( 'Recall · Terminology · Knowledge Reinforcement', 'akaza-adventure' ),
 	),
+	array(
+		'title'          => __( 'Back in Time', 'akaza-adventure' ),
+		'tagline'        => __( 'Race Against Time to Protect the Future', 'akaza-adventure' ),
+		'image'          => '2026/09/Back-in-Time-Thumbnail.webp',
+		'paragraphs'     => array(
+			__( 'A fast-paced security awareness game where employees travel back in time and answer questions across privacy, security and compliance topics.', 'akaza-adventure' ),
+			__( 'Learners must make the right choices as they progress, reinforcing key concepts and helping build stronger security awareness through quick, interactive challenges.', 'akaza-adventure' ),
+		),
+		'learning_style' => __( 'Fast-Paced Knowledge Challenge', 'akaza-adventure' ),
+		'focus'          => __( 'Privacy · Compliance · Security Awareness · Knowledge Reinforcement', 'akaza-adventure' ),
+	),
 );
 ?>
 
@@ -59,8 +70,8 @@ $games = array(
 			</span>
 
 			<h2 id="sl-s-play-games-title">
-				<?php esc_html_e( 'Interactive Security', 'akaza-adventure' ); ?>
-				<span><?php esc_html_e( 'Awareness Games', 'akaza-adventure' ); ?></span>
+				<?php esc_html_e( 'Security Awareness Games That Put', 'akaza-adventure' ); ?>
+				<span><?php esc_html_e( 'Knowledge Into Practice', 'akaza-adventure' ); ?></span>
 			</h2>
 
 			<h3 class="sl-s-play-games__subtitle">

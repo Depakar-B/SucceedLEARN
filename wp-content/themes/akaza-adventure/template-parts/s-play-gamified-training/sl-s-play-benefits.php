@@ -71,12 +71,9 @@ $participation_items = array(
 
 		<div class="sl-s-play-benefits__cards">
 
-			<?php foreach ( $participation_items as $index => $item ) : ?>
+			<?php foreach ( $participation_items as $item ) : ?>
 
 				<article class="sl-s-play-benefits__card">
-					<span class="sl-s-play-benefits__number" aria-hidden="true">
-						<?php echo esc_html( str_pad( (string) ( $index + 1 ), 2, '0', STR_PAD_LEFT ) ); ?>
-					</span>
 					<h3 class="sl-panel-title">
 						<?php echo esc_html( $item['title'] ); ?>
 					</h3>

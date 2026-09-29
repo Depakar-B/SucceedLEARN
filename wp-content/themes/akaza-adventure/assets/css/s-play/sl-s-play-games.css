@@ -118,6 +118,16 @@ body.slf-body #main-content.sl-s-play-page .sl-s-play-games__subtitle,
 	margin-top: 8px;
 }
 
+/* Lone last card on a new row (e.g. 4th of 3-col) — center it. */
+@media (min-width: 992px) {
+	.sl-s-play-games__grid > .sl-s-play-games__card:last-child:nth-child(3n + 1) {
+		grid-column: 1 / -1;
+		width: 100%;
+		max-width: calc((100% - 48px) / 3);
+		justify-self: center;
+	}
+}
+
 @media (max-width: 991px) {
 	.sl-s-play-games__grid {
 		grid-template-columns: 1fr;
