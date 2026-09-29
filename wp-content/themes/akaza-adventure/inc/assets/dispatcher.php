@@ -56,6 +56,7 @@ function akaza_get_page_asset_handlers() {
 		'page-templates/s-signs-security-awareness.php'            => 'akaza_enqueue_s_signs_assets',
 		'page-templates/s-play-gamified-training.php'              => 'akaza_enqueue_s_play_assets',
 		'page-templates/s-metrics-tracking-reporting.php'          => 'akaza_enqueue_s_metrics_assets',
+		'page-templates/secure-coding-practices-training.php'      => 'akaza_enqueue_secure_coding_assets',
 		'page-templates/owasp-top-10-training.php'                 => 'akaza_enqueue_owasp_assets',
 		'page-templates/pci-dss.php'                               => 'akaza_enqueue_pci_dss_assets',
 		'page-templates/security-awareness-training-bfsi-pe-vc.php' => 'akaza_enqueue_bfsi_assets',

@@ -180,6 +180,11 @@ function akaza_bootstrap_pages() {
 			'template' => 'page-templates/s-metrics-tracking-reporting.php',
 		),
 		array(
+			'slug'     => 'secure-coding-practices-training',
+			'title'    => 'Secure Coding Practices Training for Developers',
+			'template' => 'page-templates/secure-coding-practices-training.php',
+		),
+		array(
 			'slug'     => 'owasp-top-10-training',
 			'title'    => 'OWASP Top 10 2025 Training for Developers',
 			'template' => 'page-templates/owasp-top-10-training.php',
