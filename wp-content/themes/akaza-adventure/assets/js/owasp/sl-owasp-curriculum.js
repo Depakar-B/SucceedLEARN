@@ -7,31 +7,56 @@
 		return;
 	}
 
-	const readCssPx = (value, fallback) => {
-		const parsed = Number.parseFloat(value);
-		return Number.isFinite(parsed) ? parsed : fallback;
+	const SITE_HEADER_SEL = '.site-header, .genesis-header';
+	const HIDDEN_BODY_CLASS = 'epsh-header-is-hidden';
+	const HIDDEN_HEADER_CLASS = 'epsh-header-hidden';
+
+	const getSiteHeader = () => document.querySelector(SITE_HEADER_SEL);
+
+	const isSiteHeaderHidden = () => {
+		if (document.body.classList.contains(HIDDEN_BODY_CLASS)) {
+			return true;
+		}
+
+		const siteHeader = getSiteHeader();
+		return Boolean(siteHeader && siteHeader.classList.contains(HIDDEN_HEADER_CLASS));
+	};
+
+	const measureVisibleHeaderHeight = () => {
+		const siteHeader = getSiteHeader();
+		if (!siteHeader || isSiteHeaderHidden()) {
+			return 0;
+		}
+
+		const rect = siteHeader.getBoundingClientRect();
+		const height = Math.ceil(rect.height || siteHeader.offsetHeight || 0);
+
+		// Header is fixed; if it's fully off-screen, treat as hidden.
+		if (rect.bottom <= 0) {
+			return 0;
+		}
+
+		return Math.max(0, height);
 	};
 
 	const getStickyOffsets = () => {
 		const styles = window.getComputedStyle(heading);
 		const headingSticky = styles.position === 'sticky';
-		const rootStyles = window.getComputedStyle(document.documentElement);
-		const headerClearance = readCssPx(
-			rootStyles.getPropertyValue('--slf-header-clearance'),
-			110
-		);
-		const headTop = headerClearance + 20;
+		const headerHeight = measureVisibleHeaderHeight();
+		const gap = headerHeight > 0 ? 8 : 0;
+		const headTop = headerHeight + gap;
 		const headH = headingSticky
 			? Math.ceil(heading.getBoundingClientRect().height)
 			: 0;
 
-		return { headingSticky, headTop, headH };
+		return { headingSticky, headTop, headH, headerHeight };
 	};
 
 	const syncStickyVars = () => {
 		const { headingSticky, headTop, headH } = getStickyOffsets();
 
 		section.style.setProperty('--sl-owasp-curr-head-top', `${headTop}px`);
+		section.classList.toggle('is-header-hidden', headTop === 0);
 
 		if (!headingSticky) {
 			section.style.removeProperty('--sl-owasp-curr-head-h');
@@ -44,24 +69,13 @@
 
 	let spyOffset = syncStickyVars();
 
-	if (!nav) {
-		window.addEventListener('resize', () => {
-			spyOffset = syncStickyVars();
-		});
-		return;
-	}
-
-	const moduleLinks = [...nav.querySelectorAll('a')];
+	const moduleLinks = nav ? [...nav.querySelectorAll('a')] : [];
 	const modules = moduleLinks
 		.map((link) => {
 			const target = document.querySelector(link.getAttribute('href'));
 			return target ? { link, target } : null;
 		})
 		.filter(Boolean);
-
-	if (!modules.length) {
-		return;
-	}
 
 	const setActive = (activeLink) => {
 		moduleLinks.forEach((link) => {
@@ -70,6 +84,10 @@
 	};
 
 	const updateActiveFromScroll = () => {
+		if (!modules.length) {
+			return;
+		}
+
 		const marker = spyOffset + 8;
 		let current = modules[0];
 
@@ -86,7 +104,7 @@
 	};
 
 	let ticking = false;
-	const onScrollOrResize = () => {
+	const refresh = () => {
 		if (ticking) {
 			return;
 		}
@@ -99,9 +117,23 @@
 		});
 	};
 
-	window.addEventListener('scroll', onScrollOrResize, { passive: true });
-	window.addEventListener('resize', onScrollOrResize);
-	window.addEventListener('load', onScrollOrResize);
+	window.addEventListener('scroll', refresh, { passive: true });
+	window.addEventListener('resize', refresh);
+	window.addEventListener('load', refresh);
+	document.addEventListener('epsh-header-hide', refresh);
+
+	const siteHeader = getSiteHeader();
+	if (siteHeader && 'MutationObserver' in window) {
+		const observer = new MutationObserver(refresh);
+		observer.observe(document.body, {
+			attributes: true,
+			attributeFilter: ['class'],
+		});
+		observer.observe(siteHeader, {
+			attributes: true,
+			attributeFilter: ['class'],
+		});
+	}
 
 	updateActiveFromScroll();
 })();
