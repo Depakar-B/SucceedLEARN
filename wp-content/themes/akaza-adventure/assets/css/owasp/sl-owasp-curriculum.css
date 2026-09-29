@@ -7,6 +7,11 @@
 	--sl-owasp-curr-head-h: 168px;
 	padding: 90px 0;
 	background: var(--sl-page-bg, #f5f5f5);
+	overflow: visible;
+}
+
+.sl-owasp-curriculum .container {
+	overflow: visible;
 }
 
 .sl-owasp-curriculum__heading {
@@ -47,12 +52,16 @@
 	grid-template-columns: 320px minmax(0, 1fr);
 	gap: 52px;
 	align-items: start;
+	overflow: visible;
 }
 
 .sl-owasp-curriculum__nav {
 	position: sticky;
 	top: calc(var(--sl-owasp-curr-head-top) + var(--sl-owasp-curr-head-h) + 12px);
+	z-index: 7;
+	align-self: start;
 	max-height: calc(100vh - var(--sl-owasp-curr-head-top) - var(--sl-owasp-curr-head-h) - 36px);
+	overflow-x: hidden;
 	overflow-y: auto;
 	display: flex;
 	flex-direction: column;
@@ -89,6 +98,7 @@
 	gap: 24px;
 	padding: 38px 0;
 	border-top: 1px solid #d9dfe8;
+	scroll-margin-top: calc(var(--sl-owasp-curr-head-top) + var(--sl-owasp-curr-head-h) + 24px);
 }
 
 .sl-owasp-curriculum__module:first-child {
