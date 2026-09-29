@@ -25,11 +25,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</span>
 
 				<h1 id="sl-s-signs-hero-title">
-					<?php esc_html_e( 'Visual Security Awareness Posters & Digital Nudges', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Security Awareness Posters & Digital Nudges', 'akaza-adventure' ); ?>
 				</h1>
 
 				<h2 class="sl-hero-h2">
-					<?php esc_html_e( 'Keep Cybersecurity Visible. Reinforce Secure Behaviour Every Day', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Keep Cybersecurity behaviour Visible. Reinforce Secure Behaviour Every Day', 'akaza-adventure' ); ?>
 				</h2>
 
 				<p>
