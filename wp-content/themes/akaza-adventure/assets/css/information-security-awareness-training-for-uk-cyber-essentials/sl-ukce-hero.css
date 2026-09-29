@@ -1,0 +1,145 @@
+/*
+ * UK Cyber Essentials Security Awareness — Hero.
+ * Visual pattern mirrored from SAP .sl-sa-hero (scoped to .sl-ukce-*).
+ */
+
+.sl-ukce-page h2:not(.sl-ukce-hero__subheading) > span {
+	color: var(--sl-heading-accent, #1472ba);
+}
+
+.sl-ukce-hero {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	padding: 40px 0 90px;
+	background:
+		radial-gradient(
+			circle at 90% 20%,
+			rgba(37, 99, 235, 0.12),
+			transparent 34%
+		),
+		var(--sl-page-white, #ffffff);
+}
+
+.sl-ukce-hero__top {
+	width: 100%;
+	max-width: none;
+	margin-bottom: 32px;
+}
+
+.sl-ukce-hero__top .slf-breadcrumbs--inline {
+	margin-bottom: 1rem;
+}
+
+.sl-ukce-hero__eyebrow {
+	display: inline-flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.sl-ukce-hero__top h1 {
+	width: 100%;
+	max-width: none;
+	margin: 0;
+	font-size: var(--sl-fs-h1, 60px);
+	font-weight: 800;
+	letter-spacing: var(--sl-ls-h1, -0.02em);
+	line-height: 1.15;
+	color: var(--sl-page-navy, #16234e);
+}
+
+.sl-ukce-hero__top h1 > span {
+	color: var(--sl-heading-accent, #1472ba);
+}
+
+.sl-ukce-hero__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 0.6fr) minmax(0, 0.4fr);
+	gap: 40px;
+}
+
+.sl-ukce-hero__visual {
+	position: relative;
+	align-self: center;
+	min-width: 0;
+	width: 100%;
+}
+
+.sl-ukce-hero__image {
+	overflow: hidden;
+	width: 100%;
+	line-height: 0;
+	border-radius: 24px;
+}
+
+.sl-ukce-hero__image img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.sl-ukce-hero__subheading {
+	max-width: 680px;
+	margin: 0 0 16px;
+	font-size: 28px !important;
+	font-weight: 700;
+	line-height: 1.35;
+	color: var(--sl-heading-accent, #1472ba);
+}
+
+.sl-ukce-hero__description {
+	max-width: 680px;
+	margin-bottom: 18px;
+}
+
+.sl-ukce-hero__description + .sl-ukce-hero__actions {
+	margin-top: 10px;
+}
+
+.sl-ukce-hero__actions {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 14px;
+}
+
+@media (max-width: 991px) {
+	.sl-ukce-hero {
+		padding: 36px 0 90px;
+	}
+
+	.sl-ukce-hero__top {
+		margin-bottom: 28px;
+	}
+
+	.sl-ukce-hero__grid {
+		grid-template-columns: 1fr;
+		gap: 32px;
+	}
+
+	.sl-ukce-hero__visual {
+		max-width: 480px;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-ukce-hero {
+		padding: 28px 0 60px;
+	}
+
+	.sl-ukce-hero__top {
+		margin-bottom: 22px;
+	}
+
+	.sl-ukce-hero__visual {
+		max-width: none;
+	}
+
+	.sl-ukce-hero__image {
+		border-radius: 18px;
+	}
+
+	.sl-ukce-hero__subheading {
+		font-size: 22px !important;
+	}
+}

@@ -11,21 +11,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $course_images = array(
 	array(
-		'image'   => get_template_directory_uri() . '/images/course-whistleblowing-concerns.png',
-		'alt'     => __( 'SucceedLEARN whistleblowing training comparing whistleblowing concerns with personal grievances', 'akaza-adventure' ),
-		'caption' => __( 'Learners see the difference between potential whistleblowing concerns and personal grievances.', 'akaza-adventure' ),
+		'image'   => 'https://succeedlearn.com/wp-content/uploads/2026/09/Whistleblowing-image-1.webp',
+		'alt'     => __( 'Whistleblowing concern compared with personal grievances', 'akaza-adventure' ),
+		'label'   => __( 'Concern vs grievance', 'akaza-adventure' ),
+		'caption' => __( 'See the difference between whistleblowing concerns and personal grievances.', 'akaza-adventure' ),
 	),
 	array(
-		'image'   => get_template_directory_uri() . '/images/course-whistleblowing-examples.png',
-		'alt'     => __( 'SucceedLEARN whistleblowing training showing examples of reportable concerns', 'akaza-adventure' ),
-		'caption' => __( 'Learners explore examples of concerns that may need to be reported through appropriate channels.', 'akaza-adventure' ),
+		'image'   => 'https://succeedlearn.com/wp-content/uploads/2026/09/Whistleblowing-image-2.webp',
+		'alt'     => __( 'Confidentiality, fiduciary responsibility and investment ethics in whistleblowing training', 'akaza-adventure' ),
+		'label'   => __( 'PE/VC principles', 'akaza-adventure' ),
+		'caption' => __( 'Connect speaking up with confidentiality, fiduciary duty and investment ethics.', 'akaza-adventure' ),
 	),
 	array(
-		'image'   => get_template_directory_uri() . '/images/course-raise-concern.png',
-		'alt'     => __( 'SucceedLEARN whistleblowing course explaining how to raise a concern', 'akaza-adventure' ),
-		'caption' => __( 'Learners understand how to raise a concern and follow the appropriate reporting process.', 'akaza-adventure' ),
+		'image'   => 'https://succeedlearn.com/wp-content/uploads/2026/09/Whistleblowing-image-3.webp',
+		'alt'     => __( 'Interactive scenario asking which situations should be reported as a whistleblowing concern', 'akaza-adventure' ),
+		'label'   => __( 'Practice scenario', 'akaza-adventure' ),
+		'caption' => __( 'Work through scenarios to decide what should be reported.', 'akaza-adventure' ),
 	),
 );
+
+$total_slides = count( $course_images );
 ?>
 
 <section
@@ -37,12 +42,18 @@ $course_images = array(
 
 		<div class="sl-whistleblowing-course__intro">
 			<span class="sl-home-sub-heading">
-				<?php esc_html_e( 'Inside the Course', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'Course View', 'akaza-adventure' ); ?>
 			</span>
 
 			<h2 id="sl-whistleblowing-course-title">
-				<?php esc_html_e( 'What Does the Whistleblowing Course Look Like in', 'akaza-adventure' ); ?>
-				<span><?php esc_html_e( 'Practice?', 'akaza-adventure' ); ?></span>
+				<?php
+				echo wp_kses_post(
+					__(
+						'What Does the Whistleblowing Course Look Like in <span>Practice?</span>',
+						'akaza-adventure'
+					)
+				);
+				?>
 			</h2>
 
 			<p>
@@ -50,23 +61,62 @@ $course_images = array(
 			</p>
 		</div>
 
-		<div class="sl-whistleblowing-course__images">
-			<?php foreach ( $course_images as $course_image ) : ?>
-				<figure class="sl-whistleblowing-course__image-item">
-					<div class="sl-whistleblowing-course__image">
-						<img
-							src="<?php echo esc_url( $course_image['image'] ); ?>"
-							alt="<?php echo esc_attr( $course_image['alt'] ); ?>"
-							loading="lazy"
-							decoding="async"
-						>
-					</div>
+		<div
+			class="sl-whistleblowing-course__gallery"
+			data-course-carousel
+		>
+			<button
+				type="button"
+				class="sl-whistleblowing-course__arrow sl-whistleblowing-course__arrow--prev"
+				data-course-prev
+				aria-label="<?php esc_attr_e( 'Previous course preview', 'akaza-adventure' ); ?>"
+			>
+				<span aria-hidden="true">←</span>
+			</button>
 
-					<figcaption>
-						<?php echo esc_html( $course_image['caption'] ); ?>
-					</figcaption>
-				</figure>
-			<?php endforeach; ?>
+			<div class="sl-whistleblowing-course__viewport">
+				<div
+					class="sl-whistleblowing-course__track"
+					data-course-track
+				>
+					<?php foreach ( $course_images as $index => $course_image ) : ?>
+						<figure class="sl-whistleblowing-course__card">
+							<span class="sl-whistleblowing-course__num" aria-hidden="true">
+								<?php echo esc_html( str_pad( (string) ( $index + 1 ), 2, '0', STR_PAD_LEFT ) ); ?>
+							</span>
+							<div class="sl-whistleblowing-course__frame">
+								<img
+									src="<?php echo esc_url( $course_image['image'] ); ?>"
+									alt="<?php echo esc_attr( $course_image['alt'] ); ?>"
+									loading="<?php echo 0 === $index ? 'eager' : 'lazy'; ?>"
+									decoding="async"
+								>
+							</div>
+							<figcaption class="sl-whistleblowing-course__caption">
+								<strong><?php echo esc_html( $course_image['label'] ); ?></strong>
+								<span><?php echo esc_html( $course_image['caption'] ); ?></span>
+							</figcaption>
+						</figure>
+					<?php endforeach; ?>
+				</div>
+			</div>
+
+			<button
+				type="button"
+				class="sl-whistleblowing-course__arrow sl-whistleblowing-course__arrow--next"
+				data-course-next
+				aria-label="<?php esc_attr_e( 'Next course preview', 'akaza-adventure' ); ?>"
+			>
+				<span aria-hidden="true">→</span>
+			</button>
+
+			<span
+				class="sl-whistleblowing-course__counter"
+				data-course-counter
+				aria-live="polite"
+			>
+				<?php echo esc_html( '1 / ' . $total_slides ); ?>
+			</span>
 		</div>
 
 	</div>

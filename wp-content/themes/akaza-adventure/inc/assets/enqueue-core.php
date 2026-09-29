@@ -112,6 +112,12 @@ function akaza_enqueue_core_assets() {
 	);
 
 	akaza_enqueue_theme_style(
+		'akaza-global-sbcs',
+		'sl-global-sbcs.css',
+		array( 'akaza-main', 'akaza-global-panel-title', 'akaza-global-title-accent' )
+	);
+
+	akaza_enqueue_theme_style(
 		'akaza-global-contact',
 		'sl-global-contact.css',
 		array( 'akaza-main', 'akaza-global-ui-buttons', 'akaza-global-buttons', 'akaza-global-title-accent' )

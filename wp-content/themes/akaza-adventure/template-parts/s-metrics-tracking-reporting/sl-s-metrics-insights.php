@@ -1,6 +1,6 @@
 <?php
 /**
- * S-Metrics — Turn Data into Actionable Insights.
+ * S-Metrics — Turn Security Awareness Data Into Actionable Insight.
  *
  * @package Akaza_Adventure
  */
@@ -19,9 +19,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="sl-s-metrics-insights__grid">
 
 			<div class="sl-s-metrics-insights__media">
-				<div class="sl-s-metrics-insights__image-placeholder">
-					<span><?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?></span>
-				</div>
+				<img
+					class="sl-s-metrics-insights__image"
+					src="<?php echo esc_url( akaza_upload_url( '2026/09/Security-Awareness-Data-to-Action.webp' ) ); ?>"
+					alt="<?php esc_attr_e( 'Security Awareness Data to Action', 'akaza-adventure' ); ?>"
+					width="800"
+					height="600"
+					loading="lazy"
+					decoding="async"
+				>
 			</div>
 
 			<div class="sl-s-metrics-insights__content">
@@ -31,15 +37,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</span>
 
 				<h2 id="sl-s-metrics-insights-title">
-					<?php esc_html_e( 'Turn Data into', 'akaza-adventure' ); ?>
-					<span><?php esc_html_e( 'Actionable Insights', 'akaza-adventure' ); ?></span>
+					<?php esc_html_e( 'Turn Security Awareness Data', 'akaza-adventure' ); ?>
+					<span><?php esc_html_e( 'Into Actionable Insight.', 'akaza-adventure' ); ?></span>
 				</h2>
 
 				<div class="sl-s-metrics-insights__copy">
 					<p>
 						<?php
 						esc_html_e(
-							'Security awareness reporting should do more than present numbers.',
+							'Security awareness reporting and analytics should do more than present numbers.',
 							'akaza-adventure'
 						);
 						?>

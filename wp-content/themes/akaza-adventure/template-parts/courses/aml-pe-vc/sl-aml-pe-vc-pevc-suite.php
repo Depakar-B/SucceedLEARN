@@ -8,39 +8,44 @@
 
 defined( 'ABSPATH' ) || exit;
 
+$course_url = static function ( $slug ) {
+	$page = get_page_by_path( $slug );
+	return $page ? get_permalink( $page ) : '#contact';
+};
+
 $courses = array(
 	array(
 		'num'    => '01',
 		'title'  => __( 'Security Awareness Training', 'akaza-adventure' ),
 		'text'   => __( 'Build practical awareness of cyber security, information protection and safer employee behaviours.', 'akaza-adventure' ),
-		'href'   => '#contact',
+		'href'   => $course_url( 'security-awareness-and-phishing' ),
 		'active' => false,
 	),
 	array(
 		'num'    => '02',
 		'title'  => __( 'Phishing Simulation', 'akaza-adventure' ),
 		'text'   => __( 'Reinforce phishing awareness through realistic simulation exercises.', 'akaza-adventure' ),
-		'href'   => '#contact',
+		'href'   => $course_url( 's-phish' ),
 		'active' => false,
 	),
 	array(
 		'num'    => '03',
 		'title'  => __( 'Data Privacy', 'akaza-adventure' ),
 		'text'   => __( 'Strengthen responsible handling of personal information and privacy awareness.', 'akaza-adventure' ),
-		'href'   => '#contact',
+		'href'   => $course_url( 'gdpr-employee-awareness-training' ),
 		'active' => false,
 	),
 	array(
 		'num'    => '04',
 		'title'  => __( 'Preventing Sexual Harassment', 'akaza-adventure' ),
 		'text'   => __( 'Build awareness of workplace conduct and appropriate employee responsibilities.', 'akaza-adventure' ),
-		'href'   => '#contact',
+		'href'   => $course_url( 'uk-sexual-harassment-prevention-training' ),
 		'active' => false,
 	),
 	array(
 		'num'    => '05',
 		'title'  => __( 'AML Training', 'akaza-adventure' ),
-		'text'   => __( 'KYC, CDD, EDD, MLRO, CFT, CPF and practical financial crime awareness.', 'akaza-adventure' ),
+		'text'   => __( 'CDD, EDD, MLRO, CFT, CPF and practical financial crime awareness.', 'akaza-adventure' ),
 		'href'   => '#overview',
 		'active' => true,
 	),
@@ -48,35 +53,35 @@ $courses = array(
 		'num'    => '06',
 		'title'  => __( 'Gifts and Entertainment', 'akaza-adventure' ),
 		'text'   => __( 'Understand compliance considerations involving gifts, hospitality and entertainment.', 'akaza-adventure' ),
-		'href'   => '#contact',
+		'href'   => $course_url( 'gifts-and-entertainment' ),
 		'active' => false,
 	),
 	array(
 		'num'    => '07',
 		'title'  => __( 'Whistleblowing', 'akaza-adventure' ),
 		'text'   => __( 'Build awareness of speaking up and appropriate reporting channels.', 'akaza-adventure' ),
-		'href'   => '#contact',
+		'href'   => $course_url( 'whistleblowing-pe-vc' ),
 		'active' => false,
 	),
 	array(
 		'num'    => '08',
 		'title'  => __( 'Political Donations', 'akaza-adventure' ),
 		'text'   => __( 'Awareness of political donations within organisational governance and compliance.', 'akaza-adventure' ),
-		'href'   => '#contact',
+		'href'   => $course_url( 'political-donations-pe-vc' ),
 		'active' => false,
 	),
 	array(
 		'num'    => '09',
 		'title'  => __( 'SMCR Training – Employees', 'akaza-adventure' ),
 		'text'   => __( 'Employee-focused awareness of SMCR and regulated-firm conduct responsibilities.', 'akaza-adventure' ),
-		'href'   => '#contact',
+		'href'   => $course_url( 'smcr-pe-vc' ),
 		'active' => false,
 	),
 	array(
 		'num'    => '10',
 		'title'  => __( 'SMCR Training – Senior Managers', 'akaza-adventure' ),
 		'text'   => __( 'Senior-manager awareness of SMCR, accountability and regulatory responsibilities.', 'akaza-adventure' ),
-		'href'   => '#contact',
+		'href'   => $course_url( 'smcr-pe-vc' ),
 		'active' => false,
 	),
 	array(
@@ -116,7 +121,7 @@ $courses = array(
 				<p>
 					<?php
 					esc_html_e(
-						'Extend AML awareness into a broader compliance programme covering cyber security, conduct, financial crime and regulated-firm responsibilities.',
+						'Extend AML awareness into a broader compliance programme covering cyber security, code of conduct, financial crime and regulated-firm responsibilities.',
 						'akaza-adventure'
 					);
 					?>
@@ -134,8 +139,7 @@ $courses = array(
 				<strong><?php esc_html_e( '$2/user/month for organisations with 10+ users', 'akaza-adventure' ); ?></strong>
 			</span>
 			<span class="sl-aml-pe-vc-pevc-suite__note">
-				<?php esc_html_e( 'Equivalent to:', 'akaza-adventure' ); ?>
-				<strong>$24/user/year</strong>
+				<?php esc_html_e( 'Billed annually at $24 per user', 'akaza-adventure' ); ?>
 			</span>
 		</div>
 

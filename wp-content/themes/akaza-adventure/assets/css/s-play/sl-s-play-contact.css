@@ -19,6 +19,11 @@
 	padding-top: 12px;
 }
 
+.sl-s-play-contact__content .sl-home-sub-heading {
+	display: block;
+	margin-bottom: 14px;
+}
+
 .sl-s-play-contact__content h2 {
 	margin-bottom: 22px;
 }

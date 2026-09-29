@@ -3,77 +3,77 @@
    Gifts & Entertainment Training for PE/VC Professionals
    Course Content
 
+   Matches preview .topic-list / .topic UI.
    Container and section spacing come from course-global.css.
    ========================================================= */
 
-   .sl-course-page .sl-gifts-entertainment-course-content {
+.sl-course-page .sl-gifts-entertainment-course-content {
 	background: var(--course-white, #ffffff);
-}
-
-.sl-gifts-entertainment-course-content__grid {
-	display: grid;
-	grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-	gap: 72px;
-	align-items: start;
 }
 
 
 /* =========================================================
-   Left: Course Content List
+   Introduction
+   ========================================================= */
+
+.sl-gifts-entertainment-course-content__intro {
+	max-width: none;
+}
+
+.sl-gifts-entertainment-course-content__intro h2 {
+	margin-bottom: 22px;
+	max-width: none;
+}
+
+.sl-gifts-entertainment-course-content__intro h2 > span {
+	display: inline;
+	color: var(--course-primary, #135db7);
+}
+
+.sl-gifts-entertainment-course-content__intro > p {
+	max-width: 800px;
+	margin: 0;
+	font-size: 1.17rem;
+	line-height: 1.65;
+}
+
+
+/* =========================================================
+   Topic list — preview .topic-list
    ========================================================= */
 
 .sl-gifts-entertainment-course-content__list {
-	display: flex;
-	flex-direction: column;
-	min-width: 0;
+	max-width: 930px;
+	margin-top: 30px;
 }
 
 .sl-gifts-entertainment-course-content__item {
 	display: grid;
 	grid-template-columns: 48px minmax(0, 1fr);
-	gap: 14px;
+	gap: 18px;
 	align-items: start;
-
-	padding: 0 0 28px;
-
-	border-bottom: 1px solid rgba(22, 35, 78, 0.14);
-}
-
-.sl-gifts-entertainment-course-content__item
-	+ .sl-gifts-entertainment-course-content__item {
-	padding-top: 20px;
+	padding: 23px 0;
+	border-bottom: 1px solid #d9dfe7;
 }
 
 .sl-gifts-entertainment-course-content__item:last-child {
-	padding-bottom: 0;
 	border-bottom: 0;
 }
 
 
 /* =========================================================
-   Number
+   Number — preview .topic-number
    ========================================================= */
 
 .sl-gifts-entertainment-course-content__number {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	width: 44px;
-	height: 44px;
-
-	border-radius: 12px;
-	background: rgba(20, 114, 186, 0.09);
-
-	color: var(--course-primary, #1472ba);
-	font-size: 14px;
+	color: var(--course-primary, #135db7);
 	font-weight: 700;
-	line-height: 1;
+	line-height: 1.4;
 }
 
 
 /* =========================================================
-   Item Content
+   Item content
    ========================================================= */
 
 .sl-gifts-entertainment-course-content__item-content {
@@ -81,82 +81,12 @@
 }
 
 .sl-gifts-entertainment-course-content__item-content h3 {
-	margin: 0 0 8px;
-	color: var(--course-navy, #16234e);
+	margin: 0 0 9px;
+	color: var(--course-navy, #16234d);
 }
 
 .sl-gifts-entertainment-course-content__item-content p {
 	margin: 0;
-}
-
-
-/* =========================================================
-   Right: Introduction
-   ========================================================= */
-
-.sl-gifts-entertainment-course-content__intro {
-	min-width: 0;
-}
-
-.sl-gifts-entertainment-course-content__intro h2 {
-	margin-bottom: 20px;
-}
-
-.sl-gifts-entertainment-course-content__intro > p {
-	margin: 0;
-}
-
-
-/* =========================================================
-   Image
-   ========================================================= */
-
-.sl-gifts-entertainment-course-content__media {
-	display: flex;
-	align-items: flex-start;
-	justify-content: flex-start;
-	margin-top: 32px;
-	min-width: 0;
-}
-
-.sl-gifts-entertainment-course-content__image-placeholder {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-
-	width: min(100%, 520px);
-	aspect-ratio: 1 / 1;
-
-	background: var(--course-light-bg, #f5f5f5);
-	border: 1px dashed rgba(20, 114, 186, 0.35);
-	border-radius: 16px;
-
-	text-align: center;
-	box-sizing: border-box;
-}
-
-.sl-gifts-entertainment-course-content__image-placeholder span {
-	color: var(--course-primary, #1472ba);
-	font-weight: 700;
-	letter-spacing: 0.04em;
-}
-
-.sl-gifts-entertainment-course-content__image-placeholder small {
-	margin-top: 8px;
-	color: var(--course-muted, #6b7c93);
-}
-
-
-/* =========================================================
-   Tablet
-   ========================================================= */
-
-@media (max-width: 1000px) {
-
-	.sl-gifts-entertainment-course-content__grid {
-		gap: 48px;
-	}
 }
 
 
@@ -166,47 +96,21 @@
 
 @media (max-width: 767px) {
 
-	.sl-gifts-entertainment-course-content__grid {
-		grid-template-columns: 1fr;
-		gap: 40px;
+	.sl-gifts-entertainment-course-content__intro > p {
+		font-size: 1rem;
 	}
 
 	.sl-gifts-entertainment-course-content__list {
-		order: 2;
+		margin-top: 24px;
 	}
 
-	.sl-gifts-entertainment-course-content__intro {
-		order: 1;
+	.sl-gifts-entertainment-course-content__item {
+		grid-template-columns: 40px minmax(0, 1fr);
+		gap: 14px;
+		padding: 20px 0;
 	}
 
 	.sl-gifts-entertainment-course-content__intro h2 {
 		margin-bottom: 18px;
-	}
-
-	.sl-gifts-entertainment-course-content__media {
-		margin-top: 28px;
-	}
-
-	.sl-gifts-entertainment-course-content__image-placeholder {
-		width: 100%;
-		max-width: 560px;
-		border-radius: 12px;
-	}
-
-	.sl-gifts-entertainment-course-content__item {
-		grid-template-columns: 42px minmax(0, 1fr);
-		gap: 12px;
-		padding-bottom: 22px;
-	}
-
-	.sl-gifts-entertainment-course-content__item
-		+ .sl-gifts-entertainment-course-content__item {
-		padding-top: 18px;
-	}
-
-	.sl-gifts-entertainment-course-content__number {
-		width: 40px;
-		height: 40px;
-		border-radius: 10px;
 	}
 }

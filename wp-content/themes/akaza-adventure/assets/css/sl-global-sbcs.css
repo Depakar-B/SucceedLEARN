@@ -1,0 +1,424 @@
+/**
+ * SucceedLEARN — Global Security Behaviour & Culture Suite (SBCS)
+ *
+ * Args (via get_template_part $args):
+ * - media_side: left | right
+ * - background: white | soft | any CSS color
+ *
+ * Specificity intentionally beats .sl-training-page p / global panel-title.
+ */
+
+.sl-sbcs {
+	--sl-sbcs-bg: var(--sl-page-white, #ffffff);
+	--sl-sbcs-navy: var(--sl-page-navy, #16234e);
+	--sl-sbcs-primary: var(--sl-page-primary, #1472ba);
+	--sl-sbcs-text: var(--sl-page-text, #4a4a4a);
+	--sl-sbcs-muted: var(--sl-page-muted, #6b7c93);
+	padding: 76px 0 88px;
+	background: var(--sl-sbcs-bg);
+}
+
+.sl-sbcs--bg-white {
+	--sl-sbcs-bg: var(--sl-page-white, #ffffff);
+}
+
+.sl-sbcs--bg-soft {
+	--sl-sbcs-bg: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-sbcs--bg-custom {
+	background: var(--sl-sbcs-bg);
+}
+
+
+/* Intro
+-------------------------------------------------------------- */
+
+.sl-sbcs__intro {
+	margin-bottom: 48px;
+	max-width: 820px;
+}
+
+.sl-sbcs__intro .sl-home-sub-heading {
+	display: block;
+	margin-bottom: 14px;
+}
+
+body.slf-body .sl-training-page .sl-sbcs__intro h2,
+body.slf-body #main-content.sl-training-page .sl-sbcs__intro h2,
+body.slf-body .sl-sbcs__intro h2,
+.sl-training-page .sl-sbcs__intro h2,
+.sl-sbcs__intro h2 {
+	margin: 0 0 18px;
+	font-size: clamp(30px, 2.7vw, 42px);
+	font-weight: 700;
+	line-height: 1.2;
+	color: var(--sl-sbcs-navy);
+}
+
+body.slf-body .sl-training-page .sl-sbcs__intro h2 > span,
+body.slf-body #main-content.sl-training-page .sl-sbcs__intro h2 > span,
+body.slf-body .sl-sbcs__intro h2 > span,
+.sl-training-page .sl-sbcs__intro h2 > span,
+.sl-sbcs__intro h2 > span {
+	color: var(--sl-sbcs-primary);
+}
+
+body.slf-body .sl-training-page .sl-sbcs__intro p,
+body.slf-body #main-content.sl-training-page .sl-sbcs__intro p,
+body.slf-body .sl-sbcs__intro p,
+.sl-training-page .sl-sbcs__intro p,
+.sl-sbcs__intro p {
+	margin: 0;
+	max-width: 720px;
+	color: var(--sl-sbcs-text);
+	font-size: 16px;
+	line-height: 1.65;
+}
+
+
+/* Layout
+-------------------------------------------------------------- */
+
+.sl-sbcs__layout {
+	display: grid;
+	grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+	gap: 56px;
+	align-items: start;
+}
+
+.sl-sbcs--media-right .sl-sbcs__layout {
+	grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+}
+
+.sl-sbcs--media-right .sl-sbcs__media {
+	order: 2;
+}
+
+.sl-sbcs--media-right .sl-sbcs__journey {
+	order: 1;
+}
+
+
+/* Sticky media
+-------------------------------------------------------------- */
+
+.sl-sbcs__media {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 110px) + 24px);
+	width: 100%;
+	min-width: 0;
+	align-self: start;
+}
+
+.sl-sbcs__image {
+	width: 100%;
+	overflow: hidden;
+	border: 1px solid rgba(22, 35, 78, 0.1);
+	border-radius: 16px;
+	background: var(--sl-page-white, #ffffff);
+	box-shadow: 0 12px 32px rgba(22, 35, 78, 0.08);
+	box-sizing: border-box;
+}
+
+.sl-sbcs__image-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 520px;
+	aspect-ratio: 4 / 5;
+	padding: 30px;
+	box-sizing: border-box;
+	background: #f5f5f5;
+	color: var(--sl-sbcs-muted);
+	text-align: center;
+}
+
+.sl-sbcs__image img {
+	display: block;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	vertical-align: middle;
+}
+
+
+/* Journey
+-------------------------------------------------------------- */
+
+.sl-sbcs__journey {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+}
+
+.sl-sbcs__journey-line {
+	position: absolute;
+	top: 20px;
+	bottom: 20px;
+	left: 19px;
+	width: 2px;
+	background: rgba(20, 114, 186, 0.18);
+}
+
+.sl-sbcs__step {
+	position: relative;
+	display: grid;
+	grid-template-columns: 40px minmax(0, 1fr);
+	gap: 18px;
+	align-items: start;
+	padding: 0 0 0;
+}
+
+.sl-sbcs__step:last-child {
+	padding-bottom: 0;
+}
+
+.sl-sbcs__step-marker {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	margin-top: 0;
+	box-sizing: border-box;
+	border: 1px solid rgba(20, 114, 186, 0.22);
+	border-radius: 50%;
+	background: var(--sl-page-white, #ffffff);
+	box-shadow: 0 2px 8px rgba(22, 35, 78, 0.06);
+	color: var(--sl-sbcs-primary);
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.sl-sbcs__step-content {
+	min-width: 0;
+	padding: 4px 0 22px;
+	border-bottom: 1px solid rgba(22, 35, 78, 0.1);
+}
+
+.sl-sbcs__step:last-child .sl-sbcs__step-content {
+	padding-bottom: 0;
+	border-bottom: 0;
+}
+
+.sl-sbcs__step-heading {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 8px 12px;
+	margin: 0 0 6px;
+}
+
+body.slf-body #main-content .sl-sbcs__step-heading h3.sl-panel-title,
+body.slf-body .sl-training-page .sl-sbcs__step-heading h3.sl-panel-title,
+body.slf-body #main-content.sl-training-page .sl-sbcs__step-heading h3.sl-panel-title,
+body.slf-body .sl-sbcs__step-heading h3.sl-panel-title,
+body.slf-body .sl-sbcs__step-heading .sl-panel-title,
+.sl-training-page .sl-sbcs__step-heading .sl-panel-title,
+.sl-sbcs__step-heading .sl-panel-title {
+	margin: 0;
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 1.3;
+	color: var(--sl-sbcs-primary);
+}
+
+.sl-sbcs__step-action {
+	display: inline-flex;
+	align-items: center;
+	padding: 4px 10px;
+	border-radius: 999px;
+	background: rgba(20, 114, 186, 0.08);
+	color: var(--sl-sbcs-primary);
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+body.slf-body .sl-training-page .sl-sbcs__step-content p,
+body.slf-body #main-content.sl-training-page .sl-sbcs__step-content p,
+body.slf-body .sl-sbcs__step-content p,
+.sl-training-page .sl-sbcs__step-content p,
+.sl-sbcs__step-content p {
+	margin: 0;
+	color: var(--sl-sbcs-text);
+	font-size: 15px;
+	line-height: 1.6;
+}
+
+
+/* Closing
+-------------------------------------------------------------- */
+
+.sl-sbcs__closing {
+	margin-top: 40px;
+	max-width: 820px;
+}
+
+body.slf-body .sl-training-page .sl-sbcs__closing p,
+body.slf-body #main-content.sl-training-page .sl-sbcs__closing p,
+body.slf-body .sl-sbcs__closing p,
+.sl-training-page .sl-sbcs__closing p,
+.sl-sbcs__closing p {
+	margin: 0;
+	color: var(--sl-sbcs-navy);
+	font-size: 17px;
+	line-height: 1.6;
+}
+
+.sl-sbcs__closing strong {
+	font-weight: 700;
+}
+
+
+/* Laptop: keep SBCS hierarchy (do not inherit foundation 24px h2)
+-------------------------------------------------------------- */
+
+@media (min-width: 992px) and (max-width: 1440px) {
+	body.slf-body .sl-training-page .sl-sbcs__intro h2,
+	body.slf-body #main-content.sl-training-page .sl-sbcs__intro h2,
+	body.slf-body .sl-sbcs__intro h2,
+	.sl-training-page .sl-sbcs__intro h2,
+	.sl-sbcs__intro h2 {
+		font-size: 32px;
+	}
+
+	body.slf-body #main-content .sl-sbcs__step-heading h3.sl-panel-title,
+	body.slf-body .sl-training-page .sl-sbcs__step-heading h3.sl-panel-title,
+	body.slf-body #main-content.sl-training-page .sl-sbcs__step-heading h3.sl-panel-title,
+	body.slf-body .sl-sbcs__step-heading h3.sl-panel-title,
+	.sl-training-page .sl-sbcs__step-heading .sl-panel-title,
+	.sl-sbcs__step-heading .sl-panel-title {
+		font-size: 20px;
+	}
+}
+
+
+/* Tablet
+-------------------------------------------------------------- */
+
+@media (max-width: 991px) {
+
+	.sl-sbcs {
+		padding: 64px 0 72px;
+	}
+
+	.sl-sbcs__intro {
+		margin-bottom: 40px;
+	}
+
+	.sl-sbcs__layout,
+	.sl-sbcs--media-right .sl-sbcs__layout {
+		grid-template-columns: 1fr;
+		gap: 36px;
+	}
+
+	.sl-sbcs__media,
+	.sl-sbcs--media-right .sl-sbcs__media {
+		position: static;
+		order: 0;
+		max-width: 520px;
+	}
+
+	.sl-sbcs--media-right .sl-sbcs__journey {
+		order: 0;
+	}
+
+	.sl-sbcs__image-placeholder {
+		min-height: 400px;
+	}
+}
+
+
+/* Mobile
+-------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+	.sl-sbcs {
+		padding: 52px 0 60px;
+	}
+
+	.sl-sbcs__intro {
+		margin-bottom: 32px;
+	}
+
+	body.slf-body .sl-training-page .sl-sbcs__intro h2,
+	body.slf-body #main-content.sl-training-page .sl-sbcs__intro h2,
+	body.slf-body .sl-sbcs__intro h2,
+	.sl-training-page .sl-sbcs__intro h2,
+	.sl-sbcs__intro h2 {
+		font-size: 28px;
+	}
+
+	.sl-sbcs__layout {
+		gap: 28px;
+	}
+
+	.sl-sbcs__media {
+		max-width: none;
+	}
+
+	.sl-sbcs__image {
+		border-radius: 12px;
+	}
+
+	.sl-sbcs__image-placeholder {
+		min-height: 280px;
+		padding: 24px;
+	}
+
+	.sl-sbcs__step {
+		grid-template-columns: 34px minmax(0, 1fr);
+		gap: 14px;
+	}
+
+	.sl-sbcs__step-marker {
+		width: 34px;
+		height: 34px;
+	}
+
+	.sl-sbcs__journey-line {
+		top: 16px;
+		left: 16px;
+		bottom: 16px;
+	}
+
+	.sl-sbcs__step-content {
+		padding: 2px 0 18px;
+	}
+
+	.sl-sbcs__step-heading {
+		gap: 6px 10px;
+		margin-bottom: 6px;
+	}
+
+	body.slf-body #main-content .sl-sbcs__step-heading h3.sl-panel-title,
+	body.slf-body .sl-training-page .sl-sbcs__step-heading h3.sl-panel-title,
+	body.slf-body .sl-sbcs__step-heading h3.sl-panel-title,
+	.sl-training-page .sl-sbcs__step-heading .sl-panel-title,
+	.sl-sbcs__step-heading .sl-panel-title {
+		font-size: 18px;
+	}
+
+	.sl-sbcs__step-action {
+		padding: 4px 8px;
+		font-size: 12px;
+	}
+
+	.sl-sbcs__closing {
+		margin-top: 28px;
+	}
+
+	body.slf-body .sl-training-page .sl-sbcs__closing p,
+	body.slf-body .sl-sbcs__closing p,
+	.sl-sbcs__closing p {
+		font-size: 16px;
+	}
+}

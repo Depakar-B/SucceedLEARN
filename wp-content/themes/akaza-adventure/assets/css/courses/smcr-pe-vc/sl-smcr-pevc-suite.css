@@ -1,0 +1,146 @@
+/* SucceedLEARN — SMCR PE/VC suite */
+
+.sl-course-page .sl-smcr-pevc-suite {
+	background: var(--course-light-bg, #f5f5f5);
+}
+
+.sl-smcr-pevc-suite__header {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: end;
+	gap: 40px;
+	margin-bottom: 24px;
+}
+
+.sl-smcr-pevc-suite__header h2 > span {
+	color: var(--sl-page-primary, #135db7);
+}
+
+.sl-smcr-pevc-suite__header .sl-content-btn {
+	white-space: nowrap;
+}
+
+.sl-smcr-pevc-suite__pricing {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-bottom: 38px;
+}
+
+.sl-smcr-pevc-suite__note {
+	padding: 11px 16px;
+	border-radius: 999px;
+	background: #212b48;
+	border: 1px solid #212b48;
+	color: #ffffff;
+	font-size: 1rem;
+	font-weight: 600;
+	line-height: 1.45;
+}
+
+.sl-smcr-pevc-suite__note strong {
+	color: #ffffff;
+}
+
+.sl-smcr-pevc-suite__grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 15px;
+}
+
+.sl-smcr-pevc-suite__tile {
+	min-height: 225px;
+	display: flex;
+	flex-direction: column;
+	padding: 22px;
+	background: #ffffff;
+	border: 1px solid #dde3eb;
+	border-radius: 16px;
+}
+
+.sl-smcr-pevc-suite__tile.is-active {
+	background: #fff9f7;
+	border: 2px solid #ea3f23;
+}
+
+.sl-smcr-pevc-suite__chrome {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	margin-bottom: 17px;
+}
+
+.sl-smcr-pevc-suite__dash {
+	display: block;
+	width: 38px;
+	height: 4px;
+	border-radius: 2px;
+	background: #135db7;
+}
+
+.sl-smcr-pevc-suite__tile.is-active .sl-smcr-pevc-suite__dash {
+	background: #ea3f23;
+}
+
+.sl-smcr-pevc-suite__num {
+	width: 39px;
+	height: 39px;
+	display: grid;
+	place-items: center;
+	margin-left: auto;
+	border-radius: 10px;
+	background: #edf5fd;
+	color: var(--sl-page-primary, #135db7);
+	font-weight: 700;
+}
+
+.sl-smcr-pevc-suite__tile.is-active .sl-smcr-pevc-suite__num {
+	background: #ea3f23;
+	color: #ffffff;
+}
+
+.sl-smcr-pevc-suite__tile h3 {
+	margin-bottom: 10px;
+	color: #202a47;
+	font-size: 1.05rem;
+}
+
+.sl-smcr-pevc-suite__tile p {
+	margin: 0;
+	font-size: 0.88rem;
+	line-height: 1.5;
+	color: #555e70;
+}
+
+.sl-smcr-pevc-suite__cta {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	margin-top: auto;
+	padding-top: 16px;
+	color: var(--sl-page-primary, #135db7);
+	font-weight: 500;
+	text-decoration: none;
+}
+
+.sl-smcr-pevc-suite__cta:hover {
+	text-decoration: underline;
+}
+
+@media (max-width: 1000px) {
+	.sl-smcr-pevc-suite__header {
+		grid-template-columns: 1fr;
+		align-items: start;
+	}
+
+	.sl-smcr-pevc-suite__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 720px) {
+	.sl-smcr-pevc-suite__grid {
+		grid-template-columns: 1fr;
+	}
+}

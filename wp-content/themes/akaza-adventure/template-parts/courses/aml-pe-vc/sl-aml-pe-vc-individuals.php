@@ -16,7 +16,7 @@ $features = array(
 	),
 	array(
 		'num'   => '02',
-		'title' => __( '30-minute duration', 'akaza-adventure' ),
+		'title' => __( '40-minute duration', 'akaza-adventure' ),
 		'text'  => __( 'Complete the core AML learning in approximately half an hour.', 'akaza-adventure' ),
 	),
 	array(
@@ -44,14 +44,14 @@ $features = array(
 			<div class="sl-aml-pe-vc-individuals__content">
 
 				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'Individual AML Learning', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Individual AML eLearning', 'akaza-adventure' ); ?>
 				</span>
 
 				<h2 id="sl-aml-pe-vc-individuals-title">
 					<?php
 					echo wp_kses_post(
 						__(
-							'AML Training <span>For Individuals</span> — Start Immediately',
+							'AML Training <span>For Individuals</span> - Start Immediately',
 							'akaza-adventure'
 						)
 					);
@@ -84,24 +84,17 @@ $features = array(
 			</div>
 
 			<div class="sl-aml-pe-vc-individuals__media">
-				<div
-					class="sl-aml-pe-vc-individuals__image-placeholder"
-					role="img"
-					aria-label="<?php esc_attr_e( 'Individual AML Course Preview placeholder', 'akaza-adventure' ); ?>"
-				>
-					<span><?php esc_html_e( 'Individual AML Course Preview', 'akaza-adventure' ); ?></span>
-					<small>
-						<?php
-						esc_html_e(
-							'Replace with an approved SucceedLEARN AML lesson or knowledge-check screenshot.',
-							'akaza-adventure'
-						);
-						?>
-					</small>
-				</div>
+				<figure class="sl-aml-pe-vc-individuals__image">
+					<img
+						src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/Image-1-AML.webp' ); ?>"
+						alt="<?php esc_attr_e( 'Individual AML Course Preview', 'akaza-adventure' ); ?>"
+						loading="lazy"
+						decoding="async"
+					>
+				</figure>
 
 				<div class="sl-aml-pe-vc-individuals__actions">
-					<a class="sl-content-btn sl-content-btn-primary" href="#buy">
+					<a class="sl-content-btn sl-content-btn-primary" href="#contact">
 						<?php esc_html_e( 'Buy Now @ $20', 'akaza-adventure' ); ?>
 					</a>
 					<a class="sl-content-btn sl-content-btn-secondary" href="#contact">

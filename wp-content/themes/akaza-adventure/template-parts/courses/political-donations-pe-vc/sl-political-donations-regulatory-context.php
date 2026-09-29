@@ -38,9 +38,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<article class="sl-political-donations-regulatory-context__card">
 
 				<div class="sl-political-donations-regulatory-context__image">
-					<div class="sl-political-donations-regulatory-context__image-placeholder">
-						<?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?>
-					</div>
+					<img
+						src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/uk_regulatory_law.webp' ); ?>"
+						alt="<?php esc_attr_e( 'UK Bribery Act 2010 gifts and hospitality compliance', 'akaza-adventure' ); ?>"
+						loading="lazy"
+						decoding="async"
+					>
 				</div>
 
 				<div class="sl-political-donations-regulatory-context__content">
@@ -60,9 +63,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<article class="sl-political-donations-regulatory-context__card">
 
 				<div class="sl-political-donations-regulatory-context__image">
-					<div class="sl-political-donations-regulatory-context__image-placeholder">
-						<?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?>
-					</div>
+					<img
+						src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/us_pay_to_play_rules.webp' ); ?>"
+						alt="<?php esc_attr_e( 'U.S. FCPA foreign government official interactions', 'akaza-adventure' ); ?>"
+						loading="lazy"
+						decoding="async"
+					>
 				</div>
 
 				<div class="sl-political-donations-regulatory-context__content">

@@ -34,7 +34,7 @@ defined( 'ABSPATH' ) || exit;
 					<?php
 					echo wp_kses_post(
 						__(
-							'Gifts and Entertainment Compliance Risks <span>for PE/VC Firms</span>',
+							'Gifts and Entertainment Compliance Risks',
 							'akaza-adventure'
 						)
 					);
