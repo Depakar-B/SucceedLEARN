@@ -115,6 +115,11 @@ function akaza_bootstrap_pages() {
 			'template' => 'page-templates/information-security-awareness-training-for-soc-2-compliance.php',
 		),
 		array(
+			'slug'     => 'information-security-awareness-training',
+			'title'    => 'Information Security Awareness Training',
+			'template' => 'page-templates/information-security-awareness-training.php',
+		),
+		array(
 			'slug'     => 'information-security-awareness-training-for-uk-cyber-essentials',
 			'title'    => 'Information Security Awareness Training for UK Cyber Essentials',
 			'template' => 'page-templates/information-security-awareness-training-for-uk-cyber-essentials.php',

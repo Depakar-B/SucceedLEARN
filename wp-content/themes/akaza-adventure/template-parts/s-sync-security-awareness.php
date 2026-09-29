@@ -14,6 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php get_template_part( 'template-parts/s-sync-security-awareness/sl-s-sync-why' ); ?>
 	<?php get_template_part( 'template-parts/s-sync-security-awareness/sl-s-sync-connect' ); ?>
 	<?php get_template_part( 'template-parts/s-sync-security-awareness/sl-s-sync-integrations' ); ?>
+	<?php get_template_part( 'template-parts/s-sync-security-awareness/sl-s-sync-systems' ); ?>
 	<?php get_template_part( 'template-parts/s-sync-security-awareness/sl-s-sync-enterprise' ); ?>
 	<?php get_template_part( 'template-parts/s-sync-security-awareness/sl-s-sync-choose' ); ?>
 	<?php get_template_part( 'template-parts/s-sync-security-awareness/sl-s-sync-suite' ); ?>

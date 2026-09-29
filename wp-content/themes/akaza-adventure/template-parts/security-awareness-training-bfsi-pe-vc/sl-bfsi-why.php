@@ -9,14 +9,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$bfsi_why_file  = '2026/09/BFSI-PE-VC-Why.webp';
-$bfsi_why_local = WP_CONTENT_DIR . '/uploads/' . $bfsi_why_file;
-$bfsi_why_image = '';
+$bfsi_why_image = 'https://succeedlearn.com/wp-content/uploads/2026/01/BFSI-and-PE-VC-Security-Awareness-Hero-Section-1.webp';
+$bfsi_why_local = WP_CONTENT_DIR . '/uploads/2026/01/BFSI-and-PE-VC-Security-Awareness-Hero-Section-1.webp';
 
 if ( function_exists( 'akaza_upload_url' ) && file_exists( $bfsi_why_local ) ) {
-	$bfsi_why_image = akaza_upload_url( $bfsi_why_file );
-} elseif ( file_exists( $bfsi_why_local ) ) {
-	$bfsi_why_image = content_url( '/uploads/' . $bfsi_why_file );
+	$bfsi_why_image = akaza_upload_url( '2026/01/BFSI-and-PE-VC-Security-Awareness-Hero-Section-1.webp' );
 }
 ?>
 
@@ -29,20 +26,16 @@ if ( function_exists( 'akaza_upload_url' ) && file_exists( $bfsi_why_local ) ) {
 		<div class="sl-bfsi-why__grid">
 
 			<div class="sl-bfsi-why__media">
-				<?php if ( $bfsi_why_image ) : ?>
-					<div class="sl-bfsi-why__image">
-						<img
-							src="<?php echo esc_url( $bfsi_why_image ); ?>"
-							alt="<?php esc_attr_e( 'Why cybersecurity awareness matters for BFSI and PE/VC', 'akaza-adventure' ); ?>"
-							width="720"
-							height="720"
-							loading="lazy"
-							decoding="async"
-						/>
-					</div>
-				<?php else : ?>
-					<div class="sl-bfsi-why__image sl-bfsi-why__image--placeholder" aria-hidden="true"></div>
-				<?php endif; ?>
+				<div class="sl-bfsi-why__image">
+					<img
+						src="<?php echo esc_url( $bfsi_why_image ); ?>"
+						alt="<?php esc_attr_e( 'Why cybersecurity awareness matters for BFSI and PE/VC', 'akaza-adventure' ); ?>"
+						width="720"
+						height="720"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
 			</div>
 
 			<div class="sl-bfsi-why__content">

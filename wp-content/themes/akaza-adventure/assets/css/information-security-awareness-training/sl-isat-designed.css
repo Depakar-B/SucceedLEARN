@@ -1,19 +1,24 @@
-.sl-bfsi-structure {
+/*
+ * SOC 2 Security Awareness — Designed / learning elements.
+ * Card pattern mirrored from SAP annual-training cards.
+ */
+
+.sl-isat-designed {
 	position: relative;
 	z-index: 1;
 	padding: 90px 0;
 	background: var(--sl-page-white, #ffffff);
 }
 
-.sl-bfsi-structure__heading {
+.sl-isat-designed__heading {
 	margin-bottom: 28px;
 }
 
-.sl-bfsi-structure__heading h2 {
+.sl-isat-designed__heading h2 {
 	margin: 0;
 }
 
-.sl-training-page .sl-bfsi-structure__subhead {
+.sl-training-page .sl-isat-designed__subhead {
 	margin: 0 0 24px;
 	font-family: var(--slf-font-display, "Space Grotesk", system-ui, sans-serif);
 	font-size: 20px !important;
@@ -23,14 +28,14 @@
 	color: var(--sl-page-navy, #16234e);
 }
 
-.sl-bfsi-structure__grid {
+.sl-isat-designed__grid {
 	display: grid;
 	grid-template-columns: repeat(6, minmax(0, 1fr));
 	gap: 24px;
 	align-items: stretch;
 }
 
-.sl-bfsi-structure__card {
+.sl-isat-designed__card {
 	display: flex;
 	flex-direction: column;
 	grid-column: span 2;
@@ -43,15 +48,15 @@
 	box-sizing: border-box;
 }
 
-.sl-bfsi-structure__card:nth-child(4) {
+.sl-isat-designed__card:nth-child(4) {
 	grid-column: 2 / 4;
 }
 
-.sl-bfsi-structure__card:nth-child(5) {
+.sl-isat-designed__card:nth-child(5) {
 	grid-column: 4 / 6;
 }
 
-.sl-bfsi-structure__card h3 {
+.sl-isat-designed__card h3 {
 	margin: 0 0 12px;
 	color: var(--sl-page-primary, #1472ba);
 	font-size: 18px !important;
@@ -59,19 +64,19 @@
 	line-height: 1.3;
 }
 
-.sl-bfsi-structure__card p {
+.sl-isat-designed__card p {
 	margin: 0;
 	color: var(--sl-page-text, #16234e);
 }
 
-.sl-bfsi-structure__details {
+.sl-isat-designed__details {
 	display: flex;
 	flex-direction: column;
 	gap: 22px;
 	margin-top: 36px;
 }
 
-.sl-bfsi-structure__detail h3 {
+.sl-isat-designed__detail h3 {
 	margin: 0 0 8px;
 	color: var(--sl-page-navy, #16234e);
 	font-size: 20px !important;
@@ -79,40 +84,52 @@
 	line-height: 1.35;
 }
 
-.sl-bfsi-structure__detail p {
+.sl-isat-designed__detail p {
 	margin: 0;
 	max-width: 900px;
 	color: var(--sl-page-text, #16234e);
 }
 
 @media (max-width: 991px) {
-	.sl-bfsi-structure__grid {
+	.sl-isat-designed__grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 
-	.sl-bfsi-structure__card,
-	.sl-bfsi-structure__card:nth-child(4),
-	.sl-bfsi-structure__card:nth-child(5) {
+	.sl-isat-designed__card,
+	.sl-isat-designed__card:nth-child(4),
+	.sl-isat-designed__card:nth-child(5) {
 		grid-column: auto;
 	}
 }
 
 @media (max-width: 767px) {
-	.sl-bfsi-structure {
+	.sl-isat-designed {
 		padding: 60px 0;
 	}
 
-	.sl-bfsi-structure__grid {
+	.sl-isat-designed__grid {
 		grid-template-columns: 1fr;
 		gap: 16px;
 	}
 
-	.sl-bfsi-structure__card {
+	.sl-isat-designed__card {
 		padding: 22px 20px;
 	}
 
-	.sl-bfsi-structure__details {
+	.sl-isat-designed__details {
 		margin-top: 28px;
 		gap: 18px;
 	}
+}
+
+/* Lead + intro copy */
+.sl-isat-designed__lead {
+	margin: 16px 0 0;
+	color: var(--sl-page-navy, #16234e);
+	font-weight: 500;
+}
+
+.sl-isat-designed__intro {
+	max-width: 860px;
+	margin: 0 0 28px;
 }
