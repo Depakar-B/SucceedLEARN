@@ -229,7 +229,7 @@ function succeedlearn_amp_get_gwct_solutions() {
 			'image'      => '',
 			'image_alt'  => __( 'Responsible Use of Generative AI training', 'succeedlearn-amp' ),
 			'cta_label'  => __( 'Explore Responsible Use of Generative AI Training', 'succeedlearn-amp' ),
-			'cta_url'    => '#responsible-use-of-generative-ai-training',
+			'cta_url'    => home_url( '/responsible-use-of-generative-ai-training/' ),
 		),
 	);
 }

@@ -83,7 +83,7 @@ $solutions = array(
 		'image'       => '',
 		'image_alt'   => __( 'Responsible Use of Generative AI training', 'akaza-adventure' ),
 		'cta_label'   => __( 'Explore Responsible Use of Generative AI Training', 'akaza-adventure' ),
-		'cta_url'     => '#responsible-use-of-generative-ai-training',
+		'cta_url'     => home_url( '/responsible-use-of-generative-ai-training/' ),
 	),
 );
 ?>

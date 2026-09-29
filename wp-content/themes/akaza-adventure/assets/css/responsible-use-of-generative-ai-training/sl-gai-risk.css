@@ -1,0 +1,32 @@
+/**
+ * GenAI — Risk-based approach (editorial).
+ */
+
+.sl-gai-risk {
+	padding: 90px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-gai-risk__content {
+	max-width: 920px;
+}
+
+.sl-gai-risk__content h2 {
+	margin-bottom: 22px;
+}
+
+.sl-gai-risk__copy {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.sl-gai-risk__copy p {
+	margin: 0;
+}
+
+@media (max-width: 767px) {
+	.sl-gai-risk {
+		padding: 60px 0;
+	}
+}
