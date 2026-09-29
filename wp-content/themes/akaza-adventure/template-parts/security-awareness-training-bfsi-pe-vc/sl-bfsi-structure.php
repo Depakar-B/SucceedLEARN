@@ -51,9 +51,9 @@ $learning_elements = array(
 			</h2>
 		</div>
 
-		<h3 class="sl-bfsi-structure__subhead">
+		<p class="sl-bfsi-structure__subhead">
 			<?php esc_html_e( 'Learning Elements', 'akaza-adventure' ); ?>
-		</h3>
+		</p>
 
 		<div class="sl-bfsi-structure__grid">
 			<?php foreach ( $learning_elements as $element ) : ?>

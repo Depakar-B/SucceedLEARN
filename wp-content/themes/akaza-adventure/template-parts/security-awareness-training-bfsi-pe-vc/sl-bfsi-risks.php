@@ -17,7 +17,7 @@ $risks = array(
 			__( 'Employees learn to recognise different forms of phishing and impersonation across email, SMS, telephone and video, identify common warning signs and apply appropriate verification and reporting steps.', 'akaza-adventure' ),
 		),
 		'topics' => __( 'Phishing · Smishing · Vishing · Impersonation · Suspicious Requests · Verification · Reporting', 'akaza-adventure' ),
-		'file'   => '2026/09/BFSI-PE-VC-Social-Engineering.webp',
+		'file'   => '2026/09/Social-Engineering-Awareness.webp',
 		'alt'    => __( 'Social engineering awareness for financial-services employees', 'akaza-adventure' ),
 	),
 	array(
@@ -28,7 +28,7 @@ $risks = array(
 			__( 'Learners explore warning signs, preventative behaviours and appropriate reporting actions.', 'akaza-adventure' ),
 		),
 		'topics' => __( 'Malicious Insiders · Negligent Behaviour · Compromised Accounts · Data Misuse · Reporting', 'akaza-adventure' ),
-		'file'   => '2026/09/BFSI-PE-VC-Insider-Threats.webp',
+		'file'   => '2026/09/Insider-Risk-and-Trust-management.webp',
 		'alt'    => __( 'Insider threat awareness training', 'akaza-adventure' ),
 	),
 	array(
@@ -38,7 +38,7 @@ $risks = array(
 			__( 'Employees learn to recognise risks such as tailgating, unsecured devices, forged or misused access credentials and unattended confidential information, while reinforcing appropriate workplace security practices.', 'akaza-adventure' ),
 		),
 		'topics' => __( 'Access Control · Tailgating · Device Security · Visitor Security · Confidential Information', 'akaza-adventure' ),
-		'file'   => '2026/09/BFSI-PE-VC-Physical-Security.webp',
+		'file'   => '2026/09/Workplace-Security-Asset-protection.webp',
 		'alt'    => __( 'Physical security awareness in the workplace', 'akaza-adventure' ),
 	),
 	array(
@@ -49,7 +49,7 @@ $risks = array(
 			__( 'It also introduces privacy considerations associated with AI.', 'akaza-adventure' ),
 		),
 		'topics' => __( 'Personal Data · Sensitive Data · Data Handling · DSARs · Data Incidents · Third-Party Sharing · Responsible AI', 'akaza-adventure' ),
-		'file'   => '2026/09/BFSI-PE-VC-Data-Privacy.webp',
+		'file'   => '2026/09/Data-Protection-Privacy-Essentials.webp',
 		'alt'    => __( 'Data privacy awareness for BFSI and PE/VC employees', 'akaza-adventure' ),
 	),
 	array(
@@ -59,7 +59,7 @@ $risks = array(
 			__( 'Employees learn their role in following approved processes for vendor engagement, data sharing, onboarding and escalation, helping ensure established third-party controls are followed in day-to-day work.', 'akaza-adventure' ),
 		),
 		'topics' => __( 'Vendor Risk · Approved Third Parties · Secure Data Sharing · Due Diligence · Escalation', 'akaza-adventure' ),
-		'file'   => '2026/09/BFSI-PE-VC-Third-Party-Risk.webp',
+		'file'   => '2026/09/Third-party-Security-Governance.webp',
 		'alt'    => __( 'Third-party risk awareness for financial services', 'akaza-adventure' ),
 	),
 	array(
@@ -69,7 +69,7 @@ $risks = array(
 			__( 'The course helps employees recognize AI-generated phishing, deepfake video, voice impersonation, and other AI-enabled deception techniques, while reinforcing verification and escalation before acting on suspicious instructions.', 'akaza-adventure' ),
 		),
 		'topics' => __( 'Deepfakes · Voice Cloning · AI Phishing · Impersonation · Verification · Escalation', 'akaza-adventure' ),
-		'file'   => '2026/09/BFSI-PE-VC-AI-Based-Attacks.webp',
+		'file'   => '2026/09/AI-Enabled-Cyber-Risk.webp',
 		'alt'    => __( 'AI-based cyberattack awareness', 'akaza-adventure' ),
 	),
 );
@@ -96,27 +96,21 @@ $risks = array(
 		<div class="sl-bfsi-risks__grid">
 			<?php foreach ( $risks as $risk ) : ?>
 				<?php
-				$risk_src   = '';
-				$risk_local = WP_CONTENT_DIR . '/uploads/' . $risk['file'];
-				if ( function_exists( 'akaza_upload_url' ) && file_exists( $risk_local ) ) {
-					$risk_src = akaza_upload_url( $risk['file'] );
-				}
+				$risk_src = function_exists( 'akaza_upload_url' )
+					? akaza_upload_url( $risk['file'] )
+					: 'https://succeedlearn.com/wp-content/uploads/' . $risk['file'];
 				?>
 				<article class="sl-bfsi-risks__card">
-					<?php if ( $risk_src ) : ?>
-						<div class="sl-bfsi-risks__media">
-							<img
-								src="<?php echo esc_url( $risk_src ); ?>"
-								alt="<?php echo esc_attr( $risk['alt'] ); ?>"
-								width="640"
-								height="360"
-								loading="lazy"
-								decoding="async"
-							/>
-						</div>
-					<?php else : ?>
-						<div class="sl-bfsi-risks__media sl-bfsi-risks__media--placeholder" aria-hidden="true"></div>
-					<?php endif; ?>
+					<div class="sl-bfsi-risks__media">
+						<img
+							src="<?php echo esc_url( $risk_src ); ?>"
+							alt="<?php echo esc_attr( $risk['alt'] ); ?>"
+							width="640"
+							height="360"
+							loading="lazy"
+							decoding="async"
+						/>
+					</div>
 
 					<div class="sl-bfsi-risks__content">
 						<h3 class="sl-panel-title">

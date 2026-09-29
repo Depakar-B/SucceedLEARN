@@ -1,7 +1,7 @@
 <?php
 /**
  * BFSI & PE/VC — Case Studies: Real Consequences of Non-Compliance.
- * Content retained from the existing course page.
+ * Sticky left intro + scrollable right case cards.
  *
  * @package Akaza_Adventure
  */
@@ -32,56 +32,60 @@ $cases = array(
 >
 	<div class="container">
 
-		<div class="sl-bfsi-cases__intro">
+		<div class="sl-bfsi-cases__layout">
 
-			<span class="sl-home-sub-heading">
-				<?php esc_html_e( 'Real-World Impact', 'akaza-adventure' ); ?>
-			</span>
+			<div class="sl-bfsi-cases__intro">
 
-			<h2 id="sl-bfsi-cases-title">
-				<?php esc_html_e( 'Case Studies: Real Consequences of', 'akaza-adventure' ); ?>
-				<span><?php esc_html_e( 'Non-Compliance', 'akaza-adventure' ); ?></span>
-			</h2>
+				<span class="sl-home-sub-heading">
+					<?php esc_html_e( 'Real-World Impact', 'akaza-adventure' ); ?>
+				</span>
 
-			<div class="sl-bfsi-cases__copy">
-				<p>
-					<?php
-					esc_html_e(
-						'Although Social Engineering, Insider Threat, Physical Security, Data Privacy, Third-Party Risk, and AI-based Attacks training are not always explicitly mandated as standalone legal requirements, regulators consistently expect documented, role-based security and privacy training as part of reasonable organizational controls. Companies that fail to train employees on threat recognition, data handling, vendor risks, and incident reporting face significantly higher penalties after incidents, making such training effectively mandatory in practice to demonstrate compliance, due diligence, and risk reduction.',
-						'akaza-adventure'
-					);
-					?>
-				</p>
+				<h2 id="sl-bfsi-cases-title">
+					<?php esc_html_e( 'Case Studies: Real Consequences of', 'akaza-adventure' ); ?>
+					<span><?php esc_html_e( 'Non-Compliance', 'akaza-adventure' ); ?></span>
+				</h2>
 
-				<p>
-					<?php
-					esc_html_e(
-						'Following are a few cases of companies facing penalties, thus highlighting the need for compliance:',
-						'akaza-adventure'
-					);
-					?>
-				</p>
+				<div class="sl-bfsi-cases__copy">
+					<p>
+						<?php
+						esc_html_e(
+							'Although Social Engineering, Insider Threat, Physical Security, Data Privacy, Third-Party Risk, and AI-based Attacks training are not always explicitly mandated as standalone legal requirements, regulators consistently expect documented, role-based security and privacy training as part of reasonable organizational controls. Companies that fail to train employees on threat recognition, data handling, vendor risks, and incident reporting face significantly higher penalties after incidents, making such training effectively mandatory in practice to demonstrate compliance, due diligence, and risk reduction.',
+							'akaza-adventure'
+						);
+						?>
+					</p>
+
+					<p>
+						<?php
+						esc_html_e(
+							'Following are a few cases of companies facing penalties, thus highlighting the need for compliance:',
+							'akaza-adventure'
+						);
+						?>
+					</p>
+				</div>
+
 			</div>
 
-		</div>
+			<div class="sl-bfsi-cases__cards">
 
-		<div class="sl-bfsi-cases__grid">
+				<?php foreach ( $cases as $index => $case ) : ?>
 
-			<?php foreach ( $cases as $index => $case ) : ?>
+					<article class="sl-bfsi-cases__card">
+						<span class="sl-bfsi-cases__number" aria-hidden="true">
+							<?php echo esc_html( str_pad( (string) ( $index + 1 ), 2, '0', STR_PAD_LEFT ) ); ?>
+						</span>
+						<h3 class="sl-panel-title">
+							<?php echo esc_html( $case['title'] ); ?>
+						</h3>
+						<p>
+							<?php echo esc_html( $case['text'] ); ?>
+						</p>
+					</article>
 
-				<article class="sl-bfsi-cases__card">
-					<span class="sl-bfsi-cases__number" aria-hidden="true">
-						<?php echo esc_html( str_pad( (string) ( $index + 1 ), 2, '0', STR_PAD_LEFT ) ); ?>
-					</span>
-					<h3 class="sl-panel-title">
-						<?php echo esc_html( $case['title'] ); ?>
-					</h3>
-					<p>
-						<?php echo esc_html( $case['text'] ); ?>
-					</p>
-				</article>
+				<?php endforeach; ?>
 
-			<?php endforeach; ?>
+			</div>
 
 		</div>
 
