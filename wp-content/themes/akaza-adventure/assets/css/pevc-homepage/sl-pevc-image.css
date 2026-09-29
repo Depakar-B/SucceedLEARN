@@ -1,0 +1,42 @@
+/* PE/VC Homepage — Full-width illustration */
+
+.sl-pevc-image {
+	padding: 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-pevc-image .container {
+	max-width: none;
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.sl-pevc-image__figure {
+	margin: 0;
+	width: 100%;
+	overflow: hidden;
+	background: #ffffff;
+}
+
+.sl-pevc-image__figure img {
+	display: block;
+	width: 100%;
+	max-height: 360px;
+	height: auto;
+	object-fit: contain;
+	object-position: center;
+	margin: 0 auto;
+}
+
+@media (max-width: 991px) {
+	.sl-pevc-image__figure img {
+		max-height: 280px;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-pevc-image__figure img {
+		max-height: 220px;
+	}
+}

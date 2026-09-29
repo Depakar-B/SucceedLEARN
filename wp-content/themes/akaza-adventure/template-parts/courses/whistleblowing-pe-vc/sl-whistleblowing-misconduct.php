@@ -62,9 +62,12 @@ $concerns = array(
 		<div class="sl-whistleblowing-misconduct__grid">
 			<?php foreach ( $concerns as $concern ) : ?>
 				<article class="sl-whistleblowing-misconduct__card">
-					<h3 class="sl-panel-title">
-						<?php echo esc_html( $concern['title'] ); ?>
-					</h3>
+					<div class="sl-whistleblowing-misconduct__card-head">
+						<span class="sl-whistleblowing-misconduct__check" aria-hidden="true">✓</span>
+						<h3 class="sl-panel-title">
+							<?php echo esc_html( $concern['title'] ); ?>
+						</h3>
+					</div>
 
 					<p>
 						<?php echo esc_html( $concern['text'] ); ?>

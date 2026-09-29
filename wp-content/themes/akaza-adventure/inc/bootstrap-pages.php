@@ -110,6 +110,21 @@ function akaza_bootstrap_pages() {
 			'template' => 'page-templates/gdpr-employee-awareness-training.php',
 		),
 		array(
+			'slug'     => 'information-security-awareness-training-for-soc-2-compliance',
+			'title'    => 'Information Security Awareness Training for SOC 2 Compliance',
+			'template' => 'page-templates/information-security-awareness-training-for-soc-2-compliance.php',
+		),
+		array(
+			'slug'     => 'information-security-awareness-training',
+			'title'    => 'Information Security Awareness Training',
+			'template' => 'page-templates/information-security-awareness-training.php',
+		),
+		array(
+			'slug'     => 'information-security-awareness-training-for-uk-cyber-essentials',
+			'title'    => 'Information Security Awareness Training for UK Cyber Essentials',
+			'template' => 'page-templates/information-security-awareness-training-for-uk-cyber-essentials.php',
+		),
+		array(
 			'slug'     => 'ferpa-training-for-school-and-university-staff',
 			'title'    => 'FERPA Training for School and University Staff',
 			'template' => 'page-templates/ferpa-training-for-school-and-university-staff.php',
@@ -133,6 +148,11 @@ function akaza_bootstrap_pages() {
 			'slug'     => 's-phish',
 			'title'    => 'S-Phish',
 			'template' => 'page-templates/s-phish-phishing-simulation.php',
+		),
+		array(
+			'slug'     => 'private-equity-venture-capital-compliance-training',
+			'title'    => 'Private Equity and Venture Capital Compliance Training',
+			'template' => 'page-templates/pevc-compliance-training-programs.php',
 		),
 		array(
 			'slug'     => 's-sync',
@@ -163,6 +183,21 @@ function akaza_bootstrap_pages() {
 			'slug'     => 'secure-coding-practices-training',
 			'title'    => 'Secure Coding Practices Training for Developers',
 			'template' => 'page-templates/secure-coding-practices-training.php',
+		),
+		array(
+			'slug'     => 'pci-dss',
+			'title'    => 'PCI DSS Awareness Training for Employees & Payment Handlers',
+			'template' => 'page-templates/pci-dss.php',
+		),
+		array(
+			'slug'     => 'security-awareness-training-bfsi-pe-vc',
+			'title'    => 'Cybersecurity Awareness Training for BFSI & PE/VC',
+			'template' => 'page-templates/security-awareness-training-bfsi-pe-vc.php',
+		),
+		array(
+			'slug'     => 'iso-27001-2022-staff-awareness-training',
+			'title'    => 'ISO 27001:2022 Staff Awareness Training',
+			'template' => 'page-templates/iso-27001-2022-staff-awareness-training.php',
 		),
 	);
 

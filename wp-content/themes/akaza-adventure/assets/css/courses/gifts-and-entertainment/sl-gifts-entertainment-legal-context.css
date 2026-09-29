@@ -3,89 +3,194 @@
    Gifts & Entertainment Training for PE/VC Professionals
    UK and US Legal Context
 
+   Matches preview .law-grid / .law-card / .legal-note UI.
    Container and section spacing come from course-global.css.
    ========================================================= */
 
-   .sl-course-page .sl-gifts-entertainment-legal-context {
-	background: var(--course-white, #ffffff);
+.sl-course-page .sl-gifts-entertainment-legal-context {
+	background: var(--course-light-bg, #f5f5f5);
 }
 
 
 /* =========================================================
-   Full Width Introduction
+   Introduction
    ========================================================= */
 
 .sl-gifts-entertainment-legal-context__intro {
-	width: 100%;
-	margin-bottom: 40px;
+	max-width: 800px;
+	margin-bottom: 31px;
 }
 
 .sl-gifts-entertainment-legal-context__intro h2 {
-	margin-bottom: 18px;
+	margin-bottom: 22px;
+}
+
+.sl-gifts-entertainment-legal-context__intro h2 > span {
+	color: var(--course-primary, #135db7);
 }
 
 .sl-gifts-entertainment-legal-context__intro p {
-	max-width: 900px;
 	margin: 0;
+	font-size: 1.17rem;
+	line-height: 1.65;
 }
 
 
 /* =========================================================
-   Legal Context Cards
+   Law cards — alternating image / content rows
    ========================================================= */
 
-.sl-gifts-entertainment-legal-context__grid {
+.sl-gifts-entertainment-legal-context__stack {
 	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: 20px;
+	gap: 24px;
 }
-
-
-/* =========================================================
-   Card
-   ========================================================= */
 
 .sl-gifts-entertainment-legal-context__card {
-	padding: 28px 30px;
-
-	background: var(--course-light-bg, #f5f5f5);
-	border: 1px solid rgba(20, 114, 186, 0.14);
-	border-radius: 14px;
-	box-sizing: border-box;
+	display: grid;
+	grid-template-columns: minmax(290px, 0.85fr) minmax(0, 1.15fr);
+	min-height: 315px;
+	overflow: hidden;
+	border: 1px solid #dde3eb;
+	border-radius: 24px;
+	background: #ffffff;
+	box-shadow: 0 14px 36px rgba(22, 35, 77, 0.07);
 }
 
-.sl-gifts-entertainment-legal-context__card-label {
+.sl-gifts-entertainment-legal-context__card:nth-child(even) {
+	grid-template-columns: minmax(0, 1.15fr) minmax(290px, 0.85fr);
+}
+
+.sl-gifts-entertainment-legal-context__card:nth-child(even) .sl-gifts-entertainment-legal-context__media {
+	order: 2;
+}
+
+.sl-gifts-entertainment-legal-context__card:nth-child(even) .sl-gifts-entertainment-legal-context__content {
+	order: 1;
+}
+
+.sl-gifts-entertainment-legal-context__media {
+	position: relative;
+	min-height: 315px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 32px;
+	text-align: center;
+	background: linear-gradient(135deg, #eaf3fd 0%, #f7fafe 100%);
+}
+
+.sl-gifts-entertainment-legal-context__media::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 5px;
+	background: var(--course-primary, #135db7);
+}
+
+.sl-gifts-entertainment-legal-context__media--photo {
+	padding: 0;
+	overflow: hidden;
+	background: #edf5fd;
+}
+
+.sl-gifts-entertainment-legal-context__media--photo img {
 	display: block;
-	margin-bottom: 10px;
+	width: 100%;
+	height: 100%;
+	min-height: 315px;
+	object-fit: cover;
+}
 
-	color: var(--course-primary, #1472ba);
-	font-size: 14px;
+.sl-gifts-entertainment-legal-context__icon {
+	width: 74px;
+	height: 74px;
+	display: grid;
+	place-items: center;
+	margin-bottom: 16px;
+	border-radius: 20px;
+	background: #ffffff;
+	color: var(--course-primary, #135db7);
+	font-size: 1.3rem;
 	font-weight: 700;
-	line-height: 1.4;
+	box-shadow: 0 10px 28px rgba(22, 35, 77, 0.1);
 }
 
-.sl-gifts-entertainment-legal-context__card h3 {
-	margin: 0 0 10px;
-	color: var(--course-navy, #16234e);
+.sl-gifts-entertainment-legal-context__media strong {
+	display: block;
+	margin-bottom: 6px;
+	color: var(--course-navy, #16234d);
+	font-size: 1rem;
 }
 
-.sl-gifts-entertainment-legal-context__card p {
+.sl-gifts-entertainment-legal-context__media span:not(.sl-gifts-entertainment-legal-context__icon) {
+	max-width: 290px;
+	color: #596274;
+	font-size: 0.88rem;
+	line-height: 1.5;
+}
+
+.sl-gifts-entertainment-legal-context__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: clamp(32px, 5vw, 58px);
+}
+
+.sl-gifts-entertainment-legal-context__code {
+	display: inline-flex;
+	width: max-content;
+	margin-bottom: 15px;
+	padding: 7px 11px;
+	border-radius: 8px;
+	background: #edf5fd;
+	color: var(--course-primary, #135db7);
+	font-size: 0.84rem;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+}
+
+.sl-gifts-entertainment-legal-context__content h3 {
+	margin: 0 0 8px;
+	color: #0a3d7a;
+	font-size: 1.35rem;
+}
+
+.sl-gifts-entertainment-legal-context__fullname {
+	display: block;
+	margin-bottom: 17px;
+	color: var(--course-primary, #135db7);
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+.sl-gifts-entertainment-legal-context__content p {
+	max-width: 660px;
 	margin: 0;
+	font-size: 1rem;
+	line-height: 1.75;
+	color: #555e70;
 }
 
 
 /* =========================================================
-   Highlighted Statement
+   Highlight — preview .legal-note
    ========================================================= */
 
 .sl-gifts-entertainment-legal-context__highlight {
 	margin-top: 28px;
-	padding: 24px 28px;
-
-	background: rgba(14, 159, 74, 0.06);
-	border-left: 4px solid var(--course-accent, #0e9f4a);
-	border-radius: 0 12px 12px 0;
+	padding: 22px 24px;
+	border-left: 4px solid var(--course-primary, #135db7);
+	border-radius: 0 11px 11px 0;
+	background: #eef5fc;
 	box-sizing: border-box;
+}
+
+.sl-gifts-entertainment-legal-context__highlight strong {
+	display: block;
+	color: var(--course-navy, #16234d);
 }
 
 .sl-gifts-entertainment-legal-context__highlight p {
@@ -93,55 +198,50 @@
 }
 
 .sl-gifts-entertainment-legal-context__highlight p + p {
-	margin-top: 6px;
-}
-
-.sl-gifts-entertainment-legal-context__highlight strong {
-	color: var(--course-navy, #16234e);
+	margin-top: 8px;
 }
 
 
 /* =========================================================
-   Tablet
+   Responsive
    ========================================================= */
 
-@media (max-width: 800px) {
-
-	.sl-gifts-entertainment-legal-context__intro {
-		margin-bottom: 32px;
-	}
-
-	.sl-gifts-entertainment-legal-context__grid {
-		gap: 16px;
-	}
-
-	.sl-gifts-entertainment-legal-context__card {
-		padding: 24px;
-	}
-}
-
-
-/* =========================================================
-   Mobile
-   ========================================================= */
-
-@media (max-width: 767px) {
-
-	.sl-gifts-entertainment-legal-context__grid {
+@media (max-width: 850px) {
+	.sl-gifts-entertainment-legal-context__card,
+	.sl-gifts-entertainment-legal-context__card:nth-child(even) {
 		grid-template-columns: 1fr;
 	}
 
-	.sl-gifts-entertainment-legal-context__intro h2 {
-		margin-bottom: 16px;
+	.sl-gifts-entertainment-legal-context__card:nth-child(even) .sl-gifts-entertainment-legal-context__media,
+	.sl-gifts-entertainment-legal-context__card:nth-child(even) .sl-gifts-entertainment-legal-context__content {
+		order: initial;
 	}
 
-	.sl-gifts-entertainment-legal-context__card {
-		padding: 22px;
-		border-radius: 12px;
+	.sl-gifts-entertainment-legal-context__media,
+	.sl-gifts-entertainment-legal-context__media--photo img {
+		min-height: 250px;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-gifts-entertainment-legal-context__intro {
+		margin-bottom: 24px;
+	}
+
+	.sl-gifts-entertainment-legal-context__intro p {
+		font-size: 1rem;
+	}
+
+	.sl-gifts-entertainment-legal-context__intro h2 {
+		margin-bottom: 18px;
+	}
+
+	.sl-gifts-entertainment-legal-context__content {
+		padding: 28px 24px 32px;
 	}
 
 	.sl-gifts-entertainment-legal-context__highlight {
 		margin-top: 20px;
-		padding: 20px;
+		padding: 18px 20px;
 	}
 }

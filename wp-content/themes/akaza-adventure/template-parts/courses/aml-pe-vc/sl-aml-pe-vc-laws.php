@@ -44,7 +44,6 @@ $us_laws = array(
 	),
 );
 
-$ribbon = array( 'FCA', 'MLRO', 'NCA', 'FinCEN' );
 ?>
 
 <section
@@ -115,12 +114,6 @@ $ribbon = array( 'FCA', 'MLRO', 'NCA', 'FinCEN' );
 			</div>
 
 		</div>
-
-		<ul class="sl-aml-pe-vc-laws__ribbon">
-			<?php foreach ( $ribbon as $item ) : ?>
-				<li><?php echo esc_html( $item ); ?></li>
-			<?php endforeach; ?>
-		</ul>
 
 	</div>
 </section>

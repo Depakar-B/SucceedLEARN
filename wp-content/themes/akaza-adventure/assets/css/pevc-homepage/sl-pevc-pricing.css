@@ -1,0 +1,98 @@
+/* PE/VC Homepage — Pricing banner */
+
+.sl-pevc-pricing {
+	padding: 54px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-pevc-pricing__banner {
+	display: grid;
+	grid-template-columns: 1fr 0.85fr;
+	gap: 45px;
+	align-items: center;
+	padding: 42px;
+	background: linear-gradient(120deg, #fff7f4, #ffffff);
+	border: 1px solid #f3b7aa;
+	border-radius: 26px;
+}
+
+.sl-pevc-pricing__badge {
+	display: inline-flex;
+	padding: 7px 12px;
+	margin-bottom: 12px;
+	color: #ffffff;
+	background: var(--sl-page-cta, #ea3e24);
+	border-radius: 999px;
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.sl-pevc-pricing__banner h2 {
+	margin-bottom: 12px;
+}
+
+.sl-pevc-pricing__price {
+	margin-bottom: 9px;
+	color: var(--sl-page-cta, #ea3e24);
+	font-size: clamp(2rem, 4vw, 3.4rem);
+	font-weight: 700;
+	line-height: 1;
+}
+
+.sl-pevc-pricing__lead {
+	max-width: 520px;
+	margin: 0 0 8px;
+	font-size: 1.12rem;
+}
+
+.sl-pevc-pricing__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-pevc-pricing__list li {
+	position: relative;
+	padding: 8px 0 8px 34px;
+	color: var(--sl-page-text, #4a4a4a);
+}
+
+.sl-pevc-pricing__list li::before {
+	position: absolute;
+	left: 0;
+	top: 10px;
+	display: grid;
+	place-items: center;
+	width: 22px;
+	height: 22px;
+	color: #ffffff;
+	background: var(--sl-page-cta, #ea3e24);
+	border-radius: 50%;
+	content: "✓";
+	font-size: 0.72rem;
+	font-weight: 700;
+}
+
+@media (max-width: 1050px) {
+	.sl-pevc-pricing__banner {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 680px) {
+	.sl-pevc-pricing__banner {
+		padding: 26px;
+	}
+
+	.sl-pevc-pricing__actions {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.sl-pevc-pricing__actions .sl-hero-btn {
+		width: 100%;
+		justify-content: center;
+	}
+}

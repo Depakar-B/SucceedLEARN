@@ -1,0 +1,100 @@
+/*
+ * UK Cyber Essentials Security Awareness — Audience.
+ */
+
+.sl-ukce-audience {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-ukce-audience__heading {
+	margin-bottom: 40px;
+}
+
+.sl-ukce-audience__heading h2 {
+	margin-bottom: 16px;
+}
+
+.sl-ukce-audience__heading p {
+	max-width: 860px;
+	margin: 0;
+}
+
+.sl-ukce-audience__grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 24px;
+}
+
+.sl-ukce-audience__card {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 28px 24px;
+	border: 1px solid rgba(107, 124, 147, 0.18);
+	border-radius: 16px;
+	background: var(--sl-page-bg, #f5f5f5);
+	box-shadow: 0 8px 24px rgba(22, 35, 78, 0.04);
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.sl-ukce-audience__card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 14px 32px rgba(22, 35, 78, 0.1);
+}
+
+.sl-ukce-audience__card h3 {
+	margin: 0 0 12px;
+	color: var(--sl-page-navy, #16234e);
+	font-size: 18px !important;
+	font-weight: 700;
+	line-height: 1.35;
+}
+
+.sl-ukce-audience__card p {
+	margin: 0;
+	color: var(--sl-page-muted, #6b7c93);
+	font-size: 15px;
+	line-height: 1.6;
+}
+
+@media (max-width: 1199px) {
+	.sl-ukce-audience__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.sl-ukce-audience__grid > .sl-ukce-audience__card:last-child:nth-child(odd) {
+		grid-column: 1 / -1;
+		width: 100%;
+		max-width: calc((100% - 24px) / 2);
+		justify-self: center;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-ukce-audience {
+		padding: 60px 0;
+	}
+
+	.sl-ukce-audience__heading {
+		margin-bottom: 28px;
+	}
+
+	.sl-ukce-audience__grid {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
+	.sl-ukce-audience__grid > .sl-ukce-audience__card:last-child:nth-child(odd) {
+		grid-column: auto;
+		max-width: none;
+	}
+
+	.sl-ukce-audience__card {
+		padding: 22px 20px;
+	}
+}

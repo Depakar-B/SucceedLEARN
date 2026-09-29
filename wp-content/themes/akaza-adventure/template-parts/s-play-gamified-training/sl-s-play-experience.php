@@ -1,6 +1,6 @@
 <?php
 /**
- * S-Play — Turn Security Awareness into an Experience Employees Enjoy.
+ * S-Play — Turn Security Awareness Into Active Participation.
  *
  * @package Akaza_Adventure
  */
@@ -27,19 +27,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="sl-s-play-experience__content">
 
 				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'Make Awareness Enjoyable', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Make Awareness Participative', 'akaza-adventure' ); ?>
 				</span>
 
 				<h2 id="sl-s-play-experience-title">
-					<?php esc_html_e( 'Turn Security Awareness into an', 'akaza-adventure' ); ?>
-					<span><?php esc_html_e( 'Experience Employees Enjoy', 'akaza-adventure' ); ?></span>
+					<?php esc_html_e( 'Turn Security Awareness Into', 'akaza-adventure' ); ?>
+					<span><?php esc_html_e( 'Active Participation', 'akaza-adventure' ); ?></span>
 				</h2>
 
 				<div class="sl-s-play-experience__copy">
 					<p>
 						<?php
 						esc_html_e(
-							'Building a security-conscious workforce requires more than mandatory training - it requires continuous engagement. S-Play transforms cybersecurity awareness into an interactive learning experience that encourages participation, reinforces secure behaviours, and helps employees confidently recognise and respond to everyday cyber threats.',
+							"Cybersecurity awareness shouldn't end when employees complete a course.",
 							'akaza-adventure'
 						);
 						?>
@@ -48,7 +48,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<p>
 						<?php
 						esc_html_e(
-							'Whether used alongside annual awareness programmes or as part of a continuous learning strategy, S-Play helps organisations create a more engaging, resilient, and security-aware workforce.',
+							'S-Play gives organisations an interactive way to keep employees engaged with cybersecurity through games, challenges and decision-based learning experiences that reinforce important security concepts throughout the year.',
+							'akaza-adventure'
+						);
+						?>
+					</p>
+
+					<p>
+						<?php
+						esc_html_e(
+							"Make security awareness something employees don't just complete - make it something they participate in.",
 							'akaza-adventure'
 						);
 						?>

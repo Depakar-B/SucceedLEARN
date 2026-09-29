@@ -17,13 +17,14 @@
 
 .sl-s-sync-choose__grid {
 	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
+	grid-template-columns: repeat(6, minmax(0, 1fr));
 	gap: 24px;
 }
 
 .sl-s-sync-choose__card {
 	display: flex;
 	flex-direction: column;
+	grid-column: span 2;
 	height: 100%;
 	min-width: 0;
 	padding: 28px 24px;
@@ -35,6 +36,15 @@
 	transition:
 		transform 0.2s ease,
 		box-shadow 0.2s ease;
+}
+
+/* Center the incomplete last row (cards 4–5). */
+.sl-s-sync-choose__card:nth-child(4):nth-last-child(2) {
+	grid-column: 2 / 4;
+}
+
+.sl-s-sync-choose__card:nth-child(5):last-child {
+	grid-column: 4 / 6;
 }
 
 .sl-s-sync-choose__card:hover {
@@ -53,6 +63,12 @@
 @media (max-width: 1199px) {
 	.sl-s-sync-choose__grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.sl-s-sync-choose__card,
+	.sl-s-sync-choose__card:nth-child(4):nth-last-child(2),
+	.sl-s-sync-choose__card:nth-child(5):last-child {
+		grid-column: auto;
 	}
 }
 

@@ -27,15 +27,6 @@ defined( 'ABSPATH' ) || exit;
 					<?php esc_html_e( 'Reinforce AML Awareness With a Final Knowledge Check', 'akaza-adventure' ); ?>
 				</h2>
 
-				<p>
-					<?php
-					esc_html_e(
-						'The course concludes with a five-question assessment. Learners need at least four correct answers to achieve the required passing score.',
-						'akaza-adventure'
-					);
-					?>
-				</p>
-
 			</div>
 
 			<div class="sl-aml-pe-vc-assessment__score">

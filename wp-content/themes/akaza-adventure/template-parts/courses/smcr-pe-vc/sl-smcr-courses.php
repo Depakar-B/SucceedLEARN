@@ -8,6 +8,37 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+$courses = array(
+	array(
+		'mod'         => 'employee',
+		'eyebrow'     => __( 'Employees Course', 'akaza-adventure' ),
+		'title'       => __( 'SMCR Training for Employees', 'akaza-adventure' ),
+		'description' => __( 'Build practical understanding of the SMCR framework and the six Individual Conduct Rules through situations relevant to PE and VC employees.', 'akaza-adventure' ),
+		'features'    => array(
+			__( 'SMCR structure and employee categories', 'akaza-adventure' ),
+			__( 'Six Individual Conduct Rules', 'akaza-adventure' ),
+			__( 'PE/VC-relevant workplace scenarios', 'akaza-adventure' ),
+			__( 'Annual attestation', 'akaza-adventure' ),
+			__( 'Reporting and escalation', 'akaza-adventure' ),
+			__( 'Scenario-based assessment', 'akaza-adventure' ),
+		),
+	),
+	array(
+		'mod'         => 'manager',
+		'eyebrow'     => __( 'Senior Managers Course', 'akaza-adventure' ),
+		'title'       => __( 'SMCR Training for Senior Managers', 'akaza-adventure' ),
+		'description' => __( 'Develop understanding of Senior Manager accountability, reasonable steps, delegation, oversight, documentation and additional Conduct Rules.', 'akaza-adventure' ),
+		'features'    => array(
+			__( 'Statement of Responsibilities', 'akaza-adventure' ),
+			__( 'Duty of Responsibility', 'akaza-adventure' ),
+			__( 'Reasonable steps', 'akaza-adventure' ),
+			__( 'Additional Senior Manager Conduct Rules', 'akaza-adventure' ),
+			__( 'Delegation and oversight', 'akaza-adventure' ),
+			__( 'Recordkeeping and breach reporting', 'akaza-adventure' ),
+		),
+	),
+);
 ?>
 
 <section
@@ -25,82 +56,43 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<h2 id="sl-smcr-courses-title">
 				<?php esc_html_e( 'UK SMCR Training Courses for Employees and Senior Managers', 'akaza-adventure' ); ?>
-				<span><?php esc_html_e( 'Built Around Their Roles', 'akaza-adventure' ); ?></span>
 			</h2>
 
 			<p>
-				<?php esc_html_e(
+				<?php
+				esc_html_e(
 					"Choose learning that reflects the learner's responsibilities rather than using the same content for every role.",
 					'akaza-adventure'
-				); ?>
+				);
+				?>
 			</p>
 
 		</div>
 
-		<div class="sl-smcr-courses__table-wrap">
+		<div class="sl-smcr-courses__grid">
+			<?php foreach ( $courses as $course ) : ?>
+				<article class="sl-smcr-courses__card sl-smcr-courses__card--<?php echo esc_attr( $course['mod'] ); ?>">
 
-			<table class="sl-smcr-courses__table">
-				<thead>
-					<tr>
-						<th scope="col">
-							<?php esc_html_e( 'Employees Course', 'akaza-adventure' ); ?>
-						</th>
+					<span class="sl-smcr-courses__eyebrow">
+						<?php echo esc_html( $course['eyebrow'] ); ?>
+					</span>
 
-						<th scope="col">
-							<?php esc_html_e( 'Senior Managers Course', 'akaza-adventure' ); ?>
-						</th>
-					</tr>
-				</thead>
+					<h3 class="sl-panel-title">
+						<?php echo esc_html( $course['title'] ); ?>
+					</h3>
 
-				<tbody>
-					<tr>
-						<td>
-							<h3 class="sl-panel-title">
-								<?php esc_html_e( 'SMCR Training for Employees', 'akaza-adventure' ); ?>
-							</h3>
+					<p>
+						<?php echo esc_html( $course['description'] ); ?>
+					</p>
 
-							<p>
-								<?php esc_html_e(
-									'Build practical understanding of the SMCR framework and the six Individual Conduct Rules through situations relevant to PE and VC employees.',
-									'akaza-adventure'
-								); ?>
-							</p>
+					<ul class="sl-smcr-courses__list">
+						<?php foreach ( $course['features'] as $feature ) : ?>
+							<li><?php echo esc_html( $feature ); ?></li>
+						<?php endforeach; ?>
+					</ul>
 
-							<ul class="sl-smcr-courses__list">
-								<li><?php esc_html_e( 'SMCR structure and employee categories', 'akaza-adventure' ); ?></li>
-								<li><?php esc_html_e( 'Six Individual Conduct Rules', 'akaza-adventure' ); ?></li>
-								<li><?php esc_html_e( 'PE/VC-relevant workplace scenarios', 'akaza-adventure' ); ?></li>
-								<li><?php esc_html_e( 'Annual attestation', 'akaza-adventure' ); ?></li>
-								<li><?php esc_html_e( 'Reporting and escalation', 'akaza-adventure' ); ?></li>
-								<li><?php esc_html_e( 'Scenario-based assessment', 'akaza-adventure' ); ?></li>
-							</ul>
-						</td>
-
-						<td>
-							<h3 class="sl-panel-title">
-								<?php esc_html_e( 'SMCR Training for Senior Managers', 'akaza-adventure' ); ?>
-							</h3>
-
-							<p>
-								<?php esc_html_e(
-									'Develop understanding of Senior Manager accountability, reasonable steps, delegation, oversight, documentation and additional Conduct Rules.',
-									'akaza-adventure'
-								); ?>
-							</p>
-
-							<ul class="sl-smcr-courses__list">
-								<li><?php esc_html_e( 'Statement of Responsibilities', 'akaza-adventure' ); ?></li>
-								<li><?php esc_html_e( 'Duty of Responsibility', 'akaza-adventure' ); ?></li>
-								<li><?php esc_html_e( 'Reasonable steps', 'akaza-adventure' ); ?></li>
-								<li><?php esc_html_e( 'Additional Senior Manager Conduct Rules', 'akaza-adventure' ); ?></li>
-								<li><?php esc_html_e( 'Delegation and oversight', 'akaza-adventure' ); ?></li>
-								<li><?php esc_html_e( 'Recordkeeping and breach reporting', 'akaza-adventure' ); ?></li>
-							</ul>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-
+				</article>
+			<?php endforeach; ?>
 		</div>
 
 	</div>

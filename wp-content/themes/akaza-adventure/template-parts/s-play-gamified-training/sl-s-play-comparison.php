@@ -11,28 +11,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $comparison_items = array(
 	array(
-		'traditional'  => __( 'Passive learning experience', 'akaza-adventure' ),
-		's_play'       => __( 'Interactive participation', 'akaza-adventure' ),
+		'traditional' => __( 'Primarily passive learning', 'akaza-adventure' ),
+		's_play'      => __( 'Active participation', 'akaza-adventure' ),
 	),
 	array(
-		'traditional'  => __( 'Lengthy training modules', 'akaza-adventure' ),
-		's_play'       => __( 'Short, engaging game-based activities', 'akaza-adventure' ),
+		'traditional' => __( 'Longer learning experiences', 'akaza-adventure' ),
+		's_play'      => __( 'Short, focused game-based activities', 'akaza-adventure' ),
 	),
 	array(
-		'traditional'  => __( 'Limited learner interaction', 'akaza-adventure' ),
-		's_play'       => __( 'Active decision-making and problem-solving', 'akaza-adventure' ),
+		'traditional' => __( 'Limited learner interaction', 'akaza-adventure' ),
+		's_play'      => __( 'Interactive challenges and decision-making', 'akaza-adventure' ),
 	),
 	array(
-		'traditional'  => __( 'One-time completion', 'akaza-adventure' ),
-		's_play'       => __( 'Continuous reinforcement', 'akaza-adventure' ),
+		'traditional' => __( 'Often centred around scheduled training', 'akaza-adventure' ),
+		's_play'      => __( 'Can support ongoing reinforcement', 'akaza-adventure' ),
 	),
 	array(
-		'traditional'  => __( 'Knowledge-focused', 'akaza-adventure' ),
-		's_play'       => __( 'Behaviour-focused learning', 'akaza-adventure' ),
+		'traditional' => __( 'Knowledge consumption', 'akaza-adventure' ),
+		's_play'      => __( 'Knowledge application and reinforcement', 'akaza-adventure' ),
 	),
 	array(
-		'traditional'  => __( 'Lower engagement', 'akaza-adventure' ),
-		's_play'       => __( 'Higher participation and improved retention', 'akaza-adventure' ),
+		'traditional' => __( 'Completion-focused', 'akaza-adventure' ),
+		's_play'      => __( 'Engagement-focused', 'akaza-adventure' ),
 	),
 );
 ?>
@@ -50,8 +50,8 @@ $comparison_items = array(
 			</span>
 
 			<h2 id="sl-s-play-comparison-title">
-				<?php esc_html_e( 'Traditional Security Awareness vs', 'akaza-adventure' ); ?>
-				<span><?php esc_html_e( 'S-Play Gamified Learning', 'akaza-adventure' ); ?></span>
+				<?php esc_html_e( 'Traditional Security Awareness Vs', 'akaza-adventure' ); ?>
+				<span><?php esc_html_e( 'S-Play, CyberSecurity Gamified learning', 'akaza-adventure' ); ?></span>
 			</h2>
 
 		</div>
@@ -63,7 +63,7 @@ $comparison_items = array(
 				<thead>
 					<tr>
 						<th scope="col">
-							<?php esc_html_e( 'Traditional Security Awareness', 'akaza-adventure' ); ?>
+							<?php esc_html_e( 'Traditional Approach', 'akaza-adventure' ); ?>
 						</th>
 						<th scope="col">
 							<?php esc_html_e( 'S-Play Gamified Learning', 'akaza-adventure' ); ?>

@@ -39,7 +39,7 @@ $phone_label  = '+91 86604 48654';
 					<p>
 						<?php
 						esc_html_e(
-							'Book a short, no-obligation demo and we will walk you through SSO, automated provisioning, HR synchronisation, LMS compatibility, and how S-Sync fits your technology stack.',
+							'Discover how S-Sync can simplify deployment and integrate security awareness into your existing enterprise ecosystem.',
 							'akaza-adventure'
 						);
 						?>

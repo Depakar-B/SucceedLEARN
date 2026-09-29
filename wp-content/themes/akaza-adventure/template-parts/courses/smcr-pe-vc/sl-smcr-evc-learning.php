@@ -1,6 +1,6 @@
 <?php
 /**
- * SMCR Training — E/VC-Focused Learning.
+ * SMCR Training — PE/VC-Focused Learning.
  *
  * @package Akaza_Adventure
  */
@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <section
-	id="evc-focused-learning"
+	id="pevc-focused-learning"
 	class="sl-smcr-evc-learning"
 	aria-labelledby="sl-smcr-evc-learning-title"
 >
@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<div class="sl-smcr-evc-learning__intro">
 			<span class="sl-home-sub-heading">
-				<?php esc_html_e( 'E/VC-Focused Learning', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'PE/VC-Focused Learning', 'akaza-adventure' ); ?>
 			</span>
 
 			<h2 id="sl-smcr-evc-learning-title">
