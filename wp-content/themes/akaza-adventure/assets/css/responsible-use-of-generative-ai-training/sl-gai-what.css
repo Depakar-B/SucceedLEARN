@@ -1,0 +1,32 @@
+/**
+ * GenAI — What is responsible use of generative AI training.
+ */
+
+.sl-gai-what {
+	padding: 90px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-gai-what__content {
+	max-width: 920px;
+}
+
+.sl-gai-what__content h2 {
+	margin-bottom: 22px;
+}
+
+.sl-gai-what__copy {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.sl-gai-what__copy p {
+	margin: 0;
+}
+
+@media (max-width: 767px) {
+	.sl-gai-what {
+		padding: 60px 0;
+	}
+}

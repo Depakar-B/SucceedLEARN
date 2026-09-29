@@ -1,0 +1,44 @@
+/**
+ * GenAI — Final CTA.
+ */
+
+.sl-gai-cta {
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-gai-cta__inner {
+	max-width: 860px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.sl-gai-cta__inner h2 {
+	margin-bottom: 22px;
+}
+
+.sl-gai-cta__copy {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	margin-bottom: 28px;
+}
+
+.sl-gai-cta__copy p {
+	margin: 0;
+}
+
+.sl-gai-cta__actions {
+	display: flex;
+	justify-content: center;
+}
+
+@media (max-width: 767px) {
+	.sl-gai-cta {
+		padding: 60px 0;
+	}
+
+	.sl-gai-cta__inner h2 {
+		margin-bottom: 18px;
+	}
+}

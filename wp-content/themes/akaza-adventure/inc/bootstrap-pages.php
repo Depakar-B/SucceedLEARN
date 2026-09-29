@@ -120,6 +120,11 @@ function akaza_bootstrap_pages() {
 			'template' => 'page-templates/information-security-awareness-training.php',
 		),
 		array(
+			'slug'     => 'responsible-use-of-generative-ai-training',
+			'title'    => 'Responsible Use of Generative AI Training',
+			'template' => 'page-templates/responsible-use-of-generative-ai-training.php',
+		),
+		array(
 			'slug'     => 'information-security-awareness-training-for-uk-cyber-essentials',
 			'title'    => 'Information Security Awareness Training for UK Cyber Essentials',
 			'template' => 'page-templates/information-security-awareness-training-for-uk-cyber-essentials.php',

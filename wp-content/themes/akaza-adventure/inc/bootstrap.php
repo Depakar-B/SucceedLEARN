@@ -44,6 +44,7 @@ require_once $akaza_inc . '/assets/enqueue-gwct.php';
 require_once $akaza_inc . '/assets/enqueue-gdpr.php';
 require_once $akaza_inc . '/assets/enqueue-soc2.php';
 require_once $akaza_inc . '/assets/enqueue-isat.php';
+require_once $akaza_inc . '/assets/enqueue-gai.php';
 require_once $akaza_inc . '/assets/enqueue-ukce.php';
 require_once $akaza_inc . '/assets/enqueue-ferpa.php';
 require_once $akaza_inc . '/assets/enqueue-whp.php';
