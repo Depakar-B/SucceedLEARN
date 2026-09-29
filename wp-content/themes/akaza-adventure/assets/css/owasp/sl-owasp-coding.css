@@ -1,0 +1,111 @@
+/**
+ * OWASP — Secure coding mindset
+ */
+
+.sl-owasp-coding {
+	padding: 90px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-owasp-coding__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+	gap: 70px;
+	align-items: center;
+}
+
+.sl-owasp-coding__visual {
+	display: grid;
+	place-items: center;
+	min-height: 410px;
+	padding: 30px;
+	border-radius: 28px;
+	background: radial-gradient(circle at 30% 25%, #eaf2fb, #f7f9fc 65%);
+}
+
+.sl-owasp-coding__terminal {
+	width: min(100%, 470px);
+	padding: 24px 26px 30px;
+	border-radius: 18px;
+	background: var(--sl-page-navy, #16234e);
+	box-shadow: 0 28px 60px rgba(22, 35, 77, 0.22);
+	transform: rotate(-2deg);
+}
+
+.sl-owasp-coding__terminal-top {
+	display: flex;
+	gap: 8px;
+	margin-bottom: 24px;
+}
+
+.sl-owasp-coding__terminal-top span {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.4);
+}
+
+.sl-owasp-coding__line {
+	padding: 8px 0;
+	color: #e7eeff;
+	font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+	font-size: 0.92rem;
+}
+
+.sl-owasp-coding__line em {
+	margin-right: 16px;
+	color: #7b91c8;
+	font-style: normal;
+}
+
+.sl-owasp-coding__line strong {
+	color: #9cc7ff;
+}
+
+.sl-owasp-coding__line.is-highlight {
+	color: #ffb39f;
+}
+
+.sl-owasp-coding__list {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 10px 24px;
+	margin: 30px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-owasp-coding__list li {
+	position: relative;
+	padding-left: 24px;
+}
+
+.sl-owasp-coding__list li::before {
+	content: "•";
+	position: absolute;
+	left: 0;
+	top: -6px;
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 1.6rem;
+}
+
+@media (max-width: 991px) {
+	.sl-owasp-coding__grid {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-owasp-coding {
+		padding: 60px 0;
+	}
+
+	.sl-owasp-coding__list {
+		grid-template-columns: 1fr;
+	}
+
+	.sl-owasp-coding__terminal {
+		transform: none;
+	}
+}

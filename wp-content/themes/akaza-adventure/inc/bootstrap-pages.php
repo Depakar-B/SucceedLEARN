@@ -180,6 +180,11 @@ function akaza_bootstrap_pages() {
 			'template' => 'page-templates/s-metrics-tracking-reporting.php',
 		),
 		array(
+			'slug'     => 'owasp-top-10-training',
+			'title'    => 'OWASP Top 10 2025 Training for Developers',
+			'template' => 'page-templates/owasp-top-10-training.php',
+		),
+		array(
 			'slug'     => 'pci-dss',
 			'title'    => 'PCI DSS Awareness Training for Employees & Payment Handlers',
 			'template' => 'page-templates/pci-dss.php',
