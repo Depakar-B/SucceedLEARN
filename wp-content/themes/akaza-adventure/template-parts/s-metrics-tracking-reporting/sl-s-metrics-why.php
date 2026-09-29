@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<img
 					class="sl-s-metrics-why__image"
 					src="<?php echo esc_url( akaza_upload_url( '2026/09/Why-Security-Awareness-Reporting-Matters.webp' ) ); ?>"
-					alt="<?php esc_attr_e( 'Why Security Awareness Reporting Matters', 'akaza-adventure' ); ?>"
+					alt="<?php esc_attr_e( 'Why Security Awareness Reports Matters', 'akaza-adventure' ); ?>"
 					width="800"
 					height="600"
 					loading="lazy"
@@ -33,12 +33,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="sl-s-metrics-why__content">
 
 				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'Why Reporting Matters', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Why Reports Matters', 'akaza-adventure' ); ?>
 				</span>
 
 				<h2 id="sl-s-metrics-why-title">
 					<?php esc_html_e( 'Why Security Awareness', 'akaza-adventure' ); ?>
-					<span><?php esc_html_e( 'Reporting Matters', 'akaza-adventure' ); ?></span>
+					<span><?php esc_html_e( 'Reports Matters', 'akaza-adventure' ); ?></span>
 				</h2>
 
 				<h3 class="sl-s-metrics-why__subtitle">

@@ -33,12 +33,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="sl-s-metrics-insights__content">
 
 				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'Actionable Intelligence', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'From Data to Decisions', 'akaza-adventure' ); ?>
 				</span>
 
 				<h2 id="sl-s-metrics-insights-title">
-					<?php esc_html_e( 'Turn Security Awareness Data', 'akaza-adventure' ); ?>
-					<span><?php esc_html_e( 'Into Actionable Insight.', 'akaza-adventure' ); ?></span>
+					<?php esc_html_e( 'Turn Security Awareness Insights', 'akaza-adventure' ); ?>
+					<span><?php esc_html_e( 'Into Meaningful Action', 'akaza-adventure' ); ?></span>
 				</h2>
 
 				<div class="sl-s-metrics-insights__copy">

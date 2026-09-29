@@ -2,7 +2,7 @@
 /**
  * S-Metrics — Designed for the Teams Driving Security Culture.
  *
- * Layout matches S-Aware security-teams (2-up, numbered cards, last centered).
+ * Layout matches S-Aware security-teams (2-up cards, last centered).
  * Content and typography unchanged.
  *
  * @package Akaza_Adventure
@@ -66,18 +66,13 @@ $team_groups = array(
 
 		<div class="sl-s-metrics-features__grid">
 
-			<?php foreach ( $team_groups as $index => $team_group ) : ?>
+			<?php foreach ( $team_groups as $team_group ) : ?>
 
 				<article class="sl-s-metrics-features__card">
 
-					<div class="sl-s-metrics-features__card-title">
-						<span class="sl-s-metrics-features__number" aria-hidden="true">
-							<?php echo esc_html( str_pad( (string) ( $index + 1 ), 2, '0', STR_PAD_LEFT ) ); ?>
-						</span>
-						<h3 class="sl-panel-title">
-							<?php echo esc_html( $team_group['title'] ); ?>
-						</h3>
-					</div>
+					<h3 class="sl-panel-title">
+						<?php echo esc_html( $team_group['title'] ); ?>
+					</h3>
 
 					<p>
 						<?php echo esc_html( $team_group['text'] ); ?>
