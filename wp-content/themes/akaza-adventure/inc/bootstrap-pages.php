@@ -189,6 +189,11 @@ function akaza_bootstrap_pages() {
 			'title'    => 'Cybersecurity Awareness Training for BFSI & PE/VC',
 			'template' => 'page-templates/security-awareness-training-bfsi-pe-vc.php',
 		),
+		array(
+			'slug'     => 'iso-27001-2022-staff-awareness-training',
+			'title'    => 'ISO 27001:2022 Staff Awareness Training',
+			'template' => 'page-templates/iso-27001-2022-staff-awareness-training.php',
+		),
 	);
 
 	$created_page = false;

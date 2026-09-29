@@ -58,6 +58,7 @@ function akaza_get_page_asset_handlers() {
 		'page-templates/s-metrics-tracking-reporting.php'          => 'akaza_enqueue_s_metrics_assets',
 		'page-templates/pci-dss.php'                               => 'akaza_enqueue_pci_dss_assets',
 		'page-templates/security-awareness-training-bfsi-pe-vc.php' => 'akaza_enqueue_bfsi_assets',
+		'page-templates/iso-27001-2022-staff-awareness-training.php' => 'akaza_enqueue_iso27001_assets',
 		'page-templates/us-sexual-harassment-prevention-training.php' => 'akaza_enqueue_us_harassment_assets',
 		'page-templates/uk-sexual-harassment-prevention-training.php' => 'akaza_enqueue_uk_harassment_assets',
 		'page-templates/gifts-and-entertainment.php'                 => 'akaza_enqueue_gifts_entertainment_assets',
