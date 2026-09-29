@@ -45,10 +45,6 @@ $reasons = array(
 
 		<div class="sl-s-play-choose__intro">
 
-			<span class="sl-home-sub-heading">
-				<?php esc_html_e( 'Why organizations choose S-Play?', 'akaza-adventure' ); ?>
-			</span>
-
 			<h2 id="sl-s-play-choose-title">
 				<?php esc_html_e( 'Why Choose', 'akaza-adventure' ); ?>
 				<span><?php esc_html_e( 'Gamified Security Awareness Training?', 'akaza-adventure' ); ?></span>

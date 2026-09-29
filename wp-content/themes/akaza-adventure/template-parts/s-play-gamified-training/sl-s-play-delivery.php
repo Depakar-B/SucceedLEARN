@@ -1,6 +1,6 @@
 <?php
 /**
- * S-Play — Visibility Into Gamified Learning.
+ * S-Play — From Employee Participation to Actionable Insights.
  *
  * @package Akaza_Adventure
  */
@@ -29,8 +29,8 @@ $s_play_delivery_image = function_exists( 'akaza_upload_url' )
 				</span>
 
 				<h2 id="sl-s-play-delivery-title">
-					<?php esc_html_e( 'Visibility Into', 'akaza-adventure' ); ?>
-					<span><?php esc_html_e( 'Gamified Learning', 'akaza-adventure' ); ?></span>
+					<?php esc_html_e( 'From Employee Participation to', 'akaza-adventure' ); ?>
+					<span><?php esc_html_e( 'Actionable Insights', 'akaza-adventure' ); ?></span>
 				</h2>
 
 				<h3 class="sl-s-play-delivery__subtitle">

@@ -63,18 +63,13 @@ $team_groups = array(
 
 		<div class="sl-s-play-teams__grid">
 
-			<?php foreach ( $team_groups as $index => $team_group ) : ?>
+			<?php foreach ( $team_groups as $team_group ) : ?>
 
 				<article class="sl-s-play-teams__card">
 
-					<div class="sl-s-play-teams__card-title">
-						<span class="sl-s-play-teams__number" aria-hidden="true">
-							<?php echo esc_html( str_pad( (string) ( $index + 1 ), 2, '0', STR_PAD_LEFT ) ); ?>
-						</span>
-						<h3 class="sl-panel-title">
-							<?php echo esc_html( $team_group['title'] ); ?>
-						</h3>
-					</div>
+					<h3 class="sl-panel-title">
+						<?php echo esc_html( $team_group['title'] ); ?>
+					</h3>
 
 					<p>
 						<?php echo esc_html( $team_group['text'] ); ?>
