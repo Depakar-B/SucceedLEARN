@@ -35,8 +35,8 @@ $audit_items = array(
 				</span>
 
 				<h2 id="sl-s-metrics-measure-title">
-					<?php esc_html_e( 'Reporting for Audit', 'akaza-adventure' ); ?>
-					<span><?php esc_html_e( '& Compliance Readiness', 'akaza-adventure' ); ?></span>
+					<?php esc_html_e( 'Turn Awareness Activity', 'akaza-adventure' ); ?>
+					<span><?php esc_html_e( 'Into Audit-Ready Evidence', 'akaza-adventure' ); ?></span>
 				</h2>
 
 				<div class="sl-s-metrics-measure__copy">

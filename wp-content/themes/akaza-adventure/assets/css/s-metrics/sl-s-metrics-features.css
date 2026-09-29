@@ -61,31 +61,8 @@
 	}
 }
 
-.sl-s-metrics-features__card-title {
-	display: flex;
-	align-items: center;
-	gap: 12px;
-	margin-bottom: 12px;
-	width: 100%;
-}
-
-.sl-s-metrics-features__number {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	flex: 0 0 38px;
-	width: 38px;
-	height: 38px;
-	border-radius: 9px;
-	background: rgba(109, 195, 235, 0.22);
-	color: var(--sl-page-primary, #1472ba);
-	font-size: 14px;
-	font-weight: 700;
-	line-height: 1;
-}
-
-.sl-s-metrics-features__card-title .sl-panel-title {
-	margin: 0;
+.sl-s-metrics-features__card .sl-panel-title {
+	margin: 0 0 12px;
 }
 
 .sl-s-metrics-features__card > p {
