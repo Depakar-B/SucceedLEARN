@@ -15,7 +15,7 @@ $campaigns = array(
 		'text'  => __( 'Create themed awareness campaigns around phishing, passwords, data security, remote working and other priority topics.', 'akaza-adventure' ),
 	),
 	array(
-		'title' => __( 'Phishing Reinforcement', 'akaza-adventure' ),
+		'title' => __( 'Post Phishing Reinforcement', 'akaza-adventure' ),
 		'text'  => __( 'Follow a phishing simulation campaign with visual reminders about suspicious messages, links, verification and reporting.', 'akaza-adventure' ),
 	),
 	array(
@@ -29,10 +29,6 @@ $campaigns = array(
 	array(
 		'title' => __( 'Data Protection Campaigns', 'akaza-adventure' ),
 		'text'  => __( 'Keep secure information handling, confidentiality and privacy responsibilities visible.', 'akaza-adventure' ),
-	),
-	array(
-		'title' => __( 'Security Incident Reporting', 'akaza-adventure' ),
-		'text'  => __( 'Remind employees where and when suspicious activity should be reported.', 'akaza-adventure' ),
 	),
 	array(
 		'title' => __( 'New Joiner Awareness', 'akaza-adventure' ),
