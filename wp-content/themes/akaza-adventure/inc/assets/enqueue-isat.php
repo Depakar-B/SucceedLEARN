@@ -36,7 +36,6 @@ function akaza_enqueue_isat_assets() {
 		'sl-isat-action',
 		'sl-isat-choose',
 		'sl-isat-audience',
-		'sl-isat-culture',
 	);
 
 	foreach ( $sections as $section ) {

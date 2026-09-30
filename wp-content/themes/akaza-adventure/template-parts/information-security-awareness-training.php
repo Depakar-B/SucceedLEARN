@@ -19,7 +19,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php get_template_part( 'template-parts/information-security-awareness-training/sl-isat-action' ); ?>
 	<?php get_template_part( 'template-parts/information-security-awareness-training/sl-isat-choose' ); ?>
 	<?php get_template_part( 'template-parts/information-security-awareness-training/sl-isat-audience' ); ?>
-	<?php get_template_part( 'template-parts/information-security-awareness-training/sl-isat-culture' ); ?>
 	<?php get_template_part( 'template-parts/information-security-awareness-training/sl-isat-faq' ); ?>
 	<?php get_template_part( 'template-parts/information-security-awareness-training/sl-isat-contact' ); ?>
 </main>
