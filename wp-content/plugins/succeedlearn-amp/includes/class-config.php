@@ -306,6 +306,16 @@ class Config {
 				'page_templates' => array( 'page-templates/information-security-awareness-training-for-uk-cyber-essentials.php' ),
 				'template'       => 'pages/ukce',
 			),
+			'bfsi' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					'security-awareness-training-bfsi-pe-vc',
+					'bfsi-pe-vc',
+					'bfsi',
+				),
+				'page_templates' => array( 'page-templates/security-awareness-training-bfsi-pe-vc.php' ),
+				'template'       => 'pages/bfsi',
+			),
 			'financial_crime_prevention' => array(
 				'default_id'     => 0,
 				'slugs'          => array( 'financial-crime-prevention' ),
