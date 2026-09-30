@@ -4,12 +4,13 @@
 
 .sl-gai-topics {
 	padding: 90px 0;
-	background: var(--sl-page-white, #ffffff);
+	background: var(--sl-page-bg, #f5f5f5);
 }
 
 .sl-gai-topics__heading {
 	margin-bottom: 36px;
-	max-width: 860px;
+	max-width: none;
+	width: 100%;
 }
 
 .sl-gai-topics__heading h2 {
@@ -30,27 +31,14 @@
 }
 
 .sl-gai-topics__item {
-	position: relative;
 	margin: 0;
-	padding: 10px 0 10px 22px;
+	padding: 10px 0;
 	color: var(--sl-page-navy, #16234e);
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 1.5;
 	list-style: none;
 	border-bottom: 1px solid rgba(107, 124, 147, 0.14);
-}
-
-.sl-gai-topics__item::before {
-	content: "";
-	position: absolute;
-	left: 0;
-	top: 1.05em;
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	background: var(--sl-page-primary, #1472ba);
-	transform: translateY(-50%);
 }
 
 @media (max-width: 767px) {

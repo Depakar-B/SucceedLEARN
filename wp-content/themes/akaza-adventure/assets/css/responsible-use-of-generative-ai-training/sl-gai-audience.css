@@ -4,11 +4,12 @@
 
 .sl-gai-audience {
 	padding: 90px 0;
-	background: var(--sl-page-white, #ffffff);
+	background: var(--sl-page-bg, #f5f5f5);
 }
 
 .sl-gai-audience__content {
-	max-width: 920px;
+	max-width: none;
+	width: 100%;
 }
 
 .sl-gai-audience__content h2 {

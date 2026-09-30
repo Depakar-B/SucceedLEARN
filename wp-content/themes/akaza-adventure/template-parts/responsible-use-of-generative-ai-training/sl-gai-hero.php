@@ -8,14 +8,6 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
-$gai_hero_file  = '2026/09/responsible-generative-ai-training-hero.webp';
-$gai_hero_image = 'https://succeedlearn.com/wp-content/uploads/' . $gai_hero_file;
-$gai_hero_local = WP_CONTENT_DIR . '/uploads/' . $gai_hero_file;
-
-if ( function_exists( 'akaza_upload_url' ) && file_exists( $gai_hero_local ) ) {
-	$gai_hero_image = akaza_upload_url( $gai_hero_file );
-}
 ?>
 
 <section
@@ -74,15 +66,8 @@ if ( function_exists( 'akaza_upload_url' ) && file_exists( $gai_hero_local ) ) {
 			</div>
 
 			<div class="sl-gai-hero__media">
-				<div class="sl-gai-hero__image">
-					<img
-						src="<?php echo esc_url( $gai_hero_image ); ?>"
-						alt="<?php esc_attr_e( 'Professionals reviewing AI-assisted work together with human oversight.', 'akaza-adventure' ); ?>"
-						width="560"
-						height="420"
-						loading="eager"
-						decoding="async"
-					/>
+				<div class="sl-gai-hero__image-placeholder" aria-hidden="true">
+					<span><?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?></span>
 				</div>
 			</div>
 
