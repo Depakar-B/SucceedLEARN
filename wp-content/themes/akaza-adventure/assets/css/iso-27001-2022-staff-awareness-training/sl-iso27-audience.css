@@ -24,17 +24,14 @@
 
 .sl-iso27-audience__grid {
 	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
+	grid-template-columns: repeat(6, minmax(0, 1fr));
 	gap: 24px;
-}
-
-.sl-iso27-audience__grid > .sl-iso27-audience__card:last-child:nth-child(odd) {
-	grid-column: 2;
 }
 
 .sl-iso27-audience__card {
 	display: flex;
 	flex-direction: column;
+	grid-column: span 2;
 	height: 100%;
 	padding: 28px 24px;
 	border: 1px solid rgba(107, 124, 147, 0.18);
@@ -44,6 +41,14 @@
 	transition:
 		transform 0.2s ease,
 		box-shadow 0.2s ease;
+}
+
+.sl-iso27-audience__card:nth-child(4) {
+	grid-column: 2 / span 2;
+}
+
+.sl-iso27-audience__card:nth-child(5) {
+	grid-column: 4 / span 2;
 }
 
 .sl-iso27-audience__card:hover {
@@ -71,6 +76,12 @@
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 
+	.sl-iso27-audience__card,
+	.sl-iso27-audience__card:nth-child(4),
+	.sl-iso27-audience__card:nth-child(5) {
+		grid-column: auto;
+	}
+
 	.sl-iso27-audience__grid > .sl-iso27-audience__card:last-child:nth-child(odd) {
 		grid-column: 1 / -1;
 		width: 100%;
@@ -93,9 +104,13 @@
 		gap: 16px;
 	}
 
+	.sl-iso27-audience__card,
+	.sl-iso27-audience__card:nth-child(4),
+	.sl-iso27-audience__card:nth-child(5),
 	.sl-iso27-audience__grid > .sl-iso27-audience__card:last-child:nth-child(odd) {
 		grid-column: auto;
 		max-width: none;
+		width: auto;
 	}
 
 	.sl-iso27-audience__card {

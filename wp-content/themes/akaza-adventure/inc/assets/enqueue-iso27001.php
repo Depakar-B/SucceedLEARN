@@ -33,10 +33,9 @@ function akaza_enqueue_iso27001_assets() {
 		'sl-iso27-behaviour',
 		'sl-iso27-structure',
 		'sl-iso27-action',
-		'sl-iso27-outline',
-		'sl-iso27-audience',
-		'sl-iso27-customise',
 		'sl-iso27-choose',
+		'sl-iso27-customise',
+		'sl-iso27-audience',
 	);
 
 	foreach ( $sections as $section ) {

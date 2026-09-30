@@ -52,14 +52,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			</div>
 
-			<div class="sl-iso27-action__media">
-				<div class="sl-iso27-action__image-placeholder">
-					<p>
-						<?php esc_html_e( 'Course screenshots will be added here once the updated course is ready.', 'akaza-adventure' ); ?>
-					</p>
-				</div>
-			</div>
-
 		</div>
 
 	</div>

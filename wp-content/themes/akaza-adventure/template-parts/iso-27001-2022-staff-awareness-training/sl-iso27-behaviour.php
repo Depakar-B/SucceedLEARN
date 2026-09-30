@@ -40,16 +40,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<p>
 				<?php esc_html_e( 'The course connects ISO 27001:2022 principles with everyday workplace behavior so employees understand not only what information security means, but what they are expected to do differently.', 'akaza-adventure' ); ?>
 			</p>
-
-			<p class="sl-iso27-behaviour__note">
-				<?php esc_html_e( 'Depending on the final scope of your updated module, this section can visually highlight areas such as:', 'akaza-adventure' ); ?>
-			</p>
-		</div>
-
-		<div class="sl-iso27-behaviour__placeholder">
-			<p>
-				<?php esc_html_e( 'Topics will be added here', 'akaza-adventure' ); ?>
-			</p>
 		</div>
 
 	</div>
