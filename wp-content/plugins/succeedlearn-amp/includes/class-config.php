@@ -230,6 +230,16 @@ class Config {
 				'page_templates' => array( 'page-templates/s-play-gamified-training.php' ),
 				'template'       => 'pages/s-play',
 			),
+			'generative_ai' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					'responsible-use-of-generative-ai-training',
+					'generative-ai-training',
+					'generative-ai',
+				),
+				'page_templates' => array( 'page-templates/responsible-use-of-generative-ai-training.php' ),
+				'template'       => 'pages/generative-ai',
+			),
 			'cybersecurity_awareness' => array(
 				'default_id'     => 0,
 				'slugs'          => array(
