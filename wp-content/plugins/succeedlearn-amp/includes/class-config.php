@@ -230,6 +230,17 @@ class Config {
 				'page_templates' => array( 'page-templates/s-play-gamified-training.php' ),
 				'template'       => 'pages/s-play',
 			),
+			's_signs' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					's-signs',
+					's-signs-security-awareness',
+					'security-awareness/s-signs-security-awareness',
+					'security-awareness/s-signs',
+				),
+				'page_templates' => array( 'page-templates/s-signs-security-awareness.php' ),
+				'template'       => 'pages/s-signs',
+			),
 			'generative_ai' => array(
 				'default_id'     => 0,
 				'slugs'          => array(
