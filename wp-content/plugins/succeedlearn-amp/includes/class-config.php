@@ -286,6 +286,16 @@ class Config {
 				'page_templates' => array( 'page-templates/hipaa-annual-workforce-training.php' ),
 				'template'       => 'pages/hipaa',
 			),
+			'soc2' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					'information-security-awareness-training-for-soc-2-compliance',
+					'soc-2',
+					'soc2',
+				),
+				'page_templates' => array( 'page-templates/information-security-awareness-training-for-soc-2-compliance.php' ),
+				'template'       => 'pages/soc2',
+			),
 			'financial_crime_prevention' => array(
 				'default_id'     => 0,
 				'slugs'          => array( 'financial-crime-prevention' ),
