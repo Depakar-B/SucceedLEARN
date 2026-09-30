@@ -8,7 +8,8 @@
 }
 
 .sl-gai-why__content {
-	max-width: 920px;
+	max-width: none;
+	width: 100%;
 }
 
 .sl-gai-why__content h2 {
