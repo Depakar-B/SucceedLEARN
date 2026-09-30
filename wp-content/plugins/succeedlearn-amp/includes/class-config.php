@@ -210,6 +210,26 @@ class Config {
 				'page_templates' => array( 'page-templates/security-awareness-and-phishing.php' ),
 				'template'       => 'pages/security-awareness',
 			),
+			's_metrics' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					's-metrics',
+					's-metrics-tracking-reporting',
+					'security-awareness/s-metrics-tracking-reporting',
+				),
+				'page_templates' => array( 'page-templates/s-metrics-tracking-reporting.php' ),
+				'template'       => 'pages/s-metrics',
+			),
+			's_play' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					's-play',
+					's-play-gamified-training',
+					'security-awareness/s-play',
+				),
+				'page_templates' => array( 'page-templates/s-play-gamified-training.php' ),
+				'template'       => 'pages/s-play',
+			),
 			'cybersecurity_awareness' => array(
 				'default_id'     => 0,
 				'slugs'          => array(
