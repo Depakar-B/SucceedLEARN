@@ -27,7 +27,6 @@ function akaza_enqueue_s_sync_assets() {
 		'sl-s-sync-hero',
 		'sl-s-sync-why',
 		'sl-s-sync-integrations',
-		'sl-s-sync-systems',
 		'sl-s-sync-choose',
 		'sl-s-sync-enterprise',
 		'sl-s-sync-suite',
