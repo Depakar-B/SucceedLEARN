@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<img
 					class="sl-s-sync-why__image"
 					src="<?php echo esc_url( akaza_upload_url( '2026/09/Why-Security-Awareness-Integrations-Matter.webp' ) ); ?>"
-					alt="<?php esc_attr_e( 'Why Security Awareness Integrations Matter', 'akaza-adventure' ); ?>"
+					alt="<?php esc_attr_e( 'Why Integrations Matter', 'akaza-adventure' ); ?>"
 					width="800"
 					height="600"
 					loading="lazy"
@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</span>
 
 				<h2 id="sl-s-sync-why-title">
-					<?php esc_html_e( 'Why Security Awareness', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Why', 'akaza-adventure' ); ?>
 					<span><?php esc_html_e( 'Integrations Matter', 'akaza-adventure' ); ?></span>
 				</h2>
 
