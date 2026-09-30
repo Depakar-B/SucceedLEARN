@@ -6,11 +6,11 @@
  */
 
 .sl-isat-page > section.sl-faq-section.sl-isat-faq {
-	--sl-faq-bg: var(--sl-page-white, #ffffff);
-	--sl-faq-surface: var(--sl-page-bg, #f5f5f5);
+	--sl-faq-bg: var(--sl-page-bg, #f5f5f5);
+	--sl-faq-surface: var(--sl-page-white, #ffffff);
 	--sl-faq-border: rgba(107, 124, 147, 0.18);
 	--sl-isat-faq-num-w: 2.5rem;
-	background-color: var(--sl-page-white, #ffffff);
+	background-color: var(--sl-page-bg, #f5f5f5);
 }
 
 .sl-isat-faq.sl-faq-section .container {
