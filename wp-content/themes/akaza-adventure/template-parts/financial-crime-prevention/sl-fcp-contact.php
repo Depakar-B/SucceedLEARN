@@ -15,89 +15,45 @@ $form_shortcode = sprintf(
 	esc_attr( $form_title )
 );
 ?>
-
 <section class="sl-fcp-contact" id="contact" aria-labelledby="sl-fcp-contact-title">
+	<div class="container sl-fcp-contact__layout">
 
-	<div class="container">
+		<div class="sl-fcp-contact__copy">
+			<p class="sl-fcp-eyebrow">
+				<?php esc_html_e( 'Request a Demo', 'akaza-adventure' ); ?>
+			</p>
 
-		<div class="sl-fcp-contact__grid">
+			<h2 id="sl-fcp-contact-title">
+				<?php esc_html_e( 'Explore the Complete Financial Crime Prevention Suite', 'akaza-adventure' ); ?>
+			</h2>
 
-			<div class="sl-fcp-contact__content">
+			<p class="sl-fcp-lead">
+				<?php esc_html_e( 'Tell us about your organisation and training requirements. Our team can discuss the relevant courses, delivery options and customisation requirements.', 'akaza-adventure' ); ?>
+			</p>
 
-				<div class="sl-fcp-contact__heading">
+			<p>
+				<?php
+				printf(
+					/* translators: 1: monthly price, 2: annual price. */
+					esc_html__( 'You can also explore the complete suite at %1$s or %2$s.', 'akaza-adventure' ),
+					'<strong>' . esc_html__( '$1.5 per user per month', 'akaza-adventure' ) . '</strong>',
+					'<strong>' . esc_html__( '$18 per user per year', 'akaza-adventure' ) . '</strong>'
+				);
+				?>
+			</p>
+		</div>
 
-					<span class="sl-home-sub-heading">
-						<?php esc_html_e( 'Let’s talk', 'akaza-adventure' ); ?>
-					</span>
-
-					<h2 id="sl-fcp-contact-title">
-						<?php esc_html_e( 'Talk to Us About Financial Crime Prevention Training', 'akaza-adventure' ); ?>
-					</h2>
-
-					<p class="sl-fcp-contact__lead">
-						<?php esc_html_e( 'Help your employees recognise financial crime risks, understand their responsibilities and make better compliance decisions in everyday work.', 'akaza-adventure' ); ?>
-					</p>
-
-				</div>
-
-				<div class="sl-fcp-contact__body">
-
-					<p>
-						<?php esc_html_e( 'Whether you are looking for organisation-wide awareness training, role-relevant learning or a flexible LMS delivery option, our team can help you identify the right approach.', 'akaza-adventure' ); ?>
-					</p>
-
-					<p>
-						<?php esc_html_e( 'Tell us about your organisation, your training requirements and the areas you would like to cover. We will get back to you to discuss the next steps.', 'akaza-adventure' ); ?>
-					</p>
-
-				</div>
-
-				<div class="sl-fcp-contact__details">
-
-					<a
-						class="sl-fcp-contact__detail"
-						href="mailto:info@succeedtech.com"
-					>
-						<span class="sl-fcp-contact__detail-label">
-							<?php esc_html_e( 'Email us', 'akaza-adventure' ); ?>
-						</span>
-
-						<span class="sl-fcp-contact__detail-value">
-							info@succeedtech.com
-						</span>
-					</a>
-
-					<a
-						class="sl-fcp-contact__detail"
-						href="tel:+916362021778"
-					>
-						<span class="sl-fcp-contact__detail-label">
-							<?php esc_html_e( 'Speak to our team', 'akaza-adventure' ); ?>
-						</span>
-
-						<span class="sl-fcp-contact__detail-value">
-							+91 63620 21778
-						</span>
-					</a>
-
-				</div>
-
+		<div class="sl-fcp-contact__form">
+			<div class="sl-home-form-wrapper sl-home-form-wrapper--slim">
+				<?php
+				if ( shortcode_exists( 'contact_form' ) ) {
+					echo do_shortcode( $form_shortcode );
+				} elseif ( shortcode_exists( 'succeedlearn_course_form' ) ) {
+					echo do_shortcode( sprintf( '[succeedlearn_course_form title="%s"]', esc_attr( $form_title ) ) );
+				}
+				?>
 			</div>
-
-			<div class="sl-fcp-contact__form-wrap">
-				<div class="sl-home-form-wrapper sl-home-form-wrapper--slim">
-					<?php
-					if ( shortcode_exists( 'contact_form' ) ) {
-						echo do_shortcode( $form_shortcode );
-					} elseif ( shortcode_exists( 'succeedlearn_course_form' ) ) {
-						echo do_shortcode( sprintf( '[succeedlearn_course_form title="%s"]', esc_attr( $form_title ) ) );
-					}
-					?>
-				</div>
-			</div>
-
 		</div>
 
 	</div>
-
 </section>
