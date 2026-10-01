@@ -187,7 +187,7 @@ $integration_groups = array(
 			<p>
 				<?php
 				esc_html_e(
-					'S-Sync connects SucceedLEARN with your existing identity, workforce, learning and compliance ecosystem—helping organisations simplify authentication, automate user management, synchronise employee information and streamline administration.',
+					'S-Sync connects SucceedLEARN with your existing identity, workforce, learning and compliance ecosystem—helping organisations simplify authentication, automate user management, synchronise employee information and streamline security-awareness administration.',
 					'akaza-adventure'
 				);
 				?>
@@ -196,7 +196,7 @@ $integration_groups = array(
 			<p>
 				<?php
 				esc_html_e(
-					'From Single Sign-On and automated provisioning to HR system synchronisation and compliance automation, S-Sync helps your awareness programme work more efficiently within your existing technology environment.',
+					'From Single Sign-On and automated provisioning to HR system synchronisation and compliance automation, S-Sync helps security awareness work more efficiently within your existing technology environment.',
 					'akaza-adventure'
 				);
 				?>
@@ -229,25 +229,22 @@ $integration_groups = array(
 					<?php endif; ?>
 
 					<?php
+					$logo_names  = array();
 					$image_logos = array();
-					$text_items  = array();
 					foreach ( $group['logos'] as $logo ) {
-						$logo_src = $s_sync_logo_url( $logo );
+						$logo_names[] = $logo['name'];
+						$logo_src     = $s_sync_logo_url( $logo );
 						if ( $logo_src ) {
-							$logo['src']    = $logo_src;
+							$logo['src']   = $logo_src;
 							$image_logos[] = $logo;
-						} else {
-							$text_items[] = $logo['name'];
 						}
 					}
 					?>
 
-					<?php if ( ! empty( $text_items ) ) : ?>
-						<?php foreach ( $text_items as $text_item ) : ?>
-							<p class="sl-s-sync-integrations__plain-item">
-								<?php echo esc_html( $text_item ); ?>
-							</p>
-						<?php endforeach; ?>
+					<?php if ( ! empty( $logo_names ) ) : ?>
+						<p class="sl-s-sync-integrations__names">
+							<?php echo esc_html( implode( ' · ', $logo_names ) ); ?>
+						</p>
 					<?php endif; ?>
 
 					<?php if ( ! empty( $image_logos ) ) : ?>
