@@ -9,61 +9,65 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$learning_overview = array(
+$overview_rows = array(
 	array(
-		'title' => __( 'Learning purpose', 'akaza-adventure' ),
-		'text'  => __( 'Help employees recognise risk, apply controls and escalate concerns appropriately.', 'akaza-adventure' ),
+		'label' => __( 'Learning Purpose', 'akaza-adventure' ),
+		'value' => __( 'Help employees recognise risks, apply relevant controls and escalate concerns appropriately.', 'akaza-adventure' ),
 	),
 	array(
-		'title' => __( 'Learning approach', 'akaza-adventure' ),
-		'text'  => __( 'Scenario-based eLearning supported by knowledge checks and assessments.', 'akaza-adventure' ),
+		'label' => __( 'Learning Approach', 'akaza-adventure' ),
+		'value' => __( 'Scenario-based eLearning supported by knowledge checks and assessments.', 'akaza-adventure' ),
 	),
 	array(
-		'title' => __( 'Risk coverage', 'akaza-adventure' ),
-		'text'  => __( 'Six connected areas covering major financial crime and compliance risks.', 'akaza-adventure' ),
+		'label' => __( 'Suite Coverage', 'akaza-adventure' ),
+		'value' => __( 'Eight compliance areas covering financial crime, ethical conduct and emerging workplace risks.', 'akaza-adventure' ),
 	),
 	array(
-		'title' => __( 'Employee application', 'akaza-adventure' ),
-		'text'  => __( 'Role-relevant decisions involving customers, transactions, third parties and information.', 'akaza-adventure' ),
+		'label' => __( 'Employee Application', 'akaza-adventure' ),
+		'value' => __( 'Role-relevant decisions involving customers, transactions, third parties, information and technology.', 'akaza-adventure' ),
+	),
+	array(
+		'label' => __( 'Delivery', 'akaza-adventure' ),
+		'value' => __( 'Hosted learning platform or SCORM-compatible eLearning for an existing LMS.', 'akaza-adventure' ),
+	),
+	array(
+		'label' => __( 'Customisation', 'akaza-adventure' ),
+		'value' => __( 'Organisational terminology, policies, branding and reporting routes can be discussed for customisation.', 'akaza-adventure' ),
 	),
 );
-
-$demo_url = '#contact';
 ?>
 <section
-	id="training-at-a-glance"
-	class="sl-fcp-learning-overview"
-	aria-labelledby="sl-fcp-learning-overview-title"
+	id="at-a-glance"
+	class="sl-fcp-section sl-fcp-glance"
+	aria-labelledby="sl-fcp-glance-title"
 >
 	<div class="container">
 
-		<div class="sl-fcp-learning-overview__heading">
-			<span class="sl-home-sub-heading">
-				<?php esc_html_e( 'Learning overview', 'akaza-adventure' ); ?>
-			</span>
+		<div class="sl-fcp-section-intro">
+			<p class="sl-fcp-eyebrow">
+				<?php esc_html_e( 'Learning Overview', 'akaza-adventure' ); ?>
+			</p>
 
-			<h2 id="sl-fcp-learning-overview-title">
+			<h2 id="sl-fcp-glance-title">
 				<?php esc_html_e( 'Financial Crime Prevention Training at a Glance', 'akaza-adventure' ); ?>
 			</h2>
 
-			<p>
-				<?php esc_html_e( 'This section focuses on the learning experience and purpose. Technical delivery information appears separately below.', 'akaza-adventure' ); ?>
+			<p class="sl-fcp-lead">
+				<?php esc_html_e( 'A quick overview of how the suite supports employee awareness and organisational learning.', 'akaza-adventure' ); ?>
 			</p>
 		</div>
 
-		<div class="sl-fcp-learning-overview__grid">
-			<?php foreach ( $learning_overview as $item ) : ?>
-				<article class="sl-fcp-learning-overview__card">
-					<h3><?php echo esc_html( $item['title'] ); ?></h3>
-					<p><?php echo esc_html( $item['text'] ); ?></p>
-				</article>
-			<?php endforeach; ?>
-		</div>
-
-		<div class="sl-fcp-actions">
-			<a href="<?php echo esc_url( $demo_url ); ?>" class="sl-content-btn sl-content-btn-primary">
-				<?php esc_html_e( 'Request a demo', 'akaza-adventure' ); ?>
-			</a>
+		<div class="sl-fcp-table-wrap">
+			<table class="sl-fcp-table sl-fcp-table--summary">
+				<tbody>
+					<?php foreach ( $overview_rows as $row ) : ?>
+						<tr>
+							<th scope="row"><?php echo esc_html( $row['label'] ); ?></th>
+							<td><?php echo esc_html( $row['value'] ); ?></td>
+						</tr>
+					<?php endforeach; ?>
+				</tbody>
+			</table>
 		</div>
 
 	</div>

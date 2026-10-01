@@ -1,0 +1,121 @@
+/* Financial Crime Prevention — eLearning course suite */
+
+.sl-fcp-suite__header {
+	display: flex;
+	margin-bottom: 45px;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 50px;
+}
+
+.sl-fcp-suite__copy {
+	max-width: 700px;
+}
+
+.sl-fcp-suite__copy .sl-fcp-lead {
+	margin-bottom: 0;
+}
+
+.sl-fcp-suite__price {
+	flex: 0 0 auto;
+	padding-top: 5px;
+}
+
+.sl-fcp-suite__price .sl-fcp-cta {
+	max-width: 380px;
+}
+
+.sl-fcp-suite__grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 24px;
+}
+
+.sl-fcp-suite__card {
+	position: relative;
+	min-height: 280px;
+	padding: 30px;
+	background: var(--fcp-white);
+	border: 1px solid #e0e5ed;
+	border-radius: 16px;
+	box-shadow: var(--fcp-shadow);
+	transition:
+		transform 0.25s ease,
+		box-shadow 0.25s ease,
+		border-color 0.25s ease;
+}
+
+.sl-fcp-suite__card:hover {
+	transform: translateY(-9px);
+	border-color: #b8cce6;
+	box-shadow: var(--fcp-shadow-hover);
+}
+
+.sl-fcp-suite__number {
+	display: block;
+	margin-bottom: 16px;
+	color: var(--fcp-blue);
+	font-size: 12.5px;
+	font-weight: 700;
+}
+
+.sl-fcp-page .sl-fcp-suite__card p {
+	margin-bottom: 56px;
+}
+
+.sl-fcp-page .sl-fcp-suite__link {
+	position: absolute;
+	bottom: 28px;
+	left: 30px;
+	color: var(--fcp-orange);
+	font-family: var(--fcp-font-button);
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.sl-fcp-page .sl-fcp-suite__link:hover {
+	color: var(--fcp-orange);
+	text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+	.sl-fcp-suite__header {
+		flex-direction: column;
+		gap: 24px;
+	}
+}
+
+@media (max-width: 760px) {
+	.sl-fcp-suite__grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 680px) {
+	.sl-fcp-suite__card {
+		min-height: auto;
+	}
+
+	.sl-fcp-page .sl-fcp-suite__card p {
+		margin-bottom: 20px;
+	}
+
+	.sl-fcp-page .sl-fcp-suite__link {
+		position: static;
+		display: inline-block;
+	}
+
+	.sl-fcp-suite__price,
+	.sl-fcp-suite__price .sl-fcp-cta {
+		width: 100%;
+		max-width: none;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.sl-fcp-suite__card,
+	.sl-fcp-suite__card:hover {
+		transform: none;
+	}
+}

@@ -30,12 +30,12 @@ $hero_values = array(
 		<div class="sl-pevc-hero__content">
 
 			<span class="sl-home-sub-heading">
-				<?php esc_html_e( 'Private Equity and Venture Capital | Compliance eLearning', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'Private Equity and Venture Capital', 'akaza-adventure' ); ?>
 			</span>
 
 			<h1 id="sl-pevc-hero-title">
-				<?php esc_html_e( 'Compliance learning', 'akaza-adventure' ); ?>
-				<span><?php esc_html_e( 'for what’s next.', 'akaza-adventure' ); ?></span>
+				<?php esc_html_e( 'Private Equity and Venture Capital |', 'akaza-adventure' ); ?>
+				<span><?php esc_html_e( 'Compliance eLearning', 'akaza-adventure' ); ?></span>
 			</h1>
 
 			<div class="sl-pevc-hero__copy">

@@ -1,33 +1,286 @@
 /**
- * FCP page-only utilities.
+ * FCP page tokens and shared utilities.
  * Shared foundation: assets/css/sl-page-foundation.css (.sl-training-page)
  */
 
 .sl-fcp-page.sl-training-page,
 .sl-fcp-page {
-	/* Fixed desktop typography — match CoC / SAP section scale */
-	--sl-fs-h1: 60px;
-	--sl-fs-h2: 48px;
-	--sl-fs-h3: 30px;
-	--sl-fs-body: 18px;
+	--fcp-navy: #16234d;
+	--fcp-blue: #135db7;
+	--fcp-orange: #ea3f23;
+	--fcp-orange-dark: #c9361e;
+	--fcp-white: #ffffff;
+	--fcp-grey: #f5f5f5;
+	--fcp-light-blue: #edf4fc;
+	--fcp-line: #dde3ec;
+	--fcp-text: #000000;
+	--fcp-muted: #59606d;
+	--fcp-radius-sm: 8px;
+	--fcp-radius-md: 14px;
+	--fcp-radius-lg: 22px;
+	--fcp-shadow: 0 14px 36px rgba(22, 35, 77, 0.08);
+	--fcp-shadow-hover: 0 24px 54px rgba(22, 35, 77, 0.16);
+	--fcp-font-button: "Open Sans", Arial, sans-serif;
+
+	--sl-page-navy: var(--fcp-navy);
+	--sl-page-primary: var(--fcp-blue);
+	--sl-heading-accent: var(--fcp-blue);
+	--sl-page-cta: var(--fcp-orange);
+	--sl-page-text: var(--fcp-text);
+	--sl-page-muted: var(--fcp-muted);
+	--sl-page-bg: var(--fcp-white);
+
+	color: var(--fcp-text);
+	font-family: "Space Grotesk", Arial, sans-serif;
+	line-height: 1.65;
 }
 
-.sl-fcp-page a:not(.sl-hero-btn):not(.sl-content-btn):not(.sl-btn) {
-	color: var(--sl-page-primary);
+.sl-fcp-page .container {
+	max-width: 1210px;
 }
 
-.sl-fcp-page .sl-fcp-actions {
+/* Typography */
+
+.sl-fcp-page h1,
+.sl-fcp-page h2,
+.sl-fcp-page h3 {
+	margin-top: 0;
+	color: var(--fcp-navy);
+	font-family: "Space Grotesk", Arial, sans-serif;
+	font-weight: 700;
+}
+
+.sl-fcp-page h1 {
+	margin-bottom: 24px;
+	font-size: clamp(42px, 5vw, 74px);
+	line-height: 1.05;
+	letter-spacing: -0.045em;
+}
+
+.sl-fcp-page h2 {
+	margin-bottom: 18px;
+	font-size: clamp(32px, 3.5vw, 48px);
+	line-height: 1.12;
+	letter-spacing: -0.025em;
+}
+
+.sl-fcp-page h3 {
+	margin-bottom: 10px;
+	font-size: 20px;
+	line-height: 1.3;
+	letter-spacing: 0;
+}
+
+.sl-fcp-page p {
+	margin: 0 0 16px;
+	color: var(--fcp-text);
+	font-size: 16px;
+	line-height: 1.65;
+}
+
+.sl-fcp-page :where(p, td) > a {
+	color: var(--fcp-blue);
+}
+
+.sl-fcp-page .sl-fcp-highlight {
+	color: var(--fcp-blue);
+}
+
+.sl-fcp-page .sl-fcp-eyebrow {
+	margin: 0 0 12px;
+	color: var(--fcp-blue);
+	font-size: 12.5px;
+	font-weight: 700;
+	line-height: 1.4;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+.sl-fcp-page .sl-fcp-lead {
+	max-width: 850px;
+	font-size: 17.6px;
+}
+
+.sl-fcp-page .sl-fcp-narrow {
+	max-width: 900px;
+}
+
+/* Sections */
+
+.sl-fcp-section {
+	padding: 90px 0;
+	background: var(--fcp-white);
+}
+
+.sl-fcp-section--grey {
+	background: var(--fcp-grey);
+}
+
+.sl-fcp-page .sl-fcp-section-intro {
+	max-width: 880px;
+	margin-bottom: 46px;
+}
+
+.sl-fcp-page .sl-fcp-heading-row {
+	display: grid;
+	grid-template-columns: 1fr minmax(280px, 380px);
+	gap: 60px;
+	align-items: end;
+	margin-bottom: 48px;
+}
+
+.sl-fcp-page .sl-fcp-heading-row h2,
+.sl-fcp-page .sl-fcp-heading-row p {
+	margin-bottom: 0;
+}
+
+/* Buttons */
+
+.sl-fcp-page .sl-fcp-cta-row {
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
-	gap: 14px;
-	margin-top: 36px;
+	gap: 13px;
+	margin-top: 30px;
 }
 
-.sl-fcp-page .sl-fcp-hero__lead {
-	font-size: var(--sl-fs-hero-h2, 32px);
+.sl-fcp-page .sl-fcp-cta {
+	display: inline-flex;
+	min-height: 50px;
+	padding: 13px 24px;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid var(--fcp-orange);
+	border-radius: var(--fcp-radius-sm);
+	box-shadow: none;
+	font-family: var(--fcp-font-button);
+	font-size: 14.7px;
 	font-weight: 600;
-	line-height: 1.35;
-	letter-spacing: -0.01em;
-	color: var(--sl-page-primary);
+	line-height: 1.4;
+	text-align: center;
+	text-decoration: none;
+	transition:
+		transform 0.2s ease,
+		background-color 0.2s ease,
+		border-color 0.2s ease,
+		color 0.2s ease;
+}
+
+.sl-fcp-page .sl-fcp-cta:hover,
+.sl-fcp-page .sl-fcp-cta:focus-visible {
+	transform: translateY(-2px);
+	text-decoration: none;
+}
+
+.sl-fcp-page .sl-fcp-cta--solid,
+.sl-fcp-page .sl-fcp-cta--solid:visited {
+	color: var(--fcp-white);
+	background: var(--fcp-orange);
+}
+
+.sl-fcp-page .sl-fcp-cta--solid:hover,
+.sl-fcp-page .sl-fcp-cta--solid:focus-visible {
+	color: var(--fcp-white);
+	background: var(--fcp-orange-dark);
+	border-color: var(--fcp-orange-dark);
+}
+
+.sl-fcp-page .sl-fcp-cta--outline,
+.sl-fcp-page .sl-fcp-cta--outline:visited {
+	color: var(--fcp-orange);
+	background: var(--fcp-white);
+}
+
+.sl-fcp-page .sl-fcp-cta--outline:hover,
+.sl-fcp-page .sl-fcp-cta--outline:focus-visible {
+	color: var(--fcp-white);
+	background: var(--fcp-orange);
+}
+
+.sl-fcp-page a:focus-visible {
+	outline: 3px solid var(--fcp-blue);
+	outline-offset: 3px;
+}
+
+/* Numbered circles (training list, delivery) */
+
+.sl-fcp-page .sl-fcp-number-circle {
+	display: grid;
+	width: 42px;
+	height: 42px;
+	place-items: center;
+	color: var(--fcp-white);
+	background: var(--fcp-blue);
+	border-radius: 50%;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+/* Tables (at a glance, audience) */
+
+.sl-fcp-page .sl-fcp-table-wrap {
+	overflow-x: auto;
+	border: 1px solid var(--fcp-line);
+	border-radius: var(--fcp-radius-md);
+	background: var(--fcp-white);
+}
+
+.sl-fcp-page .sl-fcp-table {
+	width: 100%;
+	margin: 0;
+	border: 0;
+	border-collapse: collapse;
+}
+
+.sl-fcp-page .sl-fcp-table th,
+.sl-fcp-page .sl-fcp-table td {
+	padding: 20px 23px;
+	border: 0;
+	border-bottom: 1px solid var(--fcp-line);
+	color: var(--fcp-text);
+	font-size: 16px;
+	line-height: 1.65;
+	text-align: left;
+	vertical-align: top;
+}
+
+.sl-fcp-page .sl-fcp-table tbody tr:last-child th,
+.sl-fcp-page .sl-fcp-table tbody tr:last-child td {
+	border-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+	.sl-fcp-page .sl-fcp-heading-row {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+}
+
+@media (max-width: 680px) {
+	.sl-fcp-section {
+		padding: 65px 0;
+	}
+
+	.sl-fcp-page h1 {
+		font-size: 40px;
+	}
+
+	.sl-fcp-page h2 {
+		font-size: 32px;
+	}
+
+	.sl-fcp-page .sl-fcp-cta-row {
+		flex-direction: column;
+	}
+
+	.sl-fcp-page .sl-fcp-cta {
+		width: 100%;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.sl-fcp-page .sl-fcp-cta,
+	.sl-fcp-page .sl-fcp-cta:hover {
+		transform: none;
+	}
 }

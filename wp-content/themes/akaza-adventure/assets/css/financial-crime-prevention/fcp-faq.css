@@ -1,0 +1,73 @@
+/* Financial Crime Prevention — FAQ overrides on the global FAQ component */
+
+.sl-fcp-page .sl-fcp-faq {
+	padding: 90px 0;
+	background: var(--fcp-white);
+}
+
+.sl-fcp-page .sl-fcp-faq .container {
+	max-width: 1000px;
+}
+
+.sl-fcp-page .sl-fcp-faq .sl-home-section-heading {
+	max-width: 880px;
+	margin-bottom: 46px;
+}
+
+.sl-fcp-page .sl-fcp-faq .sl-home-sub-heading {
+	margin-bottom: 12px;
+	font-size: 12.5px;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+.sl-fcp-page .sl-fcp-faq .sl-home-sub-heading::before {
+	display: none;
+}
+
+.sl-fcp-page .sl-fcp-faq h2 {
+	margin-bottom: 0;
+}
+
+.sl-fcp-page .sl-fcp-faq .sl-faq-list {
+	border-top-color: var(--fcp-line);
+}
+
+.sl-fcp-page .sl-fcp-faq details.faq {
+	border-bottom-color: var(--fcp-line);
+}
+
+.sl-fcp-page .sl-fcp-faq details.faq summary,
+.sl-fcp-page .sl-fcp-faq details.faq[open] summary {
+	gap: 25px;
+	color: var(--fcp-navy);
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.sl-fcp-page .sl-fcp-faq details.faq summary::after {
+	color: var(--fcp-blue);
+	font-size: 21px;
+}
+
+.sl-fcp-page .sl-fcp-faq details.faq .sl-faq-panel-inner {
+	max-width: 850px;
+	padding: 0 48px 23px 0;
+}
+
+.sl-fcp-page .sl-fcp-faq details.faq p {
+	color: var(--fcp-text);
+	font-size: 16px;
+	line-height: 1.65;
+}
+
+@media (max-width: 680px) {
+	.sl-fcp-page .sl-fcp-faq {
+		padding: 65px 0;
+	}
+
+	.sl-fcp-page .sl-fcp-faq details.faq .sl-faq-panel-inner {
+		padding-right: 0;
+	}
+}

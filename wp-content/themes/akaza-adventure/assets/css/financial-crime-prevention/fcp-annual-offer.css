@@ -1,0 +1,56 @@
+/* Financial Crime Prevention — annual suite offer banner */
+
+.sl-fcp-offer {
+	padding: 42px 0;
+	background: var(--fcp-grey);
+	border-top: 1px solid var(--fcp-line);
+	border-bottom: 1px solid var(--fcp-line);
+}
+
+.sl-fcp-offer__inner {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: 50px;
+	align-items: center;
+}
+
+.sl-fcp-page .sl-fcp-offer__label {
+	margin-bottom: 7px;
+	color: var(--fcp-blue);
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 0.11em;
+	text-transform: uppercase;
+}
+
+.sl-fcp-page .sl-fcp-offer h2 {
+	margin-bottom: 8px;
+	font-size: clamp(26px, 3vw, 38px);
+}
+
+.sl-fcp-page .sl-fcp-offer h2 strong {
+	color: var(--fcp-orange);
+	font-weight: inherit;
+}
+
+.sl-fcp-page .sl-fcp-offer p:last-child {
+	max-width: 720px;
+	margin-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+	.sl-fcp-offer__inner {
+		grid-template-columns: 1fr;
+		gap: 24px;
+	}
+
+	.sl-fcp-offer__inner .sl-fcp-cta {
+		justify-self: start;
+	}
+}
+
+@media (max-width: 680px) {
+	.sl-fcp-offer__inner .sl-fcp-cta {
+		justify-self: stretch;
+	}
+}
