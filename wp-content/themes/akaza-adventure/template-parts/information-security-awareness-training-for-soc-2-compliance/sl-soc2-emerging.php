@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<div class="sl-soc2-emerging__heading">
 			<span class="sl-home-sub-heading">
-				<?php esc_html_e( 'Broader S-Aware Library', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'Optional Module Library', 'akaza-adventure' ); ?>
 			</span>
 
 			<h2 id="sl-soc2-emerging-title">

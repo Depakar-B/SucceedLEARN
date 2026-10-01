@@ -32,7 +32,6 @@ function akaza_enqueue_soc2_assets() {
 		'sl-soc2-modules',
 		'sl-soc2-emerging',
 		'sl-soc2-relate',
-		'sl-soc2-objectives',
 		'sl-soc2-designed',
 		'sl-soc2-action',
 		'sl-soc2-choose',
