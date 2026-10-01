@@ -7,7 +7,7 @@
 	position: relative;
 	z-index: 1;
 	padding: 90px 0;
-	background: var(--sl-page-white, #ffffff);
+	background: var(--sl-page-bg, #f5f5f5);
 }
 
 .sl-ukce-action__grid {
@@ -75,7 +75,7 @@ body.slf-body #main-content.sl-ukce-page .sl-ukce-action__subtitle,
 	width: 100%;
 	line-height: 0;
 	border-radius: 24px;
-	background: var(--sl-page-bg, #f5f5f5);
+	background: var(--sl-page-white, #ffffff);
 }
 
 .sl-ukce-action__image img {
@@ -93,7 +93,7 @@ body.slf-body #main-content.sl-ukce-page .sl-ukce-action__subtitle,
 	padding: 40px;
 	border: 1px solid rgba(22, 35, 78, 0.10);
 	border-radius: 24px;
-	background: var(--sl-page-bg, #f5f5f5);
+	background: var(--sl-page-white, #ffffff);
 	box-sizing: border-box;
 	color: var(--sl-page-muted, #6b7c93);
 	text-align: center;
