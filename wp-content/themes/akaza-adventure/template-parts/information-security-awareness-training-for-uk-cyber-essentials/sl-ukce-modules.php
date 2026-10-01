@@ -49,7 +49,7 @@ $modules = array(
 
 		<div class="sl-ukce-modules__heading">
 			<span class="sl-home-sub-heading">
-				<?php esc_html_e( 'S-Aware Modules', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'Relevant Modules', 'akaza-adventure' ); ?>
 			</span>
 
 			<h2 id="sl-ukce-modules-title">

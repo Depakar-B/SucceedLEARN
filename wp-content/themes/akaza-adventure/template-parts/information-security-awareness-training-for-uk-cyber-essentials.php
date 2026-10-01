@@ -16,7 +16,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php get_template_part( 'template-parts/information-security-awareness-training-for-uk-cyber-essentials/sl-ukce-modules' ); ?>
 	<?php get_template_part( 'template-parts/information-security-awareness-training-for-uk-cyber-essentials/sl-ukce-supporting' ); ?>
 	<?php get_template_part( 'template-parts/information-security-awareness-training-for-uk-cyber-essentials/sl-ukce-controls' ); ?>
-	<?php get_template_part( 'template-parts/information-security-awareness-training-for-uk-cyber-essentials/sl-ukce-requires' ); ?>
 	<?php get_template_part( 'template-parts/information-security-awareness-training-for-uk-cyber-essentials/sl-ukce-designed' ); ?>
 	<?php get_template_part( 'template-parts/information-security-awareness-training-for-uk-cyber-essentials/sl-ukce-action' ); ?>
 	<?php get_template_part( 'template-parts/information-security-awareness-training-for-uk-cyber-essentials/sl-ukce-choose' ); ?>
