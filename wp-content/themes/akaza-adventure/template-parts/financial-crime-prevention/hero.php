@@ -9,9 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$hero_image = function_exists( 'akaza_upload_url' )
-	? akaza_upload_url( '2026/02/Financial-Crime-Prevention-Trainings.svg' )
-	: 'https://succeedlearn.com/wp-content/uploads/2026/02/Financial-Crime-Prevention-Trainings.svg';
+$hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/FCP-Homepage_Hero-section.webp';
 
 $hero_points = array(
 	__( 'Scenario-based eLearning', 'akaza-adventure' ),
@@ -20,6 +18,15 @@ $hero_points = array(
 );
 ?>
 <section class="sl-fcp-hero" aria-labelledby="sl-fcp-hero-title">
+	<img
+		class="sl-fcp-hero__bg-image"
+		src="<?php echo esc_url( $hero_image ); ?>"
+		alt="<?php esc_attr_e( 'Financial crime prevention training for employees', 'akaza-adventure' ); ?>"
+		loading="eager"
+		fetchpriority="high"
+		decoding="async"
+	>
+
 	<div class="container">
 		<?php
 		if ( function_exists( 'akaza_render_hero_breadcrumbs' ) ) {
@@ -29,9 +36,9 @@ $hero_points = array(
 
 		<div class="sl-fcp-hero__grid">
 			<div class="sl-fcp-hero__content">
-				<p class="sl-fcp-eyebrow">
+				<span class="sl-home-sub-heading">
 					<?php esc_html_e( 'Financial Crime Prevention Training', 'akaza-adventure' ); ?>
-				</p>
+				</span>
 
 				<h1 id="sl-fcp-hero-title">
 					<?php esc_html_e( 'Financial Crime Prevention', 'akaza-adventure' ); ?>
@@ -60,18 +67,6 @@ $hero_points = array(
 						<?php esc_html_e( 'Request Demo', 'akaza-adventure' ); ?>
 					</a>
 				</div>
-			</div>
-
-			<div class="sl-fcp-hero__media">
-				<img
-					src="<?php echo esc_url( $hero_image ); ?>"
-					alt="<?php esc_attr_e( 'Financial crime prevention training for employees', 'akaza-adventure' ); ?>"
-					width="592"
-					height="392"
-					loading="eager"
-					fetchpriority="high"
-					decoding="async"
-				>
 			</div>
 		</div>
 	</div>

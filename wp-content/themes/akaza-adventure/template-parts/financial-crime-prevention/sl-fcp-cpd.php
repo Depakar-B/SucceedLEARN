@@ -22,15 +22,22 @@ $cpd_benefits = array(
 >
 	<div class="container sl-fcp-cpd__layout">
 
-		<div class="sl-fcp-cpd__badge" aria-hidden="true">
-			<strong>CPD</strong>
-			<span><?php esc_html_e( 'Certified Learning', 'akaza-adventure' ); ?></span>
+		<div class="sl-fcp-cpd__badge">
+			<img
+				class="sl-fcp-cpd__logo"
+				src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/09/CPD.webp' ); ?>"
+				alt="<?php esc_attr_e( 'The CPD Certification Service', 'akaza-adventure' ); ?>"
+				width="170"
+				height="170"
+				loading="lazy"
+				decoding="async"
+			>
 		</div>
 
 		<div>
-			<p class="sl-fcp-eyebrow">
+			<span class="sl-home-sub-heading">
 				<?php esc_html_e( 'Continuing Professional Development', 'akaza-adventure' ); ?>
-			</p>
+			</span>
 
 			<h2 id="sl-fcp-cpd-title">
 				<?php esc_html_e( 'CPD-Certified Financial Crime Prevention Courses', 'akaza-adventure' ); ?>

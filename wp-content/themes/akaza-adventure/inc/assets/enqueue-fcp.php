@@ -41,6 +41,13 @@ function akaza_enqueue_fcp_assets() {
 		akaza_enqueue_theme_style( "akaza-{$handle_suffix}", "{$folder}/{$file}", array( $global ) );
 	}
 
+	// Opt-in bordered pill eyebrow (sl-global-sub-heading.css).
+	akaza_enqueue_theme_style(
+		'akaza-global-sub-heading',
+		'sl-global-sub-heading.css',
+		array( 'akaza-main', 'akaza-global-title-accent' )
+	);
+
 	wp_enqueue_style( 'akaza-global-faq' );
 	wp_enqueue_script( 'akaza-global-faq' );
 	akaza_enqueue_theme_style( 'akaza-fcp-faq', "{$folder}/fcp-faq.css", array( $global, 'akaza-global-faq' ) );

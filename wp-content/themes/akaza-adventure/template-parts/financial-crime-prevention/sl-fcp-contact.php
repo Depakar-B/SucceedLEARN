@@ -19,9 +19,9 @@ $form_shortcode = sprintf(
 	<div class="container sl-fcp-contact__layout">
 
 		<div class="sl-fcp-contact__copy">
-			<p class="sl-fcp-eyebrow">
+			<span class="sl-home-sub-heading">
 				<?php esc_html_e( 'Request a Demo', 'akaza-adventure' ); ?>
-			</p>
+			</span>
 
 			<h2 id="sl-fcp-contact-title">
 				<?php esc_html_e( 'Explore the Complete Financial Crime Prevention Suite', 'akaza-adventure' ); ?>

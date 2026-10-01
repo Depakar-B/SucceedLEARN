@@ -55,9 +55,9 @@ $audience_rows = array(
 	<div class="container">
 
 		<div class="sl-fcp-section-intro">
-			<p class="sl-fcp-eyebrow">
+			<span class="sl-home-sub-heading">
 				<?php esc_html_e( 'Role-Relevant Learning', 'akaza-adventure' ); ?>
-			</p>
+			</span>
 
 			<h2 id="sl-fcp-audience-title">
 				<?php esc_html_e( 'Who Should Take Financial Crime Prevention Training?', 'akaza-adventure' ); ?>

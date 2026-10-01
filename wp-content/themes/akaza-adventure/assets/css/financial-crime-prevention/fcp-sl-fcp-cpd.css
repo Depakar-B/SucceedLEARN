@@ -9,29 +9,15 @@
 
 .sl-fcp-cpd__badge {
 	display: flex;
-	width: 180px;
-	height: 180px;
-	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	color: var(--fcp-white);
-	background: var(--fcp-blue);
-	border-radius: 50%;
-	text-align: center;
+	justify-content: flex-start;
 }
 
-.sl-fcp-cpd__badge strong {
-	font-size: 32px;
-	line-height: 1;
-}
-
-.sl-fcp-cpd__badge span {
-	width: 110px;
-	margin-top: 8px;
-	font-size: 11px;
-	letter-spacing: 0.06em;
-	line-height: 1.4;
-	text-transform: uppercase;
+.sl-fcp-cpd__logo {
+	display: block;
+	width: 170px;
+	max-width: 100%;
+	height: auto;
 }
 
 .sl-fcp-cpd__pills {

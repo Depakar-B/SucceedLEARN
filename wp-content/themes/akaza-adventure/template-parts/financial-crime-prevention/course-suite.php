@@ -57,9 +57,9 @@ $courses = array(
 
 		<div class="sl-fcp-suite__header">
 			<div class="sl-fcp-suite__copy">
-				<p class="sl-fcp-eyebrow">
+				<span class="sl-home-sub-heading">
 					<?php esc_html_e( 'Financial Crime Prevention Suite', 'akaza-adventure' ); ?>
-				</p>
+				</span>
 
 				<h2 id="sl-fcp-suite-title">
 					<?php esc_html_e( 'Explore Our eLearning Compliance Courses', 'akaza-adventure' ); ?>

@@ -36,9 +36,9 @@ $training_image = function_exists( 'akaza_upload_url' )
 	<div class="container sl-fcp-training__grid">
 
 		<div>
-			<p class="sl-fcp-eyebrow">
+			<span class="sl-home-sub-heading">
 				<?php esc_html_e( 'Practical Employee Awareness', 'akaza-adventure' ); ?>
-			</p>
+			</span>
 
 			<h2 id="sl-fcp-training-title">
 				<?php esc_html_e( 'Online Financial Crime Prevention Training for Employees', 'akaza-adventure' ); ?>

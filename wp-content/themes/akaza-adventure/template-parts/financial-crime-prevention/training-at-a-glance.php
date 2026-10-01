@@ -44,9 +44,9 @@ $overview_rows = array(
 	<div class="container">
 
 		<div class="sl-fcp-section-intro">
-			<p class="sl-fcp-eyebrow">
+			<span class="sl-home-sub-heading">
 				<?php esc_html_e( 'Learning Overview', 'akaza-adventure' ); ?>
-			</p>
+			</span>
 
 			<h2 id="sl-fcp-glance-title">
 				<?php esc_html_e( 'Financial Crime Prevention Training at a Glance', 'akaza-adventure' ); ?>

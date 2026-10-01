@@ -41,9 +41,9 @@ $statistics = array(
 
 		<div class="sl-fcp-heading-row">
 			<div>
-				<p class="sl-fcp-eyebrow">
+				<span class="sl-home-sub-heading">
 					<?php esc_html_e( 'Why It Matters', 'akaza-adventure' ); ?>
-				</p>
+				</span>
 
 				<h2 id="sl-fcp-statistics-title">
 					<?php esc_html_e( 'Why Financial Crime Prevention Matters Now', 'akaza-adventure' ); ?>
