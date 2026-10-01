@@ -4,7 +4,7 @@
 
 .sl-s-signs-contact {
 	padding: 76px 0 88px;
-	background: var(--sl-page-bg, #f5f5f5);
+	background: var(--sl-page-white, #ffffff);
 }
 
 .sl-s-signs-contact__grid {
@@ -53,7 +53,7 @@
 	padding: 10px 18px;
 	border: 1px solid rgba(107, 124, 147, 0.22);
 	border-radius: 10px;
-	background: var(--sl-page-white, #ffffff);
+	background: var(--sl-page-bg, #f5f5f5);
 	text-decoration: none;
 	box-sizing: border-box;
 	transition:
