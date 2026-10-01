@@ -95,12 +95,12 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	min-width: 0;
-	min-height: 0;
-	padding: 0;
-	border: 0;
-	border-radius: 0;
-	background: transparent;
+	min-width: 108px;
+	min-height: 72px;
+	padding: 12px 14px;
+	border: 1px solid rgba(22, 35, 78, 0.1);
+	border-radius: 12px;
+	background: var(--sl-page-bg, #f5f5f5);
 	box-sizing: border-box;
 }
 
@@ -149,5 +149,10 @@
 
 	.sl-s-sync-integrations__card {
 		padding: 22px 20px;
+	}
+
+	.sl-s-sync-integrations__logo {
+		min-width: 96px;
+		min-height: 64px;
 	}
 }
