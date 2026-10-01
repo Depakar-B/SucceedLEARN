@@ -97,23 +97,23 @@ $integration_groups = array(
 		'logos'       => array(
 			array(
 				'name' => __( 'Keka', 'akaza-adventure' ),
-				'file' => 'keka.webp',
+				'url'  => '2026/10/keka.webp',
 			),
 			array(
 				'name' => __( 'Darwinbox', 'akaza-adventure' ),
-				'file' => 'darwinbox.png',
+				'url'  => '2026/10/darwinbox.webp',
 			),
 			array(
 				'name' => __( 'Zoho People', 'akaza-adventure' ),
-				'file' => 'zoho-people.png',
+				'url'  => '2026/10/zoho-people.webp',
 			),
 			array(
 				'name' => __( 'BambooHR', 'akaza-adventure' ),
-				'file' => 'bamboohr.png',
+				'url'  => '2026/10/bamboohr.webp',
 			),
 			array(
 				'name' => __( 'Workday', 'akaza-adventure' ),
-				'file' => 'workday.png',
+				'url'  => '2026/10/workday.webp',
 			),
 		),
 	),
@@ -125,7 +125,7 @@ $integration_groups = array(
 		'logos'       => array(
 			array(
 				'name' => __( 'SCIM', 'akaza-adventure' ),
-				'file' => 'scim.svg',
+				'url'  => '2026/10/scim.webp',
 			),
 		),
 	),
