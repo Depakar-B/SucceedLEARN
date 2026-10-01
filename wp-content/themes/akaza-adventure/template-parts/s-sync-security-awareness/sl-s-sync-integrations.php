@@ -2,8 +2,8 @@
 /**
  * S-Sync — Enterprise Integrations (consolidated systems + capabilities).
  *
- * Logos prefer theme assets mirrored from the S-Sync LMS dashboard
- * (local/s_sync/pix) where available.
+ * Brand logos use Media Library upload URLs where available; remaining
+ * logos fall back to theme assets under assets/images/s-sync/.
  *
  * @package Akaza_Adventure
  */
@@ -13,13 +13,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Resolve an S-Sync integration logo URL from theme assets.
+ * Resolve an S-Sync integration logo URL.
  *
- * @param string $file Filename under assets/images/s-sync/.
+ * Prefers an explicit Media Library path (`url` key), then theme assets (`file`).
+ *
+ * @param array $logo Logo definition with optional `url` and/or `file`.
  * @return string Empty string when missing.
  */
-$s_sync_logo_url = static function ( $file ) {
-	$file = ltrim( (string) $file, '/' );
+$s_sync_logo_url = static function ( $logo ) {
+	if ( ! empty( $logo['url'] ) ) {
+		$path = ltrim( (string) $logo['url'], '/' );
+		return function_exists( 'akaza_upload_url' )
+			? akaza_upload_url( $path )
+			: 'https://succeedlearn.com/wp-content/uploads/' . $path;
+	}
+
+	$file = isset( $logo['file'] ) ? ltrim( (string) $logo['file'], '/' ) : '';
 	if ( '' === $file ) {
 		return '';
 	}
@@ -44,23 +53,23 @@ $integration_groups = array(
 		'logos'       => array(
 			array(
 				'name' => __( 'Microsoft Entra ID', 'akaza-adventure' ),
-				'file' => 'microsoft-entra-id.png',
+				'url'  => '2026/10/Microsoft-Azure.webp',
 			),
 			array(
 				'name' => __( 'OneLogin', 'akaza-adventure' ),
-				'file' => 'onelogin.png',
+				'url'  => '2026/10/onelogin.webp',
 			),
 			array(
 				'name' => __( 'Okta', 'akaza-adventure' ),
-				'file' => 'okta.png',
+				'url'  => '2026/10/octa.webp',
 			),
 			array(
 				'name' => __( 'JumpCloud', 'akaza-adventure' ),
-				'file' => 'jumpcloud.png',
+				'url'  => '2026/10/jumpcloud.webp',
 			),
 			array(
 				'name' => __( 'Other SAML 2.0 Identity Providers', 'akaza-adventure' ),
-				'file' => 'others.png',
+				'url'  => '2026/10/others.webp',
 			),
 		),
 	),
@@ -72,11 +81,11 @@ $integration_groups = array(
 		'logos'       => array(
 			array(
 				'name' => __( 'Google', 'akaza-adventure' ),
-				'file' => 'google.png',
+				'url'  => '2026/10/google.webp',
 			),
 			array(
 				'name' => __( 'Microsoft', 'akaza-adventure' ),
-				'file' => 'microsoft.png',
+				'url'  => '2026/10/microsoft.webp',
 			),
 		),
 	),
@@ -88,23 +97,23 @@ $integration_groups = array(
 		'logos'       => array(
 			array(
 				'name' => __( 'Keka', 'akaza-adventure' ),
-				'file' => 'keka.webp',
+				'url'  => '2026/10/keka.webp',
 			),
 			array(
 				'name' => __( 'Darwinbox', 'akaza-adventure' ),
-				'file' => 'darwinbox.png',
+				'url'  => '2026/10/darwinbox.webp',
 			),
 			array(
 				'name' => __( 'Zoho People', 'akaza-adventure' ),
-				'file' => 'zoho-people.png',
+				'url'  => '2026/10/zoho-people.webp',
 			),
 			array(
 				'name' => __( 'BambooHR', 'akaza-adventure' ),
-				'file' => 'bamboohr.png',
+				'url'  => '2026/10/bamboohr.webp',
 			),
 			array(
 				'name' => __( 'Workday', 'akaza-adventure' ),
-				'file' => 'workday.png',
+				'url'  => '2026/10/workday.webp',
 			),
 		),
 	),
@@ -116,7 +125,7 @@ $integration_groups = array(
 		'logos'       => array(
 			array(
 				'name' => __( 'SCIM', 'akaza-adventure' ),
-				'file' => 'scim.svg',
+				'url'  => '2026/10/scim.webp',
 			),
 		),
 	),
@@ -128,7 +137,6 @@ $integration_groups = array(
 		'logos'       => array(
 			array(
 				'name' => __( 'SCORM-Compatible LMS', 'akaza-adventure' ),
-				'file' => 'scorm.svg',
 			),
 		),
 	),
@@ -140,7 +148,7 @@ $integration_groups = array(
 		'logos'       => array(
 			array(
 				'name' => __( 'Vanta', 'akaza-adventure' ),
-				'file' => 'vanta.png',
+				'url'  => '2026/10/vanta.webp',
 			),
 		),
 	),
@@ -152,7 +160,6 @@ $integration_groups = array(
 		'logos'       => array(
 			array(
 				'name' => __( 'API Connectivity', 'akaza-adventure' ),
-				'file' => 'api.svg',
 			),
 		),
 	),
@@ -221,39 +228,48 @@ $integration_groups = array(
 						</p>
 					<?php endif; ?>
 
-					<div class="sl-s-sync-integrations__logos" role="list">
+					<?php
+					$image_logos = array();
+					$text_items  = array();
+					foreach ( $group['logos'] as $logo ) {
+						$logo_src = $s_sync_logo_url( $logo );
+						if ( $logo_src ) {
+							$logo['src']    = $logo_src;
+							$image_logos[] = $logo;
+						} else {
+							$text_items[] = $logo['name'];
+						}
+					}
+					?>
 
-						<?php foreach ( $group['logos'] as $logo ) : ?>
-							<?php
-							$logo_src = $s_sync_logo_url( isset( $logo['file'] ) ? $logo['file'] : '' );
-							?>
+					<?php if ( ! empty( $text_items ) ) : ?>
+						<?php foreach ( $text_items as $text_item ) : ?>
+							<p class="sl-s-sync-integrations__plain-item">
+								<?php echo esc_html( $text_item ); ?>
+							</p>
+						<?php endforeach; ?>
+					<?php endif; ?>
 
-							<div class="sl-s-sync-integrations__logo" role="listitem">
+					<?php if ( ! empty( $image_logos ) ) : ?>
+						<div class="sl-s-sync-integrations__logos" role="list">
 
-								<?php if ( $logo_src ) : ?>
+							<?php foreach ( $image_logos as $logo ) : ?>
 
+								<div class="sl-s-sync-integrations__logo" role="listitem">
 									<img
-										src="<?php echo esc_url( $logo_src ); ?>"
+										src="<?php echo esc_url( $logo['src'] ); ?>"
 										alt="<?php echo esc_attr( $logo['name'] ); ?>"
 										width="120"
 										height="48"
 										loading="lazy"
 										decoding="async"
 									>
+								</div>
 
-								<?php else : ?>
+							<?php endforeach; ?>
 
-									<span class="sl-s-sync-integrations__logo-label">
-										<?php echo esc_html( $logo['name'] ); ?>
-									</span>
-
-								<?php endif; ?>
-
-							</div>
-
-						<?php endforeach; ?>
-
-					</div>
+						</div>
+					<?php endif; ?>
 
 				</article>
 
