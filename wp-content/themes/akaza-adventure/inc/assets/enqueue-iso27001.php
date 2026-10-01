@@ -29,7 +29,6 @@ function akaza_enqueue_iso27001_assets() {
 		'sl-iso27-why',
 		'sl-iso27-learn',
 		'sl-iso27-relate',
-		'sl-iso27-objectives',
 		'sl-iso27-behaviour',
 		'sl-iso27-structure',
 		'sl-iso27-action',
