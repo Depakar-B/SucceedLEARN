@@ -36,8 +36,11 @@ if ( function_exists( 'akaza_upload_url' ) && file_exists( $ukce_hero_local ) ) 
 			<h1 id="sl-ukce-hero-title">
 				<?php
 				echo wp_kses(
-					__( 'Information Security Awareness Training for <span>UK Cyber Essentials</span>', 'akaza-adventure' ),
-					array( 'span' => array() )
+					__( 'Information Security Awareness Training for<br><span>UK Cyber Essentials</span>', 'akaza-adventure' ),
+					array(
+						'span' => array(),
+						'br'   => array(),
+					)
 				);
 				?>
 			</h1>
