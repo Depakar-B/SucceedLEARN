@@ -31,8 +31,11 @@ $hero_image = succeedlearn_amp_get_ukce_hero_image();
 			<h1 id="sl-ukce-hero-title">
 				<?php
 				echo wp_kses(
-					__( 'Information Security Awareness Training for <span>UK Cyber Essentials</span>', 'succeedlearn-amp' ),
-					array( 'span' => array() )
+					__( 'Information Security Awareness Training for<br><span>UK Cyber Essentials</span>', 'succeedlearn-amp' ),
+					array(
+						'span' => array(),
+						'br'   => array(),
+					)
 				);
 				?>
 			</h1>
