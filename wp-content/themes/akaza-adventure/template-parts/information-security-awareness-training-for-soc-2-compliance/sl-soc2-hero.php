@@ -9,11 +9,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$soc2_hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/SucceedLEARN-Security-Behaviour-Culture-Suite.webp';
-$soc2_hero_local = WP_CONTENT_DIR . '/uploads/2026/09/SucceedLEARN-Security-Behaviour-Culture-Suite.webp';
+$soc2_hero_file  = '2026/10/ISA-SOC2.webp';
+$soc2_hero_image = 'https://succeedlearn.com/wp-content/uploads/' . $soc2_hero_file;
+$soc2_hero_local = WP_CONTENT_DIR . '/uploads/' . $soc2_hero_file;
 
 if ( function_exists( 'akaza_upload_url' ) && file_exists( $soc2_hero_local ) ) {
-	$soc2_hero_image = akaza_upload_url( '2026/09/SucceedLEARN-Security-Behaviour-Culture-Suite.webp' );
+	$soc2_hero_image = akaza_upload_url( $soc2_hero_file );
 }
 ?>
 
