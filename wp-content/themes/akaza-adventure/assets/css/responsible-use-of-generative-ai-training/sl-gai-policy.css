@@ -31,6 +31,8 @@
 	display: flex;
 	flex-direction: column;
 	gap: 12px;
+	width: 100%;
+	max-width: 520px;
 	margin: 8px 0 0;
 	padding: 0;
 	list-style: none;
@@ -39,6 +41,8 @@
 .sl-gai-policy__questions li {
 	margin: 0;
 	padding: 14px 18px;
+	width: fit-content;
+	max-width: 100%;
 	border-left: 3px solid var(--sl-page-primary, #1472ba);
 	border-radius: 0 10px 10px 0;
 	background: var(--sl-page-bg, #f5f5f5);
