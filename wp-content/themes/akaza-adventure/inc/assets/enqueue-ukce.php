@@ -33,7 +33,6 @@ function akaza_enqueue_ukce_assets() {
 		'sl-ukce-modules',
 		'sl-ukce-supporting',
 		'sl-ukce-controls',
-		'sl-ukce-requires',
 		'sl-ukce-designed',
 		'sl-ukce-action',
 		'sl-ukce-choose',
