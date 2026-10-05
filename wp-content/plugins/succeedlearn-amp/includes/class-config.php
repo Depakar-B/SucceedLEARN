@@ -346,6 +346,12 @@ class Config {
 				'page_templates' => array( 'page-templates/security-awareness-training-bfsi-pe-vc.php' ),
 				'template'       => 'pages/bfsi',
 			),
+			'pci_dss' => array(
+				'default_id'     => 0,
+				'slugs'          => array( 'pci-dss', 'pci' ),
+				'page_templates' => array( 'page-templates/pci-dss.php' ),
+				'template'       => 'pages/pci-dss',
+			),
 			'financial_crime_prevention' => array(
 				'default_id'     => 0,
 				'slugs'          => array( 'financial-crime-prevention' ),
