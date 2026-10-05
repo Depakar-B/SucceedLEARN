@@ -8,6 +8,8 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+$hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/Tax-Evasion_Hero-section.webp';
 ?>
 
 <section
@@ -15,6 +17,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	class="sl-tax-evasion-hero"
 	aria-labelledby="sl-tax-evasion-hero-title"
 >
+	<img
+		class="sl-tax-evasion-hero__bg-image"
+		src="<?php echo esc_url( $hero_image ); ?>"
+		alt="<?php esc_attr_e( 'Criminal Finances Act 2017 book with the UK royal coat of arms', 'akaza-adventure' ); ?>"
+		decoding="async"
+		fetchpriority="high"
+	>
+
 	<div class="container">
 
 		<div class="sl-tax-evasion-hero__grid">
@@ -85,68 +95,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 					<span class="sl-tax-evasion-hero__tag">
 						<?php esc_html_e( 'Assessment Included', 'akaza-adventure' ); ?>
-					</span>
-
-				</div>
-
-			</div>
-
-			<!-- Hero Visual -->
-			<div
-				class="sl-tax-evasion-hero__media"
-				aria-label="<?php esc_attr_e( 'Course visual previews', 'akaza-adventure' ); ?>"
-			>
-
-				<!-- Main Course Image -->
-				<div class="sl-tax-evasion-hero__main-image">
-
-					<div class="sl-tax-evasion-hero__image-placeholder">
-
-						<span class="sl-tax-evasion-hero__placeholder-label">
-							<?php esc_html_e( 'Course Image 01', 'akaza-adventure' ); ?>
-						</span>
-
-						<strong>
-							<?php esc_html_e( 'Main SucceedLEARN Course Screen', 'akaza-adventure' ); ?>
-						</strong>
-
-					</div>
-
-				</div>
-
-				<!-- Knowledge Check Image -->
-				<div class="sl-tax-evasion-hero__secondary-image">
-
-					<div class="sl-tax-evasion-hero__image-placeholder">
-
-						<span class="sl-tax-evasion-hero__placeholder-label">
-							<?php esc_html_e( 'Course Image 02', 'akaza-adventure' ); ?>
-						</span>
-
-						<strong>
-							<?php esc_html_e( 'Knowledge Check / Assessment', 'akaza-adventure' ); ?>
-						</strong>
-
-					</div>
-
-				</div>
-
-				<!-- CPD Badge -->
-				<div
-					class="sl-tax-evasion-hero__cpd"
-					aria-label="<?php esc_attr_e( 'Approved CPD logo placeholder', 'akaza-adventure' ); ?>"
-				>
-
-					<span>
-						<?php esc_html_e( 'APPROVED', 'akaza-adventure' ); ?>
-					</span>
-
-					<strong>
-						<?php esc_html_e( 'CPD', 'akaza-adventure' ); ?>
-					</strong>
-
-					<span>
-						<?php esc_html_e( 'LOGO', 'akaza-adventure' ); ?>
 					</span>
 
 				</div>
