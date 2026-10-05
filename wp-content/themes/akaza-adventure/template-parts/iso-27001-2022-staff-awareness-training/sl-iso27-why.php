@@ -9,10 +9,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$iso27_why_file  = '2026/01/F-ISO-27001-Staff-Awareness-eLearning.webp';
+$iso27_why_file  = '2026/10/ISO-27001.webp';
 $iso27_why_image = 'https://succeedlearn.com/wp-content/uploads/' . $iso27_why_file;
+$iso27_why_local = WP_CONTENT_DIR . '/uploads/' . $iso27_why_file;
 
-if ( function_exists( 'akaza_upload_url' ) && file_exists( WP_CONTENT_DIR . '/uploads/' . $iso27_why_file ) ) {
+if ( function_exists( 'akaza_upload_url' ) && file_exists( $iso27_why_local ) ) {
 	$iso27_why_image = akaza_upload_url( $iso27_why_file );
 }
 ?>
