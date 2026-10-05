@@ -8,6 +8,33 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+$topics = array(
+	array(
+		'title' => __( 'Gifts & hospitality', 'akaza-adventure' ),
+		'text'  => __( 'Value, timing, frequency, purpose, approvals and accurate records.', 'akaza-adventure' ),
+	),
+	array(
+		'title' => __( 'Third parties & agents', 'akaza-adventure' ),
+		'text'  => __( 'Indirect payments, unusual commissions and associated-person exposure.', 'akaza-adventure' ),
+	),
+	array(
+		'title' => __( 'Travel & entertainment', 'akaza-adventure' ),
+		'text'  => __( 'Reasonable business purpose, pre-approval, receipts and transparency.', 'akaza-adventure' ),
+	),
+	array(
+		'title' => __( 'Facilitation payments', 'akaza-adventure' ),
+		'text'  => __( 'Requests to speed up routine action and the correct response under policy and law.', 'akaza-adventure' ),
+	),
+	array(
+		'title' => __( 'Donations & sponsorships', 'akaza-adventure' ),
+		'text'  => __( 'Links to decision-makers, destination of funds and hidden commercial motives.', 'akaza-adventure' ),
+	),
+	array(
+		'title' => __( 'Nepotism & cronyism', 'akaza-adventure' ),
+		'text'  => __( 'Employment or favours offered to influence or reward a business decision.', 'akaza-adventure' ),
+	),
+);
 ?>
 
 <section
@@ -15,7 +42,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	class="sl-course-topics sl-anti-bribery-topics"
 	aria-labelledby="sl-anti-bribery-topics-title"
 >
-	<div class="container">
+	<div class="container sl-anti-bribery-topics__layout">
 
 		<div class="sl-anti-bribery-topics__intro">
 
@@ -39,98 +66,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		</div>
 
-		<div class="sl-anti-bribery-topics__grid">
-
-			<article class="sl-anti-bribery-topics__card">
-				<div class="sl-anti-bribery-topics__number" aria-hidden="true">01</div>
-				<div class="sl-anti-bribery-topics__card-content">
-					<h3><?php esc_html_e( 'Gifts & hospitality', 'akaza-adventure' ); ?></h3>
-					<p>
-						<?php
-						esc_html_e(
-							'Value, timing, frequency, purpose, approvals and accurate records.',
-							'akaza-adventure'
-						);
-						?>
-					</p>
-				</div>
-			</article>
-
-			<article class="sl-anti-bribery-topics__card">
-				<div class="sl-anti-bribery-topics__number" aria-hidden="true">02</div>
-				<div class="sl-anti-bribery-topics__card-content">
-					<h3><?php esc_html_e( 'Third parties & agents', 'akaza-adventure' ); ?></h3>
-					<p>
-						<?php
-						esc_html_e(
-							'Indirect payments, unusual commissions and associated-person exposure.',
-							'akaza-adventure'
-						);
-						?>
-					</p>
-				</div>
-			</article>
-
-			<article class="sl-anti-bribery-topics__card">
-				<div class="sl-anti-bribery-topics__number" aria-hidden="true">03</div>
-				<div class="sl-anti-bribery-topics__card-content">
-					<h3><?php esc_html_e( 'Travel & entertainment', 'akaza-adventure' ); ?></h3>
-					<p>
-						<?php
-						esc_html_e(
-							'Reasonable business purpose, pre-approval, receipts and transparency.',
-							'akaza-adventure'
-						);
-						?>
-					</p>
-				</div>
-			</article>
-
-			<article class="sl-anti-bribery-topics__card">
-				<div class="sl-anti-bribery-topics__number" aria-hidden="true">04</div>
-				<div class="sl-anti-bribery-topics__card-content">
-					<h3><?php esc_html_e( 'Facilitation payments', 'akaza-adventure' ); ?></h3>
-					<p>
-						<?php
-						esc_html_e(
-							'Requests to speed up routine action and the correct response under policy and law.',
-							'akaza-adventure'
-						);
-						?>
-					</p>
-				</div>
-			</article>
-
-			<article class="sl-anti-bribery-topics__card">
-				<div class="sl-anti-bribery-topics__number" aria-hidden="true">05</div>
-				<div class="sl-anti-bribery-topics__card-content">
-					<h3><?php esc_html_e( 'Donations & sponsorships', 'akaza-adventure' ); ?></h3>
-					<p>
-						<?php
-						esc_html_e(
-							'Links to decision-makers, destination of funds and hidden commercial motives.',
-							'akaza-adventure'
-						);
-						?>
-					</p>
-				</div>
-			</article>
-
-			<article class="sl-anti-bribery-topics__card">
-				<div class="sl-anti-bribery-topics__number" aria-hidden="true">06</div>
-				<div class="sl-anti-bribery-topics__card-content">
-					<h3><?php esc_html_e( 'Nepotism & cronyism', 'akaza-adventure' ); ?></h3>
-					<p>
-						<?php
-						esc_html_e(
-							'Employment or favours offered to influence or reward a business decision.',
-							'akaza-adventure'
-						);
-						?>
-					</p>
-				</div>
-			</article>
-
+		<div class="sl-anti-bribery-topics__list">
+			<?php foreach ( $topics as $topic ) : ?>
+				<article class="sl-anti-bribery-topics__item">
+					<h3><?php echo esc_html( $topic['title'] ); ?></h3>
+					<p><?php echo esc_html( $topic['text'] ); ?></p>
+				</article>
+			<?php endforeach; ?>
 		</div>
 
 	</div>

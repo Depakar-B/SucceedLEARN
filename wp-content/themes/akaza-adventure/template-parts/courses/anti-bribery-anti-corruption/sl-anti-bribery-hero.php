@@ -65,7 +65,7 @@ $hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/ABAC_Hero-sec
 
 					<a
 						class="sl-hero-btn sl-hero-btn-secondary"
-						href="#book-demo"
+						href="#contact"
 					>
 						Buy the course
 					</a>
