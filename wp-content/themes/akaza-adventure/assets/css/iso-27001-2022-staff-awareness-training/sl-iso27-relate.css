@@ -12,12 +12,7 @@
 }
 
 .sl-iso27-relate__panel {
-	max-width: 960px;
-	padding: 40px 36px;
-	border: 1px solid rgba(107, 124, 147, 0.18);
-	border-radius: 18px;
-	background: var(--sl-page-white, #ffffff);
-	box-shadow: 0 10px 30px rgba(22, 35, 78, 0.05);
+	max-width: 860px;
 }
 
 .sl-iso27-relate__panel h2 {
@@ -25,7 +20,6 @@
 }
 
 .sl-iso27-relate__panel p {
-	max-width: 860px;
 	margin: 0 0 16px;
 	color: var(--sl-page-text, #16234e);
 }
@@ -136,11 +130,6 @@
 @media (max-width: 767px) {
 	.sl-iso27-relate {
 		padding: 60px 0;
-	}
-
-	.sl-iso27-relate__panel {
-		padding: 28px 20px;
-		border-radius: 14px;
 	}
 
 	.sl-iso27-relate__supports {
