@@ -54,15 +54,6 @@ $cases = array(
 						);
 						?>
 					</p>
-
-					<p>
-						<?php
-						esc_html_e(
-							'Following are a few cases of companies facing penalties, thus highlighting the need for compliance:',
-							'akaza-adventure'
-						);
-						?>
-					</p>
 				</div>
 
 			</div>
