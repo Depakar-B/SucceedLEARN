@@ -78,6 +78,20 @@
 
 
 /* =========================================================
+   Large screens
+   The illustration scales with the viewport while the container
+   stays 1240px, so the copy must narrow to stay clear of it.
+   ========================================================= */
+
+@media (min-width: 1001px) {
+
+	.sl-insider-trading-hero__description {
+		max-width: min(calc(600px - 7.5vw), calc(43.7vw - 70px));
+	}
+}
+
+
+/* =========================================================
    Tablet
    ========================================================= */
 
