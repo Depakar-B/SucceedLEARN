@@ -87,9 +87,35 @@
 	color: var(--msa-blue);
 }
 
+/* Same container widths as course pages (courses/course-global.css): 1240px, 1380px at 1600px+. */
 .msa-container {
-	width: min(calc(100% - 40px), var(--msa-max-width));
+	width: min(calc(100% - 64px), 1240px);
 	margin-inline: auto;
+	box-sizing: border-box;
+}
+
+@media (min-width: 1600px) {
+	.msa-container {
+		width: min(calc(100% - 100px), 1380px);
+	}
+}
+
+@media (max-width: 1000px) {
+	.msa-container {
+		width: min(calc(100% - 48px), 1240px);
+	}
+}
+
+@media (max-width: 600px) {
+	.msa-container {
+		width: calc(100% - 36px);
+	}
+}
+
+@media (max-width: 380px) {
+	.msa-container {
+		width: calc(100% - 28px);
+	}
 }
 
 .msa-section {
@@ -951,10 +977,6 @@ body.slf-body #main-content .msa-page .sl-home-sub-heading {
 }
 
 @media (max-width: 650px) {
-	.msa-container {
-		width: min(calc(100% - 28px), var(--msa-max-width));
-	}
-
 	.msa-outcomes,
 	.msa-gallery__side {
 		grid-template-columns: 1fr;

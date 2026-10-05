@@ -2,8 +2,8 @@
 
 .sl-fcp-training__grid {
 	display: grid;
-	grid-template-columns: 1fr 0.85fr;
-	gap: 68px;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+	gap: 56px;
 	align-items: center;
 }
 
@@ -29,12 +29,8 @@
 
 .sl-fcp-training__media {
 	display: flex;
-	min-height: 490px;
-	padding: 40px;
 	align-items: center;
 	justify-content: center;
-	background: linear-gradient(145deg, #e7eff9, #fbfcfe);
-	border-radius: var(--fcp-radius-lg);
 }
 
 .sl-fcp-training__media img {
@@ -48,12 +44,5 @@
 	.sl-fcp-training__grid {
 		grid-template-columns: 1fr;
 		gap: 50px;
-	}
-}
-
-@media (max-width: 680px) {
-	.sl-fcp-training__media {
-		min-height: 350px;
-		padding: 24px;
 	}
 }
