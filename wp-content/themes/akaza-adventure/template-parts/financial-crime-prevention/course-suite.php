@@ -72,7 +72,13 @@ $courses = array(
 
 			<div class="sl-fcp-suite__price">
 				<a href="#contact" class="sl-fcp-cta sl-fcp-cta--solid" data-cta="fcp-suite-price">
-					<?php esc_html_e( 'Grab the whole suite for $1.5 per user per month', 'akaza-adventure' ); ?>
+					<?php
+					printf(
+						/* translators: %s: price per user per month. */
+						esc_html__( 'Grab the whole suite for %s per user per month', 'akaza-adventure' ),
+						'<span class="sl-fcp-suite__price-amount">' . esc_html__( '$1.5', 'akaza-adventure' ) . '</span>'
+					);
+					?>
 				</a>
 			</div>
 		</div>

@@ -21,8 +21,18 @@
 	padding-top: 5px;
 }
 
-.sl-fcp-suite__price .sl-fcp-cta {
-	max-width: 380px;
+.sl-fcp-page .sl-fcp-suite__price .sl-fcp-cta {
+	display: inline-block;
+	max-width: 400px;
+	font-size: 17px;
+	line-height: 1.5;
+	text-align: center;
+}
+
+.sl-fcp-suite__price-amount {
+	padding: 0 0.12em;
+	font-size: 1.2em;
+	font-weight: 800;
 }
 
 .sl-fcp-suite__grid {

@@ -255,7 +255,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                         <p>
                             <?php esc_html_e(
-                                'The content can also be aligned with the organisation\'s Code of Conduct, gifts and hospitality policy, whistleblowing process and internal approval controls.',
+                                'The content can also be aligned with the organisation’s Code of Conduct, gifts and hospitality policy, whistleblowing process and internal approval controls.',
                                 'akaza-adventure'
                             ); ?>
                         </p>

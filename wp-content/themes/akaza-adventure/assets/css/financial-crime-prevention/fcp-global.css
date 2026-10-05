@@ -35,8 +35,39 @@
 	line-height: 1.65;
 }
 
+/* Same container widths as course pages (courses/course-global.css): 1240px, 1380px at 1600px+. */
 .sl-fcp-page .container {
-	max-width: 1210px;
+	width: min(calc(100% - 64px), 1240px);
+	max-width: none;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 0;
+	padding-right: 0;
+	box-sizing: border-box;
+}
+
+@media (min-width: 1600px) {
+	.sl-fcp-page .container {
+		width: min(calc(100% - 100px), 1380px);
+	}
+}
+
+@media (max-width: 1000px) {
+	.sl-fcp-page .container {
+		width: min(calc(100% - 48px), 1240px);
+	}
+}
+
+@media (max-width: 600px) {
+	.sl-fcp-page .container {
+		width: calc(100% - 36px);
+	}
+}
+
+@media (max-width: 380px) {
+	.sl-fcp-page .container {
+		width: calc(100% - 28px);
+	}
 }
 
 /* Typography */

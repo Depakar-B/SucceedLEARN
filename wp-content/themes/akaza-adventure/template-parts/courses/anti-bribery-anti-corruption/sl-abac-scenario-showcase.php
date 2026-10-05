@@ -154,21 +154,15 @@ if ( ! defined( 'ABSPATH' ) ) {
                         <article class="sl-abac-scenario-showcase__card">
 
                             <div class="sl-abac-scenario-showcase__image">
-                                <div
-                                    class="sl-abac-scenario-showcase__image-placeholder"
-                                    role="img"
-                                    aria-label="<?php esc_attr_e(
+                                <img
+                                    src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/abac-scenario-business-trip.webp' ); ?>"
+                                    alt="<?php esc_attr_e(
                                         'Janet beginning a business trip in the ABAC eLearning scenario',
                                         'akaza-adventure'
                                     ); ?>"
+                                    loading="lazy"
+                                    decoding="async"
                                 >
-                                    <span>
-                                        <?php esc_html_e(
-                                            'Image placeholder',
-                                            'akaza-adventure'
-                                        ); ?>
-                                    </span>
-                                </div>
                             </div>
 
                             <div class="sl-abac-scenario-showcase__card-content">
@@ -179,14 +173,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                                 <h3>
                                     <?php esc_html_e(
-                                        'Starting the business trip',
+                                        'Scenario journey',
                                         'akaza-adventure'
                                     ); ?>
                                 </h3>
 
                                 <p>
                                     <?php esc_html_e(
-                                        'Janet encounters her first decision before travelling and considers whether a payment or benefit creates a compliance concern.',
+                                        'Applying ABAC decisions during business travel.',
                                         'akaza-adventure'
                                     ); ?>
                                 </p>
@@ -200,21 +194,15 @@ if ( ! defined( 'ABSPATH' ) ) {
                         <article class="sl-abac-scenario-showcase__card">
 
                             <div class="sl-abac-scenario-showcase__image">
-                                <div
-                                    class="sl-abac-scenario-showcase__image-placeholder"
-                                    role="img"
-                                    aria-label="<?php esc_attr_e(
-                                        'Janet handling a vendor meeting in the ABAC eLearning scenario',
+                                <img
+                                    src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/abac-scenario-gifts-decision.webp' ); ?>"
+                                    alt="<?php esc_attr_e(
+                                        'Interactive gifts and hospitality decision in the anti-bribery course',
                                         'akaza-adventure'
                                     ); ?>"
+                                    loading="lazy"
+                                    decoding="async"
                                 >
-                                    <span>
-                                        <?php esc_html_e(
-                                            'Image placeholder',
-                                            'akaza-adventure'
-                                        ); ?>
-                                    </span>
-                                </div>
                             </div>
 
                             <div class="sl-abac-scenario-showcase__card-content">
@@ -225,14 +213,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                                 <h3>
                                     <?php esc_html_e(
-                                        'Making a vendor decision',
+                                        'Interactive activity',
                                         'akaza-adventure'
                                     ); ?>
                                 </h3>
 
                                 <p>
                                     <?php esc_html_e(
-                                        'A vendor interaction introduces a practical ABAC decision involving hospitality, benefits and legitimate business purpose.',
+                                        'Deciding which business gifts may be accepted.',
                                         'akaza-adventure'
                                     ); ?>
                                 </p>
@@ -246,21 +234,15 @@ if ( ! defined( 'ABSPATH' ) ) {
                         <article class="sl-abac-scenario-showcase__card">
 
                             <div class="sl-abac-scenario-showcase__image">
-                                <div
-                                    class="sl-abac-scenario-showcase__image-placeholder"
-                                    role="img"
-                                    aria-label="<?php esc_attr_e(
-                                        'Janet responding to a customs payment request in the ABAC eLearning scenario',
+                                <img
+                                    src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/abac-scenario-laws-map.webp' ); ?>"
+                                    alt="<?php esc_attr_e(
+                                        'Interactive map introducing global anti-bribery laws in the course',
                                         'akaza-adventure'
                                     ); ?>"
+                                    loading="lazy"
+                                    decoding="async"
                                 >
-                                    <span>
-                                        <?php esc_html_e(
-                                            'Image placeholder',
-                                            'akaza-adventure'
-                                        ); ?>
-                                    </span>
-                                </div>
                             </div>
 
                             <div class="sl-abac-scenario-showcase__card-content">
@@ -271,14 +253,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                                 <h3>
                                     <?php esc_html_e(
-                                        'Responding at customs',
+                                        'Click-to-explore learning',
                                         'akaza-adventure'
                                     ); ?>
                                 </h3>
 
                                 <p>
                                     <?php esc_html_e(
-                                        'Janet must decide how to respond when asked for a payment intended to speed up a routine process.',
+                                        'Legal context across jurisdictions.',
                                         'akaza-adventure'
                                     ); ?>
                                 </p>

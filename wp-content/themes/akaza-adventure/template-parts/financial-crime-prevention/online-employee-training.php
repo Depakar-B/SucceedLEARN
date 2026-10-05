@@ -25,8 +25,8 @@ $training_points = array(
 );
 
 $training_image = function_exists( 'akaza_upload_url' )
-	? akaza_upload_url( '2026/02/Financial-Crime-Prevention-Trainings.svg' )
-	: 'https://succeedlearn.com/wp-content/uploads/2026/02/Financial-Crime-Prevention-Trainings.svg';
+	? akaza_upload_url( '2026/10/FCP-Homepage_Image-1.webp' )
+	: 'https://succeedlearn.com/wp-content/uploads/2026/10/FCP-Homepage_Image-1.webp';
 ?>
 <section
 	id="training"
@@ -69,8 +69,8 @@ $training_image = function_exists( 'akaza_upload_url' )
 			<img
 				src="<?php echo esc_url( $training_image ); ?>"
 				alt="<?php esc_attr_e( 'Employees reviewing financial crime risks and compliance information', 'akaza-adventure' ); ?>"
-				width="592"
-				height="392"
+				width="1609"
+				height="977"
 				loading="lazy"
 				decoding="async"
 			>
