@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$isat_why_file  = '2026/01/F-Information-Security-Awareness.webp';
+$isat_why_file  = '2026/10/ISA-Standard.webp';
 $isat_why_image = 'https://succeedlearn.com/wp-content/uploads/' . $isat_why_file;
 $isat_why_local = WP_CONTENT_DIR . '/uploads/' . $isat_why_file;
 
