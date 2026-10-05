@@ -241,6 +241,17 @@ class Config {
 				'page_templates' => array( 'page-templates/s-signs-security-awareness.php' ),
 				'template'       => 'pages/s-signs',
 			),
+			's_sync' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					's-sync',
+					's-sync-security-awareness',
+					'security-awareness/s-sync-security-awareness',
+					'security-awareness/s-sync',
+				),
+				'page_templates' => array( 'page-templates/s-sync-security-awareness.php' ),
+				'template'       => 'pages/s-sync',
+			),
 			'generative_ai' => array(
 				'default_id'     => 0,
 				'slugs'          => array(
@@ -285,6 +296,45 @@ class Config {
 				'slugs'          => array( 'hipaa-annual-workforce-training' ),
 				'page_templates' => array( 'page-templates/hipaa-annual-workforce-training.php' ),
 				'template'       => 'pages/hipaa',
+			),
+			'soc2' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					'information-security-awareness-training-for-soc-2-compliance',
+					'soc-2',
+					'soc2',
+				),
+				'page_templates' => array( 'page-templates/information-security-awareness-training-for-soc-2-compliance.php' ),
+				'template'       => 'pages/soc2',
+			),
+			'isat' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					'information-security-awareness-training',
+					'isat',
+				),
+				'page_templates' => array( 'page-templates/information-security-awareness-training.php' ),
+				'template'       => 'pages/isat',
+			),
+			'ukce' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					'information-security-awareness-training-for-uk-cyber-essentials',
+					'uk-cyber-essentials',
+					'ukce',
+				),
+				'page_templates' => array( 'page-templates/information-security-awareness-training-for-uk-cyber-essentials.php' ),
+				'template'       => 'pages/ukce',
+			),
+			'bfsi' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					'security-awareness-training-bfsi-pe-vc',
+					'bfsi-pe-vc',
+					'bfsi',
+				),
+				'page_templates' => array( 'page-templates/security-awareness-training-bfsi-pe-vc.php' ),
+				'template'       => 'pages/bfsi',
 			),
 			'financial_crime_prevention' => array(
 				'default_id'     => 0,
