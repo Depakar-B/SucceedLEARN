@@ -8,6 +8,8 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+$hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/ABAC_Hero-section-image.webp';
 ?>
 
 <section
@@ -15,6 +17,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	class="sl-anti-bribery-hero"
 	aria-labelledby="sl-anti-bribery-hero-title"
 >
+
+	<img
+		class="sl-anti-bribery-hero__bg-image"
+		src="<?php echo esc_url( $hero_image ); ?>"
+		alt="<?php esc_attr_e( 'Anti-bribery and anti-corruption training journey', 'akaza-adventure' ); ?>"
+		loading="eager"
+		fetchpriority="high"
+		decoding="async"
+	>
 
 	<div class="sl-anti-bribery-hero__container">
 
@@ -27,7 +38,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="sl-anti-bribery-hero__content">
 
 				<span class="sl-home-sub-heading">
-					CPD-CERTIFIED COMPLIANCE ELEARNING
+					CPD-Certified Compliance eLearning
 				</span>
 
 				<h1 id="sl-anti-bribery-hero-title">
@@ -107,65 +118,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 					</li>
 
 				</ul>
-
-			</div>
-
-			<!-- =====================================================
-			     Hero Visual
-			====================================================== -->
-
-			<div class="sl-anti-bribery-hero__visual">
-
-				<div class="sl-anti-bribery-hero__main-image">
-
-					<!--
-						Replace this placeholder with the final
-						ABAC hero image.
-
-						Recommended image ratio:
-						3:2
-
-						Recommended size:
-						1800 × 1200px
-					-->
-
-					<div
-						class="sl-anti-bribery-hero__image-placeholder"
-						role="img"
-						aria-label="Anti-bribery and anti-corruption compliance training image placeholder"
-					>
-						<span>
-							Main Image<br>
-							1800 × 1200px
-						</span>
-					</div>
-
-				</div>
-
-				<div class="sl-anti-bribery-hero__circle-image">
-
-					<!--
-						Replace this placeholder with the final
-						circular supporting image.
-
-						Recommended ratio:
-						1:1
-
-						Recommended size:
-						600 × 600px
-					-->
-
-					<div
-						class="sl-anti-bribery-hero__circle-image-placeholder"
-						role="img"
-						aria-label="Supporting anti-corruption compliance image placeholder"
-					>
-						<span>
-							600 × 600px
-						</span>
-					</div>
-
-				</div>
 
 			</div>
 

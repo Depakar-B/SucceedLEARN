@@ -63,6 +63,7 @@ function akaza_get_page_asset_handlers() {
 		'page-templates/insider-trading.php'                         => 'akaza_enqueue_insider_trading_assets',
 		'page-templates/tax-evasion-facilitation.php'                => 'akaza_enqueue_tax_evasion_assets',
 		'page-templates/anti-bribery-anti-corruption.php'            => 'akaza_enqueue_anti_bribery_assets',
+		'page-templates/modern-slavery-awareness.php'                => 'akaza_enqueue_modern_slavery_assets',
 		'page-templates/whistleblowing-pe-vc.php'                    => 'akaza_enqueue_whistleblowing_assets',
 		'page-templates/political-donations-pe-vc.php'               => 'akaza_enqueue_political_donations_assets',
 		'page-templates/smcr-pe-vc.php'                              => 'akaza_enqueue_smcr_assets',

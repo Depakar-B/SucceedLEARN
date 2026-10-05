@@ -61,6 +61,13 @@ function akaza_enqueue_anti_bribery_assets() {
 		'courses/anti-bribery-anti-corruption/sl-abac-laws-covered.js'
 	);
 
+	// Opt-in bordered pill eyebrow (sl-global-sub-heading.css).
+	akaza_enqueue_theme_style(
+		'akaza-global-sub-heading',
+		'sl-global-sub-heading.css',
+		array( 'akaza-main', 'akaza-global-title-accent' )
+	);
+
 	// Global FAQ component (registered in enqueue-core.php).
 	wp_enqueue_style( 'akaza-global-faq' );
 	wp_enqueue_script( 'akaza-global-faq' );
