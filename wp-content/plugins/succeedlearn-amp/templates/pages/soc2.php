@@ -53,7 +53,6 @@ $meta_desc  = succeedlearn_amp_get_soc2_meta_description();
 	succeedlearn_amp_soc2_partial( 'modules' );
 	succeedlearn_amp_soc2_partial( 'emerging' );
 	succeedlearn_amp_soc2_partial( 'relate' );
-	succeedlearn_amp_soc2_partial( 'objectives' );
 	succeedlearn_amp_soc2_partial( 'designed' );
 	succeedlearn_amp_soc2_partial( 'action' );
 	succeedlearn_amp_soc2_partial( 'choose' );
