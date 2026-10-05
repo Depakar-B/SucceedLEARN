@@ -1,0 +1,43 @@
+/**
+ * Failure to Prevent Fraud — Target audience.
+ *
+ * @package Akaza_Adventure
+ */
+
+.ftpf-audience__grid {
+	display: grid;
+	grid-template-columns: 0.82fr 1.12fr;
+	gap: clamp(55px, 8vw, 110px);
+}
+
+.ftpf-audience__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.ftpf-page .ftpf-audience__list li {
+	display: grid;
+	min-height: 73px;
+	grid-template-columns: 54px 1fr;
+	align-items: center;
+	border-top: 1px solid var(--ftpf-border);
+	color: var(--ftpf-navy);
+	font-weight: 600;
+}
+
+.ftpf-audience__list li:last-child {
+	border-bottom: 1px solid var(--ftpf-border);
+}
+
+.ftpf-audience__number {
+	color: var(--ftpf-blue);
+	font-size: 0.73rem;
+	font-weight: 700;
+}
+
+@media (max-width: 950px) {
+	.ftpf-audience__grid {
+		grid-template-columns: 1fr;
+	}
+}

@@ -1,0 +1,73 @@
+/**
+ * Failure to Prevent Fraud — FAQ.
+ *
+ * @package Akaza_Adventure
+ */
+
+.ftpf-faq__grid {
+	display: grid;
+	grid-template-columns: 0.72fr 1.18fr;
+	gap: clamp(55px, 8vw, 105px);
+}
+
+.ftpf-faq__intro {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 76px) + 40px);
+	align-self: start;
+}
+
+.ftpf-faq__list {
+	border-top: 1px solid var(--ftpf-border);
+}
+
+.ftpf-faq__item {
+	border-bottom: 1px solid var(--ftpf-border);
+}
+
+.ftpf-faq__item summary {
+	position: relative;
+	padding: 24px 47px 24px 0;
+	color: var(--ftpf-navy);
+	font-weight: 600;
+	line-height: 1.5;
+	cursor: pointer;
+	list-style: none;
+}
+
+.ftpf-faq__item summary::-webkit-details-marker {
+	display: none;
+}
+
+.ftpf-faq__item summary::after {
+	position: absolute;
+	top: 18px;
+	right: 3px;
+	color: var(--ftpf-blue);
+	content: "+";
+	font-size: 1.6rem;
+	line-height: 1.2;
+}
+
+.ftpf-faq__item[open] summary::after {
+	content: "\2212";
+}
+
+.ftpf-faq__answer {
+	padding: 0 45px 23px 0;
+}
+
+.ftpf-page .ftpf-faq__answer p {
+	margin: 0;
+	color: #47505c;
+	font-size: 0.89rem;
+}
+
+@media (max-width: 950px) {
+	.ftpf-faq__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.ftpf-faq__intro {
+		position: static;
+	}
+}

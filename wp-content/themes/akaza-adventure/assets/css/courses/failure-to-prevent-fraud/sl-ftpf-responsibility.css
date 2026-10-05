@@ -1,0 +1,67 @@
+/**
+ * Failure to Prevent Fraud — Your role banner.
+ *
+ * @package Akaza_Adventure
+ */
+
+.ftpf-responsibility__panel {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: 60px;
+	align-items: center;
+	padding: clamp(38px, 6vw, 65px);
+	border-radius: var(--ftpf-radius-large);
+	background: var(--ftpf-navy);
+	color: var(--ftpf-white);
+}
+
+.ftpf-responsibility__eyebrow {
+	display: block;
+	margin-bottom: 13px;
+	color: #a9ccfa;
+	font-size: 0.78rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+}
+
+.ftpf-page .ftpf-responsibility h2 {
+	color: var(--ftpf-white);
+	font-size: clamp(2rem, 3.5vw, 3.4rem);
+}
+
+.ftpf-page .ftpf-responsibility h2 span {
+	color: #83bafc;
+}
+
+.ftpf-page .ftpf-responsibility p {
+	max-width: 760px;
+	margin-bottom: 0;
+	color: rgba(255, 255, 255, 0.78);
+}
+
+.ftpf-responsibility__mark {
+	display: grid;
+	width: 135px;
+	height: 135px;
+	place-items: center;
+	border: 1px solid rgba(255, 255, 255, 0.22);
+	border-radius: 50%;
+	color: var(--ftpf-white);
+	font-size: 0.76rem;
+	font-weight: 600;
+	line-height: 1.5;
+	text-align: center;
+}
+
+@media (max-width: 650px) {
+	.ftpf-responsibility__panel {
+		grid-template-columns: 1fr;
+		gap: 35px;
+	}
+
+	.ftpf-responsibility__mark {
+		width: 115px;
+		height: 115px;
+	}
+}

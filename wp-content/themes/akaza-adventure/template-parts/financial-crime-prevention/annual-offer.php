@@ -12,9 +12,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 <section class="sl-fcp-offer" aria-labelledby="sl-fcp-offer-title">
 	<div class="container sl-fcp-offer__inner">
 		<div>
-			<p class="sl-fcp-offer__label">
+			<span class="sl-home-sub-heading">
 				<?php esc_html_e( 'Complete Compliance Suite', 'akaza-adventure' ); ?>
-			</p>
+			</span>
 
 			<h2 id="sl-fcp-offer-title">
 				<?php esc_html_e( 'Avail the whole suite for just', 'akaza-adventure' ); ?>

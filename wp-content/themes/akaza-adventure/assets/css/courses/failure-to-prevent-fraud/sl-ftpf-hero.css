@@ -1,0 +1,90 @@
+/**
+ * Failure to Prevent Fraud — Hero.
+ * Full-bleed background image pattern (matches PE/VC homepage hero).
+ *
+ * @package Akaza_Adventure
+ */
+
+.ftpf-page .ftpf-hero {
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
+	padding-top: calc(var(--slf-header-clearance, 76px) + 90px);
+	padding-bottom: 90px;
+	background: #ffffff;
+}
+
+.ftpf-hero__bg-image {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	width: 100%;
+	max-width: none;
+	height: 100%;
+	object-fit: cover;
+	object-position: right center;
+	pointer-events: none;
+}
+
+.ftpf-hero > .ftpf-container {
+	position: relative;
+	z-index: 1;
+}
+
+.ftpf-hero__content {
+	max-width: 650px;
+	min-width: 0;
+}
+
+.ftpf-page .ftpf-hero h1 {
+	margin: 14px 0 24px;
+	font-size: clamp(2.2rem, 4vw, 3.4rem);
+	font-weight: 600;
+	line-height: 1.12;
+	letter-spacing: -0.03em;
+}
+
+.ftpf-page .ftpf-hero h1 span {
+	display: block;
+}
+
+.ftpf-hero__copy {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	max-width: clamp(360px, 36vw, 520px);
+}
+
+.ftpf-page .ftpf-hero__copy p {
+	margin: 0;
+	color: var(--ftpf-text);
+}
+
+.ftpf-page .ftpf-hero__copy .ftpf-hero__lead {
+	color: var(--ftpf-navy);
+	font-size: 1.05rem;
+	line-height: 1.65;
+}
+
+.ftpf-hero .ftpf-btn-row {
+	margin-top: 30px;
+}
+
+@media (max-width: 1000px) {
+	.ftpf-hero__content,
+	.ftpf-hero__copy {
+		max-width: 100%;
+	}
+
+	.ftpf-hero__bg-image {
+		opacity: 0.28;
+		object-position: center center;
+	}
+}
+
+@media (max-width: 767px) {
+	.ftpf-page .ftpf-hero {
+		padding-top: calc(var(--slf-header-clearance, 76px) + 60px);
+		padding-bottom: 60px;
+	}
+}

@@ -22,8 +22,15 @@ function akaza_enqueue_insider_trading_assets() {
 		)
 	);
 
+	// Opt-in bordered pill eyebrow (sl-global-sub-heading.css).
+	akaza_enqueue_theme_style(
+		'akaza-global-sub-heading',
+		'sl-global-sub-heading.css',
+		array( 'akaza-main', 'akaza-global-title-accent' )
+	);
+
 	$folder = 'courses/insider-trading';
-	$deps   = array( 'akaza-course-global' );
+	$deps   = array( 'akaza-course-global', 'akaza-global-sub-heading' );
 
 	$sections = array(
 		'sl-insider-trading-hero',

@@ -1,0 +1,58 @@
+/**
+ * Failure to Prevent Fraud — Learning outcomes.
+ *
+ * @package Akaza_Adventure
+ */
+
+.ftpf-outcomes__grid {
+	display: grid;
+	grid-template-columns: 0.78fr 1.17fr;
+	gap: clamp(55px, 8vw, 105px);
+}
+
+.ftpf-outcomes__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.ftpf-outcomes__list li {
+	display: grid;
+	grid-template-columns: 38px 1fr;
+	gap: 16px;
+	padding: 20px 0;
+	border-bottom: 1px solid #dadfe5;
+}
+
+.ftpf-outcomes__list li:first-child {
+	padding-top: 0;
+}
+
+.ftpf-outcomes__icon {
+	display: grid;
+	width: 34px;
+	height: 34px;
+	place-items: center;
+	border-radius: 50%;
+	background: var(--ftpf-blue);
+	color: var(--ftpf-white);
+	font-size: 0.8rem;
+	font-weight: 700;
+}
+
+.ftpf-outcomes__list strong {
+	display: block;
+	color: var(--ftpf-navy);
+}
+
+.ftpf-page .ftpf-outcomes__list p {
+	margin: 4px 0 0;
+	color: #49525e;
+	font-size: 0.88rem;
+}
+
+@media (max-width: 950px) {
+	.ftpf-outcomes__grid {
+		grid-template-columns: 1fr;
+	}
+}

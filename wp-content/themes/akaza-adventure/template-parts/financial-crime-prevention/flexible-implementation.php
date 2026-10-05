@@ -36,9 +36,9 @@ $delivery_items = array(
 	<div class="container">
 
 		<div class="sl-fcp-section-intro">
-			<p class="sl-fcp-eyebrow">
+			<span class="sl-home-sub-heading">
 				<?php esc_html_e( 'Flexible Implementation', 'akaza-adventure' ); ?>
-			</p>
+			</span>
 
 			<h2 id="sl-fcp-delivery-title">
 				<?php esc_html_e( 'Deliver Financial Crime Prevention Training Your Way', 'akaza-adventure' ); ?>

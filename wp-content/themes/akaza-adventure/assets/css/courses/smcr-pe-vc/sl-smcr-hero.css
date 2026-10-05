@@ -45,6 +45,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 14px;
+	max-width: clamp(420px, 38vw, 540px);
 }
 
 .sl-smcr-hero__description p {
@@ -105,7 +106,8 @@
 }
 
 @media (max-width: 1000px) {
-	.sl-smcr-hero__content {
+	.sl-smcr-hero__content,
+	.sl-smcr-hero__description {
 		max-width: 100%;
 	}
 

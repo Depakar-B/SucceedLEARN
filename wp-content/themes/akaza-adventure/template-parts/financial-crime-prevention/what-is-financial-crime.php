@@ -16,9 +16,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 >
 	<div class="container">
 		<div class="sl-fcp-narrow">
-			<p class="sl-fcp-eyebrow">
+			<span class="sl-home-sub-heading">
 				<?php esc_html_e( 'Clear Definition', 'akaza-adventure' ); ?>
-			</p>
+			</span>
 
 			<h2 id="sl-fcp-definition-title">
 				<?php esc_html_e( 'What Is Financial Crime Prevention Training?', 'akaza-adventure' ); ?>
