@@ -190,21 +190,40 @@ body.slf-body #main-content .msa-page .sl-home-sub-heading {
 
 .msa-hero {
 	position: relative;
+	isolation: isolate;
 	overflow: hidden;
 	padding:
-		calc(var(--slf-header-clearance, 76px) + clamp(72px, 8vw, 120px))
+		calc(var(--slf-header-clearance, 76px) + 90px)
 		0
-		clamp(72px, 8vw, 120px);
-	background:
-		radial-gradient(circle at 94% 10%, rgba(19, 93, 183, 0.12), transparent 28%),
-		var(--msa-white);
+		90px;
+	background: var(--msa-white);
 }
 
-.msa-hero__grid {
-	display: grid;
-	grid-template-columns: 1.04fr 0.96fr;
-	gap: clamp(45px, 7vw, 88px);
-	align-items: center;
+.msa-hero__bg-image {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	width: 100%;
+	max-width: none;
+	height: 100%;
+	object-fit: cover;
+	object-position: right center;
+	pointer-events: none;
+}
+
+.msa-hero > .msa-container {
+	position: relative;
+	z-index: 1;
+}
+
+.msa-hero__content {
+	max-width: clamp(360px, 38vw, 580px);
+	min-width: 0;
+}
+
+.msa-page .msa-hero h1 {
+	font-size: clamp(2.2rem, 4vw, 3.4rem);
+	line-height: 1.12;
 }
 
 .msa-page .msa-hero__tagline {
@@ -215,9 +234,9 @@ body.slf-body #main-content .msa-page .sl-home-sub-heading {
 }
 
 .msa-page .msa-hero__copy {
-	max-width: 710px;
+	max-width: 520px;
 	margin-bottom: 28px;
-	font-size: 1.14rem;
+	font-size: 1.05rem;
 }
 
 .msa-page .msa-hero__pointers {
@@ -248,63 +267,6 @@ body.slf-body #main-content .msa-page .sl-home-sub-heading {
 	background: var(--msa-soft-blue);
 	color: var(--msa-blue);
 	font-weight: 700;
-}
-
-.msa-hero__visual {
-	position: relative;
-}
-
-.msa-hero__image {
-	width: 100%;
-	min-height: 470px;
-	border-radius: 26px;
-	object-fit: cover;
-	box-shadow: var(--msa-shadow);
-}
-
-.msa-hero__image-fallback {
-	display: flex;
-	min-height: 470px;
-	align-items: center;
-	justify-content: center;
-	padding: 40px;
-	border-radius: 26px;
-	background: linear-gradient(145deg, #16234d, #135db7);
-	color: var(--msa-white);
-	text-align: center;
-	box-shadow: var(--msa-shadow);
-}
-
-.msa-hero__image-fallback strong {
-	color: var(--msa-white);
-	font-size: 1.3rem;
-}
-
-.msa-page .msa-hero__image-fallback p {
-	margin: 10px 0 0;
-	color: rgba(255, 255, 255, 0.84);
-}
-
-.msa-hero__card {
-	position: absolute;
-	right: -18px;
-	bottom: 25px;
-	width: 255px;
-	padding: 20px;
-	border-radius: 15px;
-	background: var(--msa-white);
-	box-shadow: var(--msa-shadow);
-}
-
-.msa-hero__card strong {
-	display: block;
-	margin-bottom: 5px;
-	color: var(--msa-navy);
-}
-
-.msa-page .msa-hero__card p {
-	margin: 0;
-	font-size: 0.84rem;
 }
 
 /* =========================================================
@@ -414,16 +376,21 @@ body.slf-body #main-content .msa-page .sl-home-sub-heading {
 }
 
 .msa-visual-holder img {
+	display: block;
 	width: 100%;
-	height: 100%;
+	max-width: 100%;
+	height: auto;
 	border-radius: 20px;
-	object-fit: cover;
 }
 
 .msa-visual-holder--image {
+	display: block;
+	min-height: 0;
 	padding: 0;
 	border: 0;
+	background: transparent;
 	overflow: hidden;
+	box-shadow: var(--msa-shadow);
 }
 
 .msa-page .msa-visual-holder p {
@@ -513,9 +480,23 @@ body.slf-body #main-content .msa-page .sl-home-sub-heading {
 }
 
 .msa-shot img {
+	display: block;
 	width: 100%;
+	max-width: 100%;
 	height: auto;
-	object-fit: cover;
+	border-bottom: 1px solid #dde3eb;
+}
+
+.msa-gallery > .msa-shot {
+	display: flex;
+	flex-direction: column;
+}
+
+.msa-gallery > .msa-shot img {
+	flex: 1 1 auto;
+	min-height: 0;
+	object-fit: contain;
+	background: #f2f2f2;
 }
 
 .msa-shot__fallback {
@@ -918,7 +899,15 @@ body.slf-body #main-content .msa-page .sl-home-sub-heading {
 ========================================================== */
 
 @media (max-width: 960px) {
-	.msa-hero__grid,
+	.msa-hero__content {
+		max-width: 100%;
+	}
+
+	.msa-hero__bg-image {
+		opacity: 0.28;
+		object-position: center center;
+	}
+
 	.msa-answer-grid,
 	.msa-audience,
 	.msa-legal,
@@ -959,14 +948,6 @@ body.slf-body #main-content .msa-page .sl-home-sub-heading {
 		position: static;
 	}
 
-	.msa-hero__visual {
-		padding-bottom: 55px;
-	}
-
-	.msa-hero__card {
-		right: 18px;
-		bottom: 0;
-	}
 }
 
 @media (max-width: 650px) {
@@ -983,21 +964,11 @@ body.slf-body #main-content .msa-page .sl-home-sub-heading {
 		display: none !important;
 	}
 
-	.msa-hero__image,
-	.msa-hero__image-fallback {
-		min-height: 340px;
-	}
-
-	.msa-hero__visual {
-		padding-bottom: 0;
-	}
-
-	.msa-hero__card {
-		position: relative;
-		right: auto;
-		bottom: auto;
-		width: calc(100% - 28px);
-		margin: -45px auto 0;
+	.msa-hero {
+		padding:
+			calc(var(--slf-header-clearance, 76px) + 60px)
+			0
+			60px;
 	}
 
 	.msa-cta-row,

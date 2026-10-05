@@ -11,21 +11,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $shots = array(
 	array(
-		'image'    => '',
+		'image'    => 'https://succeedlearn.com/wp-content/uploads/2026/10/Slavery-awareness_Image-1.webp',
 		'alt'      => __( 'SucceedLEARN Modern Slavery Awareness course objectives', 'akaza-adventure' ),
 		'fallback' => __( 'Insert supplied course objectives screenshot', 'akaza-adventure' ),
 		'title'    => __( 'Clear learning objectives', 'akaza-adventure' ),
 		'text'     => __( 'Learners are introduced to modern slavery, warning signs and appropriate reporting.', 'akaza-adventure' ),
 	),
 	array(
-		'image'    => '',
+		'image'    => 'https://succeedlearn.com/wp-content/uploads/2026/10/Slavery-awareness_Image-3.webp',
 		'alt'      => __( 'SucceedLEARN Modern Slavery Awareness course menu', 'akaza-adventure' ),
 		'fallback' => __( 'Insert supplied course menu screenshot', 'akaza-adventure' ),
 		'title'    => __( 'Structured learning journey', 'akaza-adventure' ),
 		'text'     => __( 'Definitions, warning signs, scenarios, procurement, reporting and assessment.', 'akaza-adventure' ),
 	),
 	array(
-		'image'    => '',
+		'image'    => 'https://succeedlearn.com/wp-content/uploads/2026/10/Slavery-awareness_Image-2.webp',
 		'alt'      => __( 'SucceedLEARN procurement and supply-chain modern slavery course section', 'akaza-adventure' ),
 		'fallback' => __( 'Insert supplied procurement screenshot', 'akaza-adventure' ),
 		'title'    => __( 'Procurement pathway', 'akaza-adventure' ),

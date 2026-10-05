@@ -2,6 +2,8 @@
 /**
  * Modern Slavery Awareness — Hero.
  *
+ * Full-bleed background image pattern (matches PE/VC homepage hero).
+ *
  * @package Akaza_Adventure
  */
 
@@ -9,13 +11,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$hero_image = '';
+$hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/Modern-Slavery-Image_Hero-section.webp';
 ?>
 
 <section class="msa-hero" aria-labelledby="msa-hero-title">
-	<div class="msa-container msa-hero__grid">
+	<img
+		class="msa-hero__bg-image"
+		src="<?php echo esc_url( $hero_image ); ?>"
+		alt="<?php esc_attr_e( 'Modern slavery risk across offices, factories, construction sites and public buildings', 'akaza-adventure' ); ?>"
+		decoding="async"
+		fetchpriority="high"
+	>
 
-		<div>
+	<div class="msa-container">
+		<div class="msa-hero__content">
 			<span class="sl-home-sub-heading"><?php esc_html_e( 'UK Compliance Training', 'akaza-adventure' ); ?></span>
 
 			<h1 id="msa-hero-title">
@@ -41,31 +50,5 @@ $hero_image = '';
 				<a href="#buy-course" class="msa-cta msa-cta--solid"><?php esc_html_e( 'Buy the course', 'akaza-adventure' ); ?></a>
 			</div>
 		</div>
-
-		<div class="msa-hero__visual">
-			<?php if ( $hero_image ) : ?>
-				<img
-					class="msa-hero__image"
-					src="<?php echo esc_url( $hero_image ); ?>"
-					alt="<?php esc_attr_e( 'UK professionals discussing responsible business and modern slavery awareness', 'akaza-adventure' ); ?>"
-					loading="eager"
-					fetchpriority="high"
-					decoding="async"
-				>
-			<?php else : ?>
-				<div class="msa-hero__image-fallback">
-					<div>
-						<strong><?php esc_html_e( 'Modern Slavery Awareness', 'akaza-adventure' ); ?></strong>
-						<p><?php esc_html_e( 'Image holder: UK professionals reviewing workplace, supplier or responsible-business risk.', 'akaza-adventure' ); ?></p>
-					</div>
-				</div>
-			<?php endif; ?>
-
-			<div class="msa-hero__card">
-				<strong><?php esc_html_e( 'Recognise → Record → Report', 'akaza-adventure' ); ?></strong>
-				<p><?php esc_html_e( 'Practical awareness designed to support an appropriate workplace response.', 'akaza-adventure' ); ?></p>
-			</div>
-		</div>
-
 	</div>
 </section>

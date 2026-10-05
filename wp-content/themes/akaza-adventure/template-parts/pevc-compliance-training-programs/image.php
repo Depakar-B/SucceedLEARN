@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$image_url = 'https://succeedlearn.com/wp-content/uploads/2026/09/compliance_process_blocks_woman.webp';
+$image_url = 'https://succeedlearn.com/wp-content/uploads/2026/10/corporate_workflow_and_compliance_strategy.webp';
 ?>
 
 <section

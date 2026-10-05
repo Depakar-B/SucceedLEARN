@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$audience_image = '';
+$audience_image = 'https://succeedlearn.com/wp-content/uploads/2026/10/Slavery-Awareness_Image-4.webp';
 $audiences      = array(
 	__( 'Employees who need basic modern slavery awareness.', 'akaza-adventure' ),
 	__( 'Employees who may encounter third-party workers or vendors.', 'akaza-adventure' ),

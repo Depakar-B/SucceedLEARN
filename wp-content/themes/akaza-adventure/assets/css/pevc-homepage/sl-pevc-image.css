@@ -29,6 +29,12 @@
 	object-position: center;
 }
 
+@media (min-width: 1600px) {
+	.sl-pevc-image__figure img {
+		height: 480px;
+	}
+}
+
 @media (max-width: 991px) {
 	.sl-pevc-image__figure img {
 		height: 280px;
