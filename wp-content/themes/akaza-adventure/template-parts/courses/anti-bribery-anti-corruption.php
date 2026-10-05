@@ -24,6 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php get_template_part( 'template-parts/courses/anti-bribery-anti-corruption/sl-abac-target-audience' ); ?>
 	<?php get_template_part( 'template-parts/courses/anti-bribery-anti-corruption/sl-abac-laws-covered' ); ?>
 	<?php get_template_part( 'template-parts/courses/anti-bribery-anti-corruption/sl-abac-compliance-library' ); ?>
+	<?php get_template_part( 'template-parts/courses/anti-bribery-anti-corruption/sl-abac-why-choose' ); ?>
 	<?php get_template_part( 'template-parts/courses/anti-bribery-anti-corruption/sl-abac-faq' ); ?>
 	<?php get_template_part( 'template-parts/courses/anti-bribery-anti-corruption/sl-abac-contact' ); ?>
 

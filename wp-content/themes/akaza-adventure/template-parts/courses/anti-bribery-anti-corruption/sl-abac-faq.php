@@ -39,7 +39,7 @@ $faq_items = array(
 
     array(
         'question' => __( 'Are all gifts and hospitality prohibited?', 'akaza-adventure' ),
-		'answer'   => __( 'No. Genuine, proportionate and transparent business hospitality may be permitted, subject to applicable law and the organisation\'s approval and record-keeping rules.', 'akaza-adventure' ),
+		'answer'   => __( 'No. Genuine, proportionate and transparent business hospitality may be permitted, subject to applicable law and the organisation’s approval and record-keeping rules.', 'akaza-adventure' ),
     ),
 
     array(

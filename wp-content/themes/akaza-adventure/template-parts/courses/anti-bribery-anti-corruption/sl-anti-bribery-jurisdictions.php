@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<p>
 				<?php
 				esc_html_e(
-					'Our UK ABAC course includes UK and US legal content. India-focused ABAC learning is also available within a wider range of courses that can be customised for your organisation\'s needs.',
+					'Our UK ABAC course includes UK and US legal content. India-focused ABAC learning is also available within a wider range of courses that can be customised for your organisation’s needs.',
 					'akaza-adventure'
 				);
 				?>
@@ -73,32 +73,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</span>
 				<div class="sl-anti-bribery-jurisdictions__card-content">
 					<h3>
-						<?php esc_html_e( 'US Foreign Corrupt Practices Act (FCPA)', 'akaza-adventure' ); ?>
+						<?php esc_html_e( 'US Foreign Corrupt Practices Act (FCPA) training content', 'akaza-adventure' ); ?>
 					</h3>
 					<p>
 						<?php
 						esc_html_e(
-							'The FCPA prohibits covered individuals and businesses from bribing foreign officials to obtain or retain business. It also contains accounting requirements for issuers, including books and records and internal accounting controls.',
+							'The UK ABAC course also introduces the US Foreign Corrupt Practices Act of 1977. This content provides context for international business and bribery risks involving foreign public officials.',
 							'akaza-adventure'
 						);
 						?>
 					</p>
-					<p>
-						<?php
-						esc_html_e(
-							'Its narrow exception for certain routine governmental action does not make facilitation payments universally lawful. The UK Bribery Act has no equivalent exception, and organisational policy may prohibit such payments.',
-							'akaza-adventure'
-						);
-						?>
-					</p>
-					<p>
-						<?php
-						esc_html_e(
-							'The UK ABAC course introduces the FCPA alongside UK law to support awareness of cross-border bribery risks.',
-							'akaza-adventure'
-						);
-						?>
-					</p>
+					<ul>
+						<li><?php esc_html_e( 'Understand the FCPA’s role in tackling foreign bribery.', 'akaza-adventure' ); ?></li>
+						<li><?php esc_html_e( 'Recognise risks involving intermediaries, payments and business benefits.', 'akaza-adventure' ); ?></li>
+						<li><?php esc_html_e( 'Distinguish the UK and US approaches to facilitation payments.', 'akaza-adventure' ); ?></li>
+					</ul>
 				</div>
 			</article>
 
@@ -109,32 +98,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</span>
 				<div class="sl-anti-bribery-jurisdictions__card-content">
 					<h3>
-						<?php esc_html_e( 'Prevention of Corruption Act 1988', 'akaza-adventure' ); ?>
+						<?php esc_html_e( 'India Prevention of Corruption Act training', 'akaza-adventure' ); ?>
 					</h3>
 					<p>
 						<?php
 						esc_html_e(
-							'The India-focused course covers the Prevention of Corruption Act 1988, including changes introduced by the 2018 amendment. It explains bribery involving public servants and the giving or promising of an undue advantage.',
+							'India-focused ABAC learning introduces the Prevention of Corruption Act 1988, as amended in 2018. It connects bribery involving public servants and undue advantages with everyday business scenarios.',
 							'akaza-adventure'
 						);
 						?>
 					</p>
-					<p>
-						<?php
-						esc_html_e(
-							'It introduces the offence relating to bribery of a public servant by a commercial organisation, the role of associated persons and potential liability for persons in charge where the statutory conditions are met.',
-							'akaza-adventure'
-						);
-						?>
-					</p>
-					<p>
-						<?php
-						esc_html_e(
-							'The content can also be aligned with the organisation\'s Code of Conduct, gifts and hospitality policy, whistleblowing process and internal approval controls.',
-							'akaza-adventure'
-						);
-						?>
-					</p>
+					<ul>
+						<li><?php esc_html_e( 'Identify bribery risks involving public servants and associated persons.', 'akaza-adventure' ); ?></li>
+						<li><?php esc_html_e( 'Assess gifts, third-party relationships and improper benefits.', 'akaza-adventure' ); ?></li>
+						<li><?php esc_html_e( 'Follow organisational policies, approval routes and escalation processes.', 'akaza-adventure' ); ?></li>
+					</ul>
 				</div>
 			</article>
 

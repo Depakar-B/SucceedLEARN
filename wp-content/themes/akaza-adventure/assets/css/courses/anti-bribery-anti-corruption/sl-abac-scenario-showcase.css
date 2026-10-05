@@ -141,7 +141,7 @@
 .sl-abac-scenario-showcase__image {
     width: 100%;
 
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 3 / 2;
 
     overflow: hidden;
 
@@ -150,27 +150,12 @@
     background: #f5f7fa;
 }
 
-.sl-abac-scenario-showcase__image-placeholder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+.sl-abac-scenario-showcase__image img {
+    display: block;
     width: 100%;
+    max-width: none;
     height: 100%;
-
-    background:
-        repeating-linear-gradient(
-            135deg,
-            #f5f7fa 0,
-            #f5f7fa 12px,
-            #edf1f6 12px,
-            #edf1f6 24px
-        );
-
-    color: #6b7c93;
-
-    font-size: 13px;
-    font-weight: 600;
+    object-fit: contain;
 }
 
 
@@ -358,10 +343,6 @@
         padding: 14px;
 
         border-radius: 16px;
-    }
-
-    .sl-abac-scenario-showcase__image {
-        aspect-ratio: 16 / 10;
     }
 
     .sl-abac-scenario-showcase__card-content {

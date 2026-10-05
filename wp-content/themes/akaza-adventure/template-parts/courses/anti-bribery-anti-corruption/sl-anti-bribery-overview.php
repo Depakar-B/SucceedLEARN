@@ -16,30 +16,8 @@
 
         <div class="sl-anti-bribery-overview__grid">
 
-            <!-- Sticky Image -->
+            <!-- Heading + Image -->
             <div class="sl-anti-bribery-overview__visual">
-
-                <div class="sl-anti-bribery-overview__image">
-                    <div
-                        class="sl-anti-bribery-overview__image-placeholder"
-                        role="img"
-                        aria-label="<?php esc_attr_e(
-                            'Anti-Bribery and Anti-Corruption training course overview image placeholder',
-                            'akaza-adventure'
-                        ); ?>"
-                    >
-                        <span>
-                            Course Overview Image
-                            <small>900 × 1200px</small>
-                        </span>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <!-- Content -->
-            <div class="sl-anti-bribery-overview__content">
 
                 <span class="sl-home-sub-heading">
                     <?php esc_html_e( 'Course Overview', 'akaza-adventure' ); ?>
@@ -50,14 +28,33 @@
                     <span>training?</span>
                 </h2>
 
-                <div class="sl-anti-bribery-overview__intro">
-                    <p>
+                <figure class="sl-anti-bribery-overview__figure">
+                    <div class="sl-anti-bribery-overview__image">
+                        <img
+                            src="https://succeedlearn.com/wp-content/uploads/2026/10/What-is-ABAC-Pic.webp"
+                            alt="<?php esc_attr_e(
+                                'Professionals reviewing an ethical business decision together in a London office',
+                                'akaza-adventure'
+                            ); ?>"
+                            width="1280"
+                            height="853"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </div>
+                    <figcaption>
                         <?php esc_html_e(
                             'Building confident, consistent decisions around business integrity.',
                             'akaza-adventure'
                         ); ?>
-                    </p>
-                </div>
+                    </figcaption>
+                </figure>
+
+            </div>
+
+
+            <!-- Content -->
+            <div class="sl-anti-bribery-overview__content">
 
                 <div class="sl-anti-bribery-overview__copy">
 

@@ -38,6 +38,7 @@ function akaza_enqueue_anti_bribery_assets() {
 		'sl-abac-target-audience',
 		'sl-abac-laws-covered',
 		'sl-abac-compliance-library',
+		'sl-abac-why-choose',
 	);
 
 	foreach ( $sections as $section ) {
