@@ -241,6 +241,17 @@ class Config {
 				'page_templates' => array( 'page-templates/s-signs-security-awareness.php' ),
 				'template'       => 'pages/s-signs',
 			),
+			's_sync' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					's-sync',
+					's-sync-security-awareness',
+					'security-awareness/s-sync-security-awareness',
+					'security-awareness/s-sync',
+				),
+				'page_templates' => array( 'page-templates/s-sync-security-awareness.php' ),
+				'template'       => 'pages/s-sync',
+			),
 			'generative_ai' => array(
 				'default_id'     => 0,
 				'slugs'          => array(
