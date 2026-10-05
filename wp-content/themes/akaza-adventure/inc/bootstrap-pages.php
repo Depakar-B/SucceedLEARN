@@ -85,6 +85,11 @@ function akaza_bootstrap_pages() {
 			'template' => 'page-templates/modern-slavery-awareness.php',
 		),
 		array(
+			'slug'     => 'failure-to-prevent-fraud',
+			'title'    => 'Failure to Prevent Fraud Training',
+			'template' => 'page-templates/failure-to-prevent-fraud.php',
+		),
+		array(
 			'slug'     => 'whistleblowing-pe-vc',
 			'title'    => 'Whistleblowing Training for Private Equity and Venture Capital',
 			'template' => 'page-templates/whistleblowing-pe-vc.php',

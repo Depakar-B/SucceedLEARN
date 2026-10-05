@@ -1,0 +1,229 @@
+/**
+ * Failure to Prevent Fraud — tokens, typography, layout and buttons.
+ *
+ * Everything is scoped under .ftpf-page so the shared course
+ * foundation (course-global.css) does not restyle these sections.
+ *
+ * @package Akaza_Adventure
+ */
+
+.ftpf-page {
+	--ftpf-navy: #16234d;
+	--ftpf-blue: #135db7;
+	--ftpf-orange: #ea3f23;
+	--ftpf-orange-dark: #d8371f;
+	--ftpf-white: #ffffff;
+	--ftpf-grey: #f5f5f5;
+	--ftpf-black: #000000;
+	--ftpf-blue-050: #f3f7fd;
+	--ftpf-blue-100: #e6f0fc;
+	--ftpf-orange-050: #fff3f0;
+	--ftpf-border: #d9e0ea;
+	--ftpf-muted: #586270;
+	--ftpf-text: #4b5360;
+	--ftpf-shadow: 0 25px 65px rgba(22, 35, 77, 0.13);
+	--ftpf-radius-small: 10px;
+	--ftpf-radius: 20px;
+	--ftpf-radius-large: 28px;
+	--ftpf-container: 1180px;
+
+	background: var(--ftpf-white);
+	color: var(--ftpf-black);
+	font-family: "Space Grotesk", Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.65;
+	-webkit-font-smoothing: antialiased;
+}
+
+.ftpf-page *,
+.ftpf-page *::before,
+.ftpf-page *::after {
+	box-sizing: border-box;
+}
+
+.ftpf-page img,
+.ftpf-page svg {
+	display: block;
+	max-width: 100%;
+}
+
+.ftpf-page :focus-visible {
+	outline: 3px solid var(--ftpf-blue);
+	outline-offset: 4px;
+}
+
+.ftpf-page h1,
+.ftpf-page h2,
+.ftpf-page h3 {
+	margin-top: 0;
+	color: var(--ftpf-navy);
+	font-family: "Space Grotesk", Arial, sans-serif;
+	font-weight: 700;
+	line-height: 1.1;
+	letter-spacing: -0.035em;
+}
+
+.ftpf-page h1 {
+	margin-bottom: 25px;
+	font-size: clamp(2.8rem, 5.5vw, 5.4rem);
+}
+
+.ftpf-page h2 {
+	margin-bottom: 22px;
+	font-size: clamp(2rem, 3.8vw, 3.65rem);
+}
+
+.ftpf-page h3 {
+	margin-bottom: 0;
+	font-size: 1.25rem;
+}
+
+.ftpf-page h1 span,
+.ftpf-page h2 span {
+	color: var(--ftpf-blue);
+}
+
+.ftpf-page p,
+.ftpf-page li {
+	color: var(--ftpf-black);
+	font-family: "Space Grotesk", Arial, sans-serif;
+	line-height: 1.65;
+}
+
+.ftpf-page p {
+	margin: 0 0 1.15rem;
+}
+
+.ftpf-page ::selection {
+	background: var(--ftpf-blue);
+	color: var(--ftpf-white);
+}
+
+/* =========================================================
+   LAYOUT
+========================================================== */
+
+.ftpf-container {
+	width: min(calc(100% - 40px), var(--ftpf-container));
+	margin-inline: auto;
+}
+
+.ftpf-section {
+	padding: clamp(80px, 9vw, 125px) 0;
+	scroll-margin-top: var(--slf-header-clearance, 76px);
+}
+
+.ftpf-section--white {
+	background: var(--ftpf-white);
+}
+
+.ftpf-section--grey {
+	background: var(--ftpf-grey);
+}
+
+body.slf-body #main-content .ftpf-page .sl-home-sub-heading {
+	margin-bottom: 16px;
+}
+
+.ftpf-section-heading {
+	max-width: 790px;
+	margin-bottom: 48px;
+}
+
+.ftpf-page .ftpf-section-heading > p:last-child {
+	max-width: 690px;
+	color: #3f4855;
+	font-size: 1.05rem;
+}
+
+.ftpf-page .ftpf-lead {
+	color: var(--ftpf-navy);
+	font-size: 1.17rem;
+	font-weight: 500;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================== */
+
+.ftpf-btn-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 13px;
+}
+
+.ftpf-page a.ftpf-btn {
+	display: inline-flex;
+	min-height: 50px;
+	align-items: center;
+	justify-content: center;
+	padding: 12px 23px;
+	border: 2px solid transparent;
+	border-radius: 9px;
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 0.9rem;
+	font-weight: 500;
+	line-height: 1.2;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
+}
+
+.ftpf-page a.ftpf-btn:hover {
+	transform: translateY(-2px);
+}
+
+.ftpf-page a.ftpf-btn--solid,
+.ftpf-page a.ftpf-btn--solid:visited {
+	border-color: var(--ftpf-orange);
+	background: var(--ftpf-orange);
+	color: var(--ftpf-white);
+	box-shadow: 0 10px 22px rgba(234, 63, 35, 0.2);
+}
+
+.ftpf-page a.ftpf-btn--solid:hover,
+.ftpf-page a.ftpf-btn--solid:focus {
+	border-color: var(--ftpf-orange-dark);
+	background: var(--ftpf-orange-dark);
+	color: var(--ftpf-white);
+}
+
+.ftpf-page a.ftpf-btn--outline,
+.ftpf-page a.ftpf-btn--outline:visited {
+	border-color: var(--ftpf-orange);
+	background: var(--ftpf-white);
+	color: var(--ftpf-orange);
+}
+
+.ftpf-page a.ftpf-btn--outline:hover,
+.ftpf-page a.ftpf-btn--outline:focus {
+	background: var(--ftpf-orange-050);
+	color: var(--ftpf-orange);
+}
+
+@media (max-width: 650px) {
+	.ftpf-container {
+		width: min(calc(100% - 28px), var(--ftpf-container));
+	}
+
+	.ftpf-section {
+		padding: 70px 0;
+	}
+
+	.ftpf-btn-row {
+		display: grid;
+	}
+
+	.ftpf-page a.ftpf-btn {
+		width: 100%;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.ftpf-page *,
+	.ftpf-page *::before,
+	.ftpf-page *::after {
+		transition-duration: 0.01ms !important;
+	}
+}

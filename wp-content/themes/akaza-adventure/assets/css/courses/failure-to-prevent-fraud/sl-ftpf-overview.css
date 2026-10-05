@@ -1,0 +1,71 @@
+/**
+ * Failure to Prevent Fraud — Course overview.
+ *
+ * @package Akaza_Adventure
+ */
+
+.ftpf-overview__grid {
+	display: grid;
+	grid-template-columns: 1.04fr 0.72fr;
+	gap: clamp(55px, 8vw, 100px);
+}
+
+.ftpf-overview__panel {
+	align-self: start;
+	padding: 30px;
+	border-top: 5px solid var(--ftpf-blue);
+	border-radius: 0 0 var(--ftpf-radius) var(--ftpf-radius);
+	background: var(--ftpf-white);
+	box-shadow: 0 9px 25px rgba(22, 35, 77, 0.07);
+}
+
+.ftpf-page .ftpf-overview__panel-label {
+	margin-bottom: 22px;
+	color: var(--ftpf-blue);
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+.ftpf-overview__facts {
+	margin: 0;
+}
+
+.ftpf-overview__facts > div {
+	display: grid;
+	grid-template-columns: 125px 1fr;
+	gap: 17px;
+	padding: 16px 0;
+	border-top: 1px solid var(--ftpf-border);
+}
+
+.ftpf-overview__facts > div:last-child {
+	border-bottom: 1px solid var(--ftpf-border);
+}
+
+.ftpf-overview__facts dt {
+	color: var(--ftpf-muted);
+	font-size: 0.76rem;
+	font-weight: 400;
+}
+
+.ftpf-overview__facts dd {
+	margin: 0;
+	color: var(--ftpf-navy);
+	font-size: 0.86rem;
+	font-weight: 600;
+}
+
+@media (max-width: 950px) {
+	.ftpf-overview__grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 650px) {
+	.ftpf-overview__facts > div {
+		grid-template-columns: 1fr;
+		gap: 3px;
+	}
+}

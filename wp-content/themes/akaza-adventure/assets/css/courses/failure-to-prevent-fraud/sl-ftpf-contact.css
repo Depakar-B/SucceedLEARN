@@ -1,0 +1,169 @@
+/**
+ * Failure to Prevent Fraud — Request a demo + restyled contact form shortcode.
+ *
+ * @package Akaza_Adventure
+ */
+
+.ftpf-contact__grid {
+	display: grid;
+	grid-template-columns: 0.86fr 1.02fr;
+	gap: clamp(55px, 8vw, 100px);
+}
+
+.ftpf-contact__benefits {
+	margin: 29px 0;
+	padding: 0;
+	list-style: none;
+}
+
+.ftpf-page .ftpf-contact__benefits li {
+	position: relative;
+	padding: 14px 0 14px 28px;
+	border-top: 1px solid var(--ftpf-border);
+	color: var(--ftpf-navy);
+	font-weight: 500;
+}
+
+.ftpf-contact__benefits li:last-child {
+	border-bottom: 1px solid var(--ftpf-border);
+}
+
+.ftpf-contact__benefits li::before {
+	position: absolute;
+	left: 0;
+	color: var(--ftpf-blue);
+	content: "\2713";
+	font-weight: 700;
+}
+
+.ftpf-page a.ftpf-contact__email {
+	color: var(--ftpf-blue);
+	font-weight: 650;
+	text-decoration: underline;
+}
+
+.ftpf-contact__form {
+	align-self: start;
+	padding: clamp(28px, 4vw, 45px);
+	border-radius: var(--ftpf-radius-large);
+	background: var(--ftpf-grey);
+}
+
+.ftpf-page .ftpf-contact__form h3 {
+	margin-bottom: 6px;
+	font-size: 1.55rem;
+}
+
+.ftpf-page .ftpf-contact__form-intro {
+	color: var(--ftpf-muted);
+	font-size: 0.87rem;
+}
+
+.ftpf-page .ftpf-contact__form .scf-form-wrap,
+.ftpf-page .ftpf-contact__form .scf-form-wrap-course {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	box-shadow: none;
+}
+
+.ftpf-contact__form .scf-form-title {
+	display: none;
+}
+
+.ftpf-page .ftpf-contact__form .scf-form .scf-field {
+	margin: 0 0 16px;
+}
+
+.ftpf-page .ftpf-contact__form .scf-form .scf-field > label {
+	display: block;
+	margin-bottom: 6px;
+	color: var(--ftpf-navy);
+	font-family: "Space Grotesk", Arial, sans-serif;
+	font-size: 0.78rem;
+	font-weight: 600;
+}
+
+.ftpf-page .ftpf-contact__form .scf-form .scf-field input[type="text"],
+.ftpf-page .ftpf-contact__form .scf-form .scf-field input[type="email"],
+.ftpf-page .ftpf-contact__form .scf-form .scf-field textarea {
+	width: 100%;
+	padding: 12px 13px;
+	border: 1px solid #c7d0dc !important;
+	border-radius: 8px !important;
+	background: var(--ftpf-white) !important;
+	color: var(--ftpf-black);
+	font-family: "Space Grotesk", Arial, sans-serif;
+	font-size: 1rem;
+	box-shadow: none;
+}
+
+.ftpf-page .ftpf-contact__form .scf-form .scf-field input[type="text"],
+.ftpf-page .ftpf-contact__form .scf-form .scf-field input[type="email"] {
+	min-height: 48px;
+}
+
+.ftpf-page .ftpf-contact__form .scf-form .scf-field textarea {
+	min-height: 130px;
+	resize: vertical;
+}
+
+.ftpf-page .ftpf-contact__form .scf-form .scf-checkbox {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	align-items: flex-start;
+	margin: 4px 0 20px;
+}
+
+.ftpf-page .ftpf-contact__form .scf-form .scf-checkbox input {
+	width: 17px;
+	height: 17px;
+	margin: 3px 0 0;
+}
+
+.ftpf-page .ftpf-contact__form .scf-form .scf-checkbox label,
+.ftpf-page .ftpf-contact__form .scf-form .scf-checkbox label a {
+	margin: 0;
+	color: #49525e;
+	font-family: "Space Grotesk", Arial, sans-serif;
+	font-size: 0.8rem !important;
+	font-weight: 400;
+}
+
+.ftpf-page .ftpf-contact__form .scf-form .scf-checkbox label a {
+	color: var(--ftpf-blue);
+	font-weight: 600;
+}
+
+.ftpf-page .ftpf-contact__form .scf-form .scf-checkbox .scf-error-message {
+	flex-basis: 100%;
+}
+
+.ftpf-page .ftpf-contact__form .scf-form .scf-submit {
+	width: 100%;
+	min-height: 50px;
+	border: 2px solid var(--ftpf-orange);
+	border-radius: 9px;
+	background: var(--ftpf-orange);
+	color: var(--ftpf-white);
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 0.9rem;
+	font-weight: 500;
+	box-shadow: 0 10px 22px rgba(234, 63, 35, 0.2);
+	cursor: pointer;
+}
+
+.ftpf-page .ftpf-contact__form .scf-form .scf-submit:hover,
+.ftpf-page .ftpf-contact__form .scf-form .scf-submit:focus {
+	border-color: var(--ftpf-orange-dark);
+	background: var(--ftpf-orange-dark);
+	color: var(--ftpf-white);
+}
+
+@media (max-width: 950px) {
+	.ftpf-contact__grid {
+		grid-template-columns: 1fr;
+	}
+}
