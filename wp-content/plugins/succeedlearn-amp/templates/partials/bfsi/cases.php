@@ -26,7 +26,6 @@ $cases = succeedlearn_amp_get_bfsi_cases();
 
 				<div class="sl-bfsi-cases__copy">
 					<p><?php esc_html_e( 'Although Social Engineering, Insider Threat, Physical Security, Data Privacy, Third-Party Risk, and AI-based Attacks training are not always explicitly mandated as standalone legal requirements, regulators consistently expect documented, role-based security and privacy training as part of reasonable organizational controls. Companies that fail to train employees on threat recognition, data handling, vendor risks, and incident reporting face significantly higher penalties after incidents, making such training effectively mandatory in practice to demonstrate compliance, due diligence, and risk reduction.', 'succeedlearn-amp' ); ?></p>
-					<p><?php esc_html_e( 'Following are a few cases of companies facing penalties, thus highlighting the need for compliance:', 'succeedlearn-amp' ); ?></p>
 				</div>
 			</div>
 

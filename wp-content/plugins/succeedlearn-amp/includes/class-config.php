@@ -307,6 +307,16 @@ class Config {
 				'page_templates' => array( 'page-templates/information-security-awareness-training-for-soc-2-compliance.php' ),
 				'template'       => 'pages/soc2',
 			),
+			'iso27001' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					'iso-27001-2022-staff-awareness-training',
+					'iso-27001',
+					'iso27001',
+				),
+				'page_templates' => array( 'page-templates/iso-27001-2022-staff-awareness-training.php' ),
+				'template'       => 'pages/iso27001',
+			),
 			'isat' => array(
 				'default_id'     => 0,
 				'slugs'          => array(
@@ -335,6 +345,12 @@ class Config {
 				),
 				'page_templates' => array( 'page-templates/security-awareness-training-bfsi-pe-vc.php' ),
 				'template'       => 'pages/bfsi',
+			),
+			'pci_dss' => array(
+				'default_id'     => 0,
+				'slugs'          => array( 'pci-dss', 'pci' ),
+				'page_templates' => array( 'page-templates/pci-dss.php' ),
+				'template'       => 'pages/pci-dss',
 			),
 			'financial_crime_prevention' => array(
 				'default_id'     => 0,

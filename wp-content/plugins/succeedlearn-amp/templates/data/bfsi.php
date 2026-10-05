@@ -188,9 +188,9 @@ function succeedlearn_amp_get_bfsi_risks() {
 			'title'  => __( 'AI-Based Attacks', 'succeedlearn-amp' ),
 			'copy'   => array(
 				__( 'Artificial intelligence is increasing the realism and scalability of social-engineering and impersonation attempts.', 'succeedlearn-amp' ),
-				__( 'The course helps employees recognize AI-generated phishing, deepfake video, voice impersonation, and other AI-enabled deception techniques, while reinforcing verification and escalation before acting on suspicious instructions.', 'succeedlearn-amp' ),
+				__( 'The course helps employees recognize AI-generated phishing, deepfake video, voice impersonation, and other AI-enabled deception techniques, including disinformation, market manipulation and data leak risks.', 'succeedlearn-amp' ),
 			),
-			'topics' => __( 'Deepfakes · Voice Cloning · AI Phishing · Impersonation · Verification · Escalation', 'succeedlearn-amp' ),
+			'topics' => __( 'Deepfakes · Voice Cloning · AI Phishing · Impersonation · Disinformation & Market Manipulation · Data Leak Risks', 'succeedlearn-amp' ),
 			'image'  => succeedlearn_amp_upload_url( '2026/09/AI-Enabled-Cyber-Risk.webp' ),
 			'alt'    => __( 'AI-based cyberattack awareness', 'succeedlearn-amp' ),
 		),

@@ -66,9 +66,9 @@ $risks = array(
 		'title'  => __( 'AI-Based Attacks', 'akaza-adventure' ),
 		'copy'   => array(
 			__( 'Artificial intelligence is increasing the realism and scalability of social-engineering and impersonation attempts.', 'akaza-adventure' ),
-			__( 'The course helps employees recognize AI-generated phishing, deepfake video, voice impersonation, and other AI-enabled deception techniques, while reinforcing verification and escalation before acting on suspicious instructions.', 'akaza-adventure' ),
+			__( 'The course helps employees recognize AI-generated phishing, deepfake video, voice impersonation, and other AI-enabled deception techniques, including disinformation, market manipulation and data leak risks.', 'akaza-adventure' ),
 		),
-		'topics' => __( 'Deepfakes · Voice Cloning · AI Phishing · Impersonation · Verification · Escalation', 'akaza-adventure' ),
+		'topics' => __( 'Deepfakes · Voice Cloning · AI Phishing · Impersonation · Disinformation & Market Manipulation · Data Leak Risks', 'akaza-adventure' ),
 		'file'   => '2026/09/AI-Enabled-Cyber-Risk.webp',
 		'alt'    => __( 'AI-based cyberattack awareness', 'akaza-adventure' ),
 	),

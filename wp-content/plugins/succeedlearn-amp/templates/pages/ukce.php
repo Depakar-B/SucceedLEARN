@@ -54,7 +54,6 @@ $meta_desc  = succeedlearn_amp_get_ukce_meta_description();
 	succeedlearn_amp_ukce_partial( 'modules' );
 	succeedlearn_amp_ukce_partial( 'supporting' );
 	succeedlearn_amp_ukce_partial( 'controls' );
-	succeedlearn_amp_ukce_partial( 'requires' );
 	succeedlearn_amp_ukce_partial( 'designed' );
 	succeedlearn_amp_ukce_partial( 'action' );
 	succeedlearn_amp_ukce_partial( 'choose' );
