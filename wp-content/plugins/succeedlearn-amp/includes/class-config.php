@@ -296,6 +296,15 @@ class Config {
 				'page_templates' => array( 'page-templates/information-security-awareness-training-for-soc-2-compliance.php' ),
 				'template'       => 'pages/soc2',
 			),
+			'isat' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					'information-security-awareness-training',
+					'isat',
+				),
+				'page_templates' => array( 'page-templates/information-security-awareness-training.php' ),
+				'template'       => 'pages/isat',
+			),
 			'ukce' => array(
 				'default_id'     => 0,
 				'slugs'          => array(
