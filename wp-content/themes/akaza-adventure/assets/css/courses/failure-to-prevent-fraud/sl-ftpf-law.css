@@ -21,8 +21,7 @@
 }
 
 .ftpf-page .ftpf-law__header-copy p {
-	color: #414a57;
-	font-size: 1.05rem;
+	color: var(--course-text, #4a4a4a);
 }
 
 .ftpf-page .ftpf-law__header-copy p:last-child {
@@ -78,9 +77,8 @@
 	gap: clamp(50px, 8vw, 100px);
 }
 
-.ftpf-page .ftpf-law__why h3 {
+.ftpf-page .ftpf-law__why h2 {
 	margin-bottom: 18px;
-	font-size: clamp(1.7rem, 2.8vw, 2.4rem);
 }
 
 .ftpf-law__reasons {
@@ -124,16 +122,6 @@
 	margin: 0;
 	color: var(--ftpf-text);
 	font-size: 0.88rem;
-}
-
-.ftpf-page .ftpf-law__source {
-	margin: 28px 0 0;
-	color: var(--ftpf-muted);
-	font-size: 0.76rem;
-}
-
-.ftpf-page .ftpf-law__source a {
-	color: var(--ftpf-blue);
 }
 
 @media (max-width: 950px) {

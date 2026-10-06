@@ -53,9 +53,10 @@ $sections = array(
 					'template-parts/global/course-buy-options',
 					null,
 					array(
-						'course'  => __( 'Fraud Prevention', 'akaza-adventure' ),
-						'contact' => '#request-demo',
-						'price'   => '$18',
+						'course'   => __( 'Fraud Prevention', 'akaza-adventure' ),
+						'duration' => __( '16-minute duration', 'akaza-adventure' ),
+						'contact'  => '#request-demo',
+						'price'    => '$18',
 					)
 				);
 				get_template_part(

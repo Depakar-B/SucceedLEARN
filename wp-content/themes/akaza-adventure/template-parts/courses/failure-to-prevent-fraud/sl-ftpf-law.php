@@ -86,7 +86,7 @@ $reasons = array(
 		<div class="ftpf-law__why">
 			<div>
 				<span class="sl-home-sub-heading"><?php esc_html_e( 'The Organisational Challenge', 'akaza-adventure' ); ?></span>
-				<h3 id="ftpf-law-why-title"><?php esc_html_e( 'Fraud risk can begin with an everyday decision', 'akaza-adventure' ); ?></h3>
+				<h2 id="ftpf-law-why-title"><?php esc_html_e( 'Fraud risk can begin with an everyday decision', 'akaza-adventure' ); ?></h2>
 				<p><?php esc_html_e( 'Misleading information, poor validation, weak documentation or a concern that is never raised can create exposure long before an issue is formally identified as fraud.', 'akaza-adventure' ); ?></p>
 			</div>
 

@@ -57,25 +57,32 @@
 .ftpf-page h3 {
 	margin-top: 0;
 	color: var(--ftpf-navy);
-	font-family: "Space Grotesk", Arial, sans-serif;
-	font-weight: 700;
-	line-height: 1.1;
-	letter-spacing: -0.035em;
+	font-family: var(--slf-font-display, "Space Grotesk", Arial, sans-serif);
 }
 
+/* Same type scale as other course pages (main.css tokens). */
 .ftpf-page h1 {
 	margin-bottom: 25px;
-	font-size: clamp(2.8rem, 5.5vw, 5.4rem);
+	font-size: var(--sl-fs-h1);
+	font-weight: 800;
+	line-height: 1.15;
+	letter-spacing: var(--sl-ls-h1, -0.02em);
 }
 
 .ftpf-page h2 {
-	margin-bottom: 22px;
-	font-size: clamp(2rem, 3.8vw, 3.65rem);
+	margin-bottom: 16px;
+	font-size: var(--sl-fs-h2);
+	font-weight: 700;
+	line-height: 1.2;
+	letter-spacing: var(--sl-ls-h2, -0.02em);
 }
 
 .ftpf-page h3 {
 	margin-bottom: 0;
-	font-size: 1.25rem;
+	font-size: var(--sl-fs-h3);
+	font-weight: 700;
+	line-height: 1.25;
+	letter-spacing: var(--sl-ls-h3, 0);
 }
 
 .ftpf-page h1 span,
@@ -85,9 +92,17 @@
 
 .ftpf-page p,
 .ftpf-page li {
-	color: var(--ftpf-black);
-	font-family: "Space Grotesk", Arial, sans-serif;
-	line-height: 1.65;
+	font-family: var(--slf-font-body, "Space Grotesk", Arial, sans-serif);
+}
+
+.ftpf-page p {
+	font-size: var(--sl-fs-body);
+	line-height: 1.8;
+	color: var(--course-text, #4a4a4a);
+}
+
+.ftpf-page li {
+	line-height: 1.55;
 }
 
 .ftpf-page p {
@@ -178,14 +193,16 @@ body.slf-body #main-content .ftpf-page .sl-home-sub-heading {
 
 .ftpf-page .ftpf-section-heading > p:last-child {
 	max-width: 690px;
-	color: #3f4855;
-	font-size: 1.05rem;
+	color: var(--course-text, #4a4a4a);
+	font-size: var(--sl-fs-body);
+	line-height: 1.8;
 }
 
 .ftpf-page .ftpf-lead {
 	color: var(--ftpf-navy);
-	font-size: 1.17rem;
+	font-size: var(--sl-fs-body);
 	font-weight: 500;
+	line-height: 1.8;
 }
 
 /* =========================================================
