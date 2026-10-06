@@ -131,6 +131,16 @@
 	background: var(--msa-grey);
 }
 
+/* Inverted rhythm from the FCP course suite to the last section. */
+.msa-page > #fcp-suite,
+.msa-page > #fcp-suite ~ .msa-section--white {
+	background: var(--msa-grey);
+}
+
+.msa-page > #fcp-suite ~ .msa-section--grey {
+	background: var(--msa-white);
+}
+
 body.slf-body #main-content .msa-page .sl-home-sub-heading {
 	margin-bottom: 16px;
 }
@@ -994,7 +1004,8 @@ body.slf-body #main-content .msa-page .sl-home-sub-heading {
 	}
 
 	.msa-cta-row,
-	.msa-page a.msa-cta {
+	.msa-page a.msa-cta,
+	.msa-cta-row .sl-hero-cta-item {
 		width: 100%;
 	}
 }

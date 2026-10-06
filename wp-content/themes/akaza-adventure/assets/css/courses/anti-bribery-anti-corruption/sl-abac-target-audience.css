@@ -57,6 +57,8 @@
 .sl-abac-target-audience__list {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(5, auto);
+    grid-auto-flow: column;
     column-gap: 40px;
     border-bottom: 1px solid rgba(22, 35, 78, 0.14);
 }
@@ -173,6 +175,8 @@
 
     .sl-abac-target-audience__list {
         grid-template-columns: 1fr;
+        grid-template-rows: none;
+        grid-auto-flow: row;
     }
 
     .sl-abac-target-audience__item {
