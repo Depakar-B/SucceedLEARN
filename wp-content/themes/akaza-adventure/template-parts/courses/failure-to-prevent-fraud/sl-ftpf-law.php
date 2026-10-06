@@ -48,14 +48,14 @@ $reasons = array(
 	<div class="ftpf-container">
 
 		<div class="ftpf-law__header">
-			<div>
-				<span class="sl-home-sub-heading"><?php esc_html_e( 'Why This Training Matters', 'akaza-adventure' ); ?></span>
-				<h2 id="ftpf-law-title">
-					<?php esc_html_e( 'The regulatory landscape', 'akaza-adventure' ); ?>
-					<span><?php esc_html_e( 'has changed', 'akaza-adventure' ); ?></span>
-				</h2>
-			</div>
+			<span class="sl-home-sub-heading"><?php esc_html_e( 'Why This Training Matters', 'akaza-adventure' ); ?></span>
+			<h2 id="ftpf-law-title">
+				<?php esc_html_e( 'Failure to Prevent Fraud', 'akaza-adventure' ); ?>
+				<span><?php esc_html_e( '— the regulatory landscape has changed', 'akaza-adventure' ); ?></span>
+			</h2>
+		</div>
 
+		<div class="ftpf-law__split">
 			<div class="ftpf-law__header-copy">
 				<p>
 					<?php esc_html_e( 'The', 'akaza-adventure' ); ?>
@@ -65,6 +65,15 @@ $reasons = array(
 				<p class="ftpf-law__highlight"><?php esc_html_e( 'The offence came into force on 1 September 2025.', 'akaza-adventure' ); ?></p>
 				<p><?php esc_html_e( 'For organisations within scope, understanding how fraud can arise through employees, agents and other associated persons is now an important part of managing corporate fraud risk.', 'akaza-adventure' ); ?></p>
 			</div>
+
+			<figure class="ftpf-law__media">
+				<img
+					src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/10/Prevent-Fraud_Image-2.webp' ); ?>"
+					alt="<?php esc_attr_e( 'Scales of justice beside the Economic Crime and Corporate Transparency Act', 'akaza-adventure' ); ?>"
+					loading="lazy"
+					decoding="async"
+				>
+			</figure>
 		</div>
 
 		<div class="ftpf-law__cards">
@@ -83,11 +92,22 @@ $reasons = array(
 <section class="ftpf-section ftpf-section--white ftpf-law-why" aria-labelledby="ftpf-law-why-title">
 	<div class="ftpf-container">
 
+		<div class="ftpf-law__why-head">
+			<span class="sl-home-sub-heading"><?php esc_html_e( 'The Organisational Challenge', 'akaza-adventure' ); ?></span>
+			<h2 id="ftpf-law-why-title"><?php esc_html_e( 'Fraud risk can begin with an everyday decision', 'akaza-adventure' ); ?></h2>
+		</div>
+
 		<div class="ftpf-law__why">
 			<div>
-				<span class="sl-home-sub-heading"><?php esc_html_e( 'The Organisational Challenge', 'akaza-adventure' ); ?></span>
-				<h2 id="ftpf-law-why-title"><?php esc_html_e( 'Fraud risk can begin with an everyday decision', 'akaza-adventure' ); ?></h2>
 				<p><?php esc_html_e( 'Misleading information, poor validation, weak documentation or a concern that is never raised can create exposure long before an issue is formally identified as fraud.', 'akaza-adventure' ); ?></p>
+				<figure class="ftpf-law__media">
+					<img
+						src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/10/prevent-fraud_Image-3.webp' ); ?>"
+						alt="<?php esc_attr_e( 'Examples of fraud risk, including misuse of expense claims and accidental risk', 'akaza-adventure' ); ?>"
+						loading="lazy"
+						decoding="async"
+					>
+				</figure>
 			</div>
 
 			<ul class="ftpf-law__reasons">

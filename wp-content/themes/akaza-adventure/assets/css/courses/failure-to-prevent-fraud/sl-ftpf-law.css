@@ -9,15 +9,50 @@
 }
 
 .ftpf-law__header {
+	margin-bottom: 36px;
+}
+
+.ftpf-page .ftpf-law__header h2,
+.ftpf-page .ftpf-law__why-head h2 {
+	max-width: none;
+	margin-bottom: 0;
+}
+
+.ftpf-law__why-head {
+	margin-bottom: 36px;
+}
+
+.ftpf-law__split,
+.ftpf-law__why {
 	display: grid;
-	grid-template-columns: 0.75fr 1.15fr;
-	gap: clamp(45px, 8vw, 100px);
-	align-items: end;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	gap: clamp(40px, 6vw, 80px);
+	align-items: center;
+}
+
+.ftpf-law__split {
 	margin-bottom: 55px;
 }
 
-.ftpf-page .ftpf-law__header h2 {
-	margin-bottom: 0;
+.ftpf-law__media {
+	margin: 0;
+	overflow: hidden;
+	border-radius: 24px;
+}
+
+.ftpf-law__media img {
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+}
+
+.ftpf-law__split .ftpf-law__media {
+	justify-self: end;
+	width: min(100%, 440px);
+}
+
+.ftpf-law__why .ftpf-law__media {
+	margin-top: 28px;
 }
 
 .ftpf-page .ftpf-law__header-copy p {
@@ -56,7 +91,7 @@
 	display: block;
 	margin-bottom: 43px;
 	color: var(--ftpf-blue);
-	font-size: 0.74rem;
+	font-size: 1.75rem;
 	font-weight: 700;
 	letter-spacing: 0.1em;
 }
@@ -71,14 +106,8 @@
 	font-size: 0.9rem;
 }
 
-.ftpf-law__why {
-	display: grid;
-	grid-template-columns: 0.73fr 1.17fr;
-	gap: clamp(50px, 8vw, 100px);
-}
-
-.ftpf-page .ftpf-law__why h2 {
-	margin-bottom: 18px;
+.ftpf-page .ftpf-law__why p {
+	margin-bottom: 0;
 }
 
 .ftpf-law__reasons {
@@ -125,7 +154,7 @@
 }
 
 @media (max-width: 950px) {
-	.ftpf-law__header,
+	.ftpf-law__split,
 	.ftpf-law__why,
 	.ftpf-law__cards {
 		grid-template-columns: 1fr;
