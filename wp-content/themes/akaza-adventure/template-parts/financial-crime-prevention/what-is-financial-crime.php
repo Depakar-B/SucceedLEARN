@@ -14,10 +14,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	class="sl-fcp-section sl-fcp-section--grey sl-fcp-definition"
 	aria-labelledby="sl-fcp-definition-title"
 >
-	<div class="container">
-		<div class="sl-fcp-narrow">
+	<div class="container sl-fcp-definition__layout">
+		<div class="sl-fcp-definition__content">
 			<span class="sl-home-sub-heading">
-				<?php esc_html_e( 'Clear Definition', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'FCP Definition', 'akaza-adventure' ); ?>
 			</span>
 
 			<h2 id="sl-fcp-definition-title">
@@ -38,6 +38,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<p>
 				<?php esc_html_e( 'Effective training connects these risks with situations employees may encounter in their roles, helping them understand warning signs and make informed decisions.', 'akaza-adventure' ); ?>
 			</p>
+		</div>
+
+		<div class="sl-fcp-definition__media">
+			<img
+				class="sl-fcp-definition__image"
+				src="<?php echo esc_url( 'https://succeedlearn.com/wp-content/uploads/2026/10/global_financial_crime_monitoring.webp' ); ?>"
+				alt="<?php esc_attr_e( 'Global financial crime monitoring dashboard on a laptop beside compliance reports and a magnifying glass', 'akaza-adventure' ); ?>"
+				width="1536"
+				height="1024"
+				loading="lazy"
+				decoding="async"
+			>
 		</div>
 	</div>
 </section>

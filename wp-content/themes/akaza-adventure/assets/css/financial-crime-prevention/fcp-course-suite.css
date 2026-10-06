@@ -1,15 +1,14 @@
 /* Financial Crime Prevention — eLearning course suite */
 
 .sl-fcp-suite__header {
-	display: flex;
 	margin-bottom: 45px;
-	align-items: flex-start;
-	justify-content: space-between;
-	gap: 50px;
 }
 
-.sl-fcp-suite__copy {
-	max-width: 700px;
+.sl-fcp-suite__copy,
+.sl-fcp-page .sl-fcp-suite__copy h2,
+.sl-fcp-page .sl-fcp-suite__copy .sl-fcp-lead {
+	width: 100%;
+	max-width: none;
 }
 
 .sl-fcp-suite__copy .sl-fcp-lead {
@@ -17,15 +16,15 @@
 }
 
 .sl-fcp-suite__price {
-	flex: 0 0 auto;
-	padding-top: 5px;
+	margin-top: 32px;
+	text-align: center;
 }
 
 .sl-fcp-page .sl-fcp-suite__price .sl-fcp-cta {
 	display: inline-block;
-	max-width: 400px;
-	font-size: 17px;
-	line-height: 1.5;
+	padding: 16px 34px;
+	font-size: 20px;
+	line-height: 1.4;
 	text-align: center;
 }
 
@@ -89,13 +88,6 @@
 	text-decoration: underline;
 }
 
-@media (max-width: 1024px) {
-	.sl-fcp-suite__header {
-		flex-direction: column;
-		gap: 24px;
-	}
-}
-
 @media (max-width: 760px) {
 	.sl-fcp-suite__grid {
 		grid-template-columns: 1fr;
@@ -116,10 +108,14 @@
 		display: inline-block;
 	}
 
-	.sl-fcp-suite__price,
-	.sl-fcp-suite__price .sl-fcp-cta {
+	.sl-fcp-suite__price {
+		margin-top: 24px;
+	}
+
+	.sl-fcp-page .sl-fcp-suite__price .sl-fcp-cta {
 		width: 100%;
-		max-width: none;
+		padding: 14px 20px;
+		font-size: 17px;
 	}
 }
 
