@@ -89,9 +89,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 
 			<div class="sl-s-sync-hero__media">
-				<div class="sl-s-sync-hero__image-placeholder">
-					<span><?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?></span>
-				</div>
+				<img
+					class="sl-s-sync-hero__image"
+					src="<?php echo esc_url( akaza_upload_url( '2026/09/Enterpise-Integrations-for-Security-Awareness.webp' ) ); ?>"
+					alt="<?php esc_attr_e( 'Enterprise Integrations for Security Awareness', 'akaza-adventure' ); ?>"
+					width="800"
+					height="600"
+					loading="eager"
+					decoding="async"
+				>
 			</div>
 
 		</div>

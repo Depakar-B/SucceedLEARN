@@ -14,6 +14,18 @@ $why_image = succeedlearn_amp_get_pci_dss_why_image();
 <section class="sl-pci-why" aria-labelledby="sl-pci-why-title">
 	<div class="sl-wrap">
 		<div class="sl-pci-why__grid">
+			<div class="sl-pci-why__media">
+				<div class="sl-pci-why__image">
+					<amp-img
+						src="<?php echo esc_url( $why_image ); ?>"
+						width="720"
+						height="720"
+						layout="responsive"
+						alt="<?php esc_attr_e( 'Why PCI DSS security awareness matters', 'succeedlearn-amp' ); ?>"
+					></amp-img>
+				</div>
+			</div>
+
 			<div class="sl-pci-why__content">
 				<span class="sl-home-sub-heading">
 					<?php esc_html_e( 'Payment Security Awareness', 'succeedlearn-amp' ); ?>
@@ -31,18 +43,6 @@ $why_image = succeedlearn_amp_get_pci_dss_why_image();
 					<p><?php esc_html_e( 'Different employees, however, interact with payment data differently.', 'succeedlearn-amp' ); ?></p>
 					<p><?php esc_html_e( 'A general employee may need to understand what PCI DSS is, what cardholder data is and how it should be protected.', 'succeedlearn-amp' ); ?></p>
 					<p><?php esc_html_e( 'A cashier or payment handler needs more practical awareness of card-present and card-not-present transactions, payment fraud, social engineering and suspicious payment activity.', 'succeedlearn-amp' ); ?></p>
-				</div>
-			</div>
-
-			<div class="sl-pci-why__media">
-				<div class="sl-pci-why__image">
-					<amp-img
-						src="<?php echo esc_url( $why_image ); ?>"
-						width="720"
-						height="720"
-						layout="responsive"
-						alt="<?php esc_attr_e( 'Why PCI DSS security awareness matters', 'succeedlearn-amp' ); ?>"
-					></amp-img>
 				</div>
 			</div>
 		</div>

@@ -54,6 +54,13 @@
 	text-align: center;
 }
 
+.sl-s-signs-filtering__image {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 16px;
+}
+
 @media (max-width: 991px) {
 	.sl-s-signs-filtering {
 		padding: 64px 0;

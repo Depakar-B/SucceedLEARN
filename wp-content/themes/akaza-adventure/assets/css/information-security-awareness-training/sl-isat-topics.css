@@ -1,0 +1,68 @@
+/*
+ * Information Security Awareness Training - Topics covered.
+ */
+
+.sl-isat-topics {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+	border-top: 1px solid rgba(107, 124, 147, 0.14);
+}
+
+.sl-isat-topics__heading {
+	margin-bottom: 36px;
+}
+
+.sl-isat-topics__heading h2 {
+	margin-bottom: 16px;
+}
+
+.sl-isat-topics__heading p {
+	max-width: 860px;
+	margin: 0;
+}
+
+.sl-isat-topics__list {
+	margin: 0;
+	padding-left: 1.35em;
+	list-style: disc;
+	color: var(--sl-page-navy, #16234e);
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.55;
+}
+
+.sl-isat-topics__item {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	background: transparent;
+	box-shadow: none;
+	color: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	list-style: disc;
+}
+
+.sl-isat-topics__item + .sl-isat-topics__item {
+	margin-top: 10px;
+}
+
+.sl-isat-topics__item:hover {
+	transform: none;
+	border-color: transparent;
+	box-shadow: none;
+}
+
+@media (max-width: 767px) {
+	.sl-isat-topics {
+		padding: 60px 0;
+	}
+
+	.sl-isat-topics__heading {
+		margin-bottom: 28px;
+	}
+}

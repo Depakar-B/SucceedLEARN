@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<div class="sl-soc2-emerging__heading">
 			<span class="sl-home-sub-heading">
-				<?php esc_html_e( 'Broader S-Aware Library', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'Optional Module Library', 'akaza-adventure' ); ?>
 			</span>
 
 			<h2 id="sl-soc2-emerging-title">
@@ -28,10 +28,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</h2>
 		</div>
 
-		<article class="sl-soc2-emerging__card">
-			<div class="sl-soc2-emerging__badge">
+		<div class="sl-soc2-emerging__body">
+			<p class="sl-soc2-emerging__label">
 				<?php esc_html_e( 'Optional Add-On', 'akaza-adventure' ); ?>
-			</div>
+			</p>
 
 			<h3 class="sl-panel-title">
 				<?php esc_html_e( 'AI-Based Attacks', 'akaza-adventure' ); ?>
@@ -48,7 +48,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<a class="sl-content-btn sl-content-btn-primary" href="#contact">
 				<?php esc_html_e( 'Explore AI-Based Attack Awareness', 'akaza-adventure' ); ?>
 			</a>
-		</article>
+		</div>
 
 	</div>
 </section>

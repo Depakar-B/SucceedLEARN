@@ -28,6 +28,10 @@
 	gap: 24px;
 }
 
+.sl-soc2-audience__grid > .sl-soc2-audience__card:last-child:nth-child(odd) {
+	grid-column: 2;
+}
+
 .sl-soc2-audience__card {
 	display: flex;
 	flex-direction: column;

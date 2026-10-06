@@ -35,12 +35,12 @@ $learning_elements = array(
 
 <section
 	class="sl-pci-structure"
+	id="practical-everyday-security-awareness"
 	aria-labelledby="sl-pci-structure-title"
 >
 	<div class="container">
 
-		<div class="sl-pci-structure__intro">
-
+		<div class="sl-pci-structure__heading">
 			<span class="sl-home-sub-heading">
 				<?php esc_html_e( 'How the Course is Built', 'akaza-adventure' ); ?>
 			</span>
@@ -49,43 +49,37 @@ $learning_elements = array(
 				<?php esc_html_e( 'Designed Based on Practical, Everyday', 'akaza-adventure' ); ?>
 				<span><?php esc_html_e( 'Security Awareness Situations', 'akaza-adventure' ); ?></span>
 			</h2>
-
 		</div>
 
+		<p class="sl-pci-structure__subhead">
+			<?php esc_html_e( 'Learning elements', 'akaza-adventure' ); ?>
+		</p>
+
 		<div class="sl-pci-structure__grid">
+			<?php foreach ( $learning_elements as $element ) : ?>
+				<article class="sl-pci-structure__card">
+					<h3><?php echo esc_html( $element['title'] ); ?></h3>
+					<p><?php echo esc_html( $element['text'] ); ?></p>
+				</article>
+			<?php endforeach; ?>
+		</div>
 
-			<article class="sl-pci-structure__card sl-pci-structure__card--wide">
-				<h3 class="sl-panel-title">
-					<?php esc_html_e( 'Learning Elements', 'akaza-adventure' ); ?>
-				</h3>
-				<ul class="sl-pci-structure__elements">
-					<?php foreach ( $learning_elements as $element ) : ?>
-						<li>
-							<strong><?php echo esc_html( $element['title'] ); ?></strong>
-							<span><?php echo esc_html( $element['text'] ); ?></span>
-						</li>
-					<?php endforeach; ?>
-				</ul>
-			</article>
+		<div class="sl-pci-structure__details">
 
-			<article class="sl-pci-structure__card">
-				<h3 class="sl-panel-title">
-					<?php esc_html_e( 'Format & Accessibility', 'akaza-adventure' ); ?>
-				</h3>
+			<div class="sl-pci-structure__detail">
+				<h3><?php esc_html_e( 'Format & Accessibility', 'akaza-adventure' ); ?></h3>
 				<p>
 					<?php
 					esc_html_e(
-						'Fully responsive interface across desktop, tablet, and mobile - complete with a learner dashboard, progress tracking, automated reminder prompts, and seamless integration with your existing LMS or HR systems.',
+						'Fully responsive interface across desktop, tablet, and mobile — complete with a learner dashboard, progress tracking, automated reminder prompts, and seamless integration with your existing LMS or HR systems.',
 						'akaza-adventure'
 					);
 					?>
 				</p>
-			</article>
+			</div>
 
-			<article class="sl-pci-structure__card">
-				<h3 class="sl-panel-title">
-					<?php esc_html_e( 'Certificate', 'akaza-adventure' ); ?>
-				</h3>
+			<div class="sl-pci-structure__detail">
+				<h3><?php esc_html_e( 'Certificate', 'akaza-adventure' ); ?></h3>
 				<p>
 					<?php
 					esc_html_e(
@@ -94,7 +88,7 @@ $learning_elements = array(
 					);
 					?>
 				</p>
-			</article>
+			</div>
 
 		</div>
 

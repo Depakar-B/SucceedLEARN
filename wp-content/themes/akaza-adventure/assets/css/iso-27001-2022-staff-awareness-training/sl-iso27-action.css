@@ -1,0 +1,48 @@
+/**
+ * ISO 27001 — See the Training in Action.
+ */
+
+.sl-iso27-action {
+	padding: 90px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-iso27-action__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	gap: 0;
+	align-items: start;
+}
+
+.sl-iso27-action__content {
+	max-width: 760px;
+}
+
+.sl-iso27-action__content h2 {
+	margin-bottom: 0;
+}
+
+body.slf-body main.sl-iso27-page .sl-iso27-action__subtitle,
+body.slf-body #main-content.sl-iso27-page .sl-iso27-action__subtitle,
+.sl-iso27-page .sl-iso27-action__subtitle {
+	margin: 16px 0 14px;
+	font-family: var(--slf-font-display, "Space Grotesk", system-ui, sans-serif);
+	font-size: 22px;
+	font-weight: 600;
+	line-height: 1.4;
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-iso27-action__content p {
+	margin: 0 0 14px;
+}
+
+.sl-iso27-action__content p:last-of-type {
+	margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+	.sl-iso27-action {
+		padding: 60px 0;
+	}
+}

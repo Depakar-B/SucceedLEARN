@@ -1,6 +1,6 @@
 <?php
 /**
- * UK Cyber Essentials — How training relates to five controls.
+ * UK Cyber Essentials — Certification clarity + how training relates to controls.
  *
  * @package Akaza_Adventure
  */
@@ -40,12 +40,52 @@ $rows = array(
 
 <section
 	class="sl-ukce-controls"
-	id="how-training-relates-to-controls"
-	aria-labelledby="sl-ukce-controls-title"
+	id="what-cyber-essentials-requires"
+	aria-labelledby="sl-ukce-requires-title"
 >
 	<div class="container">
 
-		<div class="sl-ukce-controls__heading">
+		<div class="sl-ukce-controls__clarity">
+
+			<span class="sl-home-sub-heading">
+				<?php esc_html_e( 'Certification Clarity', 'akaza-adventure' ); ?>
+			</span>
+
+			<h2 id="sl-ukce-requires-title">
+				<?php esc_html_e( 'What Cyber Essentials Requires and', 'akaza-adventure' ); ?>
+				<span><?php esc_html_e( 'What Training Supports', 'akaza-adventure' ); ?></span>
+			</h2>
+
+			<p>
+				<?php esc_html_e( 'Cyber Essentials requires organisations to implement the technical requirements associated with all five controls within their certification scope. The current v3.3 requirements are effective from 27 April 2026.', 'akaza-adventure' ); ?>
+			</p>
+
+			<p>
+				<?php esc_html_e( 'Employee awareness training can reinforce the human behaviours surrounding those technical controls, but training itself does not configure a firewall, apply software updates, remove unnecessary services or technically restrict system access.', 'akaza-adventure' ); ?>
+			</p>
+
+			<p>
+				<?php esc_html_e( 'The distinction can be thought of simply:', 'akaza-adventure' ); ?>
+			</p>
+
+			<div class="sl-ukce-controls__compare" role="list">
+				<div class="sl-ukce-controls__compare-item" role="listitem">
+					<strong><?php esc_html_e( 'Cyber Essentials technical controls', 'akaza-adventure' ); ?></strong>
+					<span><?php esc_html_e( 'Protect the organisation’s IT environment', 'akaza-adventure' ); ?></span>
+				</div>
+				<div class="sl-ukce-controls__compare-item" role="listitem">
+					<strong><?php esc_html_e( 'Employee security awareness', 'akaza-adventure' ); ?></strong>
+					<span><?php esc_html_e( 'Helps employees use that environment securely', 'akaza-adventure' ); ?></span>
+				</div>
+			</div>
+
+			<p>
+				<?php esc_html_e( 'Both contribute to stronger cybersecurity, but they serve different purposes.', 'akaza-adventure' ); ?>
+			</p>
+
+		</div>
+
+		<div class="sl-ukce-controls__heading" id="how-training-relates-to-controls">
 			<span class="sl-home-sub-heading">
 				<?php esc_html_e( 'Control Mapping', 'akaza-adventure' ); ?>
 			</span>

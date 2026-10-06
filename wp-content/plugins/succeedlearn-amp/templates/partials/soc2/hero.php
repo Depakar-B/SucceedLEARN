@@ -31,11 +31,8 @@ $hero_image = succeedlearn_amp_get_soc2_hero_image();
 			<h1 id="sl-soc2-hero-title">
 				<?php
 				echo wp_kses(
-					__( 'Information Security Awareness Training for<br><span>SOC 2 Compliance</span>', 'succeedlearn-amp' ),
-					array(
-						'span' => array(),
-						'br'   => array(),
-					)
+					__( 'Information Security Awareness Training for <span>SOC 2 Compliance</span>', 'succeedlearn-amp' ),
+					array( 'span' => array() )
 				);
 				?>
 			</h1>

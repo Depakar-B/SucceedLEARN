@@ -33,7 +33,6 @@ function akaza_enqueue_ukce_assets() {
 		'sl-ukce-modules',
 		'sl-ukce-supporting',
 		'sl-ukce-controls',
-		'sl-ukce-requires',
 		'sl-ukce-designed',
 		'sl-ukce-action',
 		'sl-ukce-choose',
@@ -43,6 +42,11 @@ function akaza_enqueue_ukce_assets() {
 	foreach ( $sections as $section ) {
 		akaza_enqueue_theme_style( "akaza-{$section}", "{$folder}/{$section}.css", array( $global ) );
 	}
+
+	akaza_enqueue_theme_script(
+		'akaza-sl-ukce-action',
+		"{$folder}/sl-ukce-action.js"
+	);
 
 	akaza_enqueue_theme_style( 'akaza-contact-form', 'contact-from.css', array( 'akaza-main' ) );
 

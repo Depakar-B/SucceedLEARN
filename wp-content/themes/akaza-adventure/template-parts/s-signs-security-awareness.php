@@ -16,12 +16,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php get_template_part( 'template-parts/s-signs-security-awareness/sl-s-signs-library' ); ?>
 	<?php get_template_part( 'template-parts/s-signs-security-awareness/sl-s-signs-nudges' ); ?>
 	<?php get_template_part( 'template-parts/s-signs-security-awareness/sl-s-signs-distribution' ); ?>
+	<?php get_template_part( 'template-parts/s-signs-security-awareness/sl-s-signs-choose' ); ?>
 	<?php get_template_part( 'template-parts/s-signs-security-awareness/sl-s-signs-employees' ); ?>
 	<?php get_template_part( 'template-parts/s-signs-security-awareness/sl-s-signs-teams' ); ?>
 	<?php get_template_part( 'template-parts/s-signs-security-awareness/sl-s-signs-suite' ); ?>
-	<?php get_template_part( 'template-parts/s-signs-security-awareness/sl-s-signs-choose' ); ?>
 	<?php get_template_part( 'template-parts/s-signs-security-awareness/sl-s-signs-comparison' ); ?>
 	<?php get_template_part( 'template-parts/s-signs-security-awareness/sl-s-signs-faq' ); ?>
-	<?php get_template_part( 'template-parts/s-signs-security-awareness/sl-s-signs-reinforce' ); ?>
 	<?php get_template_part( 'template-parts/s-signs-security-awareness/sl-s-signs-contact' ); ?>
 </main>

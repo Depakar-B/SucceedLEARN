@@ -1,0 +1,8 @@
+/*
+ * ISO 27001:2022 — Awareness supports table.
+ *
+ * Table markup still uses .sl-iso27-objectives__* classes, but the styles
+ * now live in sl-iso27-relate.css (table is nested in that section).
+ * Kept as a no-op file so older deploys/caches that still enqueue this
+ * handle do not 404.
+ */

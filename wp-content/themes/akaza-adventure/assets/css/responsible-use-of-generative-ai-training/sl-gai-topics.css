@@ -1,0 +1,57 @@
+/**
+ * GenAI — What the course covers (two-column topic list).
+ */
+
+.sl-gai-topics {
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-gai-topics__heading {
+	margin-bottom: 36px;
+	max-width: none;
+	width: 100%;
+}
+
+.sl-gai-topics__heading h2 {
+	margin-bottom: 16px;
+}
+
+.sl-gai-topics__heading p {
+	margin: 0;
+}
+
+.sl-gai-topics__list {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 14px 40px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-gai-topics__item {
+	margin: 0;
+	padding: 10px 0;
+	color: var(--sl-page-navy, #16234e);
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.5;
+	list-style: none;
+	border-bottom: 1px solid rgba(107, 124, 147, 0.14);
+}
+
+@media (max-width: 767px) {
+	.sl-gai-topics {
+		padding: 60px 0;
+	}
+
+	.sl-gai-topics__heading {
+		margin-bottom: 28px;
+	}
+
+	.sl-gai-topics__list {
+		grid-template-columns: 1fr;
+		gap: 0;
+	}
+}

@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</span>
 
 				<h1 id="sl-s-metrics-hero-title">
-					<?php esc_html_e( 'Security Awareness Analytics, Reporting & Compliance Dashboard', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Security Awareness Analytics, Reports & Compliance Dashboard', 'akaza-adventure' ); ?>
 				</h1>
 
 				<h2 class="sl-hero-h2">
@@ -101,7 +101,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<img
 					class="sl-s-metrics-hero__image"
 					src="<?php echo esc_url( akaza_upload_url( '2026/09/Security-Awareness-Analytics-S-Metrics.webp' ) ); ?>"
-					alt="<?php esc_attr_e( 'Security Awareness Analytics, Reporting & Compliance Dashboard', 'akaza-adventure' ); ?>"
+					alt="<?php esc_attr_e( 'Security Awareness Analytics, Reports & Compliance Dashboard', 'akaza-adventure' ); ?>"
 					width="800"
 					height="600"
 					loading="eager"

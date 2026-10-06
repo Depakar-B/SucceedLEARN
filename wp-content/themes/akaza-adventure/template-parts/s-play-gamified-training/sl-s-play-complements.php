@@ -8,6 +8,10 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+$s_play_complements_image = function_exists( 'akaza_upload_url' )
+	? akaza_upload_url( '2026/09/Why-Gamified-Security-Awareness-Matters.webp' )
+	: 'https://succeedlearn.com/wp-content/uploads/2026/09/Why-Gamified-Security-Awareness-Matters.webp';
 ?>
 
 <section
@@ -81,8 +85,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 
 			<div class="sl-s-play-complements__media">
-				<div class="sl-s-play-complements__image-placeholder">
-					<span><?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?></span>
+				<div class="sl-s-play-complements__image">
+					<img
+						src="<?php echo esc_url( $s_play_complements_image ); ?>"
+						alt="<?php esc_attr_e( 'The gamified learning layer of SucceedLEARN SBCS', 'akaza-adventure' ); ?>"
+						width="720"
+						height="720"
+						loading="lazy"
+						decoding="async"
+					/>
 				</div>
 			</div>
 

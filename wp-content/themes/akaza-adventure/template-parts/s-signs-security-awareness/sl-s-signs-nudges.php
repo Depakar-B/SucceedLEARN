@@ -58,7 +58,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<div class="sl-s-signs-nudges__grid">
 
 					<article class="sl-s-signs-nudges__card">
-						<span class="sl-s-signs-nudges__number" aria-hidden="true">01</span>
 						<h3 class="sl-panel-title">
 							<?php esc_html_e( 'Directive Security Posters', 'akaza-adventure' ); ?>
 						</h3>
@@ -81,7 +80,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 					</article>
 
 					<article class="sl-s-signs-nudges__card">
-						<span class="sl-s-signs-nudges__number" aria-hidden="true">02</span>
 						<h3 class="sl-panel-title">
 							<?php esc_html_e( 'Behavioural Nudges', 'akaza-adventure' ); ?>
 						</h3>
@@ -117,9 +115,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 
 			<div class="sl-s-signs-nudges__media">
-				<div class="sl-s-signs-nudges__image-placeholder">
-					<span><?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?></span>
-				</div>
+				<img
+					class="sl-s-signs-nudges__image"
+					src="<?php echo esc_url( akaza_upload_url( '2026/09/S-Signs-Directive-and-Nudge-Posters.webp' ) ); ?>"
+					alt="<?php esc_attr_e( 'S-Signs directive posters and behavioural nudges', 'akaza-adventure' ); ?>"
+					width="800"
+					height="600"
+					loading="lazy"
+					decoding="async"
+				>
 			</div>
 
 		</div>

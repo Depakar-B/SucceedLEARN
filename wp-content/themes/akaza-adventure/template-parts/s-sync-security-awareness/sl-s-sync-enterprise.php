@@ -27,10 +27,6 @@ $team_groups = array(
 		'text'  => __( 'Support synchronisation of relevant workforce information used for learning administration.', 'akaza-adventure' ),
 	),
 	array(
-		'title' => __( 'Learning & Development Teams', 'akaza-adventure' ),
-		'text'  => __( 'Integrate applicable security-awareness content with existing learning environments and organisational workflows.', 'akaza-adventure' ),
-	),
-	array(
 		'title' => __( 'Compliance & Risk Teams', 'akaza-adventure' ),
 		'text'  => __( 'Benefit from more accurate learner populations and structured awareness programme administration.', 'akaza-adventure' ),
 	),

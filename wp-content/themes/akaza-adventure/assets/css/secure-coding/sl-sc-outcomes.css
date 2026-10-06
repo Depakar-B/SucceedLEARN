@@ -1,0 +1,75 @@
+/**
+ * Secure Coding — Outcomes
+ */
+
+.sl-sc-outcomes {
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-sc-outcomes__heading {
+	max-width: 800px;
+	margin-bottom: 44px;
+	text-align: left;
+}
+
+.sl-sc-outcomes__heading p {
+	margin: 0;
+}
+
+.sl-sc-outcomes__grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 18px;
+}
+
+.sl-sc-outcomes__card {
+	min-height: 190px;
+	padding: 26px;
+	border: 1px solid rgba(221, 228, 238, 0.95);
+	border-radius: 18px;
+	background: var(--sl-page-white, #ffffff);
+	text-align: left;
+}
+
+.sl-sc-outcomes__num {
+	margin-bottom: 26px;
+	color: var(--sl-page-cta, #ea3e24);
+	font-size: 0.78rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+}
+
+.sl-sc-outcomes__card h3 {
+	margin: 0 0 10px;
+}
+
+.sl-sc-outcomes__card p {
+	margin: 0;
+	color: var(--sl-page-muted, #6b7c93);
+	font-size: 0.94rem;
+}
+
+@media (max-width: 991px) {
+	.sl-sc-outcomes__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-sc-outcomes {
+		padding: 60px 0;
+	}
+
+	.sl-sc-outcomes__heading {
+		margin-bottom: 32px;
+	}
+
+	.sl-sc-outcomes__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.sl-sc-outcomes__card {
+		min-height: 0;
+	}
+}

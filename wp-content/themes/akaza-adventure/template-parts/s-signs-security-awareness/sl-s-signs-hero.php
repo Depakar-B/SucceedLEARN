@@ -25,11 +25,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</span>
 
 				<h1 id="sl-s-signs-hero-title">
-					<?php esc_html_e( 'Visual Security Awareness Posters & Digital Nudges', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Security Awareness Posters & Digital Nudges', 'akaza-adventure' ); ?>
 				</h1>
 
 				<h2 class="sl-hero-h2">
-					<?php esc_html_e( 'Keep Cybersecurity Visible. Reinforce Secure Behaviour Every Day', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Keep Cybersecurity behaviour Visible. Reinforce Secure Behaviour Every Day', 'akaza-adventure' ); ?>
 				</h2>
 
 				<p>
@@ -89,9 +89,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 
 			<div class="sl-s-signs-hero__media">
-				<div class="sl-s-signs-hero__image-placeholder">
-					<span><?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?></span>
-				</div>
+				<img
+					class="sl-s-signs-hero__image"
+					src="<?php echo esc_url( akaza_upload_url( '2026/09/S-Signs-Posters-Digital-Reminders.webp' ) ); ?>"
+					alt="<?php esc_attr_e( 'S-Signs posters and digital reminders', 'akaza-adventure' ); ?>"
+					width="800"
+					height="600"
+					loading="eager"
+					decoding="async"
+				>
 			</div>
 
 		</div>

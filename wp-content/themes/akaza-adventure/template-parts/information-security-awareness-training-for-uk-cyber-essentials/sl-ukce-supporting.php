@@ -50,7 +50,7 @@ $supporting = array(
 
 		<div class="sl-ukce-supporting__heading">
 			<span class="sl-home-sub-heading">
-				<?php esc_html_e( 'Broader S-Aware Library', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'Optional Module Library', 'akaza-adventure' ); ?>
 			</span>
 
 			<h2 id="sl-ukce-supporting-title">

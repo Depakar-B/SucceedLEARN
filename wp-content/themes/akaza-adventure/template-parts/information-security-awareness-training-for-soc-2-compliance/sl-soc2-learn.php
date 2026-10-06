@@ -45,22 +45,15 @@ $learn_items = array(
 			</p>
 		</div>
 
-		<div class="sl-soc2-learn__grid">
-			<?php foreach ( $learn_items as $index => $item ) : ?>
-				<article class="sl-soc2-learn__card">
-					<span class="sl-soc2-learn__number" aria-hidden="true">
-						<?php echo esc_html( str_pad( (string) ( $index + 1 ), 2, '0', STR_PAD_LEFT ) ); ?>
-					</span>
-					<p><?php echo esc_html( $item ); ?></p>
-				</article>
+		<ul class="sl-soc2-learn__list">
+			<?php foreach ( $learn_items as $item ) : ?>
+				<li><?php echo esc_html( $item ); ?></li>
 			<?php endforeach; ?>
-		</div>
+		</ul>
 
-		<div class="sl-soc2-learn__note">
-			<p>
-				<?php esc_html_e( 'The objective is not to make employees SOC 2 specialists. It is to help them understand the security behaviours that can support the organisation’s information security controls and SOC 2 readiness.', 'akaza-adventure' ); ?>
-			</p>
-		</div>
+		<p class="sl-soc2-learn__note">
+			<?php esc_html_e( 'The objective is not to make employees SOC 2 specialists. It is to help them understand the security behaviours that can support the organisation’s information security controls and SOC 2 readiness.', 'akaza-adventure' ); ?>
+		</p>
 
 	</div>
 </section>

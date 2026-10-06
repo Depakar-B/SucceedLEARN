@@ -62,7 +62,7 @@ function succeedlearn_amp_get_ukce_meta_description() {
  * @return string
  */
 function succeedlearn_amp_get_ukce_hero_image() {
-	return succeedlearn_amp_upload_url( '2026/10/ISA-UK-Cyber-Essentials.webp' );
+	return succeedlearn_amp_upload_url( '2026/09/SucceedLEARN-Security-Behaviour-Culture-Suite.webp' );
 }
 
 /**

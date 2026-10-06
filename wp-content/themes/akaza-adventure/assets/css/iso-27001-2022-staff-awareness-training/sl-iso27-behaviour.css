@@ -1,0 +1,32 @@
+/**
+ * ISO 27001 — Everyday behaviour section.
+ */
+
+.sl-iso27-behaviour {
+	padding: 90px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-iso27-behaviour__heading {
+	margin-bottom: 28px;
+}
+
+.sl-iso27-behaviour__heading h2 {
+	margin-bottom: 0;
+}
+
+.sl-iso27-behaviour__copy {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.sl-iso27-behaviour__copy p {
+	margin: 0;
+}
+
+@media (max-width: 767px) {
+	.sl-iso27-behaviour {
+		padding: 60px 0;
+	}
+}

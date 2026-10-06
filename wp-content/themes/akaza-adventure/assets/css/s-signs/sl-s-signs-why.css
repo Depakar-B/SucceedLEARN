@@ -7,13 +7,6 @@
 	background: var(--sl-page-bg, #f5f5f5);
 }
 
-.sl-s-signs-why__grid {
-	display: grid;
-	grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-	gap: 64px;
-	align-items: center;
-}
-
 .sl-s-signs-why__content {
 	min-width: 0;
 }
@@ -32,55 +25,14 @@
 	margin: 0;
 }
 
-.sl-s-signs-why__media {
-	position: static;
-	align-self: center;
-	width: 100%;
-	min-width: 0;
-}
-
-.sl-s-signs-why__image-placeholder {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	min-height: 480px;
-	padding: 40px;
-	border: 1px solid rgba(22, 35, 78, 0.10);
-	border-radius: 16px;
-	background: var(--sl-page-white, #ffffff);
-	box-sizing: border-box;
-	color: var(--sl-page-muted, #6b7c93);
-	text-align: center;
-}
-
 @media (max-width: 991px) {
 	.sl-s-signs-why {
 		padding: 64px 0;
-	}
-
-	.sl-s-signs-why__grid {
-		grid-template-columns: 1fr;
-		gap: 42px;
-	}
-
-	.sl-s-signs-why__media {
-		position: static;
-	}
-
-	.sl-s-signs-why__image-placeholder {
-		min-height: 360px;
 	}
 }
 
 @media (max-width: 767px) {
 	.sl-s-signs-why {
 		padding: 52px 0;
-	}
-
-	.sl-s-signs-why__image-placeholder {
-		min-height: 280px;
-		padding: 28px;
-		border-radius: 12px;
 	}
 }
