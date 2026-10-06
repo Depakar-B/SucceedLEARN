@@ -48,6 +48,7 @@ function akaza_enqueue_modern_slavery_assets() {
 	// Individuals / Organisations sections + FCP course suite.
 	akaza_enqueue_theme_style( 'akaza-global-course-buy-options', 'sl-global-course-buy-options.css', array( 'akaza-sl-msa-page' ) );
 	akaza_enqueue_theme_style( 'akaza-global-fcp-suite', 'sl-global-fcp-suite.css', array( 'akaza-sl-msa-page' ) );
+	akaza_enqueue_theme_style( 'akaza-fcp-sl-fcp-cpd', 'financial-crime-prevention/fcp-sl-fcp-cpd.css', array( 'akaza-sl-msa-page' ) );
 
 	akaza_enqueue_theme_script(
 		'akaza-sl-msa-faq',

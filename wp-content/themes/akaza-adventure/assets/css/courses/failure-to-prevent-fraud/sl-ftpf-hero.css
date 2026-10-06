@@ -38,10 +38,6 @@
 
 .ftpf-page .ftpf-hero h1 {
 	margin: 14px 0 24px;
-	font-size: clamp(2.2rem, 4vw, 3.4rem);
-	font-weight: 600;
-	line-height: 1.12;
-	letter-spacing: -0.03em;
 }
 
 .ftpf-page .ftpf-hero h1 span {
@@ -62,8 +58,6 @@
 
 .ftpf-page .ftpf-hero__copy .ftpf-hero__lead {
 	color: var(--ftpf-navy);
-	font-size: 1.05rem;
-	line-height: 1.65;
 }
 
 .ftpf-hero .ftpf-btn-row {

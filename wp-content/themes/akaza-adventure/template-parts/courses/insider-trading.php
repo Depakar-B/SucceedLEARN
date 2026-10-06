@@ -20,6 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		array(
 			'course'  => __( 'Insider Trading', 'akaza-adventure' ),
 			'contact' => '#contact',
+			'price'   => '$18',
 		)
 	);
 	get_template_part(

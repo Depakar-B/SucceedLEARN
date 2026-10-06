@@ -27,7 +27,6 @@
 
 .ftpf-page .ftpf-responsibility h2 {
 	color: var(--ftpf-white);
-	font-size: clamp(2rem, 3.5vw, 3.4rem);
 }
 
 .ftpf-page .ftpf-responsibility h2 span {

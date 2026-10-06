@@ -21,6 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			'course'   => __( 'Tax Evasion Prevention', 'akaza-adventure' ),
 			'duration' => __( '30-minute duration', 'akaza-adventure' ),
 			'contact'  => '#contact',
+			'price'    => '$18',
 		)
 	);
 	get_template_part(
@@ -36,6 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php get_template_part( 'template-parts/courses/tax-evasion-facilitation/sl-tax-evasion-understanding' ); ?>
 	<?php get_template_part( 'template-parts/courses/tax-evasion-facilitation/sl-tax-evasion-cfa' ); ?>
 	<?php get_template_part( 'template-parts/courses/tax-evasion-facilitation/sl-tax-evasion-course-content' ); ?>
+	<?php get_template_part( 'template-parts/financial-crime-prevention/sl-fcp-cpd' ); ?>
 	<?php get_template_part( 'template-parts/courses/tax-evasion-facilitation/sl-tax-evasion-risk-assessment' ); ?>	
 	<?php get_template_part( 'template-parts/courses/tax-evasion-facilitation/sl-tax-evasion-cycle' ); ?>
 	<?php get_template_part( 'template-parts/courses/tax-evasion-facilitation/sl-tax-evasion-audience' ); ?>
