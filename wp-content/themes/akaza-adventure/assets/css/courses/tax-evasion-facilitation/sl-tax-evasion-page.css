@@ -1,0 +1,24 @@
+/**
+ * Preventing the Facilitation of Tax Evasion Training — page-level background rhythm.
+ * From the FCP course suite to the last section, sections alternate grey / white.
+ *
+ * @package Akaza_Adventure
+ */
+
+#main-content.sl-course-page--tax-evasion-facilitation > #fcp-suite,
+#main-content.sl-course-page--tax-evasion-facilitation > #understanding-tax-evasion,
+#main-content.sl-course-page--tax-evasion-facilitation > #course-content,
+#main-content.sl-course-page--tax-evasion-facilitation > #prevention-cycle,
+#main-content.sl-course-page--tax-evasion-facilitation > #interactive-learning,
+#main-content.sl-course-page--tax-evasion-facilitation > #frequently-asked-questions {
+	background: var(--sl-page-soft, #f5f5f5);
+}
+
+#main-content.sl-course-page--tax-evasion-facilitation > #tax-evasion-risk,
+#main-content.sl-course-page--tax-evasion-facilitation > #criminal-finances-act,
+#main-content.sl-course-page--tax-evasion-facilitation > #risk-assessment,
+#main-content.sl-course-page--tax-evasion-facilitation > #training-audience,
+#main-content.sl-course-page--tax-evasion-facilitation > #why-succeedlearn,
+#main-content.sl-course-page--tax-evasion-facilitation > #contact {
+	background: var(--sl-page-white, #ffffff);
+}

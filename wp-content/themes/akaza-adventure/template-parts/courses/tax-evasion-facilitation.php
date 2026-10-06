@@ -21,6 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			'course'   => __( 'Tax Evasion Prevention', 'akaza-adventure' ),
 			'duration' => __( '30-minute duration', 'akaza-adventure' ),
 			'contact'  => '#contact',
+			'price'    => '$18',
 		)
 	);
 	get_template_part(

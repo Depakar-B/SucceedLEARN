@@ -26,6 +26,16 @@
 	text-transform: uppercase;
 }
 
+@media (max-width: 767px) {
+	.sl-hero-actions.sl-hero-actions--labelled {
+		align-items: stretch;
+	}
+
+	.sl-hero-actions--labelled .sl-hero-cta-item {
+		align-items: stretch;
+	}
+}
+
 .sl-buy-options {
 	padding: 90px 0;
 	background: #ffffff;
