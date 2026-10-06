@@ -25,7 +25,7 @@ $hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/Failure-to-pr
 
 	<div class="ftpf-container">
 		<div class="ftpf-hero__content">
-			<span class="sl-home-sub-heading"><?php esc_html_e( 'Financial Crime Prevention eLearning', 'akaza-adventure' ); ?></span>
+			<span class="sl-home-sub-heading"><?php esc_html_e( 'Fraud Prevention Compliance eLearning', 'akaza-adventure' ); ?></span>
 
 			<h1 id="ftpf-hero-title">
 				<?php esc_html_e( 'Failure to Prevent', 'akaza-adventure' ); ?>

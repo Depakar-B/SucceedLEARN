@@ -157,6 +157,16 @@
 	background: var(--ftpf-white);
 }
 
+/* CPD sits between Learning Outcomes and Audience; keep alternating after it. */
+.ftpf-page > #cpd,
+.ftpf-page > #cpd ~ .ftpf-section--white {
+	background: var(--ftpf-white);
+}
+
+.ftpf-page > #cpd ~ .ftpf-section--grey {
+	background: var(--ftpf-grey);
+}
+
 body.slf-body #main-content .ftpf-page .sl-home-sub-heading {
 	margin-bottom: 16px;
 }

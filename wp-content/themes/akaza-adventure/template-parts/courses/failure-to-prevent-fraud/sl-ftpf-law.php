@@ -102,11 +102,5 @@ $reasons = array(
 				<?php endforeach; ?>
 			</ul>
 		</div>
-
-		<p class="ftpf-law__source">
-			<?php esc_html_e( 'Regulatory context based on current UK Government guidance. Organisations should obtain legal advice regarding their specific obligations.', 'akaza-adventure' ); ?>
-			<a href="https://www.gov.uk/government/publications/offence-of-failure-to-prevent-fraud-introduced-by-eccta" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'View Government guidance', 'akaza-adventure' ); ?></a>.
-		</p>
-
 	</div>
 </section>

@@ -41,7 +41,7 @@ $benefits = array(
 				<?php endforeach; ?>
 			</ul>
 
-			<a class="ftpf-contact__email" href="mailto:sales@succeedtech.com">sales@succeedtech.com</a>
+			<a class="ftpf-contact__email" href="mailto:connect@succeedtech.com">connect@succeedtech.com</a>
 		</div>
 
 		<div class="ftpf-contact__form">

@@ -27,6 +27,7 @@ $sections = array(
 	'sl-ftpf-law',
 	'sl-ftpf-overview',
 	'sl-ftpf-outcomes',
+	'cpd',
 	'sl-ftpf-audience',
 	'sl-ftpf-watch',
 	'sl-ftpf-reporting',
@@ -39,6 +40,12 @@ $sections = array(
 	<script type="application/ld+json"><?php echo wp_json_encode( $course_schema, JSON_UNESCAPED_SLASHES ); ?></script>
 	<div class="ftpf-page">
 		<?php foreach ( $sections as $section ) : ?>
+			<?php
+			if ( 'cpd' === $section ) {
+				get_template_part( 'template-parts/financial-crime-prevention/sl-fcp-cpd' );
+				continue;
+			}
+			?>
 			<?php get_template_part( 'template-parts/courses/failure-to-prevent-fraud/' . $section ); ?>
 			<?php
 			if ( 'sl-ftpf-hero' === $section ) {

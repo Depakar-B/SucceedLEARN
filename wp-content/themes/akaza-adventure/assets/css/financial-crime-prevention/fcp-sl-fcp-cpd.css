@@ -1,9 +1,10 @@
 /* Financial Crime Prevention — CPD certification (mirrors AML PE/VC CPD section).
-   Also reused on course pages (e.g. ABAC, Modern Slavery), hence the .sl-course-page / .msa-page selectors. */
+   Also reused on course pages (e.g. ABAC, Modern Slavery, FTPF), hence the .sl-course-page / page-wrapper selectors. */
 
 .sl-fcp-page .sl-fcp-cpd,
 .sl-course-page > .sl-fcp-cpd,
-.sl-course-page .msa-page > .sl-fcp-cpd {
+.sl-course-page .msa-page > .sl-fcp-cpd,
+.sl-course-page .ftpf-page > .sl-fcp-cpd {
 	padding-top: 90px;
 	padding-bottom: 90px;
 	background: var(--fcp-grey, #f5f5f5);
@@ -43,7 +44,8 @@
 .sl-fcp-page .sl-fcp-cpd__copy .sl-home-sub-heading,
 body.slf-body #main-content.sl-fcp-page .sl-fcp-cpd__copy .sl-home-sub-heading,
 body.slf-body #main-content.sl-course-page > section.sl-fcp-cpd .sl-fcp-cpd__copy .sl-home-sub-heading,
-body.slf-body #main-content.sl-course-page .msa-page > section.sl-fcp-cpd .sl-fcp-cpd__copy .sl-home-sub-heading {
+body.slf-body #main-content.sl-course-page .msa-page > section.sl-fcp-cpd .sl-fcp-cpd__copy .sl-home-sub-heading,
+body.slf-body #main-content.sl-course-page .ftpf-page > section.sl-fcp-cpd .sl-fcp-cpd__copy .sl-home-sub-heading {
 	margin-bottom: 10px;
 }
 
@@ -103,7 +105,8 @@ body.slf-body #main-content.sl-course-page .msa-page > section.sl-fcp-cpd .sl-fc
 
 @media (max-width: 767px) {
 	.sl-course-page > .sl-fcp-cpd,
-	.sl-course-page .msa-page > .sl-fcp-cpd {
+	.sl-course-page .msa-page > .sl-fcp-cpd,
+	.sl-course-page .ftpf-page > .sl-fcp-cpd {
 		padding-top: 60px;
 		padding-bottom: 60px;
 	}
