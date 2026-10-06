@@ -141,6 +141,16 @@
 	background: var(--msa-white);
 }
 
+/* CPD sits between Learning Outcomes and Inside the Course; keep alternating after it. */
+.msa-page > #cpd,
+.msa-page > #cpd ~ .msa-section--white {
+	background: var(--msa-white);
+}
+
+.msa-page > #cpd ~ .msa-section--grey {
+	background: var(--msa-grey);
+}
+
 body.slf-body #main-content .msa-page .sl-home-sub-heading {
 	margin-bottom: 16px;
 }

@@ -36,6 +36,7 @@ $parts = array(
 	'sl-msa-why-it-matters',
 	'sl-msa-audience',
 	'sl-msa-learning-outcomes',
+	'cpd',
 	'sl-msa-inside-course',
 	'sl-msa-uk-law',
 	'sl-msa-procurement',
@@ -49,6 +50,12 @@ $parts = array(
 	<script type="application/ld+json"><?php echo wp_json_encode( $course_schema, JSON_UNESCAPED_SLASHES ); ?></script>
 	<div class="msa-page">
 		<?php foreach ( $parts as $part ) : ?>
+			<?php
+			if ( 'cpd' === $part ) {
+				get_template_part( 'template-parts/financial-crime-prevention/sl-fcp-cpd' );
+				continue;
+			}
+			?>
 			<?php get_template_part( 'template-parts/courses/modern-slavery-awareness/' . $part ); ?>
 			<?php
 			if ( 'sl-msa-hero' === $part ) {

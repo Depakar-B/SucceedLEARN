@@ -25,7 +25,7 @@ $hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/Modern-Slaver
 
 	<div class="msa-container">
 		<div class="msa-hero__content">
-			<span class="sl-home-sub-heading"><?php esc_html_e( 'UK Compliance Training', 'akaza-adventure' ); ?></span>
+			<span class="sl-home-sub-heading"><?php esc_html_e( 'Modern Slavery Compliance Training', 'akaza-adventure' ); ?></span>
 
 			<h1 id="msa-hero-title">
 				<?php esc_html_e( 'Modern Slavery Awareness Training', 'akaza-adventure' ); ?>
