@@ -13,6 +13,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <main id="main-content" class="sl-course-page sl-course-page--insider-trading">
 	<?php get_template_part( 'template-parts/courses/insider-trading/sl-insider-trading-hero' ); ?>
+	<?php
+	get_template_part(
+		'template-parts/global/course-buy-options',
+		null,
+		array(
+			'course'  => __( 'Insider Trading', 'akaza-adventure' ),
+			'contact' => '#contact',
+		)
+	);
+	get_template_part(
+		'template-parts/global/fcp-course-suite',
+		null,
+		array(
+			'current' => 'insider-trading',
+			'contact' => '#contact',
+		)
+	);
+	?>
 	<?php get_template_part( 'template-parts/courses/insider-trading/sl-insider-trading-risk' ); ?>
 	<?php get_template_part( 'template-parts/courses/insider-trading/sl-insider-trading-market-abuse' ); ?>
 	<?php get_template_part( 'template-parts/courses/insider-trading/sl-insider-trading-risk-cta' ); ?>

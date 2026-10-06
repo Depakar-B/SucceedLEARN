@@ -11,13 +11,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<section class="sl-section sl-section--alt" aria-labelledby="sl-gwct-faq-title">
+<section class="sl-section" aria-labelledby="sl-gwct-faq-title">
 	<div class="sl-wrap">
 		<span class="sl-eyebrow sl-home-sub-heading"><?php esc_html_e( 'FAQ', 'succeedlearn-amp' ); ?></span>
 		<h2 id="sl-gwct-faq-title" class="sl-h2">
 			<?php
 			echo wp_kses(
-				__( 'The questions buyers <span>actually ask</span>', 'succeedlearn-amp' ),
+				__( 'Questions you may <span>have</span>', 'succeedlearn-amp' ),
 				array( 'span' => array() )
 			);
 			?>

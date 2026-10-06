@@ -11,17 +11,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 require_once SUCCEEDLEARN_AMP_TEMPLATES_DIR . 'data/gwct.php';
 
-$canonical          = succeedlearn_amp_get_gwct_canonical_url();
-$hero_img           = succeedlearn_amp_get_gwct_hero_image();
-$page_title         = succeedlearn_amp_get_gwct_page_title();
-$meta_desc          = succeedlearn_amp_get_gwct_meta_description();
+$canonical           = succeedlearn_amp_get_gwct_canonical_url();
+$hero_img            = succeedlearn_amp_get_gwct_hero_image();
+$page_title          = succeedlearn_amp_get_gwct_page_title();
+$meta_desc           = succeedlearn_amp_get_gwct_meta_description();
 $behaviour_image     = succeedlearn_amp_get_gwct_behaviour_image();
 $behaviour_image_alt = __( 'Workplace behaviour learning', 'succeedlearn-amp' );
 $solutions           = succeedlearn_amp_get_gwct_solutions();
-$why_choose_cards   = succeedlearn_amp_get_gwct_why_choose_cards();
-$impact_themes      = succeedlearn_amp_get_gwct_impact_themes();
-$faq_items          = succeedlearn_amp_get_gwct_faq_items();
-$testimonials       = succeedlearn_amp_get_gwct_testimonials();
+$why_choose_cards    = succeedlearn_amp_get_gwct_why_choose_cards();
+$impact_themes       = succeedlearn_amp_get_gwct_impact_themes();
+$faq_items           = succeedlearn_amp_get_gwct_faq_items();
+$testimonials        = succeedlearn_amp_get_gwct_testimonials();
 
 extract( succeedlearn_amp_prepare_gwct_clients_context(), EXTR_SKIP ); // phpcs:ignore WordPress.PHP.DontExtract.extract_extract
 

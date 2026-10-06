@@ -69,11 +69,14 @@ a.sl-hero-btn-primary:visited,a.sl-content-btn-primary:visited{
 a.sl-hero-btn-secondary,a.sl-content-btn-secondary,
 button.sl-hero-btn-secondary,button.sl-content-btn-secondary,
 a.sl-hero-btn-secondary:visited,a.sl-content-btn-secondary:visited{
-	background:linear-gradient(var(--sl-btn-secondary-surface,var(--sl-page-white,#fff)),var(--sl-btn-secondary-surface,var(--sl-page-white,#fff))) padding-box,var(--sl-btn-primary-fill,linear-gradient(180deg,#ea3e24 0%,#ea3e24 100%)) border-box!important;
+	background:linear-gradient(var(--sl-btn-secondary-surface,var(--sl-page-white,#fff)),var(--sl-btn-secondary-surface,var(--sl-page-white,#fff))) padding-box,var(--sl-btn-secondary-border-fill,var(--sl-btn-primary-fill,linear-gradient(180deg,#ea3e24 0%,#ea3e24 100%))) border-box!important;
 	background-color:transparent!important;
-	border:2px solid transparent!important;
+	border:var(--sl-btn-secondary-border-width,2px) solid transparent!important;
+	border-radius:var(--sl-btn-secondary-radius,var(--sl-ui-btn-radius,8px))!important;
 	color:var(--sl-btn-secondary-color,var(--sl-page-cta,#ea3e24))!important;
-	box-shadow:none
+	box-shadow:none;
+	min-height:var(--sl-btn-secondary-min-height,var(--sl-ui-btn-min-height,48px));
+	padding:var(--sl-btn-secondary-padding,var(--sl-ui-btn-padding,13px 20px))
 }
 .sl-csa-page .sl-hero-btn-secondary,
 .sl-csa-page .sl-content-btn-secondary,
@@ -82,12 +85,12 @@ a.sl-hero-btn-secondary:visited,a.sl-content-btn-secondary:visited{
 .sl-gwct-page .sl-hero-btn-secondary,
 .sl-gwct-page .sl-content-btn-secondary,
 .sl-infosec-2026-cyber-page .sl-hero-btn-secondary,
-.sl-infosec-2026-cyber-page .sl-content-btn-secondary,
-.sl-dpdpa-page .sl-hero-btn-secondary,
-.sl-dpdpa-page .sl-content-btn-secondary{
+.sl-infosec-2026-cyber-page .sl-content-btn-secondary{
 	--sl-btn-secondary-surface:var(--sl-page-bg,#f5f5f5)
 }
 @media(max-width:767px){
 	.sl-hero-actions,.sl-content-actions{flex-direction:column;align-items:stretch}
 	.sl-hero-btn,.sl-content-btn{width:100%;white-space:normal}
 }
+.sl-dpdpa-text-btn,a.sl-dpdpa-text-btn,button.sl-dpdpa-text-btn,a.sl-dpdpa-text-btn:visited{display:inline-flex;align-items:center;justify-content:flex-start;gap:8px;width:auto;max-width:100%;min-height:0;margin:0;padding:0;border:0!important;border-radius:0!important;background:transparent!important;background-image:none!important;box-shadow:none!important;color:#1472ba!important;font:600 15px/1.4 inherit;text-align:left;text-decoration:none;cursor:pointer}
+.sl-dpdpa-text-btn span{color:inherit;font-size:16px;line-height:1}

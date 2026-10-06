@@ -25,8 +25,8 @@ function succeedlearn_amp_coc_partial( $name ) {
  * @return string
  */
 function succeedlearn_amp_get_coc_canonical_url() {
-	$canonical = home_url( '/code-of-conduct/' );
-	foreach ( array( 'code-of-conduct' ) as $slug ) {
+	$canonical = home_url( '/code-of-conduct-elearning-training/' );
+	foreach ( array( 'code-of-conduct-elearning-training', 'code-of-conduct' ) as $slug ) {
 		$page = get_page_by_path( $slug );
 		if ( $page instanceof WP_Post && 'publish' === $page->post_status ) {
 			$link = get_permalink( $page );
@@ -146,9 +146,7 @@ function succeedlearn_amp_get_coc_definition_data() {
 			'succeedlearn-amp'
 		),
 		'image'        => array(
-			'url'    => content_url(
-				'/uploads/2026/08/What-Is-Code-of-Conduct.webp'
-			),
+			'url'    => succeedlearn_amp_upload_url( '2026/08/What-Is-Code-of-Conduct.webp' ),
 			'alt'    => __(
 				'Team collaborating on Code of Conduct training in a modern workplace',
 				'succeedlearn-amp'
@@ -238,9 +236,7 @@ function succeedlearn_amp_get_coc_matters_data() {
 			'succeedlearn-amp'
 		),
 		'image'        => array(
-			'url'    => content_url(
-				'/uploads/2026/09/Why-Code-of-Conduct-Training-Matters-clean.webp'
-			),
+			'url'    => succeedlearn_amp_upload_url( '2026/09/Why-It-Matters.webp' ),
 			'alt'    => __(
 				'Code of Conduct training illustration showing workplace ethics, inclusion and reporting concerns',
 				'succeedlearn-amp'
@@ -590,9 +586,7 @@ function succeedlearn_amp_get_coc_emerging_risks_data() {
 			'succeedlearn-amp'
 		),
 		'image'        => array(
-			'url'    => content_url(
-				'/uploads/2026/08/Prepare-Employees.webp'
-			),
+			'url'    => succeedlearn_amp_upload_url( '2026/08/Prepare-Employees.webp' ),
 			'alt'    => __(
 				'Employees navigating a difficult workplace ethics situation',
 				'succeedlearn-amp'
@@ -755,7 +749,7 @@ function succeedlearn_amp_get_coc_customization_data() {
 			__( 'Languages', 'succeedlearn-amp' ),
 		),
 		'image'     => array(
-			'url'    => content_url( '/uploads/2026/08/Code-of-Conduct-Customization.webp' ),
+			'url'    => succeedlearn_amp_upload_url( '2026/09/Customization-Your-Code-Your-Policies-scaled.webp' ),
 			'width'  => 1460,
 			'height' => 1120,
 			'alt'    => __( 'Custom Code of Conduct training tailored to an organization’s branding and policies', 'succeedlearn-amp' ),
@@ -847,8 +841,10 @@ function succeedlearn_amp_get_coc_reporting_data() {
 			__( 'Compliance reporting', 'succeedlearn-amp' ),
 		),
 		'image'     => array(
-			'url' => content_url( '/uploads/2026/08/Code-of-Conduct-Reporting.webp' ),
-			'alt' => __( 'Code of Conduct training reporting dashboard showing completion and compliance visibility', 'succeedlearn-amp' ),
+			'url'    => succeedlearn_amp_upload_url( '2026/09/Reporting-Turn-Training-Completion-scaled.webp' ),
+			'width'  => 1460,
+			'height' => 1120,
+			'alt'    => __( 'Code of Conduct training reporting dashboard showing completion and compliance visibility', 'succeedlearn-amp' ),
 		),
 		'closing'   => __( 'Use training data to identify gaps, follow up with employees and support internal compliance and audit requirements.', 'succeedlearn-amp' ),
 		'cta'       => __( 'Discuss Your Reporting Requirements', 'succeedlearn-amp' ),
@@ -973,11 +969,7 @@ function succeedlearn_amp_get_coc_industries_data() {
 			__( 'Global Enterprises', 'succeedlearn-amp' ),
 		),
 		'image'      => array(
-			/*
-			 * Add the complete image URL here.
-			 * Example: content_url( '/uploads/2026/08/code-of-conduct-industries.webp' )
-			 */
-			'url'    => '',
+			'url'    => succeedlearn_amp_upload_url( '2026/09/Industries-COC.webp' ),
 			'width'  => 1120,
 			'height' => 1280,
 			'alt'    => __( 'Code of Conduct training adapted for employees across different industries', 'succeedlearn-amp' ),

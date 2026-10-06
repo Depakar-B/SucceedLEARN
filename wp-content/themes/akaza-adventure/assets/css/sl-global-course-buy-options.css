@@ -1,0 +1,182 @@
+/**
+ * Global course "For Individuals" / "For Organisations" sections
+ * (template-parts/global/course-buy-options.php). Mirrors AML PE/VC.
+ */
+
+/* Hero buttons with "Individual" / "Organisation" labels above them */
+.sl-hero-actions.sl-hero-actions--labelled {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	gap: 14px;
+}
+
+.sl-hero-cta-item {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 8px;
+}
+
+.sl-hero-cta-label {
+	color: #374151;
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.sl-buy-options {
+	padding: 90px 0;
+	background: #ffffff;
+	font-family: "Space Grotesk", system-ui, sans-serif;
+}
+
+.sl-buy-options--individuals {
+	background: #f5f5f5;
+}
+
+.sl-buy-options__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	gap: 70px;
+	align-items: center;
+}
+
+.sl-buy-options .sl-buy-options__content h2 {
+	margin: 0 0 16px;
+	color: #16234e;
+	font-family: "Space Grotesk", system-ui, sans-serif;
+	font-size: clamp(28px, 2.7vw, 40px);
+	font-weight: 700;
+	line-height: 1.2;
+	letter-spacing: -0.02em;
+}
+
+.sl-buy-options .sl-buy-options__content h2 > span {
+	color: #135db7;
+}
+
+.sl-buy-options .sl-buy-options__lead {
+	max-width: 760px;
+	margin: 16px 0;
+	color: #4a4a4a;
+	font-size: 18.4px;
+	line-height: 1.8;
+}
+
+.sl-buy-options .sl-buy-options__features {
+	display: grid;
+	gap: 17px;
+	margin: 30px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sl-buy-options .sl-buy-options__feature {
+	display: grid;
+	grid-template-columns: 46px minmax(0, 1fr);
+	gap: 15px;
+	align-items: start;
+	margin: 0;
+	padding: 0;
+}
+
+.sl-buy-options .sl-buy-options__feature::before {
+	content: none;
+}
+
+.sl-buy-options__feature-num {
+	display: grid;
+	width: 42px;
+	height: 42px;
+	place-items: center;
+	border-radius: 11px;
+	background: #edf5fd;
+	color: #135db7;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.sl-buy-options .sl-buy-options__feature strong {
+	display: block;
+	margin-bottom: 3px;
+	color: #16234d;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.sl-buy-options .sl-buy-options__feature div > span {
+	color: #555e70;
+	font-size: 16px;
+	line-height: 1.55;
+}
+
+.sl-buy-options__media {
+	text-align: center;
+}
+
+.sl-buy-options__image {
+	margin: 0;
+	overflow: hidden;
+	border-radius: 24px;
+}
+
+.sl-buy-options__image img {
+	display: block;
+	width: 100%;
+	max-width: none;
+	height: auto;
+	object-fit: cover;
+}
+
+.sl-buy-options__placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	border: 1px solid #dde3ec;
+	border-radius: 24px;
+	background:
+		repeating-linear-gradient(
+			135deg,
+			#ffffff 0,
+			#ffffff 12px,
+			#edf1f6 12px,
+			#edf1f6 24px
+		);
+	color: #6b7c93;
+	font-size: 14px;
+	font-weight: 600;
+	box-sizing: border-box;
+}
+
+.sl-buy-options__actions {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 12px;
+	margin-top: 22px;
+}
+
+@media (max-width: 1000px) {
+	.sl-buy-options__grid {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.sl-buy-options--organisations .sl-buy-options__media {
+		order: -1;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-buy-options {
+		padding: 60px 0;
+	}
+
+	.sl-buy-options .sl-buy-options__lead {
+		font-size: 16px;
+	}
+}

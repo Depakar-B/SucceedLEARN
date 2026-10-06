@@ -117,11 +117,8 @@ h1 [class$="__highlight"],h2 [class$="__highlight"],h3 [class$="__highlight"],
 	line-height:1.3
 }
 .sl-home-sub-heading::before{
-	flex-shrink:0;
-	width:24px;
-	height:1px;
-	background:var(--sl-heading-accent,var(--sl-page-primary,#1472ba));
-	content:""
+	content:none;
+	display:none
 }
 @media(min-width:768px){
 	:root{--sl-fs-hero-h1:clamp(44px,4.8vw,54px)}

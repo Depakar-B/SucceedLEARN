@@ -70,9 +70,7 @@ $coc_emerging_closing = ! empty( $coc_emerging_risks['closing'] )
 					<amp-img
 						src="<?php echo esc_url( $coc_emerging_image['url'] ); ?>"
 						alt="<?php echo esc_attr( $coc_emerging_image['alt'] ); ?>"
-						width="<?php echo esc_attr( $coc_emerging_image['width'] ); ?>"
-						height="<?php echo esc_attr( $coc_emerging_image['height'] ); ?>"
-						layout="responsive"
+						layout="fill"
 					></amp-img>
 				</figure>
 			<?php endif; ?>

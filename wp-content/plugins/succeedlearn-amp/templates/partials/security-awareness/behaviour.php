@@ -24,7 +24,7 @@ $step_count = count( $behaviour_steps );
 		<div class="sl-sa-behaviour__header">
 			<span class="sl-home-sub-heading"><?php esc_html_e( 'CONTINUOUS SECURITY BEHAVIOUR CHANGE', 'succeedlearn-amp' ); ?></span>
 			<h2 id="sl-sa-behaviour-title">
-				<?php esc_html_e( 'Continuous Behaviour Change.', 'succeedlearn-amp' ); ?>
+				<?php esc_html_e( 'Effective Continuous Learning.', 'succeedlearn-amp' ); ?>
 				<span><?php esc_html_e( 'Simplify administration.', 'succeedlearn-amp' ); ?></span>
 				<?php esc_html_e( 'Scale your awareness programme.', 'succeedlearn-amp' ); ?>
 			</h2>

@@ -18,7 +18,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 .sl-highlight{
 	margin-top:24px;
 	padding:18px 20px;
-	border:1px solid #d8e2eb;
+	border-top:1px solid #d8e2eb;
+	border-right:1px solid #d8e2eb;
+	border-bottom:1px solid #d8e2eb;
 	border-left:4px solid var(--sl-page-primary,#1472ba);
 	border-radius:10px;
 	background:var(--sl-page-white,#fff);
@@ -32,4 +34,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 .sl-highlight p+p{margin-top:10px}
 @media(max-width:767px){
 	.sl-highlight{margin-top:18px;padding:16px}
+}
+
+/* Keep blue accent on the left only; radius on all corners */
+.sl-coc-page .sl-highlight{
+	border-top:1px solid #d8e2eb !important;
+	border-right:1px solid #d8e2eb !important;
+	border-bottom:1px solid #d8e2eb !important;
+	border-left:4px solid var(--sl-page-primary,#1472ba) !important;
+	border-radius:10px !important
 }

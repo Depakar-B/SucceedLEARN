@@ -5,6 +5,7 @@
  * Matches the common contact form field set:
  * - default: name, email, interested in, message, privacy
  * - course:  name, email, message, privacy
+ * - fcp:     name, org email, message, privacy
  *
  * @package SucceedLEARN\AMP
  *
@@ -20,10 +21,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $form_page     = isset( $form_page ) ? $form_page : 'Home';
 $form_page_url = isset( $form_page_url ) ? $form_page_url : home_url( '/' );
-$form_variant  = ( isset( $form_variant ) && 'course' === $form_variant ) ? 'course' : 'default';
-$is_course     = ( 'course' === $form_variant );
+$raw_variant   = isset( $form_variant ) ? sanitize_key( (string) $form_variant ) : 'default';
+$form_variant  = in_array( $raw_variant, array( 'course', 'fcp' ), true ) ? $raw_variant : 'default';
+$is_slim_demo  = in_array( $form_variant, array( 'course', 'fcp' ), true );
+$email_label   = ( 'fcp' === $form_variant )
+	? __( 'Org Email', 'succeedlearn-amp' )
+	: __( 'Work Email', 'succeedlearn-amp' );
 $form_title    = isset( $form_title ) ? trim( (string) $form_title ) : '';
-if ( $is_course && '' === $form_title ) {
+if ( $is_slim_demo && '' === $form_title ) {
 	$form_title = __( 'Request a Demo', 'succeedlearn-amp' );
 }
 
@@ -41,8 +46,8 @@ $interest_options = array(
 	'Others',
 );
 ?>
-<div class="scf-form-wrap<?php echo $is_course ? ' scf-form-wrap-course' : ''; ?>">
-	<?php if ( $is_course && '' !== $form_title ) : ?>
+<div class="scf-form-wrap<?php echo $is_slim_demo ? ' scf-form-wrap-course' : ''; ?>">
+	<?php if ( $is_slim_demo && '' !== $form_title ) : ?>
 		<h2 class="scf-form-title"><?php echo esc_html( $form_title ); ?></h2>
 	<?php endif; ?>
 
@@ -74,11 +79,11 @@ $interest_options = array(
 		</div>
 
 		<div class="scf-field">
-			<label for="slcf-email"><?php esc_html_e( 'Work Email', 'succeedlearn-amp' ); ?> <span class="scf-required">*</span></label>
+			<label for="slcf-email"><?php echo esc_html( $email_label ); ?> <span class="scf-required">*</span></label>
 			<input type="email" id="slcf-email" name="email" required />
 		</div>
 
-		<?php if ( ! $is_course ) : ?>
+		<?php if ( ! $is_slim_demo ) : ?>
 			<div class="scf-field">
 				<label><?php esc_html_e( 'Interested In', 'succeedlearn-amp' ); ?> <span class="scf-required">*</span></label>
 				<div class="scf-interest-group" role="group">

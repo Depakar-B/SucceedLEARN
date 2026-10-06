@@ -129,42 +129,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 
         <div class="sl-abac-decision-journey__media">
 
-            <div class="sl-abac-decision-journey__media-item">
-                <div
-                    class="sl-abac-decision-journey__placeholder"
-                    role="img"
-                    aria-label="<?php esc_attr_e(
-                        'ABAC assessment journey image placeholder',
+            <figure class="sl-abac-decision-journey__media-item">
+                <img
+                    src="https://succeedlearn.com/wp-content/uploads/2026/10/Course-journey-image.webp"
+                    alt="<?php esc_attr_e(
+                        'ABAC course journey from understanding bribery risks to earning the CPD certificate',
                         'akaza-adventure'
                     ); ?>"
+                    loading="lazy"
+                    decoding="async"
                 >
-                    <span>
-                        <?php esc_html_e(
-                            'Image placeholder',
-                            'akaza-adventure'
-                        ); ?>
-                    </span>
-                </div>
-            </div>
-
-
-            <div class="sl-abac-decision-journey__media-item">
-                <div
-                    class="sl-abac-decision-journey__placeholder"
-                    role="img"
-                    aria-label="<?php esc_attr_e(
-                        'ABAC certificate or learner dashboard image placeholder',
-                        'akaza-adventure'
-                    ); ?>"
-                >
-                    <span>
-                        <?php esc_html_e(
-                            'Image placeholder',
-                            'akaza-adventure'
-                        ); ?>
-                    </span>
-                </div>
-            </div>
+            </figure>
 
         </div>
 

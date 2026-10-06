@@ -40,6 +40,26 @@ $sections = array(
 	<div class="ftpf-page">
 		<?php foreach ( $sections as $section ) : ?>
 			<?php get_template_part( 'template-parts/courses/failure-to-prevent-fraud/' . $section ); ?>
+			<?php
+			if ( 'sl-ftpf-hero' === $section ) {
+				get_template_part(
+					'template-parts/global/course-buy-options',
+					null,
+					array(
+						'course'  => __( 'Fraud Prevention', 'akaza-adventure' ),
+						'contact' => '#request-demo',
+					)
+				);
+				get_template_part(
+					'template-parts/global/fcp-course-suite',
+					null,
+					array(
+						'current' => 'ftpf',
+						'contact' => '#request-demo',
+					)
+				);
+			}
+			?>
 		<?php endforeach; ?>
 	</div>
 </main>

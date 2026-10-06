@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	--sl-btn-primary-fill:linear-gradient(180deg,#ea3e24 0%,#ea3e24 100%);
 	--sl-btn-primary-shadow:rgba(234,62,36,.28);
 	--sl-btn-secondary-color:#ea3e24;
-	--sl-chrome-fill:var(--sl-btn-primary-fill);
+	--sl-chrome-fill:#1472ba;
 }
 .sl-btn--primary,
 a.sl-btn--primary,
@@ -286,3 +286,15 @@ amp-accordion.sl-amp-faq__accordion>section>.sl-amp-faq__summary::after,
 	justify-self:stretch;
 	max-width:none
 }
+/* Global image crop frame (default 16:9). Wrap an amp-img with layout="fill" object-fit="cover";
+   use object-position="50% 0" to keep the top. Frame height follows the parent's width. */
+.sl-img-crop{
+	position:relative;
+	display:block;
+	width:100%;
+	height:0;
+	padding-top:56.25%;
+	overflow:hidden
+}
+.sl-img-crop--4x3{padding-top:75%}
+.sl-img-crop--21x9{padding-top:42.857%}

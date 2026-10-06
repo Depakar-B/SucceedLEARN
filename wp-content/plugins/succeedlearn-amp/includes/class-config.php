@@ -210,6 +210,76 @@ class Config {
 				'page_templates' => array( 'page-templates/security-awareness-and-phishing.php' ),
 				'template'       => 'pages/security-awareness',
 			),
+			's_metrics' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					's-metrics',
+					's-metrics-tracking-reporting',
+					'security-awareness/s-metrics-tracking-reporting',
+				),
+				'page_templates' => array( 'page-templates/s-metrics-tracking-reporting.php' ),
+				'template'       => 'pages/s-metrics',
+			),
+			's_play' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					's-play',
+					's-play-gamified-training',
+					'security-awareness/s-play',
+				),
+				'page_templates' => array( 'page-templates/s-play-gamified-training.php' ),
+				'template'       => 'pages/s-play',
+			),
+			's_aware' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					's-aware',
+					'security-awareness/s-aware',
+				),
+				'page_templates' => array( 'page-templates/s-aware.php' ),
+				'template'       => 'pages/s-aware',
+			),
+			's_phish' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					's-phish',
+					'security-awareness/s-phish',
+				),
+				'page_templates' => array( 'page-templates/s-phish.php' ),
+				'template'       => 'pages/s-phish',
+			),
+			's_signs' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					's-signs',
+					's-signs-security-awareness',
+					'security-awareness/s-signs-security-awareness',
+					'security-awareness/s-signs',
+				),
+				'page_templates' => array( 'page-templates/s-signs-security-awareness.php' ),
+				'template'       => 'pages/s-signs',
+			),
+			's_sync' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					's-sync',
+					's-sync-security-awareness',
+					'security-awareness/s-sync-security-awareness',
+					'security-awareness/s-sync',
+				),
+				'page_templates' => array( 'page-templates/s-sync-security-awareness.php' ),
+				'template'       => 'pages/s-sync',
+			),
+			'generative_ai' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					'responsible-use-of-generative-ai-training',
+					'generative-ai-training',
+					'generative-ai',
+				),
+				'page_templates' => array( 'page-templates/responsible-use-of-generative-ai-training.php' ),
+				'template'       => 'pages/generative-ai',
+			),
 			'cybersecurity_awareness' => array(
 				'default_id'     => 0,
 				'slugs'          => array(
@@ -244,6 +314,61 @@ class Config {
 				'slugs'          => array( 'hipaa-annual-workforce-training' ),
 				'page_templates' => array( 'page-templates/hipaa-annual-workforce-training.php' ),
 				'template'       => 'pages/hipaa',
+			),
+			'soc2' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					'information-security-awareness-training-for-soc-2-compliance',
+					'soc-2',
+					'soc2',
+				),
+				'page_templates' => array( 'page-templates/information-security-awareness-training-for-soc-2-compliance.php' ),
+				'template'       => 'pages/soc2',
+			),
+			'iso27001' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					'iso-27001-2022-staff-awareness-training',
+					'iso-27001',
+					'iso27001',
+				),
+				'page_templates' => array( 'page-templates/iso-27001-2022-staff-awareness-training.php' ),
+				'template'       => 'pages/iso27001',
+			),
+			'isat' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					'information-security-awareness-training',
+					'isat',
+				),
+				'page_templates' => array( 'page-templates/information-security-awareness-training.php' ),
+				'template'       => 'pages/isat',
+			),
+			'ukce' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					'information-security-awareness-training-for-uk-cyber-essentials',
+					'uk-cyber-essentials',
+					'ukce',
+				),
+				'page_templates' => array( 'page-templates/information-security-awareness-training-for-uk-cyber-essentials.php' ),
+				'template'       => 'pages/ukce',
+			),
+			'bfsi' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					'security-awareness-training-bfsi-pe-vc',
+					'bfsi-pe-vc',
+					'bfsi',
+				),
+				'page_templates' => array( 'page-templates/security-awareness-training-bfsi-pe-vc.php' ),
+				'template'       => 'pages/bfsi',
+			),
+			'pci_dss' => array(
+				'default_id'     => 0,
+				'slugs'          => array( 'pci-dss', 'pci' ),
+				'page_templates' => array( 'page-templates/pci-dss.php' ),
+				'template'       => 'pages/pci-dss',
 			),
 			'financial_crime_prevention' => array(
 				'default_id'     => 0,

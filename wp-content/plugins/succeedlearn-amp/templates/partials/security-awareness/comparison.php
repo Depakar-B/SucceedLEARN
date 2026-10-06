@@ -32,7 +32,7 @@ if ( empty( $comparison_items ) || ! is_array( $comparison_items ) ) {
 
 			<h2 id="sl-sa-comparison-title">
 				<?php esc_html_e( 'Traditional Awareness vs', 'succeedlearn-amp' ); ?>
-				<span><?php esc_html_e( 'Continuous Behaviour Change', 'succeedlearn-amp' ); ?></span>
+				<span><?php esc_html_e( 'Effective Continuous Learning', 'succeedlearn-amp' ); ?></span>
 			</h2>
 		</div>
 

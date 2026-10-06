@@ -38,7 +38,7 @@ $hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/ABAC_Hero-sec
 			<div class="sl-anti-bribery-hero__content">
 
 				<span class="sl-home-sub-heading">
-					CPD-Certified Compliance eLearning
+					ABAC Compliance eLearning
 				</span>
 
 				<h1 id="sl-anti-bribery-hero-title">
@@ -53,22 +53,26 @@ $hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/ABAC_Hero-sec
 
 				</div>
 
-				<div class="sl-hero-actions">
+				<div class="sl-hero-actions sl-hero-actions--labelled">
 
-					<a
-						class="sl-hero-btn sl-hero-btn-primary"
-						href="#course-options"
-					>
-						Explore the course
-						<span aria-hidden="true">→</span>
-					</a>
+					<div class="sl-hero-cta-item">
+						<span class="sl-hero-cta-label">
+							<?php esc_html_e( 'Individual', 'akaza-adventure' ); ?>
+						</span>
+						<a class="sl-hero-btn sl-hero-btn-primary" href="#individuals">
+							<?php esc_html_e( 'Buy Now', 'akaza-adventure' ); ?>
+							<span aria-hidden="true">→</span>
+						</a>
+					</div>
 
-					<a
-						class="sl-hero-btn sl-hero-btn-secondary"
-						href="#contact"
-					>
-						Buy the course
-					</a>
+					<div class="sl-hero-cta-item">
+						<span class="sl-hero-cta-label">
+							<?php esc_html_e( 'Organisation', 'akaza-adventure' ); ?>
+						</span>
+						<a class="sl-hero-btn sl-hero-btn-secondary" href="#organisations">
+							<?php esc_html_e( 'Explore More', 'akaza-adventure' ); ?>
+						</a>
+					</div>
 
 				</div>
 

@@ -1,0 +1,23 @@
+/**
+ * ABAC page-level background rhythm (from the FCP suite to the contact section).
+ * Shared sections (suite, CPD, FAQ, contact) keep their defaults on other pages.
+ */
+
+body.slf-body #main-content.sl-course-page--anti-bribery-anti-corruption > #fcp-suite,
+body.slf-body #main-content.sl-course-page--anti-bribery-anti-corruption > #outcomes,
+body.slf-body #main-content.sl-course-page--anti-bribery-anti-corruption > #experience,
+body.slf-body #main-content.sl-course-page--anti-bribery-anti-corruption > #abac-delivery-options,
+body.slf-body #main-content.sl-course-page--anti-bribery-anti-corruption > #laws,
+body.slf-body #main-content.sl-course-page--anti-bribery-anti-corruption > #cpd,
+body.slf-body #main-content.sl-course-page--anti-bribery-anti-corruption > #contact {
+	background: #f5f5f5;
+}
+
+body.slf-body #main-content.sl-course-page--anti-bribery-anti-corruption > #overview,
+body.slf-body #main-content.sl-course-page--anti-bribery-anti-corruption > #topics,
+body.slf-body #main-content.sl-course-page--anti-bribery-anti-corruption > #abac-decision-journey,
+body.slf-body #main-content.sl-course-page--anti-bribery-anti-corruption > #abac-target-audience,
+body.slf-body #main-content.sl-course-page--anti-bribery-anti-corruption > #abac-compliance-library,
+body.slf-body #main-content.sl-course-page--anti-bribery-anti-corruption > #faqs {
+	background: #ffffff;
+}

@@ -68,4 +68,8 @@ function akaza_enqueue_failure_to_prevent_fraud_assets() {
 			array( 'akaza-sl-ftpf-global' )
 		);
 	}
+
+	// Individuals / Organisations sections + FCP course suite.
+	akaza_enqueue_theme_style( 'akaza-global-course-buy-options', 'sl-global-course-buy-options.css', array( 'akaza-sl-ftpf-global' ) );
+	akaza_enqueue_theme_style( 'akaza-global-fcp-suite', 'sl-global-fcp-suite.css', array( 'akaza-sl-ftpf-global' ) );
 }

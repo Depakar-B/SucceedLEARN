@@ -59,7 +59,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <article class="sl-abac-delivery-options__card">
 
                     <div class="sl-abac-delivery-options__mark">
-                        S
+                        01
                     </div>
 
                     <div class="sl-abac-delivery-options__card-content">
@@ -87,7 +87,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <article class="sl-abac-delivery-options__card">
 
                     <div class="sl-abac-delivery-options__mark">
-                        SC
+                        02
                     </div>
 
                     <div class="sl-abac-delivery-options__card-content">
@@ -115,7 +115,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <article class="sl-abac-delivery-options__card">
 
                     <div class="sl-abac-delivery-options__mark">
-                        C
+                        03
                     </div>
 
                     <div class="sl-abac-delivery-options__card-content">

@@ -12,7 +12,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $whatsapp_url = 'https://wa.me/916362021778';
-$phone_label  = '+91 63620 21778';
 ?>
 <section class="sl-section sl-section--alt" id="contact">
 	<div class="sl-wrap sl-contact-layout">
@@ -46,7 +45,7 @@ $phone_label  = '+91 63620 21778';
 						href="<?php echo esc_url( $whatsapp_url ); ?>"
 						target="_blank"
 						rel="noopener noreferrer"
-						aria-label="<?php echo esc_attr( sprintf( /* translators: %s: phone number */ __( 'Chat on WhatsApp at %s', 'succeedlearn-amp' ), $phone_label ) ); ?>"
+						aria-label="<?php esc_attr_e( 'Chat on WhatsApp', 'succeedlearn-amp' ); ?>"
 					>
 						<span class="sl-gwct-contact__whatsapp-icon" aria-hidden="true">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" focusable="false">
@@ -55,7 +54,6 @@ $phone_label  = '+91 63620 21778';
 						</span>
 						<span class="sl-gwct-contact__whatsapp-text">
 							<span class="sl-gwct-contact__whatsapp-label"><?php esc_html_e( 'WhatsApp us', 'succeedlearn-amp' ); ?></span>
-							<span class="sl-gwct-contact__whatsapp-number"><?php echo esc_html( $phone_label ); ?></span>
 						</span>
 					</a>
 				</div>

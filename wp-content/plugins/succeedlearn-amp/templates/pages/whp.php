@@ -1,6 +1,6 @@
 <?php
 /**
- * SucceedLEARN AMP — Workplace Harassment Prevention Training.
+ * SucceedLEARN AMP: Workplace Harassment Prevention Training.
  *
  * @package SucceedLEARN\AMP
  */
@@ -11,9 +11,38 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 require_once SUCCEEDLEARN_AMP_TEMPLATES_DIR . 'data/whp.php';
 
-$canonical  = succeedlearn_amp_get_whp_canonical_url();
-$page_title = succeedlearn_amp_get_whp_page_title();
-$meta_desc  = succeedlearn_amp_get_whp_meta_description();
+$canonical           = succeedlearn_amp_get_whp_canonical_url();
+$page_title          = succeedlearn_amp_get_whp_page_title();
+$meta_desc           = succeedlearn_amp_get_whp_meta_description();
+$images              = succeedlearn_amp_get_whp_images();
+$flags               = succeedlearn_amp_get_whp_flags();
+$region_examples     = succeedlearn_amp_get_whp_region_examples();
+$questions           = succeedlearn_amp_get_whp_questions();
+$regional_training   = succeedlearn_amp_get_whp_regional_training();
+$course_selection    = succeedlearn_amp_get_whp_course_selection();
+$audiences           = succeedlearn_amp_get_whp_audiences();
+$customisation_items = succeedlearn_amp_get_whp_customisation_items();
+$delivery_options    = succeedlearn_amp_get_whp_delivery_options();
+$reasons             = succeedlearn_amp_get_whp_reasons();
+$prevention_items    = succeedlearn_amp_get_whp_prevention_items();
+$faq_items           = succeedlearn_amp_get_whp_faq_items();
+
+$whp_partial_args = compact(
+	'canonical',
+	'page_title',
+	'images',
+	'flags',
+	'region_examples',
+	'questions',
+	'regional_training',
+	'course_selection',
+	'audiences',
+	'customisation_items',
+	'delivery_options',
+	'reasons',
+	'prevention_items',
+	'faq_items'
+);
 ?>
 <!doctype html>
 <html amp lang="<?php echo esc_attr( get_bloginfo( 'language' ) ); ?>">
@@ -47,8 +76,19 @@ $meta_desc  = succeedlearn_amp_get_whp_meta_description();
 <main id="main-content">
 	<?php
 	// Section order mirrors theme: template-parts/workplace-harassment-prevention-training.php
-	succeedlearn_amp_whp_partial( 'hero' );
-	succeedlearn_amp_whp_partial( 'regions' );
+	succeedlearn_amp_whp_partial( 'hero', $whp_partial_args );
+	succeedlearn_amp_whp_partial( 'region-specific', $whp_partial_args );
+	succeedlearn_amp_whp_partial( 'training', $whp_partial_args );
+	succeedlearn_amp_whp_partial( 'regional-training', $whp_partial_args );
+	succeedlearn_amp_whp_partial( 'course-selection', $whp_partial_args );
+	succeedlearn_amp_whp_partial( 'recognition', $whp_partial_args );
+	succeedlearn_amp_whp_partial( 'learning', $whp_partial_args );
+	succeedlearn_amp_whp_partial( 'policy-learning', $whp_partial_args );
+	succeedlearn_amp_whp_partial( 'delivery', $whp_partial_args );
+	succeedlearn_amp_whp_partial( 'why', $whp_partial_args );
+	succeedlearn_amp_whp_partial( 'prevention', $whp_partial_args );
+	succeedlearn_amp_whp_partial( 'faq', $whp_partial_args );
+	succeedlearn_amp_whp_partial( 'contact', $whp_partial_args );
 	?>
 </main>
 

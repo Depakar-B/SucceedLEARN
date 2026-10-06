@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<section class="sl-section sl-section--alt">
+<section class="sl-section">
 	<div class="sl-wrap">
 		<span class="sl-eyebrow"><?php esc_html_e( 'Why SucceedLEARN', 'succeedlearn-amp' ); ?></span>
 		<h2 class="sl-h2">
@@ -26,6 +26,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="sl-gwct-why-grid">
 			<?php foreach ( $why_choose_cards as $card ) : ?>
 				<article class="sl-gwct-why-card">
+					<?php
+					if ( ! empty( $card['icon'] ) ) {
+						succeedlearn_amp_gwct_render_icon( $card['icon'], 'sl-gwct-why-card__icon' );
+					}
+					?>
 					<h3><?php echo esc_html( $card['title'] ); ?></h3>
 					<p><?php echo esc_html( $card['text'] ); ?></p>
 				</article>

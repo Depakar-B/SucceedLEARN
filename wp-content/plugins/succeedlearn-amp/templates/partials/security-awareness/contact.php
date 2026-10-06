@@ -20,7 +20,6 @@ if ( empty( $canonical ) ) {
 }
 
 $whatsapp_url = 'https://wa.me/918660448654';
-$phone_label  = '+91 86604 48654';
 ?>
 <section class="sl-section" id="contact">
 	<div class="sl-wrap sl-contact-layout">
@@ -42,7 +41,7 @@ $phone_label  = '+91 86604 48654';
 					href="<?php echo esc_url( $whatsapp_url ); ?>"
 					target="_blank"
 					rel="noopener noreferrer"
-					aria-label="<?php echo esc_attr( sprintf( /* translators: %s: phone number */ __( 'Chat on WhatsApp at %s', 'succeedlearn-amp' ), $phone_label ) ); ?>"
+					aria-label="<?php esc_attr_e( 'Chat on WhatsApp', 'succeedlearn-amp' ); ?>"
 				>
 					<span class="sl-sa-contact__whatsapp-icon" aria-hidden="true">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" focusable="false">

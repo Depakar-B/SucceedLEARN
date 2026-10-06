@@ -155,9 +155,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                             <div class="sl-abac-scenario-showcase__image">
                                 <img
-                                    src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/abac-scenario-business-trip.webp' ); ?>"
+                                    src="https://succeedlearn.com/wp-content/uploads/2026/10/Course-image-1_ABAC.webp"
                                     alt="<?php esc_attr_e(
-                                        'Janet beginning a business trip in the ABAC eLearning scenario',
+                                        'ABAC eLearning scenario showing a briefcase of cash and handcuffs outside an office building',
                                         'akaza-adventure'
                                     ); ?>"
                                     loading="lazy"
@@ -195,9 +195,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                             <div class="sl-abac-scenario-showcase__image">
                                 <img
-                                    src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/abac-scenario-gifts-decision.webp' ); ?>"
+                                    src="https://succeedlearn.com/wp-content/uploads/2026/10/Course-image-2_ABAC.webp"
                                     alt="<?php esc_attr_e(
-                                        'Interactive gifts and hospitality decision in the anti-bribery course',
+                                        'Anti-bribery law applying to every level of an organisation in the ABAC course',
                                         'akaza-adventure'
                                     ); ?>"
                                     loading="lazy"
@@ -235,9 +235,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                             <div class="sl-abac-scenario-showcase__image">
                                 <img
-                                    src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/abac-scenario-laws-map.webp' ); ?>"
+                                    src="https://succeedlearn.com/wp-content/uploads/2026/10/Course-image-3_ABAC.webp"
                                     alt="<?php esc_attr_e(
-                                        'Interactive map introducing global anti-bribery laws in the course',
+                                        'ABAC eLearning scenario with employees being offered a car as a business gift',
                                         'akaza-adventure'
                                     ); ?>"
                                     loading="lazy"

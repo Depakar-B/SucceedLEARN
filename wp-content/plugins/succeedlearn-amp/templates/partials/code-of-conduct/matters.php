@@ -4,8 +4,8 @@
  *
  * Content order:
  * 1. Introduction
- * 2. Image
- * 3. Scenario list
+ * 2. Scenario list
+ * 3. Image
  * 4. Highlighted message
  *
  * @package SucceedLEARN\AMP
@@ -66,19 +66,6 @@ $coc_matters_highlight = ! empty( $coc_matters['highlight'] )
 
 		<div class="sl-code-conduct-matters__layout">
 
-			<!-- Image -->
-			<?php if ( ! empty( $coc_matters_image['url'] ) ) : ?>
-				<figure class="sl-code-conduct-matters__media">
-					<amp-img
-						src="<?php echo esc_url( $coc_matters_image['url'] ); ?>"
-						alt="<?php echo esc_attr( $coc_matters_image['alt'] ); ?>"
-						width="<?php echo esc_attr( $coc_matters_image['width'] ); ?>"
-						height="<?php echo esc_attr( $coc_matters_image['height'] ); ?>"
-						layout="responsive"
-					></amp-img>
-				</figure>
-			<?php endif; ?>
-
 			<!-- Scenario list -->
 			<div class="sl-code-conduct-matters__content">
 				<p class="sl-code-conduct-matters__intro">
@@ -113,6 +100,17 @@ $coc_matters_highlight = ! empty( $coc_matters['highlight'] )
 					</ul>
 				<?php endif; ?>
 			</div>
+
+			<!-- Image last -->
+			<?php if ( ! empty( $coc_matters_image['url'] ) ) : ?>
+				<figure class="sl-code-conduct-matters__media">
+					<amp-img
+						src="<?php echo esc_url( $coc_matters_image['url'] ); ?>"
+						alt="<?php echo esc_attr( $coc_matters_image['alt'] ); ?>"
+						layout="fill"
+					></amp-img>
+				</figure>
+			<?php endif; ?>
 
 		</div>
 

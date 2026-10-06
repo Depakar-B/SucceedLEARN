@@ -1,0 +1,10 @@
+<?php
+/** DPDPA AMP - Final CTA / demo form. @package SucceedLEARN\AMP */
+if ( ! defined( 'ABSPATH' ) ) { exit; }
+if ( empty( $page_title ) ) { $page_title = __( 'DPDPA Compliance Training', 'succeedlearn-amp' ); }
+if ( empty( $canonical ) ) { $canonical = home_url( '/dpdpa-compliance-training/' ); }
+?>
+<section class="sl-section sl-dpdpa-final-cta" id="book" aria-labelledby="sl-dpdpa-final-title"><div class="sl-wrap"><div class="sl-dpdpa-final-cta__grid">
+<div><h2 id="sl-dpdpa-final-title" class="sl-h2"><?php esc_html_e( 'Give every employee the right reflex in ', 'succeedlearn-amp' ); ?><span><?php esc_html_e( '25 minutes', 'succeedlearn-amp' ); ?></span></h2><ul class="sl-list sl-dpdpa-final-cta__list"><li class="sl-list-item"><span>✓</span><span><?php esc_html_e( 'A 20-minute walkthrough, no preparation needed', 'succeedlearn-amp' ); ?></span></li><li class="sl-list-item"><span>✓</span><span><?php esc_html_e( 'See the course, the reports and the certificate', 'succeedlearn-amp' ); ?></span></li><li class="sl-list-item"><span>✓</span><span><?php esc_html_e( 'Hosted LMS or SCORM, your choice', 'succeedlearn-amp' ); ?></span></li><li class="sl-list-item"><span>✓</span><span><?php esc_html_e( 'Up to 10 minutes of free course customisation for the first 25 customers', 'succeedlearn-amp' ); ?></span></li></ul><p class="sl-dpdpa-final-cta__email"><?php esc_html_e( 'Prefer email? Write to ', 'succeedlearn-amp' ); ?><a href="mailto:sales@succeedtech.com">sales@succeedtech.com</a></p></div>
+<div class="sl-contact-form-card sl-dpdpa-final-cta__form"><?php if ( function_exists( 'succeedlearn_amp_render_contact_form' ) ) { succeedlearn_amp_render_contact_form( array( 'form_page'=>$page_title, 'form_page_url'=>$canonical, 'form_variant'=>'course', 'title'=>__( 'Book my 20-min demo', 'succeedlearn-amp' ), 'echo'=>true ) ); } else { echo do_shortcode( '[contact_form form_variant="course" title="Book my 20-min demo"]' ); /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */ } ?></div>
+</div></div></section>

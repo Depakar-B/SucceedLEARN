@@ -75,9 +75,7 @@ $coc_customization_image = $coc_customization['image'];
 				<amp-img
 					src="<?php echo esc_url( $coc_customization_image['url'] ); ?>"
 					alt="<?php echo esc_attr( $coc_customization_image['alt'] ); ?>"
-					width="<?php echo esc_attr( (string) $coc_customization_image['width'] ); ?>"
-					height="<?php echo esc_attr( (string) $coc_customization_image['height'] ); ?>"
-					layout="responsive"
+					layout="fill"
 				></amp-img>
 			</div>
 
