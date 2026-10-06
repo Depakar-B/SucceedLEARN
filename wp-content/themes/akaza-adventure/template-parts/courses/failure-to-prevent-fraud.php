@@ -48,6 +48,7 @@ $sections = array(
 					array(
 						'course'  => __( 'Fraud Prevention', 'akaza-adventure' ),
 						'contact' => '#request-demo',
+						'price'   => '$18',
 					)
 				);
 				get_template_part(

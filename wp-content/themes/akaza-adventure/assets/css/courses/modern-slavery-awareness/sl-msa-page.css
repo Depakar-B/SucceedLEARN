@@ -176,6 +176,7 @@ body.slf-body #main-content .msa-page .sl-home-sub-heading {
 	min-height: 52px;
 	align-items: center;
 	justify-content: center;
+	gap: 8px;
 	padding: 14px 25px;
 	border: 2px solid transparent;
 	border-radius: 8px;
