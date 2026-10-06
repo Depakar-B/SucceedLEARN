@@ -1,0 +1,208 @@
+/**
+ * Global FCP course suite (template-parts/global/fcp-course-suite.php).
+ * Mirrors the FCP home "Explore Our eLearning Compliance Courses" section.
+ */
+
+.sl-fcp-course-suite {
+	padding: 90px 0;
+	background: #ffffff;
+	font-family: "Space Grotesk", Arial, sans-serif;
+}
+
+.sl-fcp-course-suite__header {
+	margin-bottom: 45px;
+}
+
+.sl-fcp-course-suite .sl-fcp-course-suite__header h2 {
+	max-width: none;
+	margin: 0 0 18px;
+	color: #16234d;
+	font-family: "Space Grotesk", Arial, sans-serif;
+	font-size: clamp(32px, 3.5vw, 48px);
+	font-weight: 700;
+	line-height: 1.12;
+	letter-spacing: -0.025em;
+}
+
+.sl-fcp-course-suite .sl-fcp-course-suite__lead {
+	max-width: none;
+	margin: 0;
+	color: #000000;
+	font-size: 17.6px;
+	line-height: 1.65;
+}
+
+.sl-fcp-course-suite__price {
+	margin-top: 32px;
+	text-align: center;
+}
+
+.sl-fcp-course-suite .sl-fcp-course-suite__cta,
+.sl-fcp-course-suite .sl-fcp-course-suite__cta:visited {
+	display: inline-block;
+	padding: 16px 34px;
+	border: 2px solid #ea3f23;
+	border-radius: 8px;
+	background: #ea3f23;
+	color: #ffffff;
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.4;
+	text-align: center;
+	text-decoration: none;
+	transition:
+		transform 0.2s ease,
+		background-color 0.2s ease,
+		border-color 0.2s ease;
+}
+
+.sl-fcp-course-suite .sl-fcp-course-suite__cta:hover,
+.sl-fcp-course-suite .sl-fcp-course-suite__cta:focus-visible {
+	transform: translateY(-2px);
+	border-color: #c9361e;
+	background: #c9361e;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.sl-fcp-course-suite__price-amount {
+	padding: 0 0.12em;
+	font-size: 1.2em;
+	font-weight: 800;
+}
+
+.sl-fcp-course-suite__grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 24px;
+}
+
+.sl-fcp-course-suite__card {
+	position: relative;
+	min-height: 280px;
+	padding: 30px;
+	border: 1px solid #e0e5ed;
+	border-radius: 16px;
+	background: #ffffff;
+	box-shadow: 0 14px 36px rgba(22, 35, 77, 0.08);
+	box-sizing: border-box;
+	transition:
+		transform 0.25s ease,
+		box-shadow 0.25s ease,
+		border-color 0.25s ease;
+}
+
+.sl-fcp-course-suite__card:hover {
+	transform: translateY(-9px);
+	border-color: #b8cce6;
+	box-shadow: 0 24px 54px rgba(22, 35, 77, 0.16);
+}
+
+.sl-fcp-course-suite__card.is-current,
+.sl-fcp-course-suite__card.is-current:hover {
+	border: 2px solid #ea3f23;
+	background: #fff9f7;
+}
+
+.sl-fcp-course-suite__card.is-current .sl-fcp-course-suite__number {
+	display: inline-grid;
+	place-items: center;
+	width: 39px;
+	height: 39px;
+	margin: -10px 0;
+	border-radius: 10px;
+	background: #ea3f23;
+	color: #ffffff;
+}
+
+.sl-fcp-course-suite__card-top {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+	margin-bottom: 16px;
+}
+
+.sl-fcp-course-suite__number {
+	color: #135db7;
+	font-size: 12.5px;
+	font-weight: 700;
+}
+
+.sl-fcp-course-suite .sl-fcp-course-suite__card h3 {
+	margin: 0 0 10px;
+	color: #16234d;
+	font-family: "Space Grotesk", Arial, sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 1.3;
+	letter-spacing: 0;
+}
+
+.sl-fcp-course-suite .sl-fcp-course-suite__card p {
+	margin: 0 0 56px;
+	color: #000000;
+	font-size: 16px;
+	line-height: 1.65;
+}
+
+.sl-fcp-course-suite .sl-fcp-course-suite__link {
+	position: absolute;
+	bottom: 28px;
+	left: 30px;
+	color: #ea3f23;
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.sl-fcp-course-suite .sl-fcp-course-suite__link:hover {
+	color: #ea3f23;
+	text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+	.sl-fcp-course-suite__grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 680px) {
+	.sl-fcp-course-suite {
+		padding: 60px 0;
+	}
+
+	.sl-fcp-course-suite__card {
+		min-height: auto;
+	}
+
+	.sl-fcp-course-suite .sl-fcp-course-suite__card p {
+		margin-bottom: 20px;
+	}
+
+	.sl-fcp-course-suite .sl-fcp-course-suite__link {
+		position: static;
+		display: inline-block;
+	}
+
+	.sl-fcp-course-suite__price {
+		margin-top: 24px;
+	}
+
+	.sl-fcp-course-suite .sl-fcp-course-suite__cta {
+		width: 100%;
+		padding: 14px 20px;
+		font-size: 17px;
+		box-sizing: border-box;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.sl-fcp-course-suite__card,
+	.sl-fcp-course-suite__card:hover {
+		transform: none;
+	}
+}

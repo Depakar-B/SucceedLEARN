@@ -79,9 +79,7 @@ $coc_industries_image = $coc_industries['image'];
 					<amp-img
 						src="<?php echo esc_url( $coc_industries_image['url'] ); ?>"
 						alt="<?php echo esc_attr( $coc_industries_image['alt'] ); ?>"
-						width="<?php echo esc_attr( (string) $coc_industries_image['width'] ); ?>"
-						height="<?php echo esc_attr( (string) $coc_industries_image['height'] ); ?>"
-						layout="responsive"
+						layout="fill"
 					></amp-img>
 				<?php else : ?>
 					<div

@@ -53,6 +53,10 @@ function akaza_enqueue_tax_evasion_assets() {
 		);
 	}
 
+	// Individuals / Organisations sections + FCP course suite.
+	akaza_enqueue_theme_style( 'akaza-global-course-buy-options', 'sl-global-course-buy-options.css', $deps );
+	akaza_enqueue_theme_style( 'akaza-global-fcp-suite', 'sl-global-fcp-suite.css', $deps );
+
 	// Global FAQ accordion (CSS + JS). Registered in enqueue-core.php.
 	wp_enqueue_style( 'akaza-global-faq' );
 	wp_enqueue_script( 'akaza-global-faq' );

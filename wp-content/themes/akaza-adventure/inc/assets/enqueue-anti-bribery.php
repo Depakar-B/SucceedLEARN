@@ -27,18 +27,15 @@ function akaza_enqueue_anti_bribery_assets() {
 
 	$sections = array(
 		'sl-anti-bribery-hero',
-		'sl-anti-bribery-page-nav',
 		'sl-anti-bribery-overview',
 		'sl-anti-bribery-learning-outcomes',
 		'sl-anti-bribery-topics',
-		'sl-anti-bribery-jurisdictions',
 		'sl-anti-bribery-decision-journey',
 		'sl-abac-scenario-showcase',
 		'sl-abac-delivery-options',
 		'sl-abac-target-audience',
 		'sl-abac-laws-covered',
 		'sl-abac-compliance-library',
-		'sl-abac-why-choose',
 	);
 
 	foreach ( $sections as $section ) {
@@ -49,10 +46,6 @@ function akaza_enqueue_anti_bribery_assets() {
 		);
 	}
 
-	akaza_enqueue_theme_script(
-		'akaza-sl-anti-bribery-page-nav',
-		'courses/anti-bribery-anti-corruption/sl-anti-bribery-page-nav.js'
-	);
 	akaza_enqueue_theme_script(
 		'akaza-sl-abac-scenario-showcase',
 		'courses/anti-bribery-anti-corruption/sl-abac-scenario-showcase.js'
@@ -68,6 +61,11 @@ function akaza_enqueue_anti_bribery_assets() {
 		'sl-global-sub-heading.css',
 		array( 'akaza-main', 'akaza-global-title-accent' )
 	);
+
+	// Individuals / Organisations sections + FCP course suite.
+	akaza_enqueue_theme_style( 'akaza-global-course-buy-options', 'sl-global-course-buy-options.css', array( 'akaza-course-global' ) );
+	akaza_enqueue_theme_style( 'akaza-global-fcp-suite', 'sl-global-fcp-suite.css', array( 'akaza-course-global' ) );
+	akaza_enqueue_theme_style( 'akaza-fcp-sl-fcp-cpd', 'financial-crime-prevention/fcp-sl-fcp-cpd.css', array( 'akaza-course-global' ) );
 
 	// Global FAQ component (registered in enqueue-core.php).
 	wp_enqueue_style( 'akaza-global-faq' );
@@ -86,5 +84,12 @@ function akaza_enqueue_anti_bribery_assets() {
 		'akaza-sl-abac-contact',
 		"{$folder}/sl-abac-contact.css",
 		array( 'akaza-course-global', 'akaza-global-contact', 'akaza-contact-form' )
+	);
+
+	// Page-level background rhythm; loads after every section stylesheet.
+	akaza_enqueue_theme_style(
+		'akaza-sl-anti-bribery-page',
+		"{$folder}/sl-anti-bribery-page.css",
+		array( 'akaza-sl-abac-contact', 'akaza-sl-abac-faq', 'akaza-global-fcp-suite', 'akaza-fcp-sl-fcp-cpd' )
 	);
 }

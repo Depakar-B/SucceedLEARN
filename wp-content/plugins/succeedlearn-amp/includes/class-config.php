@@ -230,6 +230,24 @@ class Config {
 				'page_templates' => array( 'page-templates/s-play-gamified-training.php' ),
 				'template'       => 'pages/s-play',
 			),
+			's_aware' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					's-aware',
+					'security-awareness/s-aware',
+				),
+				'page_templates' => array( 'page-templates/s-aware.php' ),
+				'template'       => 'pages/s-aware',
+			),
+			's_phish' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					's-phish',
+					'security-awareness/s-phish',
+				),
+				'page_templates' => array( 'page-templates/s-phish.php' ),
+				'template'       => 'pages/s-phish',
+			),
 			's_signs' => array(
 				'default_id'     => 0,
 				'slugs'          => array(

@@ -35,7 +35,7 @@ $meta_desc  = succeedlearn_amp_get_coc_meta_description();
 	succeedlearn_amp_output_page_styles(
 		'code_of_conduct',
 		array( 'home-page' ),
-		array( 'home-sections', 'contact-form', 'code-of-conduct' )
+		array( 'home-sections', 'contact-form', 'breadcrumbs', 'code-of-conduct' )
 	);
 	?>
 	</style>
@@ -76,7 +76,6 @@ $meta_desc  = succeedlearn_amp_get_coc_meta_description();
 	succeedlearn_amp_coc_partial( 'one-programme' );
 	succeedlearn_amp_coc_partial( 'industries' );
 	succeedlearn_amp_coc_partial( 'differentiation' );
-	succeedlearn_amp_coc_partial( 'stats' );
 	succeedlearn_amp_coc_partial( 'customer-story' );
 	succeedlearn_amp_coc_partial( 'faq' );
 	succeedlearn_amp_coc_partial( 'contact' );

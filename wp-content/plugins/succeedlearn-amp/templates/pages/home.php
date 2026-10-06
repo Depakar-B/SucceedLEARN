@@ -144,10 +144,10 @@ $contact_img = succeedlearn_amp_upload_url( '2026/08/Outcomes-you-achieve.webp' 
 		<div class="sl-wrap sl-grid-4 sl-stats">
 			<?php
 			$stats = array(
-				array( '1000+', 'Organisations Trained' ),
+				array( '900+', 'Organisations Trained' ),
 				array( '90%+', 'Learner Engagement' ),
-				array( '70%', 'Reduction in Phishing Risk' ),
-				array( '90%', 'Compliance Risk Reduced' ),
+				array( '200000+', 'Users' ),
+				array( '15+', 'Years Compliance Expertise' ),
 			);
 			foreach ( $stats as $stat ) :
 				?>
@@ -161,7 +161,7 @@ $contact_img = succeedlearn_amp_upload_url( '2026/08/Outcomes-you-achieve.webp' 
 
 	<section class="sl-section sl-clients">
 		<div class="sl-wrap" style="text-align:center">
-			<h2 class="sl-h2 sl-clients__title"><?php echo wp_kses_post( __( 'Trusted by Leading <span>700+</span> Organisations', 'succeedlearn-amp' ) ); ?></h2>
+			<h2 class="sl-h2 sl-clients__title"><?php echo wp_kses_post( __( 'Trusted by Leading <span>900+</span> Organisations', 'succeedlearn-amp' ) ); ?></h2>
 			<p class="sl-lead"><?php esc_html_e( 'Building safer, compliant, and resilient workplaces worldwide.', 'succeedlearn-amp' ); ?></p>
 			<?php include SUCCEEDLEARN_AMP_TEMPLATES_DIR . 'partials/clients-logos.php'; ?>
 		</div>

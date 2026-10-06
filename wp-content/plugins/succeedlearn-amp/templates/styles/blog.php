@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 .sl-blog__sort-link,.sl-blog__reset{display:inline-block;padding:7px 11px;border-radius:999px;border:1px solid rgba(22,35,77,.14);background:#fff;color:#16234d;text-decoration:none;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit}
 .sl-blog__sort-link.is-active{border-color:#135db7;color:#135db7;background:rgba(19,93,183,.08)}
 .sl-blog__reset{margin-left:auto}
-.sl-blog__pills{display:flex;flex-wrap:nowrap;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:0 0 4px;margin:0 0 14px}
+.sl-blog__pills{display:flex;flex-wrap:wrap;gap:8px;padding:0 0 4px;margin:0 0 14px}
 .sl-blog-pill{flex-shrink:0;padding:8px 14px;border-radius:999px;border:1px solid rgba(22,35,77,.15);background:#fff;color:#16234d;font-size:14px;font-weight:500;text-decoration:none;display:inline-block;cursor:pointer;font-family:inherit}
 .sl-blog-pill.is-active{border-color:#135db7;color:#135db7;background:rgba(19,93,183,.08);font-weight:600}
 .sl-blog__grid{display:grid;grid-template-columns:1fr;gap:16px}

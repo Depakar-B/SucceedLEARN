@@ -833,43 +833,29 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin-bottom: 30px;
 }
 
-.sl-infosec-challenge__eyebrow {
-	display: inline-flex;
-	align-items: center;
-	gap: 12px;
-}
-
 .sl-infosec-challenge__heading {
 	width: 100%;
-	margin: 0 0 14px;
+	margin: 0 0 12px;
+}
+
+.sl-infosec-challenge__heading span {
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-infosec-challenge__subtitle {
+	width: 100%;
+	margin: 0 0 12px;
+	color: var(--sl-page-navy, #16234e);
 }
 
 .sl-infosec-challenge__intro-text {
 	width: 100%;
-	margin: 0 0 10px;
-}
-
-.sl-infosec-challenge__intro-highlight {
-	width: 100%;
 	margin: 0 0 22px;
-	color: var(--sl-page-text, #4a4a4a);
-	line-height: 1.65;
-}
-
-.sl-infosec-challenge__intro-highlight strong {
-	color: var(--sl-page-navy, #16234e);
-	font-weight: 700;
-}
-
-.sl-infosec-challenge__intro-criteria-lead {
-	width: 100%;
-	margin: 0 0 20px;
-	color: var(--sl-page-navy, #16234e);
 }
 
 
 /* =========================================
-   QUALIFICATION CRITERIA
+   SCORE CRITERIA
    Mobile: Card 1 / OR / Card 2 stacked
    Tablet+: Card 1 | OR | Card 2 aligned
 ========================================= */
@@ -897,18 +883,36 @@ if ( ! defined( 'ABSPATH' ) ) {
 	box-sizing: border-box;
 }
 
-.sl-infosec-challenge__number {
+.sl-infosec-challenge__criteria-item--improve {
+	border-color: rgba(234, 62, 36, 0.2);
+}
+
+.sl-infosec-challenge__score-icon {
 	display: inline-flex;
-	flex: 0 0 34px;
+	flex: 0 0 36px;
 	align-items: center;
 	justify-content: center;
-	width: 34px;
-	height: 34px;
+	width: 36px;
+	height: 36px;
 	border-radius: 50%;
 	background: var(--sl-page-primary, #1472ba);
 	color: var(--sl-page-white, #ffffff);
-	font-weight: 700;
-	font-variant-numeric: tabular-nums;
+}
+
+.sl-infosec-challenge__criteria-item--improve .sl-infosec-challenge__score-icon {
+	background: #ea3e24;
+}
+
+.sl-infosec-challenge__score-icon svg,
+.sl-infosec-challenge__list-icon svg {
+	display: block;
+	width: 18px;
+	height: 18px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 2.2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
 }
 
 .sl-infosec-challenge__criteria-copy {
@@ -917,12 +921,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	flex-direction: column;
 	gap: 2px;
 	min-width: 0;
-	color: var(--sl-page-text, #4a4a4a);
+	color: var(--sl-page-muted, #6b7c93);
 }
 
 .sl-infosec-challenge__criteria-copy strong {
 	color: var(--sl-page-navy, #16234e);
+	font-size: 20px;
 	font-weight: 700;
+	line-height: 1.2;
 }
 
 .sl-infosec-challenge__criteria-divider {
@@ -952,6 +958,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* =========================================
    RESULT PATHS
+   Blue = 80+ / CTA orange = below 80
 ========================================= */
 
 .sl-infosec-challenge__paths {
@@ -974,262 +981,170 @@ if ( ! defined( 'ABSPATH' ) ) {
 	box-sizing: border-box;
 }
 
-.sl-infosec-challenge__card--awareness {
-	border-top-color: var(--sl-page-primary-dark, #283384);
+.sl-infosec-challenge__card--improve {
+	border-top-color: #ea3e24;
 }
 
-
-/* =========================================
-   RESULT CARD HEADER
-========================================= */
-
-.sl-infosec-challenge__card-header {
-	display: flex;
-	align-items: flex-start;
-	gap: 12px;
-	margin-bottom: 20px;
-}
-
-.sl-infosec-challenge__icon {
-	display: inline-flex;
-	flex: 0 0 40px;
-	align-items: center;
-	justify-content: center;
-	width: 40px;
-	height: 40px;
-	border-radius: 10px;
-	background: var(--sl-page-primary-soft);
+.sl-infosec-challenge__score-pill {
+	align-self: flex-start;
+	margin-bottom: 14px;
+	padding: 6px 12px;
+	border-radius: 999px;
+	background: rgba(20, 114, 186, 0.1);
 	color: var(--sl-page-primary, #1472ba);
-}
-
-.sl-infosec-challenge__card--awareness
-	.sl-infosec-challenge__icon {
-	color: var(--sl-page-primary-dark, #283384);
-}
-
-.sl-infosec-challenge__icon svg,
-.sl-infosec-challenge__mini-icon svg,
-.sl-infosec-challenge__benefit-icon svg {
-	display: block;
-	width: 100%;
-	height: 100%;
-	fill: none;
-	stroke: currentColor;
-	stroke-width: 1.7;
-	stroke-linecap: round;
-	stroke-linejoin: round;
-}
-
-.sl-infosec-challenge__icon svg {
-	width: 23px;
-	height: 23px;
-}
-
-.sl-infosec-challenge__card-heading {
-	flex: 1 1 auto;
-	min-width: 0;
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 1.3;
 }
 
 .sl-infosec-challenge__card-label {
 	display: block;
-	margin-bottom: 6px;
+	margin-bottom: 8px;
 	color: var(--sl-page-primary, #1472ba);
 	font-size: 13px;
 	font-weight: 700;
-	letter-spacing: 0.04em;
+	letter-spacing: 0.06em;
 	text-transform: uppercase;
 }
 
-.sl-infosec-challenge__card--awareness
-	.sl-infosec-challenge__card-label {
-	color: var(--sl-page-primary-dark, #283384);
+.sl-infosec-challenge__card--improve .sl-infosec-challenge__score-pill {
+	background: rgba(234, 62, 36, 0.1);
+	color: #ea3e24;
+}
+
+.sl-infosec-challenge__card--improve .sl-infosec-challenge__card-label,
+.sl-infosec-challenge__card--improve .sl-infosec-challenge__closing span {
+	color: #ea3e24;
 }
 
 .sl-infosec-challenge__card-title {
-	margin: 0;
+	margin: 0 0 10px;
 	color: var(--sl-page-navy, #16234e);
 	font-size: 20px;
 	font-weight: 700;
 	line-height: 1.4;
 }
 
-
-/* =========================================
-   AWARENESS INTRO
-========================================= */
-
-.sl-infosec-challenge__awareness-intro {
-	width: 100%;
-	margin-bottom: 26px;
-}
-
-.sl-infosec-challenge__awareness-intro p {
-	margin: 0 0 10px;
+.sl-infosec-challenge__card-intro {
+	margin: 0 0 20px;
 	color: var(--sl-page-text, #4a4a4a);
 	line-height: 1.65;
 }
 
-.sl-infosec-challenge__awareness-intro p:last-child {
-	margin-bottom: 0;
-}
-
-.sl-infosec-challenge__awareness-intro strong {
-	color: var(--sl-page-primary, #1472ba);
-}
-
 
 /* =========================================
-   BENEFIT HEADING
+   REWARD CHECKLIST
 ========================================= */
 
-.sl-infosec-challenge__subheading {
-	display: flex;
-	align-items: center;
-	gap: 9px;
-	width: 100%;
-	margin-bottom: 14px;
+.sl-infosec-challenge__reward {
+	flex: 1 1 auto;
+	padding: 16px;
+	border: 1px solid rgba(107, 124, 147, 0.18);
+	border-radius: 10px;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-infosec-challenge__reward-title {
+	margin: 0 0 14px;
+	padding-bottom: 12px;
+	border-bottom: 1px solid rgba(107, 124, 147, 0.18);
 	color: var(--sl-page-navy, #16234e);
+	font-size: 17px;
 	font-weight: 700;
+	line-height: 1.4;
 }
 
-.sl-infosec-challenge__mini-icon {
-	display: inline-flex;
-	flex: 0 0 20px;
-	width: 20px;
-	height: 20px;
-	color: var(--sl-page-primary, #1472ba);
-}
-
-
-/* =========================================
-   BENEFIT LIST
-   Row chrome comes from global-ui.php
-========================================= */
-
-/* =========================================
-   BENEFITS
-   Mobile: 1 card / Tablet+: 2 cards per row
-   Row chrome comes from global-ui.php
-========================================= */
-
-.sl-infosec-challenge__benefits,
-.sl-infosec-challenge__benefits.sl-list {
-	display: grid;
-	grid-template-columns: minmax(0, 1fr);
+.sl-infosec-challenge__list {
+	display: flex;
+	flex-direction: column;
 	gap: 12px;
-	width: 100%;
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
 
-.sl-infosec-challenge__benefit {
-	display: block;
-	width: 100%;
-	min-width: 0;
-	min-height: 0;
+.sl-infosec-challenge__list li {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
 	margin: 0;
-	padding: 16px;
-	box-sizing: border-box;
 }
 
-.sl-infosec-challenge__benefit-icon {
-	display: inline-block;
-	width: 34px;
-	height: 34px;
-	margin: 0 0 10px;
+.sl-infosec-challenge__list-icon {
+	display: inline-flex;
+	flex: 0 0 24px;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
 	border-radius: 50%;
-	background: var(--sl-page-primary-soft);
+	background: rgba(20, 114, 186, 0.12);
 	color: var(--sl-page-primary, #1472ba);
-	line-height: 34px;
-	text-align: center;
-	vertical-align: top;
 }
 
-.sl-infosec-challenge__benefit-icon svg {
-	display: inline-block;
-	width: 18px;
-	height: 18px;
-	margin-top: 8px;
-	fill: none;
-	stroke: currentColor;
-	stroke-width: 1.7;
-	stroke-linecap: round;
-	stroke-linejoin: round;
-	vertical-align: top;
+.sl-infosec-challenge__list-icon svg {
+	width: 14px;
+	height: 14px;
 }
 
-.sl-infosec-challenge__benefit-copy {
-	display: block;
-	width: 100%;
-	min-width: 0;
+.sl-infosec-challenge__card--improve .sl-infosec-challenge__list-icon {
+	background: rgba(234, 62, 36, 0.1);
+	color: #ea3e24;
 }
 
-.sl-infosec-challenge__benefit-title {
-	display: block;
-	width: 100%;
-	margin: 0 0 5px;
+.sl-infosec-challenge__list-text {
 	color: var(--sl-page-navy, #16234e);
-	font-weight: 700;
-	line-height: 1.45;
+	font-weight: 600;
+	line-height: 1.5;
 }
 
 .sl-infosec-challenge__complimentary {
-	display: block;
-	width: 100%;
-	margin: 0 0 5px;
-	color: var(--sl-page-primary, #1472ba);
-	font-size: 13px;
+	display: inline-block;
+	margin-left: 6px;
+	padding: 2px 8px;
+	border-radius: 999px;
+	background: rgba(234, 62, 36, 0.1);
+	color: #ea3e24;
+	font-size: 12px;
 	font-weight: 700;
-	line-height: 1.4;
+	line-height: 1.5;
+	vertical-align: middle;
 }
 
-.sl-infosec-challenge__benefit-text {
+
+/* =========================================
+   CLOSING + OUTRO
+========================================= */
+
+.sl-infosec-challenge__closing {
+	margin: 20px 0 0;
+	color: var(--sl-page-navy, #16234e);
+	font-weight: 700;
+	line-height: 1.55;
+}
+
+.sl-infosec-challenge__closing span {
 	display: block;
-	width: 100%;
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-infosec-challenge__outro {
+	margin: 28px 0 0;
+	text-align: left;
+}
+
+.sl-infosec-challenge__outro p {
 	margin: 0;
 	color: var(--sl-page-text, #4a4a4a);
 	line-height: 1.6;
 }
 
-
-/* =========================================
-   BENEFIT LIST RESPONSIVE
-========================================= */
-
-@media (max-width: 767px) {
-	.sl-infosec-challenge__benefit {
-		padding: 16px 14px;
-	}
-
-	.sl-infosec-challenge__benefit-icon {
-		margin-bottom: 10px;
-	}
-}
-
-/* =========================================
-   RESULT MESSAGE
-========================================= */
-
-.sl-infosec-challenge__message {
-	width: 100%;
-	margin-top: auto;
-	padding-top: 22px;
-}
-
-.sl-infosec-challenge__message p {
-	margin: 0 0 10px;
-	color: var(--sl-page-text, #4a4a4a);
-	line-height: 1.65;
-}
-
-.sl-infosec-challenge__message p:last-child {
-	margin-bottom: 0;
-}
-
-.sl-infosec-challenge__message-lead {
+.sl-infosec-challenge__outro .sl-infosec-challenge__outro-lead {
+	margin-bottom: 6px;
 	color: var(--sl-page-navy, #16234e);
+	font-size: 19px;
 	font-weight: 700;
+	line-height: 1.35;
 }
 
 
@@ -1238,13 +1153,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 ========================================= */
 
 .sl-infosec-challenge__terms {
-	/* Chrome from global-highlight.php (.sl-highlight) */
-	width: 100%;
-	margin-top: 28px;
-}
-
-.sl-infosec-challenge__terms p {
-	margin: 0;
+	margin: 16px 0 0;
+	color: var(--sl-page-text, #4a4a4a);
+	line-height: 1.6;
+	text-align: left;
 }
 
 
@@ -1286,24 +1198,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 		padding: 0;
 	}
 
-	.sl-infosec-challenge__benefits,
-	.sl-infosec-challenge__benefits.sl-list {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: 12px;
-	}
-
 	.sl-infosec-challenge__card {
 		padding: 30px;
 	}
 
-	.sl-infosec-challenge__card-header {
-		gap: 16px;
+	.sl-infosec-challenge__reward {
+		padding: 20px;
 	}
 
-	.sl-infosec-challenge__icon {
-		flex-basis: 44px;
-		width: 44px;
-		height: 44px;
+	.sl-infosec-challenge__criteria-copy strong {
+		font-size: 22px;
+	}
+
+	.sl-infosec-challenge__outro {
+		margin-top: 36px;
+	}
+
+	.sl-infosec-challenge__outro .sl-infosec-challenge__outro-lead {
+		font-size: 22px;
 	}
 }
 

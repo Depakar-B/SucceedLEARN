@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 .sl-dd-hero__overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(22,35,78,.98) 0%,rgba(22,35,78,.88) 45%,rgba(22,35,78,.55) 100%)}
 .sl-dd-hero__grid{position:relative;z-index:2;display:grid;gap:28px;align-items:start}
 .sl-dd-hero__eyebrow{display:inline-flex;align-items:center;gap:10px;margin:0 0 14px;font-size:13px;font-weight:600;color:#6dc3eb;text-transform:uppercase;letter-spacing:.04em}
-.sl-dd-hero__eyebrow::before{content:"";width:28px;height:2px;background:#6dc3eb;border-radius:999px}
+.sl-dd-hero__eyebrow::before{content:none;display:none}
 .sl-dd-hero__title{margin:0 0 14px;font-size:30px;line-height:1.15;color:var(--sl-page-white)}
 .sl-dd-hero__title span{display:block;color:#6dc3eb}
 .sl-dd-hero__desc{margin:0 0 20px;font-size:16px;line-height:1.65;color:rgba(255,255,255,.88);max-width:640px}

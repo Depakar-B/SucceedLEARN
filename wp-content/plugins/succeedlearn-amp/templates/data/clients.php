@@ -108,9 +108,9 @@ function succeedlearn_amp_prepare_home_clients_context( $limit = 12 ) {
  */
 function succeedlearn_amp_get_home_stats() {
 	return array(
-		array( '1000+', __( 'Organisations Trained', 'succeedlearn-amp' ) ),
+		array( '900+', __( 'Organisations Trained', 'succeedlearn-amp' ) ),
 		array( '90%+', __( 'Learner Engagement', 'succeedlearn-amp' ) ),
-		array( '70%', __( 'Reduction in Phishing Risk', 'succeedlearn-amp' ) ),
-		array( '90%', __( 'Compliance Risk Reduced', 'succeedlearn-amp' ) ),
+		array( '200000+', __( 'Users', 'succeedlearn-amp' ) ),
+		array( '15+', __( 'Years Compliance Expertise', 'succeedlearn-amp' ) ),
 	);
 }

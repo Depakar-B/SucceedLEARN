@@ -50,6 +50,27 @@ $parts = array(
 	<div class="msa-page">
 		<?php foreach ( $parts as $part ) : ?>
 			<?php get_template_part( 'template-parts/courses/modern-slavery-awareness/' . $part ); ?>
+			<?php
+			if ( 'sl-msa-hero' === $part ) {
+				get_template_part(
+					'template-parts/global/course-buy-options',
+					null,
+					array(
+						'course'   => __( 'Modern Slavery', 'akaza-adventure' ),
+						'duration' => __( '15-minute duration', 'akaza-adventure' ),
+						'contact'  => '#buy-course',
+					)
+				);
+				get_template_part(
+					'template-parts/global/fcp-course-suite',
+					null,
+					array(
+						'current' => 'msa',
+						'contact' => '#buy-course',
+					)
+				);
+			}
+			?>
 		<?php endforeach; ?>
 	</div>
 </main>

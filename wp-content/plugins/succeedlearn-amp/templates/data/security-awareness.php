@@ -238,7 +238,7 @@ function succeedlearn_amp_get_sa_behaviour_steps() {
 		),
 		array(
 			'number' => '03',
-			'title'  => __( 'Practise', 'succeedlearn-amp' ),
+			'title'  => __( 'Practice', 'succeedlearn-amp' ),
 			'text'   => __( 'responses to realistic cyber threats through S-Phish and S-Play.', 'succeedlearn-amp' ),
 		),
 		array(

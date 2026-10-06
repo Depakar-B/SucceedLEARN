@@ -3,7 +3,7 @@
  * Plugin Name: SucceedLEARN AMP
  * Plugin URI: https://succeedlearn.com
  * Description: AMP custom theme overlay for SucceedLEARN (AMPforWP). Desktop stays on the WordPress theme; mobile/tablet uses AMP templates from this plugin.
- * Version: 1.0.73
+ * Version: 1.0.107
  * Author: SucceedLEARN Development Team
  * Author URI: https://succeedlearn.com
  * License: GPL-2.0+
@@ -26,7 +26,7 @@ if ( defined( 'SUCCEEDLEARN_AMP_LOADED' ) ) {
 define( 'SUCCEEDLEARN_AMP_LOADED', true );
 
 if ( ! defined( 'SUCCEEDLEARN_AMP_VERSION' ) ) {
-	define( 'SUCCEEDLEARN_AMP_VERSION', '1.0.73' );
+	define( 'SUCCEEDLEARN_AMP_VERSION', '1.0.107' );
 }
 if ( ! defined( 'SUCCEEDLEARN_AMP_PLUGIN_DIR' ) ) {
 	define( 'SUCCEEDLEARN_AMP_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
@@ -100,7 +100,7 @@ add_action(
 			return;
 		}
 
-		// Keep the current page (e.g. /blog/?amp → /blog/?amp=1), not the homepage.
+		// Keep the current page (e.g. /blog/?amp Ã¢â€ â€™ /blog/?amp=1), not the homepage.
 		$target = $is_home_amp_path ? home_url( '/' ) : home_url( $path ? $path : '/' );
 		$args   = array();
 		if ( $query ) {
@@ -155,6 +155,8 @@ $succeedlearn_amp_helper_files = array(
 	'functions-amp-nav.php',
 	'functions-schema.php',
 	'functions-faq.php',
+	'functions-sbcs.php',
+	'functions-course-suite.php',
 );
 foreach ( $succeedlearn_amp_helper_files as $helper_file ) {
 	$path = SUCCEEDLEARN_AMP_INCLUDES_DIR . $helper_file;

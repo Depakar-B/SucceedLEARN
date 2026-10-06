@@ -12,14 +12,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Render the SucceedLEARN contact form for AMP pages.
  *
- * Prefers the common SCF shortcode (shared UI + ERP + course variant).
+ * Prefers the common SCF shortcode (shared UI + ERP + course/fcp variants).
  * Falls back to the legacy AMP partial when SCF is unavailable.
  *
  * @param array $args {
  *     @type string $form_page     Page label for analytics/legacy handlers.
  *     @type string $form_page_url Canonical / page URL.
- *     @type string $form_variant  `default` (Interested In) or `course` (slim course demo).
- *     @type string $title         Optional heading (course variant).
+ *     @type string $form_variant  `default`, `course`, or `fcp` (slim demo; fcp uses Org Email label).
+ *     @type string $title         Optional heading (course / fcp variants).
  *     @type bool   $echo          Echo instead of return.
  * }
  * @return string
@@ -34,7 +34,8 @@ function succeedlearn_amp_render_contact_form( $args = array() ) {
 	);
 	$args     = wp_parse_args( $args, $defaults );
 
-	$form_variant = ( 'course' === $args['form_variant'] ) ? 'course' : 'default';
+	$raw_variant  = sanitize_key( (string) $args['form_variant'] );
+	$form_variant = in_array( $raw_variant, array( 'course', 'fcp' ), true ) ? $raw_variant : 'default';
 	$form_title   = sanitize_text_field( (string) $args['title'] );
 
 	if ( shortcode_exists( 'contact_form' ) ) {

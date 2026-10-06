@@ -1,60 +1,15 @@
 <?php
-/**
- * DPDPA Compliance Training AMP — Faq section.
- *
- * @package SucceedLEARN\AMP
- */
-
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
+/** DPDPA AMP - FAQs. @package SucceedLEARN\AMP */
+if ( ! defined( 'ABSPATH' ) ) { exit; }
 $faq_items = array(
-	array(
-		'question' => __( 'Is DPDPA training mandatory for employees in India?', 'succeedlearn-amp' ),
-		'answer'   => __( 'The Act does not name employee training as a separate mandatory line item. It does require organisations to apply reasonable security safeguards and to be accountable for how personal data is handled. Since most incidents involve an employee action rather than a system failure, awareness training is one of the most direct ways to support that obligation, and to evidence it later.', 'succeedlearn-amp' ),
-	),
-	array(
-		'question' => __( 'How much does DPDPA training cost per employee?', 'succeedlearn-amp' ),
-		'answer'   => __( 'Pricing starts from ₹250 per employee per year, with volume rates above 1,000 employees and bundle pricing alongside our POSH programmes. A 1,000 person workforce works out to roughly ₹2,50,000 a year. Use the calculator above for an indicative figure, or request a demo for an exact quote.', 'succeedlearn-amp' ),
-	),
-	array(
-		'question' => __( 'Does the DPDPA apply to employee data and HR records?', 'succeedlearn-amp' ),
-		'answer'   => __( 'Yes. Employee names, contact details, attendance records, salary information, bank details, identity documents, performance records, health related documents and disciplinary records can all be personal data under the DPDPA, and should be accessed only by authorised persons. HR teams typically hold one of the densest concentrations of personal data in any organisation.', 'succeedlearn-amp' ),
-	),
-	array(
-		'question' => __( 'What is the DPDPA compliance deadline for companies?', 'succeedlearn-amp' ),
-		'answer'   => __( 'Full compliance obligations, including consent, notice and Data Principal rights, take effect on 13 May 2027. A separate, earlier date in November 2026 relates to Consent Manager registration, a different framework for registered platform businesses that does not apply to most organisations training their employees. Rolling out training across a workforce typically takes three to six months once procurement and integration are included.', 'succeedlearn-amp' ),
-	),
-	array(
-		'question' => __( 'What are the penalties for DPDPA non-compliance?', 'succeedlearn-amp' ),
-		'answer'   => __( 'Depending on the violation, penalties may go up to ₹250 crore for certain failures, such as failure to take reasonable security safeguards to prevent a personal data breach.', 'succeedlearn-amp' ),
-	),
-	array(
-		'question' => __( 'How long is the DPDPA employee awareness course?', 'succeedlearn-amp' ),
-		'answer'   => __( '25 minutes, self paced. Knowledge checks are built in throughout, plus a final assessment of 5 questions with a minimum of 4 correct required to pass. A certificate is issued automatically on completion.', 'succeedlearn-amp' ),
-	),
-	array(
-		'question' => __( 'Can we host the DPDPA course on our own LMS?', 'succeedlearn-amp' ),
-		'answer'   => __( 'Yes. Take a SCORM package for your existing LMS, use LTI, or run it on our hosted SaaS platform with a branded portal, SSO and HRIS integration, completion dashboards and automated reminders.', 'succeedlearn-amp' ),
-	),
-	array(
-		'question' => __( 'Does this train our DPO, or is it practitioner level?', 'succeedlearn-amp' ),
-		'answer'   => __( 'No. It is all-employee awareness training. It gives your workforce a defensible baseline and gives you the completion evidence. It supports a DPO\'s expertise, it does not replace it.', 'succeedlearn-amp' ),
-	),
-	array(
-		'question' => __( 'What is the difference between DPDPA and GDPR employee training?', 'succeedlearn-amp' ),
-		'answer'   => __( 'The DPDPA governs digital personal data in India, GDPR governs personal data of people in the EU. Organisations with both Indian operations and EU exposure typically need both. We run a separate GDPR employee awareness course for that.', 'succeedlearn-amp' ),
-	),
+array('question'=>__('Is DPDPA training mandatory for employees in India?','succeedlearn-amp'),'answer'=>__('The DPDP Act, 2023 does not name a specific course. It does require organisations to take reasonable security safeguards to protect personal data, and trained employees are one of the most practical ways to show those safeguards are in place. Penalties for certain failures, such as not taking reasonable safeguards against a breach, can reach ₹250 crore.','succeedlearn-amp')),
+array('question'=>__('What does DPDPA training for employees cover?','succeedlearn-amp'),'answer'=>__('Key DPDPA terms, what counts as personal data, lawful grounds and consent, privacy by design, handling data from collection to deletion, Data Principal rights, grievances and breach reporting, followed by a short final assessment.','succeedlearn-amp')),
+array('question'=>__('How long is the DPDPA compliance training course?','succeedlearn-amp'),'answer'=>__('About 25 minutes. It is self-paced, so employees can finish in one sitting or across a few short sessions.','succeedlearn-amp')),
+array('question'=>__('Can we run the DPDPA course on our own LMS as SCORM?','succeedlearn-amp'),'answer'=>__('Yes. Upload it to your existing LMS as a SCORM package, or run it on the SucceedLEARN LMS with ready-made reports and reminder emails.','succeedlearn-amp')),
+array('question'=>__('How do we track completion and prove the training happened?','succeedlearn-amp'),'answer'=>__('Learners work through interactive checks, then a final assessment drawn from a larger question bank, with a score of 80% needed to pass. A certificate of completion is issued automatically on passing. On our LMS you get completion reports by department; with SCORM, completion and score are recorded in your own LMS.','succeedlearn-amp')),
+array('question'=>__('Can the course carry our own branding?','succeedlearn-amp'),'answer'=>__('Yes. The first 25 customers get up to 10 minutes of course content customised free, including their own policies, examples and branding. This includes your logo and policy in the course, a branded learning portal, and dedicated support throughout your journey, whenever you need help.','succeedlearn-amp')),
+array('question'=>__('Does the course cover the DPDP Rules, 2025?','succeedlearn-amp'),'answer'=>__('The course is built around the DPDP Act, 2023. The DPDP Rules, 2025, notified in November 2025, add procedural detail such as timelines and notice formats. Your internal processes can be reflected through customisation.','succeedlearn-amp')),
+array('question'=>__('What happens in the 20-minute demo?','succeedlearn-amp'),'answer'=>__('We walk you through the course, the interactive activities, the certificate and the admin reports, and answer questions about rollout for your headcount. No preparation is needed.','succeedlearn-amp')),
 );
 ?>
-<section class="sl-section">
-	<div class="sl-wrap">
-		<p class="sl-eyebrow"><?php esc_html_e( 'Questions', 'succeedlearn-amp' ); ?></p>
-		<h2 class="sl-h2">
-			<?php echo wp_kses_post( __( 'DPDPA Compliance <span>Training FAQs</span>', 'succeedlearn-amp' ) ); ?>
-		</h2>
-		<p class="sl-lead"><?php esc_html_e( 'Explore key answers on DPDPA obligations, employee awareness, data protection duties, and training rollout.', 'succeedlearn-amp' ); ?></p>
-		<?php succeedlearn_amp_render_faq_accordion( $faq_items ); ?>
-	</div>
-</section>
+<section class="sl-section sl-section--alt sl-dpdpa-faq" id="faq" aria-labelledby="sl-dpdpa-faq-title"><div class="sl-wrap"><header class="sl-dpdpa-section-head"><h2 id="sl-dpdpa-faq-title" class="sl-h2"><?php esc_html_e( 'DPDPA training ', 'succeedlearn-amp' ); ?><span><?php esc_html_e( 'FAQs', 'succeedlearn-amp' ); ?></span></h2><p class="sl-lead"><?php esc_html_e( 'Still have a question? Your 20-minute demo is the fastest way to get answers for your organisation.', 'succeedlearn-amp' ); ?></p></header><?php succeedlearn_amp_render_faq_accordion( $faq_items ); ?></div></section>

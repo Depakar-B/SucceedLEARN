@@ -45,6 +45,10 @@ function akaza_enqueue_modern_slavery_assets() {
 		array( 'akaza-course-global', 'akaza-contact-form', 'akaza-global-sub-heading' )
 	);
 
+	// Individuals / Organisations sections + FCP course suite.
+	akaza_enqueue_theme_style( 'akaza-global-course-buy-options', 'sl-global-course-buy-options.css', array( 'akaza-sl-msa-page' ) );
+	akaza_enqueue_theme_style( 'akaza-global-fcp-suite', 'sl-global-fcp-suite.css', array( 'akaza-sl-msa-page' ) );
+
 	akaza_enqueue_theme_script(
 		'akaza-sl-msa-faq',
 		'courses/modern-slavery-awareness/sl-msa-faq.js'

@@ -33,7 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<p>
 				<?php
 				esc_html_e(
-					'The Cybersecurity Awareness Month 2026 Cyber Readiness Challenge (“Campaign”) is a promotional offering provided by SucceedLEARN and is subject to the following terms and conditions.',
+					'The Cybersecurity Awareness Month 2026 Phishing Resilience Challenge (“Campaign”) is a promotional offering provided by SucceedLEARN and is subject to the following terms and conditions.',
 					'succeedlearn-amp'
 				);
 				?>
@@ -142,7 +142,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						id="sl-infosec-2026-terms-criteria"
 						class="sl-panel-title sl-infosec-2026-terms__summary"
 					>
-						<?php esc_html_e( '4. Cyber Readiness Challenge Criteria', 'succeedlearn-amp' ); ?>
+						<?php esc_html_e( '4.Phishing Resilience Challenge Criteria', 'succeedlearn-amp' ); ?>
 					</h3>
 
 					<div class="sl-infosec-2026-terms__panel">
@@ -209,7 +209,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						id="sl-infosec-2026-terms-achieved-benefits"
 						class="sl-panel-title sl-infosec-2026-terms__summary"
 					>
-						<?php esc_html_e( '5. Challenge Achieved Benefits', 'succeedlearn-amp' ); ?>
+						<?php esc_html_e( '5. Resilience Reward - 80+ Resiliency Score', 'succeedlearn-amp' ); ?>
 					</h3>
 
 					<div class="sl-infosec-2026-terms__panel">

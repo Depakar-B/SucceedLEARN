@@ -15,7 +15,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 $form_title = __( 'Campaign Registration', 'succeedlearn-amp' );
 
 $whatsapp_url = 'https://wa.me/918660448654';
-$phone_label  = '+91 86604 48654';
 ?>
 
 <section
@@ -48,7 +47,7 @@ $phone_label  = '+91 86604 48654';
 				<p class="sl-lead sl-infosec-2026-contact__lead">
 					<?php
 					esc_html_e(
-						'Start the Cyber Readiness Challenge.',
+						'Start the Phishing Resilience Journey',
 						'succeedlearn-amp'
 					);
 					?>
@@ -83,7 +82,7 @@ $phone_label  = '+91 86604 48654';
 					href="<?php echo esc_url( $whatsapp_url ); ?>"
 					target="_blank"
 					rel="noopener noreferrer"
-					aria-label="<?php echo esc_attr( sprintf( /* translators: %s: phone number */ __( 'Chat on WhatsApp at %s', 'succeedlearn-amp' ), $phone_label ) ); ?>"
+					aria-label="<?php esc_attr_e( 'Chat on WhatsApp', 'succeedlearn-amp' ); ?>"
 				>
 					<span class="sl-infosec-2026-contact__whatsapp-icon" aria-hidden="true">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" focusable="false">

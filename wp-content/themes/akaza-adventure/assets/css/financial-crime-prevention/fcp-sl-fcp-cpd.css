@@ -1,9 +1,11 @@
-/* Financial Crime Prevention — CPD certification (mirrors AML PE/VC CPD section) */
+/* Financial Crime Prevention — CPD certification (mirrors AML PE/VC CPD section).
+   Also reused on course pages (e.g. ABAC), hence the .sl-course-page selectors. */
 
-.sl-fcp-page .sl-fcp-cpd {
+.sl-fcp-page .sl-fcp-cpd,
+.sl-course-page > .sl-fcp-cpd {
 	padding-top: 90px;
 	padding-bottom: 90px;
-	background: var(--fcp-grey);
+	background: var(--fcp-grey, #f5f5f5);
 }
 
 .sl-fcp-cpd__main {
@@ -38,11 +40,13 @@
 }
 
 .sl-fcp-page .sl-fcp-cpd__copy .sl-home-sub-heading,
-body.slf-body #main-content.sl-fcp-page .sl-fcp-cpd__copy .sl-home-sub-heading {
+body.slf-body #main-content.sl-fcp-page .sl-fcp-cpd__copy .sl-home-sub-heading,
+body.slf-body #main-content.sl-course-page > section.sl-fcp-cpd .sl-fcp-cpd__copy .sl-home-sub-heading {
 	margin-bottom: 10px;
 }
 
-.sl-fcp-page .sl-fcp-cpd__copy h2 {
+.sl-fcp-page .sl-fcp-cpd__copy h2,
+.sl-course-page .sl-fcp-cpd .sl-fcp-cpd__copy h2 {
 	max-width: 820px;
 	margin: 0 0 15px;
 	color: #16234e;
@@ -52,11 +56,13 @@ body.slf-body #main-content.sl-fcp-page .sl-fcp-cpd__copy .sl-home-sub-heading {
 	letter-spacing: -0.03em;
 }
 
-.sl-fcp-page .sl-fcp-cpd__copy h2 span {
+.sl-fcp-page .sl-fcp-cpd__copy h2 span,
+.sl-course-page .sl-fcp-cpd .sl-fcp-cpd__copy h2 span {
 	color: #135db7;
 }
 
-.sl-fcp-page .sl-fcp-cpd__copy > p {
+.sl-fcp-page .sl-fcp-cpd__copy > p,
+.sl-course-page .sl-fcp-cpd .sl-fcp-cpd__copy > p {
 	max-width: 850px;
 	margin: 0;
 	color: #4a4a4a;
@@ -86,10 +92,18 @@ body.slf-body #main-content.sl-fcp-page .sl-fcp-cpd__copy .sl-home-sub-heading {
 	color: #135db7;
 }
 
-.sl-fcp-page .sl-fcp-cpd__copy > .sl-fcp-cpd__disclaimer {
+.sl-fcp-page .sl-fcp-cpd__copy > .sl-fcp-cpd__disclaimer,
+.sl-course-page .sl-fcp-cpd .sl-fcp-cpd__copy > .sl-fcp-cpd__disclaimer {
 	margin-top: 14px;
 	color: #5c6270;
 	font-size: 0.78rem;
+}
+
+@media (max-width: 767px) {
+	.sl-course-page > .sl-fcp-cpd {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
 }
 
 @media (max-width: 720px) {

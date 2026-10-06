@@ -178,6 +178,8 @@ class Performance_Optimizer {
 			'amp-mustache'  => 'https://cdn.ampproject.org/v0/amp-mustache-0.2.js',
 			'amp-carousel'  => 'https://cdn.ampproject.org/v0/amp-carousel-0.1.js',
 			'amp-lightbox'  => 'https://cdn.ampproject.org/v0/amp-lightbox-0.1.js',
+			'amp-youtube'   => 'https://cdn.ampproject.org/v0/amp-youtube-0.1.js',
+			'amp-video'     => 'https://cdn.ampproject.org/v0/amp-video-0.1.js',
 		);
 
 		foreach ( $components as $name ) {

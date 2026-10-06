@@ -159,6 +159,7 @@ class Template_Manager {
 			'global-foundation',
 			'global-ui',
 			'global-ui-buttons',
+			'global-contact',
 			'global-panel-title',
 			'global-highlight',
 			'footer',

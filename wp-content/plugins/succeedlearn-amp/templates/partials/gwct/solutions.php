@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<section class="sl-section" id="solutions">
+<section class="sl-section sl-section--alt" id="solutions">
 	<div class="sl-wrap">
 		<span class="sl-eyebrow"><?php esc_html_e( 'Our solutions', 'succeedlearn-amp' ); ?></span>
 		<h2 class="sl-h2">
@@ -123,7 +123,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 									<?php if ( '' !== $image_url ) : ?>
 										<amp-img
 											src="<?php echo esc_url( $image_url ); ?>"
-											width="640"
+											width="720"
 											height="480"
 											layout="responsive"
 											alt="<?php echo esc_attr( $image_alt ); ?>"
@@ -135,7 +135,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 											aria-label="<?php echo esc_attr( $image_alt ? $image_alt : __( 'Solution image placeholder', 'succeedlearn-amp' ) ); ?>"
 										>
 											<span><?php esc_html_e( 'Image placeholder', 'succeedlearn-amp' ); ?></span>
-											<small><?php esc_html_e( 'Recommended: 640 × 480 px', 'succeedlearn-amp' ); ?></small>
+											<small><?php esc_html_e( 'Recommended: 720 × 480 px', 'succeedlearn-amp' ); ?></small>
 										</div>
 									<?php endif; ?>
 								</div>

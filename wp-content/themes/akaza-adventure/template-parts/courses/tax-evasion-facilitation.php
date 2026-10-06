@@ -13,6 +13,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <main id="main-content" class="sl-course-page sl-course-page--tax-evasion-facilitation">
 	<?php get_template_part( 'template-parts/courses/tax-evasion-facilitation/sl-tax-evasion-hero' ); ?>
+	<?php
+	get_template_part(
+		'template-parts/global/course-buy-options',
+		null,
+		array(
+			'course'   => __( 'Tax Evasion Prevention', 'akaza-adventure' ),
+			'duration' => __( '30-minute duration', 'akaza-adventure' ),
+			'contact'  => '#contact',
+		)
+	);
+	get_template_part(
+		'template-parts/global/fcp-course-suite',
+		null,
+		array(
+			'current' => 'tax-evasion',
+			'contact' => '#contact',
+		)
+	);
+	?>
 	<?php get_template_part( 'template-parts/courses/tax-evasion-facilitation/sl-tax-evasion-risk' ); ?>
 	<?php get_template_part( 'template-parts/courses/tax-evasion-facilitation/sl-tax-evasion-understanding' ); ?>
 	<?php get_template_part( 'template-parts/courses/tax-evasion-facilitation/sl-tax-evasion-cfa' ); ?>

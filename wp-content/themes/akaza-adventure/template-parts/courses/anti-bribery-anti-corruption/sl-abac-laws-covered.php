@@ -119,12 +119,16 @@ if ( ! defined( 'ABSPATH' ) ) {
                     data-law-panel="uk"
                 >
 
-                    <span
-                        class="sl-abac-laws-covered__year"
-                        aria-hidden="true"
-                    >
-                        2010
-                    </span>
+                    <figure class="sl-abac-laws-covered__media">
+                        <img
+                            src="https://succeedlearn.com/wp-content/uploads/2026/10/UK_ABAC.webp"
+                            alt="<?php esc_attr_e( 'UK Bribery Act 2010 offences: offering, receiving and foreign official bribery, failure to prevent bribery', 'akaza-adventure' ); ?>"
+                            width="1536"
+                            height="1024"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </figure>
 
                     <div class="sl-abac-laws-covered__card-content">
 
@@ -171,12 +175,16 @@ if ( ! defined( 'ABSPATH' ) ) {
                     hidden
                 >
 
-                    <span
-                        class="sl-abac-laws-covered__year"
-                        aria-hidden="true"
-                    >
-                        1977
-                    </span>
+                    <figure class="sl-abac-laws-covered__media">
+                        <img
+                            src="https://succeedlearn.com/wp-content/uploads/2026/10/FCPA_ABAC.webp"
+                            alt="<?php esc_attr_e( 'US FCPA 1977 themes: anti-bribery, books and records, third-party risk, foreign officials and business gifts', 'akaza-adventure' ); ?>"
+                            width="1536"
+                            height="1024"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </figure>
 
                     <div class="sl-abac-laws-covered__card-content">
 
@@ -223,12 +231,16 @@ if ( ! defined( 'ABSPATH' ) ) {
                     hidden
                 >
 
-                    <span
-                        class="sl-abac-laws-covered__year"
-                        aria-hidden="true"
-                    >
-                        1988
-                    </span>
+                    <figure class="sl-abac-laws-covered__media">
+                        <img
+                            src="https://succeedlearn.com/wp-content/uploads/2026/10/India_ABAC.webp"
+                            alt="<?php esc_attr_e( 'India Prevention of Corruption Act 1988 themes: public servants, undue advantage, gifts, approvals and reporting', 'akaza-adventure' ); ?>"
+                            width="1536"
+                            height="1024"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </figure>
 
                     <div class="sl-abac-laws-covered__card-content">
 

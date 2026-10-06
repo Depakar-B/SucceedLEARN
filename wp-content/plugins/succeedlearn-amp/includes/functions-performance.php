@@ -131,6 +131,7 @@ function succeedlearn_amp_output_page_styles( $page_type, $style_files = array()
 		'global-foundation',
 		'global-ui',
 		'global-ui-buttons',
+		'global-contact',
 		'global-panel-title',
 		'global-highlight',
 		'footer',
@@ -333,14 +334,36 @@ function succeedlearn_amp_reinforce_gwct_contact_direct_css( $html ) {
 	if ( function_exists( 'succeedlearn_amp_is_serving_amp' ) && ! succeedlearn_amp_is_serving_amp() ) {
 		return $html;
 	}
-	if ( false === strpos( $html, 'sl-gwct-contact-direct__grid' ) ) {
+
+	$has_legacy = false !== strpos( $html, 'sl-gwct-contact-direct__grid' );
+	$has_new    = false !== strpos( $html, 'sl-contact-btn' );
+	if ( ! $has_legacy && ! $has_new ) {
 		return $html;
 	}
 
-	$css = '.sl-gwct-page .sl-gwct-contact-direct__grid{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;width:100%}'
-		. '.sl-gwct-page .sl-gwct-contact-direct__item,.sl-gwct-page .sl-gwct-contact__whatsapp{width:100%;max-width:100%;min-width:0;box-sizing:border-box}'
-		. '@media(min-width:700px){.sl-gwct-page .sl-gwct-contact-direct__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}'
-		. '@media(max-width:699px){.sl-gwct-page .sl-gwct-contact-direct__grid{grid-template-columns:minmax(0,1fr)}}';
+	$css = '';
+	if ( $has_legacy ) {
+		$css .= '.sl-gwct-contact-direct__grid,.sl-sa-contact-direct{display:flex;flex-wrap:wrap;align-items:stretch;gap:12px}'
+			. '.sl-gwct-contact-direct__item,.sl-sa-contact__email{display:inline-flex;align-items:center;gap:10px;min-height:56px;padding:10px 16px;border:1px solid rgba(107,124,147,.28);border-radius:12px;background:transparent;text-decoration:none}'
+			. '.sl-gwct-contact-direct__title,.sl-sa-contact__email-label{color:#6B7C93;font-size:12px;font-weight:600}'
+			. '.sl-gwct-contact-direct__value,.sl-sa-contact__email-value{color:#16234e;font-size:15px;font-weight:700}'
+			. '.sl-gwct-contact__whatsapp,.sl-sa-contact__whatsapp{display:inline-flex;align-items:center;gap:10px;min-height:56px;padding:10px 16px;border:1px solid #25d366;border-radius:12px;background:#25d366;color:#fff!important;box-shadow:0 12px 28px rgba(37,211,102,.28)}'
+			. '.sl-gwct-contact__whatsapp-label,.sl-sa-contact__whatsapp-label{color:#fff!important;font-size:20px;font-weight:700}'
+			. '.sl-gwct-contact__whatsapp-number,.sl-sa-contact__whatsapp-number{display:none}';
+	}
+	if ( $has_new ) {
+		$css .= '.sl-contact-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}'
+			. '.sl-contact-btn{display:inline-flex;align-items:center;gap:10px;min-height:56px;padding:10px 16px;border:1px solid transparent;border-radius:12px;text-decoration:none}'
+			. '.sl-contact-btn--email{border-color:rgba(107,124,147,.28);background:transparent}'
+			. '.sl-contact-btn--email .sl-contact-btn__label{color:#6B7C93;font-size:12px;font-weight:600}'
+			. '.sl-contact-btn--email .sl-contact-btn__value{color:#16234e;font-size:15px;font-weight:700}'
+			. '.sl-contact-btn--whatsapp{border-color:#25d366;background:#25d366;color:#fff!important;box-shadow:0 12px 28px rgba(37,211,102,.28)}'
+			. '.sl-contact-btn--whatsapp .sl-contact-btn__label{color:#fff!important;font-size:20px;font-weight:700}';
+	}
+
+	if ( '' === $css ) {
+		return $html;
+	}
 
 	if ( preg_match( '/<style\b[^>]*\bamp-custom\b[^>]*>.*?<\/style>/is', $html ) ) {
 		return (string) preg_replace(
@@ -371,18 +394,20 @@ function succeedlearn_amp_reinforce_coc_features_css( $html ) {
 		return $html;
 	}
 
-	$css = '.sl-coc-page .sl-code-conduct-features.sl-section{position:relative;z-index:1;padding:60px 16px;background:#fff}'
+	$css = '.sl-coc-page .sl-code-conduct-features.sl-section{position:relative;z-index:1;padding:60px 16px;background:#f5f5f5}'
 		. '.sl-coc-page .sl-code-conduct-features__heading{width:100%;margin:0 0 34px;text-align:left}'
 		. '.sl-coc-page .sl-code-conduct-features__heading h2{margin:0 0 16px;color:#16234e}'
 		. '.sl-coc-page .sl-code-conduct-features__heading h2>span{color:#1472ba}'
 		. '.sl-coc-page .sl-code-conduct-features__heading p{width:100%;margin:0;color:#4A4A4A;font-size:16px;line-height:1.7}'
 		. '.sl-coc-page .sl-code-conduct-features__grid{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;width:100%}'
-		. '.sl-coc-page .sl-code-conduct-features__card{display:flex;align-items:center;gap:14px;min-width:0;width:100%;min-height:82px;margin:0;padding:18px 20px;border:1px solid rgba(107,124,147,.18);border-radius:14px;background:#f5f5f5;box-sizing:border-box}'
+		. '.sl-coc-page .sl-code-conduct-features__card{display:flex;align-items:center;gap:14px;min-width:0;width:100%;min-height:82px;margin:0;padding:18px 20px;border:1px solid rgba(107,124,147,.18);border-radius:14px;background:#fff;box-sizing:border-box}'
 		. '.sl-coc-page .sl-code-conduct-features__icon{display:inline-flex;align-items:center;justify-content:center;flex:0 0 30px;width:30px;height:30px;margin:0;color:#1472ba}'
 		. '.sl-coc-page .sl-code-conduct-features__icon svg{display:block;width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}'
 		. '.sl-coc-page .sl-code-conduct-features__label{display:block;flex:1 1 auto;min-width:0;margin:0;color:#16234e;font-size:16px;font-weight:700;line-height:1.4;overflow-wrap:anywhere}'
 		. '@media(min-width:768px){.sl-coc-page .sl-code-conduct-features.sl-section{padding-top:75px;padding-bottom:75px}.sl-coc-page .sl-code-conduct-features__heading{margin-bottom:38px}.sl-coc-page .sl-code-conduct-features__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;width:100%}.sl-coc-page .sl-code-conduct-features__card{min-height:94px;padding:20px 24px;gap:16px}.sl-coc-page .sl-code-conduct-features__grid>:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:100%;max-width:calc((100% - 20px)/2)}}'
-		. '@media(min-width:1000px){.sl-coc-page .sl-code-conduct-features.sl-section{padding-top:90px;padding-bottom:90px}.sl-coc-page .sl-code-conduct-features__heading{margin-bottom:42px}.sl-coc-page .sl-code-conduct-features__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;width:100%}.sl-coc-page .sl-code-conduct-features__card{min-height:104px;padding:22px 24px}.sl-coc-page .sl-code-conduct-features__grid>:last-child:nth-child(odd){grid-column:auto;justify-self:stretch;max-width:none}}';
+		. '@media(min-width:1000px){.sl-coc-page .sl-code-conduct-features.sl-section{padding-top:90px;padding-bottom:90px}.sl-coc-page .sl-code-conduct-features__heading{margin-bottom:42px}.sl-coc-page .sl-code-conduct-features__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;width:100%}.sl-coc-page .sl-code-conduct-features__card{min-height:104px;padding:22px 24px}.sl-coc-page .sl-code-conduct-features__grid>:last-child:nth-child(odd){grid-column:auto;justify-self:stretch;max-width:none}}'
+		. '.sl-coc-page main>section:nth-of-type(odd){background:#fff!important;background-color:#fff!important}'
+		. '.sl-coc-page main>section:nth-of-type(even){background:#f5f5f5!important;background-color:#f5f5f5!important}';
 
 	if ( preg_match( '/<style\b[^>]*\bamp-custom\b[^>]*>.*?<\/style>/is', $html ) ) {
 		return (string) preg_replace(
