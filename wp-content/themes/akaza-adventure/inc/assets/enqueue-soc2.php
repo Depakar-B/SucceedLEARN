@@ -28,12 +28,10 @@ function akaza_enqueue_soc2_assets() {
 
 	$sections = array(
 		'sl-soc2-hero',
-		'sl-soc2-why',
 		'sl-soc2-learn',
 		'sl-soc2-modules',
 		'sl-soc2-emerging',
 		'sl-soc2-relate',
-		'sl-soc2-objectives',
 		'sl-soc2-designed',
 		'sl-soc2-action',
 		'sl-soc2-choose',
@@ -43,6 +41,11 @@ function akaza_enqueue_soc2_assets() {
 	foreach ( $sections as $section ) {
 		akaza_enqueue_theme_style( "akaza-{$section}", "{$folder}/{$section}.css", array( $global ) );
 	}
+
+	akaza_enqueue_theme_script(
+		'akaza-sl-soc2-action',
+		"{$folder}/sl-soc2-action.js"
+	);
 
 	akaza_enqueue_theme_style( 'akaza-contact-form', 'contact-from.css', array( 'akaza-main' ) );
 

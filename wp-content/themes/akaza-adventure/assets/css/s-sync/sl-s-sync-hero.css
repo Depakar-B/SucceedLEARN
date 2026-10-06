@@ -109,6 +109,13 @@ body.slf-body #main-content.sl-s-sync-page h3.sl-panel-title,
 	text-align: center;
 }
 
+.sl-s-sync-hero__image {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 16px;
+}
+
 @media (max-width: 991px) {
 	.sl-s-sync-hero {
 		padding: 76px 0 68px;

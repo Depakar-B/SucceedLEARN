@@ -9,11 +9,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$ukce_hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/SucceedLEARN-Security-Behaviour-Culture-Suite.webp';
-$ukce_hero_local = WP_CONTENT_DIR . '/uploads/2026/09/SucceedLEARN-Security-Behaviour-Culture-Suite.webp';
+$ukce_hero_file  = '2026/10/ISA-UK-Cyber-Essentials.webp';
+$ukce_hero_image = 'https://succeedlearn.com/wp-content/uploads/' . $ukce_hero_file;
+$ukce_hero_local = WP_CONTENT_DIR . '/uploads/' . $ukce_hero_file;
 
 if ( function_exists( 'akaza_upload_url' ) && file_exists( $ukce_hero_local ) ) {
-	$ukce_hero_image = akaza_upload_url( '2026/09/SucceedLEARN-Security-Behaviour-Culture-Suite.webp' );
+	$ukce_hero_image = akaza_upload_url( $ukce_hero_file );
 }
 ?>
 
@@ -36,8 +37,11 @@ if ( function_exists( 'akaza_upload_url' ) && file_exists( $ukce_hero_local ) ) 
 			<h1 id="sl-ukce-hero-title">
 				<?php
 				echo wp_kses(
-					__( 'Information Security Awareness Training for <span>UK Cyber Essentials</span>', 'akaza-adventure' ),
-					array( 'span' => array() )
+					__( 'Information Security Awareness Training for<br><span>UK Cyber Essentials</span>', 'akaza-adventure' ),
+					array(
+						'span' => array(),
+						'br'   => array(),
+					)
 				);
 				?>
 			</h1>

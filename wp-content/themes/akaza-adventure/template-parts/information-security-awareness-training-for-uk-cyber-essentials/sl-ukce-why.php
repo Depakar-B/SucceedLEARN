@@ -49,35 +49,36 @@ $behaviours = array(
 			</p>
 		</div>
 
-		<div class="sl-ukce-why__grid">
-			<?php foreach ( $controls as $index => $control ) : ?>
-				<article class="sl-ukce-why__card">
-					<span class="sl-ukce-why__icon" aria-hidden="true">
-						<span class="sl-ukce-why__num"><?php echo esc_html( str_pad( (string) ( $index + 1 ), 2, '0', STR_PAD_LEFT ) ); ?></span>
-					</span>
-					<p><?php echo esc_html( $control ); ?></p>
-				</article>
-			<?php endforeach; ?>
-		</div>
+		<div class="sl-ukce-why__layout">
 
-		<div class="sl-ukce-why__conclusion">
-			<p>
-				<?php esc_html_e( 'The National Cyber Security Centre states that organizations applying for Cyber Essentials are responsible for ensuring that the requirements across all five controls are met within the defined scope.', 'akaza-adventure' ); ?>
-			</p>
-			<p>
-				<?php esc_html_e( 'These controls are technical in nature, but employees interact with many of them every day.', 'akaza-adventure' ); ?>
-			</p>
-			<ul class="sl-ukce-why__list">
-				<?php foreach ( $behaviours as $item ) : ?>
-					<li><?php echo esc_html( $item ); ?></li>
+			<div class="sl-ukce-why__points">
+				<?php foreach ( $controls as $control ) : ?>
+					<article class="sl-ukce-why__card">
+						<p><?php echo esc_html( $control ); ?></p>
+					</article>
 				<?php endforeach; ?>
-			</ul>
-			<p>
-				<?php esc_html_e( 'And their behavior can either support or weaken the security practices an organization has implemented.', 'akaza-adventure' ); ?>
-			</p>
-			<p>
-				<?php esc_html_e( 'Employee security awareness can therefore help reinforce the secure behaviours surrounding Cyber Essentials technical controls.', 'akaza-adventure' ); ?>
-			</p>
+			</div>
+
+			<div class="sl-ukce-why__conclusion">
+				<p>
+					<?php esc_html_e( 'The National Cyber Security Centre states that organizations applying for Cyber Essentials are responsible for ensuring that the requirements across all five controls are met within the defined scope.', 'akaza-adventure' ); ?>
+				</p>
+				<p>
+					<?php esc_html_e( 'These controls are technical in nature, but employees interact with many of them every day.', 'akaza-adventure' ); ?>
+				</p>
+				<ul class="sl-ukce-why__list">
+					<?php foreach ( $behaviours as $item ) : ?>
+						<li><?php echo esc_html( $item ); ?></li>
+					<?php endforeach; ?>
+				</ul>
+				<p>
+					<?php esc_html_e( 'And their behavior can either support or weaken the security practices an organization has implemented.', 'akaza-adventure' ); ?>
+				</p>
+				<p>
+					<?php esc_html_e( 'Employee security awareness can therefore help reinforce the secure behaviours surrounding Cyber Essentials technical controls.', 'akaza-adventure' ); ?>
+				</p>
+			</div>
+
 		</div>
 
 	</div>

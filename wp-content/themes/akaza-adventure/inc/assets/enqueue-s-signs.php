@@ -35,7 +35,6 @@ function akaza_enqueue_s_signs_assets() {
 		'sl-s-signs-teams',
 		'sl-s-signs-choose',
 		'sl-s-signs-comparison',
-		'sl-s-signs-reinforce',
 		'sl-s-signs-contact',
 	);
 

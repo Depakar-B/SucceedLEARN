@@ -51,39 +51,34 @@ $learning_elements = array(
 			</h2>
 		</div>
 
-		<h3 class="sl-ukce-designed__subhead">
-			<?php esc_html_e( 'Learning elements', 'akaza-adventure' ); ?>
-		</h3>
+		<div class="sl-ukce-designed__detail sl-ukce-designed__detail--label">
+			<h3><?php esc_html_e( 'Learning elements', 'akaza-adventure' ); ?></h3>
+		</div>
 
 		<div class="sl-ukce-designed__grid">
-			<?php foreach ( $learning_elements as $index => $element ) : ?>
+			<?php foreach ( $learning_elements as $element ) : ?>
 				<article class="sl-ukce-designed__card">
-					<div class="sl-ukce-designed__title-row">
-						<span class="sl-ukce-designed__number" aria-hidden="true">
-							<?php echo esc_html( str_pad( (string) ( $index + 1 ), 2, '0', STR_PAD_LEFT ) ); ?>
-						</span>
-						<h3><?php echo esc_html( $element['title'] ); ?></h3>
-					</div>
+					<h3><?php echo esc_html( $element['title'] ); ?></h3>
 					<p><?php echo esc_html( $element['text'] ); ?></p>
 				</article>
 			<?php endforeach; ?>
 		</div>
 
-		<div class="sl-ukce-designed__panels">
+		<div class="sl-ukce-designed__details">
 
-			<article class="sl-ukce-designed__panel">
+			<div class="sl-ukce-designed__detail">
 				<h3><?php esc_html_e( 'Format & accessibility', 'akaza-adventure' ); ?></h3>
 				<p>
 					<?php esc_html_e( 'Fully responsive interface across desktop, tablet, and mobile — complete with a learner dashboard, progress tracking, automated reminder prompts, and seamless integration with your existing LMS or HR systems.', 'akaza-adventure' ); ?>
 				</p>
-			</article>
+			</div>
 
-			<article class="sl-ukce-designed__panel">
+			<div class="sl-ukce-designed__detail">
 				<h3><?php esc_html_e( 'Certificate', 'akaza-adventure' ); ?></h3>
 				<p>
 					<?php esc_html_e( 'Upon successful completion, you receive a CPD certificate valid as proof of training.', 'akaza-adventure' ); ?>
 				</p>
-			</article>
+			</div>
 
 		</div>
 

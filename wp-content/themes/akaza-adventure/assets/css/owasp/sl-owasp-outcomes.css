@@ -1,0 +1,68 @@
+/**
+ * OWASP — Outcomes
+ */
+
+.sl-owasp-outcomes {
+	padding: 90px 0;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-owasp-outcomes__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+	gap: 70px;
+	align-items: start;
+}
+
+.sl-owasp-outcomes__heading {
+	position: sticky;
+	top: calc(var(--slf-header-clearance, 110px) + 16px);
+}
+
+.sl-owasp-outcomes__heading p {
+	margin: 0;
+}
+
+.sl-owasp-outcomes__list {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	border-top: 1px solid #d8dee8;
+}
+
+.sl-owasp-outcomes__list > div {
+	display: flex;
+	gap: 15px;
+	padding: 20px 18px 20px 0;
+	border-bottom: 1px solid #d8dee8;
+}
+
+.sl-owasp-outcomes__list span {
+	min-width: 28px;
+	color: var(--sl-page-primary, #1472ba);
+	font-weight: 700;
+}
+
+.sl-owasp-outcomes__list p {
+	margin: 0;
+}
+
+@media (max-width: 991px) {
+	.sl-owasp-outcomes__grid {
+		grid-template-columns: 1fr;
+		gap: 36px;
+	}
+
+	.sl-owasp-outcomes__heading {
+		position: static;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-owasp-outcomes {
+		padding: 60px 0;
+	}
+
+	.sl-owasp-outcomes__list {
+		grid-template-columns: 1fr;
+	}
+}

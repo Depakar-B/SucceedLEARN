@@ -168,7 +168,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /* Comparison table — keep table + horizontal scroll */
 .sl-s-play-comparison__heading{margin:0 0 28px;text-align:left}
 .sl-s-play-comparison__table-wrap{width:100%;max-width:1050px;margin-left:auto;margin-right:auto;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;border:1px solid rgba(107,124,147,.18);border-radius:14px;background:var(--sl-page-white);box-shadow:0 10px 30px rgba(22,35,78,.06)}
-.sl-s-play-comparison__table{min-width:560px;border-collapse:separate;border-spacing:0;table-layout:auto}
+.sl-s-play-comparison__table{width:560px;min-width:560px;border-collapse:separate;border-spacing:0;table-layout:auto}
 .sl-s-play-comparison__table th,.sl-s-play-comparison__table td{padding:16px 18px;vertical-align:middle;text-align:left}
 .sl-s-play-comparison__table thead th{background:var(--sl-page-navy);color:var(--sl-page-white);font-size:14px;font-weight:700;line-height:1.35}
 .sl-s-play-comparison__table thead th:first-child{width:110px;border-radius:13px 0 0 0;border-right:1px solid rgba(255,255,255,.14)}
@@ -183,8 +183,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 /* FAQ */
 .sl-s-play-faq__cta{margin-top:24px}
 
-/* Contact — mobile stacked, tablet+ inline */
-.sl-s-play-contact .sl-contact-actions{display:flex;flex-direction:column;gap:12px;margin-top:20px}
-.sl-s-play-contact .sl-contact-btn{width:100%;flex:none}
-@media(min-width:768px){.sl-s-play-contact .sl-contact-actions{flex-direction:row;flex-wrap:nowrap;align-items:stretch}.sl-s-play-contact .sl-contact-btn{flex:1 1 0;width:auto;min-width:0}}
+/* Contact */
+.sl-s-play-contact__details{display:flex;flex-direction:column;gap:14px;margin-top:22px}
+.sl-s-play-contact__email,.sl-s-play-contact__whatsapp{display:flex;flex-direction:column;gap:4px;padding:14px 16px;border:1px solid rgba(107,124,147,.18);border-radius:14px;text-decoration:none;color:inherit;background:var(--sl-page-bg)}
+.sl-s-play-contact__email-label,.sl-s-play-contact__whatsapp-label{font-size:12px;font-weight:700;color:var(--sl-page-primary);letter-spacing:.02em}
+.sl-s-play-contact__email-value{font-size:15px;font-weight:600;color:var(--sl-page-navy)}
+.sl-s-play-contact__whatsapp{flex-direction:row;align-items:center;gap:12px}
+.sl-s-play-contact__whatsapp-icon{display:inline-flex;color:#25d366;flex:0 0 auto}
+.sl-s-play-contact__whatsapp-text{display:flex;flex-direction:column}
 @media(min-width:900px){.sl-s-play-contact .sl-contact-layout{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:48px;align-items:start}}

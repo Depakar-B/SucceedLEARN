@@ -58,11 +58,13 @@
 
 .sl-pci-learn__list {
 	margin: 0 0 16px;
-	padding-left: 1.2rem;
+	padding-left: 1.35em;
+	list-style: disc;
 }
 
 .sl-pci-learn__list li {
 	margin-bottom: 6px;
+	list-style: disc;
 }
 
 .sl-pci-learn__meta {

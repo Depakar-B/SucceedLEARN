@@ -1,6 +1,6 @@
 <?php
 /**
- * S-Play — Interactive Security Awareness Games.
+ * S-Play — Security Awareness Games That Put Knowledge Into Practice.
  *
  * @package Akaza_Adventure
  */
@@ -13,6 +13,7 @@ $games = array(
 	array(
 		'title'          => __( 'Grab or Duck', 'akaza-adventure' ),
 		'tagline'        => __( 'Make the Security Decision', 'akaza-adventure' ),
+		'image'          => '2026/09/Grab-or-Duck-_Thumbnail.webp',
 		'paragraphs'     => array(
 			__( 'A fast-paced decision-making game where employees identify secure and insecure actions across different situations.', 'akaza-adventure' ),
 			__( 'Learners must decide how to respond, with immediate feedback reinforcing the appropriate security behaviour.', 'akaza-adventure' ),
@@ -23,6 +24,7 @@ $games = array(
 	array(
 		'title'          => __( 'Out of the Well', 'akaza-adventure' ),
 		'tagline'        => __( 'Make the Right Choice to Progress', 'akaza-adventure' ),
+		'image'          => '2026/09/Out-of-the-Well_thumbnail-Design.webp',
 		'paragraphs'     => array(
 			__( 'A scenario-driven security challenge where employees encounter situations requiring them to apply their cybersecurity knowledge and make informed decisions.', 'akaza-adventure' ),
 			__( 'Progress depends on the choices learners make, encouraging them to think about how security principles apply in practice.', 'akaza-adventure' ),
@@ -33,12 +35,24 @@ $games = array(
 	array(
 		'title'          => __( 'Cyber Crossword', 'akaza-adventure' ),
 		'tagline'        => __( 'Test What Employees Remember', 'akaza-adventure' ),
+		'image'          => '2026/09/ISA-Crossword-Thumbnail.webp',
 		'paragraphs'     => array(
 			__( 'A cybersecurity-themed crossword designed to reinforce terminology, concepts and security knowledge through recall.', 'akaza-adventure' ),
 			__( 'The puzzle format gives employees a lighter way to revisit previously learned security concepts while testing what they remember.', 'akaza-adventure' ),
 		),
 		'learning_style' => __( 'Knowledge Challenge', 'akaza-adventure' ),
 		'focus'          => __( 'Recall · Terminology · Knowledge Reinforcement', 'akaza-adventure' ),
+	),
+	array(
+		'title'          => __( 'Back in Time', 'akaza-adventure' ),
+		'tagline'        => __( 'Race Against Time to Protect the Future', 'akaza-adventure' ),
+		'image'          => '2026/09/Back-in-Time-Thumbnail.webp',
+		'paragraphs'     => array(
+			__( 'A fast-paced security awareness game where employees travel back in time and answer questions across privacy, security and compliance topics.', 'akaza-adventure' ),
+			__( 'Learners must make the right choices as they progress, reinforcing key concepts and helping build stronger security awareness through quick, interactive challenges.', 'akaza-adventure' ),
+		),
+		'learning_style' => __( 'Fast-Paced Knowledge Challenge', 'akaza-adventure' ),
+		'focus'          => __( 'Privacy · Compliance · Security Awareness · Knowledge Reinforcement', 'akaza-adventure' ),
 	),
 );
 ?>
@@ -56,8 +70,8 @@ $games = array(
 			</span>
 
 			<h2 id="sl-s-play-games-title">
-				<?php esc_html_e( 'Interactive Security', 'akaza-adventure' ); ?>
-				<span><?php esc_html_e( 'Awareness Games', 'akaza-adventure' ); ?></span>
+				<?php esc_html_e( 'Security Awareness Games That Put', 'akaza-adventure' ); ?>
+				<span><?php esc_html_e( 'Knowledge Into Practice', 'akaza-adventure' ); ?></span>
 			</h2>
 
 			<h3 class="sl-s-play-games__subtitle">
@@ -80,23 +94,37 @@ $games = array(
 			<?php foreach ( $games as $game ) : ?>
 
 				<article class="sl-s-play-games__card">
-					<h3 class="sl-panel-title">
-						<?php echo esc_html( $game['title'] ); ?>
-					</h3>
-					<p class="sl-s-play-games__tagline">
-						<?php echo esc_html( $game['tagline'] ); ?>
-					</p>
-					<?php foreach ( $game['paragraphs'] as $paragraph ) : ?>
-						<p><?php echo esc_html( $paragraph ); ?></p>
-					<?php endforeach; ?>
-					<p class="sl-s-play-games__meta">
-						<strong><?php esc_html_e( 'Learning Style:', 'akaza-adventure' ); ?></strong>
-						<?php echo esc_html( $game['learning_style'] ); ?>
-					</p>
-					<p class="sl-s-play-games__meta">
-						<strong><?php esc_html_e( 'Focus:', 'akaza-adventure' ); ?></strong>
-						<?php echo esc_html( $game['focus'] ); ?>
-					</p>
+					<div class="sl-s-play-games__media">
+						<img
+							src="<?php echo esc_url( akaza_upload_url( $game['image'] ) ); ?>"
+							alt="<?php echo esc_attr( $game['title'] ); ?>"
+							width="800"
+							height="500"
+							loading="lazy"
+							decoding="async"
+						/>
+					</div>
+					<div class="sl-s-play-games__body">
+						<h3 class="sl-panel-title">
+							<?php echo esc_html( $game['title'] ); ?>
+						</h3>
+						<p class="sl-s-play-games__tagline">
+							<?php echo esc_html( $game['tagline'] ); ?>
+						</p>
+						<div class="sl-s-play-games__copy">
+							<?php foreach ( $game['paragraphs'] as $paragraph ) : ?>
+								<p><?php echo esc_html( $paragraph ); ?></p>
+							<?php endforeach; ?>
+						</div>
+						<p class="sl-s-play-games__meta">
+							<strong><?php esc_html_e( 'Learning Style:', 'akaza-adventure' ); ?></strong>
+							<?php echo esc_html( $game['learning_style'] ); ?>
+						</p>
+						<p class="sl-s-play-games__meta">
+							<strong><?php esc_html_e( 'Focus:', 'akaza-adventure' ); ?></strong>
+							<?php echo esc_html( $game['focus'] ); ?>
+						</p>
+					</div>
 				</article>
 
 			<?php endforeach; ?>

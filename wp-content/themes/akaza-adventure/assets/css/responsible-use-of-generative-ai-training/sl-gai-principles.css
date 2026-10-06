@@ -1,0 +1,92 @@
+/**
+ * GenAI — Five principles (numbered editorial rows).
+ */
+
+.sl-gai-principles {
+	padding: 90px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-gai-principles__heading {
+	margin-bottom: 36px;
+	max-width: none;
+	width: 100%;
+}
+
+.sl-gai-principles__heading h2 {
+	margin-bottom: 0;
+}
+
+.sl-gai-principles__list {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	counter-reset: none;
+}
+
+.sl-gai-principles__item {
+	display: grid;
+	grid-template-columns: 48px minmax(0, 1fr);
+	gap: 20px;
+	align-items: start;
+	margin: 0;
+	padding: 24px 28px;
+	list-style: none;
+	border: 1px solid rgba(107, 124, 147, 0.16);
+	border-radius: 16px;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-gai-principles__number {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 42px;
+	height: 42px;
+	border-radius: 10px;
+	background: rgba(19, 93, 183, 0.1);
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.sl-gai-principles__body h3 {
+	margin: 0 0 8px;
+	color: var(--sl-page-navy, #16234e);
+	font-size: 18px !important;
+	font-weight: 700;
+	line-height: 1.35;
+}
+
+.sl-gai-principles__body p {
+	margin: 0;
+	color: var(--sl-page-muted, #6b7c93);
+	font-size: 15px;
+	line-height: 1.6;
+}
+
+@media (max-width: 767px) {
+	.sl-gai-principles {
+		padding: 60px 0;
+	}
+
+	.sl-gai-principles__heading {
+		margin-bottom: 28px;
+	}
+
+	.sl-gai-principles__item {
+		grid-template-columns: 36px minmax(0, 1fr);
+		gap: 14px;
+		padding: 20px;
+	}
+
+	.sl-gai-principles__number {
+		width: 36px;
+		height: 36px;
+		font-size: 13px;
+	}
+}

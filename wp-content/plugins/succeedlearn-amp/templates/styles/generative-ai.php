@@ -37,17 +37,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* Hero */
 .sl-gai-hero{padding:16px 16px 40px;background:radial-gradient(circle at 90% 20%,rgba(20,114,186,.12),transparent 34%),var(--sl-page-white)}
-.sl-gai-hero__grid{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;align-items:start}
+.sl-gai-hero__grid{display:grid;gap:28px;align-items:center}
 .sl-gai-page .sl-gai-hero h1{margin:0 0 14px;color:var(--sl-page-navy);font-size:var(--sl-fs-hero-h1);font-weight:700;line-height:1.15;width:100%;max-width:none}
 .sl-gai-page .sl-gai-hero h2.sl-hero-h2,
 .sl-gai-page .sl-gai-hero__subheading{margin:0 0 14px;font-size:var(--sl-fs-hero-h2,28px);line-height:1.35;color:var(--sl-page-primary);font-weight:600}
 .sl-gai-hero__content p{margin:0 0 14px}
 .sl-gai-hero__accent{color:var(--sl-page-primary)}
-.sl-gai-page .sl-gai-hero__actions{display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;gap:12px;margin-top:20px}
-.sl-gai-page .sl-gai-hero__actions .sl-hero-btn{width:fit-content;max-width:100%;flex:0 0 auto;white-space:nowrap}
-@media(max-width:767px){.sl-gai-page .sl-gai-hero__actions{flex-direction:column;align-items:stretch}.sl-gai-page .sl-gai-hero__actions .sl-hero-btn{width:100%;max-width:100%;white-space:normal}}
-.sl-gai-hero__media{min-width:0;width:100%;max-width:none;margin:0}
+.sl-gai-hero__actions{display:flex;flex-direction:column;flex-wrap:wrap;gap:12px;margin-top:20px}
+.sl-gai-hero__actions .sl-hero-btn{width:100%}
+.sl-gai-hero__media{min-width:0;width:100%;max-width:360px;margin:0 auto}
 .sl-gai-hero__image-placeholder{display:flex;align-items:center;justify-content:center;width:100%;min-height:240px;padding:28px;border:1px dashed rgba(22,35,78,.20);border-radius:12px;background:var(--sl-page-bg);box-sizing:border-box;color:var(--sl-page-muted);text-align:center;font-size:15px;font-weight:600}
+@media(min-width:768px){.sl-gai-hero__grid{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr)}.sl-gai-hero__actions{flex-direction:row}.sl-gai-hero__actions .sl-hero-btn{width:fit-content;max-width:none;flex:0 0 auto;white-space:nowrap}.sl-gai-hero__media{max-width:none}.sl-gai-hero__image-placeholder{min-height:360px;padding:40px;border-radius:16px}}
 
 /* Editorial copy sections */
 .sl-gai-why__copy,.sl-gai-what__copy,.sl-gai-risk__copy,.sl-gai-audience__copy,.sl-gai-policy__copy,.sl-gai-cta__copy{display:flex;flex-direction:column;gap:14px}

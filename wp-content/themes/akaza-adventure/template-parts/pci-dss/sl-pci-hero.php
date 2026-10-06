@@ -8,6 +8,13 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+$pci_hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/SucceedLEARN-Security-Behaviour-Culture-Suite.webp';
+$pci_hero_local = WP_CONTENT_DIR . '/uploads/2026/09/SucceedLEARN-Security-Behaviour-Culture-Suite.webp';
+
+if ( function_exists( 'akaza_upload_url' ) && file_exists( $pci_hero_local ) ) {
+	$pci_hero_image = akaza_upload_url( '2026/09/SucceedLEARN-Security-Behaviour-Culture-Suite.webp' );
+}
 ?>
 
 <section
@@ -72,10 +79,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				<div class="sl-pci-hero__meta" aria-label="<?php esc_attr_e( 'Course details', 'akaza-adventure' ); ?>">
 					<span class="sl-pci-hero__meta-item">
-						<strong><?php esc_html_e( 'Course Duration:', 'akaza-adventure' ); ?></strong>
-						<?php esc_html_e( '45 Minutes', 'akaza-adventure' ); ?>
-					</span>
-					<span class="sl-pci-hero__meta-item">
 						<strong><?php esc_html_e( 'Course Category:', 'akaza-adventure' ); ?></strong>
 						<?php esc_html_e( 'Security Awareness', 'akaza-adventure' ); ?>
 					</span>
@@ -91,8 +94,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 
 			<div class="sl-pci-hero__media">
-				<div class="sl-pci-hero__image-placeholder">
-					<span><?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?></span>
+				<div class="sl-pci-hero__image">
+					<img
+						src="<?php echo esc_url( $pci_hero_image ); ?>"
+						alt="<?php esc_attr_e( 'PCI DSS Awareness Training for Employees and Payment Handlers', 'akaza-adventure' ); ?>"
+						width="720"
+						height="540"
+						loading="eager"
+						decoding="async"
+					/>
 				</div>
 			</div>
 

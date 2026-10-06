@@ -35,8 +35,8 @@ $audit_items = array(
 				</span>
 
 				<h2 id="sl-s-metrics-measure-title">
-					<?php esc_html_e( 'Reporting for Audit', 'akaza-adventure' ); ?>
-					<span><?php esc_html_e( '& Compliance Readiness', 'akaza-adventure' ); ?></span>
+					<?php esc_html_e( 'Turn Awareness Activity', 'akaza-adventure' ); ?>
+					<span><?php esc_html_e( 'Into Audit-Ready Evidence', 'akaza-adventure' ); ?></span>
 				</h2>
 
 				<div class="sl-s-metrics-measure__copy">
@@ -77,9 +77,15 @@ $audit_items = array(
 			</div>
 
 			<div class="sl-s-metrics-measure__media">
-				<div class="sl-s-metrics-measure__image-placeholder">
-					<span><?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?></span>
-				</div>
+				<img
+					class="sl-s-metrics-measure__image"
+					src="<?php echo esc_url( akaza_upload_url( '2026/09/Audit-Compliance-Reporting.webp' ) ); ?>"
+					alt="<?php esc_attr_e( 'Audit & Compliance Reporting', 'akaza-adventure' ); ?>"
+					width="800"
+					height="600"
+					loading="lazy"
+					decoding="async"
+				>
 			</div>
 
 		</div>

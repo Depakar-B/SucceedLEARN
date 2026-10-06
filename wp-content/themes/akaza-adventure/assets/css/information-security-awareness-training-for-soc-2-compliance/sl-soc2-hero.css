@@ -49,6 +49,8 @@
 }
 
 .sl-soc2-hero__top h1 > span {
+	display: inline-block;
+	white-space: nowrap;
 	color: var(--sl-heading-accent, #1472ba);
 }
 

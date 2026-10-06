@@ -1,6 +1,6 @@
 <?php
 /**
- * S-Metrics — How Security Analytics & Reporting Dashboard is beneficial.
+ * S-Metrics — How Security Analytics & Reports Dashboard is beneficial.
  *
  * @package Akaza_Adventure
  */
@@ -23,11 +23,11 @@ $reasons = array(
 		'text'  => __( 'Maintain accurate training records, completion reports, assessment data, certificates, and campaign history to demonstrate due diligence during audits and regulatory reviews.', 'akaza-adventure' ),
 	),
 	array(
-		'title' => __( 'Flexible Reporting', 'akaza-adventure' ),
+		'title' => __( 'Flexible Reports', 'akaza-adventure' ),
 		'text'  => __( 'Filter data according to users, organisational groups, campaigns, courses and other relevant dimensions.', 'akaza-adventure' ),
 	),
 	array(
-		'title' => __( 'Executive-Level Reporting', 'akaza-adventure' ),
+		'title' => __( 'Executive-Level Reports', 'akaza-adventure' ),
 		'text'  => __( 'Provide leadership teams with clear, exportable reports that demonstrate programme performance, employee participation, organisational risk, and security awareness maturity.', 'akaza-adventure' ),
 	),
 	array(
@@ -50,7 +50,7 @@ $reasons = array(
 			</span>
 
 			<h2 id="sl-s-metrics-choose-title">
-				<?php esc_html_e( 'How Security Analytics & Reporting', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'How Security Analytics & Reports', 'akaza-adventure' ); ?>
 				<span><?php esc_html_e( 'Dashboard is beneficial', 'akaza-adventure' ); ?></span>
 			</h2>
 

@@ -1,0 +1,162 @@
+/*
+ * SOC 2 Security Awareness — See training in action.
+ * Layout mirrored from SAP platform section.
+ */
+
+.sl-isat-action {
+	position: relative;
+	z-index: 1;
+	padding: 90px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-isat-action__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+	gap: 60px;
+	align-items: center;
+}
+
+.sl-isat-action__content h2 {
+	margin-bottom: 0;
+}
+
+body.slf-body main.sl-isat-page .sl-isat-action__subtitle,
+body.slf-body #main-content.sl-isat-page .sl-isat-action__subtitle,
+.sl-isat-page .sl-isat-action__subtitle {
+	margin: 16px 0 18px;
+	font-family: var(--slf-font-display, "Space Grotesk", system-ui, sans-serif);
+	font-size: 22px;
+	font-weight: 600;
+	line-height: 1.4;
+	letter-spacing: 0;
+	text-transform: none;
+	color: var(--sl-page-primary, #1472ba);
+}
+
+.sl-isat-action__lead {
+	margin-bottom: 20px !important;
+}
+
+.sl-isat-action__content p {
+	margin-bottom: 16px;
+}
+
+.sl-isat-action__content .sl-content-btn {
+	margin-top: 8px;
+}
+
+.sl-isat-action__media {
+	min-width: 0;
+	width: 100%;
+}
+
+.sl-isat-action__viewport {
+	overflow: hidden;
+	width: 100%;
+	border-radius: 24px;
+}
+
+.sl-isat-action__track {
+	display: flex;
+	width: 100%;
+	transition: transform 0.4s ease;
+	will-change: transform;
+}
+
+.sl-isat-action__slide {
+	flex: 0 0 100%;
+	min-width: 0;
+	margin: 0;
+}
+
+.sl-isat-action__image {
+	overflow: hidden;
+	width: 100%;
+	line-height: 0;
+	border-radius: 24px;
+	background: var(--sl-page-bg, #f5f5f5);
+}
+
+.sl-isat-action__image img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.sl-isat-action__controls {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 18px;
+	margin-top: 18px;
+}
+
+.sl-isat-action__arrow {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	border: 1px solid var(--sl-page-navy, #16234e);
+	border-radius: 50%;
+	background: transparent;
+	color: var(--sl-page-navy, #16234e);
+	font-size: 18px;
+	line-height: 1;
+	cursor: pointer;
+	transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.sl-isat-action__arrow:hover:not(:disabled) {
+	background: var(--sl-page-primary, #1472ba);
+	border-color: var(--sl-page-primary, #1472ba);
+	color: #ffffff;
+}
+
+.sl-isat-action__arrow:disabled {
+	opacity: 0.35;
+	cursor: not-allowed;
+}
+
+.sl-isat-action__counter {
+	min-width: 42px;
+	text-align: center;
+	color: var(--sl-page-navy, #16234e);
+	font-size: 14px;
+	font-weight: 600;
+}
+
+@media (max-width: 991px) {
+	.sl-isat-action__grid {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.sl-isat-action__media {
+		max-width: 520px;
+		margin: 0 auto;
+		order: -1;
+	}
+}
+
+@media (max-width: 767px) {
+	.sl-isat-action {
+		padding: 60px 0;
+	}
+
+	.sl-isat-action__viewport,
+	.sl-isat-action__image {
+		border-radius: 18px;
+	}
+
+	.sl-isat-action__controls {
+		margin-top: 16px;
+	}
+
+	.sl-isat-action__arrow {
+		width: 38px;
+		height: 38px;
+	}
+}

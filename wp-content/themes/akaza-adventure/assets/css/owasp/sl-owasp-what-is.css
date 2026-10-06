@@ -1,0 +1,43 @@
+/**
+ * OWASP — What is OWASP Top 10
+ */
+
+.sl-owasp-what-is {
+	padding: 90px 0;
+	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-owasp-what-is__block {
+	display: grid;
+	grid-template-columns: 100px minmax(0, 1fr);
+	gap: 36px;
+	max-width: 980px;
+}
+
+.sl-owasp-what-is__number {
+	color: var(--sl-page-primary, #1472ba);
+	font-size: 4.4rem;
+	font-weight: 700;
+	line-height: 1;
+	opacity: 0.15;
+}
+
+.sl-owasp-what-is__lead {
+	font-size: 1.15rem;
+	line-height: 1.75;
+}
+
+@media (max-width: 767px) {
+	.sl-owasp-what-is {
+		padding: 60px 0;
+	}
+
+	.sl-owasp-what-is__block {
+		grid-template-columns: 1fr;
+		gap: 10px;
+	}
+
+	.sl-owasp-what-is__number {
+		font-size: 3rem;
+	}
+}

@@ -76,11 +76,11 @@ $suite_reports = array(
 		<div class="sl-s-metrics-suite-reporting__intro">
 
 			<span class="sl-home-sub-heading">
-				<?php esc_html_e( 'Suite-Wide Reporting', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'Suite-Wide Reports', 'akaza-adventure' ); ?>
 			</span>
 
 			<h2 id="sl-s-metrics-suite-reporting-title">
-				<?php esc_html_e( 'Reporting Across the Entire', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'Reports Across the Entire', 'akaza-adventure' ); ?>
 				<span><?php esc_html_e( 'Security Behaviour & Culture Suite', 'akaza-adventure' ); ?></span>
 			</h2>
 

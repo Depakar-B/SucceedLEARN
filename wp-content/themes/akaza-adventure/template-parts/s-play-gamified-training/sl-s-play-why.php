@@ -25,15 +25,7 @@ $why_items = array(
 >
 	<div class="container">
 
-		<div class="sl-s-play-why__grid">
-
-			<div class="sl-s-play-why__media">
-				<div class="sl-s-play-why__image-placeholder">
-					<span><?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?></span>
-				</div>
-			</div>
-
-			<div class="sl-s-play-why__content">
+		<div class="sl-s-play-why__content">
 
 				<span class="sl-home-sub-heading">
 					<?php esc_html_e( 'Engagement That Lasts', 'akaza-adventure' ); ?>
@@ -104,8 +96,6 @@ $why_items = array(
 						?>
 					</p>
 				</div>
-
-			</div>
 
 		</div>
 
