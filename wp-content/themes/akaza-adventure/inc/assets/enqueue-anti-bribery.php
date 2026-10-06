@@ -35,7 +35,6 @@ function akaza_enqueue_anti_bribery_assets() {
 		'sl-abac-delivery-options',
 		'sl-abac-target-audience',
 		'sl-abac-laws-covered',
-		'sl-abac-compliance-library',
 	);
 
 	foreach ( $sections as $section ) {
@@ -91,5 +90,76 @@ function akaza_enqueue_anti_bribery_assets() {
 		'akaza-sl-anti-bribery-page',
 		"{$folder}/sl-anti-bribery-page.css",
 		array( 'akaza-sl-abac-contact', 'akaza-sl-abac-faq', 'akaza-global-fcp-suite', 'akaza-fcp-sl-fcp-cpd' )
+	);
+
+	akaza_inline_anti_bribery_styles(
+		array_merge(
+			array_map(
+				static function ( $section ) {
+					return 'akaza-' . $section;
+				},
+				$sections
+			),
+			array(
+				'akaza-global-course-buy-options',
+				'akaza-global-fcp-suite',
+				'akaza-fcp-sl-fcp-cpd',
+				'akaza-sl-abac-faq',
+				'akaza-sl-abac-contact',
+				'akaza-sl-anti-bribery-page',
+			)
+		)
+	);
+}
+
+/**
+ * Print the ABAC page stylesheets as one inline <style> block at the end of <head>
+ * (after every linked stylesheet) instead of separate cached <link> files.
+ *
+ * Only theme CSS files without relative url() references may be listed here.
+ *
+ * @param string[] $handles Enqueued style handles, in cascade order.
+ */
+function akaza_inline_anti_bribery_styles( $handles ) {
+	$styles = wp_styles();
+	$css    = '';
+
+	foreach ( $handles as $handle ) {
+		if ( empty( $styles->registered[ $handle ] ) ) {
+			continue;
+		}
+
+		$src = strtok( (string) $styles->registered[ $handle ]->src, '?' );
+
+		if ( 0 !== strpos( $src, AKAZA_URI ) ) {
+			continue;
+		}
+
+		$path = AKAZA_DIR . substr( $src, strlen( AKAZA_URI ) );
+
+		if ( ! is_readable( $path ) ) {
+			continue;
+		}
+
+		// A UTF-8 BOM is harmless in a linked file but invalidates the first rule once inlined.
+		$file_css = (string) file_get_contents( $path ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		$file_css = preg_replace( '/^\xEF\xBB\xBF/', '', $file_css );
+
+		$css .= "/* {$handle} */\n" . $file_css . "\n";
+		wp_dequeue_style( $handle );
+	}
+
+	if ( '' === $css ) {
+		return;
+	}
+
+	$css = str_ireplace( '</style', '', $css );
+
+	add_action(
+		'wp_head',
+		static function () use ( $css ) {
+			echo '<style id="akaza-anti-bribery-inline-css">' . "\n" . $css . '</style>' . "\n"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		},
+		999
 	);
 }

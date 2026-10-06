@@ -12,6 +12,7 @@
  * - contact (string) anchor for buy / demo buttons (default #contact)
  * - suite (string) anchor for the organisation "Explore More" button (default #fcp-suite)
  * - individual_image (string) optional image URL; a placeholder is shown when empty
+ * - price (string) optional, e.g. "$18" → "Buy Now @ $18"
  *
  * @package Akaza_Adventure
  */
@@ -24,6 +25,7 @@ $duration         = isset( $args['duration'] ) ? (string) $args['duration'] : ''
 $contact          = isset( $args['contact'] ) ? (string) $args['contact'] : '#contact';
 $suite            = isset( $args['suite'] ) ? (string) $args['suite'] : '#fcp-suite';
 $individual_image = isset( $args['individual_image'] ) ? (string) $args['individual_image'] : 'https://succeedlearn.com/wp-content/uploads/2026/09/Image-1-AML.webp';
+$price            = isset( $args['price'] ) ? (string) $args['price'] : '';
 
 if ( '' === $course ) {
 	return;
@@ -142,7 +144,14 @@ $organisation_features = array(
 
 				<div class="sl-buy-options__actions">
 					<a class="sl-content-btn sl-content-btn-primary" href="<?php echo esc_attr( $contact ); ?>">
-						<?php esc_html_e( 'Buy Now', 'akaza-adventure' ); ?>
+						<?php
+						if ( '' !== $price ) {
+							/* translators: %s: course price, e.g. "$18". */
+							echo esc_html( sprintf( __( 'Buy Now @ %s', 'akaza-adventure' ), $price ) );
+						} else {
+							esc_html_e( 'Buy Now', 'akaza-adventure' );
+						}
+						?>
 					</a>
 					<a class="sl-content-btn sl-content-btn-secondary" href="<?php echo esc_attr( $contact ); ?>">
 						<?php esc_html_e( 'Request Demo', 'akaza-adventure' ); ?>

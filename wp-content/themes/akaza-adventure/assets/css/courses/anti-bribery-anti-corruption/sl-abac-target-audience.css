@@ -97,7 +97,7 @@
 
     background: var(--course-white, #ffffff);
 
-    color: var(--course-primary, #1472ba);
+    color: #16234d;
 
     font-size: 13px;
     font-weight: 700;
@@ -114,7 +114,7 @@
 .sl-abac-target-audience__item h3 {
     margin: 0;
 
-    color: var(--course-primary, #1472ba);
+    color: #16234d;
 
     font-size: 20px;
     line-height: 1.3;
