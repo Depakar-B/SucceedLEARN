@@ -46,14 +46,14 @@
 	overflow: hidden;
 	width: 100%;
 	line-height: 0;
-	border-radius: 16px;
-	background: var(--sl-page-white, #ffffff);
+	background: transparent;
 }
 
 .sl-s-play-works__image img {
 	display: block;
 	width: 100%;
 	height: auto;
+	border-radius: 16px;
 }
 
 .sl-s-play-works__cards {
@@ -116,7 +116,7 @@
 		padding: 22px 20px;
 	}
 
-	.sl-s-play-works__image {
+	.sl-s-play-works__image img {
 		border-radius: 12px;
 	}
 }
