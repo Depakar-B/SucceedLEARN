@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$soc2_hero_file  = '2026/10/ISA-SOC2.webp';
+$soc2_hero_file  = '2026/10/ISA-SOC2-1.webp';
 $soc2_hero_image = 'https://succeedlearn.com/wp-content/uploads/' . $soc2_hero_file;
 $soc2_hero_local = WP_CONTENT_DIR . '/uploads/' . $soc2_hero_file;
 
