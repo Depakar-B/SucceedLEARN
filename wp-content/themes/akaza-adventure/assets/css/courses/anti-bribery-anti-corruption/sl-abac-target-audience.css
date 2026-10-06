@@ -57,6 +57,8 @@
 .sl-abac-target-audience__list {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(5, auto);
+    grid-auto-flow: column;
     column-gap: 40px;
     border-bottom: 1px solid rgba(22, 35, 78, 0.14);
 }
@@ -97,7 +99,7 @@
 
     background: var(--course-white, #ffffff);
 
-    color: var(--course-primary, #1472ba);
+    color: #16234d;
 
     font-size: 13px;
     font-weight: 700;
@@ -114,7 +116,7 @@
 .sl-abac-target-audience__item h3 {
     margin: 0;
 
-    color: var(--course-primary, #1472ba);
+    color: #16234d;
 
     font-size: 20px;
     line-height: 1.3;
@@ -173,6 +175,8 @@
 
     .sl-abac-target-audience__list {
         grid-template-columns: 1fr;
+        grid-template-rows: none;
+        grid-auto-flow: row;
     }
 
     .sl-abac-target-audience__item {

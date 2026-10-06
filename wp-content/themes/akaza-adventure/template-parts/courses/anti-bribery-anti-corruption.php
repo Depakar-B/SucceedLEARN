@@ -21,6 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			'course'   => 'ABAC',
 			'duration' => __( '30-minute duration', 'akaza-adventure' ),
 			'contact'  => '#contact',
+			'price'    => '$18',
 		)
 	);
 	get_template_part(
@@ -40,7 +41,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php get_template_part( 'template-parts/courses/anti-bribery-anti-corruption/sl-abac-delivery-options' ); ?>
 	<?php get_template_part( 'template-parts/courses/anti-bribery-anti-corruption/sl-abac-target-audience' ); ?>
 	<?php get_template_part( 'template-parts/courses/anti-bribery-anti-corruption/sl-abac-laws-covered' ); ?>
-	<?php get_template_part( 'template-parts/courses/anti-bribery-anti-corruption/sl-abac-compliance-library' ); ?>
 	<?php get_template_part( 'template-parts/financial-crime-prevention/sl-fcp-cpd' ); ?>
 	<?php get_template_part( 'template-parts/courses/anti-bribery-anti-corruption/sl-abac-faq' ); ?>
 	<?php get_template_part( 'template-parts/courses/anti-bribery-anti-corruption/sl-abac-contact' ); ?>

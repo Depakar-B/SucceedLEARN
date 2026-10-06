@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/FCP-Homepage_Hero-section.webp';
+$hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/10/insider_trading_risk_puzzle_20261006.webp';
 
 $hero_points = array(
 	__( 'Scenario-based eLearning', 'akaza-adventure' ),

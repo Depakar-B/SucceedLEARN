@@ -145,6 +145,18 @@
 }
 
 /* =========================================================
+   Small desktop: wrap the description onto more lines so it
+   clears the illustration's map pins on the right.
+========================================================= */
+
+@media (min-width: 1001px) and (max-width: 1499px) {
+
+	.sl-anti-bribery-hero__description {
+		max-width: clamp(380px, calc(44vw - 69px), 500px);
+	}
+}
+
+/* =========================================================
    Tablet
 ========================================================= */
 

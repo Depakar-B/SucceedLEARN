@@ -59,6 +59,7 @@ $parts = array(
 						'course'   => __( 'Modern Slavery', 'akaza-adventure' ),
 						'duration' => __( '15-minute duration', 'akaza-adventure' ),
 						'contact'  => '#buy-course',
+						'price'    => '$18',
 					)
 				);
 				get_template_part(
