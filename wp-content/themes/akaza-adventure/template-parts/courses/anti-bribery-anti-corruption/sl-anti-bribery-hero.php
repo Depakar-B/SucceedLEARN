@@ -60,7 +60,7 @@ $hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/ABAC_Hero-sec
 							<?php esc_html_e( 'Individual', 'akaza-adventure' ); ?>
 						</span>
 						<a class="sl-hero-btn sl-hero-btn-primary" href="#individuals">
-							<?php esc_html_e( 'Buy Now', 'akaza-adventure' ); ?>
+							<?php esc_html_e( 'Buy Now @ $18', 'akaza-adventure' ); ?>
 							<span aria-hidden="true">→</span>
 						</a>
 					</div>
