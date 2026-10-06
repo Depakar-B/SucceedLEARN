@@ -37,6 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php get_template_part( 'template-parts/courses/tax-evasion-facilitation/sl-tax-evasion-understanding' ); ?>
 	<?php get_template_part( 'template-parts/courses/tax-evasion-facilitation/sl-tax-evasion-cfa' ); ?>
 	<?php get_template_part( 'template-parts/courses/tax-evasion-facilitation/sl-tax-evasion-course-content' ); ?>
+	<?php get_template_part( 'template-parts/financial-crime-prevention/sl-fcp-cpd' ); ?>
 	<?php get_template_part( 'template-parts/courses/tax-evasion-facilitation/sl-tax-evasion-risk-assessment' ); ?>	
 	<?php get_template_part( 'template-parts/courses/tax-evasion-facilitation/sl-tax-evasion-cycle' ); ?>
 	<?php get_template_part( 'template-parts/courses/tax-evasion-facilitation/sl-tax-evasion-audience' ); ?>
