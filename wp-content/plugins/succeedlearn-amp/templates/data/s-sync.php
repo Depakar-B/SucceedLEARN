@@ -94,93 +94,64 @@ function succeedlearn_amp_get_ssync_connect_items() {
 }
 
 /**
- * @return array<int, array{title:string,text:string}>
- */
-function succeedlearn_amp_get_ssync_integrations() {
-	return array(
-		array(
-			'title' => __( 'Single Sign-On (SSO)', 'succeedlearn-amp' ),
-			'text'  => __( 'Provide employees with secure, seamless access using their existing organisational credentials. By eliminating the need for separate usernames and passwords, Single Sign-On can help create a more familiar learner experience while reducing unnecessary credential management.', 'succeedlearn-amp' ),
-		),
-		array(
-			'title' => __( 'Automated User Provisioning', 'succeedlearn-amp' ),
-			'text'  => __( 'Automatically synchronise employee information between organisational systems and the SucceedLEARN platform. New users can be onboarded quickly, while role changes and employee exits are reflected without manual intervention.', 'succeedlearn-amp' ),
-		),
-		array(
-			'title' => __( 'HR System Synchronisation', 'succeedlearn-amp' ),
-			'text'  => __( 'Maintain accurate learner records by synchronising employee information such as departments, locations, reporting managers, and organisational hierarchy from your HR platform.', 'succeedlearn-amp' ),
-		),
-		array(
-			'title' => __( 'LMS Compatibility', 'succeedlearn-amp' ),
-			'text'  => __( 'Integrate SucceedLEARN content with existing Learning Management Systems through SCORM-compatible packages, allowing organisations to manage training within their preferred learning environment while maintaining a consistent learner experience.', 'succeedlearn-amp' ),
-		),
-		array(
-			'title' => __( 'Microsoft & Google Integration', 'succeedlearn-amp' ),
-			'text'  => __( 'Enable seamless authentication and user management through widely adopted workplace platforms, simplifying deployment and reducing administrative overhead.', 'succeedlearn-amp' ),
-		),
-		array(
-			'title' => __( 'API-Based Connectivity', 'succeedlearn-amp' ),
-			'text'  => __( 'For organisations with unique business requirements, S-Sync supports API-based integration, allowing secure communication with internal systems and third-party applications.', 'succeedlearn-amp' ),
-		),
-	);
-}
-
-/**
- * Connected systems groups with optional logo upload paths.
+ * Enterprise integration groups with logo upload paths (mirrors desktop theme).
  *
  * Logo keys use `url` (preferred) or `file` for Media Library paths under uploads/.
  *
- * @return array<int, array{title:string,lead:string,text:string,logos:array<int, array{name:string,url?:string,file?:string}>}>
+ * @return array<int, array{title:string,lead:string,text:string,supports?:string,logos:array<int, array{name:string,url?:string,file?:string}>}>
  */
-function succeedlearn_amp_get_ssync_system_groups() {
+function succeedlearn_amp_get_ssync_integration_groups() {
 	return array(
 		array(
-			'title' => __( 'Single Sign-On & Identity Providers', 'succeedlearn-amp' ),
-			'lead'  => __( 'Secure access through your existing identity environment', 'succeedlearn-amp' ),
-			'text'  => __( 'Support secure and streamlined access using established enterprise identity providers and SAML-based authentication.', 'succeedlearn-amp' ),
-			'logos' => array(
+			'title'    => __( 'Single Sign-On & Identity', 'succeedlearn-amp' ),
+			'lead'     => __( 'Secure access through your existing identity environment', 'succeedlearn-amp' ),
+			'text'     => __( 'Enable employees to securely access SucceedLEARN through supported SAML-based Single Sign-On (SSO), reducing the need for separate credentials and simplifying access management.', 'succeedlearn-amp' ),
+			'supports' => __( 'Supported Integrations:', 'succeedlearn-amp' ),
+			'logos'    => array(
 				array(
 					'name' => __( 'Microsoft Entra ID', 'succeedlearn-amp' ),
-					'url'  => '2025/08/Microsoft_Entra_ID_color_icon.svg-1.png',
+					'url'  => '2026/10/Microsoft-Azure.webp',
 				),
 				array(
 					'name' => __( 'OneLogin', 'succeedlearn-amp' ),
-					'url'  => '2025/08/Onelogin_Mark_black_RGB.png-1-1.png',
+					'url'  => '2026/10/onelogin.webp',
 				),
 				array(
 					'name' => __( 'Okta', 'succeedlearn-amp' ),
-					'url'  => '2025/08/okta-icon-logo-png_seeklogo-483919-1.png',
+					'url'  => '2026/10/octa.webp',
 				),
 				array(
 					'name' => __( 'JumpCloud', 'succeedlearn-amp' ),
-					'url'  => '2025/08/Asset-1@2x-1.png',
+					'url'  => '2026/10/jumpcloud.webp',
 				),
 				array(
 					'name' => __( 'Other SAML 2.0 Identity Providers', 'succeedlearn-amp' ),
-					'url'  => '',
+					'url'  => '2026/10/others.webp',
 				),
 			),
 		),
 		array(
-			'title' => __( 'Workplace Authentication (OAuth)', 'succeedlearn-amp' ),
-			'lead'  => __( 'Connect with familiar workplace accounts', 'succeedlearn-amp' ),
-			'text'  => __( 'Enable users to authenticate through supported workplace ecosystems for a more familiar sign-in experience.', 'succeedlearn-amp' ),
-			'logos' => array(
+			'title'    => __( 'Workplace Authentication', 'succeedlearn-amp' ),
+			'lead'     => __( 'Connect with familiar workplace accounts', 'succeedlearn-amp' ),
+			'text'     => __( 'Allow users to securely sign in through supported workplace accounts, creating a simpler and more familiar authentication experience.', 'succeedlearn-amp' ),
+			'supports' => __( 'Supported Integrations:', 'succeedlearn-amp' ),
+			'logos'    => array(
 				array(
 					'name' => __( 'Google', 'succeedlearn-amp' ),
-					'url'  => '2025/08/image-4.png',
+					'url'  => '2026/10/google.webp',
 				),
 				array(
 					'name' => __( 'Microsoft', 'succeedlearn-amp' ),
-					'url'  => '2025/08/Microsoft_Entra_ID_color_icon.svg-1.png',
+					'url'  => '2026/10/microsoft.webp',
 				),
 			),
 		),
 		array(
-			'title' => __( 'HR & HCM Systems', 'succeedlearn-amp' ),
-			'lead'  => __( 'Keep learner information aligned with your workforce', 'succeedlearn-amp' ),
-			'text'  => __( 'Connect supported HR and HCM platforms to help automate employee onboarding, synchronise workforce information and maintain more accurate learner records.', 'succeedlearn-amp' ),
-			'logos' => array(
+			'title'    => __( 'HR & HCM Systems', 'succeedlearn-amp' ),
+			'lead'     => __( 'Keep learner information aligned with your workforce', 'succeedlearn-amp' ),
+			'text'     => __( 'Connect SucceedLEARN with supported HR and HCM systems to help automate employee onboarding, synchronise workforce information and maintain accurate learner records as your organisation changes.', 'succeedlearn-amp' ),
+			'supports' => __( 'Supported Integrations:', 'succeedlearn-amp' ),
+			'logos'    => array(
 				array(
 					'name' => __( 'Keka', 'succeedlearn-amp' ),
 					'url'  => '2026/10/keka.webp',
@@ -204,28 +175,60 @@ function succeedlearn_amp_get_ssync_system_groups() {
 			),
 		),
 		array(
-			'title' => __( 'Automated User Provisioning', 'succeedlearn-amp' ),
-			'lead'  => __( 'Keep user access aligned as your workforce changes', 'succeedlearn-amp' ),
-			'text'  => __( 'Support automated user provisioning and relevant profile updates through SCIM-based identity management.', 'succeedlearn-amp' ),
-			'logos' => array(
+			'title'    => __( 'Automated User Provisioning', 'succeedlearn-amp' ),
+			'lead'     => __( 'Keep user access aligned as your workforce changes', 'succeedlearn-amp' ),
+			'text'     => __( 'Use SCIM-based provisioning to help automate user creation and relevant profile updates, reducing manual administration as employees join, move within or leave the organisation.', 'succeedlearn-amp' ),
+			'supports' => __( 'Supported Integration:', 'succeedlearn-amp' ),
+			'logos'    => array(
 				array(
 					'name' => __( 'SCIM', 'succeedlearn-amp' ),
-					'url'  => '',
+					'url'  => '2026/10/scim.webp',
 				),
 			),
 		),
 		array(
-			'title' => __( 'Compliance Automation', 'succeedlearn-amp' ),
-			'lead'  => __( 'Connect awareness activity with your compliance ecosystem', 'succeedlearn-amp' ),
-			'text'  => __( 'Integrate SucceedLEARN with Vanta to support synchronisation of relevant security-awareness training and completion information.', 'succeedlearn-amp' ),
-			'logos' => array(
+			'title'    => __( 'LMS Compatibility', 'succeedlearn-amp' ),
+			'lead'     => __( 'Deliver learning through your existing LMS environment', 'succeedlearn-amp' ),
+			'text'     => __( 'Integrate applicable SucceedLEARN content with existing Learning Management Systems through SCORM-compatible packages, allowing organisations to deliver training within their preferred learning environment.', 'succeedlearn-amp' ),
+			'supports' => __( 'Supported Delivery:', 'succeedlearn-amp' ),
+			'logos'    => array(
+				array(
+					'name' => __( 'SCORM-Compatible LMS', 'succeedlearn-amp' ),
+				),
+			),
+		),
+		array(
+			'title'    => __( 'Compliance Automation', 'succeedlearn-amp' ),
+			'lead'     => __( 'Connect security awareness with your compliance ecosystem', 'succeedlearn-amp' ),
+			'text'     => __( 'Connect SucceedLEARN with supported compliance platforms to help synchronise relevant security-awareness training and completion information.', 'succeedlearn-amp' ),
+			'supports' => __( 'Supported Integration:', 'succeedlearn-amp' ),
+			'logos'    => array(
 				array(
 					'name' => __( 'Vanta', 'succeedlearn-amp' ),
 					'url'  => '2026/10/vanta.webp',
 				),
 			),
 		),
+		array(
+			'title'    => __( 'API-Based Connectivity', 'succeedlearn-amp' ),
+			'lead'     => __( 'Connect beyond pre-built integrations', 'succeedlearn-amp' ),
+			'text'     => __( 'For organisations with additional integration requirements, S-Sync supports API-based connectivity, providing greater flexibility to connect SucceedLEARN with relevant internal systems and third-party applications.', 'succeedlearn-amp' ),
+			'supports' => __( 'Capability:', 'succeedlearn-amp' ),
+			'logos'    => array(
+				array(
+					'name' => __( 'API Connectivity', 'succeedlearn-amp' ),
+				),
+			),
+		),
 	);
+}
+
+/**
+ * @deprecated Use succeedlearn_amp_get_ssync_integration_groups().
+ * @return array<int, array{title:string,lead:string,text:string,supports?:string,logos:array}>
+ */
+function succeedlearn_amp_get_ssync_system_groups() {
+	return succeedlearn_amp_get_ssync_integration_groups();
 }
 
 /**

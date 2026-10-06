@@ -61,7 +61,7 @@ function succeedlearn_amp_get_isat_meta_description() {
  * @return string
  */
 function succeedlearn_amp_get_isat_hero_image() {
-	return succeedlearn_amp_upload_url( '2026/01/Information-Security-Awareness-Hero-Section-1.webp' );
+	return succeedlearn_amp_upload_url( '2026/10/ISA-Standard-1.webp' );
 }
 
 /**

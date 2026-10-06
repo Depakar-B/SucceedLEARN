@@ -163,6 +163,17 @@ function succeedlearn_amp_get_sp_games() {
 			'learning_style' => __( 'Knowledge Challenge', 'succeedlearn-amp' ),
 			'focus'          => __( 'Recall · Terminology · Knowledge Reinforcement', 'succeedlearn-amp' ),
 		),
+		array(
+			'title'          => __( 'Back in Time', 'succeedlearn-amp' ),
+			'tagline'        => __( 'Race Against Time to Protect the Future', 'succeedlearn-amp' ),
+			'image'          => '2026/09/Back-in-Time-Thumbnail.webp',
+			'paragraphs'     => array(
+				__( 'A fast-paced security awareness game where employees travel back in time and answer questions across privacy, security and compliance topics.', 'succeedlearn-amp' ),
+				__( 'Learners must make the right choices as they progress, reinforcing key concepts and helping build stronger security awareness through quick, interactive challenges.', 'succeedlearn-amp' ),
+			),
+			'learning_style' => __( 'Fast-Paced Knowledge Challenge', 'succeedlearn-amp' ),
+			'focus'          => __( 'Privacy · Compliance · Security Awareness · Knowledge Reinforcement', 'succeedlearn-amp' ),
+		),
 	);
 }
 

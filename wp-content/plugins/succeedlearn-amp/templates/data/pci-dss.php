@@ -58,7 +58,7 @@ function succeedlearn_amp_get_pci_dss_meta_description() {
  * @return string
  */
 function succeedlearn_amp_get_pci_dss_hero_image() {
-	return succeedlearn_amp_upload_url( '2026/09/SucceedLEARN-Security-Behaviour-Culture-Suite.webp' );
+	return succeedlearn_amp_upload_url( '2026/10/PCI-DSS-Employee.webp' );
 }
 
 /**

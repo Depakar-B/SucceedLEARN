@@ -62,7 +62,7 @@ function succeedlearn_amp_get_soc2_meta_description() {
  * @return string
  */
 function succeedlearn_amp_get_soc2_hero_image() {
-	return succeedlearn_amp_upload_url( '2026/10/ISA-SOC2.webp' );
+	return succeedlearn_amp_upload_url( '2026/10/ISA-SOC2-1.webp' );
 }
 
 /**

@@ -156,19 +156,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media(min-width:1000px){.sl-bfsi-action__grid{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:60px}.sl-bfsi-action__media{max-width:none;margin:0}}
 
 /* Cases */
-.sl-bfsi-cases__layout{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;align-items:start}
-.sl-bfsi-cases__intro{min-width:0}
+.sl-bfsi-cases__intro{max-width:920px;margin:0 0 28px}
 .sl-bfsi-cases__intro .sl-home-sub-heading{display:block;margin-bottom:14px}
 .sl-bfsi-cases__intro h2{margin-bottom:16px}
 .sl-bfsi-cases__copy{display:flex;flex-direction:column;gap:14px}
 .sl-bfsi-page .sl-bfsi-cases__copy p{margin:0}
-.sl-bfsi-cases__cards{display:flex;flex-direction:column;gap:16px;min-width:0}
-.sl-bfsi-cases__card{padding:22px 20px;border:1px solid rgba(107,124,147,.18);border-radius:16px;background:var(--sl-page-white);box-sizing:border-box}
-.sl-bfsi-cases__number{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;margin-bottom:16px;border:1px solid rgba(20,114,186,.18);border-radius:8px;background:rgba(20,114,186,.08);color:var(--sl-page-primary);font-weight:700}
-.sl-bfsi-cases__card .sl-panel-title{margin:0 0 12px}
+.sl-bfsi-cases__cards{display:grid;grid-template-columns:1fr;gap:16px;align-items:stretch}
+.sl-bfsi-cases__card{height:100%;padding:22px 20px;border:1px solid rgba(107,124,147,.18);border-radius:16px;background:var(--sl-page-white);box-sizing:border-box}
+.sl-bfsi-cases__card .sl-panel-title{margin:0 0 12px;min-height:calc(1.3em * 2)}
 .sl-bfsi-page .sl-bfsi-cases__card p{margin:0}
-@media(min-width:768px){.sl-bfsi-cases__cards{gap:20px}.sl-bfsi-cases__card{padding:28px 24px}}
-@media(min-width:992px){.sl-bfsi-cases__layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px}.sl-bfsi-cases__intro{position:sticky;top:110px;align-self:start}}
+@media(min-width:768px){.sl-bfsi-cases__cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.sl-bfsi-cases__card{padding:28px 24px}}
 
 /* Choose */
 .sl-bfsi-choose__intro{margin-bottom:28px}

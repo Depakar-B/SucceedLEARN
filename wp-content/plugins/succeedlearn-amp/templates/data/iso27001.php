@@ -62,7 +62,7 @@ function succeedlearn_amp_get_iso27001_meta_description() {
  * @return string
  */
 function succeedlearn_amp_get_iso27001_hero_image() {
-	return succeedlearn_amp_upload_url( '2026/01/ISO-27001-Staff-Awareness-eLearning-Hero-Section-1.webp' );
+	return succeedlearn_amp_upload_url( '2026/10/ISO-27001-1.webp' );
 }
 
 /**

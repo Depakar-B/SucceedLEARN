@@ -54,7 +54,6 @@ $meta_desc  = succeedlearn_amp_get_ssync_meta_description();
 	succeedlearn_amp_ssync_partial( 'why' );
 	succeedlearn_amp_ssync_partial( 'connect' );
 	succeedlearn_amp_ssync_partial( 'integrations' );
-	succeedlearn_amp_ssync_partial( 'systems' );
 	succeedlearn_amp_ssync_partial( 'enterprise' );
 	succeedlearn_amp_ssync_partial( 'choose' );
 	succeedlearn_amp_ssync_partial( 'suite' );
