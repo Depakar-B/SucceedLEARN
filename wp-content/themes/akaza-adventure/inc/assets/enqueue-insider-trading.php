@@ -65,4 +65,10 @@ function akaza_enqueue_insider_trading_assets() {
 	// Global contact section + course demo form.
 	akaza_enqueue_theme_style( 'akaza-contact-form', 'contact-from.css', array( 'akaza-main' ) );
 	wp_enqueue_style( 'akaza-global-contact' );
+
+	akaza_enqueue_theme_style(
+		'akaza-sl-insider-trading-page',
+		"{$folder}/sl-insider-trading-page.css",
+		array( 'akaza-global-contact', 'akaza-global-faq', 'akaza-global-fcp-suite', 'akaza-contact-form', 'akaza-sl-insider-trading-contact' )
+	);
 }
