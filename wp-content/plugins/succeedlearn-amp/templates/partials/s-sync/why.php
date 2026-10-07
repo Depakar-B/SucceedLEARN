@@ -1,6 +1,6 @@
 <?php
 /**
- * S-Sync AMP — Why Security Awareness Integrations Matter.
+ * S-Sync AMP — Why Integrations Matter.
  *
  * @package SucceedLEARN\AMP
  */
@@ -23,14 +23,14 @@ $why_image = function_exists( 'succeedlearn_amp_get_ssync_why_image' )
 						width="800"
 						height="600"
 						layout="responsive"
-						alt="<?php esc_attr_e( 'Why Security Awareness Integrations Matter', 'succeedlearn-amp' ); ?>"
+						alt="<?php esc_attr_e( 'Why Integrations Matter', 'succeedlearn-amp' ); ?>"
 					></amp-img>
 				</div>
 			</div>
 			<div class="sl-s-sync-why__content">
 				<span class="sl-home-sub-heading"><?php esc_html_e( 'Connected Operations', 'succeedlearn-amp' ); ?></span>
 				<h2 id="sl-s-sync-why-title" class="sl-h2">
-					<?php esc_html_e( 'Why Security Awareness', 'succeedlearn-amp' ); ?>
+					<?php esc_html_e( 'Why', 'succeedlearn-amp' ); ?>
 					<span><?php esc_html_e( 'Integrations Matter', 'succeedlearn-amp' ); ?></span>
 				</h2>
 				<div class="sl-s-sync-why__copy">
