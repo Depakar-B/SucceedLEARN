@@ -213,7 +213,7 @@ function succeedlearn_amp_get_sm_suite_items() {
 		array(
 			'name'        => __( 'S-Bytes', 'succeedlearn-amp' ),
 			'action'      => __( 'Reinforce', 'succeedlearn-amp' ),
-			'description' => __( 'Keep important security concepts fresh through continuous microlearning.', 'succeedlearn-amp' ),
+			'description' => __( 'Keep important security concepts fresh through short, continuous microlearning.', 'succeedlearn-amp' ),
 		),
 		array(
 			'name'        => __( 'S-Phish', 'succeedlearn-amp' ),
@@ -223,7 +223,7 @@ function succeedlearn_amp_get_sm_suite_items() {
 		array(
 			'name'        => __( 'S-Play', 'succeedlearn-amp' ),
 			'action'      => __( 'Engage', 'succeedlearn-amp' ),
-			'description' => __( 'Reinforce cybersecurity concepts through interactive and gamified learning.', 'succeedlearn-amp' ),
+			'description' => __( 'Reinforce security concepts through interactive and gamified learning.', 'succeedlearn-amp' ),
 		),
 		array(
 			'name'        => __( 'S-Signs', 'succeedlearn-amp' ),
