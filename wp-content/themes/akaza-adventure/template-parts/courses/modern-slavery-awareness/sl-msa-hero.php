@@ -48,7 +48,7 @@ $hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/Modern-Slaver
 			<div class="msa-cta-row sl-hero-actions sl-hero-actions--labelled">
 				<div class="sl-hero-cta-item">
 					<span class="sl-hero-cta-label"><?php esc_html_e( 'Individual', 'akaza-adventure' ); ?></span>
-					<a href="#individuals" class="msa-cta msa-cta--solid">
+					<a href="#buy-course" class="msa-cta msa-cta--solid">
 						<?php esc_html_e( 'Buy Now @ $18', 'akaza-adventure' ); ?>
 						<span aria-hidden="true">&rarr;</span>
 					</a>

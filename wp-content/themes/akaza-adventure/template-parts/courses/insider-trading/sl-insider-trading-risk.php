@@ -42,20 +42,6 @@ defined( 'ABSPATH' ) || exit;
 
 		<div class="sl-insider-trading-risk__grid">
 
-			<!-- Left: Image -->
-			<div class="sl-insider-trading-risk__media">
-
-				<img
-					class="sl-insider-trading-risk__image"
-					src="https://succeedlearn.com/wp-content/uploads/2026/10/insider_trading_monitoring_scene.webp"
-					alt="<?php esc_attr_e( 'A person reviewing a trading decision beside confidential information', 'akaza-adventure' ); ?>"
-					loading="lazy"
-					decoding="async"
-				>
-
-			</div>
-
-			<!-- Right: Content -->
 			<div class="sl-insider-trading-risk__content">
 
 				<div class="sl-insider-trading-risk__body">
@@ -82,37 +68,17 @@ defined( 'ABSPATH' ) || exit;
 
 			</div>
 
-		</div>
+			<div class="sl-insider-trading-risk__media">
 
-		<!-- Highlighted Decision Box -->
-		<div class="sl-insider-trading-risk__highlight">
+				<img
+					class="sl-insider-trading-risk__image"
+					src="https://succeedlearn.com/wp-content/uploads/2026/10/insider_trading_monitoring_scene.webp"
+					alt="<?php esc_attr_e( 'A person reviewing a trading decision beside confidential information', 'akaza-adventure' ); ?>"
+					loading="lazy"
+					decoding="async"
+				>
 
-					<h4>
-						<?php
-						esc_html_e(
-							'The practical question employees need to recognise',
-							'akaza-adventure'
-						);
-						?>
-					</h4>
-
-					<p class="sl-insider-trading-risk__question">
-						<?php
-						esc_html_e(
-							'“Do I know something that changes what I should do before I trade or share this information?”',
-							'akaza-adventure'
-						);
-						?>
-					</p>
-
-					<p class="sl-insider-trading-risk__highlight-copy">
-						<?php
-						esc_html_e(
-							'Effective Insider Trading eLearning helps employees recognise that decision point before they act.',
-							'akaza-adventure'
-						);
-						?>
-					</p>
+			</div>
 
 		</div>
 

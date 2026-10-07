@@ -36,6 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php get_template_part( 'template-parts/courses/insider-trading/sl-insider-trading-regulatory-frameworks' ); ?>
 	<?php get_template_part( 'template-parts/courses/insider-trading/sl-insider-trading-other-jurisdictions' ); ?>
 	<?php get_template_part( 'template-parts/courses/insider-trading/sl-insider-trading-topics' ); ?>
+	<?php get_template_part( 'template-parts/financial-crime-prevention/sl-fcp-cpd' ); ?>
 	<?php get_template_part( 'template-parts/courses/insider-trading/sl-insider-trading-audience' ); ?>
 	<?php get_template_part( 'template-parts/courses/insider-trading/sl-insider-trading-why' ); ?>
 	<?php get_template_part( 'template-parts/courses/insider-trading/sl-insider-trading-faq' ); ?>

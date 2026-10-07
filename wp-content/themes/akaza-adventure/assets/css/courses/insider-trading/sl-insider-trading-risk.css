@@ -16,8 +16,7 @@
    ========================================================= */
 
 .sl-insider-trading-risk__intro,
-.sl-insider-trading-risk__intro h2,
-.sl-insider-trading-risk__highlight {
+.sl-insider-trading-risk__intro h2 {
 	width: 100%;
 	max-width: none;
 }
@@ -28,7 +27,7 @@
 
 .sl-insider-trading-risk__grid {
 	display: grid;
-	grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+	grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
 	gap: 64px;
 	align-items: center;
 }
@@ -75,41 +74,6 @@
 
 
 /* =========================================================
-   Highlighted Decision Box
-   ========================================================= */
-
-.sl-insider-trading-risk__highlight {
-	margin-top: 28px;
-	padding: 24px 26px;
-
-	background: var(--course-white, #ffffff);
-	border-left: 4px solid var(--course-primary, #1472ba);
-	border-radius: 0 12px 12px 0;
-}
-
-.sl-insider-trading-risk__highlight h4 {
-	margin: 0 0 12px;
-	color: var(--course-navy, #16234e);
-	font-size: 18px;
-	font-weight: 700;
-	line-height: 1.4;
-}
-
-.sl-insider-trading-risk__question {
-	margin: 0 0 12px;
-	color: var(--course-primary, #1472ba);
-	font-size: 20px;
-	font-weight: 700;
-	line-height: 1.5;
-}
-
-.sl-insider-trading-risk__highlight-copy {
-	margin: 0;
-	color: var(--course-text, #4a4a4a);
-}
-
-
-/* =========================================================
    Tablet
    ========================================================= */
 
@@ -132,14 +96,6 @@
 		gap: 36px;
 	}
 
-	.sl-insider-trading-risk__media {
-		order: 1;
-	}
-
-	.sl-insider-trading-risk__content {
-		order: 2;
-	}
-
 	.sl-insider-trading-risk__image {
 		height: 280px;
 		border-radius: 14px;
@@ -147,14 +103,5 @@
 
 	.sl-insider-trading-risk__intro h2 {
 		margin-bottom: 18px;
-	}
-
-	.sl-insider-trading-risk__highlight {
-		margin-top: 24px;
-		padding: 20px;
-	}
-
-	.sl-insider-trading-risk__question {
-		font-size: 18px;
 	}
 }
