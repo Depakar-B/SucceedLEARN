@@ -67,7 +67,7 @@ function succeedlearn_amp_get_anti_bribery_meta_description() {
  */
 function succeedlearn_amp_get_anti_bribery_images() {
 	return array(
-		'hero'          => succeedlearn_amp_upload_url( '2026/09/ABAC_Hero-section-image.webp' ),
+		'hero'          => succeedlearn_amp_upload_url( '2026/10/anti_bribery_controls_infographic.webp' ),
 		'individuals'   => succeedlearn_amp_upload_url( '2026/09/Image-1-AML.webp' ),
 		'organisations' => succeedlearn_amp_upload_url( '2026/09/organisation-image-1.webp' ),
 		'cpd'           => succeedlearn_amp_upload_url( '2026/09/CPD.webp' ),
