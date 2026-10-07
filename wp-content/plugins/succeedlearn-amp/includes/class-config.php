@@ -259,6 +259,16 @@ class Config {
 				'page_templates' => array( 'page-templates/s-signs-security-awareness.php' ),
 				'template'       => 'pages/s-signs',
 			),
+			's_bytes' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					's-byte',
+					's-bytes',
+					'security-awareness/s-bytes',
+				),
+				'page_templates' => array( 'page-templates/s-bytes.php' ),
+				'template'       => 'pages/s-bytes',
+			),
 			's_sync' => array(
 				'default_id'     => 0,
 				'slugs'          => array(
