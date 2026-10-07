@@ -48,7 +48,8 @@
 
 .ftpf-law__split .ftpf-law__media {
 	justify-self: end;
-	width: min(100%, 360px);
+	width: min(100%, 440px);
+	margin-right: 48px;
 }
 
 .ftpf-law__why .ftpf-law__media {
@@ -158,6 +159,11 @@
 	.ftpf-law__why,
 	.ftpf-law__cards {
 		grid-template-columns: 1fr;
+	}
+
+	.ftpf-law__split .ftpf-law__media {
+		justify-self: center;
+		margin-right: 0;
 	}
 
 	.ftpf-law__card {
