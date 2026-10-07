@@ -15,11 +15,11 @@ $why_image = succeedlearn_amp_get_sm_image( '2026/09/Why-Security-Awareness-Repo
 	<div class="sl-wrap">
 		<div class="sl-s-metrics-why__grid">
 			<div class="sl-s-metrics-why__content">
-				<span class="sl-home-sub-heading"><?php esc_html_e( 'Why Reporting Matters', 'succeedlearn-amp' ); ?></span>
+				<span class="sl-home-sub-heading"><?php esc_html_e( 'Why Reports Matters', 'succeedlearn-amp' ); ?></span>
 
 				<h2 id="sl-s-metrics-why-title" class="sl-h2">
 					<?php esc_html_e( 'Why Security Awareness', 'succeedlearn-amp' ); ?>
-					<span><?php esc_html_e( 'Reporting Matters', 'succeedlearn-amp' ); ?></span>
+					<span><?php esc_html_e( 'Reports Matters', 'succeedlearn-amp' ); ?></span>
 				</h2>
 
 				<h3 class="sl-s-metrics-why__subtitle">
@@ -41,7 +41,7 @@ $why_image = succeedlearn_amp_get_sm_image( '2026/09/Why-Security-Awareness-Repo
 						width="800"
 						height="600"
 						layout="responsive"
-						alt="<?php esc_attr_e( 'Why Security Awareness Reporting Matters', 'succeedlearn-amp' ); ?>"
+						alt="<?php esc_attr_e( 'Why Security Awareness Reports Matters', 'succeedlearn-amp' ); ?>"
 					></amp-img>
 				</div>
 			</div>

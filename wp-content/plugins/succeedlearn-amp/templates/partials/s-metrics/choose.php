@@ -1,6 +1,6 @@
 <?php
 /**
- * S-Metrics AMP — How Security Analytics & Reporting Dashboard is beneficial.
+ * S-Metrics AMP — How Security Analytics & Reports Dashboard is beneficial.
  *
  * @package SucceedLEARN\AMP
  */
@@ -17,7 +17,7 @@ $reasons = succeedlearn_amp_get_sm_choose_reasons();
 			<span class="sl-home-sub-heading"><?php esc_html_e( 'Programme Benefits', 'succeedlearn-amp' ); ?></span>
 
 			<h2 id="sl-s-metrics-choose-title" class="sl-h2">
-				<?php esc_html_e( 'How Security Analytics & Reporting', 'succeedlearn-amp' ); ?>
+				<?php esc_html_e( 'How Security Analytics & Reports', 'succeedlearn-amp' ); ?>
 				<span><?php esc_html_e( 'Dashboard is beneficial', 'succeedlearn-amp' ); ?></span>
 			</h2>
 		</div>
