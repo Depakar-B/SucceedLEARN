@@ -49,9 +49,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="sl-tax-evasion-cfa__media">
 
 				<div class="sl-tax-evasion-cfa__image">
-					<div class="sl-tax-evasion-cfa__image-placeholder">
-						<?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?>
-					</div>
+					<img
+						src="https://succeedlearn.com/wp-content/uploads/2026/10/Image-5_Tax-evasion.webp"
+						alt="<?php esc_attr_e( 'Training, documents and business relationships shown as tax evasion risks', 'akaza-adventure' ); ?>"
+						loading="lazy"
+						decoding="async"
+					>
 				</div>
 
 			</div>

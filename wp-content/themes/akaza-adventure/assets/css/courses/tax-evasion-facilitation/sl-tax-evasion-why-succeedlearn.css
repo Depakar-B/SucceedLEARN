@@ -11,8 +11,7 @@
 
 .sl-tax-evasion-why-succeedlearn__grid {
 	display: grid;
-	grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-	gap: 72px;
+	grid-template-columns: minmax(0, 1fr);
 	align-items: start;
 }
 
@@ -78,39 +77,6 @@
 
 
 /*
- * Right image
- */
-
-.sl-tax-evasion-why-succeedlearn__media {
-	position: sticky;
-	top: calc(var(--slf-header-clearance, 110px) + 24px);
-	align-self: start;
-}
-
-.sl-tax-evasion-why-succeedlearn__image {
-	width: 100%;
-	overflow: hidden;
-	border: 1px solid rgba(22, 35, 78, 0.10);
-	border-radius: 16px;
-	background: var(--sl-page-white, #ffffff);
-}
-
-.sl-tax-evasion-why-succeedlearn__image-placeholder {
-	display: flex;
-	min-height: 500px;
-	align-items: center;
-	justify-content: center;
-	padding: 30px;
-	box-sizing: border-box;
-	background: #f5f7fa;
-	color: var(--sl-page-primary, #1472ba);
-	text-align: center;
-	font-size: 14px;
-	font-weight: 600;
-}
-
-
-/*
  * Tablet
  */
 
@@ -122,16 +88,6 @@
 
 	.sl-tax-evasion-why-succeedlearn__grid {
 		grid-template-columns: 1fr;
-		gap: 42px;
-	}
-
-	.sl-tax-evasion-why-succeedlearn__media {
-		position: static;
-		order: 2;
-	}
-
-	.sl-tax-evasion-why-succeedlearn__image-placeholder {
-		min-height: 420px;
 	}
 }
 
@@ -167,9 +123,5 @@
 
 	.sl-tax-evasion-why-succeedlearn__benefit:first-child {
 		border-top: 1px solid rgba(22, 35, 78, 0.12);
-	}
-
-	.sl-tax-evasion-why-succeedlearn__image-placeholder {
-		min-height: 320px;
 	}
 }

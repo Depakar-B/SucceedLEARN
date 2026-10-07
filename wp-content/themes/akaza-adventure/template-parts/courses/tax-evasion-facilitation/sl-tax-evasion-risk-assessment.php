@@ -34,20 +34,6 @@ $risk_assessment_points = array(
 
 		<div class="sl-tax-evasion-risk-assessment__grid">
 
-			<!-- Image -->
-			<div class="sl-tax-evasion-risk-assessment__media">
-
-				<div class="sl-tax-evasion-risk-assessment__image">
-
-					<div class="sl-tax-evasion-risk-assessment__image-placeholder">
-						<?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?>
-					</div>
-
-				</div>
-
-			</div>
-
-			<!-- Content -->
 			<div class="sl-tax-evasion-risk-assessment__content">
 
 				<span class="sl-home-sub-heading">

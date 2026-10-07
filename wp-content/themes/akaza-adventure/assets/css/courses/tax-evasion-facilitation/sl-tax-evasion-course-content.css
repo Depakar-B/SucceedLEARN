@@ -80,9 +80,11 @@
 	padding-right: 20px;
 }
 
+body.slf-body #main-content .sl-tax-evasion-course-content__text h3.sl-panel-title,
 .sl-tax-evasion-course-content__text .sl-panel-title {
 	margin-top: 0;
 	margin-bottom: 8px;
+	color: #16234d;
 }
 
 .sl-tax-evasion-course-content__text p {

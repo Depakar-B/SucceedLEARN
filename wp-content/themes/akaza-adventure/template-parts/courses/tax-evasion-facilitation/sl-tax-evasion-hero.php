@@ -33,7 +33,7 @@ $hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/Tax-Evasion_H
 			<div class="sl-tax-evasion-hero__content">
 
 				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'UK Financial Crime Prevention Training', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Preventing Facilitation of Tax Evasion Compliance Training', 'akaza-adventure' ); ?>
 				</span>
 
 				<h1 id="sl-tax-evasion-hero-title">

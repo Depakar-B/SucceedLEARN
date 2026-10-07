@@ -22,9 +22,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="sl-tax-evasion-understanding__media">
 
 				<div class="sl-tax-evasion-understanding__image">
-					<div class="sl-tax-evasion-understanding__image-placeholder">
-						<?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?>
-					</div>
+					<img
+						src="https://succeedlearn.com/wp-content/uploads/2026/10/Image-1_Tax-evaison.webp"
+						alt="<?php esc_attr_e( 'Tax authority questioning a person handing over a case of cash', 'akaza-adventure' ); ?>"
+						loading="lazy"
+						decoding="async"
+					>
 				</div>
 
 			</div>
