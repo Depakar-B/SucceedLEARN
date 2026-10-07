@@ -29,17 +29,17 @@
 
 .sl-tax-evasion-interactive__carousel {
 	display: grid;
-	grid-template-columns: auto minmax(0, 1fr) auto;
+	grid-template-columns: auto minmax(0, 820px) auto;
 	align-items: center;
-	gap: 18px;
+	justify-content: center;
+	gap: 14px;
 	margin-top: 36px;
 }
 
 .sl-tax-evasion-interactive__viewport {
 	overflow: hidden;
-	border: 1px solid rgba(22, 35, 78, 0.10);
+	width: 100%;
 	border-radius: 16px;
-	background: #f4f7fb;
 }
 
 .sl-tax-evasion-interactive__track {
@@ -58,15 +58,9 @@
 .sl-tax-evasion-interactive__image img {
 	display: block;
 	width: 100%;
-	height: auto;
-	aspect-ratio: 16 / 9;
-	object-fit: contain;
+	height: 420px;
+	object-fit: cover;
 	object-position: center;
-}
-
-.sl-tax-evasion-interactive__image--compact img {
-	width: 78%;
-	margin-inline: auto;
 }
 
 .sl-tax-evasion-interactive__arrow {
@@ -128,5 +122,9 @@
 
 	.sl-tax-evasion-interactive__viewport {
 		border-radius: 12px;
+	}
+
+	.sl-tax-evasion-interactive__image img {
+		height: 240px;
 	}
 }

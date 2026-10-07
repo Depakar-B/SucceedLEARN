@@ -71,8 +71,7 @@ $course_images = array(
 			<div class="sl-tax-evasion-interactive__viewport">
 				<div class="sl-tax-evasion-interactive__track" data-tax-evasion-track>
 					<?php foreach ( $course_images as $image ) : ?>
-						<?php $is_compact = false !== strpos( $image['src'], 'Image-4_Tax-Evasion.webp' ); ?>
-						<div class="sl-tax-evasion-interactive__image<?php echo $is_compact ? ' sl-tax-evasion-interactive__image--compact' : ''; ?>">
+						<div class="sl-tax-evasion-interactive__image">
 							<img
 								src="<?php echo esc_url( $image['src'] ); ?>"
 								alt="<?php echo esc_attr( $image['alt'] ); ?>"
