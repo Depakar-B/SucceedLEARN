@@ -17,7 +17,7 @@ $cpd_highlights = array(
 	__( 'Supports Continuing Development', 'succeedlearn-amp' ),
 );
 ?>
-<section id="cpd" class="sl-section sl-section--alt sl-aml-pe-vc-cpd" aria-labelledby="sl-anti-bribery-cpd-title">
+<section id="cpd" class="sl-section sl-aml-pe-vc-cpd" aria-labelledby="sl-anti-bribery-cpd-title">
 	<div class="sl-wrap">
 		<div class="sl-aml-intro">
 			<span class="sl-eyebrow sl-home-sub-heading">

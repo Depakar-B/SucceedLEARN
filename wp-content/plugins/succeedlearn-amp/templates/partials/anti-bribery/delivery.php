@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<section id="abac-delivery-options" class="sl-section sl-aml-pe-vc-delivery" aria-labelledby="sl-anti-bribery-delivery-title">
+<section id="abac-delivery-options" class="sl-section sl-section--alt sl-aml-pe-vc-delivery" aria-labelledby="sl-anti-bribery-delivery-title">
 	<div class="sl-wrap">
 		<div class="sl-aml-intro">
 			<span class="sl-eyebrow sl-home-sub-heading">

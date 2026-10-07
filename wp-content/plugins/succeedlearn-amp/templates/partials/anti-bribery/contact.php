@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $whatsapp_url = 'https://wa.me/916362021778';
 ?>
-<section id="contact" class="sl-section sl-section--alt sl-aml-pe-vc-contact" aria-labelledby="sl-anti-bribery-contact-title">
+<section id="contact" class="sl-section sl-aml-pe-vc-contact" aria-labelledby="sl-anti-bribery-contact-title">
 	<div class="sl-wrap sl-contact-layout">
 		<div class="sl-contact-intro">
 			<span class="sl-eyebrow sl-home-sub-heading">
