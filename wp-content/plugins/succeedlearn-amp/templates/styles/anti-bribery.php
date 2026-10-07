@@ -124,9 +124,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 .sl-anti-bribery-page .sl-abac-scenario-grid .sl-panel-title,
 .sl-anti-bribery-page .sl-abac-scenario-grid .sl-aml-concept>p{margin-left:18px;margin-right:18px}
 .sl-anti-bribery-page .sl-abac-scenario-grid .sl-aml-concept__code{margin-top:16px}
-.sl-anti-bribery-page .sl-abac-law-card__region{display:inline-flex;align-items:center;margin:0 0 12px;padding:7px 12px;border-radius:999px;background:var(--sl-page-primary-soft);color:var(--sl-page-primary);font-size:13px;font-weight:700;line-height:1.2}
-.sl-anti-bribery-page .sl-abac-law-card .sl-panel-title{text-align:left}
-.sl-anti-bribery-page .sl-abac-law-card .sl-aml-copy{text-align:left}
+.sl-anti-bribery-page .sl-abac-law-card{padding:0 0 18px;overflow:hidden}
+.sl-anti-bribery-page .sl-abac-law-card .sl-aml-media{margin:0}
+.sl-anti-bribery-page .sl-abac-law-card .sl-aml-media .sl-aml-image{max-width:none;border:0;border-radius:14px 14px 0 0}
+.sl-anti-bribery-page .sl-abac-law-card__region{display:inline-flex;align-items:center;margin:16px 18px 12px;padding:7px 12px;border-radius:999px;background:var(--sl-page-primary-soft);color:var(--sl-page-primary);font-size:13px;font-weight:700;line-height:1.2}
+.sl-anti-bribery-page .sl-abac-law-card .sl-panel-title{margin-left:18px;margin-right:18px;text-align:left}
+.sl-anti-bribery-page .sl-abac-law-card .sl-aml-copy{margin:0 18px;text-align:left}
 
 /* Course journey cards: number in the top-right, title and copy from the left. */
 .sl-anti-bribery-page .sl-abac-journey-list{grid-template-columns:minmax(0,1fr)}
