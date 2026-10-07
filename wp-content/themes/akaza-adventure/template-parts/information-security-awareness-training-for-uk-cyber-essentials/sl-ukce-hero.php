@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$ukce_hero_file  = '2026/10/ISA-UK-Cyber-Essentials.webp';
+$ukce_hero_file  = '2026/10/ISA-UK-Cyber-Essentials-1.webp';
 $ukce_hero_image = 'https://succeedlearn.com/wp-content/uploads/' . $ukce_hero_file;
 $ukce_hero_local = WP_CONTENT_DIR . '/uploads/' . $ukce_hero_file;
 
