@@ -61,7 +61,7 @@ $courses = array(
 	),
 );
 ?>
-<section id="fcp-suite" class="sl-section sl-course-suite sl-course-suite--fcp" aria-labelledby="sl-fcp-course-suite-title">
+<section id="fcp-suite" class="sl-section sl-section--alt sl-course-suite sl-course-suite--fcp" aria-labelledby="sl-fcp-course-suite-title">
 	<div class="sl-wrap">
 		<div class="sl-course-suite__header">
 			<div class="sl-course-suite__intro">
