@@ -191,10 +191,6 @@ function succeedlearn_amp_get_sp_benefits() {
 			'title' => __( 'Short, Focused Experiences', 'succeedlearn-amp' ),
 			'text'  => __( 'Individual activities provide another way to reinforce awareness without requiring employees to repeatedly complete lengthy courses.', 'succeedlearn-amp' ),
 		),
-		array(
-			'title' => __( 'Repeated Engagement', 'succeedlearn-amp' ),
-			'text'  => __( 'Games can be incorporated into ongoing awareness campaigns, creating additional security touchpoints throughout the year.', 'succeedlearn-amp' ),
-		),
 	);
 }
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * S-Play AMP — Interactive Security Awareness Games.
+ * S-Play AMP — Security Awareness Games That Put Knowledge Into Practice.
  *
  * @package SucceedLEARN\AMP
  */
@@ -22,8 +22,8 @@ if ( empty( $games ) ) {
 		<div class="sl-s-play-games__intro">
 			<span class="sl-home-sub-heading"><?php esc_html_e( 'S-Play games', 'succeedlearn-amp' ); ?></span>
 			<h2 id="sl-s-play-games-title" class="sl-h2">
-				<?php esc_html_e( 'Interactive Security', 'succeedlearn-amp' ); ?>
-				<span><?php esc_html_e( 'Awareness Games', 'succeedlearn-amp' ); ?></span>
+				<?php esc_html_e( 'Security Awareness Games That Put', 'succeedlearn-amp' ); ?>
+				<span><?php esc_html_e( 'Knowledge Into Practice', 'succeedlearn-amp' ); ?></span>
 			</h2>
 			<h3 class="sl-s-play-games__subtitle">
 				<?php esc_html_e( 'Different Ways to Play. One Goal: Reinforce Security Awareness.', 'succeedlearn-amp' ); ?>

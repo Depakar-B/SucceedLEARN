@@ -1,6 +1,6 @@
 <?php
 /**
- * S-Play AMP — Visibility Into Gamified Learning.
+ * S-Play AMP — From Employee Participation to Actionable Insights.
  *
  * @package SucceedLEARN\AMP
  */
@@ -19,8 +19,8 @@ $delivery_image = function_exists( 'succeedlearn_amp_get_sp_delivery_image' )
 			<div class="sl-s-play-delivery__content">
 				<span class="sl-home-sub-heading"><?php esc_html_e( 'Campaign Visibility', 'succeedlearn-amp' ); ?></span>
 				<h2 id="sl-s-play-delivery-title" class="sl-h2">
-					<?php esc_html_e( 'Visibility Into', 'succeedlearn-amp' ); ?>
-					<span><?php esc_html_e( 'Gamified Learning', 'succeedlearn-amp' ); ?></span>
+					<?php esc_html_e( 'From Employee Participation to', 'succeedlearn-amp' ); ?>
+					<span><?php esc_html_e( 'Actionable Insights', 'succeedlearn-amp' ); ?></span>
 				</h2>
 				<h3 class="sl-s-play-delivery__subtitle">
 					<?php esc_html_e( 'Keep Employee Engagement Measurable', 'succeedlearn-amp' ); ?>
