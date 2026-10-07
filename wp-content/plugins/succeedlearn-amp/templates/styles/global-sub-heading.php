@@ -21,6 +21,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 .sl-whistleblowing-pe-vc-page .sl-eyebrow,
 .sl-political-donations-pe-vc-page .sl-home-sub-heading,
 .sl-political-donations-pe-vc-page .sl-eyebrow,
+.sl-anti-bribery-page .sl-home-sub-heading,
+.sl-anti-bribery-page .sl-eyebrow,
 .sl-pevc-page .sl-home-sub-heading,
 .sl-pevc-page .sl-eyebrow{
 	display:inline-flex;
@@ -51,6 +53,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 .sl-whistleblowing-pe-vc-page .sl-eyebrow::before,
 .sl-political-donations-pe-vc-page .sl-home-sub-heading::before,
 .sl-political-donations-pe-vc-page .sl-eyebrow::before,
+.sl-anti-bribery-page .sl-home-sub-heading::before,
+.sl-anti-bribery-page .sl-eyebrow::before,
 .sl-pevc-page .sl-home-sub-heading::before,
 .sl-pevc-page .sl-eyebrow::before{
 	content:none;
