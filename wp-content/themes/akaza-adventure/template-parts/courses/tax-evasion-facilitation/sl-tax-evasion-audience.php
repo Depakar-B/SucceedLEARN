@@ -63,8 +63,8 @@ $audience_groups = array(
 			</span>
 
 			<h2 id="sl-tax-evasion-audience-title">
-				<?php esc_html_e( 'Who Should Take Preventing Facilitation of Tax Evasion', 'akaza-adventure' ); ?>
-				<span><?php esc_html_e( 'Training?', 'akaza-adventure' ); ?></span>
+				<?php esc_html_e( 'Who should take tax evasion prevention', 'akaza-adventure' ); ?>
+				<span><?php esc_html_e( 'training', 'akaza-adventure' ); ?></span>
 			</h2>
 
 			<p>

@@ -8,6 +8,7 @@
 	display: grid;
 	grid-template-columns: 0.78fr 1.12fr;
 	gap: clamp(55px, 8vw, 105px);
+	align-items: center;
 }
 
 .ftpf-reporting__route {
