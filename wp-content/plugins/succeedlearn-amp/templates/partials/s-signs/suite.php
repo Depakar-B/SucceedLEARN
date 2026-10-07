@@ -1,8 +1,6 @@
 <?php
 /**
- * S-Signs AMP — Security Behaviour & Culture Suite.
- *
- * Ports theme global SBCS component (media on left, white background).
+ * S-Signs AMP — From Awareness to Continuous Reinforcement.
  *
  * @package SucceedLEARN\AMP
  */
@@ -15,10 +13,6 @@ $suite_items = function_exists( 'succeedlearn_amp_get_ss_suite_items' )
 	? succeedlearn_amp_get_ss_suite_items()
 	: array();
 
-$suite_image = function_exists( 'succeedlearn_amp_get_ss_suite_image' )
-	? succeedlearn_amp_get_ss_suite_image()
-	: 'https://succeedlearn.com/wp-content/uploads/2026/09/From-Awareness-to-Real-World-Readiness.webp';
-
 if ( empty( $suite_items ) ) {
 	return;
 }
@@ -30,12 +24,13 @@ if ( empty( $suite_items ) ) {
 >
 	<div class="sl-wrap">
 		<div class="sl-sbcs__intro">
-			<span class="sl-home-sub-heading"><?php esc_html_e( 'Security Behaviour & Culture Suite', 'succeedlearn-amp' ); ?></span>
+			<span class="sl-home-sub-heading"><?php esc_html_e( 'S-Signs Keeps Security Visible', 'succeedlearn-amp' ); ?></span>
 			<h2 id="security-behaviour-culture-suite-title" class="sl-h2">
 				<?php esc_html_e( 'From Awareness to', 'succeedlearn-amp' ); ?>
-				<span><?php esc_html_e( 'Real-World Readiness', 'succeedlearn-amp' ); ?></span>
+				<span><?php esc_html_e( 'Continuous Reinforcement', 'succeedlearn-amp' ); ?></span>
 			</h2>
-			<p><?php esc_html_e( 'As part of the SucceedLEARN Security Behaviour & Culture Suite, continuous learning, reinforcement, engagement, testing and measurement work together to help organisations build stronger security behaviours.', 'succeedlearn-amp' ); ?></p>
+			<p><?php esc_html_e( 'S-Signs forms the Remind layer of the SucceedLEARN Security Behaviour & Culture Suite.', 'succeedlearn-amp' ); ?></p>
+			<p><?php esc_html_e( 'It works alongside awareness training, microlearning, phishing simulations, gamified learning and measurement to keep security messages present throughout the employee journey.', 'succeedlearn-amp' ); ?></p>
 		</div>
 
 		<div class="sl-sbcs__layout">
@@ -56,22 +51,11 @@ if ( empty( $suite_items ) ) {
 					</div>
 				<?php endforeach; ?>
 			</div>
-			<div class="sl-sbcs__media">
-				<div class="sl-sbcs__image">
-					<amp-img
-						src="<?php echo esc_url( $suite_image ); ?>"
-						width="720"
-						height="900"
-						layout="responsive"
-						alt="<?php esc_attr_e( 'From Awareness to Real-World Readiness', 'succeedlearn-amp' ); ?>"
-					></amp-img>
-				</div>
-			</div>
 		</div>
 
 		<div class="sl-sbcs__closing">
 			<p>
-				<strong><?php esc_html_e( 'Together, these solutions create a continuous cycle of learning, testing, reinforcement and measurement.', 'succeedlearn-amp' ); ?></strong>
+				<?php esc_html_e( 'Together, these solutions create a continuous cycle of learning, reinforcement, testing, engagement, reminders and measurement.', 'succeedlearn-amp' ); ?>
 			</p>
 		</div>
 	</div>

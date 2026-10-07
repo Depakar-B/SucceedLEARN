@@ -47,7 +47,7 @@ function succeedlearn_amp_get_ss_canonical_url() {
  * @return string
  */
 function succeedlearn_amp_get_ss_page_title() {
-	return __( 'Visual Security Awareness Posters & Digital Nudges', 'succeedlearn-amp' );
+	return __( 'Security Awareness Posters & Digital Nudges', 'succeedlearn-amp' );
 }
 
 /**
@@ -102,7 +102,7 @@ function succeedlearn_amp_get_ss_campaigns() {
 			'text'  => __( 'Create themed awareness campaigns around phishing, passwords, data security, remote working and other priority topics.', 'succeedlearn-amp' ),
 		),
 		array(
-			'title' => __( 'Phishing Reinforcement', 'succeedlearn-amp' ),
+			'title' => __( 'Post Phishing Reinforcement', 'succeedlearn-amp' ),
 			'text'  => __( 'Follow a phishing simulation campaign with visual reminders about suspicious messages, links, verification and reporting.', 'succeedlearn-amp' ),
 		),
 		array(
@@ -116,10 +116,6 @@ function succeedlearn_amp_get_ss_campaigns() {
 		array(
 			'title' => __( 'Data Protection Campaigns', 'succeedlearn-amp' ),
 			'text'  => __( 'Keep secure information handling, confidentiality and privacy responsibilities visible.', 'succeedlearn-amp' ),
-		),
-		array(
-			'title' => __( 'Security Incident Reporting', 'succeedlearn-amp' ),
-			'text'  => __( 'Remind employees where and when suspicious activity should be reported.', 'succeedlearn-amp' ),
 		),
 		array(
 			'title' => __( 'New Joiner Awareness', 'succeedlearn-amp' ),
@@ -195,7 +191,7 @@ function succeedlearn_amp_get_ss_suite_items() {
 		array(
 			'name'        => __( 'S-Bytes', 'succeedlearn-amp' ),
 			'action'      => __( 'Reinforce', 'succeedlearn-amp' ),
-			'description' => __( 'Keep important security concepts fresh through continuous microlearning.', 'succeedlearn-amp' ),
+			'description' => __( 'Keep important security concepts fresh through short, continuous microlearning.', 'succeedlearn-amp' ),
 		),
 		array(
 			'name'        => __( 'S-Phish', 'succeedlearn-amp' ),
@@ -205,12 +201,12 @@ function succeedlearn_amp_get_ss_suite_items() {
 		array(
 			'name'        => __( 'S-Play', 'succeedlearn-amp' ),
 			'action'      => __( 'Engage', 'succeedlearn-amp' ),
-			'description' => __( 'Reinforce cybersecurity concepts through interactive and gamified learning.', 'succeedlearn-amp' ),
+			'description' => __( 'Reinforce security concepts through interactive and gamified learning.', 'succeedlearn-amp' ),
 		),
 		array(
 			'name'        => __( 'S-Signs', 'succeedlearn-amp' ),
 			'action'      => __( 'Remind', 'succeedlearn-amp' ),
-			'description' => __( 'Keep security visible through ongoing awareness campaigns and visual nudges.', 'succeedlearn-amp' ),
+			'description' => __( 'Keep cybersecurity visible through posters, digital awareness and behavioural nudges.', 'succeedlearn-amp' ),
 		),
 		array(
 			'name'        => __( 'S-Metrics', 'succeedlearn-amp' ),
