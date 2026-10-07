@@ -30,7 +30,7 @@ $course_images = array(
 		'alt' => __( 'A facilitator inflating a sale while serving a tax evader', 'akaza-adventure' ),
 	),
 	array(
-		'src' => 'https://succeedlearn.com/wp-content/uploads/2026/10/Image-2_Tax-Evasion-1.webp',
+		'src' => 'https://succeedlearn.com/wp-content/uploads/2026/10/Image-2_Tax-Evasion.webp',
 		'alt' => __( 'A learner sorting a statement into evasion or not evasion', 'akaza-adventure' ),
 	),
 );
