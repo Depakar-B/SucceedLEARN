@@ -53,15 +53,27 @@ function akaza_enqueue_tax_evasion_assets() {
 		);
 	}
 
-	// Individuals / Organisations sections + FCP course suite.
+	// Individuals / Organisations sections, FCP course suite, and CPD certification.
 	akaza_enqueue_theme_style( 'akaza-global-course-buy-options', 'sl-global-course-buy-options.css', $deps );
 	akaza_enqueue_theme_style( 'akaza-global-fcp-suite', 'sl-global-fcp-suite.css', $deps );
+	akaza_enqueue_theme_style( 'akaza-fcp-sl-fcp-cpd', 'financial-crime-prevention/fcp-sl-fcp-cpd.css', $deps );
 
 	// Global FAQ accordion (CSS + JS). Registered in enqueue-core.php.
 	wp_enqueue_style( 'akaza-global-faq' );
 	wp_enqueue_script( 'akaza-global-faq' );
 
+	akaza_enqueue_theme_script(
+		'akaza-sl-tax-evasion-interactive',
+		'courses/tax-evasion-facilitation/sl-tax-evasion-interactive.js'
+	);
+
 	// Global contact section + course demo form.
 	akaza_enqueue_theme_style( 'akaza-contact-form', 'contact-from.css', array( 'akaza-main' ) );
 	wp_enqueue_style( 'akaza-global-contact' );
+
+	akaza_enqueue_theme_style(
+		'akaza-sl-tax-evasion-page',
+		"{$folder}/sl-tax-evasion-page.css",
+		array( 'akaza-global-contact', 'akaza-global-faq', 'akaza-global-fcp-suite', 'akaza-fcp-sl-fcp-cpd', 'akaza-contact-form' )
+	);
 }

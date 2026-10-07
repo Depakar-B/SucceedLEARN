@@ -25,7 +25,7 @@ $hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/Failure-to-pr
 
 	<div class="ftpf-container">
 		<div class="ftpf-hero__content">
-			<span class="sl-home-sub-heading"><?php esc_html_e( 'Financial Crime Prevention eLearning', 'akaza-adventure' ); ?></span>
+			<span class="sl-home-sub-heading"><?php esc_html_e( 'Fraud Prevention Compliance eLearning', 'akaza-adventure' ); ?></span>
 
 			<h1 id="ftpf-hero-title">
 				<?php esc_html_e( 'Failure to Prevent', 'akaza-adventure' ); ?>
@@ -42,9 +42,18 @@ $hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/Failure-to-pr
 				</p>
 			</div>
 
-			<div class="ftpf-btn-row">
-				<a class="ftpf-btn ftpf-btn--solid" href="#request-demo"><?php esc_html_e( 'Request a Demo', 'akaza-adventure' ); ?></a>
-				<a class="ftpf-btn ftpf-btn--outline" href="#why-it-matters"><?php esc_html_e( 'Why This Training Matters', 'akaza-adventure' ); ?></a>
+			<div class="ftpf-btn-row sl-hero-actions sl-hero-actions--labelled">
+				<div class="sl-hero-cta-item">
+					<span class="sl-hero-cta-label"><?php esc_html_e( 'Individual', 'akaza-adventure' ); ?></span>
+					<a class="ftpf-btn ftpf-btn--solid" href="#request-demo">
+						<?php esc_html_e( 'Buy Now @ $18', 'akaza-adventure' ); ?>
+						<span aria-hidden="true">&rarr;</span>
+					</a>
+				</div>
+				<div class="sl-hero-cta-item">
+					<span class="sl-hero-cta-label"><?php esc_html_e( 'Organisation', 'akaza-adventure' ); ?></span>
+					<a class="ftpf-btn ftpf-btn--outline" href="#organisations"><?php esc_html_e( 'Explore More', 'akaza-adventure' ); ?></a>
+				</div>
 			</div>
 		</div>
 	</div>

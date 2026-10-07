@@ -27,7 +27,6 @@
 
 .ftpf-page .ftpf-responsibility h2 {
 	color: var(--ftpf-white);
-	font-size: clamp(2rem, 3.5vw, 3.4rem);
 }
 
 .ftpf-page .ftpf-responsibility h2 span {
@@ -38,6 +37,13 @@
 	max-width: 760px;
 	margin-bottom: 0;
 	color: rgba(255, 255, 255, 0.78);
+}
+
+.ftpf-responsibility__aside {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 22px;
 }
 
 .ftpf-responsibility__mark {

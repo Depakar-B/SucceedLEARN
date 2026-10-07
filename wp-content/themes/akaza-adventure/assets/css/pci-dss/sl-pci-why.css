@@ -30,14 +30,14 @@
 	overflow: hidden;
 	width: 100%;
 	line-height: 0;
-	border-radius: 16px;
-	background: var(--sl-page-white, #ffffff);
+	background: transparent;
 }
 
 .sl-pci-why__image img {
 	display: block;
 	width: 100%;
 	height: auto;
+	border-radius: 16px;
 }
 
 @media (max-width: 991px) {
@@ -48,5 +48,5 @@
 
 @media (max-width: 767px) {
 	.sl-pci-why { padding: 52px 0; }
-	.sl-pci-why__image { border-radius: 12px; }
+	.sl-pci-why__image img { border-radius: 12px; }
 }

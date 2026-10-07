@@ -386,6 +386,15 @@ class Config {
 				'page_templates' => array( 'page-templates/financial-crime-prevention.php' ),
 				'template'       => 'pages/financial-crime-prevention',
 			),
+			'anti_bribery' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					'anti-bribery-anti-corruption',
+					'anti-bribery',
+				),
+				'page_templates' => array( 'page-templates/anti-bribery-anti-corruption.php' ),
+				'template'       => 'pages/anti-bribery',
+			),
 			'code_of_conduct' => array(
 				'default_id'     => 0,
 				'slugs'          => array( 'code-of-conduct' ),

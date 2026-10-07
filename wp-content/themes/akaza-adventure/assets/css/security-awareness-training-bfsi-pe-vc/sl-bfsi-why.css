@@ -29,22 +29,21 @@
 .sl-bfsi-why__image {
 	overflow: hidden;
 	width: 100%;
-	min-height: 320px;
 	line-height: 0;
-	border-radius: 16px;
-	background: var(--sl-page-white, #ffffff);
+	background: transparent;
 }
 
 .sl-bfsi-why__image img {
 	display: block;
 	width: 100%;
 	height: auto;
+	border-radius: 16px;
 }
 
 .sl-bfsi-why__image--placeholder {
 	min-height: 420px;
-	border: 1px solid rgba(22, 35, 78, 0.1);
-	background: var(--sl-page-white, #ffffff);
+	border-radius: 16px;
+	background: transparent;
 }
 
 @media (max-width: 991px) {
@@ -55,6 +54,6 @@
 
 @media (max-width: 767px) {
 	.sl-bfsi-why { padding: 52px 0; }
-	.sl-bfsi-why__image { border-radius: 12px; }
-	.sl-bfsi-why__image--placeholder { min-height: 240px; }
+	.sl-bfsi-why__image img { border-radius: 12px; }
+	.sl-bfsi-why__image--placeholder { min-height: 240px; border-radius: 12px; }
 }
