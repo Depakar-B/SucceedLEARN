@@ -395,6 +395,12 @@ class Config {
 				'page_templates' => array( 'page-templates/anti-bribery-anti-corruption.php' ),
 				'template'       => 'pages/anti-bribery',
 			),
+			'modern_slavery' => array(
+				'default_id'     => 0,
+				'slugs'          => array( 'modern-slavery-awareness' ),
+				'page_templates' => array( 'page-templates/modern-slavery-awareness.php' ),
+				'template'       => 'pages/modern-slavery',
+			),
 			'code_of_conduct' => array(
 				'default_id'     => 0,
 				'slugs'          => array( 'code-of-conduct' ),
