@@ -266,10 +266,6 @@ function succeedlearn_amp_get_ssync_enterprise_items() {
 			'text'  => __( 'Support synchronisation of relevant workforce information used for learning administration.', 'succeedlearn-amp' ),
 		),
 		array(
-			'title' => __( 'Learning & Development Teams', 'succeedlearn-amp' ),
-			'text'  => __( 'Integrate applicable security-awareness content with existing learning environments and organisational workflows.', 'succeedlearn-amp' ),
-		),
-		array(
 			'title' => __( 'Compliance & Risk Teams', 'succeedlearn-amp' ),
 			'text'  => __( 'Benefit from more accurate learner populations and structured awareness programme administration.', 'succeedlearn-amp' ),
 		),
