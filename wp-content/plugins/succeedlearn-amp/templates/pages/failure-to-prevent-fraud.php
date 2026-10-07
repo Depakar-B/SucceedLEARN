@@ -168,7 +168,7 @@ $render_cards = static function ( $cards ) {
 		</div>
 	</section>
 
-	<section id="fcp-suite" class="sl-section sl-course-suite sl-course-suite--fcp" aria-labelledby="sl-fcp-course-suite-title">
+	<section id="fcp-suite" class="sl-section sl-section--alt sl-course-suite sl-course-suite--fcp" aria-labelledby="sl-fcp-course-suite-title">
 		<div class="sl-wrap">
 			<div class="sl-course-suite__header">
 				<div class="sl-course-suite__intro">
@@ -188,7 +188,7 @@ $render_cards = static function ( $cards ) {
 					?>
 					<a class="sl-course-suite__tile<?php echo $is_current ? ' is-active' : ''; ?>" href="<?php echo esc_url( $href ); ?>">
 						<div class="sl-course-suite__chrome">
-							<span class="sl-course-suite__dash" aria-hidden="true"></span>
+							<span class="sl-course-suite__dash" aria-hidden="true">→</span>
 							<span class="sl-course-suite__num" aria-hidden="true"><?php echo esc_html( $course['num'] ); ?></span>
 						</div>
 						<h3 class="sl-panel-title"><?php echo esc_html( $course['title'] ); ?></h3>
