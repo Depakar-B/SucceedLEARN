@@ -16,59 +16,47 @@ defined( 'ABSPATH' ) || exit;
 >
 	<div class="container">
 
+		<div class="sl-insider-trading-risk__intro">
+
+			<span class="sl-home-sub-heading">
+				<?php
+				esc_html_e(
+					'Understanding Insider Trading Risk',
+					'akaza-adventure'
+				);
+				?>
+			</span>
+
+			<h2 id="sl-insider-trading-risk-title">
+				<?php
+				echo wp_kses_post(
+					__(
+						'What Is Insider Trading and Why Does Insider Trading <span>eLearning Matter?</span>',
+						'akaza-adventure'
+					)
+				);
+				?>
+			</h2>
+
+		</div>
+
 		<div class="sl-insider-trading-risk__grid">
 
 			<!-- Left: Image -->
 			<div class="sl-insider-trading-risk__media">
 
-				<div
-					class="sl-insider-trading-risk__image-placeholder"
-					role="img"
-					aria-label="<?php esc_attr_e( 'Insider trading risk training visual', 'akaza-adventure' ); ?>"
+				<img
+					class="sl-insider-trading-risk__image"
+					src="https://succeedlearn.com/wp-content/uploads/2026/10/insider_trading_monitoring_scene.webp"
+					alt="<?php esc_attr_e( 'A person reviewing a trading decision beside confidential information', 'akaza-adventure' ); ?>"
+					loading="lazy"
+					decoding="async"
 				>
-					<span>
-						<?php
-						esc_html_e(
-							'Image placeholder',
-							'akaza-adventure'
-						);
-						?>
-					</span>
-
-					<small>
-						<?php
-						esc_html_e(
-							'Recommended: 600 × 600 px',
-							'akaza-adventure'
-						);
-						?>
-					</small>
-				</div>
 
 			</div>
 
 			<!-- Right: Content -->
 			<div class="sl-insider-trading-risk__content">
-
-				<span class="sl-home-sub-heading">
-					<?php
-					esc_html_e(
-						'Understanding Insider Trading Risk',
-						'akaza-adventure'
-					);
-					?>
-				</span>
-
-				<h2 id="sl-insider-trading-risk-title">
-					<?php
-					echo wp_kses_post(
-						__(
-							'What Is Insider Trading and Why Does Insider Trading <span>eLearning Matter?</span>',
-							'akaza-adventure'
-						)
-					);
-					?>
-				</h2>
 
 				<div class="sl-insider-trading-risk__body">
 
@@ -92,8 +80,12 @@ defined( 'ABSPATH' ) || exit;
 
 				</div>
 
-				<!-- Highlighted Decision Box -->
-				<div class="sl-insider-trading-risk__highlight">
+			</div>
+
+		</div>
+
+		<!-- Highlighted Decision Box -->
+		<div class="sl-insider-trading-risk__highlight">
 
 					<h4>
 						<?php
@@ -121,10 +113,6 @@ defined( 'ABSPATH' ) || exit;
 						);
 						?>
 					</p>
-
-				</div>
-
-			</div>
 
 		</div>
 
