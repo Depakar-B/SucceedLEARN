@@ -75,9 +75,7 @@
 .sl-pci-screenshots__track {
 	position: relative;
 	overflow: hidden;
-	border: 1px solid rgba(22, 35, 78, 0.10);
-	border-radius: 16px;
-	background: var(--sl-page-white, #ffffff);
+	background: transparent;
 }
 
 .sl-pci-screenshots__slide {
@@ -92,13 +90,14 @@
 	overflow: hidden;
 	width: 100%;
 	line-height: 0;
-	background: var(--sl-page-white, #ffffff);
+	background: transparent;
 }
 
 .sl-pci-screenshots__image img {
 	display: block;
 	width: 100%;
 	height: auto;
+	border-radius: 16px;
 }
 
 .sl-pci-screenshots__controls {

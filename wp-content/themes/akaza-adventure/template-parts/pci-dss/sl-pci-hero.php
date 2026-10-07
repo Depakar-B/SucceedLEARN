@@ -9,11 +9,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$pci_hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/SucceedLEARN-Security-Behaviour-Culture-Suite.webp';
-$pci_hero_local = WP_CONTENT_DIR . '/uploads/2026/09/SucceedLEARN-Security-Behaviour-Culture-Suite.webp';
+$pci_hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/10/PCI-DSS-Employee.webp';
+$pci_hero_local = WP_CONTENT_DIR . '/uploads/2026/10/PCI-DSS-Employee.webp';
 
 if ( function_exists( 'akaza_upload_url' ) && file_exists( $pci_hero_local ) ) {
-	$pci_hero_image = akaza_upload_url( '2026/09/SucceedLEARN-Security-Behaviour-Culture-Suite.webp' );
+	$pci_hero_image = akaza_upload_url( '2026/10/PCI-DSS-Employee.webp' );
 }
 ?>
 
