@@ -1,6 +1,6 @@
 /**
  * Insider Trading eLearning — page-level background rhythm.
- * From the other-jurisdictions section to the end, grey and white are swapped.
+ * From the section after the audience through the end, grey and white are swapped.
  *
  * @package Akaza_Adventure
  */
@@ -8,14 +8,15 @@
 #main-content.sl-course-page--insider-trading > #fcp-suite,
 #main-content.sl-course-page--insider-trading > .sl-insider-trading-regulatory-frameworks,
 #main-content.sl-course-page--insider-trading > .sl-insider-trading-topics,
-#main-content.sl-course-page--insider-trading > .sl-insider-trading-why,
-#main-content.sl-course-page--insider-trading > .sl-insider-trading-contact {
+#main-content.sl-course-page--insider-trading > .sl-insider-trading-faq {
 	background: var(--sl-page-soft, #f5f5f5);
 }
 
 #main-content.sl-course-page--insider-trading > .sl-insider-trading-risk,
 #main-content.sl-course-page--insider-trading > .sl-insider-trading-other-jurisdictions,
+#main-content.sl-course-page--insider-trading > #cpd,
 #main-content.sl-course-page--insider-trading > .sl-insider-trading-audience,
-#main-content.sl-course-page--insider-trading > .sl-insider-trading-faq {
+#main-content.sl-course-page--insider-trading > .sl-insider-trading-why,
+#main-content.sl-course-page--insider-trading > .sl-insider-trading-contact {
 	background: var(--sl-page-white, #ffffff);
 }
