@@ -29,7 +29,7 @@ $hero_image = function_exists( 'succeedlearn_amp_get_ss_hero_image' )
 				<span class="sl-home-sub-heading"><?php esc_html_e( 'S-Signs', 'succeedlearn-amp' ); ?></span>
 				<h1 id="sl-s-signs-hero-title"><?php echo esc_html( $hero_title ); ?></h1>
 				<h2 class="sl-hero-h2 sl-s-signs-hero__subheading">
-					<?php esc_html_e( 'Keep Cybersecurity Visible. Reinforce Secure Behaviour Every Day', 'succeedlearn-amp' ); ?>
+					<?php esc_html_e( 'Keep Cybersecurity behaviour Visible. Reinforce Secure Behaviour Every Day', 'succeedlearn-amp' ); ?>
 				</h2>
 				<p><?php esc_html_e( 'Security awareness is most effective when important messages remain visible long after formal training ends.', 'succeedlearn-amp' ); ?></p>
 				<p><?php esc_html_e( 'Employees make security-related decisions throughout their working day — opening emails, handling information, using devices, working remotely, interacting with systems and responding to suspicious activity.', 'succeedlearn-amp' ); ?></p>
