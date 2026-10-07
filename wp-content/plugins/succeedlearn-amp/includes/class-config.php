@@ -401,6 +401,15 @@ class Config {
 				'page_templates' => array( 'page-templates/modern-slavery-awareness.php' ),
 				'template'       => 'pages/modern-slavery',
 			),
+			'failure_to_prevent_fraud' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					'failure-to-prevent-fraud',
+					'failur-to-prevent-fraud',
+				),
+				'page_templates' => array( 'page-templates/failure-to-prevent-fraud.php' ),
+				'template'       => 'pages/failure-to-prevent-fraud',
+			),
 			'code_of_conduct' => array(
 				'default_id'     => 0,
 				'slugs'          => array( 'code-of-conduct' ),
