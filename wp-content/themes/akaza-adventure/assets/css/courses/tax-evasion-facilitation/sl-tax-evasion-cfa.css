@@ -13,7 +13,7 @@
 	display: grid;
 	grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
 	gap: 72px;
-	align-items: start;
+	align-items: center;
 }
 
 
@@ -43,9 +43,8 @@
  */
 
 .sl-tax-evasion-cfa__media {
-	position: sticky;
-	top: calc(var(--slf-header-clearance, 110px) + 24px);
-	align-self: start;
+	position: static;
+	align-self: center;
 }
 
 .sl-tax-evasion-cfa__image {
@@ -56,18 +55,10 @@
 	background: var(--sl-page-white, #ffffff);
 }
 
-.sl-tax-evasion-cfa__image-placeholder {
-	display: flex;
-	min-height: 520px;
-	align-items: center;
-	justify-content: center;
-	padding: 30px;
-	box-sizing: border-box;
-	background: #f5f7fa;
-	color: var(--sl-page-primary, #1472ba);
-	text-align: center;
-	font-size: 14px;
-	font-weight: 600;
+.sl-tax-evasion-cfa__image img {
+	display: block;
+	width: 100%;
+	height: auto;
 }
 
 
@@ -89,10 +80,6 @@
 	.sl-tax-evasion-cfa__media {
 		position: static;
 	}
-
-	.sl-tax-evasion-cfa__image-placeholder {
-		min-height: 420px;
-	}
 }
 
 
@@ -110,8 +97,7 @@
 		gap: 32px;
 	}
 
-	.sl-tax-evasion-cfa__image-placeholder {
-		min-height: 320px;
+	.sl-tax-evasion-cfa__image {
 		border-radius: 12px;
 	}
 }

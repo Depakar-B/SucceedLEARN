@@ -35,14 +35,11 @@ function akaza_enqueue_insider_trading_assets() {
 	$sections = array(
 		'sl-insider-trading-hero',
 		'sl-insider-trading-risk',
-		'sl-insider-trading-market-abuse',
 		'sl-insider-trading-regulatory-frameworks',
+		'sl-insider-trading-other-jurisdictions',
 		'sl-insider-trading-topics',
-		'sl-insider-trading-interactive',
 		'sl-insider-trading-audience',
 		'sl-insider-trading-why',
-		'sl-insider-trading-risk-cta',
-		'sl-insider-trading-buy-cta',
 		'sl-insider-trading-contact',
 	);
 
