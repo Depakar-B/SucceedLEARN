@@ -41,11 +41,11 @@ $risk_steps = array(
 		<div class="sl-tax-evasion-risk__intro">
 
 			<span class="sl-home-sub-heading">
-				<?php esc_html_e( 'Preventing Tax Evasion Risk at Work', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'Reporting Tax Evasion', 'akaza-adventure' ); ?>
 			</span>
 
 			<h2 id="sl-tax-evasion-risk-title">
-				<?php esc_html_e( 'Would they know when to', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'Preventing Tax Evasion Risk at Work - Would they know when to', 'akaza-adventure' ); ?>
 				<span><?php esc_html_e( 'stop?', 'akaza-adventure' ); ?></span>
 			</h2>
 

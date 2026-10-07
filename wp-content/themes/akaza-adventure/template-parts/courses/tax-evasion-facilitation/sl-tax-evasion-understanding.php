@@ -17,28 +17,35 @@ if ( ! defined( 'ABSPATH' ) ) {
 >
 	<div class="container">
 
+		<div class="sl-tax-evasion-understanding__intro">
+
+			<span class="sl-home-sub-heading">
+				<?php esc_html_e( 'Understanding Tax Evasion', 'akaza-adventure' ); ?>
+			</span>
+
+			<h2 id="sl-tax-evasion-understanding-title">
+				<?php esc_html_e( 'What Is Tax Evasion and Why Does Tax Evasion', 'akaza-adventure' ); ?>
+				<span><?php esc_html_e( 'Training Matter?', 'akaza-adventure' ); ?></span>
+			</h2>
+
+		</div>
+
 		<div class="sl-tax-evasion-understanding__grid">
 
 			<div class="sl-tax-evasion-understanding__media">
 
 				<div class="sl-tax-evasion-understanding__image">
-					<div class="sl-tax-evasion-understanding__image-placeholder">
-						<?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?>
-					</div>
+					<img
+						src="https://succeedlearn.com/wp-content/uploads/2026/10/Image-1_Tax-evaison.webp"
+						alt="<?php esc_attr_e( 'Tax authority questioning a person handing over a case of cash', 'akaza-adventure' ); ?>"
+						loading="lazy"
+						decoding="async"
+					>
 				</div>
 
 			</div>
 
 			<div class="sl-tax-evasion-understanding__content">
-
-				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'Understanding Tax Evasion', 'akaza-adventure' ); ?>
-				</span>
-
-				<h2 id="sl-tax-evasion-understanding-title">
-					<?php esc_html_e( 'What Is Tax Evasion and Why Does Tax Evasion', 'akaza-adventure' ); ?>
-					<span><?php esc_html_e( 'Training Matter?', 'akaza-adventure' ); ?></span>
-				</h2>
 
 				<p>
 					<?php esc_html_e( 'Tax evasion is the deliberate and dishonest avoidance of tax that is legally due.', 'akaza-adventure' ); ?>
@@ -52,12 +59,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<?php esc_html_e( 'From there, learners explore how potential risks can arise through business processes, transactions, customers and third-party relationships.', 'akaza-adventure' ); ?>
 				</p>
 
-				<div class="sl-highlight">
-					<?php esc_html_e( 'Effective tax evasion training helps employees recognise when something deserves further attention without expecting them to become tax specialists.', 'akaza-adventure' ); ?>
-				</div>
-
 			</div>
 
+		</div>
+
+		<div class="sl-highlight">
+			<?php esc_html_e( 'Effective tax evasion training helps employees recognise when something deserves further attention without expecting them to become tax specialists.', 'akaza-adventure' ); ?>
 		</div>
 
 	</div>

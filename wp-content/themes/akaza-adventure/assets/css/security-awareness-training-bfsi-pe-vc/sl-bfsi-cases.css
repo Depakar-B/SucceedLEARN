@@ -1,26 +1,16 @@
 /**
  * BFSI & PE/VC — Case Studies
- * Sticky left intro + scrollable right case cards.
+ * Intro content with 3 case cards below (no sticky / scroll layout).
  */
 
 .sl-bfsi-cases {
 	padding: 90px 0;
 	background: var(--sl-page-bg, #f5f5f5);
-	overflow: visible;
-}
-
-.sl-bfsi-cases__layout {
-	display: grid;
-	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-	gap: 48px;
-	align-items: start;
 }
 
 .sl-bfsi-cases__intro {
-	position: sticky;
-	top: calc(var(--slf-header-clearance, 110px) + 24px);
-	align-self: start;
-	min-width: 0;
+	max-width: 920px;
+	margin: 0 0 40px;
 }
 
 .sl-bfsi-cases__intro .sl-home-sub-heading {
@@ -43,13 +33,14 @@
 }
 
 .sl-bfsi-cases__cards {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-	min-width: 0;
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 24px;
+	align-items: stretch;
 }
 
 .sl-bfsi-cases__card {
+	height: 100%;
 	padding: 28px 24px;
 	border: 1px solid rgba(107, 124, 147, 0.18);
 	border-radius: 16px;
@@ -57,22 +48,9 @@
 	box-sizing: border-box;
 }
 
-.sl-bfsi-cases__number {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: 36px;
-	height: 36px;
-	margin-bottom: 16px;
-	border: 1px solid rgba(20, 114, 186, 0.18);
-	border-radius: 8px;
-	background: rgba(20, 114, 186, 0.08);
-	color: var(--sl-page-primary, #1472ba);
-	font-weight: 700;
-}
-
 .sl-bfsi-cases__card .sl-panel-title {
 	margin: 0 0 12px;
+	min-height: calc(1.3em * 2);
 }
 
 .sl-bfsi-cases__card p {
@@ -84,23 +62,19 @@
 		padding: 70px 0;
 	}
 
-	.sl-bfsi-cases__layout {
-		grid-template-columns: 1fr;
-		gap: 32px;
+	.sl-bfsi-cases__intro {
+		margin-bottom: 32px;
 	}
 
-	.sl-bfsi-cases__intro {
-		position: static;
+	.sl-bfsi-cases__cards {
+		grid-template-columns: 1fr;
+		gap: 16px;
 	}
 }
 
 @media (max-width: 767px) {
 	.sl-bfsi-cases {
 		padding: 60px 0;
-	}
-
-	.sl-bfsi-cases__cards {
-		gap: 16px;
 	}
 
 	.sl-bfsi-cases__card {

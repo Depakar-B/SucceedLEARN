@@ -259,6 +259,16 @@ class Config {
 				'page_templates' => array( 'page-templates/s-signs-security-awareness.php' ),
 				'template'       => 'pages/s-signs',
 			),
+			's_bytes' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					's-byte',
+					's-bytes',
+					'security-awareness/s-bytes',
+				),
+				'page_templates' => array( 'page-templates/s-bytes.php' ),
+				'template'       => 'pages/s-bytes',
+			),
 			's_sync' => array(
 				'default_id'     => 0,
 				'slugs'          => array(
@@ -375,6 +385,21 @@ class Config {
 				'slugs'          => array( 'financial-crime-prevention' ),
 				'page_templates' => array( 'page-templates/financial-crime-prevention.php' ),
 				'template'       => 'pages/financial-crime-prevention',
+			),
+			'anti_bribery' => array(
+				'default_id'     => 0,
+				'slugs'          => array(
+					'anti-bribery-anti-corruption',
+					'anti-bribery',
+				),
+				'page_templates' => array( 'page-templates/anti-bribery-anti-corruption.php' ),
+				'template'       => 'pages/anti-bribery',
+			),
+			'modern_slavery' => array(
+				'default_id'     => 0,
+				'slugs'          => array( 'modern-slavery-awareness' ),
+				'page_templates' => array( 'page-templates/modern-slavery-awareness.php' ),
+				'template'       => 'pages/modern-slavery',
 			),
 			'code_of_conduct' => array(
 				'default_id'     => 0,

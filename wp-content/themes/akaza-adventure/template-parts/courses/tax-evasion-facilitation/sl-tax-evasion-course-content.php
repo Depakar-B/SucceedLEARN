@@ -85,11 +85,21 @@ $course_content = array(
 
 				<article class="sl-tax-evasion-course-content__item">
 
-					<div class="sl-tax-evasion-course-content__number" aria-hidden="true">
-						<?php echo esc_html( $item['number'] ); ?>
+					<div class="sl-tax-evasion-course-content__media">
+						<img
+							class="sl-tax-evasion-course-content__image"
+							src="<?php echo esc_url( $item['src'] ); ?>"
+							alt="<?php echo esc_attr( $item['image'] ); ?>"
+							loading="lazy"
+							decoding="async"
+						>
 					</div>
 
 					<div class="sl-tax-evasion-course-content__text">
+
+						<span class="sl-tax-evasion-course-content__number">
+							<?php echo esc_html( $item['number'] ); ?>
+						</span>
 
 						<h3 class="sl-panel-title">
 							<?php echo esc_html( $item['title'] ); ?>
@@ -98,18 +108,6 @@ $course_content = array(
 						<p>
 							<?php echo esc_html( $item['description'] ); ?>
 						</p>
-
-					</div>
-
-					<div class="sl-tax-evasion-course-content__media">
-
-						<img
-							class="sl-tax-evasion-course-content__image"
-							src="<?php echo esc_url( $item['src'] ); ?>"
-							alt="<?php echo esc_attr( $item['image'] ); ?>"
-							loading="lazy"
-							decoding="async"
-						>
 
 					</div>
 

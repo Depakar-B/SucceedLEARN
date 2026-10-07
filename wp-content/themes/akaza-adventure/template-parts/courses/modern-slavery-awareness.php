@@ -63,10 +63,11 @@ $parts = array(
 					'template-parts/global/course-buy-options',
 					null,
 					array(
-						'course'   => __( 'Modern Slavery', 'akaza-adventure' ),
-						'duration' => __( '15-minute duration', 'akaza-adventure' ),
-						'contact'  => '#buy-course',
-						'price'    => '$18',
+						'course'      => __( 'Modern Slavery', 'akaza-adventure' ),
+						'duration'    => __( '15-minute duration', 'akaza-adventure' ),
+						'contact'     => '#buy-course',
+						'price'       => '$18',
+						'certificate' => false,
 					)
 				);
 				get_template_part(

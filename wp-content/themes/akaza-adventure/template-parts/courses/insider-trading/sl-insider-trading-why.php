@@ -123,22 +123,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			</div>
 
-			<div class="sl-insider-trading-why__media" aria-hidden="true">
-
-				<div class="sl-insider-trading-why__image sl-insider-trading-why__image--large">
-					<div class="sl-insider-trading-why__placeholder">
-						<span>Image<br>600 × 700px</span>
-					</div>
-				</div>
-
-				<div class="sl-insider-trading-why__image sl-insider-trading-why__image--small">
-					<div class="sl-insider-trading-why__placeholder">
-						<span>Image<br>400 × 560px</span>
-					</div>
-				</div>
-
-			</div>
-
 		</div>
 
 	</div>

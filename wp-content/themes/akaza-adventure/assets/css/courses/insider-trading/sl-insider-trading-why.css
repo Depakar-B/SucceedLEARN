@@ -7,10 +7,7 @@
 }
 
 .sl-insider-trading-why__grid {
-	display: grid;
-	grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-	gap: 64px;
-	align-items: center;
+	display: block;
 }
 
 /* ---------------------------------------------------------
@@ -74,87 +71,10 @@
 }
 
 /* ---------------------------------------------------------
-   Two-image composition
---------------------------------------------------------- */
-
-.sl-insider-trading-why__media {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 12px;
-	min-height: 520px;
-}
-
-.sl-insider-trading-why__image {
-	overflow: hidden;
-	border-radius: 16px;
-}
-
-.sl-insider-trading-why__image--large {
-	width: 58%;
-	height: 330px;
-	align-self: flex-start;
-	margin-top: 40px;
-}
-
-.sl-insider-trading-why__image--small {
-	width: 35%;
-	height: 275px;
-	align-self: flex-end;
-	margin-bottom: 50px;
-}
-
-.sl-insider-trading-why__placeholder {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: var(--course-white, #ffffff);
-	border: 1px solid rgba(22, 35, 78, 0.1);
-	box-sizing: border-box;
-}
-
-.sl-insider-trading-why__placeholder span {
-	font-size: 14px;
-	line-height: 1.5;
-	text-align: center;
-	color: var(--course-muted, #6b7c93);
-}
-
-/* ---------------------------------------------------------
-   Tablet
---------------------------------------------------------- */
-
-@media (max-width: 1000px) {
-	.sl-insider-trading-why__grid {
-		grid-template-columns: 1fr;
-		gap: 48px;
-	}
-
-	.sl-insider-trading-why__content {
-		max-width: 900px;
-		margin: 0 auto;
-		width: 100%;
-	}
-
-	.sl-insider-trading-why__media {
-		min-height: 420px;
-		max-width: 700px;
-		width: 100%;
-		margin: 0 auto;
-	}
-}
-
-/* ---------------------------------------------------------
    Mobile
 --------------------------------------------------------- */
 
 @media (max-width: 600px) {
-	.sl-insider-trading-why__grid {
-		gap: 36px;
-	}
-
 	.sl-insider-trading-why__item {
 		grid-template-columns: 44px minmax(0, 1fr);
 		gap: 12px;
@@ -168,20 +88,5 @@
 
 	.sl-insider-trading-why__item-content h3 {
 		font-size: 17px;
-	}
-
-	.sl-insider-trading-why__media {
-		min-height: 300px;
-		gap: 10px;
-	}
-
-	.sl-insider-trading-why__image--large {
-		height: 230px;
-		margin-top: 20px;
-	}
-
-	.sl-insider-trading-why__image--small {
-		height: 190px;
-		margin-bottom: 25px;
 	}
 }
