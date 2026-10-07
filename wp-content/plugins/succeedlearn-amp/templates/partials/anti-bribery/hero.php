@@ -27,18 +27,6 @@ $hero_tags = array(
 			<?php esc_html_e( 'Anti-Bribery and Anti-Corruption eLearning', 'succeedlearn-amp' ); ?>
 		</h1>
 
-		<div class="sl-aml-media">
-			<div class="sl-aml-image sl-aml-image--wide">
-				<amp-img
-					src="<?php echo esc_url( $images['hero'] ); ?>"
-					width="1600"
-					height="900"
-					layout="responsive"
-					alt="<?php esc_attr_e( 'Anti-bribery and anti-corruption training journey', 'succeedlearn-amp' ); ?>"
-				></amp-img>
-			</div>
-		</div>
-
 		<div class="sl-aml-copy">
 			<p class="sl-aml-lead">
 				<?php esc_html_e( 'Help employees recognise, resist and report bribery risks. Explore UK Bribery Act 2010 and US Foreign Corrupt Practices Act (FCPA) content in our UK ABAC course, alongside India-focused learning and options tailored to your organisation.', 'succeedlearn-amp' ); ?>
@@ -72,6 +60,18 @@ $hero_tags = array(
 				>
 					<?php esc_html_e( 'Explore More', 'succeedlearn-amp' ); ?>
 				</button>
+			</div>
+		</div>
+
+		<div class="sl-aml-media sl-aml-after">
+			<div class="sl-aml-image sl-aml-image--wide">
+				<amp-img
+					src="<?php echo esc_url( $images['hero'] ); ?>"
+					width="1600"
+					height="900"
+					layout="responsive"
+					alt="<?php esc_attr_e( 'Anti-bribery and anti-corruption training journey', 'succeedlearn-amp' ); ?>"
+				></amp-img>
 			</div>
 		</div>
 	</div>

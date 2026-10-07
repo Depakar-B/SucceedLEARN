@@ -28,18 +28,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</h2>
 		</div>
 
-		<div class="sl-aml-media">
-			<div class="sl-aml-image">
-				<amp-img
-					src="<?php echo esc_url( $images['organisations'] ); ?>"
-					width="1200"
-					height="900"
-					layout="responsive"
-					alt="<?php esc_attr_e( 'Organisational Training Dashboard', 'succeedlearn-amp' ); ?>"
-				></amp-img>
-			</div>
-		</div>
-
 		<p>
 			<?php esc_html_e( 'Deliver ABAC awareness across teams while giving administrators the controls needed to assign training, monitor completion and manage recurring compliance activity.', 'succeedlearn-amp' ); ?>
 		</p>
@@ -71,6 +59,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 			>
 				<?php esc_html_e( 'Explore More', 'succeedlearn-amp' ); ?>
 			</button>
+		</div>
+
+		<div class="sl-aml-media sl-aml-after">
+			<div class="sl-aml-image">
+				<amp-img
+					src="<?php echo esc_url( $images['organisations'] ); ?>"
+					width="1200"
+					height="900"
+					layout="responsive"
+					alt="<?php esc_attr_e( 'Organisational Training Dashboard', 'succeedlearn-amp' ); ?>"
+				></amp-img>
+			</div>
 		</div>
 	</div>
 </section>
