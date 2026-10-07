@@ -28,18 +28,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</h2>
 		</div>
 
-		<div class="sl-aml-media">
-			<div class="sl-aml-image">
-				<amp-img
-					src="<?php echo esc_url( $images['individuals'] ); ?>"
-					width="1200"
-					height="900"
-					layout="responsive"
-					alt="<?php esc_attr_e( 'Individual ABAC course preview', 'succeedlearn-amp' ); ?>"
-				></amp-img>
-			</div>
-		</div>
-
 		<p class="sl-aml-lead">
 			<?php esc_html_e( 'A focused learning experience for professionals who want practical ABAC awareness without a lengthy training commitment.', 'succeedlearn-amp' ); ?>
 		</p>
@@ -71,6 +59,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 			>
 				<?php esc_html_e( 'Request Demo', 'succeedlearn-amp' ); ?>
 			</button>
+		</div>
+
+		<div class="sl-aml-media sl-aml-after">
+			<div class="sl-aml-image">
+				<amp-img
+					src="<?php echo esc_url( $images['individuals'] ); ?>"
+					width="1200"
+					height="900"
+					layout="responsive"
+					alt="<?php esc_attr_e( 'Individual ABAC course preview', 'succeedlearn-amp' ); ?>"
+				></amp-img>
+			</div>
 		</div>
 	</div>
 </section>

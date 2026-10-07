@@ -28,21 +28,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</h2>
 		</div>
 
-		<div class="sl-aml-media">
-			<div class="sl-aml-image sl-aml-image--natural">
-				<amp-img
-					src="<?php echo esc_url( $images['overview'] ); ?>"
-					width="1280"
-					height="853"
-					layout="responsive"
-					alt="<?php esc_attr_e( 'Professionals reviewing an ethical business decision together in a London office', 'succeedlearn-amp' ); ?>"
-				></amp-img>
-			</div>
-			<p class="sl-aml-caption">
-				<?php esc_html_e( 'Building confident, consistent decisions around business integrity.', 'succeedlearn-amp' ); ?>
-			</p>
-		</div>
-
 		<div class="sl-aml-copy">
 			<p>
 				<strong><?php esc_html_e( 'Anti-Bribery and Anti-Corruption training', 'succeedlearn-amp' ); ?></strong>
@@ -63,6 +48,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<p>
 				<strong><?php esc_html_e( 'Corporate bribery is not simply a legal issue.', 'succeedlearn-amp' ); ?></strong>
 				<?php esc_html_e( ' It undermines fair competition, weakens trust, creates operational disruption and can cause long-term reputational damage.', 'succeedlearn-amp' ); ?>
+			</p>
+		</div>
+
+		<div class="sl-aml-media sl-aml-after">
+			<div class="sl-aml-image sl-aml-image--natural">
+				<amp-img
+					src="<?php echo esc_url( $images['overview'] ); ?>"
+					width="1280"
+					height="853"
+					layout="responsive"
+					alt="<?php esc_attr_e( 'Professionals reviewing an ethical business decision together in a London office', 'succeedlearn-amp' ); ?>"
+				></amp-img>
+			</div>
+			<p class="sl-aml-caption">
+				<?php esc_html_e( 'Building confident, consistent decisions around business integrity.', 'succeedlearn-amp' ); ?>
 			</p>
 		</div>
 	</div>
