@@ -9,6 +9,17 @@
 	padding: 88px 0;
 }
 
+.sl-tax-evasion-understanding__intro,
+.sl-tax-evasion-understanding__intro h2,
+.sl-tax-evasion-understanding .sl-highlight {
+	max-width: none;
+	width: 100%;
+}
+
+.sl-tax-evasion-understanding__intro h2 {
+	margin-bottom: 28px;
+}
+
 .sl-tax-evasion-understanding__grid {
 	display: grid;
 	grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
@@ -23,7 +34,7 @@
 
 .sl-tax-evasion-understanding__media {
 	position: static;
-	align-self: center;
+	align-self: start;
 }
 
 .sl-tax-evasion-understanding__image {
@@ -32,6 +43,10 @@
 	border: 1px solid rgba(22, 35, 78, 0.10);
 	border-radius: 16px;
 	background: var(--sl-page-white, #ffffff);
+}
+
+.sl-tax-evasion-understanding .sl-highlight {
+	margin-top: 28px;
 }
 
 .sl-tax-evasion-understanding__image img {
@@ -45,20 +60,16 @@
  * Content
  */
 
-.sl-tax-evasion-understanding__content h2 {
-	margin-bottom: 20px;
+.sl-tax-evasion-understanding__content {
+	align-self: center;
 }
 
 .sl-tax-evasion-understanding__content > p {
 	margin: 0 0 18px;
 }
 
-.sl-tax-evasion-understanding__content > p:last-of-type {
-	margin-bottom: 26px;
-}
-
-.sl-tax-evasion-understanding__content .sl-highlight {
-	margin-top: 26px;
+.sl-tax-evasion-understanding__content > p:last-child {
+	margin-bottom: 0;
 }
 
 

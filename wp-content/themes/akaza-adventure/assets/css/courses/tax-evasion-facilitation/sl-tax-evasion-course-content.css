@@ -28,67 +28,31 @@
  */
 
 .sl-tax-evasion-course-content__list {
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	gap: 24px;
 }
 
 .sl-tax-evasion-course-content__item {
 	display: grid;
-	grid-template-columns: 52px minmax(0, 1fr) 320px;
-	gap: 32px;
+	grid-template-columns: 480px minmax(0, 1fr);
 	align-items: center;
-	padding: 24px 0;
-	border-top: 1px solid rgba(22, 35, 78, 0.12);
+	overflow: hidden;
+	border: 1px solid #dde3eb;
+	border-radius: 24px;
+	background: #ffffff;
+	box-shadow: 0 14px 36px rgba(22, 35, 77, 0.07);
 }
 
-.sl-tax-evasion-course-content__item:last-child {
-	border-bottom: 1px solid rgba(22, 35, 78, 0.12);
+.sl-tax-evasion-course-content__item:nth-child(even) {
+	grid-template-columns: minmax(0, 1fr) 480px;
 }
 
-
-/*
- * Number
- */
-
-.sl-tax-evasion-course-content__number {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: 44px;
-	height: 44px;
-	box-sizing: border-box;
-	border-radius: 50%;
-	background: var(--sl-page-navy, #16234e);
-	color: #ffffff;
-	font-size: 13px;
-	font-weight: 700;
-	line-height: 1;
+.sl-tax-evasion-course-content__item:nth-child(even) .sl-tax-evasion-course-content__media {
+	order: 2;
 }
 
-.sl-tax-evasion-course-content__item:nth-child(even)
-.sl-tax-evasion-course-content__number {
-	background: var(--sl-page-primary, #1472ba);
-}
-
-
-/*
- * Content
- */
-
-.sl-tax-evasion-course-content__text {
-	min-width: 0;
-	padding-right: 20px;
-}
-
-body.slf-body #main-content .sl-tax-evasion-course-content__text h3.sl-panel-title,
-.sl-tax-evasion-course-content__text .sl-panel-title {
-	margin-top: 0;
-	margin-bottom: 8px;
-	color: #16234d;
-}
-
-.sl-tax-evasion-course-content__text p {
-	margin: 0;
+.sl-tax-evasion-course-content__item:nth-child(even) .sl-tax-evasion-course-content__text {
+	order: 1;
 }
 
 
@@ -97,19 +61,73 @@ body.slf-body #main-content .sl-tax-evasion-course-content__text h3.sl-panel-tit
  */
 
 .sl-tax-evasion-course-content__media {
-	width: 100%;
+	position: relative;
+	height: 280px;
+	min-height: 280px;
+	margin: 18px;
+	overflow: hidden;
+	border-radius: 16px;
+	background: #edf5fd;
+}
+
+.sl-tax-evasion-course-content__media::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 5px;
+	background: var(--sl-page-primary, #135db7);
+	z-index: 1;
 }
 
 .sl-tax-evasion-course-content__image {
 	display: block;
 	width: 100%;
-	max-width: none;
-	height: auto;
-	aspect-ratio: 3 / 2;
+	height: 100%;
+	min-height: 0;
 	object-fit: cover;
-	border: 1px solid rgba(22, 35, 78, 0.10);
-	border-radius: 10px;
-	background: #f5f7fa;
+	object-position: center;
+}
+
+
+/*
+ * Content
+ */
+
+.sl-tax-evasion-course-content__text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-width: 0;
+	padding: clamp(32px, 5vw, 58px);
+}
+
+.sl-tax-evasion-course-content__number {
+	display: inline-flex;
+	width: max-content;
+	margin-bottom: 15px;
+	padding: 7px 11px;
+	border-radius: 8px;
+	background: #edf5fd;
+	color: var(--sl-page-primary, #135db7);
+	font-size: 0.84rem;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	line-height: 1;
+}
+
+body.slf-body #main-content .sl-tax-evasion-course-content__text h3.sl-panel-title,
+.sl-tax-evasion-course-content__text .sl-panel-title {
+	margin-top: 0;
+	margin-bottom: 12px;
+	color: #16234d;
+}
+
+.sl-tax-evasion-course-content__text p {
+	max-width: 660px;
+	margin: 0;
+	line-height: 1.75;
 }
 
 
@@ -127,19 +145,23 @@ body.slf-body #main-content .sl-tax-evasion-course-content__text h3.sl-panel-tit
 		margin-bottom: 38px;
 	}
 
-	.sl-tax-evasion-course-content__item {
-		grid-template-columns: 48px minmax(0, 1fr) 260px;
-		gap: 18px;
-		padding: 22px 0;
+	.sl-tax-evasion-course-content__item,
+	.sl-tax-evasion-course-content__item:nth-child(even) {
+		grid-template-columns: 1fr;
 	}
 
-	.sl-tax-evasion-course-content__text {
-		padding-right: 8px;
+	.sl-tax-evasion-course-content__item:nth-child(even) .sl-tax-evasion-course-content__media,
+	.sl-tax-evasion-course-content__item:nth-child(even) .sl-tax-evasion-course-content__text {
+		order: initial;
 	}
 
-	.sl-tax-evasion-course-content__number {
-		width: 42px;
-		height: 42px;
+	.sl-tax-evasion-course-content__media,
+	.sl-tax-evasion-course-content__image {
+		width: 100%;
+		height: 220px;
+		min-height: 220px;
+		margin: 0;
+		border-radius: 0;
 	}
 }
 
@@ -158,23 +180,13 @@ body.slf-body #main-content .sl-tax-evasion-course-content__text h3.sl-panel-tit
 		margin-bottom: 30px;
 	}
 
-	.sl-tax-evasion-course-content__item {
-		grid-template-columns: 44px minmax(0, 1fr);
-		gap: 16px;
-		align-items: start;
-		padding: 22px 0;
-	}
-
-	.sl-tax-evasion-course-content__number {
-		width: 40px;
-		height: 40px;
-	}
-
 	.sl-tax-evasion-course-content__text {
-		padding-right: 0;
+		padding: 28px 24px 32px;
 	}
 
-	.sl-tax-evasion-course-content__media {
-		grid-column: 2;
+	.sl-tax-evasion-course-content__media,
+	.sl-tax-evasion-course-content__image {
+		height: 200px;
+		min-height: 200px;
 	}
 }

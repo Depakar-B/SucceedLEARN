@@ -9,13 +9,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$learning_features = array(
-	__( 'Knowledge Checks', 'akaza-adventure' ),
-	__( 'Scenario-Based Learning', 'akaza-adventure' ),
-	__( 'Assessment', 'akaza-adventure' ),
-	__( 'CPD-Certified', 'akaza-adventure' ),
-);
-
 $course_images = array(
 	array(
 		'src' => 'https://succeedlearn.com/wp-content/uploads/2026/10/image.webp',
@@ -64,33 +57,41 @@ $course_images = array(
 
 		</div>
 
-		<div class="sl-tax-evasion-interactive__media">
+		<div class="sl-tax-evasion-interactive__carousel" data-tax-evasion-carousel>
 
-			<?php foreach ( $course_images as $image ) : ?>
+			<button
+				type="button"
+				class="sl-tax-evasion-interactive__arrow"
+				data-tax-evasion-prev
+				aria-label="<?php esc_attr_e( 'Previous image', 'akaza-adventure' ); ?>"
+			>
+				<span aria-hidden="true">←</span>
+			</button>
 
-				<div class="sl-tax-evasion-interactive__image">
-					<img
-						src="<?php echo esc_url( $image['src'] ); ?>"
-						alt="<?php echo esc_attr( $image['alt'] ); ?>"
-						loading="lazy"
-						decoding="async"
-					>
+			<div class="sl-tax-evasion-interactive__viewport">
+				<div class="sl-tax-evasion-interactive__track" data-tax-evasion-track>
+					<?php foreach ( $course_images as $image ) : ?>
+						<?php $is_compact = false !== strpos( $image['src'], 'Image-4_Tax-Evasion.webp' ); ?>
+						<div class="sl-tax-evasion-interactive__image<?php echo $is_compact ? ' sl-tax-evasion-interactive__image--compact' : ''; ?>">
+							<img
+								src="<?php echo esc_url( $image['src'] ); ?>"
+								alt="<?php echo esc_attr( $image['alt'] ); ?>"
+								loading="eager"
+								decoding="async"
+							>
+						</div>
+					<?php endforeach; ?>
 				</div>
+			</div>
 
-			<?php endforeach; ?>
-
-		</div>
-
-		<div class="sl-tax-evasion-interactive__features">
-
-			<?php foreach ( $learning_features as $feature ) : ?>
-
-				<div class="sl-tax-evasion-interactive__feature">
-					<span class="sl-tax-evasion-interactive__feature-marker" aria-hidden="true"></span>
-					<span><?php echo esc_html( $feature ); ?></span>
-				</div>
-
-			<?php endforeach; ?>
+			<button
+				type="button"
+				class="sl-tax-evasion-interactive__arrow"
+				data-tax-evasion-next
+				aria-label="<?php esc_attr_e( 'Next image', 'akaza-adventure' ); ?>"
+			>
+				<span aria-hidden="true">→</span>
+			</button>
 
 		</div>
 
