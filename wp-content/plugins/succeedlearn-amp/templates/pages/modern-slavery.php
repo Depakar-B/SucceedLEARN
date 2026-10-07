@@ -28,10 +28,10 @@ $why_cards = array(
 	array( 'num' => '04', 'title' => __( 'Consider supply-chain risk', 'succeedlearn-amp' ), 'text' => __( 'Relevant procurement learners receive additional guidance on suppliers, due diligence and vendor risk.', 'succeedlearn-amp' ) ),
 );
 $outcomes = array(
-	array( 'num' => '01', 'title' => __( 'Understand modern slavery', 'succeedlearn-amp' ), 'text' => __( 'Recognise what modern slavery means and the different forms it can take.', 'succeedlearn-amp' ) ),
-	array( 'num' => '02', 'title' => __( 'Identify warning signs', 'succeedlearn-amp' ), 'text' => __( 'Recognise behaviours and circumstances that may indicate exploitation or control.', 'succeedlearn-amp' ) ),
-	array( 'num' => '03', 'title' => __( 'Report appropriately', 'succeedlearn-amp' ), 'text' => __( 'Know how to record relevant facts and report concerns through the right channels.', 'succeedlearn-amp' ) ),
-	array( 'num' => '04', 'title' => __( 'Reduce supply-chain risk', 'succeedlearn-amp' ), 'text' => __( 'Relevant learners explore supplier due diligence and practical vendor-selection considerations.', 'succeedlearn-amp' ) ),
+	array( 'num' => '01 / DEFINE', 'title' => __( 'Understand modern slavery', 'succeedlearn-amp' ), 'text' => __( 'Recognise what modern slavery means and the different forms it can take.', 'succeedlearn-amp' ) ),
+	array( 'num' => '02 / RECOGNISE', 'title' => __( 'Identify warning signs', 'succeedlearn-amp' ), 'text' => __( 'Recognise behaviours and circumstances that may indicate exploitation or control.', 'succeedlearn-amp' ) ),
+	array( 'num' => '03 / REPORT', 'title' => __( 'Report appropriately', 'succeedlearn-amp' ), 'text' => __( 'Know how to record relevant facts and report concerns through the right channels.', 'succeedlearn-amp' ) ),
+	array( 'num' => '04 / PROCUREMENT', 'title' => __( 'Reduce supply-chain risk', 'succeedlearn-amp' ), 'text' => __( 'Relevant learners explore supplier due diligence and practical vendor-selection considerations.', 'succeedlearn-amp' ) ),
 );
 $procurement = array(
 	array( 'num' => '01', 'title' => __( 'Check supplier due diligence', 'succeedlearn-amp' ), 'text' => __( 'Follow relevant screening and review processes before onboarding and throughout supplier relationships.', 'succeedlearn-amp' ) ),
@@ -41,10 +41,13 @@ $procurement = array(
 	array( 'num' => '05', 'title' => __( 'Understand subcontracting and keep records', 'succeedlearn-amp' ), 'text' => __( 'Consider visibility and oversight, and document relevant decisions, checks and risk considerations.', 'succeedlearn-amp' ) ),
 );
 $reporting = array(
-	array( 'num' => '01', 'title' => __( 'Observe', 'succeedlearn-amp' ), 'text' => __( 'Focus on what you have directly seen or heard.', 'succeedlearn-amp' ) ),
-	array( 'num' => '02', 'title' => __( 'Note the facts', 'succeedlearn-amp' ), 'text' => __( 'Record relevant information about what happened, who was involved and when or where it was observed, where known.', 'succeedlearn-amp' ) ),
-	array( 'num' => '03', 'title' => __( 'Report', 'succeedlearn-amp' ), 'text' => __( 'Raise the concern through the appropriate internal channel, such as a line manager, Compliance or Legal.', 'succeedlearn-amp' ) ),
+	array( 'num' => 'STEP 01', 'title' => __( 'Observe', 'succeedlearn-amp' ), 'text' => __( 'Focus on what you have directly seen or heard.', 'succeedlearn-amp' ) ),
+	array( 'num' => 'STEP 02', 'title' => __( 'Note the facts', 'succeedlearn-amp' ), 'text' => __( 'Record relevant information about what happened, who was involved and when or where it was observed, where known.', 'succeedlearn-amp' ) ),
+	array( 'num' => 'STEP 03', 'title' => __( 'Report', 'succeedlearn-amp' ), 'text' => __( 'Raise the concern through the appropriate internal channel, such as a line manager, Compliance or Legal.', 'succeedlearn-amp' ) ),
 );
+$individual_image   = succeedlearn_amp_upload_url( '2026/09/Image-1-AML.webp' );
+$organisation_image = succeedlearn_amp_upload_url( '2026/09/organisation-image-1.webp' );
+$audience_image     = succeedlearn_amp_upload_url( '2026/10/Slavery-Awareness_Image-4.webp' );
 $audiences = array(
 	__( 'Employees who need basic modern slavery awareness.', 'succeedlearn-amp' ),
 	__( 'Employees who may encounter third-party workers or vendors.', 'succeedlearn-amp' ),
@@ -109,12 +112,8 @@ $render_cards = static function ( $cards ) {
 		<div class="sl-wrap">
 			<span class="sl-eyebrow sl-home-sub-heading"><?php esc_html_e( 'Modern Slavery Compliance Training', 'succeedlearn-amp' ); ?></span>
 			<h1 id="msa-hero-title"><?php esc_html_e( 'Modern Slavery Awareness Training', 'succeedlearn-amp' ); ?> <span><?php esc_html_e( 'for UK Organisations', 'succeedlearn-amp' ); ?></span></h1>
-			<div class="sl-aml-media">
-				<div class="sl-aml-image sl-aml-image--wide">
-					<amp-img src="<?php echo esc_url( $hero_image ); ?>" width="1600" height="1066" layout="responsive" alt="<?php esc_attr_e( 'Supply-chain due diligence review across shipping, warehousing and workforce risk', 'succeedlearn-amp' ); ?>"></amp-img>
-				</div>
-			</div>
-			<p class="sl-aml-lead"><?php esc_html_e( 'A concise UK-focused course that helps employees understand modern slavery, recognise possible warning signs and know how to respond through the appropriate internal channels.', 'succeedlearn-amp' ); ?></p>
+			<p class="sl-aml-lead"><?php esc_html_e( 'Recognise the signs. Report concerns appropriately.', 'succeedlearn-amp' ); ?></p>
+			<p><?php esc_html_e( 'A concise UK-focused course that helps employees understand modern slavery, recognise possible warning signs and know how to respond through the appropriate internal channels.', 'succeedlearn-amp' ); ?></p>
 			<ul class="sl-aml-tags" role="list">
 				<li><?php esc_html_e( '15 minutes', 'succeedlearn-amp' ); ?></li>
 				<li><?php esc_html_e( 'Practical workplace scenarios', 'succeedlearn-amp' ); ?></li>
@@ -132,6 +131,57 @@ $render_cards = static function ( $cards ) {
 					<button type="button" class="sl-hero-btn sl-hero-btn-secondary" <?php echo succeedlearn_amp_scroll_tap_attr( 'fcp-suite' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 						<?php esc_html_e( 'Explore More', 'succeedlearn-amp' ); ?>
 					</button>
+				</div>
+			</div>
+			<div class="sl-aml-media sl-aml-after">
+				<div class="sl-aml-image sl-aml-image--wide">
+					<amp-img src="<?php echo esc_url( $hero_image ); ?>" width="1600" height="1066" layout="responsive" alt="<?php esc_attr_e( 'Supply-chain due diligence review across shipping, warehousing and workforce risk', 'succeedlearn-amp' ); ?>"></amp-img>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="individuals" class="sl-section sl-section--alt">
+		<div class="sl-wrap">
+			<span class="sl-eyebrow sl-home-sub-heading"><?php esc_html_e( 'Individual Modern Slavery eLearning', 'succeedlearn-amp' ); ?></span>
+			<h2 class="sl-h2"><?php esc_html_e( 'Modern Slavery Training', 'succeedlearn-amp' ); ?> <span><?php esc_html_e( 'For Individuals', 'succeedlearn-amp' ); ?></span> <?php esc_html_e( '- Start Immediately', 'succeedlearn-amp' ); ?></h2>
+			<p class="sl-aml-lead"><?php esc_html_e( 'A focused learning experience for professionals who want practical Modern Slavery awareness without a lengthy training commitment.', 'succeedlearn-amp' ); ?></p>
+			<ul class="sl-aml-feature-list" role="list">
+				<li class="sl-aml-feature-list__item"><span class="sl-aml-number">01</span><div><strong><?php esc_html_e( 'Interactive eLearning', 'succeedlearn-amp' ); ?></strong><span><?php esc_html_e( 'Practical digital learning supported by Modern Slavery scenarios and knowledge checks.', 'succeedlearn-amp' ); ?></span></div></li>
+				<li class="sl-aml-feature-list__item"><span class="sl-aml-number">02</span><div><strong><?php esc_html_e( '15-minute duration', 'succeedlearn-amp' ); ?></strong><span><?php esc_html_e( 'Complete the core Modern Slavery learning at your own pace.', 'succeedlearn-amp' ); ?></span></div></li>
+				<li class="sl-aml-feature-list__item"><span class="sl-aml-number">03</span><div><strong><?php esc_html_e( 'Instant access', 'succeedlearn-amp' ); ?></strong><span><?php esc_html_e( 'Start learning immediately after purchase.', 'succeedlearn-amp' ); ?></span></div></li>
+			</ul>
+			<div class="sl-content-actions">
+				<button type="button" class="sl-content-btn sl-content-btn-primary" <?php echo succeedlearn_amp_scroll_tap_attr( 'contact' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>><?php esc_html_e( 'Buy Now @ $18', 'succeedlearn-amp' ); ?></button>
+				<button type="button" class="sl-content-btn sl-content-btn-secondary" <?php echo succeedlearn_amp_scroll_tap_attr( 'contact' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>><?php esc_html_e( 'Request Demo', 'succeedlearn-amp' ); ?></button>
+			</div>
+			<div class="sl-aml-media sl-aml-after">
+				<div class="sl-aml-image">
+					<amp-img src="<?php echo esc_url( $individual_image ); ?>" width="1200" height="900" layout="responsive" alt="<?php esc_attr_e( 'Individual Modern Slavery course preview', 'succeedlearn-amp' ); ?>"></amp-img>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="organisations" class="sl-section">
+		<div class="sl-wrap">
+			<span class="sl-eyebrow sl-home-sub-heading"><?php esc_html_e( 'Enterprise Modern Slavery eLearning', 'succeedlearn-amp' ); ?></span>
+			<h2 class="sl-h2"><?php esc_html_e( 'Modern Slavery Training', 'succeedlearn-amp' ); ?> <span><?php esc_html_e( 'For Organisations', 'succeedlearn-amp' ); ?></span> <?php esc_html_e( '- Built for Scale', 'succeedlearn-amp' ); ?></h2>
+			<p><?php esc_html_e( 'Deliver Modern Slavery awareness across teams while giving administrators the controls needed to assign training, monitor completion and manage recurring compliance activity.', 'succeedlearn-amp' ); ?></p>
+			<ul class="sl-aml-feature-list" role="list">
+				<li class="sl-aml-feature-list__item"><span class="sl-aml-number">01</span><div><strong><?php esc_html_e( 'Reporting and tracking', 'succeedlearn-amp' ); ?></strong><span><?php esc_html_e( 'Monitor learner progress, completion and training status.', 'succeedlearn-amp' ); ?></span></div></li>
+				<li class="sl-aml-feature-list__item"><span class="sl-aml-number">02</span><div><strong><?php esc_html_e( 'Automatic reminders', 'succeedlearn-amp' ); ?></strong><span><?php esc_html_e( 'Support completion with automated learner reminders.', 'succeedlearn-amp' ); ?></span></div></li>
+				<li class="sl-aml-feature-list__item"><span class="sl-aml-number">03</span><div><strong><?php esc_html_e( 'SCORM or SaaS delivery', 'succeedlearn-amp' ); ?></strong><span><?php esc_html_e( 'Deploy through your LMS or use the SucceedLEARN platform.', 'succeedlearn-amp' ); ?></span></div></li>
+				<li class="sl-aml-feature-list__item"><span class="sl-aml-number">04</span><div><strong><?php esc_html_e( 'Group assignment', 'succeedlearn-amp' ); ?></strong><span><?php esc_html_e( 'Assign Modern Slavery training to selected teams or learner groups.', 'succeedlearn-amp' ); ?></span></div></li>
+				<li class="sl-aml-feature-list__item"><span class="sl-aml-number">05</span><div><strong><?php esc_html_e( 'Completion visibility', 'succeedlearn-amp' ); ?></strong><span><?php esc_html_e( 'Give administrators clear oversight of learner activity.', 'succeedlearn-amp' ); ?></span></div></li>
+			</ul>
+			<div class="sl-content-actions">
+				<button type="button" class="sl-content-btn sl-content-btn-primary" <?php echo succeedlearn_amp_scroll_tap_attr( 'contact' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>><?php esc_html_e( 'Request Demo', 'succeedlearn-amp' ); ?></button>
+				<button type="button" class="sl-content-btn sl-content-btn-secondary" <?php echo succeedlearn_amp_scroll_tap_attr( 'fcp-suite' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>><?php esc_html_e( 'Explore More', 'succeedlearn-amp' ); ?></button>
+			</div>
+			<div class="sl-aml-media sl-aml-after">
+				<div class="sl-aml-image">
+					<amp-img src="<?php echo esc_url( $organisation_image ); ?>" width="1200" height="900" layout="responsive" alt="<?php esc_attr_e( 'Organisational Training Dashboard', 'succeedlearn-amp' ); ?>"></amp-img>
 				</div>
 			</div>
 		</div>
@@ -174,15 +224,21 @@ $render_cards = static function ( $cards ) {
 		<div class="sl-wrap">
 			<span class="sl-eyebrow sl-home-sub-heading"><?php esc_html_e( 'Target Audience', 'succeedlearn-amp' ); ?></span>
 			<h2 class="sl-h2"><?php esc_html_e( 'Who Should Take Modern Slavery Awareness Training', 'succeedlearn-amp' ); ?> <span><?php esc_html_e( 'in a UK Organisation?', 'succeedlearn-amp' ); ?></span></h2>
+			<p><?php esc_html_e( 'The course is suitable for employees who need practical awareness of modern slavery and guidance on how to respond when something does not seem right.', 'succeedlearn-amp' ); ?></p>
 			<ul class="sl-list sl-aml-list" role="list">
 				<?php foreach ( $audiences as $audience ) : ?>
 					<li class="sl-list-item"><span class="sl-aml-check" aria-hidden="true">✓</span><span class="sl-list-item__text"><?php echo esc_html( $audience ); ?></span></li>
 				<?php endforeach; ?>
 			</ul>
+			<div class="sl-aml-media sl-aml-after">
+				<div class="sl-aml-image">
+					<amp-img src="<?php echo esc_url( $audience_image ); ?>" width="1200" height="800" layout="responsive" alt="<?php esc_attr_e( 'UK employees, compliance or procurement colleagues discussing workplace and supplier risk', 'succeedlearn-amp' ); ?>"></amp-img>
+				</div>
+			</div>
 		</div>
 	</section>
 
-	<section id="warning-signs" class="sl-section">
+	<section id="outcomes" class="sl-section">
 		<div class="sl-wrap">
 			<span class="sl-eyebrow sl-home-sub-heading"><?php esc_html_e( 'Learning Outcomes', 'succeedlearn-amp' ); ?></span>
 			<h2 class="sl-h2"><?php esc_html_e( 'What Will Learners Be Able to Do?', 'succeedlearn-amp' ); ?></h2>
