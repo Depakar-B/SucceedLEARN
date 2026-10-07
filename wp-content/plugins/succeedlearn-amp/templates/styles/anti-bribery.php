@@ -99,7 +99,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	.sl-anti-bribery-page .sl-aml-hero__cta-item{width:auto}
 	.sl-anti-bribery-page .sl-aml-hero__actions .sl-hero-btn{width:auto;max-width:none;flex:0 0 auto;white-space:nowrap}
 	.sl-aml-feature-list,.sl-aml-outcome-list{grid-template-columns:repeat(2,minmax(0,1fr))}
-	.sl-anti-bribery-page .sl-aml-outcome-list>:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:100%;max-width:calc((100% - 12px) / 2)}
+	.sl-anti-bribery-page .sl-aml-feature-list>:last-child:nth-child(odd),
+	.sl-anti-bribery-page .sl-aml-outcome-list>:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:100%;max-width:calc((100% - 10px) / 2)}
 	.sl-aml-cards--split{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 	.sl-aml-concept-stack--high-risk{grid-template-columns:repeat(2,minmax(0,1fr))}
 	.sl-anti-bribery-page .sl-contact-form-card{padding:28px}
