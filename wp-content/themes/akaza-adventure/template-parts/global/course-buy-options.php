@@ -13,6 +13,7 @@
  * - suite (string) anchor for the organisation "Explore More" button (default #fcp-suite)
  * - individual_image (string) optional image URL; a placeholder is shown when empty
  * - price (string) optional, e.g. "$18" → "Buy Now @ $18"
+ * - certificate (bool) optional, include the individual CPD certificate feature (default true)
  *
  * @package Akaza_Adventure
  */
@@ -26,6 +27,7 @@ $contact          = isset( $args['contact'] ) ? (string) $args['contact'] : '#co
 $suite            = isset( $args['suite'] ) ? (string) $args['suite'] : '#fcp-suite';
 $individual_image = isset( $args['individual_image'] ) ? (string) $args['individual_image'] : 'https://succeedlearn.com/wp-content/uploads/2026/09/Image-1-AML.webp';
 $price            = isset( $args['price'] ) ? (string) $args['price'] : '';
+$show_certificate = ! isset( $args['certificate'] ) || (bool) $args['certificate'];
 
 if ( '' === $course ) {
 	return;
@@ -42,14 +44,18 @@ $individual_features = array(
 		/* translators: %s: course name. */
 		'text'  => sprintf( __( 'Complete the core %s learning at your own pace.', 'akaza-adventure' ), $course ),
 	),
-	array(
+);
+
+if ( $show_certificate ) {
+	$individual_features[] = array(
 		'title' => __( 'CPD Certificate on Completion', 'akaza-adventure' ),
 		'text'  => __( 'Receive a completion certificate after successfully finishing the learning.', 'akaza-adventure' ),
-	),
-	array(
-		'title' => __( 'Instant access', 'akaza-adventure' ),
-		'text'  => __( 'Start learning immediately after purchase.', 'akaza-adventure' ),
-	),
+	);
+}
+
+$individual_features[] = array(
+	'title' => __( 'Instant access', 'akaza-adventure' ),
+	'text'  => __( 'Start learning immediately after purchase.', 'akaza-adventure' ),
 );
 
 $organisation_features = array(

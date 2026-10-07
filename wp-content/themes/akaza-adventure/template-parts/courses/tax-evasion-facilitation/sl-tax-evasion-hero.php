@@ -33,7 +33,7 @@ $hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/Tax-Evasion_H
 			<div class="sl-tax-evasion-hero__content">
 
 				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'UK Financial Crime Prevention Training', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Preventing Facilitation of Tax Evasion Compliance Training', 'akaza-adventure' ); ?>
 				</span>
 
 				<h1 id="sl-tax-evasion-hero-title">
@@ -59,7 +59,7 @@ $hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/Tax-Evasion_H
 				<div class="sl-hero-actions sl-hero-actions--labelled">
 					<div class="sl-hero-cta-item">
 						<span class="sl-hero-cta-label"><?php esc_html_e( 'Individual', 'akaza-adventure' ); ?></span>
-						<a class="sl-hero-btn sl-hero-btn-primary" href="#individuals"><?php esc_html_e( 'Buy Now @ $18', 'akaza-adventure' ); ?> <span aria-hidden="true">→</span></a>
+						<a class="sl-hero-btn sl-hero-btn-primary" href="#contact"><?php esc_html_e( 'Buy Now @ $18', 'akaza-adventure' ); ?> <span aria-hidden="true">→</span></a>
 					</div>
 					<div class="sl-hero-cta-item">
 						<span class="sl-hero-cta-label"><?php esc_html_e( 'Organisation', 'akaza-adventure' ); ?></span>

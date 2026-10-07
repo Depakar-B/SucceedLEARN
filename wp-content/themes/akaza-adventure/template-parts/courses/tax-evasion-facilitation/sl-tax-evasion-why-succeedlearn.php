@@ -76,17 +76,6 @@ $succeedlearn_benefits = array(
 
 			</div>
 
-			<!-- Right: Image -->
-			<div class="sl-tax-evasion-why-succeedlearn__media">
-
-				<div class="sl-tax-evasion-why-succeedlearn__image">
-					<div class="sl-tax-evasion-why-succeedlearn__image-placeholder">
-						<?php esc_html_e( 'Image Placeholder', 'akaza-adventure' ); ?>
-					</div>
-				</div>
-
-			</div>
-
 		</div>
 
 	</div>
