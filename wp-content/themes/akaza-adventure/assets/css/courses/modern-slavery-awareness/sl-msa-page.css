@@ -823,11 +823,11 @@ body.slf-body #main-content .msa-page .sl-home-sub-heading {
 }
 
 .msa-buy__intro {
-	position: sticky;
-	top: calc(var(--slf-header-clearance, 76px) + 34px);
+	position: static;
 }
 
 .msa-buy__form {
+	position: static;
 	padding: clamp(28px, 5vw, 48px);
 	border: 1px solid #e0e5ec;
 	border-radius: 18px;

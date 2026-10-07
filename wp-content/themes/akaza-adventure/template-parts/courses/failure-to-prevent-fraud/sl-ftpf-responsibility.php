@@ -23,10 +23,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<p><?php esc_html_e( "Honesty, transparency, appropriate challenge and a willingness to raise concerns all contribute to an organisation's fraud-risk culture.", 'akaza-adventure' ); ?></p>
 			</div>
 
-			<div class="ftpf-responsibility__mark" aria-label="<?php esc_attr_e( 'Question. Check. Raise.', 'akaza-adventure' ); ?>">
-				<?php esc_html_e( 'Question.', 'akaza-adventure' ); ?><br>
-				<?php esc_html_e( 'Check.', 'akaza-adventure' ); ?><br>
-				<?php esc_html_e( 'Raise.', 'akaza-adventure' ); ?>
+			<div class="ftpf-responsibility__aside">
+				<div class="ftpf-responsibility__mark" aria-label="<?php esc_attr_e( 'Question. Check. Raise.', 'akaza-adventure' ); ?>">
+					<?php esc_html_e( 'Question.', 'akaza-adventure' ); ?><br>
+					<?php esc_html_e( 'Check.', 'akaza-adventure' ); ?><br>
+					<?php esc_html_e( 'Raise.', 'akaza-adventure' ); ?>
+				</div>
+				<a class="ftpf-btn ftpf-btn--solid" href="#request-demo">
+					<?php esc_html_e( 'Buy the Course', 'akaza-adventure' ); ?>
+				</a>
 			</div>
 
 		</div>

@@ -54,7 +54,7 @@ $prevention_cycle = array(
 				</span>
 
 				<h2 id="sl-tax-evasion-cycle-title">
-					<?php esc_html_e( 'Preventing Facilitation of Tax Evasion Is a Cycle', 'akaza-adventure' ); ?>
+					<?php esc_html_e( 'Corporate Tax Evasion Prevention Is an Ongoing Process -', 'akaza-adventure' ); ?>
 					<span><?php esc_html_e( 'Not a One-Off Exercise', 'akaza-adventure' ); ?></span>
 				</h2>
 

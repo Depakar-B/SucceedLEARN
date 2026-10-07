@@ -8,12 +8,13 @@
 	display: grid;
 	grid-template-columns: 0.72fr 1.18fr;
 	gap: clamp(55px, 8vw, 105px);
+	align-items: center;
 }
 
 .ftpf-faq__intro {
-	position: sticky;
-	top: calc(var(--slf-header-clearance, 76px) + 40px);
-	align-self: start;
+	position: static;
+	align-self: center;
+	text-align: center;
 }
 
 .ftpf-faq__list {

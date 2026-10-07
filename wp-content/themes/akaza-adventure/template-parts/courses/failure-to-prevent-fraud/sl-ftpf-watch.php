@@ -41,9 +41,9 @@ $warning_signs = array(
 	<div class="ftpf-container">
 
 		<div class="ftpf-section-heading">
-			<span class="sl-home-sub-heading"><?php esc_html_e( 'Recognising Fraud Risk', 'akaza-adventure' ); ?></span>
+			<span class="sl-home-sub-heading"><?php esc_html_e( 'Identifying Fraud Risk', 'akaza-adventure' ); ?></span>
 			<h2 id="ftpf-watch-title">
-				<?php esc_html_e( 'Know', 'akaza-adventure' ); ?>
+				<?php esc_html_e( 'Recognising Fraud Risk - know', 'akaza-adventure' ); ?>
 				<span><?php esc_html_e( 'what to watch for', 'akaza-adventure' ); ?></span>
 			</h2>
 			<p><?php esc_html_e( 'Fraud risk does not always start with an obvious act of misconduct. Learners should be alert to warning signs in information, behaviour and business processes.', 'akaza-adventure' ); ?></p>

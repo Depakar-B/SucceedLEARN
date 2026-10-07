@@ -62,6 +62,11 @@ function akaza_enqueue_tax_evasion_assets() {
 	wp_enqueue_style( 'akaza-global-faq' );
 	wp_enqueue_script( 'akaza-global-faq' );
 
+	akaza_enqueue_theme_script(
+		'akaza-sl-tax-evasion-interactive',
+		'courses/tax-evasion-facilitation/sl-tax-evasion-interactive.js'
+	);
+
 	// Global contact section + course demo form.
 	akaza_enqueue_theme_style( 'akaza-contact-form', 'contact-from.css', array( 'akaza-main' ) );
 	wp_enqueue_style( 'akaza-global-contact' );
