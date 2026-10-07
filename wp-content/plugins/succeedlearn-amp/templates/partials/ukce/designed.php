@@ -45,7 +45,7 @@ $learning_elements = succeedlearn_amp_get_ukce_learning_elements();
 			<div class="sl-ukce-designed__detail">
 				<h3><?php esc_html_e( 'Format & accessibility', 'succeedlearn-amp' ); ?></h3>
 				<p>
-					<?php esc_html_e( 'Fully responsive interface across desktop, tablet, and mobile, complete with a learner dashboard, progress tracking, automated reminder prompts, and seamless integration with your existing LMS or HR systems.', 'succeedlearn-amp' ); ?>
+					<?php esc_html_e( 'Fully responsive interface across desktop, tablet, and mobile — complete with a learner dashboard, progress tracking, automated reminder prompts, and seamless integration with your existing LMS or HR systems.', 'succeedlearn-amp' ); ?>
 				</p>
 			</div>
 
