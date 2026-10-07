@@ -23,7 +23,7 @@ $dashboard_image = succeedlearn_amp_get_sm_image( '2026/09/Security-Awareness-Re
 
 				<h2 id="sl-s-metrics-dashboard-title" class="sl-h2">
 					<?php esc_html_e( 'Security Awareness Analytics', 'succeedlearn-amp' ); ?>
-					<span><?php esc_html_e( '& Reporting Dashboard', 'succeedlearn-amp' ); ?></span>
+					<span><?php esc_html_e( '& Reports Dashboard', 'succeedlearn-amp' ); ?></span>
 				</h2>
 
 				<div class="sl-s-metrics-dashboard__copy">
@@ -51,7 +51,7 @@ $dashboard_image = succeedlearn_amp_get_sm_image( '2026/09/Security-Awareness-Re
 						width="800"
 						height="600"
 						layout="responsive"
-						alt="<?php esc_attr_e( 'Security Awareness Analytics & Reporting Dashboard', 'succeedlearn-amp' ); ?>"
+						alt="<?php esc_attr_e( 'Security Awareness Analytics & Reports Dashboard', 'succeedlearn-amp' ); ?>"
 					></amp-img>
 				</div>
 			</div>

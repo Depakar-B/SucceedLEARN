@@ -15,10 +15,10 @@ $report_image  = succeedlearn_amp_get_sm_image( '2026/09/S-Series-Reports-S-Metr
 <section class="sl-s-metrics-suite-reporting" aria-labelledby="sl-s-metrics-suite-reporting-title">
 	<div class="sl-wrap">
 		<div class="sl-s-metrics-suite-reporting__intro">
-			<span class="sl-home-sub-heading"><?php esc_html_e( 'Suite-Wide Reporting', 'succeedlearn-amp' ); ?></span>
+			<span class="sl-home-sub-heading"><?php esc_html_e( 'Suite-Wide Reports', 'succeedlearn-amp' ); ?></span>
 
 			<h2 id="sl-s-metrics-suite-reporting-title" class="sl-h2">
-				<?php esc_html_e( 'Reporting Across the Entire', 'succeedlearn-amp' ); ?>
+				<?php esc_html_e( 'Reports Across the Entire', 'succeedlearn-amp' ); ?>
 				<span><?php esc_html_e( 'Security Behaviour & Culture Suite', 'succeedlearn-amp' ); ?></span>
 			</h2>
 

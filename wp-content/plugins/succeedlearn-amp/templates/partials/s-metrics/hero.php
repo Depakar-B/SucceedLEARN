@@ -27,7 +27,7 @@ $hero_image = function_exists( 'succeedlearn_amp_get_sm_hero_image' )
 			?>
 			<span class="sl-home-sub-heading"><?php esc_html_e( 'S-Metrics', 'succeedlearn-amp' ); ?></span>
 			<h1 id="sl-s-metrics-hero-title">
-				<?php esc_html_e( 'Security Awareness Analytics, Reporting & Compliance Dashboard', 'succeedlearn-amp' ); ?>
+				<?php esc_html_e( 'Security Awareness Analytics, Reports & Compliance Dashboard', 'succeedlearn-amp' ); ?>
 			</h1>
 		</div>
 
@@ -64,7 +64,7 @@ $hero_image = function_exists( 'succeedlearn_amp_get_sm_hero_image' )
 						width="800"
 						height="600"
 						layout="responsive"
-						alt="<?php esc_attr_e( 'Security Awareness Analytics, Reporting & Compliance Dashboard', 'succeedlearn-amp' ); ?>"
+						alt="<?php esc_attr_e( 'Security Awareness Analytics, Reports & Compliance Dashboard', 'succeedlearn-amp' ); ?>"
 					></amp-img>
 				</div>
 			</div>

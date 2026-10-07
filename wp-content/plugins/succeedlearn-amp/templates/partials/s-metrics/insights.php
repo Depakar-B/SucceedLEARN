@@ -15,11 +15,11 @@ $insights_image = succeedlearn_amp_get_sm_image( '2026/09/Security-Awareness-Dat
 	<div class="sl-wrap">
 		<div class="sl-s-metrics-insights__grid">
 			<div class="sl-s-metrics-insights__content">
-				<span class="sl-home-sub-heading"><?php esc_html_e( 'Actionable Intelligence', 'succeedlearn-amp' ); ?></span>
+				<span class="sl-home-sub-heading"><?php esc_html_e( 'From Data to Decisions', 'succeedlearn-amp' ); ?></span>
 
 				<h2 id="sl-s-metrics-insights-title" class="sl-h2">
-					<?php esc_html_e( 'Turn Security Awareness Data', 'succeedlearn-amp' ); ?>
-					<span><?php esc_html_e( 'Into Actionable Insight.', 'succeedlearn-amp' ); ?></span>
+					<?php esc_html_e( 'Turn Security Awareness Insights', 'succeedlearn-amp' ); ?>
+					<span><?php esc_html_e( 'Into Meaningful Action', 'succeedlearn-amp' ); ?></span>
 				</h2>
 
 				<div class="sl-s-metrics-insights__copy">

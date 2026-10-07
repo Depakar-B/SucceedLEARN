@@ -19,8 +19,8 @@ $measure_image = succeedlearn_amp_get_sm_image( '2026/09/Audit-Compliance-Report
 				<span class="sl-home-sub-heading"><?php esc_html_e( 'Audit & Compliance', 'succeedlearn-amp' ); ?></span>
 
 				<h2 id="sl-s-metrics-measure-title" class="sl-h2">
-					<?php esc_html_e( 'Reporting for Audit', 'succeedlearn-amp' ); ?>
-					<span><?php esc_html_e( '& Compliance Readiness', 'succeedlearn-amp' ); ?></span>
+					<?php esc_html_e( 'Turn Awareness Activity', 'succeedlearn-amp' ); ?>
+					<span><?php esc_html_e( 'Into Audit-Ready Evidence', 'succeedlearn-amp' ); ?></span>
 				</h2>
 
 				<div class="sl-s-metrics-measure__copy">

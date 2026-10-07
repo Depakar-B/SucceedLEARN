@@ -1,8 +1,6 @@
 <?php
 /**
- * S-Metrics AMP — Security Behaviour & Culture Suite.
- *
- * Ports the global desktop SBCS component (soft background, media right).
+ * S-Metrics AMP — From Awareness to Measurable Behaviour Change.
  *
  * @package SucceedLEARN\AMP
  */
@@ -12,26 +10,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $suite_items = succeedlearn_amp_get_sm_suite_items();
-$suite_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/From-Awareness-to-Real-World-Readiness.webp';
 ?>
 <section
 	id="security-behaviour-culture-suite"
-	class="sl-sbcs sl-sbcs--bg-soft sl-sbcs--media-right"
+	class="sl-sbcs sl-sbcs--bg-soft"
 	aria-labelledby="security-behaviour-culture-suite-title"
 >
 	<div class="sl-wrap">
 		<div class="sl-sbcs__intro">
-			<span class="sl-home-sub-heading"><?php esc_html_e( 'Security Behaviour & Culture Suite', 'succeedlearn-amp' ); ?></span>
+			<span class="sl-home-sub-heading"><?php esc_html_e( 'S-Metrics Measures What the SBCS Ecosystem Delivers', 'succeedlearn-amp' ); ?></span>
 
 			<h2 id="security-behaviour-culture-suite-title" class="sl-h2">
 				<?php esc_html_e( 'From Awareness to', 'succeedlearn-amp' ); ?>
-				<span><?php esc_html_e( 'Real-World Readiness', 'succeedlearn-amp' ); ?></span>
+				<span><?php esc_html_e( 'Measurable Behaviour Change', 'succeedlearn-amp' ); ?></span>
 			</h2>
 
 			<p>
 				<?php
 				esc_html_e(
-					'As part of the SucceedLEARN Security Behaviour & Culture Suite, continuous learning, reinforcement, engagement, testing and measurement work together to help organisations build stronger security behaviours.',
+					'S-Metrics forms the Measure layer of the SucceedLEARN Security Behaviour & Culture Suite.',
 					'succeedlearn-amp'
 				);
 				?>
@@ -57,31 +54,6 @@ $suite_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/From-Awarene
 					</div>
 				<?php endforeach; ?>
 			</div>
-
-			<div class="sl-sbcs__media">
-				<div class="sl-sbcs__image">
-					<amp-img
-						src="<?php echo esc_url( $suite_image ); ?>"
-						width="720"
-						height="900"
-						layout="responsive"
-						alt="<?php esc_attr_e( 'From Awareness to Real-World Readiness', 'succeedlearn-amp' ); ?>"
-					></amp-img>
-				</div>
-			</div>
-		</div>
-
-		<div class="sl-sbcs__closing">
-			<p>
-				<strong>
-					<?php
-					esc_html_e(
-						'Together, these solutions create a continuous cycle of learning, testing, reinforcement and measurement.',
-						'succeedlearn-amp'
-					);
-					?>
-				</strong>
-			</p>
 		</div>
 	</div>
 </section>

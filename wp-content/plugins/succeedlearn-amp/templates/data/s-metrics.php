@@ -46,7 +46,7 @@ function succeedlearn_amp_get_sm_canonical_url() {
  * @return string
  */
 function succeedlearn_amp_get_sm_page_title() {
-	return __( 'Security Awareness Analytics, Reporting & Compliance Dashboard', 'succeedlearn-amp' );
+	return __( 'Security Awareness Analytics, Reports & Compliance Dashboard', 'succeedlearn-amp' );
 }
 
 /**
@@ -213,7 +213,7 @@ function succeedlearn_amp_get_sm_suite_items() {
 		array(
 			'name'        => __( 'S-Bytes', 'succeedlearn-amp' ),
 			'action'      => __( 'Reinforce', 'succeedlearn-amp' ),
-			'description' => __( 'Keep important security concepts fresh through continuous microlearning.', 'succeedlearn-amp' ),
+			'description' => __( 'Keep important security concepts fresh through short, continuous microlearning.', 'succeedlearn-amp' ),
 		),
 		array(
 			'name'        => __( 'S-Phish', 'succeedlearn-amp' ),
@@ -223,7 +223,7 @@ function succeedlearn_amp_get_sm_suite_items() {
 		array(
 			'name'        => __( 'S-Play', 'succeedlearn-amp' ),
 			'action'      => __( 'Engage', 'succeedlearn-amp' ),
-			'description' => __( 'Reinforce cybersecurity concepts through interactive and gamified learning.', 'succeedlearn-amp' ),
+			'description' => __( 'Reinforce security concepts through interactive and gamified learning.', 'succeedlearn-amp' ),
 		),
 		array(
 			'name'        => __( 'S-Signs', 'succeedlearn-amp' ),
@@ -263,11 +263,11 @@ function succeedlearn_amp_get_sm_choose_reasons() {
 			'text'  => __( 'Maintain accurate training records, completion reports, assessment data, certificates, and campaign history to demonstrate due diligence during audits and regulatory reviews.', 'succeedlearn-amp' ),
 		),
 		array(
-			'title' => __( 'Flexible Reporting', 'succeedlearn-amp' ),
+			'title' => __( 'Flexible Reports', 'succeedlearn-amp' ),
 			'text'  => __( 'Filter data according to users, organisational groups, campaigns, courses and other relevant dimensions.', 'succeedlearn-amp' ),
 		),
 		array(
-			'title' => __( 'Executive-Level Reporting', 'succeedlearn-amp' ),
+			'title' => __( 'Executive-Level Reports', 'succeedlearn-amp' ),
 			'text'  => __( 'Provide leadership teams with clear, exportable reports that demonstrate programme performance, employee participation, organisational risk, and security awareness maturity.', 'succeedlearn-amp' ),
 		),
 		array(
