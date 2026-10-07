@@ -28,11 +28,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</h2>
 		</div>
 
-		<ul class="sl-aml-outcome-list" role="list">
+		<ul class="sl-aml-outcome-list sl-abac-journey-list" role="list">
 			<?php foreach ( $journey as $step ) : ?>
-				<li class="sl-aml-outcome-list__item">
+				<li class="sl-aml-outcome-list__item sl-abac-journey-card">
 					<span class="sl-aml-number" aria-hidden="true"><?php echo esc_html( $step['num'] ); ?></span>
-					<div>
+					<div class="sl-abac-journey-card__body">
 						<h3 class="sl-panel-title"><?php echo esc_html( $step['title'] ); ?></h3>
 						<p><?php echo esc_html( $step['text'] ); ?></p>
 					</div>
@@ -40,9 +40,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php endforeach; ?>
 		</ul>
 
-		<div class="sl-aml-media sl-aml-after">
+		<div class="sl-aml-media sl-aml-after sl-abac-journey-media">
 			<div class="sl-aml-image sl-aml-image--wide">
 				<amp-img
+					media="(min-width:768px)"
 					src="<?php echo esc_url( $images['journey'] ); ?>"
 					width="1600"
 					height="900"

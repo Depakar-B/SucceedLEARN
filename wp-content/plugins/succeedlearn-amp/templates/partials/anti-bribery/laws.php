@@ -27,9 +27,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</p>
 		</div>
 
-		<div class="sl-aml-concept-stack">
+		<div class="sl-aml-concept-stack sl-abac-law-grid">
 			<?php foreach ( $laws as $law ) : ?>
-				<article class="sl-aml-concept">
+				<article class="sl-aml-concept sl-abac-law-card">
 					<?php
 					$image_key = isset( $law['image'] ) ? (string) $law['image'] : '';
 					$image_url = ( '' !== $image_key && ! empty( $images[ $image_key ] ) ) ? $images[ $image_key ] : '';
@@ -48,7 +48,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						</div>
 					<?php endif; ?>
 
-					<span class="sl-aml-concept__code"><?php echo esc_html( $law['code'] ); ?></span>
+					<span class="sl-abac-law-card__region"><?php echo esc_html( $law['region'] ); ?></span>
 					<h3 class="sl-panel-title"><?php echo esc_html( $law['title'] ); ?></h3>
 					<div class="sl-aml-copy">
 						<?php foreach ( (array) $law['paragraphs'] as $paragraph ) : ?>

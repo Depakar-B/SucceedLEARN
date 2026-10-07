@@ -341,6 +341,7 @@ function succeedlearn_amp_get_anti_bribery_laws() {
 	return array(
 		array(
 			'code'       => __( 'UK', 'succeedlearn-amp' ),
+			'region'     => __( 'United Kingdom', 'succeedlearn-amp' ),
 			'title'      => __( 'UK Bribery Act 2010', 'succeedlearn-amp' ),
 			'image'      => 'law_uk',
 			'alt'        => __( 'UK Bribery Act 2010 offences: offering, receiving and foreign official bribery, failure to prevent bribery', 'succeedlearn-amp' ),
@@ -352,6 +353,7 @@ function succeedlearn_amp_get_anti_bribery_laws() {
 		),
 		array(
 			'code'       => __( 'US', 'succeedlearn-amp' ),
+			'region'     => __( 'United States', 'succeedlearn-amp' ),
 			'title'      => __( 'US Foreign Corrupt Practices Act (FCPA)', 'succeedlearn-amp' ),
 			'image'      => 'law_us',
 			'alt'        => __( 'US FCPA 1977 themes: anti-bribery, books and records, third-party risk, foreign officials and business gifts', 'succeedlearn-amp' ),
@@ -363,6 +365,7 @@ function succeedlearn_amp_get_anti_bribery_laws() {
 		),
 		array(
 			'code'       => __( 'India', 'succeedlearn-amp' ),
+			'region'     => __( 'India', 'succeedlearn-amp' ),
 			'title'      => __( 'Prevention of Corruption Act 1988', 'succeedlearn-amp' ),
 			'image'      => 'law_india',
 			'alt'        => __( 'India Prevention of Corruption Act 1988 themes: public servants, undue advantage, gifts, approvals and reporting', 'succeedlearn-amp' ),

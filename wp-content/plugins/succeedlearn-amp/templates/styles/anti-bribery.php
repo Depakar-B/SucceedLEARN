@@ -110,3 +110,42 @@ if ( ! defined( 'ABSPATH' ) ) {
 	.sl-aml-intro{margin-bottom:40px}
 	.sl-anti-bribery-page .sl-contact-form-card{padding:32px;border-radius:24px}
 }
+
+/* FCP suite: one card on mobile, two per row from tablet up. */
+.sl-anti-bribery-page #fcp-suite .sl-course-suite__grid{grid-template-columns:minmax(0,1fr)}
+
+/* Scenario images and law cards: one per row on mobile. */
+.sl-anti-bribery-page .sl-abac-scenario-grid,
+.sl-anti-bribery-page .sl-abac-law-grid{grid-template-columns:minmax(0,1fr)}
+.sl-anti-bribery-page .sl-abac-law-card__region{display:inline-flex;align-items:center;margin:0 0 12px;padding:7px 12px;border-radius:999px;background:var(--sl-page-primary-soft);color:var(--sl-page-primary);font-size:13px;font-weight:700;line-height:1.2}
+.sl-anti-bribery-page .sl-abac-law-card .sl-panel-title{text-align:left}
+.sl-anti-bribery-page .sl-abac-law-card .sl-aml-copy{text-align:left}
+
+/* Course journey cards: number in the top-right, title and copy from the left. */
+.sl-anti-bribery-page .sl-abac-journey-list{grid-template-columns:minmax(0,1fr)}
+.sl-anti-bribery-page .sl-abac-journey-card{position:relative;display:block;padding:18px 64px 18px 18px;text-align:left}
+.sl-anti-bribery-page .sl-abac-journey-card .sl-aml-number{position:absolute;top:16px;right:16px}
+.sl-anti-bribery-page .sl-abac-journey-card__body{min-width:0;text-align:left}
+.sl-anti-bribery-page .sl-abac-journey-card .sl-panel-title,
+.sl-anti-bribery-page .sl-abac-journey-card p{text-align:left}
+.sl-anti-bribery-page .sl-abac-journey-media{display:none}
+
+@media(min-width:768px){
+	.sl-anti-bribery-page #fcp-suite .sl-course-suite__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+	.sl-anti-bribery-page #fcp-suite .sl-course-suite__grid>.sl-course-suite__tile:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:calc(50% - 8px)}
+	.sl-anti-bribery-page .sl-abac-scenario-grid,
+	.sl-anti-bribery-page .sl-abac-law-grid,
+	.sl-anti-bribery-page .sl-abac-journey-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+	.sl-anti-bribery-page .sl-abac-scenario-grid>:last-child:nth-child(odd),
+	.sl-anti-bribery-page .sl-abac-law-grid>:last-child:nth-child(odd),
+	.sl-anti-bribery-page .sl-abac-journey-list>.sl-abac-journey-card:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:100%;max-width:calc((100% - 20px) / 2)}
+	.sl-anti-bribery-page .sl-abac-journey-media{display:block}
+}
+
+@media(min-width:1000px){
+	.sl-anti-bribery-page #fcp-suite .sl-course-suite__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+	.sl-anti-bribery-page #fcp-suite .sl-course-suite__grid>.sl-course-suite__tile,
+	.sl-anti-bribery-page #fcp-suite .sl-course-suite__grid>.sl-course-suite__tile:last-child:nth-child(odd),
+	.sl-anti-bribery-page #fcp-suite .sl-course-suite__grid>.sl-course-suite__tile:nth-last-child(2):nth-child(3n+1),
+	.sl-anti-bribery-page #fcp-suite .sl-course-suite__grid>.sl-course-suite__tile:last-child:nth-child(3n+1){grid-column:auto;justify-self:stretch;width:auto}
+}
