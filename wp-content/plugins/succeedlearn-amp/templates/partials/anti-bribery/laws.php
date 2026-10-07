@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<section id="laws" class="sl-section sl-aml-pe-vc-laws" aria-labelledby="sl-anti-bribery-laws-title">
+<section id="laws" class="sl-section sl-section--alt sl-aml-pe-vc-laws" aria-labelledby="sl-anti-bribery-laws-title">
 	<div class="sl-wrap">
 		<div class="sl-aml-intro">
 			<span class="sl-eyebrow sl-home-sub-heading">
