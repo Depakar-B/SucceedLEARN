@@ -18,22 +18,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<div class="sl-insider-trading-audience__grid">
 
-			<div class="sl-insider-trading-audience__media" aria-hidden="true">
-
-				<div class="sl-insider-trading-audience__image sl-insider-trading-audience__image--large">
-					<div class="sl-insider-trading-audience__placeholder">
-						<span>Image<br>600 × 700px</span>
-					</div>
-				</div>
-
-				<div class="sl-insider-trading-audience__image sl-insider-trading-audience__image--small">
-					<div class="sl-insider-trading-audience__placeholder">
-						<span>Image<br>400 × 560px</span>
-					</div>
-				</div>
-
-			</div>
-
 			<div class="sl-insider-trading-audience__content">
 
 				<span class="sl-home-sub-heading">

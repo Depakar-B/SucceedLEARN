@@ -33,7 +33,7 @@ $hero_image = 'https://succeedlearn.com/wp-content/uploads/2026/09/insider_tradi
 			<span class="sl-home-sub-heading">
 				<?php
 				esc_html_e(
-					'Financial Crime Prevention',
+					'Insider Trading Compliances Training',
 					'akaza-adventure'
 				);
 				?>

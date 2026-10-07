@@ -143,23 +143,6 @@ defined( 'ABSPATH' ) || exit;
 
 				</div>
 
-				<div class="sl-content-actions">
-
-					<a
-						class="sl-content-btn sl-content-btn-primary"
-						href="#uk-course-link"
-					>
-						<?php
-						esc_html_e(
-							'Explore the Course',
-							'akaza-adventure'
-						);
-						?>
-						<span aria-hidden="true">→</span>
-					</a>
-
-				</div>
-
 			</div>
 
 			<div class="sl-insider-trading-regulatory-frameworks__media">
@@ -276,23 +259,6 @@ defined( 'ABSPATH' ) || exit;
 
 				</div>
 
-				<div class="sl-content-actions">
-
-					<a
-						class="sl-content-btn sl-content-btn-primary"
-						href="#us-course-link"
-					>
-						<?php
-						esc_html_e(
-							'Explore the Course',
-							'akaza-adventure'
-						);
-						?>
-						<span aria-hidden="true">→</span>
-					</a>
-
-				</div>
-
 			</div>
 
 		</article>
@@ -389,23 +355,6 @@ defined( 'ABSPATH' ) || exit;
 
 				</div>
 
-				<div class="sl-content-actions">
-
-					<a
-						class="sl-content-btn sl-content-btn-primary"
-						href="#india-course-link"
-					>
-						<?php
-						esc_html_e(
-							'Explore the Course',
-							'akaza-adventure'
-						);
-						?>
-						<span aria-hidden="true">→</span>
-					</a>
-
-				</div>
-
 			</div>
 
 			<div class="sl-insider-trading-regulatory-frameworks__media">
@@ -419,78 +368,6 @@ defined( 'ABSPATH' ) || exit;
 			</div>
 
 		</article>
-
-
-		<!-- Other Jurisdictions -->
-		<div class="sl-insider-trading-regulatory-frameworks__other">
-
-			<div class="sl-insider-trading-regulatory-frameworks__other-content">
-
-				<span class="sl-insider-trading-regulatory-frameworks__label">
-					<?php
-					esc_html_e(
-						'Other jurisdictions',
-						'akaza-adventure'
-					);
-					?>
-				</span>
-
-				<h3>
-					<?php
-					esc_html_e(
-						'Need Insider Trading eLearning for Another Jurisdiction?',
-						'akaza-adventure'
-					);
-					?>
-				</h3>
-
-				<p>
-					<?php
-					esc_html_e(
-						'SucceedLEARN already provides regional Insider Trading eLearning for the United Kingdom, United States and India.',
-						'akaza-adventure'
-					);
-					?>
-				</p>
-
-				<p>
-					<?php
-					esc_html_e(
-						'Organisations can select an existing off-the-shelf course where an appropriate course is available, or work with SucceedLEARN to customise learning around their organisation, jurisdiction and internal requirements.',
-						'akaza-adventure'
-					);
-					?>
-				</p>
-
-				<p>
-					<?php
-					esc_html_e(
-						'For other countries, SucceedLEARN can discuss available off-the-shelf options where relevant or develop a customised course using agreed regulatory sources, organisational policies, terminology, learner roles and workplace scenarios.',
-						'akaza-adventure'
-					);
-					?>
-				</p>
-
-				<div class="sl-content-actions">
-
-					<a
-						class="sl-content-btn sl-content-btn-primary"
-						href="#contact"
-					>
-						<?php
-						esc_html_e(
-							'Discuss Your Requirements',
-							'akaza-adventure'
-						);
-						?>
-						<span aria-hidden="true">→</span>
-					</a>
-
-				</div>
-
-			</div>
-
-		</div>
 
 
 		<!-- Regulatory Note -->

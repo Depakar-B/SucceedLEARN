@@ -50,8 +50,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				<div class="sl-tax-evasion-cfa__image">
 					<img
-						src="https://succeedlearn.com/wp-content/uploads/2026/10/Image-5_Tax-evasion.webp"
-						alt="<?php esc_attr_e( 'Training, documents and business relationships shown as tax evasion risks', 'akaza-adventure' ); ?>"
+						src="https://succeedlearn.com/wp-content/uploads/2026/10/Tax-evasion-image.webp"
+						alt="<?php esc_attr_e( 'Criminal Finances Act 2017 beside scales, coins and cash', 'akaza-adventure' ); ?>"
 						loading="lazy"
 						decoding="async"
 					>
