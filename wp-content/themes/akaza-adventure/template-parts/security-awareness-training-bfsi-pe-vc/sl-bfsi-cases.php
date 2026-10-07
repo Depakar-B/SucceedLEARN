@@ -1,7 +1,6 @@
 <?php
 /**
  * BFSI & PE/VC — Case Studies: Real Consequences of Non-Compliance.
- * Sticky left intro + scrollable right case cards.
  *
  * @package Akaza_Adventure
  */
@@ -32,51 +31,44 @@ $cases = array(
 >
 	<div class="container">
 
-		<div class="sl-bfsi-cases__layout">
+		<div class="sl-bfsi-cases__intro">
 
-			<div class="sl-bfsi-cases__intro">
+			<span class="sl-home-sub-heading">
+				<?php esc_html_e( 'Real-World Impact', 'akaza-adventure' ); ?>
+			</span>
 
-				<span class="sl-home-sub-heading">
-					<?php esc_html_e( 'Real-World Impact', 'akaza-adventure' ); ?>
-				</span>
+			<h2 id="sl-bfsi-cases-title">
+				<?php esc_html_e( 'Case Studies: Real Consequences of', 'akaza-adventure' ); ?>
+				<span><?php esc_html_e( 'Non-Compliance', 'akaza-adventure' ); ?></span>
+			</h2>
 
-				<h2 id="sl-bfsi-cases-title">
-					<?php esc_html_e( 'Case Studies: Real Consequences of', 'akaza-adventure' ); ?>
-					<span><?php esc_html_e( 'Non-Compliance', 'akaza-adventure' ); ?></span>
-				</h2>
+			<div class="sl-bfsi-cases__copy">
+				<p>
+					<?php
+					esc_html_e(
+						'Although Social Engineering, Insider Threat, Physical Security, Data Privacy, Third-Party Risk, and AI-based Attacks training are not always explicitly mandated as standalone legal requirements, regulators consistently expect documented, role-based security and privacy training as part of reasonable organizational controls. Companies that fail to train employees on threat recognition, data handling, vendor risks, and incident reporting face significantly higher penalties after incidents, making such training effectively mandatory in practice to demonstrate compliance, due diligence, and risk reduction.',
+						'akaza-adventure'
+					);
+					?>
+				</p>
+			</div>
 
-				<div class="sl-bfsi-cases__copy">
+		</div>
+
+		<div class="sl-bfsi-cases__cards">
+
+			<?php foreach ( $cases as $case ) : ?>
+
+				<article class="sl-bfsi-cases__card">
+					<h3 class="sl-panel-title">
+						<?php echo esc_html( $case['title'] ); ?>
+					</h3>
 					<p>
-						<?php
-						esc_html_e(
-							'Although Social Engineering, Insider Threat, Physical Security, Data Privacy, Third-Party Risk, and AI-based Attacks training are not always explicitly mandated as standalone legal requirements, regulators consistently expect documented, role-based security and privacy training as part of reasonable organizational controls. Companies that fail to train employees on threat recognition, data handling, vendor risks, and incident reporting face significantly higher penalties after incidents, making such training effectively mandatory in practice to demonstrate compliance, due diligence, and risk reduction.',
-							'akaza-adventure'
-						);
-						?>
+						<?php echo esc_html( $case['text'] ); ?>
 					</p>
-				</div>
+				</article>
 
-			</div>
-
-			<div class="sl-bfsi-cases__cards">
-
-				<?php foreach ( $cases as $index => $case ) : ?>
-
-					<article class="sl-bfsi-cases__card">
-						<span class="sl-bfsi-cases__number" aria-hidden="true">
-							<?php echo esc_html( str_pad( (string) ( $index + 1 ), 2, '0', STR_PAD_LEFT ) ); ?>
-						</span>
-						<h3 class="sl-panel-title">
-							<?php echo esc_html( $case['title'] ); ?>
-						</h3>
-						<p>
-							<?php echo esc_html( $case['text'] ); ?>
-						</p>
-					</article>
-
-				<?php endforeach; ?>
-
-			</div>
+			<?php endforeach; ?>
 
 		</div>
 
