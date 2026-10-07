@@ -29,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<?php esc_html_e( 'Check.', 'akaza-adventure' ); ?><br>
 					<?php esc_html_e( 'Raise.', 'akaza-adventure' ); ?>
 				</div>
-				<a class="ftpf-btn ftpf-btn--solid" href="#individuals">
+				<a class="ftpf-btn ftpf-btn--solid" href="#request-demo">
 					<?php esc_html_e( 'Buy the Course', 'akaza-adventure' ); ?>
 				</a>
 			</div>
