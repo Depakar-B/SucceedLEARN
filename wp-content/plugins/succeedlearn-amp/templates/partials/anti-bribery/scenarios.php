@@ -41,7 +41,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php endforeach; ?>
 		</ul>
 
-		<div class="sl-aml-concept-stack sl-aml-after">
+		<div class="sl-aml-concept-stack sl-aml-after sl-abac-scenario-grid">
 			<?php foreach ( $scenarios as $scenario ) : ?>
 				<article class="sl-aml-concept">
 					<?php
