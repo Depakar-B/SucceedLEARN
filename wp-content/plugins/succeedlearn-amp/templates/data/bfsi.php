@@ -62,7 +62,7 @@ function succeedlearn_amp_get_bfsi_meta_description() {
  * @return string
  */
 function succeedlearn_amp_get_bfsi_hero_image() {
-	return succeedlearn_amp_upload_url( '2026/09/SucceedLEARN-Security-Behaviour-Culture-Suite.webp' );
+	return succeedlearn_amp_upload_url( '2026/10/BFSIPEVC.webp' );
 }
 
 /**
@@ -344,7 +344,7 @@ function succeedlearn_amp_get_bfsi_cases() {
 			'text'  => __( 'Interserve Group Limited (UK) was fined £4.4 million by the UK Information Commissioner’s Office (ICO) after a phishing email enabled attackers to access internal systems and compromise the personal data of over 100,000 employees. The regulator concluded that the breach stemmed from a social-engineering attack combined with inadequate security awareness and response controls, highlighting the compliance risk of insufficient employee training.', 'succeedlearn-amp' ),
 		),
 		array(
-			'title' => __( 'Morgan Stanley: Insider Data Misuse (United States)', 'succeedlearn-amp' ),
+			'title' => __( 'Morgan Stanley – Insider Data Misuse (United States)', 'succeedlearn-amp' ),
 			'text'  => __( 'In 2016, Morgan Stanley faced regulatory action after a former financial advisor misused authorised system access to extract data relating to approximately 350,000 client accounts and attempted to transfer it externally. The incident resulted in enforcement scrutiny, litigation exposure, reputational damage, and a significant compliance remediation programme, highlighting how failure to adequately prevent, monitor, and train employees on insider threat risks can lead to severe regulatory and business consequences.', 'succeedlearn-amp' ),
 		),
 		array(
@@ -371,7 +371,7 @@ function succeedlearn_amp_get_bfsi_choose_items() {
 		),
 		array(
 			'title' => __( 'Reduce Social-Engineering and Fraud Risk', 'succeedlearn-amp' ),
-			'text'  => __( 'Employees learn to slow down, verify suspicious requests and report potential threats before acting, which is particularly important when instructions involve payments, credentials, sensitive information or senior executives.', 'succeedlearn-amp' ),
+			'text'  => __( 'Employees learn to slow down, verify suspicious requests and report potential threats before acting—particularly important when instructions involve payments, credentials, sensitive information or senior executives.', 'succeedlearn-amp' ),
 		),
 		array(
 			'title' => __( 'Address Emerging AI-Enabled Threats', 'succeedlearn-amp' ),
@@ -422,7 +422,7 @@ function succeedlearn_amp_get_bfsi_more_courses() {
 			'href'  => succeedlearn_amp_get_bfsi_course_url( 'political-donations-pe-vc' ),
 		),
 		array(
-			'title' => __( 'Security & Privacy Awareness Training: UK', 'succeedlearn-amp' ),
+			'title' => __( 'Security & Privacy Awareness Training – UK', 'succeedlearn-amp' ),
 			'href'  => succeedlearn_amp_get_bfsi_course_url( 'information-security-awareness-training-for-uk-cyber-essentials' ),
 		),
 		array(
@@ -434,11 +434,11 @@ function succeedlearn_amp_get_bfsi_more_courses() {
 			'href'  => succeedlearn_amp_get_bfsi_course_url( 'whistleblowing-pe-vc' ),
 		),
 		array(
-			'title' => __( 'SMCR Training: Senior Managers', 'succeedlearn-amp' ),
+			'title' => __( 'SMCR Training – Senior Managers', 'succeedlearn-amp' ),
 			'href'  => succeedlearn_amp_get_bfsi_course_url( 'smcr-pe-vc' ),
 		),
 		array(
-			'title' => __( 'SMCR Training: Employees', 'succeedlearn-amp' ),
+			'title' => __( 'SMCR Training – Employees', 'succeedlearn-amp' ),
 			'href'  => succeedlearn_amp_get_bfsi_course_url( 'smcr-pe-vc' ),
 		),
 		array(
