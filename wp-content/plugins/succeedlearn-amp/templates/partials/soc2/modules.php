@@ -19,7 +19,7 @@ $modules = succeedlearn_amp_get_soc2_modules();
 	<div class="sl-wrap">
 		<div class="sl-soc2-modules__heading">
 			<span class="sl-home-sub-heading">
-				<?php esc_html_e( 'S-Aware Modules', 'succeedlearn-amp' ); ?>
+				<?php esc_html_e( 'Relevant Modules', 'succeedlearn-amp' ); ?>
 			</span>
 
 			<h2 id="sl-soc2-modules-title" class="sl-h2">
