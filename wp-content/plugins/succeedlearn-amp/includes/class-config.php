@@ -382,7 +382,7 @@ class Config {
 			),
 			'financial_crime_prevention' => array(
 				'default_id'     => 0,
-				'slugs'          => array( 'financial-crime-prevention' ),
+				'slugs'          => array( 'financial-crime-prevention', 'fcp-home-page' ),
 				'page_templates' => array( 'page-templates/financial-crime-prevention.php' ),
 				'template'       => 'pages/financial-crime-prevention',
 			),
