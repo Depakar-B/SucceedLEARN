@@ -410,6 +410,12 @@ class Config {
 				'page_templates' => array( 'page-templates/failure-to-prevent-fraud.php' ),
 				'template'       => 'pages/failure-to-prevent-fraud',
 			),
+			'tax_evasion' => array(
+				'default_id'     => 0,
+				'slugs'          => array( 'tax-evasion-facilitation' ),
+				'page_templates' => array( 'page-templates/tax-evasion-facilitation.php' ),
+				'template'       => 'pages/tax-evasion',
+			),
 			'code_of_conduct' => array(
 				'default_id'     => 0,
 				'slugs'          => array( 'code-of-conduct' ),
