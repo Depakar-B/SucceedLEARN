@@ -415,6 +415,11 @@ class Config {
 				'slugs'          => array( 'insider-trading' ),
 				'page_templates' => array( 'page-templates/insider-trading.php' ),
 				'template'       => 'pages/insider-trading',
+			'tax_evasion' => array(
+				'default_id'     => 0,
+				'slugs'          => array( 'tax-evasion-facilitation' ),
+				'page_templates' => array( 'page-templates/tax-evasion-facilitation.php' ),
+				'template'       => 'pages/tax-evasion',
 			),
 			'code_of_conduct' => array(
 				'default_id'     => 0,
