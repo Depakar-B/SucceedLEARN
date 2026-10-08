@@ -410,6 +410,12 @@ class Config {
 				'page_templates' => array( 'page-templates/failure-to-prevent-fraud.php' ),
 				'template'       => 'pages/failure-to-prevent-fraud',
 			),
+			'insider_trading' => array(
+				'default_id'     => 0,
+				'slugs'          => array( 'insider-trading' ),
+				'page_templates' => array( 'page-templates/insider-trading.php' ),
+				'template'       => 'pages/insider-trading',
+			),
 			'code_of_conduct' => array(
 				'default_id'     => 0,
 				'slugs'          => array( 'code-of-conduct' ),
