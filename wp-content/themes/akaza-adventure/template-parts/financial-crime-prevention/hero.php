@@ -66,6 +66,15 @@ $hero_points = array(
 					<a href="#contact" class="sl-fcp-cta sl-fcp-cta--outline" data-cta="fcp-demo">
 						<?php esc_html_e( 'Request Demo', 'akaza-adventure' ); ?>
 					</a>
+					<a
+						href="<?php echo esc_url( 'https://succeedlearn.com/FCP-module-Brochure.pdf' ); ?>"
+						class="sl-fcp-cta sl-fcp-cta--outline"
+						data-cta="fcp-brochure"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<?php esc_html_e( 'Download Brochure', 'akaza-adventure' ); ?>
+					</a>
 				</div>
 			</div>
 		</div>
